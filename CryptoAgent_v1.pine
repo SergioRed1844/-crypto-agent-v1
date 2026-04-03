@@ -1,0 +1,298 @@
+// ═══════════════════════════════════════════════════════════════
+// CryptoAgent v1.0 — Institutional Signal Detector
+// TradingView Pine Script v5
+// Detects: Regime, Confluence, Templates, Candlestick Patterns
+// Sends webhook to server when Confluence Score >= 5
+// ═══════════════════════════════════════════════════════════════
+//@version=5
+indicator("CryptoAgent v1.0", overlay=true, max_labels_count=50, max_lines_count=50)
+
+// ── INPUTS ──────────────────────────────────────────────────
+grp_general = "⚙️ General"
+i_webhook_url   = input.string("YOUR_RAILWAY_URL/webhook", "Webhook URL", group=grp_general, tooltip="Tu URL de Railway. Ejemplo: https://crypto-agent-v1-production.up.railway.app/webhook")
+i_webhook_secret = input.string("crypto-agent-v1-secret", "Webhook Secret", group=grp_general)
+i_min_confluence = input.int(5, "Min Confluence Score", minval=3, maxval=8, group=grp_general)
+i_show_labels   = input.bool(true, "Mostrar labels en chart", group=grp_general)
+
+grp_ema = "📊 EMAs"
+i_ema_fast   = input.int(21, "EMA Rápida", group=grp_ema)
+i_ema_mid    = input.int(50, "EMA Media", group=grp_ema)
+i_ema_slow   = input.int(200, "EMA Lenta", group=grp_ema)
+
+grp_risk = "🛡️ Risk"
+i_atr_mult   = input.float(2.0, "ATR Multiplier (SL)", step=0.1, group=grp_risk)
+i_atr_len    = input.int(14, "ATR Length", group=grp_risk)
+i_min_rr     = input.float(2.0, "Min R:R", step=0.1, group=grp_risk)
+
+grp_filters = "🔍 Filters"
+i_min_volume = input.float(1.2, "Min Volume Ratio (vs 20-SMA)", step=0.1, group=grp_filters)
+i_rsi_ob     = input.int(70, "RSI Overbought", group=grp_filters)
+i_rsi_os     = input.int(30, "RSI Oversold", group=grp_filters)
+
+// BNB Protection — hardcoded, cannot be changed
+i_blocked_pairs = "BNB"
+
+// ── CORE CALCULATIONS ───────────────────────────────────────
+
+// EMAs
+ema21  = ta.ema(close, i_ema_fast)
+ema50  = ta.ema(close, i_ema_mid)
+ema200 = ta.ema(close, i_ema_slow)
+
+// RSI
+rsi14 = ta.rsi(close, 14)
+
+// MACD
+[macdLine, signalLine, macdHist] = ta.macd(close, 12, 26, 9)
+
+// Bollinger Bands
+[bbUpper, bbMid, bbLower] = ta.bb(close, 20, 2.0)
+bbWidth = (bbUpper - bbLower) / bbMid * 100
+bbSqueeze = bbWidth < ta.sma(bbWidth, 120) * 0.75  // Squeeze: width < 75% of 120-period avg
+
+// ATR
+atr14 = ta.atr(i_atr_len)
+
+// Volume
+volSMA20 = ta.sma(volume, 20)
+volRatio = volume / volSMA20
+
+// Stochastic RSI
+stochRSI_k = ta.sma(ta.stoch(rsi14, rsi14, rsi14, 14), 3)
+stochRSI_d = ta.sma(stochRSI_k, 3)
+
+// ── REGIME DETECTION ────────────────────────────────────────
+
+// Trend Regime
+is_strong_up   = ema21 > ema50 and ema50 > ema200 and ema21 > ema21[5] and ema50 > ema50[5]
+is_weak_up     = close > ema200 and not is_strong_up
+is_strong_down = ema21 < ema50 and ema50 < ema200 and ema21 < ema21[5] and ema50 < ema50[5]
+is_weak_down   = close < ema200 and not is_strong_down
+is_range       = not is_strong_up and not is_weak_up and not is_strong_down and not is_weak_down
+
+trend_regime = is_strong_up ? "STRONG_UP" : is_weak_up ? "WEAK_UP" : is_strong_down ? "STRONG_DOWN" : is_weak_down ? "WEAK_DOWN" : "RANGE"
+
+// Volatility Regime (based on ATR relative to price)
+atr_pct = atr14 / close * 100
+vol_regime = atr_pct > 5.0 ? "EXTREME" : atr_pct > 3.0 ? "HIGH" : atr_pct > 1.5 ? "NORMAL" : "LOW"
+
+// BTC Regime (simplified — full version uses CCPS from server)
+btc_regime = is_strong_up or is_weak_up ? "GREEN" : is_range ? "YELLOW" : "RED"
+
+// ── CANDLESTICK PATTERN DETECTION ───────────────────────────
+
+body      = math.abs(close - open)
+totalRange = high - low
+upperWick = high - math.max(close, open)
+lowerWick = math.min(close, open) - low
+bodyRatio = totalRange > 0 ? body / totalRange : 0
+isGreen   = close > open
+isRed     = close < open
+
+// Hammer (bullish)
+isHammer = lowerWick > body * 2 and upperWick < body * 0.5 and isRed and totalRange > 0
+
+// Shooting Star (bearish)
+isShootingStar = upperWick > body * 2 and lowerWick < body * 0.5 and isGreen and totalRange > 0
+
+// Bullish Engulfing
+isBullEngulf = isGreen and isRed[1] and open <= close[1] and close >= open[1] and body > body[1]
+
+// Bearish Engulfing
+isBearEngulf = isRed and isGreen[1] and open >= close[1] and close <= open[1] and body > body[1]
+
+// Doji
+isDoji = bodyRatio < 0.05 and totalRange > 0
+
+// Marubozu (strong conviction)
+isMarubozu = bodyRatio > 0.95
+
+// Inside Bar
+isInsideBar = high < high[1] and low > low[1]
+
+// Morning Star (3-candle bullish reversal)
+isMorningStar = isRed[2] and body[2] > body[1] * 2 and bodyRatio[1] < 0.3 and isGreen and close > (open[2] + close[2]) / 2
+
+// Evening Star (3-candle bearish reversal)
+isEveningStar = isGreen[2] and body[2] > body[1] * 2 and bodyRatio[1] < 0.3 and isRed and close < (open[2] + close[2]) / 2
+
+// ── RSI DIVERGENCE DETECTION ────────────────────────────────
+
+// Bullish divergence: price lower low, RSI higher low
+pivotLowPrice  = ta.pivotlow(low, 5, 5)
+pivotLowRSI    = ta.pivotlow(rsi14, 5, 5)
+bullDiv = not na(pivotLowPrice) and low[5] < ta.lowest(low, 20)[6] and rsi14[5] > ta.valuewhen(not na(pivotLowRSI), rsi14[5], 1)
+
+// Bearish divergence: price higher high, RSI lower high
+pivotHighPrice = ta.pivothigh(high, 5, 5)
+pivotHighRSI   = ta.pivothigh(rsi14, 5, 5)
+bearDiv = not na(pivotHighPrice) and high[5] > ta.highest(high, 20)[6] and rsi14[5] < ta.valuewhen(not na(pivotHighRSI), rsi14[5], 1)
+
+// ── FIBONACCI LEVELS (from recent swing) ────────────────────
+
+swingHigh = ta.highest(high, 50)
+swingLow  = ta.lowest(low, 50)
+fib_range = swingHigh - swingLow
+fib_618 = swingHigh - fib_range * 0.618
+fib_786 = swingHigh - fib_range * 0.786
+fib_382 = swingHigh - fib_range * 0.382
+
+near_fib_618 = math.abs(close - fib_618) / close < 0.01  // Within 1% of 0.618
+near_fib_786 = math.abs(close - fib_786) / close < 0.01
+
+// ── CONFLUENCE SCORE CALCULATION ────────────────────────────
+
+confluence = 0
+
+// +2: Higher TF trend alignment (MANDATORY)
+trendAligned = (is_strong_up or is_weak_up) and close > ema200
+trendAlignedShort = (is_strong_down or is_weak_down) and close < ema200
+hasTrendAlignment = trendAligned or trendAlignedShort
+confluence := hasTrendAlignment ? confluence + 2 : confluence
+
+// +2: Fibonacci level
+confluence := near_fib_618 or near_fib_786 ? confluence + 2 : confluence
+
+// +1: Structural S/R (price near EMA21 as dynamic support)
+near_ema21 = math.abs(close - ema21) / close < 0.005
+confluence := near_ema21 ? confluence + 1 : confluence
+
+// +2: RSI divergence
+confluence := bullDiv and trendAligned ? confluence + 2 : confluence
+confluence := bearDiv and trendAlignedShort ? confluence + 2 : confluence
+
+// +1: Candlestick reversal pattern
+hasBullCandle = isHammer or isBullEngulf or isMorningStar
+hasBearCandle = isShootingStar or isBearEngulf or isEveningStar
+confluence := (hasBullCandle and trendAligned) or (hasBearCandle and trendAlignedShort) ? confluence + 1 : confluence
+
+// +1: Volume confirmation
+confluence := volRatio > i_min_volume ? confluence + 1 : confluence
+
+// +1: Bollinger Band squeeze (breakout potential)
+confluence := bbSqueeze ? confluence + 1 : confluence
+
+// +1: StochRSI oversold in uptrend or overbought in downtrend
+stochEntry = (stochRSI_k < 20 and trendAligned) or (stochRSI_k > 80 and trendAlignedShort)
+confluence := stochEntry ? confluence + 1 : confluence
+
+// +1: MACD histogram supports direction
+macdSupports = (macdHist > 0 and macdHist > macdHist[1] and trendAligned) or (macdHist < 0 and macdHist < macdHist[1] and trendAlignedShort)
+confluence := macdSupports ? confluence + 1 : confluence
+
+// ── TEMPLATE IDENTIFICATION ─────────────────────────────────
+
+// T1: Pullback to Level
+isT1 = trendAligned and near_ema21 and (near_fib_618 or near_fib_786) and (hasBullCandle or stochRSI_k < 20)
+
+// T2: Break and Retest
+recentBreakout = ta.crossover(close, ta.highest(high, 20)[1])
+retesting = close[1] > ta.highest(high, 20)[2] and close <= ta.highest(high, 20)[2] * 1.005
+isT2 = trendAligned and (recentBreakout or retesting) and volRatio > 1.5
+
+// T3: Range Extreme (mean reversion)
+atBBLower = close <= bbLower * 1.005 and is_range
+atBBUpper = close >= bbUpper * 0.995 and is_range
+isT3 = (atBBLower or atBBUpper) and is_range
+
+// T4: Liquidity Hunt (stop hunt reversal)
+isT4_long  = low < swingLow * 1.001 and close > swingLow and volRatio > 2.0 and (isHammer or isBullEngulf)
+isT4_short = high > swingHigh * 0.999 and close < swingHigh and volRatio > 2.0 and (isShootingStar or isBearEngulf)
+isT4 = isT4_long or isT4_short
+
+// T5: Momentum Continuation
+isT5 = (is_strong_up and isMarubozu and isGreen and volRatio > 1.5) or (is_strong_down and isMarubozu and isRed and volRatio > 1.5)
+
+// T6: Memecoin Scalp (detected by high volatility + volume)
+isT6 = atr_pct > 4.0 and volRatio > 3.0 and (isBullEngulf or isHammer)
+
+template = isT1 ? "T1_PULLBACK" : isT2 ? "T2_BREAK_RETEST" : isT3 ? "T3_RANGE_EXTREME" : isT4 ? "T4_LIQ_HUNT" : isT5 ? "T5_MOMENTUM" : isT6 ? "T6_MEME_SCALP" : "NONE"
+
+// ── SIGNAL DIRECTION ────────────────────────────────────────
+
+signalLong  = confluence >= i_min_confluence and hasTrendAlignment and trendAligned and template != "NONE"
+signalShort = confluence >= i_min_confluence and hasTrendAlignment and trendAlignedShort and template != "NONE"
+signalRange = confluence >= i_min_confluence and isT3
+
+hasSignal = signalLong or signalShort or signalRange
+
+// ── SL / TP CALCULATION ─────────────────────────────────────
+
+sl_distance = atr14 * i_atr_mult
+sl_long  = close - sl_distance
+sl_short = close + sl_distance
+tp1_long  = close + sl_distance * i_min_rr
+tp1_short = close - sl_distance * i_min_rr
+tp2_long  = close + sl_distance * (i_min_rr + 1)
+tp2_short = close - sl_distance * (i_min_rr + 1)
+
+// ── BNB PROTECTION ──────────────────────────────────────────
+
+isBNB = str.contains(str.upper(syminfo.ticker), i_blocked_pairs)
+
+// ── PLOT EMAs ───────────────────────────────────────────────
+
+plot(ema21, "EMA 21", color=color.new(#2962FF, 0), linewidth=1)
+plot(ema50, "EMA 50", color=color.new(#FF6D00, 0), linewidth=1)
+plot(ema200, "EMA 200", color=color.new(#E91E63, 0), linewidth=2)
+
+// ── PLOT FIBONACCI ──────────────────────────────────────────
+
+plot(fib_618, "Fib 0.618", color=color.new(#4CAF50, 60), linewidth=1, style=plot.style_cross)
+plot(fib_382, "Fib 0.382", color=color.new(#FF9800, 60), linewidth=1, style=plot.style_cross)
+
+// ── PLOT BOLLINGER BANDS ────────────────────────────────────
+
+p_bbU = plot(bbUpper, "BB Upper", color=color.new(#787B86, 70))
+p_bbL = plot(bbLower, "BB Lower", color=color.new(#787B86, 70))
+fill(p_bbU, p_bbL, color=bbSqueeze ? color.new(#FF9800, 90) : color.new(#787B86, 95), title="BB Fill")
+
+// ── SIGNAL LABELS ───────────────────────────────────────────
+
+if hasSignal and not isBNB and i_show_labels
+    direction = signalLong ? "LONG" : signalShort ? "SHORT" : "RANGE_PLAY"
+    lbl_color = signalLong ? color.green : signalShort ? color.red : color.orange
+    lbl_text = direction + " | CS:" + str.tostring(confluence) + " | " + template + "\nRegime:" + btc_regime + " Vol:" + vol_regime
+    lbl_style = signalLong ? label.style_label_up : label.style_label_down
+    lbl_y = signalLong ? low - atr14 * 0.5 : high + atr14 * 0.5
+    label.new(bar_index, lbl_y, lbl_text, style=lbl_style, color=lbl_color, textcolor=color.white, size=size.small)
+
+// BNB Warning
+if isBNB and barstate.islast
+    label.new(bar_index, high, "⚠️ BNB BLOQUEADO\nNo se opera este par", style=label.style_label_down, color=color.red, textcolor=color.white, size=size.large)
+
+// ── REGIME INFO TABLE ───────────────────────────────────────
+
+var table infoTable = table.new(position.top_right, 2, 8, bgcolor=color.new(#1a1a2e, 85), border_width=1)
+
+if barstate.islast
+    table.cell(infoTable, 0, 0, "CryptoAgent v1.0", text_color=color.white, text_size=size.small, bgcolor=color.new(#16213e, 90))
+    table.cell(infoTable, 1, 0, btc_regime, text_color=btc_regime == "GREEN" ? color.green : btc_regime == "RED" ? color.red : color.yellow, text_size=size.small, bgcolor=color.new(#16213e, 90))
+    table.cell(infoTable, 0, 1, "Trend", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 1, trend_regime, text_color=color.white, text_size=size.tiny)
+    table.cell(infoTable, 0, 2, "Volatility", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 2, vol_regime, text_color=vol_regime == "EXTREME" ? color.red : vol_regime == "HIGH" ? color.orange : color.white, text_size=size.tiny)
+    table.cell(infoTable, 0, 3, "RSI(14)", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 3, str.tostring(math.round(rsi14, 1)), text_color=rsi14 > 70 ? color.red : rsi14 < 30 ? color.green : color.white, text_size=size.tiny)
+    table.cell(infoTable, 0, 4, "Confluence", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 4, str.tostring(confluence) + "/10", text_color=confluence >= 5 ? color.green : color.orange, text_size=size.tiny)
+    table.cell(infoTable, 0, 5, "Template", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 5, template, text_color=color.white, text_size=size.tiny)
+    table.cell(infoTable, 0, 6, "BB Squeeze", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 6, bbSqueeze ? "YES ⚡" : "No", text_color=bbSqueeze ? color.yellow : color.gray, text_size=size.tiny)
+    table.cell(infoTable, 0, 7, "ATR%", text_color=color.gray, text_size=size.tiny)
+    table.cell(infoTable, 1, 7, str.tostring(math.round(atr_pct, 2)) + "%", text_color=color.white, text_size=size.tiny)
+
+// ── ALERT CONDITIONS (Webhook) ──────────────────────────────
+
+// Main signal alert
+signalFired = hasSignal and not isBNB
+
+alertcondition(signalFired, title="CryptoAgent Signal", message='{"secret":"{{i_webhook_secret}}","pair":"{{ticker}}","exchange":"{{exchange}}","timeframe":"{{interval}}","signal_type":"{{signalLong ? "LONG" : signalShort ? "SHORT" : "RANGE"}}","confluence_score":{{confluence}},"template":"{{template}}","regime":"{{btc_regime}}","trend":"{{trend_regime}}","volatility":"{{vol_regime}}","price":{{close}},"ema21":{{ema21}},"ema50":{{ema50}},"ema200":{{ema200}},"rsi":{{rsi14}},"atr":{{atr14}},"atr_pct":{{atr_pct}},"bb_squeeze":{{bbSqueeze}},"volume_ratio":{{volRatio}},"suggested_sl":{{signalLong ? sl_long : sl_short}},"suggested_tp1":{{signalLong ? tp1_long : tp1_short}},"suggested_tp2":{{signalLong ? tp2_long : tp2_short}}}')
+
+// Kill switch alert (extreme volatility)
+alertcondition(vol_regime == "EXTREME", title="EXTREME VOL Alert", message='{"secret":"{{i_webhook_secret}}","pair":"{{ticker}}","signal_type":"KILL_SWITCH","reason":"EXTREME_VOLATILITY","atr_pct":{{atr_pct}}}')
+
+// Regime change alert
+regimeChanged = btc_regime != btc_regime[1]
+alertcondition(regimeChanged, title="Regime Change", message='{"secret":"{{i_webhook_secret}}","pair":"{{ticker}}","signal_type":"REGIME_CHANGE","new_regime":"{{btc_regime}}","old_regime":"{{btc_regime[1]}}"}')
