@@ -251,10 +251,18 @@ async def call_gemini(prompt: str, system: str = SYSTEM_PROMPT) -> dict:
         log.error("GEMINI_API_KEY not set")
         return {"action": "NO_TRADE", "reasoning": "API key not configured"}
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent"
+    headers = {
+        "Content-Type": "application/json",
+        "x-goog-api-key": GEMINI_API_KEY,
+    }
     payload = {
         "contents": [
-            {"role": "user", "parts": [{"text": system + "\n\n---\n\n" + prompt}]}
+            {
+                "parts": [
+                    {"text": system + "\n\n---\n\n" + prompt}
+                ]
+            }
         ],
         "generationConfig": {
             "temperature": 0.1,
@@ -265,21 +273,29 @@ async def call_gemini(prompt: str, system: str = SYSTEM_PROMPT) -> dict:
 
     async with httpx.AsyncClient(timeout=60) as client:
         try:
-            r = await client.post(url, json=payload)
+            r = await client.post(url, headers=headers, json=payload)
             r.raise_for_status()
             data = r.json()
             text = data["candidates"][0]["content"]["parts"][0]["text"]
-            # Clean potential markdown fences
+
             text = text.strip()
             if text.startswith("```"):
                 text = text.split("\n", 1)[1] if "\n" in text else text[3:]
             if text.endswith("```"):
                 text = text[:-3]
             text = text.strip()
+
             return json.loads(text)
+
         except json.JSONDecodeError as e:
             log.error(f"Gemini JSON parse error: {e}. Raw text: {text[:200]}")
-            return {"action": "NO_TRADE", "reasoning": f"LLM returned invalid JSON"}
+            return {"action": "NO_TRADE", "reasoning": "LLM returned invalid JSON"}
+
+        except httpx.HTTPStatusError as e:
+            body = e.response.text
+            log.error(f"Gemini HTTP error status={e.response.status_code} body={body}")
+            return {"action": "NO_TRADE", "reasoning": f"LLM error: HTTP {e.response.status_code} | {body[:300]}"}
+
         except Exception as e:
             log.error(f"Gemini error: {e}")
             return {"action": "NO_TRADE", "reasoning": f"LLM error: {str(e)}"}
