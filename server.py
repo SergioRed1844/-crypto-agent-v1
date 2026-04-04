@@ -254,7 +254,7 @@ async def call_gemini(prompt: str, system: str = SYSTEM_PROMPT) -> dict:
         log.error("GEMINI_API_KEY not set")
         return {"action": "NO_TRADE", "reasoning": "API key not configured"}
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "systemInstruction": {"parts": [{"text": system}]},
