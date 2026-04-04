@@ -17,10 +17,8 @@ import httpx
 
 # ── Config ──────────────────────────────────────────────
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "crypto-agent-v1-secret")
-GOOGLE_SHEET_ID = os.environ.get("GOOGLE_SHEET_ID", "")
+SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")  # Google Apps Script URL
 PAPER_TRADING = os.environ.get("PAPER_TRADING", "true").lower() == "true"
 
 # ── Logging ─────────────────────────────────────────────
@@ -140,22 +138,21 @@ async def get_market_context():
             context["fear_greed"] = 50
             context["fear_greed_label"] = "Neutral"
 
-        # BTC Price from CoinGecko
-        try:
-            r = await client.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true")
-            data = r.json()
-            context["btc_price"] = data.get("bitcoin", {}).get("usd", 0)
-            context["btc_24h_change"] = data.get("bitcoin", {}).get("usd_24h_change", 0)
-            context["eth_price"] = data.get("ethereum", {}).get("usd", 0)
-            context["sol_price"] = data.get("solana", {}).get("usd", 0)
-        except:
-            context["btc_price"] = 0
+        # BTC Price from Binance public API (no key needed, more reliable than CoinGecko)
+        for symbol, key in [("BTCUSDT", "btc_price"), ("ETHUSDT", "eth_price"), ("SOLUSDT", "sol_price")]:
+            try:
+                r = await client.get(f"https://api.binance.com/api/v3/ticker/24hr?symbol={symbol}")
+                data = r.json()
+                context[key] = float(data.get("lastPrice", 0))
+                if key == "btc_price":
+                    context["btc_24h_change"] = float(data.get("priceChangePercent", 0))
+            except:
+                context[key] = 0
 
-        # Binance funding rate (public, no key needed)
+        # Funding rate - use Binance global API (not fapi which has geo restrictions)
         try:
-            r = await client.get("https://fapi.binance.com/fapi/v1/fundingRate?symbol=BTCUSDT&limit=1")
-            data = r.json()
-            context["btc_funding"] = float(data[0]["fundingRate"])
+            r = await client.get("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT")
+            context["btc_funding"] = 0  # Funding rate requires futures API, default to 0
         except:
             context["btc_funding"] = 0
 
@@ -249,32 +246,40 @@ Respond ONLY in this exact JSON format:
 
 
 async def call_gemini(prompt: str, system: str = SYSTEM_PROMPT) -> dict:
-    """Call Gemini 1.5 Flash API."""
+    """Call Gemini 2.5 Flash API (free tier)."""
     if not GEMINI_API_KEY:
         log.error("GEMINI_API_KEY not set")
         return {"action": "NO_TRADE", "reasoning": "API key not configured"}
 
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
     payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "systemInstruction": {"parts": [{"text": system}]},
+        "contents": [
+            {"role": "user", "parts": [{"text": system + "\n\n---\n\n" + prompt}]}
+        ],
         "generationConfig": {
-            "temperature": 0.1,  # Low temp for consistent decisions
+            "temperature": 0.1,
             "topP": 0.8,
-            "maxOutputTokens": 2048,
-            "responseMimeType": "application/json"
+            "maxOutputTokens": 2048
         }
     }
 
-    async with httpx.AsyncClient(timeout=30) as client:
+    async with httpx.AsyncClient(timeout=60) as client:
         try:
             r = await client.post(url, json=payload)
             r.raise_for_status()
             data = r.json()
             text = data["candidates"][0]["content"]["parts"][0]["text"]
             # Clean potential markdown fences
-            text = text.strip().strip("```json").strip("```").strip()
+            text = text.strip()
+            if text.startswith("```"):
+                text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+            if text.endswith("```"):
+                text = text[:-3]
+            text = text.strip()
             return json.loads(text)
+        except json.JSONDecodeError as e:
+            log.error(f"Gemini JSON parse error: {e}. Raw text: {text[:200]}")
+            return {"action": "NO_TRADE", "reasoning": f"LLM returned invalid JSON"}
         except Exception as e:
             log.error(f"Gemini error: {e}")
             return {"action": "NO_TRADE", "reasoning": f"LLM error: {str(e)}"}
@@ -387,24 +392,38 @@ def compute_self_learning_feedback() -> str:
 
 
 # ══════════════════════════════════════════════════════════
-# TELEGRAM ALERTS
+# GOOGLE SHEETS BRIDGE
 # ══════════════════════════════════════════════════════════
-async def send_telegram(message: str):
-    """Send alert to Telegram."""
-    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
-        log.warning("Telegram not configured")
-        return
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    payload = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": message,
-        "parse_mode": "HTML"
-    }
-    async with httpx.AsyncClient(timeout=10) as client:
+async def log_to_sheet(action: str, data: dict) -> dict:
+    """Send data to Google Sheet via Apps Script."""
+    if not SHEETS_WEBAPP_URL:
+        log.warning("SHEETS_WEBAPP_URL not configured")
+        return {"ok": False, "error": "Sheets not configured"}
+    
+    payload = {"action": action, **data}
+    async with httpx.AsyncClient(timeout=30) as client:
         try:
-            await client.post(url, json=payload)
+            r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
+            result = r.json()
+            log.info(f"Sheet {action}: {result.get('ok', False)}")
+            return result
         except Exception as e:
-            log.error(f"Telegram error: {e}")
+            log.error(f"Sheet error: {e}")
+            return {"ok": False, "error": str(e)}
+
+
+async def get_sheet_feedback() -> str:
+    """Get self-learning feedback from Google Sheet."""
+    if not SHEETS_WEBAPP_URL:
+        return compute_self_learning_feedback()  # Fallback to in-memory
+    
+    try:
+        result = await log_to_sheet("get_feedback", {})
+        if result.get("ok"):
+            return result.get("feedback", "No feedback available")
+    except:
+        pass
+    return compute_self_learning_feedback()
 
 
 # ══════════════════════════════════════════════════════════
@@ -444,15 +463,11 @@ async def webhook(request: Request):
 
     # BNB protection — immediate reject
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
-        msg = f"🚫 BLOCKED: {pair} is protected (BNB for commissions)"
-        await send_telegram(msg)
-        return {"action": "BLOCKED", "reason": msg}
+        return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB for commissions)"}
 
     # Kill switch check
     killed, kill_reason = check_kill_switches()
     if killed:
-        msg = f"🛑 KILL SWITCH ACTIVE\n{kill_reason}\nSignal for {pair} rejected."
-        await send_telegram(msg)
         return {"action": "BLOCKED", "reason": kill_reason}
 
     # Get market context
@@ -520,21 +535,10 @@ async def webhook(request: Request):
     }
     trade_log.append(trade_record)
 
-    # Send Telegram alert
-    if is_valid and decision.get("action") != "NO_TRADE":
-        mode = "📝 PAPER" if PAPER_TRADING else "🔴 LIVE"
-        msg = (
-            f"{mode} TRADE #{trade_id}\n"
-            f"{'🟢 LONG' if decision.get('direction')=='LONG' else '🔴 SHORT'} {decision.get('pair')}\n"
-            f"Bucket: {decision.get('bucket')} | Template: {decision.get('template')}\n"
-            f"Entry: {decision.get('entry_price')} | SL: {decision.get('stop_loss')} | TP1: {decision.get('take_profit_1')}\n"
-            f"Size: {decision.get('position_size_pct')}% | Confidence: {decision.get('confidence')}%\n"
-            f"Confluence: {decision.get('confluence_score')}/10 | Regime: {decision.get('regime_btc')}\n"
-            f"Edge: {decision.get('edge_description', '')[:100]}\n"
-            f"F&G: {market_ctx.get('fear_greed')} | Funding: {market_ctx.get('btc_funding', 0):.4f}"
-        )
-        await send_telegram(msg)
+    # Log to Google Sheet
+    await log_to_sheet("log_trade", trade_record)
 
+    if is_valid and decision.get("action") != "NO_TRADE":
         # Add to open positions (paper mode)
         if PAPER_TRADING:
             open_positions.append({
@@ -548,11 +552,6 @@ async def webhook(request: Request):
                 "risk_pct": decision.get("position_size_pct", 0) / 100,
                 "opened_at": datetime.utcnow().isoformat()
             })
-    else:
-        reason = validation_msg if not is_valid else decision.get("reasoning", "No edge found")
-        msg = f"⏭ SKIP #{trade_id} | {pair}\nReason: {reason[:200]}"
-        await send_telegram(msg)
-
     return {
         "trade_id": trade_id,
         "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
@@ -648,11 +647,21 @@ async def close_trade(request: Request):
                                   (direction == "SHORT" and close_price > entry)))
             break
 
-    msg = (f"{'✅ WIN' if resultado == 'WIN' else '❌ LOSS' if resultado == 'LOSS' else '➖ BE'} "
-           f"#{trade_id} | {pos['pair']}\n"
-           f"P&L: {pnl_r:+.2f}R | Close: {close_price} | Motivo: {motivo}\n"
-           f"Daily P&L: {daily_pnl:.2%} | Weekly: {weekly_pnl:.2%}")
-    await send_telegram(msg)
+    # Log close to Google Sheet
+    await log_to_sheet("close_trade", {
+        "trade_id": trade_id,
+        "close_price": close_price,
+        "resultado": resultado,
+        "pnl_usdt": round(pnl_pct * pos["risk_pct"] * 10000, 2),  # Approximate
+        "pnl_R": f"{pnl_r:+.2f}R",
+        "duration_hours": "",
+        "motivo_cierre": motivo,
+        "sl_too_short": "SÍ" if (resultado == "LOSS" and motivo == "SL_hit") else "NO",
+        "tp_too_high": "NO",
+        "regime_changed": "NO",
+        "strategy_correct": "SÍ" if resultado == "WIN" else "",
+        "post_trade_notes": f"P&L: {pnl_r:+.2f}R | Daily: {daily_pnl:.2%} | Weekly: {weekly_pnl:.2%}"
+    })
 
     return {"trade_id": trade_id, "resultado": resultado, "pnl_r": pnl_r}
 
