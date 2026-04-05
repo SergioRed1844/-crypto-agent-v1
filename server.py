@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.0-20260404"
+RELEASE_ID = "v2.1-20260404"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -106,24 +106,27 @@ async def get_market_context():
         except Exception as e:
             log.warning(f"Fear&Greed failed: {e}")
 
-        for symbol, key in [("BTCUSDT", "btc_price"), ("ETHUSDT", "eth_price"), ("SOLUSDT", "sol_price")]:
+        # Prices: CoinPaprika first (free, no key, no geo block), then Binance, then CoinGecko
+        paprika_ids = {"btc_price": "btc-bitcoin", "eth_price": "eth-ethereum", "sol_price": "sol-solana"}
+        for key, coin_id in paprika_ids.items():
             try:
-                r = await client.get(f"https://api.binance.com/api/v3/ticker/24hr?symbol={symbol}")
+                r = await client.get(f"https://api.coinpaprika.com/v1/tickers/{coin_id}")
                 if r.status_code == 200:
                     d = r.json()
-                    ctx[key] = float(d.get("lastPrice", 0))
+                    ctx[key] = float(d.get("quotes", {}).get("USD", {}).get("price", 0))
                     if key == "btc_price":
-                        ctx["btc_24h_change"] = float(d.get("priceChangePercent", 0))
+                        ctx["btc_24h_change"] = float(d.get("quotes", {}).get("USD", {}).get("percent_change_24h", 0))
                 else:
-                    raise Exception(f"Binance {r.status_code}")
-            except:
+                    raise Exception(f"CoinPaprika {r.status_code}")
+            except Exception as e:
+                log.warning(f"CoinPaprika {key} failed ({e}), trying Binance")
                 try:
-                    coin_id = {"BTCUSDT": "bitcoin", "ETHUSDT": "ethereum", "SOLUSDT": "solana"}[symbol]
-                    r = await client.get(f"https://api.coingecko.com/api/v3/simple/price?ids={coin_id}&vs_currencies=usd")
+                    symbol = {"btc_price": "BTCUSDT", "eth_price": "ETHUSDT", "sol_price": "SOLUSDT"}[key]
+                    r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}")
                     if r.status_code == 200:
-                        ctx[key] = float(r.json().get(coin_id, {}).get("usd", 0))
+                        ctx[key] = float(r.json().get("price", 0))
                 except:
-                    log.warning(f"All price sources failed for {symbol}")
+                    log.warning(f"All price sources failed for {key}")
     return ctx
 
 # ═══════════════════════════════════════════════════════════
@@ -171,7 +174,7 @@ async def call_gemini(prompt: str) -> dict:
         "contents": [{"parts": [{"text": SYSTEM_PROMPT + "\n\n" + prompt}]}],
         "generationConfig": {
             "temperature": 0.1,
-            "maxOutputTokens": 2048,
+            "maxOutputTokens": 4096,
             "responseMimeType": "application/json"
         }
     }
