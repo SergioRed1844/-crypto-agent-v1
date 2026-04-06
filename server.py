@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.1-20260404"
+RELEASE_ID = "v2.2-20260405"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -135,6 +135,12 @@ async def get_market_context():
 SYSTEM_PROMPT = """You are an institutional-grade crypto trading agent.
 Personality: O:75 C:95 E:15 A:10 N:5 (Homo Economicus, zero biases).
 
+CRITICAL: You MUST respond ONLY in English. All JSON keys and values must be in English.
+Never translate keys or enum values. Use exactly these values:
+- action: "BUY", "SELL", or "NO_TRADE" (never "COMPRAR", "VENDER")
+- direction: "LONG" or "SHORT" (never "LARGO", "CORTO")
+- bucket: "CORE" or "SATELLITE" (never "NUCLEO", "SATELITE")
+
 IMMUTABLE RULES:
 1. CAPITAL PRESERVATION is primary. A 50% loss needs 100% gain to recover.
 2. Minimum R:R of 1:2 for standard, 1:3 for aggressive setups.
@@ -146,7 +152,7 @@ IMMUTABLE RULES:
 
 PORTFOLIO: CORE 70-90% (BTC/ETH/L1s) + SATELLITE 10-30% (high-risk altcoins/memes).
 
-You MUST respond with ONLY valid JSON. No markdown fences, no explanation outside JSON."""
+You MUST respond with ONLY valid JSON in English. No markdown fences, no explanation outside JSON."""
 
 TRADE_PROMPT = """MARKET CONTEXT:
 {market_context}
