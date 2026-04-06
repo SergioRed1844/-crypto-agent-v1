@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.2-20260405"
+RELEASE_ID = "v2.3-20260406"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -195,13 +195,91 @@ async def call_gemini(prompt: str) -> dict:
                 return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}: {body}"}
             data = r.json()
             raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-            return json.loads(raw)
+            parsed = json.loads(raw)
+            return normalize_gemini_response(parsed)
         except json.JSONDecodeError:
-            log.error(f"Gemini invalid JSON: {raw[:300]}")
+            log.error(f"Gemini invalid JSON: {raw[:500]}")
+            # Try normalizing raw text before giving up
+            normalized = normalize_raw_json(raw)
+            if normalized:
+                return normalized
             return {"action": "NO_TRADE", "reasoning": "Gemini returned invalid JSON"}
         except Exception as e:
             log.error(f"Gemini error: {e}")
             return {"action": "NO_TRADE", "reasoning": str(e)}
+
+
+def normalize_gemini_response(d: dict) -> dict:
+    """Translate Spanish keys/values from Gemini to English."""
+    KEY_MAP = {
+        "acción": "action", "accion": "action",
+        "par": "pair", "dirección": "direction", "direccion": "direction",
+        "cubo": "bucket", "plantilla": "template",
+        "precio_entrada": "entry_price", "precio_de_entrada": "entry_price",
+        "stop_loss": "stop_loss", "parada_de_pérdida": "stop_loss",
+        "toma_de_ganancias_1": "take_profit_1", "objetivo_1": "take_profit_1",
+        "toma_de_ganancias_2": "take_profit_2", "objetivo_2": "take_profit_2",
+        "tamaño_posición_pct": "position_size_pct", "tamaño_de_posición_pct": "position_size_pct",
+        "confianza": "confidence", "régimen_btc": "regime_btc", "regimen_btc": "regime_btc",
+        "régimen_de_tendencia": "trend_regime", "regimen_de_tendencia": "trend_regime",
+        "régimen_vol": "vol_regime", "regimen_vol": "vol_regime",
+        "puntuación_confluencia": "confluence_score", "puntuacion_confluencia": "confluence_score",
+        "descripción_del_edge": "edge_description", "descripcion_del_edge": "edge_description",
+        "razonamiento": "reasoning", "checklist_aprobado": "checklist_pass",
+        "riesgos": "risks", "ajuste_auto_aprendizaje": "self_learning_adjustment",
+    }
+    VALUE_MAP = {
+        "COMPRAR": "BUY", "VENDER": "SELL", "SIN_OPERACIÓN": "NO_TRADE",
+        "NO_OPERAR": "NO_TRADE", "NO_TRADE": "NO_TRADE",
+        "LARGO": "LONG", "CORTO": "SHORT",
+        "NÚCLEO": "CORE", "NUCLEO": "CORE", "SATÉLITE": "SATELLITE", "SATELITE": "SATELLITE",
+        "VERDE": "GREEN", "AMARILLO": "YELLOW", "ROJO": "RED",
+        "ALZA_FUERTE": "STRONG_UP", "ALZA_DÉBIL": "WEAK_UP",
+        "RANGO": "RANGE", "BAJA_FUERTE": "STRONG_DOWN", "BAJA_DÉBIL": "WEAK_DOWN",
+        "BAJO": "LOW", "NORMAL": "NORMAL", "ALTO": "HIGH", "EXTREMO": "EXTREME",
+    }
+
+    result = {}
+    for k, v in d.items():
+        new_key = KEY_MAP.get(k.lower().strip(), k)
+        if isinstance(v, str):
+            new_val = VALUE_MAP.get(v.upper().strip(), v)
+        elif isinstance(v, dict):
+            new_val = {KEY_MAP.get(sk.lower().strip(), sk): sv for sk, sv in v.items()}
+        else:
+            new_val = v
+        result[new_key] = new_val
+
+    # Ensure required fields exist with defaults
+    defaults = {"action": "NO_TRADE", "pair": "", "direction": "", "bucket": "CORE",
+                "template": "", "entry_price": 0, "stop_loss": 0, "take_profit_1": 0,
+                "take_profit_2": 0, "position_size_pct": 0, "confidence": 0,
+                "regime_btc": "YELLOW", "trend_regime": "RANGE", "vol_regime": "NORMAL",
+                "confluence_score": 0, "edge_description": "", "reasoning": "",
+                "checklist_pass": False, "risks": [], "self_learning_adjustment": ""}
+    for field, default in defaults.items():
+        if field not in result:
+            result[field] = default
+
+    return result
+
+
+def normalize_raw_json(raw: str) -> dict:
+    """Last resort: try to fix common issues in raw JSON string."""
+    import re
+    try:
+        # Remove markdown fences if present
+        cleaned = raw.strip()
+        if cleaned.startswith("```"):
+            cleaned = re.sub(r'^```[a-zA-Z]*\n?', '', cleaned)
+            cleaned = re.sub(r'\n?```$', '', cleaned)
+        # Try to parse truncated JSON by closing it
+        if cleaned.count('{') > cleaned.count('}'):
+            cleaned += '""}' * (cleaned.count('{') - cleaned.count('}'))
+        parsed = json.loads(cleaned)
+        return normalize_gemini_response(parsed)
+    except:
+        return None
 
 # ═══════════════════════════════════════════════════════════
 # RISK MANAGER
