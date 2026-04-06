@@ -1,16 +1,16 @@
 """
-CryptoAgent v2.0 — Clean Webhook Server
-Resolves: Gemini JSON, no Telegram, market fallbacks, idempotency, release_id
-TradingView → Render webhook → RAG + Gemini → Google Sheets
+CryptoAgent v2.4 LEARNING
+Adds: stale signal check, confidence normalization, Sheet feedback, enriched logs
+TradingView → Render → RAG + Gemini → Google Sheets (feedback loop)
 """
-import os, json, logging, pickle, hashlib
+import os, json, logging, pickle, hashlib, re
 import numpy as np
 from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.3-20260406"
+RELEASE_ID = "v2.4-20260406"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -42,6 +42,7 @@ RISK_PARAMS = {
     "satellite_min": 10,
     "satellite_max": 30,
     "protected_assets": ["BNB", "BNBUSDT", "BNBBUSD"],
+    "max_entry_drift_pct": 0.005,  # 0.5% max drift for stale signal
 }
 
 # ═══════════════════════════════════════════════════════════
@@ -94,6 +95,8 @@ rag = RAGSearch()
 # ═══════════════════════════════════════════════════════════
 # MARKET CONTEXT
 # ═══════════════════════════════════════════════════════════
+PRICE_KEYS = {"BTCUSDT": "btc_price", "ETHUSDT": "eth_price", "SOLUSDT": "sol_price"}
+
 async def get_market_context():
     ctx = {"fear_greed": 50, "fear_greed_label": "Neutral",
            "btc_price": 0, "btc_24h_change": 0, "eth_price": 0, "sol_price": 0, "btc_funding": 0}
@@ -106,7 +109,6 @@ async def get_market_context():
         except Exception as e:
             log.warning(f"Fear&Greed failed: {e}")
 
-        # Prices: CoinPaprika first (free, no key, no geo block), then Binance, then CoinGecko
         paprika_ids = {"btc_price": "btc-bitcoin", "eth_price": "eth-ethereum", "sol_price": "sol-solana"}
         for key, coin_id in paprika_ids.items():
             try:
@@ -129,30 +131,36 @@ async def get_market_context():
                     log.warning(f"All price sources failed for {key}")
     return ctx
 
+def get_current_price(pair: str, market_ctx: dict) -> float:
+    key = PRICE_KEYS.get(pair.upper(), "btc_price")
+    return float(market_ctx.get(key, 0))
+
 # ═══════════════════════════════════════════════════════════
-# GEMINI LLM
+# GEMINI LLM + NORMALIZER
 # ═══════════════════════════════════════════════════════════
 SYSTEM_PROMPT = """You are an institutional-grade crypto trading agent.
 Personality: O:75 C:95 E:15 A:10 N:5 (Homo Economicus, zero biases).
 
-CRITICAL: You MUST respond ONLY in English. All JSON keys and values must be in English.
-Never translate keys or enum values. Use exactly these values:
-- action: "BUY", "SELL", or "NO_TRADE" (never "COMPRAR", "VENDER")
-- direction: "LONG" or "SHORT" (never "LARGO", "CORTO")
-- bucket: "CORE" or "SATELLITE" (never "NUCLEO", "SATELITE")
+CRITICAL: You MUST respond ONLY in English. All JSON keys and values MUST be in English.
+Never translate keys or enum values. Use EXACTLY these values:
+- action: "BUY", "SELL", or "NO_TRADE"
+- direction: "LONG" or "SHORT"
+- bucket: "CORE" or "SATELLITE"
+- regime_btc: "GREEN", "YELLOW", or "RED"
+- confidence: integer 0-100 (must reflect your actual conviction, never 0 for BUY/SELL)
 
 IMMUTABLE RULES:
 1. CAPITAL PRESERVATION is primary. A 50% loss needs 100% gain to recover.
 2. Minimum R:R of 1:2 for standard, 1:3 for aggressive setups.
-3. MUST identify specific articulable EDGE. 'I think it will go up' is NOT an edge.
+3. MUST identify specific articulable EDGE.
 4. REGIME determines method: uptrend=trend-following, range=mean-reversion, downtrend=capital preservation.
 5. Max 0.5% risk per trade, max 5% total exposure.
 6. NEVER trade BNB pairs.
 7. Pre-trade checklist: ALL 12 items must pass.
+8. If entry price is stale (market moved >0.5% away), set action to NO_TRADE.
 
 PORTFOLIO: CORE 70-90% (BTC/ETH/L1s) + SATELLITE 10-30% (high-risk altcoins/memes).
-
-You MUST respond with ONLY valid JSON in English. No markdown fences, no explanation outside JSON."""
+Respond with ONLY valid JSON in English."""
 
 TRADE_PROMPT = """MARKET CONTEXT:
 {market_context}
@@ -162,12 +170,86 @@ KNOWLEDGE BASE:
 
 SIGNAL: {signal}
 
+CURRENT MARKET PRICE: {current_price}
+
 PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%
 
-FEEDBACK: {feedback}
+SELF-LEARNING FEEDBACK FROM PREVIOUS TRADES:
+{feedback}
 
-Evaluate this signal. Respond with ONLY this JSON (fill in real values):
-{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":66800,"stop_loss":65400,"take_profit_1":69600,"take_profit_2":71000,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"describe the edge","reasoning":"full reasoning","checklist_pass":true,"risks":["risk1"],"self_learning_adjustment":"none"}}"""
+Evaluate this signal against current market price. If entry price differs >0.5% from current price, reject as stale.
+Respond with ONLY this JSON (fill real values, confidence 0-100 must reflect conviction):
+{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none"}}"""
+
+# Spanish-to-English key/value maps
+_KEY_MAP = {
+    "acción": "action", "accion": "action", "par": "pair",
+    "dirección": "direction", "direccion": "direction",
+    "cubo": "bucket", "plantilla": "template",
+    "precio_entrada": "entry_price", "precio_de_entrada": "entry_price",
+    "parada_de_pérdida": "stop_loss", "toma_de_ganancias_1": "take_profit_1",
+    "toma_de_ganancias_2": "take_profit_2", "objetivo_1": "take_profit_1",
+    "objetivo_2": "take_profit_2", "tamaño_posición_pct": "position_size_pct",
+    "tamaño_de_posición_pct": "position_size_pct", "confianza": "confidence",
+    "régimen_btc": "regime_btc", "regimen_btc": "regime_btc",
+    "régimen_de_tendencia": "trend_regime", "regimen_de_tendencia": "trend_regime",
+    "régimen_vol": "vol_regime", "regimen_vol": "vol_regime",
+    "puntuación_confluencia": "confluence_score", "puntuacion_confluencia": "confluence_score",
+    "descripción_del_edge": "edge_description", "descripcion_del_edge": "edge_description",
+    "razonamiento": "reasoning", "checklist_aprobado": "checklist_pass",
+    "riesgos": "risks", "ajuste_auto_aprendizaje": "self_learning_adjustment",
+}
+_VAL_MAP = {
+    "COMPRAR": "BUY", "VENDER": "SELL", "SIN_OPERACIÓN": "NO_TRADE",
+    "NO_OPERAR": "NO_TRADE", "LARGO": "LONG", "CORTO": "SHORT",
+    "NÚCLEO": "CORE", "NUCLEO": "CORE", "SATÉLITE": "SATELLITE", "SATELITE": "SATELLITE",
+    "VERDE": "GREEN", "AMARILLO": "YELLOW", "ROJO": "RED",
+    "ALZA_FUERTE": "STRONG_UP", "ALZA_DÉBIL": "WEAK_UP", "RANGO": "RANGE",
+    "BAJA_FUERTE": "STRONG_DOWN", "BAJA_DÉBIL": "WEAK_DOWN",
+    "BAJO": "LOW", "NORMAL": "NORMAL", "ALTO": "HIGH", "EXTREMO": "EXTREME",
+}
+_DEFAULTS = {
+    "action": "NO_TRADE", "pair": "", "direction": "", "bucket": "CORE",
+    "template": "", "entry_price": 0, "stop_loss": 0, "take_profit_1": 0,
+    "take_profit_2": 0, "position_size_pct": 0, "confidence": 0,
+    "regime_btc": "YELLOW", "trend_regime": "RANGE", "vol_regime": "NORMAL",
+    "confluence_score": 0, "edge_description": "", "reasoning": "",
+    "checklist_pass": False, "risks": [], "self_learning_adjustment": "",
+}
+
+
+def normalize_gemini(d: dict) -> dict:
+    """Translate Spanish keys/values to English + fill defaults + fix confidence."""
+    result = {}
+    for k, v in d.items():
+        new_key = _KEY_MAP.get(k.lower().strip(), k)
+        if isinstance(v, str):
+            new_val = _VAL_MAP.get(v.upper().strip(), v)
+        elif isinstance(v, dict):
+            new_val = {_KEY_MAP.get(sk.lower().strip(), sk): sv for sk, sv in v.items()}
+        else:
+            new_val = v
+        result[new_key] = new_val
+
+    for field, default in _DEFAULTS.items():
+        if field not in result:
+            result[field] = default
+
+    # Confidence normalization: BUY/SELL with confidence=0 is incoherent
+    action = str(result.get("action", "")).upper()
+    conf = 0
+    try:
+        conf = float(result.get("confidence", 0))
+    except:
+        conf = 0
+    conf = max(0, min(100, conf))
+
+    if action in ("BUY", "SELL") and conf == 0:
+        confl = float(result.get("confluence_score", 0) or 0)
+        conf = min(95, max(55, confl * 10))
+
+    result["confidence"] = round(conf, 1)
+    return result
 
 
 async def call_gemini(prompt: str) -> dict:
@@ -178,11 +260,8 @@ async def call_gemini(prompt: str) -> dict:
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
     payload = {
         "contents": [{"parts": [{"text": SYSTEM_PROMPT + "\n\n" + prompt}]}],
-        "generationConfig": {
-            "temperature": 0.1,
-            "maxOutputTokens": 4096,
-            "responseMimeType": "application/json"
-        }
+        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 4096,
+                             "responseMimeType": "application/json"}
     }
 
     raw = ""
@@ -192,97 +271,28 @@ async def call_gemini(prompt: str) -> dict:
             if r.status_code != 200:
                 body = r.text[:500]
                 log.error(f"Gemini HTTP {r.status_code}: {body}")
-                return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}: {body}"}
+                return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}"}
             data = r.json()
             raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
             parsed = json.loads(raw)
-            return normalize_gemini_response(parsed)
+            return normalize_gemini(parsed)
         except json.JSONDecodeError:
             log.error(f"Gemini invalid JSON: {raw[:500]}")
-            # Try normalizing raw text before giving up
-            normalized = normalize_raw_json(raw)
-            if normalized:
-                return normalized
-            return {"action": "NO_TRADE", "reasoning": "Gemini returned invalid JSON"}
+            # Try fixing truncated JSON
+            try:
+                fixed = raw
+                if fixed.count('{') > fixed.count('}'):
+                    fixed += '""}' * (fixed.count('{') - fixed.count('}'))
+                parsed = json.loads(fixed)
+                return normalize_gemini(parsed)
+            except:
+                return {"action": "NO_TRADE", "reasoning": "Gemini returned invalid JSON"}
         except Exception as e:
             log.error(f"Gemini error: {e}")
             return {"action": "NO_TRADE", "reasoning": str(e)}
 
-
-def normalize_gemini_response(d: dict) -> dict:
-    """Translate Spanish keys/values from Gemini to English."""
-    KEY_MAP = {
-        "acción": "action", "accion": "action",
-        "par": "pair", "dirección": "direction", "direccion": "direction",
-        "cubo": "bucket", "plantilla": "template",
-        "precio_entrada": "entry_price", "precio_de_entrada": "entry_price",
-        "stop_loss": "stop_loss", "parada_de_pérdida": "stop_loss",
-        "toma_de_ganancias_1": "take_profit_1", "objetivo_1": "take_profit_1",
-        "toma_de_ganancias_2": "take_profit_2", "objetivo_2": "take_profit_2",
-        "tamaño_posición_pct": "position_size_pct", "tamaño_de_posición_pct": "position_size_pct",
-        "confianza": "confidence", "régimen_btc": "regime_btc", "regimen_btc": "regime_btc",
-        "régimen_de_tendencia": "trend_regime", "regimen_de_tendencia": "trend_regime",
-        "régimen_vol": "vol_regime", "regimen_vol": "vol_regime",
-        "puntuación_confluencia": "confluence_score", "puntuacion_confluencia": "confluence_score",
-        "descripción_del_edge": "edge_description", "descripcion_del_edge": "edge_description",
-        "razonamiento": "reasoning", "checklist_aprobado": "checklist_pass",
-        "riesgos": "risks", "ajuste_auto_aprendizaje": "self_learning_adjustment",
-    }
-    VALUE_MAP = {
-        "COMPRAR": "BUY", "VENDER": "SELL", "SIN_OPERACIÓN": "NO_TRADE",
-        "NO_OPERAR": "NO_TRADE", "NO_TRADE": "NO_TRADE",
-        "LARGO": "LONG", "CORTO": "SHORT",
-        "NÚCLEO": "CORE", "NUCLEO": "CORE", "SATÉLITE": "SATELLITE", "SATELITE": "SATELLITE",
-        "VERDE": "GREEN", "AMARILLO": "YELLOW", "ROJO": "RED",
-        "ALZA_FUERTE": "STRONG_UP", "ALZA_DÉBIL": "WEAK_UP",
-        "RANGO": "RANGE", "BAJA_FUERTE": "STRONG_DOWN", "BAJA_DÉBIL": "WEAK_DOWN",
-        "BAJO": "LOW", "NORMAL": "NORMAL", "ALTO": "HIGH", "EXTREMO": "EXTREME",
-    }
-
-    result = {}
-    for k, v in d.items():
-        new_key = KEY_MAP.get(k.lower().strip(), k)
-        if isinstance(v, str):
-            new_val = VALUE_MAP.get(v.upper().strip(), v)
-        elif isinstance(v, dict):
-            new_val = {KEY_MAP.get(sk.lower().strip(), sk): sv for sk, sv in v.items()}
-        else:
-            new_val = v
-        result[new_key] = new_val
-
-    # Ensure required fields exist with defaults
-    defaults = {"action": "NO_TRADE", "pair": "", "direction": "", "bucket": "CORE",
-                "template": "", "entry_price": 0, "stop_loss": 0, "take_profit_1": 0,
-                "take_profit_2": 0, "position_size_pct": 0, "confidence": 0,
-                "regime_btc": "YELLOW", "trend_regime": "RANGE", "vol_regime": "NORMAL",
-                "confluence_score": 0, "edge_description": "", "reasoning": "",
-                "checklist_pass": False, "risks": [], "self_learning_adjustment": ""}
-    for field, default in defaults.items():
-        if field not in result:
-            result[field] = default
-
-    return result
-
-
-def normalize_raw_json(raw: str) -> dict:
-    """Last resort: try to fix common issues in raw JSON string."""
-    import re
-    try:
-        # Remove markdown fences if present
-        cleaned = raw.strip()
-        if cleaned.startswith("```"):
-            cleaned = re.sub(r'^```[a-zA-Z]*\n?', '', cleaned)
-            cleaned = re.sub(r'\n?```$', '', cleaned)
-        # Try to parse truncated JSON by closing it
-        if cleaned.count('{') > cleaned.count('}'):
-            cleaned += '""}' * (cleaned.count('{') - cleaned.count('}'))
-        parsed = json.loads(cleaned)
-        return normalize_gemini_response(parsed)
-    except:
-        return None
-
 # ═══════════════════════════════════════════════════════════
-# RISK MANAGER
+# RISK MANAGER + STALE SIGNAL + VALIDATION
 # ═══════════════════════════════════════════════════════════
 def check_kill_switches():
     if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
@@ -291,40 +301,105 @@ def check_kill_switches():
         return True, f"Weekly DD {weekly_pnl:.2%} > {RISK_PARAMS['weekly_drawdown_kill']:.2%}"
     return False, ""
 
-def validate_trade(d: dict):
+
+def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
+    """Hardcoded backend check: reject if market moved too far from entry."""
+    action = str(decision.get("action", "")).upper()
+    if action not in ("BUY", "SELL"):
+        return False, ""
+
+    pair = str(decision.get("pair") or signal.get("pair") or "").upper()
+    entry = float(decision.get("entry_price") or signal.get("price") or 0)
+    current = get_current_price(pair, market_ctx)
+
+    if entry <= 0 or current <= 0:
+        return False, ""
+
+    drift = abs(current - entry) / entry
+    threshold = RISK_PARAMS["max_entry_drift_pct"]
+
+    if drift > threshold:
+        return True, f"Stale signal: price {current:.2f} is {drift:.2%} from entry {entry:.2f} (max {threshold:.2%})"
+    return False, ""
+
+
+def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     pair = d.get("pair", "").upper()
+    action = str(d.get("action", "NO_TRADE")).upper()
+
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
         return False, f"BLOCKED: {pair} is protected (BNB)"
+
+    if action == "NO_TRADE":
+        return False, d.get("reasoning", "Model decided NO_TRADE")
+
     if not d.get("checklist_pass", False):
         return False, "Checklist did not pass"
-    if d.get("confidence", 0) < RISK_PARAMS["min_confidence"]:
-        return False, f"Confidence {d.get('confidence')}% < {RISK_PARAMS['min_confidence']}%"
+
+    # Stale signal (hardcoded, not LLM-dependent)
+    if signal and market_ctx:
+        is_stale, stale_msg = stale_signal_check(signal, d, market_ctx)
+        if is_stale:
+            return False, stale_msg
+
+    conf = float(d.get("confidence", 0) or 0)
+    if conf < RISK_PARAMS["min_confidence"]:
+        return False, f"Confidence {conf:.0f}% < {RISK_PARAMS['min_confidence']}%"
+
     if d.get("confluence_score", 0) < RISK_PARAMS["min_confluence"]:
         return False, f"Confluence {d.get('confluence_score')} < {RISK_PARAMS['min_confluence']}"
-    entry = d.get("entry_price", 0)
-    sl = d.get("stop_loss", 0)
-    tp1 = d.get("take_profit_1", 0)
+
+    entry, sl, tp1 = d.get("entry_price", 0), d.get("stop_loss", 0), d.get("take_profit_1", 0)
     if entry and sl and tp1:
         risk = abs(entry - sl)
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
             return False, f"R:R below {RISK_PARAMS['min_rr']}"
+
     cur_exp = sum(p.get("risk_pct", 0) for p in open_positions)
     new_risk = d.get("position_size_pct", 0) / 100
     if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
         return False, f"Total exposure {cur_exp + new_risk:.2%} > {RISK_PARAMS['max_total_exposure']:.2%}"
+
     killed, reason = check_kill_switches()
     if killed:
         return False, f"KILL SWITCH: {reason}"
+
     return True, "All checks passed"
 
-def compute_feedback():
+# ═══════════════════════════════════════════════════════════
+# FEEDBACK (Sheet first, memory fallback)
+# ═══════════════════════════════════════════════════════════
+async def get_feedback() -> str:
+    """Get self-learning feedback: Sheet first, then local memory."""
+    if SHEETS_WEBAPP_URL:
+        try:
+            async with httpx.AsyncClient(timeout=15) as client:
+                r = await client.post(SHEETS_WEBAPP_URL,
+                                      json={"action": "get_feedback"},
+                                      follow_redirects=True)
+                data = r.json()
+                if data.get("ok") and data.get("feedback"):
+                    return data["feedback"]
+        except:
+            pass
+
+    # Fallback: local memory
     if len(trade_log) < 3:
         return "Insufficient data (need 3+ trades)"
     recent = trade_log[-10:]
     wins = sum(1 for t in recent if t.get("resultado") == "WIN")
     losses = sum(1 for t in recent if t.get("resultado") == "LOSS")
     total = wins + losses
-    return f"Last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}" if total > 0 else "No closed trades"
+    parts = []
+    if total > 0:
+        parts.append(f"Last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}")
+    stale = sum(1 for t in recent if "stale" in str(t.get("motivo_no_ejecutar", "")).lower())
+    if stale >= 2:
+        parts.append(f"{stale} stale signals detected. Market moving fast.")
+    low_conf = sum(1 for t in recent if "Confidence" in str(t.get("motivo_no_ejecutar", "")))
+    if low_conf >= 2:
+        parts.append(f"{low_conf} low-confidence rejections. Review signal quality.")
+    return " | ".join(parts) if parts else "No closed trades yet"
 
 # ═══════════════════════════════════════════════════════════
 # SHEETS BRIDGE
@@ -363,7 +438,7 @@ async def get_status():
                       "open_positions": len(open_positions),
                       "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl},
             "kill_switch": {"active": killed, "reason": reason},
-            "feedback": compute_feedback()}
+            "feedback": await get_feedback()}
 
 @app.post("/webhook")
 async def webhook(request: Request):
@@ -375,6 +450,7 @@ async def webhook(request: Request):
     pair = body.get("pair", "UNKNOWN").upper()
     log.info(f"Signal: {pair} | {body.get('signal_type', 'N/A')}")
 
+    # Idempotency
     sig_hash = hashlib.md5(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
     if sig_hash in seen_signals:
         return {"action": "DUPLICATE", "reason": "Signal already processed"}
@@ -382,34 +458,43 @@ async def webhook(request: Request):
     if len(seen_signals) > 100:
         seen_signals.clear()
 
+    # BNB protection
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
         return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB)"}
 
+    # Kill switches
     killed, kill_reason = check_kill_switches()
     if killed:
         return {"action": "BLOCKED", "reason": kill_reason}
 
+    # Context
     market_ctx = await get_market_context()
+    current_price = get_current_price(pair, market_ctx)
     rag_query = f"{body.get('signal_type','')} {pair} {body.get('regime','')} {body.get('template','')} risk management"
     rag_context = rag.build_context(rag_query, k=5, max_words=1500)
+    feedback = await get_feedback()
 
+    # Prompt
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
         signal=json.dumps(body),
+        current_price=f"{current_price:.2f}",
         positions=len(open_positions),
         daily_pnl=f"{daily_pnl:.2%}",
         weekly_pnl=f"{weekly_pnl:.2%}",
         satellite_pct=satellite_pct,
-        feedback=compute_feedback()
+        feedback=feedback
     )
 
+    # Decision
     decision = await call_gemini(prompt)
-    is_valid, validation_msg = validate_trade(decision)
+    is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx)
 
     trade_counter += 1
     trade_id = f"T-{trade_counter:04d}"
 
+    # Enriched record for learning
     record = {
         "trade_id": trade_id, "timestamp": datetime.utcnow().isoformat(),
         "pair": decision.get("pair", pair), "direction": decision.get("direction", ""),
@@ -429,11 +514,17 @@ async def webhook(request: Request):
         "motivo_no_ejecutar": "" if is_valid else validation_msg,
         "reasoning": decision.get("reasoning", ""),
         "action": decision.get("action", "NO_TRADE"),
+        # Learning fields
+        "signal_price": body.get("price", 0),
+        "current_market_price": current_price,
+        "signal_hash": sig_hash,
+        "release": RELEASE_ID,
+        "feedback_used": feedback,
     }
     trade_log.append(record)
     await log_to_sheet("log_trade", record)
 
-    if is_valid and decision.get("action") != "NO_TRADE" and PAPER_TRADING:
+    if is_valid and decision.get("action") != "NO_TRADE":
         open_positions.append({
             "trade_id": trade_id, "pair": decision.get("pair"),
             "direction": decision.get("direction"), "bucket": decision.get("bucket"),
