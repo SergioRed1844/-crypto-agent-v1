@@ -345,42 +345,64 @@ function getFeedback(data) {
   
   if (lastRow < 3) return { ok: true, feedback: "No trades yet. No feedback available.", trades: 0 };
   
-  const stats = computeRollingStats(sheet, lastRow);
+  // I-01/I-02: Filter by pair if provided
+  const filterPair = (data.pair || "").toUpperCase();
   
-  // Count SL issues
-  const slColumn = sheet.getRange("AC3:AC" + lastRow).getValues().flat();
-  const tpColumn = sheet.getRange("AD3:AD" + lastRow).getValues().flat();
-  const slTooShort = slColumn.filter(v => v === "SÍ").length;
-  const tpTooHigh = tpColumn.filter(v => v === "SÍ").length;
+  // Get all trade data
+  const allData = sheet.getRange(3, 1, lastRow - 2, 39).getValues();
   
-  // Get last 5 trades summary
-  const startRow = Math.max(3, lastRow - 4);
-  const recentData = sheet.getRange(startRow, 1, lastRow - startRow + 1, 39).getValues();
-  const recentSummary = recentData.map(r => ({
-    trade_id: r[0],
-    pair: r[2],
-    direction: r[3],
-    template: r[5],
-    resultado: r[23],
-    pnl_R: r[25]
-  }));
+  // Filter by pair if specified
+  const filtered = filterPair 
+    ? allData.filter(r => String(r[2]).toUpperCase() === filterPair) 
+    : allData;
   
-  // Build feedback text
+  // Take last 10 of filtered set
+  const recent = filtered.slice(-10);
+  
+  if (recent.length === 0) {
+    return { ok: true, feedback: filterPair ? "No trades for " + filterPair : "No trades yet", trades: 0 };
+  }
+  
+  // Compute stats from filtered data
+  let wins = 0, losses = 0, totalRR = 0, rrCount = 0;
+  let slTooShort = 0, tpTooHigh = 0, staleCount = 0;
+  
+  for (let i = 0; i < recent.length; i++) {
+    const resultado = recent[i][23]; // Column X
+    const pnlR = recent[i][25];     // Column Z
+    const motivo = String(recent[i][21] || ""); // Column V: motivo_no_ejecutar
+    
+    if (resultado === "WIN") wins++;
+    if (resultado === "LOSS") losses++;
+    if (recent[i][28] === "SÍ") slTooShort++;
+    if (recent[i][29] === "SÍ") tpTooHigh++;
+    if (motivo.toLowerCase().indexOf("stale") >= 0) staleCount++;
+    
+    if (pnlR && pnlR !== "") {
+      const rVal = parseFloat(String(pnlR).replace("R", "").replace("+", ""));
+      if (!isNaN(rVal)) { totalRR += rVal; rrCount++; }
+    }
+  }
+  
+  const total = wins + losses;
   const feedbackParts = [];
-  feedbackParts.push("Rolling 10: " + stats.win_rate_10 + " win rate, " + stats.avg_rr_10 + " avg R:R");
-  feedbackParts.push("Satellite allocation: " + stats.satellite_pct);
+  const prefix = filterPair || "ALL";
   
-  if (slTooShort >= 3) feedbackParts.push("WARNING: " + slTooShort + " trades with SL too short. Widen ATR multiplier.");
-  if (tpTooHigh >= 3) feedbackParts.push("WARNING: " + tpTooHigh + " trades with unreachable TP. Reduce target.");
+  if (total > 0) {
+    feedbackParts.push(prefix + " last " + recent.length + ": " + wins + "W/" + losses + "L WR:" + Math.round(wins/total*100) + "%");
+  }
+  if (rrCount > 0) {
+    feedbackParts.push("Avg R:R: " + (totalRR/rrCount).toFixed(2));
+  }
+  if (slTooShort >= 2) feedbackParts.push("WARNING: " + slTooShort + " trades SL too short.");
+  if (tpTooHigh >= 2) feedbackParts.push("WARNING: " + tpTooHigh + " trades TP unreachable.");
+  if (staleCount >= 2) feedbackParts.push(staleCount + " stale signal rejections.");
   
   return {
     ok: true,
-    trades: lastRow - 2,
-    rolling_stats: stats,
-    sl_too_short_count: slTooShort,
-    tp_too_high_count: tpTooHigh,
-    recent_trades: recentSummary,
-    feedback: feedbackParts.join(" | ")
+    trades: recent.length,
+    pair_filter: filterPair || "ALL",
+    feedback: feedbackParts.join(" | ") || "No closed trades for " + prefix
   };
 }
 

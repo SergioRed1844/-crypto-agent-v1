@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.4-20260406"
+RELEASE_ID = "v2.5-20260406"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -249,6 +249,18 @@ def normalize_gemini(d: dict) -> dict:
         conf = min(95, max(55, confl * 10))
 
     result["confidence"] = round(conf, 1)
+
+    # R-04: Sanitize types — force numeric fields to float
+    for num_field in ["entry_price", "stop_loss", "take_profit_1", "take_profit_2",
+                      "position_size_pct", "confidence", "confluence_score"]:
+        val = result.get(num_field, 0)
+        if isinstance(val, str):
+            val = val.replace("%", "").replace(",", "").strip()
+        try:
+            result[num_field] = float(val)
+        except:
+            result[num_field] = 0.0
+
     return result
 
 
@@ -303,7 +315,7 @@ def check_kill_switches():
 
 
 def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
-    """Hardcoded backend check: reject if market moved too far from entry."""
+    """R-01+R-03: Hardcoded stale check. Uses ATR-based threshold if available."""
     action = str(decision.get("action", "")).upper()
     if action not in ("BUY", "SELL"):
         return False, ""
@@ -312,14 +324,25 @@ def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     entry = float(decision.get("entry_price") or signal.get("price") or 0)
     current = get_current_price(pair, market_ctx)
 
-    if entry <= 0 or current <= 0:
-        return False, ""
+    # R-01 blindado: if we can't get current price, reject the trade
+    if current <= 0:
+        return True, f"Cannot validate entry: market price unavailable for {pair}"
+    if entry <= 0:
+        return True, "Cannot validate: entry_price is 0"
 
     drift = abs(current - entry) / entry
-    threshold = RISK_PARAMS["max_entry_drift_pct"]
+
+    # R-03: Dynamic threshold based on ATR if available in signal
+    atr = float(signal.get("atr", 0) or 0)
+    signal_price = float(signal.get("price", 0) or 0)
+    if atr > 0 and signal_price > 0:
+        # ATR-relative threshold: 1x ATR as % of price
+        threshold = atr / signal_price
+    else:
+        threshold = RISK_PARAMS["max_entry_drift_pct"]
 
     if drift > threshold:
-        return True, f"Stale signal: price {current:.2f} is {drift:.2%} from entry {entry:.2f} (max {threshold:.2%})"
+        return True, f"Stale: price {current:.2f} drifted {drift:.2%} from entry {entry:.2f} (threshold {threshold:.2%})"
     return False, ""
 
 
@@ -350,6 +373,11 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         return False, f"Confluence {d.get('confluence_score')} < {RISK_PARAMS['min_confluence']}"
 
     entry, sl, tp1 = d.get("entry_price", 0), d.get("stop_loss", 0), d.get("take_profit_1", 0)
+
+    # R-02: SL cannot equal entry (zero risk = division by zero in R:R)
+    if entry and sl and abs(entry - sl) < 0.0001:
+        return False, "Invalid: stop_loss equals entry_price (zero risk)"
+
     if entry and sl and tp1:
         risk = abs(entry - sl)
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
@@ -369,37 +397,43 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
 # ═══════════════════════════════════════════════════════════
 # FEEDBACK (Sheet first, memory fallback)
 # ═══════════════════════════════════════════════════════════
-async def get_feedback() -> str:
-    """Get self-learning feedback: Sheet first, then local memory."""
+async def get_feedback(pair: str = "") -> str:
+    """I-01: Get self-learning feedback filtered by pair. Sheet first, memory fallback."""
     if SHEETS_WEBAPP_URL:
         try:
             async with httpx.AsyncClient(timeout=15) as client:
-                r = await client.post(SHEETS_WEBAPP_URL,
-                                      json={"action": "get_feedback"},
-                                      follow_redirects=True)
+                payload = {"action": "get_feedback"}
+                if pair:
+                    payload["pair"] = pair
+                r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
                 data = r.json()
                 if data.get("ok") and data.get("feedback"):
                     return data["feedback"]
         except:
             pass
 
-    # Fallback: local memory
+    # Fallback: local memory, filtered by pair if provided
     if len(trade_log) < 3:
         return "Insufficient data (need 3+ trades)"
-    recent = trade_log[-10:]
+    if pair:
+        recent = [t for t in trade_log[-20:] if t.get("pair", "").upper() == pair.upper()][-10:]
+    else:
+        recent = trade_log[-10:]
+    if not recent:
+        return f"No trades for {pair}" if pair else "No trades yet"
     wins = sum(1 for t in recent if t.get("resultado") == "WIN")
     losses = sum(1 for t in recent if t.get("resultado") == "LOSS")
     total = wins + losses
     parts = []
     if total > 0:
-        parts.append(f"Last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}")
+        parts.append(f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}")
     stale = sum(1 for t in recent if "stale" in str(t.get("motivo_no_ejecutar", "")).lower())
     if stale >= 2:
-        parts.append(f"{stale} stale signals detected. Market moving fast.")
+        parts.append(f"{stale} stale signals. Market moving fast.")
     low_conf = sum(1 for t in recent if "Confidence" in str(t.get("motivo_no_ejecutar", "")))
     if low_conf >= 2:
-        parts.append(f"{low_conf} low-confidence rejections. Review signal quality.")
-    return " | ".join(parts) if parts else "No closed trades yet"
+        parts.append(f"{low_conf} low-confidence rejections.")
+    return " | ".join(parts) if parts else "No closed trades"
 
 # ═══════════════════════════════════════════════════════════
 # SHEETS BRIDGE
@@ -472,7 +506,7 @@ async def webhook(request: Request):
     current_price = get_current_price(pair, market_ctx)
     rag_query = f"{body.get('signal_type','')} {pair} {body.get('regime','')} {body.get('template','')} risk management"
     rag_context = rag.build_context(rag_query, k=5, max_words=1500)
-    feedback = await get_feedback()
+    feedback = await get_feedback(pair=pair)
 
     # Prompt
     prompt = TRADE_PROMPT.format(
