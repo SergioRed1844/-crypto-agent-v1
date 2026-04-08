@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.5.1-20260408"
+RELEASE_ID = "v2.5.2-20260408"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -440,10 +440,10 @@ async def get_feedback(pair: str = "") -> str:
 # ═══════════════════════════════════════════════════════════
 async def log_to_sheet(sheet_action: str, data: dict):
     if not SHEETS_WEBAPP_URL:
-        return
+        log.warning("SHEETS_WEBAPP_URL not configured")
+        return {"ok": False, "error": "Sheets not configured"}
     try:
         payload = dict(data)
-        # Prevent collision: rename trade's "action" so it doesn't overwrite the bridge routing
         if "action" in payload:
             payload["decision_action"] = payload.pop("action")
         payload["action"] = sheet_action
@@ -452,11 +452,14 @@ async def log_to_sheet(sheet_action: str, data: dict):
             r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
             try:
                 result = r.json()
-                log.info(f"Sheet {sheet_action}: ok={result.get('ok')}")
+                log.info(f"Sheet {sheet_action}: ok={result.get('ok')} row={result.get('row','?')}")
+                return result
             except:
-                log.warning(f"Sheet {sheet_action}: non-JSON response {r.status_code}")
+                log.warning(f"Sheet {sheet_action}: non-JSON response status={r.status_code} body={r.text[:200]}")
+                return {"ok": False, "error": f"HTTP {r.status_code}"}
     except Exception as e:
         log.warning(f"Sheet error: {e}")
+        return {"ok": False, "error": str(e)}
 
 # ═══════════════════════════════════════════════════════════
 # ENDPOINTS
@@ -567,7 +570,8 @@ async def webhook(request: Request):
         "feedback_used": feedback,
     }
     trade_log.append(record)
-    await log_to_sheet("log_trade", record)
+    sheet_result = await log_to_sheet("log_trade", record)
+    log.info(f"Trade {trade_id}: action={decision.get('action')} valid={is_valid} sheet={sheet_result.get('ok') if sheet_result else 'N/A'}")
 
     if is_valid and decision.get("action") != "NO_TRADE":
         open_positions.append({
