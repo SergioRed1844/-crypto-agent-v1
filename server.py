@@ -10,7 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 
-RELEASE_ID = "v2.5-20260406"
+RELEASE_ID = "v2.5.1-20260408"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -438,12 +438,23 @@ async def get_feedback(pair: str = "") -> str:
 # ═══════════════════════════════════════════════════════════
 # SHEETS BRIDGE
 # ═══════════════════════════════════════════════════════════
-async def log_to_sheet(action: str, data: dict):
+async def log_to_sheet(sheet_action: str, data: dict):
     if not SHEETS_WEBAPP_URL:
         return
     try:
+        payload = dict(data)
+        # Prevent collision: rename trade's "action" so it doesn't overwrite the bridge routing
+        if "action" in payload:
+            payload["decision_action"] = payload.pop("action")
+        payload["action"] = sheet_action
+
         async with httpx.AsyncClient(timeout=30) as client:
-            await client.post(SHEETS_WEBAPP_URL, json={"action": action, **data}, follow_redirects=True)
+            r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
+            try:
+                result = r.json()
+                log.info(f"Sheet {sheet_action}: ok={result.get('ok')}")
+            except:
+                log.warning(f"Sheet {sheet_action}: non-JSON response {r.status_code}")
     except Exception as e:
         log.warning(f"Sheet error: {e}")
 
@@ -547,7 +558,7 @@ async def webhook(request: Request):
         "ejecutado": is_valid and decision.get("action") != "NO_TRADE",
         "motivo_no_ejecutar": "" if is_valid else validation_msg,
         "reasoning": decision.get("reasoning", ""),
-        "action": decision.get("action", "NO_TRADE"),
+        "decision_action": decision.get("action", "NO_TRADE"),
         # Learning fields
         "signal_price": body.get("price", 0),
         "current_market_price": current_price,
