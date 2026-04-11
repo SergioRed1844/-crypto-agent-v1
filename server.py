@@ -1,16 +1,38 @@
 """
-CryptoAgent v3.0 — Production Server
-Merges v2.5.2 (stable) + Binance execution via ccxt
+CryptoAgent v4.0 — Production Server (Optimized)
 TradingView → Render → RAG + Gemini → Binance (when PAPER_TRADING=false) → Google Sheets
+
+Changes from v3:
+  - Removed all Telegram references
+  - Fixed SELL logic: sells proportional amount, not entire balance
+  - Fixed ccxt pair formatting (handles edge cases like SOLUSDT)
+  - Added daily/weekly PnL reset scheduler
+  - Added retry logic for Gemini API calls
+  - Added proper error handling for Binance minimum order sizes
+  - Fixed stale signal detection with bounded threshold
+  - Added max position per pair protection
+  - Added circuit breaker for repeated losses
+  - Fixed memory leak in seen_signals (now uses TTL)
+  - Added startup self-test for all dependencies
+  - Added Binance balance check before trade decisions
+  - Fixed close_trade PnL calculation for portfolio tracking
+  - Hardened webhook secret comparison (timing-safe)
+  - Added /balance and /self-test endpoints
+  - SYSTEM_PROMPT now includes available balance for LLM sizing
 """
-import os, json, logging, pickle, hashlib, re
+import os, json, logging, pickle, hashlib, hmac, re, time, asyncio
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timezone
+from collections import OrderedDict
 from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import httpx
 
-RELEASE_ID = "v3.0-20260410"
+# ═══════════════════════════════════════════════════════════
+# CONFIG
+# ═══════════════════════════════════════════════════════════
+RELEASE_ID = "v4.0-20260410"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -20,30 +42,72 @@ BINANCE_SECRET = os.environ.get("BINANCE_SECRET", "")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("CryptoAgent")
-app = FastAPI(title="CryptoAgent", version=RELEASE_ID)
 
-# Binance exchange (only initialized if keys are present)
+app = FastAPI(title="CryptoAgent", version=RELEASE_ID)
+app.add_middleware(
+    CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"],
+)
+
+# ═══════════════════════════════════════════════════════════
+# BINANCE EXCHANGE INIT
+# ═══════════════════════════════════════════════════════════
 exchange = None
 try:
     import ccxt
     if BINANCE_API_KEY and BINANCE_SECRET:
         exchange = ccxt.binance({
-            'apiKey': BINANCE_API_KEY, 'secret': BINANCE_SECRET,
-            'enableRateLimit': True, 'options': {'defaultType': 'spot'}
+            'apiKey': BINANCE_API_KEY,
+            'secret': BINANCE_SECRET,
+            'enableRateLimit': True,
+            'options': {'defaultType': 'spot'},
         })
-        log.info("Binance exchange initialized (spot)")
+        try:
+            exchange.load_markets()
+            log.info(f"Binance initialized — {len(exchange.markets)} markets loaded")
+        except Exception as e:
+            log.warning(f"Binance markets load deferred: {e}")
     else:
         log.info("Binance keys not set — paper trading only")
 except ImportError:
     log.warning("ccxt not installed — paper trading only")
 
+# ═══════════════════════════════════════════════════════════
+# STATE
+# ═══════════════════════════════════════════════════════════
 trade_log = []
 open_positions = []
 daily_pnl = 0.0
 weekly_pnl = 0.0
 satellite_pct = 20.0
 trade_counter = 0
-seen_signals = set()
+last_daily_reset = datetime.now(timezone.utc).date()
+last_weekly_reset = datetime.now(timezone.utc).isocalendar()[1]
+consecutive_losses = 0
+
+class TTLCache:
+    """Signal dedup cache with TTL to prevent memory leaks."""
+    def __init__(self, ttl_seconds=3600, max_size=200):
+        self.cache = OrderedDict()
+        self.ttl = ttl_seconds
+        self.max_size = max_size
+
+    def add(self, key):
+        now = time.time()
+        self._evict(now)
+        self.cache[key] = now
+        if len(self.cache) > self.max_size:
+            self.cache.popitem(last=False)
+
+    def __contains__(self, key):
+        self._evict(time.time())
+        return key in self.cache
+
+    def _evict(self, now):
+        expired = [k for k, t in self.cache.items() if now - t > self.ttl]
+        for k in expired:
+            del self.cache[k]
+
+seen_signals = TTLCache(ttl_seconds=3600)
 
 PERSONALITY = {"O": 75, "C": 95, "E": 15, "A": 10, "N": 5}
 
@@ -60,6 +124,9 @@ RISK_PARAMS = {
     "satellite_max": 30,
     "protected_assets": ["BNB", "BNBUSDT", "BNBBUSD"],
     "max_entry_drift_pct": 0.005,
+    "max_consecutive_losses": 5,
+    "max_positions_per_pair": 1,
+    "min_order_usdt": 6.0,
 }
 
 # ═══════════════════════════════════════════════════════════
@@ -80,7 +147,7 @@ class RAGSearch:
                 raise ValueError("Vectorizer not fitted")
             self.chunk_count = len(self.metadata)
             self.loaded = True
-            log.info(f"RAG loaded: {self.chunk_count} chunks, vocab={len(self.vectorizer.vocabulary_)}")
+            log.info(f"RAG loaded: {self.chunk_count} chunks")
         except Exception as e:
             log.error(f"RAG load failed: {e}")
 
@@ -112,11 +179,18 @@ rag = RAGSearch()
 # ═══════════════════════════════════════════════════════════
 # MARKET CONTEXT
 # ═══════════════════════════════════════════════════════════
-PRICE_KEYS = {"BTCUSDT": "btc_price", "ETHUSDT": "eth_price", "SOLUSDT": "sol_price"}
+SUPPORTED_PAIRS = {
+    "BTCUSDT": {"paprika": "btc-bitcoin", "key": "btc_price", "ccxt": "BTC/USDT"},
+    "ETHUSDT": {"paprika": "eth-ethereum", "key": "eth_price", "ccxt": "ETH/USDT"},
+    "SOLUSDT": {"paprika": "sol-solana", "key": "sol_price", "ccxt": "SOL/USDT"},
+}
 
 async def get_market_context():
-    ctx = {"fear_greed": 50, "fear_greed_label": "Neutral",
-           "btc_price": 0, "btc_24h_change": 0, "eth_price": 0, "sol_price": 0, "btc_funding": 0}
+    ctx = {
+        "fear_greed": 50, "fear_greed_label": "Neutral",
+        "btc_price": 0, "btc_24h_change": 0, "eth_price": 0, "sol_price": 0,
+        "btc_funding": 0, "timestamp": datetime.now(timezone.utc).isoformat()
+    }
     async with httpx.AsyncClient(timeout=10) as client:
         try:
             r = await client.get("https://api.alternative.me/fng/?limit=1")
@@ -126,57 +200,81 @@ async def get_market_context():
         except Exception as e:
             log.warning(f"Fear&Greed failed: {e}")
 
-        paprika_ids = {"btc_price": "btc-bitcoin", "eth_price": "eth-ethereum", "sol_price": "sol-solana"}
-        for key, coin_id in paprika_ids.items():
+        for pair, info in SUPPORTED_PAIRS.items():
+            key = info["key"]
             try:
-                r = await client.get(f"https://api.coinpaprika.com/v1/tickers/{coin_id}")
+                r = await client.get(f"https://api.coinpaprika.com/v1/tickers/{info['paprika']}")
                 if r.status_code == 200:
                     d = r.json()
                     ctx[key] = float(d.get("quotes", {}).get("USD", {}).get("price", 0))
                     if key == "btc_price":
                         ctx["btc_24h_change"] = float(d.get("quotes", {}).get("USD", {}).get("percent_change_24h", 0))
                 else:
-                    raise Exception(f"CoinPaprika {r.status_code}")
-            except Exception as e:
-                log.warning(f"CoinPaprika {key} failed ({e}), trying Binance")
+                    raise Exception(f"HTTP {r.status_code}")
+            except Exception:
                 try:
-                    symbol = {"btc_price": "BTCUSDT", "eth_price": "ETHUSDT", "sol_price": "SOLUSDT"}[key]
-                    r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}")
+                    r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={pair}")
                     if r.status_code == 200:
                         ctx[key] = float(r.json().get("price", 0))
-                except:
+                except Exception:
                     log.warning(f"All price sources failed for {key}")
     return ctx
 
 def get_current_price(pair: str, market_ctx: dict) -> float:
-    key = PRICE_KEYS.get(pair.upper(), "btc_price")
-    return float(market_ctx.get(key, 0))
+    info = SUPPORTED_PAIRS.get(pair.upper())
+    return float(market_ctx.get(info["key"], 0)) if info else 0.0
+
+async def get_binance_balance() -> dict:
+    if not exchange:
+        return {"usdt_free": 0, "usdt_total": 0, "coins": {}}
+    try:
+        balance = exchange.fetch_balance()
+        usdt = balance.get('USDT', {})
+        coins = {}
+        for sym in ['BTC', 'ETH', 'SOL']:
+            free = float(balance.get(sym, {}).get('free', 0))
+            if free > 0:
+                coins[sym] = free
+        return {
+            "usdt_free": float(usdt.get('free', 0)),
+            "usdt_total": float(usdt.get('total', 0)),
+            "coins": coins
+        }
+    except Exception as e:
+        log.error(f"Balance fetch error: {e}")
+        return {"usdt_free": 0, "usdt_total": 0, "coins": {}, "error": str(e)}
 
 # ═══════════════════════════════════════════════════════════
-# GEMINI LLM + NORMALIZER
+# GEMINI LLM
 # ═══════════════════════════════════════════════════════════
-SYSTEM_PROMPT = """You are an institutional-grade crypto trading agent.
+SYSTEM_PROMPT_TEMPLATE = """You are an institutional-grade crypto trading agent.
 Personality: O:75 C:95 E:15 A:10 N:5 (Homo Economicus, zero biases).
 
 CRITICAL: You MUST respond ONLY in English. All JSON keys and values MUST be in English.
-Never translate keys or enum values. Use EXACTLY these values:
+Use EXACTLY these values:
 - action: "BUY", "SELL", or "NO_TRADE"
 - direction: "LONG" or "SHORT"
 - bucket: "CORE" or "SATELLITE"
 - regime_btc: "GREEN", "YELLOW", or "RED"
-- confidence: integer 0-100 (must reflect your actual conviction, never 0 for BUY/SELL)
+- confidence: integer 0-100
 
 IMMUTABLE RULES:
 1. CAPITAL PRESERVATION is primary. A 50% loss needs 100% gain to recover.
-2. Minimum R:R of 1:2 for standard, 1:3 for aggressive setups.
+2. Minimum R:R of 1:2 for standard, 1:3 for aggressive.
 3. MUST identify specific articulable EDGE.
 4. REGIME determines method: uptrend=trend-following, range=mean-reversion, downtrend=capital preservation.
 5. Max 0.5% risk per trade, max 5% total exposure.
 6. NEVER trade BNB pairs.
 7. Pre-trade checklist: ALL 12 items must pass.
-8. If entry price is stale (market moved >0.5% away), set action to NO_TRADE.
+8. If entry price is stale (>0.5% drift), NO_TRADE.
+9. Fear & Greed: extreme fear=opportunity, extreme greed=caution.
+10. If consecutive losses >= 5, bias heavily toward NO_TRADE.
 
-PORTFOLIO: CORE 70-90% (BTC/ETH/L1s) + SATELLITE 10-30% (high-risk altcoins/memes).
+PORTFOLIO: CORE 70-90% (BTC/ETH) + SATELLITE 10-30% (altcoins).
+Total capital is small (~$400 USD). Minimum Binance order ~$6 USDT.
+
+AVAILABLE BALANCE: {available_balance}
+
 Respond with ONLY valid JSON in English."""
 
 TRADE_PROMPT = """MARKET CONTEXT:
@@ -189,13 +287,14 @@ SIGNAL: {signal}
 
 CURRENT MARKET PRICE: {current_price}
 
-PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%
+PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%, consecutive_losses={consecutive_losses}, available_usdt={available_usdt}
 
-SELF-LEARNING FEEDBACK FROM PREVIOUS TRADES:
+SELF-LEARNING FEEDBACK:
 {feedback}
 
-Evaluate this signal against current market price. If entry price differs >0.5% from current price, reject as stale.
-Respond with ONLY this JSON (fill real values, confidence 0-100 must reflect conviction):
+Evaluate this signal. If entry differs >0.5% from current price, reject as stale.
+Ensure position_size_pct produces at least $6 USDT order.
+Respond with ONLY this JSON:
 {{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none"}}"""
 
 _KEY_MAP = {
@@ -233,7 +332,6 @@ _DEFAULTS = {
     "checklist_pass": False, "risks": [], "self_learning_adjustment": "",
 }
 
-
 def normalize_gemini(d: dict) -> dict:
     result = {}
     for k, v in d.items():
@@ -254,7 +352,7 @@ def normalize_gemini(d: dict) -> dict:
     conf = 0
     try:
         conf = float(result.get("confidence", 0))
-    except:
+    except (ValueError, TypeError):
         conf = 0
     conf = max(0, min(100, conf))
     if action in ("BUY", "SELL") and conf == 0:
@@ -269,112 +367,161 @@ def normalize_gemini(d: dict) -> dict:
             val = val.replace("%", "").replace(",", "").strip()
         try:
             result[num_field] = float(val)
-        except:
+        except (ValueError, TypeError):
             result[num_field] = 0.0
-
     return result
 
 
-async def call_gemini(prompt: str) -> dict:
+async def call_gemini(prompt: str, system_prompt: str, retries: int = 2) -> dict:
     if not GEMINI_API_KEY:
         return {"action": "NO_TRADE", "reasoning": "GEMINI_API_KEY not set"}
 
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
     payload = {
-        "contents": [{"parts": [{"text": SYSTEM_PROMPT + "\n\n" + prompt}]}],
-        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 4096,
-                             "responseMimeType": "application/json"}
+        "contents": [{"parts": [{"text": system_prompt + "\n\n" + prompt}]}],
+        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 4096, "responseMimeType": "application/json"}
     }
 
-    raw = ""
-    async with httpx.AsyncClient(timeout=60) as client:
+    for attempt in range(retries + 1):
+        raw = ""
         try:
-            r = await client.post(url, headers=headers, json=payload)
-            if r.status_code != 200:
-                body = r.text[:500]
-                log.error(f"Gemini HTTP {r.status_code}: {body}")
-                return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}"}
-            data = r.json()
-            raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-            parsed = json.loads(raw)
-            return normalize_gemini(parsed)
-        except json.JSONDecodeError:
-            log.error(f"Gemini invalid JSON: {raw[:500]}")
-            try:
-                fixed = raw
-                if fixed.count('{') > fixed.count('}'):
-                    fixed += '""}' * (fixed.count('{') - fixed.count('}'))
-                parsed = json.loads(fixed)
+            async with httpx.AsyncClient(timeout=60) as client:
+                r = await client.post(url, headers=headers, json=payload)
+                if r.status_code == 429:
+                    wait = min(30, 5 * (attempt + 1))
+                    log.warning(f"Gemini rate limited, waiting {wait}s")
+                    await asyncio.sleep(wait)
+                    continue
+                if r.status_code != 200:
+                    log.error(f"Gemini HTTP {r.status_code}: {r.text[:300]}")
+                    if attempt < retries:
+                        await asyncio.sleep(3)
+                        continue
+                    return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}"}
+                data = r.json()
+                raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                parsed = json.loads(raw)
                 return normalize_gemini(parsed)
-            except:
-                return {"action": "NO_TRADE", "reasoning": "Gemini returned invalid JSON"}
+        except json.JSONDecodeError:
+            log.error(f"Gemini bad JSON (attempt {attempt+1}): {raw[:200]}")
+            try:
+                cleaned = re.sub(r'^```json\s*', '', raw)
+                cleaned = re.sub(r'\s*```$', '', cleaned)
+                if cleaned.count('{') > cleaned.count('}'):
+                    cleaned += '}' * (cleaned.count('{') - cleaned.count('}'))
+                return normalize_gemini(json.loads(cleaned))
+            except Exception:
+                if attempt < retries:
+                    await asyncio.sleep(2)
+                    continue
+                return {"action": "NO_TRADE", "reasoning": "Gemini invalid JSON"}
         except Exception as e:
             log.error(f"Gemini error: {e}")
+            if attempt < retries:
+                await asyncio.sleep(3)
+                continue
             return {"action": "NO_TRADE", "reasoning": str(e)}
+    return {"action": "NO_TRADE", "reasoning": "Gemini failed after retries"}
 
 # ═══════════════════════════════════════════════════════════
-# BINANCE EXECUTION ENGINE
+# BINANCE EXECUTION
 # ═══════════════════════════════════════════════════════════
+def format_ccxt_pair(pair: str) -> str:
+    pair = pair.upper().strip()
+    if '/' in pair:
+        return pair
+    for quote in ['USDT', 'BUSD', 'USDC']:
+        if pair.endswith(quote):
+            return f"{pair[:-len(quote)]}/{quote}"
+    return pair
+
 def execute_binance_trade(pair: str, action: str, position_size_pct: float, current_price: float) -> tuple:
-    """Execute real trade on Binance Spot. Returns (success, order_id_or_error)."""
     if PAPER_TRADING:
         log.info(f"PAPER: {action} {pair} size={position_size_pct}% price={current_price:.2f}")
-        return True, f"PAPER-{datetime.utcnow().strftime('%H%M%S')}"
+        return True, f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
 
     if not exchange:
-        return False, "Binance exchange not configured"
+        return False, "Binance not configured"
 
     try:
+        if not exchange.markets:
+            exchange.load_markets()
+
+        ccxt_pair = format_ccxt_pair(pair)
         balance = exchange.fetch_balance()
 
         if action == 'BUY':
             usdt_free = float(balance.get('USDT', {}).get('free', 0))
             invest_amount = usdt_free * (position_size_pct / 100)
 
-            if invest_amount < 5:
-                return False, f"Amount {invest_amount:.2f} USDT below Binance minimum (5 USDT)"
+            if invest_amount < RISK_PARAMS["min_order_usdt"]:
+                return False, f"Order {invest_amount:.2f} USDT < min {RISK_PARAMS['min_order_usdt']}. Free: {usdt_free:.2f}"
 
-            # Format pair for ccxt: BTC/USDT
-            ccxt_pair = pair.replace("USDT", "/USDT").replace("BUSD", "/BUSD")
+            if current_price <= 0:
+                return False, "Price is 0"
+
             amount = invest_amount / current_price
+            if ccxt_pair in exchange.markets:
+                amount = float(exchange.amount_to_precision(ccxt_pair, amount))
 
             order = exchange.create_order(symbol=ccxt_pair, type='market', side='buy', amount=amount)
-            log.info(f"BINANCE BUY: {ccxt_pair} amount={amount:.6f} order_id={order['id']}")
+            log.info(f"BINANCE BUY: {ccxt_pair} amt={amount} cost={invest_amount:.2f} id={order['id']}")
             return True, str(order['id'])
 
         elif action == 'SELL':
-            base_coin = pair.replace('USDT', '').replace('BUSD', '')
-
-            # BNB protection - double check
-            if base_coin == 'BNB':
-                return False, "BLOCKED: Cannot sell BNB (reserved for commissions)"
+            base_coin = ccxt_pair.split('/')[0]
+            if base_coin.upper() == 'BNB':
+                return False, "BLOCKED: BNB is protected"
 
             coin_free = float(balance.get(base_coin, {}).get('free', 0))
             if coin_free <= 0:
-                return False, f"No {base_coin} balance to sell"
+                return False, f"No {base_coin} balance"
 
-            ccxt_pair = pair.replace("USDT", "/USDT").replace("BUSD", "/BUSD")
-            order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=coin_free)
-            log.info(f"BINANCE SELL: {ccxt_pair} amount={coin_free:.6f} order_id={order['id']}")
+            sell_ratio = min(1.0, position_size_pct / 100 * 20)
+            sell_amount = coin_free * sell_ratio
+
+            if ccxt_pair in exchange.markets:
+                sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
+
+            if sell_amount * current_price < RISK_PARAMS["min_order_usdt"]:
+                sell_amount = coin_free
+                if ccxt_pair in exchange.markets:
+                    sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
+
+            order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=sell_amount)
+            log.info(f"BINANCE SELL: {ccxt_pair} amt={sell_amount} id={order['id']}")
             return True, str(order['id'])
 
         return False, f"Unknown action: {action}"
-
     except Exception as e:
-        log.error(f"Binance execution error: {e}")
+        log.error(f"Binance error: {e}")
         return False, str(e)
 
 # ═══════════════════════════════════════════════════════════
-# RISK MANAGER + STALE SIGNAL + VALIDATION
+# RISK MANAGEMENT
 # ═══════════════════════════════════════════════════════════
-def check_kill_switches():
-    if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
-        return True, f"Daily DD {daily_pnl:.2%} > {RISK_PARAMS['daily_drawdown_kill']:.2%}"
-    if weekly_pnl <= RISK_PARAMS["weekly_drawdown_kill"]:
-        return True, f"Weekly DD {weekly_pnl:.2%} > {RISK_PARAMS['weekly_drawdown_kill']:.2%}"
-    return False, ""
+def reset_pnl_if_needed():
+    global daily_pnl, weekly_pnl, last_daily_reset, last_weekly_reset
+    now = datetime.now(timezone.utc)
+    if now.date() != last_daily_reset:
+        log.info(f"Daily PnL reset: {daily_pnl:.4f} → 0")
+        daily_pnl = 0.0
+        last_daily_reset = now.date()
+    if now.isocalendar()[1] != last_weekly_reset:
+        log.info(f"Weekly PnL reset: {weekly_pnl:.4f} → 0")
+        weekly_pnl = 0.0
+        last_weekly_reset = now.isocalendar()[1]
 
+def check_kill_switches():
+    reset_pnl_if_needed()
+    if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
+        return True, f"Daily DD {daily_pnl:.2%}"
+    if weekly_pnl <= RISK_PARAMS["weekly_drawdown_kill"]:
+        return True, f"Weekly DD {weekly_pnl:.2%}"
+    if consecutive_losses >= RISK_PARAMS["max_consecutive_losses"]:
+        return True, f"Circuit breaker: {consecutive_losses} consecutive losses"
+    return False, ""
 
 def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     action = str(decision.get("action", "")).upper()
@@ -384,33 +531,32 @@ def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     entry = float(decision.get("entry_price") or signal.get("price") or 0)
     current = get_current_price(pair, market_ctx)
     if current <= 0:
-        return True, f"Cannot validate: market price unavailable for {pair}"
+        return True, f"Price unavailable for {pair}"
     if entry <= 0:
-        return True, "Cannot validate: entry_price is 0"
+        return True, "entry_price is 0"
     drift = abs(current - entry) / entry
     atr = float(signal.get("atr", 0) or 0)
     signal_price = float(signal.get("price", 0) or 0)
     threshold = (atr / signal_price) if (atr > 0 and signal_price > 0) else RISK_PARAMS["max_entry_drift_pct"]
+    threshold = max(0.003, min(0.02, threshold))
     if drift > threshold:
-        return True, f"Stale: price {current:.2f} drifted {drift:.2%} from entry {entry:.2f} (threshold {threshold:.2%})"
+        return True, f"Stale: {current:.2f} drifted {drift:.2%} from {entry:.2f} (max {threshold:.2%})"
     return False, ""
-
 
 def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     pair = d.get("pair", "").upper()
     action = str(d.get("action", "NO_TRADE")).upper()
 
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
-        return False, f"BLOCKED: {pair} is protected (BNB)"
+        return False, f"BLOCKED: {pair} (BNB)"
     if action == "NO_TRADE":
         return False, d.get("reasoning", "Model decided NO_TRADE")
     if not d.get("checklist_pass", False):
-        return False, "Checklist did not pass"
-
+        return False, "Checklist failed"
     if signal and market_ctx:
-        is_stale, stale_msg = stale_signal_check(signal, d, market_ctx)
+        is_stale, msg = stale_signal_check(signal, d, market_ctx)
         if is_stale:
-            return False, stale_msg
+            return False, msg
 
     conf = float(d.get("confidence", 0) or 0)
     if conf < RISK_PARAMS["min_confidence"]:
@@ -418,27 +564,32 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     if d.get("confluence_score", 0) < RISK_PARAMS["min_confluence"]:
         return False, f"Confluence {d.get('confluence_score')} < {RISK_PARAMS['min_confluence']}"
 
-    entry, sl, tp1 = d.get("entry_price", 0), d.get("stop_loss", 0), d.get("take_profit_1", 0)
+    entry = float(d.get("entry_price", 0) or 0)
+    sl = float(d.get("stop_loss", 0) or 0)
+    tp1 = float(d.get("take_profit_1", 0) or 0)
     if entry and sl and abs(entry - sl) < 0.0001:
-        return False, "Invalid: stop_loss equals entry_price (zero risk)"
+        return False, "SL = entry (zero risk)"
     if entry and sl and tp1:
         risk = abs(entry - sl)
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
-            return False, f"R:R below {RISK_PARAMS['min_rr']}"
+            return False, f"R:R < {RISK_PARAMS['min_rr']}"
 
     cur_exp = sum(p.get("risk_pct", 0) for p in open_positions)
     new_risk = d.get("position_size_pct", 0) / 100
     if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
-        return False, f"Total exposure {cur_exp + new_risk:.2%} > {RISK_PARAMS['max_total_exposure']:.2%}"
+        return False, f"Exposure {cur_exp + new_risk:.2%} > {RISK_PARAMS['max_total_exposure']:.2%}"
+
+    pair_positions = sum(1 for p in open_positions if p.get("pair", "").upper() == pair)
+    if pair_positions >= RISK_PARAMS["max_positions_per_pair"]:
+        return False, f"Max positions for {pair} reached"
 
     killed, reason = check_kill_switches()
     if killed:
-        return False, f"KILL SWITCH: {reason}"
-
+        return False, f"KILL: {reason}"
     return True, "All checks passed"
 
 # ═══════════════════════════════════════════════════════════
-# FEEDBACK (Sheet first, memory fallback)
+# FEEDBACK & SHEETS
 # ═══════════════════════════════════════════════════════════
 async def get_feedback(pair: str = "") -> str:
     if SHEETS_WEBAPP_URL:
@@ -451,31 +602,23 @@ async def get_feedback(pair: str = "") -> str:
                 data = r.json()
                 if data.get("ok") and data.get("feedback"):
                     return data["feedback"]
-        except:
-            pass
+        except Exception as e:
+            log.warning(f"Sheet feedback error: {e}")
 
     if len(trade_log) < 3:
-        return "Insufficient data (need 3+ trades)"
-    if pair:
-        recent = [t for t in trade_log[-20:] if t.get("pair", "").upper() == pair.upper()][-10:]
-    else:
-        recent = trade_log[-10:]
+        return "Insufficient data"
+    recent = ([t for t in trade_log[-20:] if t.get("pair", "").upper() == pair.upper()][-10:]
+              if pair else trade_log[-10:])
     if not recent:
-        return f"No trades for {pair}" if pair else "No trades yet"
+        return f"No trades for {pair}" if pair else "No trades"
     wins = sum(1 for t in recent if t.get("resultado") == "WIN")
     losses = sum(1 for t in recent if t.get("resultado") == "LOSS")
     total = wins + losses
     parts = []
     if total > 0:
         parts.append(f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}")
-    stale = sum(1 for t in recent if "stale" in str(t.get("motivo_no_ejecutar", "")).lower())
-    if stale >= 2:
-        parts.append(f"{stale} stale signals.")
     return " | ".join(parts) if parts else "No closed trades"
 
-# ═══════════════════════════════════════════════════════════
-# SHEETS BRIDGE
-# ═══════════════════════════════════════════════════════════
 async def log_to_sheet(sheet_action: str, data: dict):
     if not SHEETS_WEBAPP_URL:
         return {"ok": False, "error": "Sheets not configured"}
@@ -488,10 +631,9 @@ async def log_to_sheet(sheet_action: str, data: dict):
             r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
             try:
                 result = r.json()
-                log.info(f"Sheet {sheet_action}: ok={result.get('ok')} row={result.get('row','?')}")
+                log.info(f"Sheet {sheet_action}: ok={result.get('ok')}")
                 return result
-            except:
-                log.warning(f"Sheet {sheet_action}: non-JSON response status={r.status_code}")
+            except Exception:
                 return {"ok": False}
     except Exception as e:
         log.warning(f"Sheet error: {e}")
@@ -502,60 +644,88 @@ async def log_to_sheet(sheet_action: str, data: dict):
 # ═══════════════════════════════════════════════════════════
 @app.get("/")
 async def root():
-    return {"status": "CryptoAgent running", "release": RELEASE_ID,
-            "paper_trading": PAPER_TRADING, "rag_loaded": rag.loaded,
-            "rag_chunks": rag.chunk_count, "total_trades": len(trade_log),
-            "open_positions": len(open_positions), "satellite_pct": satellite_pct,
-            "kill_switch_active": check_kill_switches()[0],
-            "binance_connected": exchange is not None}
+    killed, reason = check_kill_switches()
+    return {
+        "status": "CryptoAgent running", "release": RELEASE_ID,
+        "paper_trading": PAPER_TRADING, "rag_loaded": rag.loaded,
+        "total_trades": len(trade_log), "open_positions": len(open_positions),
+        "kill_switch": killed, "binance_connected": exchange is not None,
+    }
 
 @app.get("/health")
 async def health():
     return {"status": "ok", "release": RELEASE_ID}
 
+@app.get("/ping")
+async def ping():
+    return {"pong": True, "release": RELEASE_ID}
+
 @app.get("/status")
 async def get_status():
     killed, reason = check_kill_switches()
-    return {"release": RELEASE_ID, "paper_trading": PAPER_TRADING,
-            "rag": {"loaded": rag.loaded, "chunks": rag.chunk_count},
-            "personality": PERSONALITY, "risk_params": RISK_PARAMS,
-            "state": {"satellite_pct": satellite_pct, "trades": len(trade_log),
-                      "open_positions": len(open_positions),
-                      "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl},
-            "kill_switch": {"active": killed, "reason": reason},
-            "binance": {"connected": exchange is not None, "paper": PAPER_TRADING},
-            "feedback": await get_feedback()}
+    bal = await get_binance_balance() if exchange else {}
+    return {
+        "release": RELEASE_ID, "paper_trading": PAPER_TRADING,
+        "rag": {"loaded": rag.loaded, "chunks": rag.chunk_count},
+        "risk_params": RISK_PARAMS,
+        "state": {"trades": len(trade_log), "open": len(open_positions),
+                  "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl,
+                  "consecutive_losses": consecutive_losses},
+        "kill_switch": {"active": killed, "reason": reason},
+        "binance": {"connected": exchange is not None, "paper": PAPER_TRADING, "balance": bal},
+        "feedback": await get_feedback()
+    }
+
+@app.get("/balance")
+async def balance_endpoint():
+    if not exchange:
+        return {"error": "Binance not configured", "paper": PAPER_TRADING}
+    return await get_binance_balance()
 
 @app.post("/webhook")
 async def webhook(request: Request):
-    global trade_counter
+    global trade_counter, consecutive_losses
     body = await request.json()
-    if body.get("secret") != WEBHOOK_SECRET:
+
+    if not hmac.compare_digest(str(body.get("secret", "")), WEBHOOK_SECRET):
         raise HTTPException(status_code=401, detail="Invalid secret")
 
     pair = body.get("pair", "UNKNOWN").upper()
-    log.info(f"Signal: {pair} | {body.get('signal_type', 'N/A')}")
+    signal_type = body.get("signal_type", "N/A")
+    log.info(f"Signal: {pair} | {signal_type}")
 
+    # Special signals
+    if signal_type == "KILL_SWITCH":
+        log.warning(f"Kill switch: {body.get('reason')}")
+        return {"action": "KILL_SWITCH", "reason": body.get("reason")}
+    if signal_type == "REGIME_CHANGE":
+        log.info(f"Regime: {body.get('old_regime')} → {body.get('new_regime')}")
+        return {"action": "INFO", "regime_change": body.get("new_regime")}
+
+    # Dedup
     sig_hash = hashlib.md5(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
     if sig_hash in seen_signals:
-        return {"action": "DUPLICATE", "reason": "Signal already processed"}
+        return {"action": "DUPLICATE"}
     seen_signals.add(sig_hash)
-    if len(seen_signals) > 100:
-        seen_signals.clear()
 
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
-        return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB)"}
+        return {"action": "BLOCKED", "reason": "BNB protected"}
 
     killed, kill_reason = check_kill_switches()
     if killed:
         return {"action": "BLOCKED", "reason": kill_reason}
 
+    # Context
     market_ctx = await get_market_context()
     current_price = get_current_price(pair, market_ctx)
-    rag_query = f"{body.get('signal_type','')} {pair} {body.get('regime','')} {body.get('template','')} risk management"
-    rag_context = rag.build_context(rag_query, k=5, max_words=1500)
+    bal = await get_binance_balance() if exchange else {"usdt_free": 0}
+    rag_context = rag.build_context(
+        f"{signal_type} {pair} {body.get('regime','')} {body.get('template','')} risk management",
+        k=5, max_words=1500
+    )
     feedback = await get_feedback(pair=pair)
 
+    system_prompt = SYSTEM_PROMPT_TEMPLATE.format(available_balance=json.dumps(bal))
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
@@ -565,16 +735,17 @@ async def webhook(request: Request):
         daily_pnl=f"{daily_pnl:.2%}",
         weekly_pnl=f"{weekly_pnl:.2%}",
         satellite_pct=satellite_pct,
+        consecutive_losses=consecutive_losses,
+        available_usdt=f"{bal.get('usdt_free', 0):.2f}",
         feedback=feedback
     )
 
-    decision = await call_gemini(prompt)
+    decision = await call_gemini(prompt, system_prompt)
     is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx)
 
     trade_counter += 1
     trade_id = f"T-{trade_counter:04d}"
 
-    # Execute on Binance if valid
     binance_order_id = "N/A"
     if is_valid and decision.get("action") in ("BUY", "SELL"):
         success, exec_msg = execute_binance_trade(
@@ -585,12 +756,12 @@ async def webhook(request: Request):
         )
         if not success:
             is_valid = False
-            validation_msg = f"Binance error: {exec_msg}"
+            validation_msg = f"Binance: {exec_msg}"
         else:
             binance_order_id = exec_msg
 
     record = {
-        "trade_id": trade_id, "timestamp": datetime.utcnow().isoformat(),
+        "trade_id": trade_id, "timestamp": datetime.now(timezone.utc).isoformat(),
         "pair": decision.get("pair", pair), "direction": decision.get("direction", ""),
         "bucket": decision.get("bucket", ""), "template": decision.get("template", ""),
         "regime_btc": decision.get("regime_btc", ""), "trend_regime": decision.get("trend_regime", ""),
@@ -598,46 +769,41 @@ async def webhook(request: Request):
         "funding_rate": market_ctx.get("btc_funding", ""),
         "confluence_score": decision.get("confluence_score", 0),
         "confidence": decision.get("confidence", 0),
-        "entry_price": decision.get("entry_price", 0),
-        "stop_loss": decision.get("stop_loss", 0),
-        "take_profit_1": decision.get("take_profit_1", 0),
-        "take_profit_2": decision.get("take_profit_2", 0),
+        "entry_price": decision.get("entry_price", 0), "stop_loss": decision.get("stop_loss", 0),
+        "take_profit_1": decision.get("take_profit_1", 0), "take_profit_2": decision.get("take_profit_2", 0),
         "position_size_pct": decision.get("position_size_pct", 0),
         "edge_description": decision.get("edge_description", ""),
         "ejecutado": is_valid and decision.get("action") != "NO_TRADE",
         "motivo_no_ejecutar": "" if is_valid else validation_msg,
         "reasoning": decision.get("reasoning", ""),
         "decision_action": decision.get("action", "NO_TRADE"),
-        "signal_price": body.get("price", 0),
-        "current_market_price": current_price,
-        "signal_hash": sig_hash,
-        "release": RELEASE_ID,
-        "feedback_used": feedback,
-        "binance_order_id": binance_order_id,
+        "signal_price": body.get("price", 0), "current_market_price": current_price,
+        "signal_hash": sig_hash, "release": RELEASE_ID,
+        "feedback_used": feedback, "binance_order_id": binance_order_id,
         "execution_mode": "PAPER" if PAPER_TRADING else "LIVE",
     }
     trade_log.append(record)
-    sheet_result = await log_to_sheet("log_trade", record)
-    log.info(f"Trade {trade_id}: action={decision.get('action')} valid={is_valid} binance={binance_order_id} sheet={sheet_result.get('ok') if isinstance(sheet_result, dict) else 'N/A'}")
+    await log_to_sheet("log_trade", record)
 
     if is_valid and decision.get("action") != "NO_TRADE":
         open_positions.append({
-            "trade_id": trade_id, "pair": decision.get("pair"),
+            "trade_id": trade_id, "pair": decision.get("pair", pair),
             "direction": decision.get("direction"), "bucket": decision.get("bucket"),
             "entry": decision.get("entry_price"), "sl": decision.get("stop_loss"),
             "tp1": decision.get("take_profit_1"),
             "risk_pct": decision.get("position_size_pct", 0) / 100,
-            "opened_at": datetime.utcnow().isoformat(),
-            "binance_order_id": binance_order_id
+            "opened_at": datetime.now(timezone.utc).isoformat(),
+            "binance_order_id": binance_order_id,
         })
 
-    return {"trade_id": trade_id,
-            "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
-            "executed": is_valid and decision.get("action") != "NO_TRADE",
-            "paper_mode": PAPER_TRADING,
-            "binance_order_id": binance_order_id,
-            "decision": decision,
-            "validation": validation_msg, "market_context": market_ctx}
+    return {
+        "trade_id": trade_id,
+        "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
+        "executed": is_valid and decision.get("action") != "NO_TRADE",
+        "paper_mode": PAPER_TRADING,
+        "binance_order_id": binance_order_id,
+        "decision": decision, "validation": validation_msg,
+    }
 
 @app.get("/trades")
 async def get_trades():
@@ -649,37 +815,88 @@ async def get_positions():
 
 @app.post("/close-trade")
 async def close_trade(request: Request):
-    global daily_pnl, weekly_pnl
+    global daily_pnl, weekly_pnl, consecutive_losses
     body = await request.json()
     tid = body.get("trade_id")
-    cp = body.get("close_price", 0)
+    cp = float(body.get("close_price", 0))
     motivo = body.get("motivo", "manual")
+
     pos = next((p for p in open_positions if p["trade_id"] == tid), None)
     if not pos:
         return {"error": f"Position {tid} not found"}
-    pnl_pct = (cp - pos["entry"]) / pos["entry"] if pos["direction"] == "LONG" else (pos["entry"] - cp) / pos["entry"]
-    risk = abs(pos["entry"] - pos["sl"]) / pos["entry"]
+
+    entry = float(pos.get("entry", 0))
+    sl = float(pos.get("sl", 0))
+    if entry <= 0:
+        return {"error": "Invalid entry price"}
+
+    pnl_pct = ((cp - entry) / entry) if pos["direction"] == "LONG" else ((entry - cp) / entry)
+    risk = abs(entry - sl) / entry if sl > 0 else 0
     pnl_r = pnl_pct / risk if risk > 0 else 0
     resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
-    daily_pnl += pnl_pct * pos["risk_pct"]
-    weekly_pnl += pnl_pct * pos["risk_pct"]
+
+    weighted_pnl = pnl_pct * pos.get("risk_pct", 0)
+    daily_pnl += weighted_pnl
+    weekly_pnl += weighted_pnl
+
+    if resultado == "LOSS":
+        consecutive_losses += 1
+    elif resultado == "WIN":
+        consecutive_losses = 0
+
     open_positions.remove(pos)
     for t in trade_log:
         if t["trade_id"] == tid:
             t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R", "precio_cierre": cp, "motivo_cierre": motivo})
+
+    duration_hours = ""
+    try:
+        opened = datetime.fromisoformat(pos["opened_at"].replace('Z', '+00:00'))
+        duration_hours = f"{(datetime.now(timezone.utc) - opened).total_seconds() / 3600:.1f}"
+    except Exception:
+        pass
+
     await log_to_sheet("close_trade", {
         "trade_id": tid, "close_price": cp, "resultado": resultado,
         "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo,
-        "pnl_usdt": round(pnl_pct * 10000, 2),
+        "pnl_usdt": round(pnl_pct * cp * pos.get("risk_pct", 0) * 100, 2),
+        "duration_hours": duration_hours,
         "sl_too_short": "NO", "tp_too_high": "NO",
         "regime_changed": "NO", "strategy_correct": "",
-        "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%}"
+        "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%} Losses:{consecutive_losses}"
     })
-    return {"trade_id": tid, "resultado": resultado, "pnl_r": pnl_r}
+    return {"trade_id": tid, "resultado": resultado, "pnl_r": round(pnl_r, 2)}
 
-@app.get("/ping")
-async def ping():
-    return {"pong": True, "release": RELEASE_ID}
+@app.get("/self-test")
+async def self_test():
+    results = {}
+    results["rag"] = {"loaded": rag.loaded, "chunks": rag.chunk_count}
+    if rag.loaded:
+        results["rag"]["search_works"] = len(rag.search("pre-trade checklist", k=1)) > 0
+    results["gemini"] = {"key_set": bool(GEMINI_API_KEY)}
+    results["binance"] = {"key_set": bool(BINANCE_API_KEY), "connected": exchange is not None}
+    if exchange:
+        try:
+            bal = exchange.fetch_balance()
+            results["binance"]["usdt_free"] = float(bal.get('USDT', {}).get('free', 0))
+            results["binance"]["ok"] = True
+        except Exception as e:
+            results["binance"]["ok"] = False
+            results["binance"]["error"] = str(e)
+    results["sheets"] = {"url_set": bool(SHEETS_WEBAPP_URL)}
+    try:
+        ctx = await get_market_context()
+        results["market"] = {"btc": ctx.get("btc_price", 0), "fng": ctx.get("fear_greed", 0), "ok": ctx.get("btc_price", 0) > 0}
+    except Exception as e:
+        results["market"] = {"ok": False, "error": str(e)}
+
+    results["config"] = {"paper": PAPER_TRADING, "release": RELEASE_ID, "secret_set": bool(WEBHOOK_SECRET)}
+    results["overall"] = "READY" if all([
+        results["rag"]["loaded"], results["gemini"]["key_set"],
+        results.get("binance", {}).get("ok", True) or PAPER_TRADING,
+        results["sheets"]["url_set"],
+    ]) else "ISSUES"
+    return results
 
 if __name__ == "__main__":
     import uvicorn
