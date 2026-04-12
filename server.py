@@ -26,7 +26,7 @@ import httpx
 # ═══════════════════════════════════════════════════════════
 # CONFIG
 # ═══════════════════════════════════════════════════════════
-RELEASE_ID = "v5.0-20260411"
+RELEASE_ID = "v5.1-20260412"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -405,31 +405,48 @@ IMMUTABLE RULES:
 6. NEVER trade BNB.
 7. Pre-trade checklist: ALL 12 items pass.
 8. Stale entry (>0.5% drift) = NO_TRADE.
-9. Fear & Greed: extreme fear=opportunity, extreme greed=caution.
-10. 5+ consecutive losses = bias NO_TRADE.
+9. 5+ consecutive losses = bias NO_TRADE.
 
-RANGE TRADING STRATEGY (when market is ranging):
-- When range_position < 20%: BUY at channel bottom, SL below channel, TP at channel top.
-- When range_position > 80%: SELL at channel top, SL above channel, TP at channel bottom.
+FEAR & GREED INDEX DECISION MATRIX (apply BEFORE final confidence):
+- FNG 0-10 (Extreme Fear): Strong BUY bias. Historically best entries. Add +15 confidence to BUY signals.
+- FNG 11-25 (Fear): Moderate BUY bias. Add +10 confidence to BUY signals.
+- FNG 26-45 (Low Neutral): Slight BUY bias. Add +5 confidence to BUY signals.
+- FNG 46-55 (Neutral): No adjustment. Trade purely on technicals.
+- FNG 56-75 (Greed): Caution. Subtract -5 confidence from BUY signals. Tighten SL.
+- FNG 76-90 (High Greed): High caution. Subtract -10 from BUY. Consider SELL signals more favorably.
+- FNG 91-100 (Extreme Greed): Defensive mode. Subtract -20 from BUY. Strong SELL bias. Reduce position sizes by 50%.
+IMPORTANT: FNG adjusts confidence but NEVER overrides technical invalidity. A bad setup at FNG=5 is still NO_TRADE.
+
+NEWS SENTIMENT SCORING (apply AFTER FNG adjustment):
+- strongly_bullish (score > +30): If signal is BUY/LONG, add +10 confidence. If SELL/SHORT, subtract -15 (conflict).
+- bullish (score +10 to +30): If BUY, add +5. If SELL, subtract -10.
+- neutral (score -10 to +10): No adjustment. Trade on technicals only.
+- bearish (score -10 to -30): If SELL/SHORT, add +5. If BUY/LONG, subtract -10.
+- strongly_bearish (score < -30): If SELL/SHORT, add +10. If BUY/LONG, subtract -15 (conflict).
+IMPORTANT: News-technical CONFLICT (news bearish + signal bullish or vice versa) is a WARNING. If final confidence drops below 50 after adjustments, force NO_TRADE.
+
+RANGE TRADING STRATEGY (when range_detected = true):
+- When range_position < 20%: BUY at channel bottom, SL 1% below channel_low, TP at channel_high.
+- When range_position > 80%: SELL at channel top, SL 1% above channel_high, TP at channel_low.
 - Channel width must be > 3% for profitability after fees.
 - Use tighter position sizes (0.3%) for range plays.
-- If channel breaks (price outside 105% of bounds), EXIT immediately.
+- If channel breaks (price outside 105% of bounds), EXIT immediately via close-trade.
+
+STOP LOSS AND TAKE PROFIT STRATEGY:
+- SL: Always ATR * 2.0 minimum. Never tighter than 0.5% from entry.
+- TP1: R:R of 2.0 minimum (take 50% of position).
+- TP2: R:R of 3.0 (let remaining 50% ride with trailing stop).
+- Trailing stop: After TP1 hit, move SL to breakeven (entry price).
+- Time stop: If position hasn't moved 0.5% in 24h in the expected direction, consider closing.
 
 COMPOUND REINVESTMENT:
-- All profits stay in the account and are reinvested.
-- Position sizes are % of TOTAL current balance (not initial capital).
+- All profits stay and are reinvested automatically.
+- Position sizes are % of TOTAL current balance (grows with wins).
 - As balance grows, absolute position sizes grow proportionally.
 
-NEWS SENTIMENT INTEGRATION:
-- strongly_bullish news + technical BUY = increase confidence by 10.
-- strongly_bearish news + technical SELL = increase confidence by 10.
-- news contradicts technical signal = decrease confidence by 15.
-- "neutral" news = no adjustment.
-
 DIVERSIFICATION:
-- Never have >40% of capital in one asset.
-- Spread positions across BTC, ETH, SOL.
-- If 2+ positions in same asset, prefer different assets.
+- Never >40% of capital in one asset.
+- Spread across BTC, ETH, SOL when possible.
 
 AVAILABLE BALANCE: {available_balance}
 
@@ -438,8 +455,11 @@ Respond with ONLY valid JSON."""
 TRADE_PROMPT = """MARKET CONTEXT:
 {market_context}
 
-NEWS SENTIMENT:
-{news_context}
+FEAR & GREED INDEX: {fng_value} ({fng_label})
+Apply the FNG Decision Matrix from your rules to adjust confidence.
+
+NEWS SENTIMENT: {news_context}
+Apply News Sentiment Scoring rules. Flag any news-technical conflicts.
 
 RANGE DETECTION:
 {range_context}
@@ -458,9 +478,15 @@ ASSET DIVERSIFICATION: {diversification}
 SELF-LEARNING FEEDBACK:
 {feedback}
 
-Evaluate this signal. Consider range detection data — if market is ranging, apply mean-reversion strategy.
-Consider news sentiment — adjust confidence accordingly.
-All profits compound. Position size based on current total balance.
+DECISION PROCESS (follow in order):
+1. Evaluate technical signal quality (confluence, template, regime).
+2. Apply Fear & Greed adjustment to confidence.
+3. Apply News Sentiment adjustment to confidence.
+4. Check for news-technical conflict. If conflict AND confidence < 50 after adjustments, force NO_TRADE.
+5. If range_detected=true, apply Range Trading Strategy for SL/TP.
+6. Set position_size_pct based on current total balance (compound reinvestment).
+7. Verify all 12 checklist items pass.
+
 Respond with ONLY this JSON:
 {{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none"}}"""
 
@@ -942,12 +968,14 @@ async def webhook(request: Request):
 
     # Build prompts
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(available_balance=json.dumps(bal))
-    news_ctx = f"Sentiment: {market_ctx.get('news_sentiment', 'unknown')}, Score: {market_ctx.get('news_score', 0)}"
+    news_ctx = f"Sentiment: {market_ctx.get('news_sentiment', 'neutral')}, Score: {market_ctx.get('news_score', 0)}/100"
     if market_ctx.get("news_headlines"):
         news_ctx += "\nTop headlines: " + " | ".join(market_ctx["news_headlines"][:3])
 
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps({k: v for k, v in market_ctx.items() if k != "news_headlines"}),
+        fng_value=market_ctx.get("fear_greed", 50),
+        fng_label=market_ctx.get("fear_greed_label", "Neutral"),
         news_context=news_ctx,
         range_context=json.dumps(range_data),
         rag_context=rag_context or "No RAG context",
@@ -1013,12 +1041,29 @@ async def webhook(request: Request):
     await log_to_sheet("log_trade", record)
 
     if is_valid and decision.get("action") != "NO_TRADE":
+        # Calculate the coin amount that was actually bought/sold for close-trade liquidation
+        pos_pair = decision.get("pair", pair)
+        pos_size_pct = decision.get("position_size_pct", 0)
+        base_coin = pos_pair.upper().replace("USDT", "").replace("BUSD", "")
+        # Approximate coin amount from the trade execution
+        coin_amount = 0.0
+        if current_price > 0 and pos_size_pct > 0:
+            bal_at_open = await get_balance()
+            usdt_used = bal_at_open.get("usdt_free", 0) * (pos_size_pct / 100)
+            # After execute_trade already ran, we can estimate from what was spent
+            # For paper: paper_coins tracks this. For live: we approximate.
+            coin_amount = paper_coins.get(base_coin, 0) if PAPER_TRADING else (usdt_used / current_price if current_price > 0 else 0)
+
         open_positions.append({
-            "trade_id": trade_id, "pair": decision.get("pair", pair),
+            "trade_id": trade_id, "pair": pos_pair,
             "direction": decision.get("direction"), "bucket": decision.get("bucket"),
             "entry": decision.get("entry_price"), "sl": decision.get("stop_loss"),
-            "tp1": decision.get("take_profit_1"),
-            "risk_pct": decision.get("position_size_pct", 0) / 100,
+            "tp1": decision.get("take_profit_1"), "tp2": decision.get("take_profit_2"),
+            "risk_pct": pos_size_pct / 100,
+            "position_size_pct": pos_size_pct,
+            "coin_amount": coin_amount,
+            "base_coin": base_coin,
+            "action": decision.get("action"),
             "opened_at": datetime.now(timezone.utc).isoformat(),
             "binance_order_id": binance_order_id,
         })
@@ -1060,14 +1105,99 @@ async def close_trade(request: Request):
 
     entry = float(pos.get("entry", 0))
     sl = float(pos.get("sl", 0))
-    if entry <= 0:
-        return {"error": "Invalid entry"}
+    tp1 = float(pos.get("tp1", 0))
+    tp2 = float(pos.get("tp2", 0))
+    pair = pos.get("pair", "UNKNOWN").upper()
+    base_coin = pos.get("base_coin", pair.replace("USDT", "").replace("BUSD", ""))
+    direction = pos.get("direction", "LONG")
 
-    pnl_pct = ((cp - entry) / entry) if pos["direction"] == "LONG" else ((entry - cp) / entry)
+    if entry <= 0:
+        return {"error": "Invalid entry price"}
+
+    # Auto-detect close reason if not provided
+    if motivo == "auto":
+        if direction == "LONG":
+            if cp <= sl and sl > 0:
+                motivo = "stop_loss_hit"
+            elif tp2 > 0 and cp >= tp2:
+                motivo = "take_profit_2_hit"
+            elif tp1 > 0 and cp >= tp1:
+                motivo = "take_profit_1_hit"
+        else:  # SHORT
+            if cp >= sl and sl > 0:
+                motivo = "stop_loss_hit"
+            elif tp2 > 0 and cp <= tp2:
+                motivo = "take_profit_2_hit"
+            elif tp1 > 0 and cp <= tp1:
+                motivo = "take_profit_1_hit"
+
+    # PnL calculation
+    if direction == "LONG":
+        pnl_pct = (cp - entry) / entry
+    else:
+        pnl_pct = (entry - cp) / entry
+
     risk = abs(entry - sl) / entry if sl > 0 else 0
     pnl_r = pnl_pct / risk if risk > 0 else 0
     resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
 
+    # Analyze SL/TP quality for self-learning
+    sl_too_short = "NO"
+    tp_too_high = "NO"
+    if resultado == "LOSS" and sl > 0:
+        if direction == "LONG" and cp < sl * 0.99:
+            sl_too_short = "NO"  # SL was correct, price gapped through
+        elif direction == "LONG" and abs(entry - sl) / entry < 0.005:
+            sl_too_short = "YES"  # SL too tight, shaken out
+    if resultado == "LOSS" and tp1 > 0:
+        max_favorable = float(body.get("max_price_seen", cp))
+        if direction == "LONG" and max_favorable > entry and max_favorable < tp1:
+            tp_too_high = "YES"  # Price moved in our favor but couldn't reach TP
+
+    # === PAPER MODE: LIQUIDATE THE POSITION ===
+    pnl_usdt = 0.0
+    if PAPER_TRADING:
+        held = paper_coins.get(base_coin, 0)
+        if held > 0 and direction == "LONG":
+            # LONG close = sell the coins at close_price
+            proceeds = held * cp
+            paper_coins[base_coin] = 0
+            if paper_coins.get(base_coin, 0) < 0.0000001:
+                paper_coins.pop(base_coin, None)
+            paper_balance_usdt += proceeds
+            # Calculate actual USDT P&L
+            cost_basis = held * entry
+            pnl_usdt = proceeds - cost_basis
+            log.info(f"PAPER CLOSE LONG {tid}: sold {held:.8f} {base_coin} @ {cp:.2f} = ${proceeds:.2f} (P&L: ${pnl_usdt:+.2f})")
+        elif direction == "SHORT":
+            # SHORT close = buy back coins (we already have USDT from the short sale)
+            # In spot trading, shorts are simulated: we just track the P&L
+            pos_value = float(pos.get("risk_pct", 0)) * paper_balance_usdt
+            pnl_usdt = pos_value * pnl_pct
+            paper_balance_usdt += pnl_usdt
+            log.info(f"PAPER CLOSE SHORT {tid}: P&L ${pnl_usdt:+.2f}")
+        else:
+            log.warning(f"PAPER CLOSE {tid}: no {base_coin} held or unknown direction")
+    else:
+        # LIVE: execute actual sell on Binance
+        if exchange and direction == "LONG":
+            try:
+                ccxt_pair = format_ccxt_pair(pair)
+                balance = exchange.fetch_balance()
+                coin_free = float(balance.get(base_coin, {}).get('free', 0))
+                if coin_free > 0:
+                    if ccxt_pair in exchange.markets:
+                        coin_free = float(exchange.amount_to_precision(ccxt_pair, coin_free))
+                    order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=coin_free)
+                    log.info(f"LIVE CLOSE {tid}: sold {coin_free} {base_coin}, order={order['id']}")
+                    pnl_usdt = coin_free * (cp - entry)
+            except Exception as e:
+                log.error(f"LIVE CLOSE error {tid}: {e}")
+                pnl_usdt = 0
+        else:
+            pnl_usdt = 0
+
+    # Update internal tracking
     weighted_pnl = pnl_pct * pos.get("risk_pct", 0)
     daily_pnl += weighted_pnl
     weekly_pnl += weighted_pnl
@@ -1080,7 +1210,11 @@ async def close_trade(request: Request):
     open_positions.remove(pos)
     for t in trade_log:
         if t["trade_id"] == tid:
-            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R", "precio_cierre": cp, "motivo_cierre": motivo})
+            t.update({
+                "resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
+                "precio_cierre": cp, "motivo_cierre": motivo,
+                "pnl_usdt": round(pnl_usdt, 2),
+            })
 
     duration_hours = ""
     try:
@@ -1092,14 +1226,21 @@ async def close_trade(request: Request):
     await log_to_sheet("close_trade", {
         "trade_id": tid, "close_price": cp, "resultado": resultado,
         "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo,
-        "pnl_usdt": round(pnl_pct * cp * pos.get("risk_pct", 0) * 100, 2),
+        "pnl_usdt": round(pnl_usdt, 2),
         "duration_hours": duration_hours,
-        "sl_too_short": "NO", "tp_too_high": "NO",
+        "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
         "regime_changed": "NO", "strategy_correct": "",
         "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%} Losses:{consecutive_losses}"
     })
     bal = await get_balance()
-    return {"trade_id": tid, "resultado": resultado, "pnl_r": round(pnl_r, 2), "balance": bal}
+    log.info(f"CLOSE {tid}: {resultado} pnl_r={pnl_r:+.2f}R pnl_usdt=${pnl_usdt:+.2f} balance=${bal.get('usdt_free',0):.2f}")
+    return {
+        "trade_id": tid, "resultado": resultado,
+        "pnl_r": round(pnl_r, 2), "pnl_pct": round(pnl_pct * 100, 2),
+        "pnl_usdt": round(pnl_usdt, 2),
+        "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
+        "motivo": motivo, "balance": bal,
+    }
 
 @app.get("/self-test")
 async def self_test():
