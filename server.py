@@ -26,7 +26,7 @@ import httpx
 # ═══════════════════════════════════════════════════════════
 # CONFIG
 # ═══════════════════════════════════════════════════════════
-RELEASE_ID = "v5.1-20260412"
+RELEASE_ID = "v5.2-20260412"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
@@ -295,16 +295,28 @@ def get_current_price(pair: str, market_ctx: dict) -> float:
 
 
 async def get_balance() -> dict:
-    """Get balance — paper virtual or real Binance."""
+    """Get balance with mark-to-market valuation."""
     global paper_balance_usdt
     if PAPER_TRADING:
-        # Calculate total portfolio value including open paper positions
-        total_value = paper_balance_usdt
         coin_holdings = dict(paper_coins)
+        # Mark-to-market: estimate coin values using last known prices
+        mtm_value = 0.0
+        price_map = {"BTC": 0, "ETH": 0, "SOL": 0}
+        # Try to get prices from open positions or use a quick fetch
+        for pos in open_positions:
+            bc = pos.base_coin
+            if bc in price_map and pos.entry > 0:
+                price_map[bc] = pos.highest_price  # Use latest tracked price
+        for coin, amount in coin_holdings.items():
+            if amount > 0 and coin in price_map and price_map[coin] > 0:
+                mtm_value += amount * price_map[coin]
+        total_equity = paper_balance_usdt + mtm_value
         return {
             "usdt_free": round(paper_balance_usdt, 2),
-            "usdt_total": round(total_value, 2),
+            "usdt_total": round(total_equity, 2),
             "coins": coin_holdings,
+            "mtm_value": round(mtm_value, 2),
+            "equity": round(total_equity, 2),
             "mode": "paper",
         }
 
@@ -386,6 +398,120 @@ class RangeDetector:
         }
 
 range_detector = RangeDetector()
+
+# ═══════════════════════════════════════════════════════════
+# POSITION MODEL (inspired by banbot Order/ExitTrigger)
+# ═══════════════════════════════════════════════════════════
+class Position:
+    """Formal position with lifecycle, exit plan, and per-trade tracking."""
+    def __init__(self, trade_id, pair, direction, entry, sl, tp1, tp2,
+                 qty, cost_usdt, position_size_pct, bucket, template, opened_at, order_id):
+        self.trade_id = trade_id
+        self.pair = pair
+        self.base_coin = pair.upper().replace("USDT", "").replace("BUSD", "")
+        self.direction = direction  # LONG only for spot
+        self.bucket = bucket
+        self.template = template
+        self.entry = float(entry)
+        self.qty = float(qty)           # Exact coins bought
+        self.cost_usdt = float(cost_usdt)  # Exact USDT spent
+        self.position_size_pct = float(position_size_pct)
+        # Exit plan
+        self.sl = float(sl)
+        self.tp1 = float(tp1)
+        self.tp2 = float(tp2)
+        self.trailing_active = False
+        self.trailing_sl = 0.0
+        self.tp1_hit = False
+        self.qty_remaining = float(qty)  # Decreases on partial TP
+        # Metadata
+        self.opened_at = opened_at
+        self.order_id = order_id
+        self.status = "OPEN"  # OPEN, PARTIALLY_CLOSED, CLOSED
+        self.highest_price = float(entry)
+        self.lowest_price = float(entry)
+
+    def update_price(self, price: float):
+        """Track price extremes for trailing stop and SL/TP analysis."""
+        self.highest_price = max(self.highest_price, price)
+        self.lowest_price = min(self.lowest_price, price)
+        # Trailing stop: after TP1 hit, trail at entry (breakeven) or higher
+        if self.trailing_active and self.direction == "LONG":
+            # Trail at max(entry, highest - (entry - original_sl))
+            original_risk = abs(self.entry - self.sl) if self.sl > 0 else self.entry * 0.02
+            self.trailing_sl = max(self.entry, self.highest_price - original_risk)
+
+    def check_exit(self, price: float) -> str:
+        """Check if price triggers any exit condition. Returns reason or empty string."""
+        if self.status == "CLOSED":
+            return ""
+        self.update_price(price)
+        if self.direction == "LONG":
+            # Stop loss
+            if self.sl > 0 and price <= self.sl:
+                return "stop_loss_hit"
+            # Trailing stop (after TP1)
+            if self.trailing_active and self.trailing_sl > 0 and price <= self.trailing_sl:
+                return "trailing_stop_hit"
+            # Take profit 2
+            if self.tp2 > 0 and price >= self.tp2:
+                return "take_profit_2_hit"
+            # Take profit 1 (partial)
+            if not self.tp1_hit and self.tp1 > 0 and price >= self.tp1:
+                return "take_profit_1_hit"
+        # Time stop: position open > 24h with < 0.5% favorable move (aligned with prompt)
+        try:
+            opened = datetime.fromisoformat(self.opened_at.replace('Z', '+00:00'))
+            hours_open = (datetime.now(timezone.utc) - opened).total_seconds() / 3600
+            if hours_open > 24:
+                pnl_pct = (price - self.entry) / self.entry if self.direction == "LONG" else (self.entry - price) / self.entry
+                if pnl_pct < 0.005:
+                    return "time_stop_24h"
+        except Exception:
+            pass
+        return ""
+
+    def to_dict(self):
+        return {
+            "trade_id": self.trade_id, "pair": self.pair, "base_coin": self.base_coin,
+            "direction": self.direction, "bucket": self.bucket, "entry": self.entry,
+            "sl": self.sl, "tp1": self.tp1, "tp2": self.tp2,
+            "qty": self.qty, "qty_remaining": self.qty_remaining,
+            "cost_usdt": round(self.cost_usdt, 2),
+            "trailing_active": self.trailing_active, "trailing_sl": round(self.trailing_sl, 2),
+            "tp1_hit": self.tp1_hit, "status": self.status,
+            "highest_price": round(self.highest_price, 2),
+            "opened_at": self.opened_at, "order_id": self.order_id,
+            "position_size_pct": self.position_size_pct,
+            "risk_pct": self.position_size_pct / 100,
+        }
+
+
+def compute_position_qty(equity: float, entry: float, sl: float, max_risk_pct: float) -> float:
+    """Proper risk-based position sizing (banbot pattern).
+    risk_amount = equity * max_risk_pct
+    qty = risk_amount / abs(entry - sl)
+    """
+    if entry <= 0 or sl <= 0 or abs(entry - sl) < 0.0001:
+        # Fallback: simple % of equity
+        return equity * max_risk_pct / entry if entry > 0 else 0
+    risk_amount = equity * max_risk_pct
+    distance = abs(entry - sl)
+    qty = risk_amount / distance
+    return qty
+
+
+async def check_positions_for_exits(current_prices: dict) -> list:
+    """Position monitor (polymarket-bot pattern): scan all open positions for exit triggers."""
+    exits = []
+    for pos in list(open_positions):
+        price = current_prices.get(pos.pair.upper(), 0)
+        if price <= 0:
+            continue
+        reason = pos.check_exit(price)
+        if reason:
+            exits.append({"trade_id": pos.trade_id, "pair": pos.pair, "reason": reason, "price": price})
+    return exits
 
 # ═══════════════════════════════════════════════════════════
 # GEMINI LLM
@@ -620,47 +746,64 @@ def format_ccxt_pair(pair: str) -> str:
             return f"{pair[:-len(quote)]}/{quote}"
     return pair
 
-def execute_trade(pair: str, action: str, position_size_pct: float, current_price: float) -> tuple:
+def execute_trade(pair: str, action: str, position_size_pct: float, current_price: float,
+                  entry_price: float = 0, stop_loss: float = 0) -> tuple:
+    """Execute trade with proper risk-based sizing.
+    Returns (success, order_id_or_error, qty_filled, cost_usdt)."""
     global paper_balance_usdt, paper_coins
 
+    entry = entry_price if entry_price > 0 else current_price
+    equity = paper_balance_usdt if PAPER_TRADING else 0
+
+    # Compute qty using risk-based sizing if SL is available
+    if stop_loss > 0 and entry > 0 and abs(entry - stop_loss) > 0.0001:
+        qty = compute_position_qty(equity if PAPER_TRADING else current_price * 100,
+                                   entry, stop_loss, RISK_PARAMS["max_risk_per_trade"])
+        invest = qty * entry
+    else:
+        # Fallback: use position_size_pct of cash
+        invest = equity * (position_size_pct / 100) if PAPER_TRADING else 0
+        qty = invest / current_price if current_price > 0 else 0
+
     if PAPER_TRADING:
-        # Paper mode: track virtual balance
         if action == 'BUY':
-            invest = paper_balance_usdt * (position_size_pct / 100)
+            # Cap at available cash
+            invest = min(invest, paper_balance_usdt * 0.95)  # Keep 5% buffer
             if invest < RISK_PARAMS["min_order_usdt"]:
-                return False, f"Paper order {invest:.2f} < min {RISK_PARAMS['min_order_usdt']}"
+                return False, f"Paper order {invest:.2f} < min {RISK_PARAMS['min_order_usdt']}", 0, 0
             base = pair.replace("USDT", "").replace("BUSD", "")
             amount = invest / current_price
             paper_balance_usdt -= invest
             paper_coins[base] = paper_coins.get(base, 0) + amount
-            log.info(f"PAPER BUY: {pair} ${invest:.2f} = {amount:.6f} {base}. Balance: ${paper_balance_usdt:.2f}")
-            return True, f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
+            log.info(f"PAPER BUY: {pair} ${invest:.2f} = {amount:.8f} {base} (risk-sized). Bal: ${paper_balance_usdt:.2f}")
+            order_id = f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
+            return True, order_id, amount, invest
 
         elif action == 'SELL':
             base = pair.replace("USDT", "").replace("BUSD", "")
             if base == 'BNB':
-                return False, "BNB protected"
+                return False, "BNB protected", 0, 0
             held = paper_coins.get(base, 0)
             if held <= 0:
-                return False, f"No {base} to sell"
-            sell_ratio = min(1.0, position_size_pct / 100 * 20)
-            sell_amount = held * sell_ratio
+                return False, f"No {base} to sell", 0, 0
+            sell_amount = min(held, qty) if qty > 0 else held
             proceeds = sell_amount * current_price
             if proceeds < RISK_PARAMS["min_order_usdt"]:
                 sell_amount = held
                 proceeds = sell_amount * current_price
             paper_coins[base] = held - sell_amount
-            if paper_coins[base] < 0.0000001:
-                del paper_coins[base]
+            if paper_coins.get(base, 0) < 0.0000001:
+                paper_coins.pop(base, None)
             paper_balance_usdt += proceeds
-            log.info(f"PAPER SELL: {pair} {sell_amount:.6f} = ${proceeds:.2f}. Balance: ${paper_balance_usdt:.2f}")
-            return True, f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
+            log.info(f"PAPER SELL: {pair} {sell_amount:.8f} = ${proceeds:.2f}. Bal: ${paper_balance_usdt:.2f}")
+            order_id = f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
+            return True, order_id, sell_amount, proceeds
 
-        return False, f"Unknown action: {action}"
+        return False, f"Unknown action: {action}", 0, 0
 
     # Live trading
     if not exchange:
-        return False, "Binance not available (region block or not configured)"
+        return False, "Binance not available", 0, 0
     try:
         if not exchange.markets:
             exchange.load_markets()
@@ -669,27 +812,26 @@ def execute_trade(pair: str, action: str, position_size_pct: float, current_pric
 
         if action == 'BUY':
             usdt_free = float(balance.get('USDT', {}).get('free', 0))
-            invest = usdt_free * (position_size_pct / 100)
-            if invest < RISK_PARAMS["min_order_usdt"]:
-                return False, f"Order {invest:.2f} < min. Free: {usdt_free:.2f}"
+            live_invest = min(invest, usdt_free * 0.95) if invest > 0 else usdt_free * (position_size_pct / 100)
+            if live_invest < RISK_PARAMS["min_order_usdt"]:
+                return False, f"Order {live_invest:.2f} < min. Free: {usdt_free:.2f}", 0, 0
             if current_price <= 0:
-                return False, "Price is 0"
-            amount = invest / current_price
+                return False, "Price is 0", 0, 0
+            amount = live_invest / current_price
             if ccxt_pair in exchange.markets:
                 amount = float(exchange.amount_to_precision(ccxt_pair, amount))
             order = exchange.create_order(symbol=ccxt_pair, type='market', side='buy', amount=amount)
-            log.info(f"LIVE BUY: {ccxt_pair} amt={amount} cost={invest:.2f} id={order['id']}")
-            return True, str(order['id'])
+            log.info(f"LIVE BUY: {ccxt_pair} amt={amount} cost={live_invest:.2f} id={order['id']}")
+            return True, str(order['id']), amount, live_invest
 
         elif action == 'SELL':
             base_coin = ccxt_pair.split('/')[0]
             if base_coin == 'BNB':
-                return False, "BNB protected"
+                return False, "BNB protected", 0, 0
             coin_free = float(balance.get(base_coin, {}).get('free', 0))
             if coin_free <= 0:
-                return False, f"No {base_coin}"
-            sell_ratio = min(1.0, position_size_pct / 100 * 20)
-            sell_amount = coin_free * sell_ratio
+                return False, f"No {base_coin}", 0, 0
+            sell_amount = min(coin_free, qty) if qty > 0 else coin_free
             if ccxt_pair in exchange.markets:
                 sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
             if sell_amount * current_price < RISK_PARAMS["min_order_usdt"]:
@@ -697,13 +839,14 @@ def execute_trade(pair: str, action: str, position_size_pct: float, current_pric
                 if ccxt_pair in exchange.markets:
                     sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
             order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=sell_amount)
+            proceeds = sell_amount * current_price
             log.info(f"LIVE SELL: {ccxt_pair} amt={sell_amount} id={order['id']}")
-            return True, str(order['id'])
+            return True, str(order['id']), sell_amount, proceeds
 
-        return False, f"Unknown: {action}"
+        return False, f"Unknown: {action}", 0, 0
     except Exception as e:
         log.error(f"Binance error: {e}")
-        return False, str(e)
+        return False, str(e), 0, 0
 
 # ═══════════════════════════════════════════════════════════
 # RISK MANAGEMENT
@@ -756,7 +899,7 @@ def get_diversification() -> str:
         return "No open positions. Free to diversify across BTC, ETH, SOL."
     by_pair = {}
     for p in open_positions:
-        pair = p.get("pair", "UNKNOWN")
+        pair = p.pair
         by_pair[pair] = by_pair.get(pair, 0) + 1
     parts = [f"{pair}: {count} position(s)" for pair, count in by_pair.items()]
     return "Current: " + ", ".join(parts)
@@ -764,10 +907,19 @@ def get_diversification() -> str:
 def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     pair = d.get("pair", "").upper()
     action = str(d.get("action", "NO_TRADE")).upper()
+    direction = str(d.get("direction", "")).upper()
+
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
         return False, f"BLOCKED: {pair} (BNB)"
     if action == "NO_TRADE":
         return False, d.get("reasoning", "NO_TRADE")
+
+    # SPOT-ONLY: reject SHORT signals (banbot recommendation)
+    if action == "SELL" and direction == "SHORT" and not any(
+        p.pair.upper() == pair and p.direction == "LONG" for p in open_positions
+    ):
+        return False, "SHORT rejected: spot-only mode, no LONG position to close"
+
     if not d.get("checklist_pass", False):
         return False, "Checklist failed"
     if signal and market_ctx:
@@ -779,6 +931,7 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         return False, f"Confidence {conf:.0f}% < {RISK_PARAMS['min_confidence']}%"
     if d.get("confluence_score", 0) < RISK_PARAMS["min_confluence"]:
         return False, f"Confluence < {RISK_PARAMS['min_confluence']}"
+
     entry = float(d.get("entry_price", 0) or 0)
     sl = float(d.get("stop_loss", 0) or 0)
     tp1 = float(d.get("take_profit_1", 0) or 0)
@@ -788,13 +941,31 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         risk = abs(entry - sl)
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
             return False, f"R:R < {RISK_PARAMS['min_rr']}"
-    cur_exp = sum(p.get("risk_pct", 0) for p in open_positions)
+
+    # Real risk validation: risk_amount = position_value * (distance_to_sl / entry)
+    if entry > 0 and sl > 0:
+        risk_per_unit = abs(entry - sl) / entry
+        pos_size_pct = d.get("position_size_pct", 0) / 100
+        actual_risk = pos_size_pct * risk_per_unit
+        if actual_risk > RISK_PARAMS["max_risk_per_trade"] * 2:
+            return False, f"Real risk {actual_risk:.3%} > 2x max_risk_per_trade"
+
+    # Exposure check
+    cur_exp = sum(p.position_size_pct / 100 for p in open_positions)
     new_risk = d.get("position_size_pct", 0) / 100
     if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
         return False, f"Exposure {cur_exp + new_risk:.2%} > max"
-    pair_pos = sum(1 for p in open_positions if p.get("pair", "").upper() == pair)
+
+    # Diversification: max 40% in one asset
+    pair_exp = sum(p.position_size_pct / 100 for p in open_positions if p.pair.upper() == pair)
+    if pair_exp + new_risk > 0.40:
+        return False, f"{pair} would be {(pair_exp + new_risk):.0%} of portfolio (max 40%)"
+
+    # Max positions per pair
+    pair_pos = sum(1 for p in open_positions if p.pair.upper() == pair)
     if pair_pos >= RISK_PARAMS["max_positions_per_pair"]:
         return False, f"Max positions for {pair}"
+
     killed, reason = check_kill_switches()
     if killed:
         return False, f"KILL: {reason}"
@@ -998,12 +1169,16 @@ async def webhook(request: Request):
     trade_id = f"T-{trade_counter:04d}"
 
     binance_order_id = "N/A"
+    qty_filled = 0.0
+    cost_usdt = 0.0
     if is_valid and decision.get("action") in ("BUY", "SELL"):
-        success, exec_msg = execute_trade(
+        success, exec_msg, qty_filled, cost_usdt = execute_trade(
             pair=decision.get("pair", pair),
             action=decision.get("action"),
             position_size_pct=decision.get("position_size_pct", 0),
-            current_price=current_price
+            current_price=current_price,
+            entry_price=decision.get("entry_price", 0),
+            stop_loss=decision.get("stop_loss", 0),
         )
         if not success:
             is_valid = False
@@ -1041,32 +1216,25 @@ async def webhook(request: Request):
     await log_to_sheet("log_trade", record)
 
     if is_valid and decision.get("action") != "NO_TRADE":
-        # Calculate the coin amount that was actually bought/sold for close-trade liquidation
         pos_pair = decision.get("pair", pair)
         pos_size_pct = decision.get("position_size_pct", 0)
-        base_coin = pos_pair.upper().replace("USDT", "").replace("BUSD", "")
-        # Approximate coin amount from the trade execution
-        coin_amount = 0.0
-        if current_price > 0 and pos_size_pct > 0:
-            bal_at_open = await get_balance()
-            usdt_used = bal_at_open.get("usdt_free", 0) * (pos_size_pct / 100)
-            # After execute_trade already ran, we can estimate from what was spent
-            # For paper: paper_coins tracks this. For live: we approximate.
-            coin_amount = paper_coins.get(base_coin, 0) if PAPER_TRADING else (usdt_used / current_price if current_price > 0 else 0)
 
-        open_positions.append({
-            "trade_id": trade_id, "pair": pos_pair,
-            "direction": decision.get("direction"), "bucket": decision.get("bucket"),
-            "entry": decision.get("entry_price"), "sl": decision.get("stop_loss"),
-            "tp1": decision.get("take_profit_1"), "tp2": decision.get("take_profit_2"),
-            "risk_pct": pos_size_pct / 100,
-            "position_size_pct": pos_size_pct,
-            "coin_amount": coin_amount,
-            "base_coin": base_coin,
-            "action": decision.get("action"),
-            "opened_at": datetime.now(timezone.utc).isoformat(),
-            "binance_order_id": binance_order_id,
-        })
+        pos_obj = Position(
+            trade_id=trade_id, pair=pos_pair,
+            direction=decision.get("direction", "LONG"),
+            entry=decision.get("entry_price", current_price),
+            sl=decision.get("stop_loss", 0),
+            tp1=decision.get("take_profit_1", 0),
+            tp2=decision.get("take_profit_2", 0),
+            qty=qty_filled,            # Exact fill from execute_trade
+            cost_usdt=cost_usdt,       # Exact cost from execute_trade
+            position_size_pct=pos_size_pct,
+            bucket=decision.get("bucket", "CORE"),
+            template=decision.get("template", ""),
+            opened_at=datetime.now(timezone.utc).isoformat(),
+            order_id=binance_order_id,
+        )
+        open_positions.append(pos_obj)
 
     return {
         "trade_id": trade_id,
@@ -1084,163 +1252,179 @@ async def get_trades():
 
 @app.get("/positions")
 async def get_positions():
-    return {"count": len(open_positions), "positions": open_positions}
+    return {"count": len(open_positions), "positions": [p.to_dict() for p in open_positions]}
 
 @app.get("/range/{pair}")
 async def get_range(pair: str):
     """Get range detection data for a pair."""
     return range_detector.detect_range(pair.upper())
 
-@app.post("/close-trade")
-async def close_trade(request: Request):
+@app.get("/check-positions")
+async def check_positions_endpoint():
+    """Position monitor: scan all positions, auto-execute exits on SL/TP/trailing/time triggers."""
+    market_ctx = await get_market_context()
+    current_prices = {
+        "BTCUSDT": market_ctx.get("btc_price", 0),
+        "ETHUSDT": market_ctx.get("eth_price", 0),
+        "SOLUSDT": market_ctx.get("sol_price", 0),
+    }
+    for pos in list(open_positions):
+        price = current_prices.get(pos.pair.upper(), 0)
+        if price > 0:
+            pos.update_price(price)
+
+    exits = await check_positions_for_exits(current_prices)
+    executed = []
+    for ex in exits:
+        result = await _execute_close(ex["trade_id"], ex["price"], ex["reason"])
+        executed.append(result)
+
+    return {
+        "checked": len(open_positions) + len(executed),
+        "exits_executed": executed,
+        "positions_remaining": [p.to_dict() for p in open_positions],
+    }
+
+
+async def _execute_close(tid: str, cp: float, motivo: str, body_extra: dict = None) -> dict:
+    """Shared close logic for /close-trade and /check-positions auto-closer."""
     global daily_pnl, weekly_pnl, consecutive_losses, paper_balance_usdt, paper_coins
-    body = await request.json()
-    tid = body.get("trade_id")
-    cp = float(body.get("close_price", 0))
-    motivo = body.get("motivo", "manual")
 
-    pos = next((p for p in open_positions if p["trade_id"] == tid), None)
+    pos = next((p for p in open_positions if p.trade_id == tid), None)
     if not pos:
-        return {"error": f"Position {tid} not found"}
+        return {"trade_id": tid, "error": "not found"}
 
-    entry = float(pos.get("entry", 0))
-    sl = float(pos.get("sl", 0))
-    tp1 = float(pos.get("tp1", 0))
-    tp2 = float(pos.get("tp2", 0))
-    pair = pos.get("pair", "UNKNOWN").upper()
-    base_coin = pos.get("base_coin", pair.replace("USDT", "").replace("BUSD", ""))
-    direction = pos.get("direction", "LONG")
+    entry = pos.entry
+    sl = pos.sl
+    tp1 = pos.tp1
+    tp2 = pos.tp2
+    pair = pos.pair.upper()
+    base_coin = pos.base_coin
+    direction = pos.direction
 
     if entry <= 0:
-        return {"error": "Invalid entry price"}
+        return {"trade_id": tid, "error": "invalid entry"}
 
-    # Auto-detect close reason if not provided
+    # Auto-detect reason
     if motivo == "auto":
-        if direction == "LONG":
-            if cp <= sl and sl > 0:
-                motivo = "stop_loss_hit"
-            elif tp2 > 0 and cp >= tp2:
-                motivo = "take_profit_2_hit"
-            elif tp1 > 0 and cp >= tp1:
-                motivo = "take_profit_1_hit"
-        else:  # SHORT
-            if cp >= sl and sl > 0:
-                motivo = "stop_loss_hit"
-            elif tp2 > 0 and cp <= tp2:
-                motivo = "take_profit_2_hit"
-            elif tp1 > 0 and cp <= tp1:
-                motivo = "take_profit_1_hit"
+        detected = pos.check_exit(cp)
+        if detected:
+            motivo = detected
 
-    # PnL calculation
-    if direction == "LONG":
-        pnl_pct = (cp - entry) / entry
-    else:
-        pnl_pct = (entry - cp) / entry
-
+    # PnL
+    pnl_pct = (cp - entry) / entry if direction == "LONG" else (entry - cp) / entry
     risk = abs(entry - sl) / entry if sl > 0 else 0
     pnl_r = pnl_pct / risk if risk > 0 else 0
     resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
 
-    # Analyze SL/TP quality for self-learning
+    # SL/TP quality analysis for self-learning
     sl_too_short = "NO"
     tp_too_high = "NO"
-    if resultado == "LOSS" and sl > 0:
-        if direction == "LONG" and cp < sl * 0.99:
-            sl_too_short = "NO"  # SL was correct, price gapped through
-        elif direction == "LONG" and abs(entry - sl) / entry < 0.005:
-            sl_too_short = "YES"  # SL too tight, shaken out
-    if resultado == "LOSS" and tp1 > 0:
-        max_favorable = float(body.get("max_price_seen", cp))
-        if direction == "LONG" and max_favorable > entry and max_favorable < tp1:
-            tp_too_high = "YES"  # Price moved in our favor but couldn't reach TP
+    if resultado == "LOSS" and sl > 0 and direction == "LONG":
+        if abs(entry - sl) / entry < 0.005:
+            sl_too_short = "YES"
+    if resultado == "LOSS" and tp1 > 0 and direction == "LONG":
+        if pos.highest_price > entry and pos.highest_price < tp1:
+            tp_too_high = "YES"
 
-    # === PAPER MODE: LIQUIDATE THE POSITION ===
+    # Determine sell qty — TP1 partial vs full
+    is_partial = False
+    sell_qty = pos.qty_remaining
+
+    if motivo == "take_profit_1_hit" and not pos.tp1_hit and pos.qty_remaining > 0:
+        sell_qty = pos.qty_remaining * 0.5
+        is_partial = True
+        pos.tp1_hit = True
+        pos.trailing_active = True
+        pos.qty_remaining -= sell_qty
+        pos.trailing_sl = pos.entry  # Breakeven
+        pos.status = "PARTIALLY_CLOSED"
+        log.info(f"TP1 PARTIAL {tid}: sold 50% ({sell_qty:.8f}), trailing ON, SL→{pos.entry:.2f}")
+    else:
+        sell_qty = pos.qty_remaining
+        pos.qty_remaining = 0
+        pos.status = "CLOSED"
+
+    # Execute liquidation
     pnl_usdt = 0.0
     if PAPER_TRADING:
-        held = paper_coins.get(base_coin, 0)
-        if held > 0 and direction == "LONG":
-            # LONG close = sell the coins at close_price
-            proceeds = held * cp
-            paper_coins[base_coin] = 0
+        if direction == "LONG" and sell_qty > 0:
+            proceeds = sell_qty * cp
+            pnl_usdt = proceeds - (sell_qty * entry)
+            held = paper_coins.get(base_coin, 0)
+            paper_coins[base_coin] = max(0, held - sell_qty)
             if paper_coins.get(base_coin, 0) < 0.0000001:
                 paper_coins.pop(base_coin, None)
             paper_balance_usdt += proceeds
-            # Calculate actual USDT P&L
-            cost_basis = held * entry
-            pnl_usdt = proceeds - cost_basis
-            log.info(f"PAPER CLOSE LONG {tid}: sold {held:.8f} {base_coin} @ {cp:.2f} = ${proceeds:.2f} (P&L: ${pnl_usdt:+.2f})")
+            log.info(f"PAPER CLOSE {'PARTIAL' if is_partial else 'FULL'} {tid}: "
+                     f"{sell_qty:.8f} {base_coin} @ {cp:.2f} = ${proceeds:.2f} (P&L: ${pnl_usdt:+.2f})")
         elif direction == "SHORT":
-            # SHORT close = buy back coins (we already have USDT from the short sale)
-            # In spot trading, shorts are simulated: we just track the P&L
-            pos_value = float(pos.get("risk_pct", 0)) * paper_balance_usdt
-            pnl_usdt = pos_value * pnl_pct
+            pv = pos.cost_usdt * (sell_qty / pos.qty if pos.qty > 0 else 1)
+            pnl_usdt = pv * pnl_pct
             paper_balance_usdt += pnl_usdt
-            log.info(f"PAPER CLOSE SHORT {tid}: P&L ${pnl_usdt:+.2f}")
-        else:
-            log.warning(f"PAPER CLOSE {tid}: no {base_coin} held or unknown direction")
     else:
-        # LIVE: execute actual sell on Binance
-        if exchange and direction == "LONG":
+        if exchange and direction == "LONG" and sell_qty > 0:
             try:
                 ccxt_pair = format_ccxt_pair(pair)
-                balance = exchange.fetch_balance()
-                coin_free = float(balance.get(base_coin, {}).get('free', 0))
-                if coin_free > 0:
-                    if ccxt_pair in exchange.markets:
-                        coin_free = float(exchange.amount_to_precision(ccxt_pair, coin_free))
-                    order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=coin_free)
-                    log.info(f"LIVE CLOSE {tid}: sold {coin_free} {base_coin}, order={order['id']}")
-                    pnl_usdt = coin_free * (cp - entry)
+                sq = float(exchange.amount_to_precision(ccxt_pair, sell_qty)) if ccxt_pair in getattr(exchange, 'markets', {}) else sell_qty
+                order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=sq)
+                pnl_usdt = sq * (cp - entry)
+                log.info(f"LIVE CLOSE {tid}: {sq} {base_coin}, order={order['id']}")
             except Exception as e:
-                log.error(f"LIVE CLOSE error {tid}: {e}")
-                pnl_usdt = 0
-        else:
-            pnl_usdt = 0
+                log.error(f"LIVE CLOSE {tid}: {e}")
 
-    # Update internal tracking
-    weighted_pnl = pnl_pct * pos.get("risk_pct", 0)
-    daily_pnl += weighted_pnl
-    weekly_pnl += weighted_pnl
+    # Update tracking
+    wpnl = (pnl_pct * 0.5 if is_partial else pnl_pct) * (pos.position_size_pct / 100)
+    daily_pnl += wpnl
+    weekly_pnl += wpnl
 
     if resultado == "LOSS":
         consecutive_losses += 1
     elif resultado == "WIN":
         consecutive_losses = 0
 
-    open_positions.remove(pos)
+    if not is_partial:
+        if pos in open_positions:
+            open_positions.remove(pos)
+
     for t in trade_log:
         if t["trade_id"] == tid:
-            t.update({
-                "resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
-                "precio_cierre": cp, "motivo_cierre": motivo,
-                "pnl_usdt": round(pnl_usdt, 2),
-            })
+            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
+                       "precio_cierre": cp, "motivo_cierre": motivo, "pnl_usdt": round(pnl_usdt, 2)})
 
     duration_hours = ""
     try:
-        opened = datetime.fromisoformat(pos["opened_at"].replace('Z', '+00:00'))
+        opened = datetime.fromisoformat(pos.opened_at.replace('Z', '+00:00'))
         duration_hours = f"{(datetime.now(timezone.utc) - opened).total_seconds() / 3600:.1f}"
     except Exception:
         pass
 
     await log_to_sheet("close_trade", {
         "trade_id": tid, "close_price": cp, "resultado": resultado,
-        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo,
-        "pnl_usdt": round(pnl_usdt, 2),
-        "duration_hours": duration_hours,
-        "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
-        "regime_changed": "NO", "strategy_correct": "",
+        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo, "pnl_usdt": round(pnl_usdt, 2),
+        "duration_hours": duration_hours, "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
         "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%} Losses:{consecutive_losses}"
     })
-    bal = await get_balance()
-    log.info(f"CLOSE {tid}: {resultado} pnl_r={pnl_r:+.2f}R pnl_usdt=${pnl_usdt:+.2f} balance=${bal.get('usdt_free',0):.2f}")
+
+    log.info(f"CLOSE {tid}: {resultado} {motivo} pnl_r={pnl_r:+.2f}R ${pnl_usdt:+.2f} partial={is_partial}")
     return {
-        "trade_id": tid, "resultado": resultado,
+        "trade_id": tid, "resultado": resultado, "motivo": motivo,
         "pnl_r": round(pnl_r, 2), "pnl_pct": round(pnl_pct * 100, 2),
-        "pnl_usdt": round(pnl_usdt, 2),
+        "pnl_usdt": round(pnl_usdt, 2), "partial": is_partial,
         "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
-        "motivo": motivo, "balance": bal,
     }
+
+
+@app.post("/close-trade")
+async def close_trade(request: Request):
+    body = await request.json()
+    tid = body.get("trade_id")
+    cp = float(body.get("close_price", 0))
+    motivo = body.get("motivo", "manual")
+    result = await _execute_close(tid, cp, motivo, body)
+    bal = await get_balance()
+    result["balance"] = bal
+    return result
 
 @app.get("/self-test")
 async def self_test():
