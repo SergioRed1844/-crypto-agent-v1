@@ -1448,6 +1448,119 @@ async def self_test():
     ]) else "ISSUES"
     return results
 
+@app.get("/test-binance")
+async def test_binance_connection():
+    """
+    Diagnostic endpoint — checks if this server can reach Binance.
+    Does NOT execute any trade. Safe to call anytime.
+    Returns detailed report of:
+      1. Public API reachability (no auth)
+      2. Geographic restriction detection (HTTP 451)
+      3. Authenticated API access (if keys are set)
+      4. Recommendation for going live
+    """
+    report = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "server_location": "unknown",
+        "public_api": {"ok": False, "details": ""},
+        "geo_blocked": None,
+        "auth_api": {"ok": False, "details": "", "tested": False},
+        "recommendation": "",
+    }
+
+    # Test 1: Public Binance API (no auth)
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            r = await client.get("https://api.binance.com/api/v3/ping")
+            if r.status_code == 200:
+                report["public_api"] = {"ok": True, "details": "Reachable", "status_code": 200}
+                report["geo_blocked"] = False
+            elif r.status_code == 451:
+                report["public_api"] = {"ok": False, "details": "HTTP 451 — Geographic restriction", "status_code": 451}
+                report["geo_blocked"] = True
+            else:
+                report["public_api"] = {"ok": False, "details": f"Unexpected HTTP {r.status_code}", "status_code": r.status_code}
+                report["geo_blocked"] = "unknown"
+    except httpx.TimeoutException:
+        report["public_api"] = {"ok": False, "details": "Timeout — possibly blocked or DNS issue"}
+        report["geo_blocked"] = "likely"
+    except Exception as e:
+        report["public_api"] = {"ok": False, "details": f"Error: {str(e)[:200]}"}
+        report["geo_blocked"] = "unknown"
+
+    # Test 2: Server timezone/region hint
+    try:
+        async with httpx.AsyncClient(timeout=5) as client:
+            r = await client.get("https://ipapi.co/json/")
+            if r.status_code == 200:
+                d = r.json()
+                report["server_location"] = f"{d.get('city', '?')}, {d.get('country_name', '?')} (IP: {d.get('ip', '?')})"
+    except Exception:
+        pass
+
+    # Test 3: Authenticated API (only if keys set, and only if public works)
+    if BINANCE_API_KEY and BINANCE_SECRET and report["public_api"]["ok"]:
+        report["auth_api"]["tested"] = True
+        try:
+            import ccxt
+            test_exchange = ccxt.binance({
+                'apiKey': BINANCE_API_KEY,
+                'secret': BINANCE_SECRET,
+                'enableRateLimit': True,
+                'options': {'defaultType': 'spot'},
+            })
+            # fetch_balance is the canonical authenticated test
+            bal = test_exchange.fetch_balance()
+            usdt_free = float(bal.get('USDT', {}).get('free', 0))
+            usdt_total = float(bal.get('USDT', {}).get('total', 0))
+            report["auth_api"] = {
+                "ok": True,
+                "tested": True,
+                "details": "API key valid, can read balance",
+                "usdt_free": usdt_free,
+                "usdt_total": usdt_total,
+            }
+        except Exception as e:
+            err_str = str(e)[:300]
+            report["auth_api"] = {
+                "ok": False,
+                "tested": True,
+                "details": err_str,
+                "hint": "Check API key permissions (need Spot Trading) and IP whitelist if set",
+            }
+    elif not (BINANCE_API_KEY and BINANCE_SECRET):
+        report["auth_api"]["details"] = "BINANCE_API_KEY or BINANCE_SECRET not set in env"
+    else:
+        report["auth_api"]["details"] = "Skipped — public API not reachable"
+
+    # Recommendation
+    if report["geo_blocked"] is True or report["geo_blocked"] == "likely":
+        report["recommendation"] = (
+            "CANNOT GO LIVE FROM THIS SERVER. Binance blocks this region (HTTP 451). "
+            "Options: (a) deploy server to Asia/EU region not blocked, "
+            "(b) use a VPS in allowed region, "
+            "(c) keep PAPER_TRADING=true and ignore Binance execution."
+        )
+    elif report["auth_api"].get("tested") and not report["auth_api"]["ok"]:
+        report["recommendation"] = (
+            "Binance reachable but API key fails. Check permissions and IP whitelist before going live."
+        )
+    elif report["auth_api"].get("ok"):
+        report["recommendation"] = (
+            "READY for live execution from this server. "
+            "Recommended: 1 small test trade first, monitor /trades and Binance Order History."
+        )
+    elif not (BINANCE_API_KEY and BINANCE_SECRET):
+        report["recommendation"] = (
+            "Public API ok but no Binance credentials set. "
+            "Add BINANCE_API_KEY and BINANCE_SECRET to env to test auth."
+        )
+    else:
+        report["recommendation"] = "Inconclusive. Review details above."
+
+    return report
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
