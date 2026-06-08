@@ -1,0 +1,42 @@
+# Render Blueprint (infraestructura como código) para CryptoAgent.
+# Úsalo si recreas el servicio desde cero: Render → New → Blueprint → apunta a este repo.
+# Para el servicio que YA tienes conectado manualmente, añade el Disk y DATA_DIR
+# desde el dashboard (este archivo no reconfigura servicios creados a mano).
+#
+# Los secretos (sync: false) NO se guardan aquí: se ponen en el dashboard de Render.
+services:
+  - type: web
+    name: crypto-agent
+    runtime: python
+    plan: starter
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    # Disco persistente: imprescindible para que el estado/aprendizaje (SQLite)
+    # sobreviva a redeploys. El código guarda en $DATA_DIR.
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: PAPER_TRADING
+        value: "true"          # mantener en true hasta validar 30+ trades
+      - key: PAPER_EQUITY
+        value: "10000"
+      - key: MONITOR_INTERVAL_SEC
+        value: "60"
+      # Secretos: definir manualmente en el dashboard (no se versionan).
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: SHEETS_WEBAPP_URL
+        sync: false
+      - key: BINANCE_API_KEY    # solo necesarias cuando PAPER_TRADING=false
+        sync: false
+      - key: BINANCE_SECRET
+        sync: false
