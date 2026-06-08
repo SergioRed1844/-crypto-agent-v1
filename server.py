@@ -3,20 +3,25 @@ CryptoAgent v3.0 — Production Server
 Merges v2.5.2 (stable) + Binance execution via ccxt
 TradingView → Render → RAG + Gemini → Binance (when PAPER_TRADING=false) → Google Sheets
 """
-import os, json, logging, pickle, hashlib, re
+import os, json, logging, pickle, hashlib, re, asyncio
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timezone
 from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
+import store
 
-RELEASE_ID = "v3.0-20260410"
+RELEASE_ID = "v3.1-20260608"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
 PAPER_TRADING = os.environ.get("PAPER_TRADING", "true").lower() == "true"
 BINANCE_API_KEY = os.environ.get("BINANCE_API_KEY", "")
 BINANCE_SECRET = os.environ.get("BINANCE_SECRET", "")
+# Simulated account equity used for paper-trading position sizing and PnL.
+PAPER_EQUITY = float(os.environ.get("PAPER_EQUITY", "10000"))
+# How often (seconds) the background monitor checks open positions for SL/TP hits.
+MONITOR_INTERVAL = int(os.environ.get("MONITOR_INTERVAL_SEC", "60"))
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("CryptoAgent")
@@ -37,13 +42,51 @@ try:
 except ImportError:
     log.warning("ccxt not installed — paper trading only")
 
-trade_log = []
-open_positions = []
-daily_pnl = 0.0
-weekly_pnl = 0.0
-satellite_pct = 20.0
-trade_counter = 0
-seen_signals = set()
+# ── Durable state: load from SQLite on startup (survives Railway restarts) ──
+store.init()
+trade_log = store.all_trades()
+open_positions = store.all_positions()
+trade_counter = int(store.get_kv("trade_counter", 0))
+satellite_pct = float(store.get_kv("satellite_pct", 20.0))
+daily_pnl = float(store.get_kv("daily_pnl", 0.0))
+weekly_pnl = float(store.get_kv("weekly_pnl", 0.0))
+
+
+def _utc_day():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def _utc_week():
+    iso = datetime.now(timezone.utc).isocalendar()
+    return f"{iso[0]}-W{iso[1]:02d}"
+
+
+def refresh_pnl_window():
+    """Reset daily/weekly PnL counters when the UTC day/week rolls over."""
+    global daily_pnl, weekly_pnl
+    if store.get_kv("pnl_day") != _utc_day():
+        daily_pnl = 0.0
+        store.set_kv("daily_pnl", 0.0)
+        store.set_kv("pnl_day", _utc_day())
+    if store.get_kv("pnl_week") != _utc_week():
+        weekly_pnl = 0.0
+        store.set_kv("weekly_pnl", 0.0)
+        store.set_kv("pnl_week", _utc_week())
+
+
+def add_pnl(delta_pct: float):
+    """Apply a realized PnL fraction (of equity) to the rolling counters."""
+    global daily_pnl, weekly_pnl
+    refresh_pnl_window()
+    daily_pnl += delta_pct
+    weekly_pnl += delta_pct
+    store.set_kv("daily_pnl", daily_pnl)
+    store.set_kv("weekly_pnl", weekly_pnl)
+
+
+refresh_pnl_window()
+log.info(f"State loaded: trades={len(trade_log)} open_positions={len(open_positions)} "
+         f"trade_counter={trade_counter} daily_pnl={daily_pnl:.4f} weekly_pnl={weekly_pnl:.4f}")
 
 PERSONALITY = {"O": 75, "C": 95, "E": 15, "A": 10, "N": 5}
 
@@ -60,7 +103,131 @@ RISK_PARAMS = {
     "satellite_max": 30,
     "protected_assets": ["BNB", "BNBUSDT", "BNBBUSD"],
     "max_entry_drift_pct": 0.005,
+    # Multiplier the agent is told to use when sizing its stop (widens after stops-too-tight).
+    "sl_atr_mult": 2.0,
 }
+
+# Hard limits the self-learning loop may NEVER cross. Capital-preservation is not negotiable:
+# the bot may adapt how PICKY it is, never how much it risks or whether it has a stop.
+RISK_FLOORS = {
+    "max_risk_per_trade_max": 0.005,   # learning can never raise risk-per-trade above 0.5%
+    "min_confidence_floor": 50,        # never accept setups below 50% confidence
+    "min_confidence_ceil": 90,
+    "min_confluence_floor": 3,
+    "min_confluence_ceil": 9,
+    "min_rr_floor": 1.5,               # never take a target worse than 1.5R
+    "min_rr_ceil": 3.0,
+    "sl_atr_mult_floor": 1.5,
+    "sl_atr_mult_ceil": 3.5,
+}
+
+# Keys that the learning loop is allowed to tune. Everything else (drawdown kills,
+# max_risk_per_trade, protected_assets...) is frozen.
+_ADAPTABLE_KEYS = ["min_confidence", "min_confluence", "min_rr", "sl_atr_mult"]
+
+
+def _apply_param_overrides():
+    """Reload learned parameter overrides from the store on startup so learning persists."""
+    overrides = store.get_kv("risk_overrides", {}) or {}
+    for k, v in overrides.items():
+        if k in _ADAPTABLE_KEYS:
+            RISK_PARAMS[k] = v
+    # max_risk_per_trade can only ever have been lowered; clamp defensively.
+    RISK_PARAMS["max_risk_per_trade"] = min(RISK_PARAMS["max_risk_per_trade"],
+                                            RISK_FLOORS["max_risk_per_trade_max"])
+    if overrides:
+        log.info(f"Loaded learned overrides: {overrides}")
+
+
+_apply_param_overrides()
+
+
+def _clamp(val, lo, hi):
+    return max(lo, min(hi, val))
+
+
+def closed_trades(n=20, pair=None):
+    """Most recent closed trades (with a result), optionally filtered by pair."""
+    rows = [t for t in trade_log if t.get("resultado") in ("WIN", "LOSS", "BREAKEVEN")]
+    if pair:
+        rows = [t for t in rows if str(t.get("pair", "")).upper() == pair.upper()]
+    return rows[-n:]
+
+
+def _rate(rows, key, val="SÍ"):
+    rows = [r for r in rows if r.get(key) not in (None, "")]
+    if not rows:
+        return 0.0
+    return sum(1 for r in rows if r.get(key) == val) / len(rows)
+
+
+def adapt_parameters():
+    """
+    AGGRESSIVE self-tuning of SELECTIVITY only, bounded by RISK_FLOORS.
+    Called after each close. Adjusts how picky the agent is and how it shapes stops/targets,
+    based on rolling outcomes. Never touches risk-per-trade or the kill switches.
+    """
+    rows = closed_trades(n=20)
+    n = len(rows)
+    if n < 8:   # aggressive: act early, but not from pure noise
+        return
+    wins = sum(1 for r in rows if r.get("resultado") == "WIN")
+    losses = sum(1 for r in rows if r.get("resultado") == "LOSS")
+    decided = wins + losses
+    if decided == 0:
+        return
+    wr = wins / decided
+    sl_short_rate = _rate(rows, "sl_too_short")
+    tp_high_rate = _rate(rows, "tp_too_high")
+
+    before = {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS}
+
+    # 1) Selectivity follows win rate (aggressive steps).
+    if wr < 0.45:
+        RISK_PARAMS["min_confidence"] = _clamp(RISK_PARAMS["min_confidence"] + 5,
+                                               RISK_FLOORS["min_confidence_floor"], RISK_FLOORS["min_confidence_ceil"])
+        RISK_PARAMS["min_confluence"] = _clamp(RISK_PARAMS["min_confluence"] + 1,
+                                               RISK_FLOORS["min_confluence_floor"], RISK_FLOORS["min_confluence_ceil"])
+    elif wr > 0.60:
+        RISK_PARAMS["min_confidence"] = _clamp(RISK_PARAMS["min_confidence"] - 3,
+                                               RISK_FLOORS["min_confidence_floor"], RISK_FLOORS["min_confidence_ceil"])
+        RISK_PARAMS["min_confluence"] = _clamp(RISK_PARAMS["min_confluence"] - 1,
+                                               RISK_FLOORS["min_confluence_floor"], RISK_FLOORS["min_confluence_ceil"])
+
+    # 2) Stops too tight → tell the agent to widen its stop (more ATR).
+    if sl_short_rate > 0.30:
+        RISK_PARAMS["sl_atr_mult"] = _clamp(round(RISK_PARAMS["sl_atr_mult"] + 0.25, 2),
+                                            RISK_FLOORS["sl_atr_mult_floor"], RISK_FLOORS["sl_atr_mult_ceil"])
+
+    # 3) Targets too ambitious → take profit sooner (lower required R:R).
+    if tp_high_rate > 0.30:
+        RISK_PARAMS["min_rr"] = _clamp(round(RISK_PARAMS["min_rr"] - 0.25, 2),
+                                       RISK_FLOORS["min_rr_floor"], RISK_FLOORS["min_rr_ceil"])
+    elif wr > 0.60 and tp_high_rate < 0.10:
+        RISK_PARAMS["min_rr"] = _clamp(round(RISK_PARAMS["min_rr"] + 0.25, 2),
+                                       RISK_FLOORS["min_rr_floor"], RISK_FLOORS["min_rr_ceil"])
+
+    # 4) Satellite allocation from satellite-bucket performance.
+    sat_rows = [r for r in rows if r.get("bucket") == "SATELLITE"]
+    sat_dec = [r for r in sat_rows if r.get("resultado") in ("WIN", "LOSS")]
+    global satellite_pct
+    if len(sat_dec) >= 4:
+        sat_wr = sum(1 for r in sat_dec if r.get("resultado") == "WIN") / len(sat_dec)
+        if sat_wr > 0.55:
+            satellite_pct = _clamp(satellite_pct + 5, RISK_PARAMS["satellite_min"], RISK_PARAMS["satellite_max"])
+        elif sat_wr < 0.40:
+            satellite_pct = _clamp(satellite_pct - 5, RISK_PARAMS["satellite_min"], RISK_PARAMS["satellite_max"])
+        store.set_kv("satellite_pct", satellite_pct)
+
+    after = {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS}
+    changed = {k: (before[k], after[k]) for k in _ADAPTABLE_KEYS if before[k] != after[k]}
+    if changed:
+        store.set_kv("risk_overrides", {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS})
+        reason = (f"n={n} WR={wr:.0%} sl_short={sl_short_rate:.0%} tp_high={tp_high_rate:.0%} → "
+                  + ", ".join(f"{k}:{v[0]}→{v[1]}" for k, v in changed.items()))
+        log.info(f"LEARN adapt: {reason}")
+        store.set_kv("last_adaptation", {"at": datetime.utcnow().isoformat(), "reason": reason})
+
 
 # ═══════════════════════════════════════════════════════════
 # RAG
@@ -191,8 +358,15 @@ CURRENT MARKET PRICE: {current_price}
 
 PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%
 
+CURRENT ADAPTIVE POLICY (learned from your own past results — respect it):
+{policy}
+
 SELF-LEARNING FEEDBACK FROM PREVIOUS TRADES:
 {feedback}
+
+Apply the lessons above: only take this trade if it clears the current policy thresholds; size your
+stop using sl_atr_mult × ATR; do not set a target beyond what the learned R:R supports. If recent
+results for this pair/regime/template are poor, demand a stronger edge or return NO_TRADE.
 
 Evaluate this signal against current market price. If entry price differs >0.5% from current price, reject as stale.
 Respond with ONLY this JSON (fill real values, confidence 0-100 must reflect conviction):
@@ -316,59 +490,166 @@ async def call_gemini(prompt: str) -> dict:
 # ═══════════════════════════════════════════════════════════
 # BINANCE EXECUTION ENGINE
 # ═══════════════════════════════════════════════════════════
-def execute_binance_trade(pair: str, action: str, position_size_pct: float, current_price: float) -> tuple:
-    """Execute real trade on Binance Spot. Returns (success, order_id_or_error)."""
+def to_ccxt_pair(pair: str) -> str:
+    """BTCUSDT -> BTC/USDT (handles USDT and BUSD quote assets)."""
+    p = pair.upper()
+    if p.endswith("USDT"):
+        return p[:-4] + "/USDT"
+    if p.endswith("BUSD"):
+        return p[:-4] + "/BUSD"
+    return p
+
+
+def get_equity_usdt() -> float:
+    """Account equity used for risk sizing. Free USDT in live, PAPER_EQUITY in paper."""
+    if PAPER_TRADING or not exchange:
+        return PAPER_EQUITY
+    try:
+        bal = exchange.fetch_balance()
+        return float(bal.get("USDT", {}).get("free", 0)) or PAPER_EQUITY
+    except Exception as e:
+        log.warning(f"fetch_balance failed, using PAPER_EQUITY: {e}")
+        return PAPER_EQUITY
+
+
+def compute_position_qty(equity: float, entry: float, stop: float, cash_available: float = None) -> float:
+    """
+    Risk-based sizing: risk exactly max_risk_per_trade of equity on the stop distance.
+        qty = (equity * max_risk_per_trade) / |entry - stop|
+    The capital-at-risk (not notional) is what's controlled — max_total_exposure caps the
+    SUM of per-trade risk across open positions (enforced in validate_trade), so ~10 trades
+    of 0.5% each. Here we only additionally clamp notional to the cash actually available,
+    so we never try to spend money we don't have.
+    """
+    if equity <= 0 or entry <= 0 or stop <= 0:
+        return 0.0
+    stop_dist = abs(entry - stop)
+    if stop_dist < entry * 1e-6:
+        return 0.0
+    risk_amount = equity * RISK_PARAMS["max_risk_per_trade"]
+    qty = risk_amount / stop_dist
+    if cash_available is not None and cash_available > 0 and qty * entry > cash_available:
+        qty = cash_available / entry
+    return qty
+
+
+def open_long(pair: str, entry: float, stop: float, tp1: float, tp2: float, current_price: float) -> tuple:
+    """
+    Open a LONG (spot market buy) sized by risk. Returns (success, info_dict | error_str).
+    info_dict: {order_id, qty, notional, equity, oco}
+    """
+    equity = get_equity_usdt()
+
     if PAPER_TRADING:
-        log.info(f"PAPER: {action} {pair} size={position_size_pct}% price={current_price:.2f}")
-        return True, f"PAPER-{datetime.utcnow().strftime('%H%M%S')}"
+        # Cash not really tracked in paper: bound notional by equity minus already-deployed.
+        deployed = sum(float(p.get("notional", 0)) for p in open_positions)
+        cash_available = max(0.0, equity - deployed)
+        qty = compute_position_qty(equity, entry or current_price, stop, cash_available)
+        if qty <= 0:
+            return False, "Sizing produced zero quantity (no cash budget or bad entry/stop)"
+        notional = qty * current_price
+        log.info(f"PAPER BUY {pair} qty={qty:.6f} notional={notional:.2f} "
+                 f"(risk {RISK_PARAMS['max_risk_per_trade']:.2%} of {equity:.2f})")
+        return True, {"order_id": f"PAPER-{datetime.utcnow().strftime('%H%M%S')}",
+                      "qty": qty, "notional": notional, "equity": equity, "oco": None}
 
     if not exchange:
         return False, "Binance exchange not configured"
 
     try:
-        balance = exchange.fetch_balance()
-
-        if action == 'BUY':
-            usdt_free = float(balance.get('USDT', {}).get('free', 0))
-            invest_amount = usdt_free * (position_size_pct / 100)
-
-            if invest_amount < 5:
-                return False, f"Amount {invest_amount:.2f} USDT below Binance minimum (5 USDT)"
-
-            # Format pair for ccxt: BTC/USDT
-            ccxt_pair = pair.replace("USDT", "/USDT").replace("BUSD", "/BUSD")
-            amount = invest_amount / current_price
-
-            order = exchange.create_order(symbol=ccxt_pair, type='market', side='buy', amount=amount)
-            log.info(f"BINANCE BUY: {ccxt_pair} amount={amount:.6f} order_id={order['id']}")
-            return True, str(order['id'])
-
-        elif action == 'SELL':
-            base_coin = pair.replace('USDT', '').replace('BUSD', '')
-
-            # BNB protection - double check
-            if base_coin == 'BNB':
-                return False, "BLOCKED: Cannot sell BNB (reserved for commissions)"
-
-            coin_free = float(balance.get(base_coin, {}).get('free', 0))
-            if coin_free <= 0:
-                return False, f"No {base_coin} balance to sell"
-
-            ccxt_pair = pair.replace("USDT", "/USDT").replace("BUSD", "/BUSD")
-            order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=coin_free)
-            log.info(f"BINANCE SELL: {ccxt_pair} amount={coin_free:.6f} order_id={order['id']}")
-            return True, str(order['id'])
-
-        return False, f"Unknown action: {action}"
-
+        ccxt_pair = to_ccxt_pair(pair)
+        usdt_free = float(exchange.fetch_balance().get("USDT", {}).get("free", 0))
+        qty = compute_position_qty(equity, entry or current_price, stop, usdt_free)
+        if qty <= 0:
+            return False, "Sizing produced zero quantity (insufficient cash or bad entry/stop)"
+        notional = qty * current_price
+        if notional < 5:
+            return False, f"Notional {notional:.2f} USDT below Binance minimum (5)"
+        qty = float(exchange.amount_to_precision(ccxt_pair, qty))
+        if qty <= 0:
+            return False, "Quantity rounds to zero at exchange precision"
+        order = exchange.create_order(symbol=ccxt_pair, type="market", side="buy", amount=qty)
+        filled_qty = float(order.get("filled") or qty)
+        log.info(f"BINANCE BUY {ccxt_pair} qty={filled_qty:.6f} order_id={order['id']}")
+        oco = place_protective_oco(ccxt_pair, filled_qty, stop, tp1, tp2)
+        return True, {"order_id": str(order["id"]), "qty": filled_qty,
+                      "notional": filled_qty * current_price, "equity": equity, "oco": oco}
     except Exception as e:
-        log.error(f"Binance execution error: {e}")
+        log.error(f"Binance open_long error: {e}")
+        return False, str(e)
+
+
+def place_protective_oco(ccxt_pair: str, qty: float, stop: float, tp1: float, tp2: float):
+    """
+    Server-side safety net (LIVE only): an OCO sell that protects the position even if
+    this bot process dies. Take-profit = tp1 (closest target), stop = stop_loss.
+    Best-effort: failures are logged but do not abort the trade (the monitor still guards it).
+    Returns the OCO order-list id or None.
+    """
+    if PAPER_TRADING or not exchange:
+        return None
+    try:
+        tp_price = float(exchange.price_to_precision(ccxt_pair, tp1))
+        stop_price = float(exchange.price_to_precision(ccxt_pair, stop))
+        stop_limit = float(exchange.price_to_precision(ccxt_pair, stop * 0.999))
+        amount = float(exchange.amount_to_precision(ccxt_pair, qty))
+        resp = exchange.private_post_order_oco({
+            "symbol": exchange.market(ccxt_pair)["id"],
+            "side": "SELL",
+            "quantity": amount,
+            "price": tp_price,                 # take-profit limit
+            "stopPrice": stop_price,           # stop trigger
+            "stopLimitPrice": stop_limit,      # stop-limit price
+            "stopLimitTimeInForce": "GTC",
+        })
+        oco_id = resp.get("orderListId")
+        log.info(f"OCO placed {ccxt_pair} tp={tp_price} stop={stop_price} listId={oco_id}")
+        return oco_id
+    except Exception as e:
+        log.error(f"OCO placement failed for {ccxt_pair} (monitor will still guard): {e}")
+        return None
+
+
+def cancel_protective_oco(ccxt_pair: str, oco_id):
+    """Cancel a resting OCO before the monitor market-closes (LIVE only)."""
+    if PAPER_TRADING or not exchange or oco_id is None:
+        return
+    try:
+        exchange.private_delete_orderlist({
+            "symbol": exchange.market(ccxt_pair)["id"],
+            "orderListId": oco_id,
+        })
+        log.info(f"Cancelled OCO {oco_id} on {ccxt_pair}")
+    except Exception as e:
+        log.warning(f"Could not cancel OCO {oco_id} (may already be filled): {e}")
+
+
+def market_sell(ccxt_pair: str, qty: float) -> tuple:
+    """Market-sell an exact quantity to close a position (LIVE only). Returns (ok, info)."""
+    if PAPER_TRADING:
+        return True, f"PAPER-SELL-{datetime.utcnow().strftime('%H%M%S')}"
+    if not exchange:
+        return False, "Binance exchange not configured"
+    try:
+        # Don't oversell: clamp to free balance (handles dust / already-filled OCO).
+        base = ccxt_pair.split("/")[0]
+        free = float(exchange.fetch_balance().get(base, {}).get("free", 0))
+        sell_qty = min(qty, free)
+        if sell_qty <= 0:
+            return False, f"No {base} balance to sell (position likely already closed)"
+        sell_qty = float(exchange.amount_to_precision(ccxt_pair, sell_qty))
+        order = exchange.create_order(symbol=ccxt_pair, type="market", side="sell", amount=sell_qty)
+        log.info(f"BINANCE SELL {ccxt_pair} qty={sell_qty:.6f} order_id={order['id']}")
+        return True, str(order["id"])
+    except Exception as e:
+        log.error(f"Binance market_sell error: {e}")
         return False, str(e)
 
 # ═══════════════════════════════════════════════════════════
 # RISK MANAGER + STALE SIGNAL + VALIDATION
 # ═══════════════════════════════════════════════════════════
 def check_kill_switches():
+    refresh_pnl_window()
     if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
         return True, f"Daily DD {daily_pnl:.2%} > {RISK_PARAMS['daily_drawdown_kill']:.2%}"
     if weekly_pnl <= RISK_PARAMS["weekly_drawdown_kill"]:
@@ -404,6 +685,9 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         return False, f"BLOCKED: {pair} is protected (BNB)"
     if action == "NO_TRADE":
         return False, d.get("reasoning", "Model decided NO_TRADE")
+    # Spot account: only LONG (BUY) can open a position. SHORT/SELL can't be opened on spot.
+    if action == "SELL" or str(d.get("direction", "")).upper() == "SHORT":
+        return False, "SHORT/SELL not supported on spot account (long-only)"
     if not d.get("checklist_pass", False):
         return False, "Checklist did not pass"
 
@@ -426,10 +710,15 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
             return False, f"R:R below {RISK_PARAMS['min_rr']}"
 
-    cur_exp = sum(p.get("risk_pct", 0) for p in open_positions)
-    new_risk = d.get("position_size_pct", 0) / 100
+    # Total capital-at-risk = sum of (qty * stop_distance / equity) across open positions.
+    # By construction each risk-sized trade contributes ~max_risk_per_trade.
+    def _risk_frac(p):
+        eq = float(p.get("equity_at_open", 0)) or 1
+        return float(p.get("qty", 0)) * abs(float(p.get("entry", 0)) - float(p.get("sl", 0))) / eq
+    cur_exp = sum(_risk_frac(p) for p in open_positions)
+    new_risk = RISK_PARAMS["max_risk_per_trade"]
     if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
-        return False, f"Total exposure {cur_exp + new_risk:.2%} > {RISK_PARAMS['max_total_exposure']:.2%}"
+        return False, f"Total risk {cur_exp + new_risk:.2%} > max_total_exposure {RISK_PARAMS['max_total_exposure']:.2%}"
 
     killed, reason = check_kill_switches()
     if killed:
@@ -454,24 +743,61 @@ async def get_feedback(pair: str = "") -> str:
         except:
             pass
 
-    if len(trade_log) < 3:
-        return "Insufficient data (need 3+ trades)"
+    return build_feedback_memory(pair)
+
+
+def _wr_breakdown(rows, key, label, min_n=3):
+    """Per-bucket win-rate breakdown (e.g. by regime or template). Returns text parts."""
+    groups = {}
+    for r in rows:
+        g = str(r.get(key, "") or "?")
+        res = r.get("resultado")
+        if res in ("WIN", "LOSS"):
+            groups.setdefault(g, [0, 0])
+            groups[g][0 if res == "WIN" else 1] += 1
+    out = []
+    for g, (w, l) in groups.items():
+        if w + l >= min_n:
+            out.append(f"{label}:{g} {w}W/{l}L({w/(w+l):.0%})")
+    return out
+
+
+def build_feedback_memory(pair: str = "") -> str:
+    """
+    Rich, actionable feedback from the in-memory trade journal (used when Sheets is absent).
+    Surfaces win rate, R:R, per-regime / per-template breakdown, and SL/TP diagnostics so the
+    LLM can learn *under which conditions* it wins or loses — not just an aggregate number.
+    """
+    closed = [t for t in trade_log if t.get("resultado") in ("WIN", "LOSS", "BREAKEVEN")]
     if pair:
-        recent = [t for t in trade_log[-20:] if t.get("pair", "").upper() == pair.upper()][-10:]
-    else:
-        recent = trade_log[-10:]
-    if not recent:
-        return f"No trades for {pair}" if pair else "No trades yet"
+        closed = [t for t in closed if str(t.get("pair", "")).upper() == pair.upper()]
+    recent = closed[-20:]
+    if len(recent) < 3:
+        return f"Insufficient closed trades for {pair or 'ALL'} (need 3+)"
+
     wins = sum(1 for t in recent if t.get("resultado") == "WIN")
     losses = sum(1 for t in recent if t.get("resultado") == "LOSS")
-    total = wins + losses
-    parts = []
-    if total > 0:
-        parts.append(f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}")
-    stale = sum(1 for t in recent if "stale" in str(t.get("motivo_no_ejecutar", "")).lower())
-    if stale >= 2:
-        parts.append(f"{stale} stale signals.")
-    return " | ".join(parts) if parts else "No closed trades"
+    total = wins + losses or 1
+    rr_vals = []
+    for t in recent:
+        try:
+            rr_vals.append(float(str(t.get("pnl_R", "0")).replace("R", "").replace("+", "")))
+        except (ValueError, TypeError):
+            pass
+    avg_rr = sum(rr_vals) / len(rr_vals) if rr_vals else 0
+
+    parts = [f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%} avgR:{avg_rr:+.2f}"]
+    # Per-context breakdowns (the "what works / what doesn't" a trader tracks).
+    parts += _wr_breakdown(recent, "regime_btc", "regime")
+    parts += _wr_breakdown(recent, "template", "tmpl")
+
+    sl_short = sum(1 for t in recent if t.get("sl_too_short") == "SÍ")
+    tp_high = sum(1 for t in recent if t.get("tp_too_high") == "SÍ")
+    if sl_short >= 2:
+        parts.append(f"⚠ {sl_short} stops too tight (price reversed our way after stop) → widen stops")
+    if tp_high >= 2:
+        parts.append(f"⚠ {tp_high} targets too far (near-misses on TP) → take profit sooner")
+    return " | ".join(parts)
 
 # ═══════════════════════════════════════════════════════════
 # SHEETS BRIDGE
@@ -498,6 +824,187 @@ async def log_to_sheet(sheet_action: str, data: dict):
         return {"ok": False, "error": str(e)}
 
 # ═══════════════════════════════════════════════════════════
+# POST-TRADE DIAGNOSTICS (the agent's "trade journal" — what to learn)
+# ═══════════════════════════════════════════════════════════
+def compute_diagnostics(pos: dict, close_price: float, motivo: str) -> dict:
+    """
+    Turn raw price excursion into the lessons a trader writes in their journal:
+      - mfe_R / mae_R: best/worst the trade got, in R multiples
+      - sl_too_short: we got stopped out but price had already moved >=1R our way
+      - tp_too_high : we exited without hitting TP after getting >=80% of the way there
+      - strategy_correct: was the directional thesis right?
+    Heuristics (standard, intentionally simple) — they bias the LLM, they don't command it.
+    """
+    entry = float(pos.get("entry") or 0)
+    sl = float(pos.get("sl") or 0)
+    tp1 = float(pos.get("tp1") or 0)
+    mfe = float(pos.get("mfe") or close_price)
+    mae = float(pos.get("mae") or close_price)
+    # Make sure the close price itself counts toward the excursion.
+    mfe = max(mfe, close_price)
+    mae = min(mae, close_price)
+
+    risk_unit = abs(entry - sl)
+    if risk_unit <= 0 or entry <= 0:
+        return {"mfe_R": 0.0, "mae_R": 0.0, "sl_too_short": "NO",
+                "tp_too_high": "NO", "strategy_correct": ""}
+
+    mfe_R = (mfe - entry) / risk_unit       # LONG: favorable = price up
+    mae_R = (entry - mae) / risk_unit       # LONG: adverse = price down (positive number)
+    tp1_R = (tp1 - entry) / risk_unit if tp1 > 0 else RISK_PARAMS["min_rr"]
+
+    stopped = "SL" in motivo.upper()
+    took_profit = "TP" in motivo.upper()
+
+    sl_too_short = "SÍ" if (stopped and mfe_R >= 1.0) else "NO"
+    tp_too_high = "SÍ" if (not took_profit and tp1_R > 0 and mfe_R >= 0.8 * tp1_R) else "NO"
+    if took_profit:
+        strategy_correct = "SÍ"
+    elif mfe_R < 0.5:
+        strategy_correct = "NO"
+    else:
+        strategy_correct = "PARCIAL"
+
+    return {"mfe_R": round(mfe_R, 2), "mae_R": round(mae_R, 2),
+            "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
+            "strategy_correct": strategy_correct}
+
+
+# ═══════════════════════════════════════════════════════════
+# POSITION CLOSE (shared by manual endpoint and the auto monitor)
+# ═══════════════════════════════════════════════════════════
+async def close_position(pos: dict, close_price: float, motivo: str = "manual") -> dict:
+    """
+    Close one open position: execute the exit (live market sell / paper sim),
+    realize PnL, persist, and log to the sheet. Returns a result summary.
+    """
+    tid = pos["trade_id"]
+    entry = float(pos.get("entry") or 0)
+    sl = float(pos.get("sl") or 0)
+    if entry <= 0 or close_price <= 0:
+        return {"error": f"Invalid prices for {tid} (entry={entry} close={close_price})"}
+
+    # Spot is long-only here, but keep the direction-aware formula for safety.
+    pnl_pct = (close_price - entry) / entry if pos.get("direction") == "LONG" else (entry - close_price) / entry
+    risk = abs(entry - sl) / entry if sl > 0 else 0
+    pnl_r = pnl_pct / risk if risk > 0 else 0
+    resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
+
+    # LIVE exit: cancel the protective OCO, then market-sell the exact position qty.
+    exit_order_id = "N/A"
+    if not PAPER_TRADING and pos.get("qty", 0) > 0:
+        cancel_protective_oco(to_ccxt_pair(pos["pair"]), pos.get("oco_id"))
+        ok, info = market_sell(to_ccxt_pair(pos["pair"]), float(pos["qty"]))
+        exit_order_id = info if ok else f"SELL_FAILED:{info}"
+        if not ok:
+            log.error(f"Close {tid}: market sell failed: {info}")
+
+    # Realize PnL as a fraction of account equity (notional_pct scales price-% to equity-%).
+    notional_pct = float(pos.get("notional_pct", 0))
+    equity_delta = pnl_pct * notional_pct
+    add_pnl(equity_delta)
+    pnl_usdt = round(pnl_pct * float(pos.get("notional", 0)), 2)
+
+    # Remove from open positions (memory + store).
+    global open_positions
+    open_positions = [p for p in open_positions if p["trade_id"] != tid]
+    store.delete_position(tid)
+
+    # Compute the trade journal entry (real diagnostics, no longer hardcoded).
+    diag = compute_diagnostics(pos, close_price, motivo)
+
+    # Update the trade record (memory + store).
+    for t in trade_log:
+        if t["trade_id"] == tid:
+            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
+                      "precio_cierre": close_price, "motivo_cierre": motivo,
+                      "pnl_usdt": pnl_usdt, "exit_order_id": exit_order_id,
+                      "closed_at": datetime.utcnow().isoformat(),
+                      "mfe_R": diag["mfe_R"], "mae_R": diag["mae_R"],
+                      "sl_too_short": diag["sl_too_short"], "tp_too_high": diag["tp_too_high"],
+                      "strategy_correct": diag["strategy_correct"]})
+            store.upsert_trade(t)
+            break
+
+    await log_to_sheet("close_trade", {
+        "trade_id": tid, "close_price": close_price, "resultado": resultado,
+        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo, "pnl_usdt": pnl_usdt,
+        "sl_too_short": diag["sl_too_short"], "tp_too_high": diag["tp_too_high"],
+        "regime_changed": "NO", "strategy_correct": diag["strategy_correct"],
+        "post_trade_notes": f"mfe={diag['mfe_R']}R mae={diag['mae_R']}R | "
+                            f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%}",
+    })
+    log.info(f"Closed {tid}: {resultado} {pnl_r:+.2f}R pnl={pnl_usdt} mfe={diag['mfe_R']}R "
+             f"mae={diag['mae_R']}R sl_short={diag['sl_too_short']} tp_high={diag['tp_too_high']} ({motivo})")
+
+    # Learn from the result: aggressively adapt selectivity params (with hard risk floors).
+    adapt_parameters()
+
+    return {"trade_id": tid, "resultado": resultado, "pnl_r": pnl_r,
+            "pnl_usdt": pnl_usdt, "exit_order_id": exit_order_id, "diagnostics": diag}
+
+
+# ═══════════════════════════════════════════════════════════
+# PRICE FEED + BACKGROUND POSITION MONITOR
+# ═══════════════════════════════════════════════════════════
+async def fetch_price(pair: str) -> float:
+    """Current price for any pair via Binance public ticker (no keys needed)."""
+    symbol = pair.upper().replace("/", "")
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}")
+            if r.status_code == 200:
+                return float(r.json().get("price", 0))
+    except Exception as e:
+        log.warning(f"fetch_price {symbol} failed: {e}")
+    return 0.0
+
+
+async def monitor_positions():
+    """
+    Background loop: the heart of automatic risk management. Every MONITOR_INTERVAL
+    seconds, check each open position's live price and close it when SL or TP is hit.
+    Works identically in paper and live. In live it is backed by the OCO on Binance.
+    """
+    log.info(f"Position monitor started (every {MONITOR_INTERVAL}s)")
+    while True:
+        try:
+            await asyncio.sleep(MONITOR_INTERVAL)
+            refresh_pnl_window()
+            for pos in list(open_positions):
+                price = await fetch_price(pos["pair"])
+                if price <= 0:
+                    continue
+                # Track max favorable / adverse excursion (raw material for SL/TP learning).
+                if price > float(pos.get("mfe", 0)):
+                    pos["mfe"] = price
+                    store.upsert_position(pos)
+                if price < float(pos.get("mae", price)):
+                    pos["mae"] = price
+                    store.upsert_position(pos)
+                sl = float(pos.get("sl") or 0)
+                tp1 = float(pos.get("tp1") or 0)
+                tp2 = float(pos.get("tp2") or 0)
+                # LONG-only spot logic
+                if sl > 0 and price <= sl:
+                    await close_position(pos, price, "SL_HIT")
+                elif tp2 > 0 and price >= tp2:
+                    await close_position(pos, price, "TP2_HIT")
+                elif tp1 > 0 and price >= tp1:
+                    await close_position(pos, price, "TP1_HIT")
+        except asyncio.CancelledError:
+            log.info("Position monitor stopped")
+            raise
+        except Exception as e:
+            log.error(f"Monitor loop error (continuing): {e}")
+
+
+@app.on_event("startup")
+async def _start_monitor():
+    asyncio.create_task(monitor_positions())
+
+
+# ═══════════════════════════════════════════════════════════
 # ENDPOINTS
 # ═══════════════════════════════════════════════════════════
 @app.get("/")
@@ -521,7 +1028,16 @@ async def get_status():
             "personality": PERSONALITY, "risk_params": RISK_PARAMS,
             "state": {"satellite_pct": satellite_pct, "trades": len(trade_log),
                       "open_positions": len(open_positions),
-                      "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl},
+                      "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl,
+                      "equity": get_equity_usdt()},
+            "sizing": {"paper_equity": PAPER_EQUITY,
+                       "risk_per_trade": RISK_PARAMS["max_risk_per_trade"],
+                       "monitor_interval_sec": MONITOR_INTERVAL},
+            "learning": {"adaptive_params": {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS},
+                         "satellite_pct": satellite_pct,
+                         "overrides": store.get_kv("risk_overrides", {}),
+                         "last_adaptation": store.get_kv("last_adaptation", None),
+                         "closed_trades": len(closed_trades(n=10000))},
             "kill_switch": {"active": killed, "reason": reason},
             "binance": {"connected": exchange is not None, "paper": PAPER_TRADING},
             "feedback": await get_feedback()}
@@ -537,11 +1053,10 @@ async def webhook(request: Request):
     log.info(f"Signal: {pair} | {body.get('signal_type', 'N/A')}")
 
     sig_hash = hashlib.md5(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
-    if sig_hash in seen_signals:
+    if store.has_seen(sig_hash):
         return {"action": "DUPLICATE", "reason": "Signal already processed"}
-    seen_signals.add(sig_hash)
-    if len(seen_signals) > 100:
-        seen_signals.clear()
+    store.add_seen(sig_hash)
+    store.prune_seen(keep=500)
 
     if any(p in pair for p in RISK_PARAMS["protected_assets"]):
         return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB)"}
@@ -556,6 +1071,10 @@ async def webhook(request: Request):
     rag_context = rag.build_context(rag_query, k=5, max_words=1500)
     feedback = await get_feedback(pair=pair)
 
+    policy = (f"min_confidence={RISK_PARAMS['min_confidence']}%, "
+              f"min_confluence={RISK_PARAMS['min_confluence']}, "
+              f"min_RR={RISK_PARAMS['min_rr']}, "
+              f"stop=sl_atr_mult×ATR (sl_atr_mult={RISK_PARAMS['sl_atr_mult']})")
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
@@ -565,6 +1084,7 @@ async def webhook(request: Request):
         daily_pnl=f"{daily_pnl:.2%}",
         weekly_pnl=f"{weekly_pnl:.2%}",
         satellite_pct=satellite_pct,
+        policy=policy,
         feedback=feedback
     )
 
@@ -572,22 +1092,27 @@ async def webhook(request: Request):
     is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx)
 
     trade_counter += 1
+    store.set_kv("trade_counter", trade_counter)
     trade_id = f"T-{trade_counter:04d}"
 
-    # Execute on Binance if valid
+    # Execute on Binance if valid (BUY = open long; SELL/SHORT already rejected in validate_trade)
     binance_order_id = "N/A"
-    if is_valid and decision.get("action") in ("BUY", "SELL"):
-        success, exec_msg = execute_binance_trade(
+    exec_info = None
+    if is_valid and decision.get("action") == "BUY":
+        success, exec_result = open_long(
             pair=decision.get("pair", pair),
-            action=decision.get("action"),
-            position_size_pct=decision.get("position_size_pct", 0),
-            current_price=current_price
+            entry=float(decision.get("entry_price") or current_price),
+            stop=float(decision.get("stop_loss") or 0),
+            tp1=float(decision.get("take_profit_1") or 0),
+            tp2=float(decision.get("take_profit_2") or 0),
+            current_price=current_price,
         )
         if not success:
             is_valid = False
-            validation_msg = f"Binance error: {exec_msg}"
+            validation_msg = f"Binance error: {exec_result}"
         else:
-            binance_order_id = exec_msg
+            exec_info = exec_result
+            binance_order_id = exec_info["order_id"]
 
     record = {
         "trade_id": trade_id, "timestamp": datetime.utcnow().isoformat(),
@@ -615,21 +1140,43 @@ async def webhook(request: Request):
         "feedback_used": feedback,
         "binance_order_id": binance_order_id,
         "execution_mode": "PAPER" if PAPER_TRADING else "LIVE",
+        "qty": exec_info["qty"] if exec_info else 0,
+        "notional_usdt": round(exec_info["notional"], 2) if exec_info else 0,
+        "equity_at_open": round(exec_info["equity"], 2) if exec_info else 0,
     }
     trade_log.append(record)
+    store.upsert_trade(record)
     sheet_result = await log_to_sheet("log_trade", record)
     log.info(f"Trade {trade_id}: action={decision.get('action')} valid={is_valid} binance={binance_order_id} sheet={sheet_result.get('ok') if isinstance(sheet_result, dict) else 'N/A'}")
 
-    if is_valid and decision.get("action") != "NO_TRADE":
-        open_positions.append({
-            "trade_id": trade_id, "pair": decision.get("pair"),
-            "direction": decision.get("direction"), "bucket": decision.get("bucket"),
-            "entry": decision.get("entry_price"), "sl": decision.get("stop_loss"),
-            "tp1": decision.get("take_profit_1"),
-            "risk_pct": decision.get("position_size_pct", 0) / 100,
+    if is_valid and decision.get("action") == "BUY" and exec_info:
+        equity = exec_info["equity"] or PAPER_EQUITY
+        position = {
+            "trade_id": trade_id, "pair": decision.get("pair", pair),
+            "direction": "LONG", "bucket": decision.get("bucket"),
+            # entry recorded at the actual fill (current market price), not the stale signal price
+            "entry": current_price,
+            "sl": float(decision.get("stop_loss") or 0),
+            "tp1": float(decision.get("take_profit_1") or 0),
+            "tp2": float(decision.get("take_profit_2") or 0),
+            "qty": exec_info["qty"],
+            "notional": exec_info["notional"],
+            # fraction of equity this position represents (used to convert price-% PnL to equity-% PnL)
+            "notional_pct": (exec_info["notional"] / equity) if equity > 0 else 0,
+            "equity_at_open": equity,
             "opened_at": datetime.utcnow().isoformat(),
-            "binance_order_id": binance_order_id
-        })
+            "binance_order_id": binance_order_id,
+            "oco_id": exec_info.get("oco"),
+            # Excursion tracking (max favorable / adverse price seen) — fuels SL/TP learning.
+            "mfe": current_price,
+            "mae": current_price,
+            # Snapshot of the regime/template the decision was made under, for per-context learning.
+            "regime_btc": decision.get("regime_btc", ""),
+            "template": decision.get("template", ""),
+            "confluence_score": decision.get("confluence_score", 0),
+        }
+        open_positions.append(position)
+        store.upsert_position(position)
 
     return {"trade_id": trade_id,
             "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
@@ -649,33 +1196,16 @@ async def get_positions():
 
 @app.post("/close-trade")
 async def close_trade(request: Request):
-    global daily_pnl, weekly_pnl
     body = await request.json()
     tid = body.get("trade_id")
-    cp = body.get("close_price", 0)
+    cp = float(body.get("close_price", 0) or 0)
     motivo = body.get("motivo", "manual")
     pos = next((p for p in open_positions if p["trade_id"] == tid), None)
     if not pos:
         return {"error": f"Position {tid} not found"}
-    pnl_pct = (cp - pos["entry"]) / pos["entry"] if pos["direction"] == "LONG" else (pos["entry"] - cp) / pos["entry"]
-    risk = abs(pos["entry"] - pos["sl"]) / pos["entry"]
-    pnl_r = pnl_pct / risk if risk > 0 else 0
-    resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
-    daily_pnl += pnl_pct * pos["risk_pct"]
-    weekly_pnl += pnl_pct * pos["risk_pct"]
-    open_positions.remove(pos)
-    for t in trade_log:
-        if t["trade_id"] == tid:
-            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R", "precio_cierre": cp, "motivo_cierre": motivo})
-    await log_to_sheet("close_trade", {
-        "trade_id": tid, "close_price": cp, "resultado": resultado,
-        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo,
-        "pnl_usdt": round(pnl_pct * 10000, 2),
-        "sl_too_short": "NO", "tp_too_high": "NO",
-        "regime_changed": "NO", "strategy_correct": "",
-        "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%}"
-    })
-    return {"trade_id": tid, "resultado": resultado, "pnl_r": pnl_r}
+    if cp <= 0:
+        cp = await fetch_price(pos["pair"])
+    return await close_position(pos, cp, motivo)
 
 @app.get("/ping")
 async def ping():

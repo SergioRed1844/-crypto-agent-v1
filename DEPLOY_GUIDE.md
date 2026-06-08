@@ -28,12 +28,27 @@ Ve a tu servicio → **Variables** → agrega:
 
 | Variable | Valor | Notas |
 |----------|-------|-------|
-| `GEMINI_API_KEY` | tu-api-key-de-gemini | La que obtuviste de aistudio.google.com |
-| `TELEGRAM_TOKEN` | el-token-de-CryptoAgentAlert2 | El nuevo que generaste |
-| `TELEGRAM_CHAT_ID` | tu-chat-id | Obtén con: envía /start a tu bot, luego ve a https://api.telegram.org/bot{TOKEN}/getUpdates |
+| `GEMINI_API_KEY` | tu-api-key-de-gemini | La que obtuviste de aistudio.google.com. Sin ella el agente devuelve NO_TRADE |
 | `WEBHOOK_SECRET` | inventa-una-frase-secreta | Ejemplo: "mi-crypto-agent-2026-seguro" |
-| `PAPER_TRADING` | true | SIEMPRE empezar en paper. Cambiar a "false" solo después de 30 trades exitosos |
+| `PAPER_TRADING` | true | SIEMPRE empezar en paper. Cambiar a "false" solo tras 30+ trades validados |
+| `SHEETS_WEBAPP_URL` | url-del-apps-script | Opcional. Para logging y auto-aprendizaje en Google Sheets |
+| `PAPER_EQUITY` | 10000 | Capital simulado (USDT) para sizing y PnL en modo paper |
+| `MONITOR_INTERVAL_SEC` | 60 | Cada cuántos segundos el monitor revisa SL/TP de posiciones abiertas |
+| `DATA_DIR` | /data | Carpeta donde se guarda el estado (SQLite). **Apunta a un Volumen de Railway** (ver abajo) |
+| `BINANCE_API_KEY` | tu-key | Solo necesaria cuando PAPER_TRADING=false |
+| `BINANCE_SECRET` | tu-secret | Solo necesaria cuando PAPER_TRADING=false |
 | `PORT` | 8000 | Puerto del servidor |
+
+### ⚠️ Persistencia: monta un Volumen de Railway
+El estado (operaciones, posiciones abiertas, PnL, kill-switches) se guarda en SQLite.
+Sin un volumen, **cada redeploy borra el estado**. Para evitarlo:
+1. En Railway → tu servicio → **Volumes** → **New Volume**.
+2. Mount path: `/data`.
+3. Añade la variable `DATA_DIR=/data`.
+Así el estado sobrevive reinicios y redeploys.
+
+> Nota: Las alertas de Telegram que aparecían en versiones anteriores **no están
+> implementadas** en el servidor actual. El logging y feedback van por Google Sheets.
 
 ## Paso 3: Verificar deploy
 
@@ -82,14 +97,15 @@ curl -X POST https://TU-URL/webhook \
   -d '{"secret":"tu-webhook-secret","pair":"BTCUSDT","signal_type":"LONG","confluence_score":7,"template":"T1_PULLBACK","regime":"GREEN","trend":"STRONG_UP","volatility":"NORMAL","price":87500,"rsi":45,"atr":1400}'
 ```
 
-Deberías recibir:
-- Respuesta JSON en la terminal
-- Mensaje en Telegram de tu bot
+Deberías recibir una respuesta JSON con `trade_id`, `action` (BUY/NO_TRADE/REJECTED),
+`executed`, y el objeto `decision` del agente.
 
 ## Paso 7: Paper Trading (MÍNIMO 2 semanas)
 
 - El bot está en modo `PAPER_TRADING=true`
-- Todas las señales se procesan pero NO ejecutan en Binance
+- Las señales se procesan, se dimensionan por riesgo y se "ejecutan" de forma simulada
+- El monitor cierra automáticamente las posiciones simuladas al tocar SL/TP
+- Revisa `GET /trades` y `GET /positions` y los logs diariamente
 - Revisa los logs diariamente
 - Necesitas mínimo 30 trades con:
   - Win rate > 50%
