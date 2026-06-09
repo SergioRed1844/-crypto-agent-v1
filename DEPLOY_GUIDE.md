@@ -37,6 +37,9 @@ Ve a tu servicio → **Variables** → agrega:
 | `DATA_DIR` | /data | Carpeta donde se guarda el estado (SQLite). **Apunta a un Volumen de Railway** (ver abajo) |
 | `BINANCE_API_KEY` | tu-key | Solo necesaria cuando PAPER_TRADING=false |
 | `BINANCE_SECRET` | tu-secret | Solo necesaria cuando PAPER_TRADING=false |
+| `MRMARKET_ENABLED` | true | Valoración conductual "Mr. Market" (Graham). Sesga compras hacia mercados subestimados |
+| `MRMARKET_BLOCK_EUPHORIA` | true | Rechaza comprar en euforia extrema. Pon `false` si tu estrategia es momentum puro |
+| `MRMARKET_INTERVAL` | 4h | Timeframe de velas para la lectura de mercado |
 | `PORT` | 8000 | Puerto del servidor |
 
 ### ⚠️ Persistencia: monta un Volumen de Railway

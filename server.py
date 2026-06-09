@@ -10,6 +10,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
 import httpx
 import store
+import valuation
 
 RELEASE_ID = "v3.1-20260608"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -22,6 +23,11 @@ BINANCE_SECRET = os.environ.get("BINANCE_SECRET", "")
 PAPER_EQUITY = float(os.environ.get("PAPER_EQUITY", "10000"))
 # How often (seconds) the background monitor checks open positions for SL/TP hits.
 MONITOR_INTERVAL = int(os.environ.get("MONITOR_INTERVAL_SEC", "60"))
+# "Mr. Market" behavioral valuation (Graham). Enabled by default.
+MRMARKET_ENABLED = os.environ.get("MRMARKET_ENABLED", "true").lower() == "true"
+# Hard-refuse new LONG entries when the crowd is in extreme euphoria (over-estimation).
+# Set false if your strategy is pure momentum/trend-following and you want it as bias only.
+MRMARKET_BLOCK_EUPHORIA = os.environ.get("MRMARKET_BLOCK_EUPHORIA", "true").lower() == "true"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("CryptoAgent")
@@ -357,6 +363,13 @@ SIGNAL: {signal}
 CURRENT MARKET PRICE: {current_price}
 
 PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%
+
+MR. MARKET BEHAVIORAL READ (Graham — is the crowd under/over-estimating this price?):
+{valuation}
+Use it as a contrarian bias: prefer buying when UNDERVALUED/DEEPLY_UNDERVALUED (crowd fearful),
+demand a much stronger edge or stand aside when OVERVALUED, and NEVER buy into EUPHORIC blow-offs.
+This is a bias on top of the technical signal — it does not override regime or risk rules, and a
+cheap market can get cheaper, so still require your edge and a valid stop.
 
 CURRENT ADAPTIVE POLICY (learned from your own past results — respect it):
 {policy}
@@ -696,6 +709,15 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         if is_stale:
             return False, stale_msg
 
+    # Mr. Market contrarian guard: don't buy what the crowd wildly over-estimates.
+    if MRMARKET_ENABLED and market_ctx and action == "BUY":
+        vstate = market_ctx.get("valuation_state", "DISABLED")
+        vscore = market_ctx.get("mispricing_score", 0)
+        if MRMARKET_BLOCK_EUPHORIA and vstate == "EUPHORIC":
+            return False, f"Mr.Market: market EUPHORIC (mispricing {vscore}) — refuse to buy crowd over-estimation"
+        if vstate == "OVERVALUED" and float(d.get("confidence", 0) or 0) < RISK_PARAMS["min_confidence"] + 10:
+            return False, f"Mr.Market: OVERVALUED — require +10% confidence to buy (have {d.get('confidence')})"
+
     conf = float(d.get("confidence", 0) or 0)
     if conf < RISK_PARAMS["min_confidence"]:
         return False, f"Confidence {conf:.0f}% < {RISK_PARAMS['min_confidence']}%"
@@ -790,6 +812,7 @@ def build_feedback_memory(pair: str = "") -> str:
     # Per-context breakdowns (the "what works / what doesn't" a trader tracks).
     parts += _wr_breakdown(recent, "regime_btc", "regime")
     parts += _wr_breakdown(recent, "template", "tmpl")
+    parts += _wr_breakdown(recent, "valuation_state", "val")
 
     sl_short = sum(1 for t in recent if t.get("sl_too_short") == "SÍ")
     tp_high = sum(1 for t in recent if t.get("tp_too_high") == "SÍ")
@@ -1067,6 +1090,23 @@ async def webhook(request: Request):
 
     market_ctx = await get_market_context()
     current_price = get_current_price(pair, market_ctx)
+
+    # Mr. Market behavioral valuation: is the crowd under/over-estimating this price right now?
+    mrmarket = {"valuation_state": "DISABLED", "mispricing_score": 0.0, "cluster": "n/a", "rationale": ""}
+    if MRMARKET_ENABLED:
+        try:
+            mrmarket = await valuation.analyze(pair, market_ctx.get("fear_greed", 50))
+            market_ctx["valuation_state"] = mrmarket["valuation_state"]
+            market_ctx["mispricing_score"] = mrmarket["mispricing_score"]
+            market_ctx["behavioral_cluster"] = mrmarket["cluster"]
+            # Populate funding (previously always 0) from the per-pair read.
+            if mrmarket.get("features", {}).get("funding") is not None:
+                market_ctx["btc_funding"] = mrmarket["features"]["funding"]
+            log.info(f"Mr.Market {pair}: {mrmarket['valuation_state']} "
+                     f"score={mrmarket['mispricing_score']} cluster={mrmarket['cluster']}")
+        except Exception as e:
+            log.warning(f"Mr.Market analysis failed: {e}")
+
     rag_query = f"{body.get('signal_type','')} {pair} {body.get('regime','')} {body.get('template','')} risk management"
     rag_context = rag.build_context(rag_query, k=5, max_words=1500)
     feedback = await get_feedback(pair=pair)
@@ -1075,6 +1115,8 @@ async def webhook(request: Request):
               f"min_confluence={RISK_PARAMS['min_confluence']}, "
               f"min_RR={RISK_PARAMS['min_rr']}, "
               f"stop=sl_atr_mult×ATR (sl_atr_mult={RISK_PARAMS['sl_atr_mult']})")
+    valuation_txt = (f"{mrmarket['valuation_state']} (mispricing={mrmarket['mispricing_score']}, "
+                     f"cluster={mrmarket['cluster']}) — {mrmarket['rationale']}")
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
@@ -1084,6 +1126,7 @@ async def webhook(request: Request):
         daily_pnl=f"{daily_pnl:.2%}",
         weekly_pnl=f"{weekly_pnl:.2%}",
         satellite_pct=satellite_pct,
+        valuation=valuation_txt,
         policy=policy,
         feedback=feedback
     )
@@ -1143,6 +1186,9 @@ async def webhook(request: Request):
         "qty": exec_info["qty"] if exec_info else 0,
         "notional_usdt": round(exec_info["notional"], 2) if exec_info else 0,
         "equity_at_open": round(exec_info["equity"], 2) if exec_info else 0,
+        "valuation_state": mrmarket.get("valuation_state", ""),
+        "mispricing_score": mrmarket.get("mispricing_score", 0),
+        "behavioral_cluster": mrmarket.get("cluster", ""),
     }
     trade_log.append(record)
     store.upsert_trade(record)
@@ -1174,6 +1220,7 @@ async def webhook(request: Request):
             "regime_btc": decision.get("regime_btc", ""),
             "template": decision.get("template", ""),
             "confluence_score": decision.get("confluence_score", 0),
+            "valuation_state": mrmarket.get("valuation_state", ""),
         }
         open_positions.append(position)
         store.upsert_position(position)
