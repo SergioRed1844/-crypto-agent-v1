@@ -22,12 +22,15 @@ El logging y el feedback de aprendizaje van por **Google Sheets** (`SHEETS_WEBAP
 ## Paso 1 — Desplegar el Google Apps Script (journal + feedback)
 
 El agente registra cada decisión y lee feedback de aprendizaje desde una hoja de Google,
-a través de un **Apps Script desplegado como Web App**. Pasos exactos:
+a través de un **Apps Script desplegado como Web App**. El script usa
+`SpreadsheetApp.getActiveSpreadsheet()`, así que **DEBE crearse vinculado a una hoja**
+(Extensiones → Apps Script), NO como proyecto suelto en script.google.com. Pasos exactos:
 
-1. Abre **script.google.com** → **Nuevo proyecto**.
-2. Borra el contenido por defecto y **pega todo** `google_apps_script.js` de este repo.
-3. Arriba a la derecha: **Implementar → Nueva implementación** → engranaje ⚙ → tipo **Aplicación web**.
-4. Configura: *Ejecutar como* = **Yo**; *Quién tiene acceso* = **Cualquier usuario**. Click **Implementar** y autoriza.
+1. Crea una hoja nueva en **https://sheets.new** y nómbrala (p. ej. `CryptoAgent Journal`).
+2. En esa hoja: **Extensiones → Apps Script** (crea un proyecto ligado a la hoja).
+3. Borra el código por defecto y **pega todo** `google_apps_script.js` de este repo. Guarda (Ctrl/Cmd+S).
+4. **Implementar → Nueva implementación** → ⚙ → **Aplicación web**; *Ejecutar como* = **Yo**;
+   *Quién tiene acceso* = **Cualquier usuario**. **Implementar** → **Autorizar acceso**.
 5. Copia la **URL de la app web** (termina en `/exec`). Esa es tu `SHEETS_WEBAPP_URL`.
 
 ---
