@@ -1189,7 +1189,57 @@ async def get_status():
                          "closed_trades": len(closed_trades(n=10000))},
             "kill_switch": {"active": killed, "reason": reason},
             "binance": {"connected": exchange is not None, "paper": PAPER_TRADING},
+            "hard_limits": dict(regime.HARD_LIMITS),
             "feedback": await get_feedback()}
+
+
+@app.get("/pipeline")
+async def pipeline():
+    """
+    End-to-end readiness self-check used by the deploy runbook. Exercises every stage the webhook
+    depends on and reports overall READY / DEGRADED / DOWN.
+
+      overall = DOWN     if any CRITICAL stage fails (RAG, GEMINI_API_KEY, WEBHOOK_SECRET, store)
+              = READY    if critical OK AND market data live AND SHEETS_WEBAPP_URL set
+              = DEGRADED  otherwise (runs, but a non-critical dependency is missing/degraded)
+    """
+    checks = {}
+    checks["rag"] = {"ok": rag.loaded, "chunks": rag.chunk_count}
+    checks["env"] = {"gemini_api_key": bool(GEMINI_API_KEY),
+                     "webhook_secret": bool(WEBHOOK_SECRET),
+                     "sheets_webapp_url": bool(SHEETS_WEBAPP_URL)}
+
+    # Store must be writable (persistence depends on it).
+    try:
+        store.set_kv("_pipeline_check", datetime.utcnow().isoformat())
+        checks["store"] = {"ok": True, "db": store.DB_PATH}
+    except Exception as e:
+        checks["store"] = {"ok": False, "error": str(e)}
+
+    # Market data: at least the critical sources must be live (else SOLO-OBSERVATION).
+    try:
+        mc = await get_market_context("BTCUSDT")
+        checks["market_data"] = {"ok": not mc.get("solo_observation", True),
+                                 "sources_ok": mc.get("sources_ok"),
+                                 "composite_score": mc.get("composite_score"),
+                                 "solo_observation": mc.get("solo_observation"),
+                                 "degradation": mc.get("degradation")}
+    except Exception as e:
+        checks["market_data"] = {"ok": False, "error": str(e)}
+
+    checks["paper_trading"] = {"ok": True, "value": PAPER_TRADING}  # informational; live is post-gate
+    checks["kill_switch"] = {"active": check_kill_switches()[0]}
+
+    critical_ok = (checks["rag"]["ok"] and checks["env"]["gemini_api_key"]
+                   and checks["env"]["webhook_secret"] and checks["store"]["ok"])
+    if not critical_ok:
+        overall = "DOWN"
+    elif checks["market_data"]["ok"] and checks["env"]["sheets_webapp_url"]:
+        overall = "READY"
+    else:
+        overall = "DEGRADED"
+    return {"overall": overall, "release": RELEASE_ID, "paper_trading": PAPER_TRADING, "checks": checks}
+
 
 @app.post("/webhook")
 async def webhook(request: Request):
