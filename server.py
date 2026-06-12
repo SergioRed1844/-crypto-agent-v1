@@ -328,26 +328,48 @@ def get_current_price(pair: str, market_ctx: dict) -> float:
 # ═══════════════════════════════════════════════════════════
 # GEMINI LLM + NORMALIZER
 # ═══════════════════════════════════════════════════════════
-SYSTEM_PROMPT = """You are an institutional-grade crypto trading agent.
-Personality: O:75 C:95 E:15 A:10 N:5 (Homo Economicus, zero biases).
+SYSTEM_PROMPT = """You are a disciplined operator trained in the school of Benjamin Graham,
+adapted to a speculative asset. You are NOT a signal bot — you are an intelligent investor.
+Personality: O:75 C:95 E:15 A:10 N:5 (deliberate, skeptical, zero ego).
 
-CRITICAL: You MUST respond ONLY in English. All JSON keys and values MUST be in English.
-Never translate keys or enum values. Use EXACTLY these values:
-- action: "BUY", "SELL", or "NO_TRADE"
+MENTAL FRAME (Graham, adapted to crypto):
+- MARGIN OF SAFETY (redefined): crypto has no cash flows / intrinsic value, so your margin of
+  safety is CONFLUENCE + SURVIVABILITY. Only enter when price, technical structure, regime,
+  sentiment and news ALL point the same direction AND the reward:risk survives a PESSIMISTIC
+  scenario (assume your ATR-based stop is hit immediately): rr_pesimista >= 2.0.
+- MR. MARKET: the market is a manic-depressive partner; its prices are offers you may ignore,
+  not truths. Extreme FEAR + intact structure = potential opportunity. Extreme EUPHORIA =
+  maximum skepticism, NEVER a reason to chase. Never chase momentum out of FOMO.
+- INVESTMENT vs SPECULATION: only act when there is an articulable EDGE and a valid stop.
+- PROCESS OVER OUTCOME: a confluence-9 setup that fails ONE hard rule is rejected without exception.
+
+GOLDEN RULE: when in doubt, or when data sources contradict each other -> NO_TRADE.
+Not trading IS a position.
+
+CRITICAL: respond ONLY in English. All JSON keys and values in English. Use EXACTLY:
+- action: "BUY", "SELL", or "NO_TRADE"   (SELL/SHORT not executable on spot, long-only)
 - direction: "LONG" or "SHORT"
 - bucket: "CORE" or "SATELLITE"
 - regime_btc: "GREEN", "YELLOW", or "RED"
-- confidence: integer 0-100 (must reflect your actual conviction, never 0 for BUY/SELL)
+- confidence: integer 0-100 (real conviction, never 0 for BUY/SELL)
 
 IMMUTABLE RULES:
 1. CAPITAL PRESERVATION is primary. A 50% loss needs 100% gain to recover.
-2. Minimum R:R of 1:2 for standard, 1:3 for aggressive setups.
-3. MUST identify specific articulable EDGE.
-4. REGIME determines method: uptrend=trend-following, range=mean-reversion, downtrend=capital preservation.
+2. Minimum R:R 2.0 (standard), 3.0 (euphoria/conservative posture) — measured pessimistically.
+3. MUST identify a specific articulable EDGE.
+4. REGIME determines method: uptrend=trend-following, range=mean-reversion, downtrend=preserve.
 5. Max 0.5% risk per trade, max 5% total exposure.
 6. NEVER trade BNB pairs.
-7. Pre-trade checklist: ALL 12 items must pass.
-8. If entry price is stale (market moved >0.5% away), set action to NO_TRADE.
+7. If entry price is stale (market moved past your ATR/0.5% threshold), action = NO_TRADE.
+
+ANTI-BIAS CHECKLIST (mandatory): you MUST output a `bias_check` object with these 6 fields, each
+{"pass": true|false, "reason": "<one line>"}. If ANY is false, action MUST be NO_TRADE:
+- recency: am I extrapolating the last few candles instead of the full regime?
+- confirmation: state the strongest thesis AGAINST the trade (pre-mortem). Put it in `bear_case`.
+- anchoring: does the call depend on an arbitrary reference price (ATH, round number)?
+- sunk_cost: are recent losses pushing me to "win it back"? (check the feedback history)
+- fomo_herd: is news/sentiment euphoric AND price already moved a lot in 24h?
+- overconfidence: do the data sources disagree (price discrepancy / contradictory signals)?
 
 PORTFOLIO: CORE 70-90% (BTC/ETH/L1s) + SATELLITE 10-30% (high-risk altcoins/memes).
 Respond with ONLY valid JSON in English."""
@@ -381,9 +403,15 @@ Apply the lessons above: only take this trade if it clears the current policy th
 stop using sl_atr_mult × ATR; do not set a target beyond what the learned R:R supports. If recent
 results for this pair/regime/template are poor, demand a stronger edge or return NO_TRADE.
 
+CURRENT POSTURE (regime-based; respect its risk/confluence/R:R thresholds):
+{posture}
+
 Evaluate this signal against current market price. If entry price differs >0.5% from current price, reject as stale.
+Before approving, run the anti-bias checklist honestly — if ANY check fails, return NO_TRADE.
+Compute rr_pesimista = (take_profit_1 - entry_price) / (entry_price - stop_loss) assuming the stop
+is reached first; it MUST be >= the posture's min R:R.
 Respond with ONLY this JSON (fill real values, confidence 0-100 must reflect conviction):
-{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none"}}"""
+{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none","posture_used":"STANDARD","rr_pesimista":2.0,"bear_case":"strongest reason this trade fails","bias_check":{{"recency":{{"pass":true,"reason":""}},"confirmation":{{"pass":true,"reason":""}},"anchoring":{{"pass":true,"reason":""}},"sunk_cost":{{"pass":true,"reason":""}},"fomo_herd":{{"pass":true,"reason":""}},"overconfidence":{{"pass":true,"reason":""}}}}}}"""
 
 _KEY_MAP = {
     "acción": "action", "accion": "action", "par": "pair",
@@ -418,6 +446,20 @@ _DEFAULTS = {
     "regime_btc": "YELLOW", "trend_regime": "RANGE", "vol_regime": "NORMAL",
     "confluence_score": 0, "edge_description": "", "reasoning": "",
     "checklist_pass": False, "risks": [], "self_learning_adjustment": "",
+    # Graham engine (Phase 2): posture + pessimistic R:R + pre-mortem + anti-bias checklist.
+    "posture_used": "", "rr_pesimista": 0, "bear_case": "", "bias_check": {},
+}
+
+# The 6 mandatory anti-bias checks (see graham-trading-philosophy skill). Canonical keys plus
+# the Spanish/variant spellings Gemini sometimes emits, mapped to canonical.
+BIAS_KEYS = ["recency", "confirmation", "anchoring", "sunk_cost", "fomo_herd", "overconfidence"]
+_BIAS_ALIASES = {
+    "recencia": "recency", "confirmación": "confirmation", "confirmacion": "confirmation",
+    "anclaje": "anchoring", "costo_hundido": "sunk_cost", "coste_hundido": "sunk_cost",
+    "sunk_cost_revenge": "sunk_cost", "venganza": "sunk_cost", "fomo": "fomo_herd",
+    "manada": "fomo_herd", "fomo_manada": "fomo_herd", "fomo_herd_check": "fomo_herd",
+    "exceso_de_confianza": "overconfidence", "exceso_confianza": "overconfidence",
+    "sobreconfianza": "overconfidence",
 }
 
 
@@ -450,7 +492,7 @@ def normalize_gemini(d: dict) -> dict:
     result["confidence"] = round(conf, 1)
 
     for num_field in ["entry_price", "stop_loss", "take_profit_1", "take_profit_2",
-                      "position_size_pct", "confidence", "confluence_score"]:
+                      "position_size_pct", "confidence", "confluence_score", "rr_pesimista"]:
         val = result.get(num_field, 0)
         if isinstance(val, str):
             val = val.replace("%", "").replace(",", "").strip()
@@ -459,7 +501,55 @@ def normalize_gemini(d: dict) -> dict:
         except:
             result[num_field] = 0.0
 
+    # Keep bias_check a dict; re-key any Spanish/variant subkeys to canonical names.
+    bc = result.get("bias_check")
+    if isinstance(bc, dict):
+        result["bias_check"] = {_BIAS_ALIASES.get(k.lower().strip(), k): v for k, v in bc.items()}
+    else:
+        result["bias_check"] = {}
+
     return result
+
+
+def _bias_item_pass(v) -> tuple:
+    """Interpret one anti-bias entry. Accepts {"pass":bool,"reason":str}, bool, or str.
+    Returns (passed: bool, reason: str). Unknown/missing → fail (golden rule: doubt → NO_TRADE)."""
+    if isinstance(v, dict):
+        reason = str(v.get("reason") or v.get("razon") or v.get("razón") or "")
+        for k in ("pass", "passed", "aprobado", "ok", "result"):
+            if k in v:
+                p = v[k]
+                if isinstance(p, str):
+                    return p.strip().lower() in ("pass", "true", "yes", "sí", "si", "ok"), reason
+                return bool(p), reason
+        return False, reason or "no pass flag"
+    if isinstance(v, bool):
+        return v, ""
+    if isinstance(v, str):
+        return v.strip().lower() in ("pass", "true", "yes", "sí", "si", "ok"), v
+    return False, "unrecognized bias entry"
+
+
+def evaluate_bias_check(decision: dict) -> tuple:
+    """
+    Enforce the 6-point anti-bias checklist. Returns (ok: bool, reason: str).
+    ALL 6 checks must be present AND pass. Missing checklist or any failing/absent
+    check → not ok (the decision must become NO_TRADE). This is the implacable gate.
+    """
+    bc = decision.get("bias_check") or {}
+    if not isinstance(bc, dict) or not bc:
+        return False, "bias_check missing (required for any BUY/SELL)"
+    failed = []
+    for key in BIAS_KEYS:
+        if key not in bc:
+            failed.append(f"{key}:absent")
+            continue
+        passed, reason = _bias_item_pass(bc[key])
+        if not passed:
+            failed.append(f"{key}:{reason or 'fail'}")
+    if failed:
+        return False, "bias_check failed → NO_TRADE [" + "; ".join(failed) + "]"
+    return True, "bias_check clear (6/6)"
 
 
 async def call_gemini(prompt: str) -> dict:
@@ -704,6 +794,14 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     if not d.get("checklist_pass", False):
         return False, "Checklist did not pass"
 
+    # GRAHAM ANTI-BIAS GATE (implacable): all 6 checks must pass, and the pre-mortem
+    # bear_case must be articulated. A failing/absent check forces NO_TRADE.
+    bias_ok, bias_reason = evaluate_bias_check(d)
+    if not bias_ok:
+        return False, bias_reason
+    if not str(d.get("bear_case", "")).strip():
+        return False, "No bear_case (pre-mortem) provided — required for any entry"
+
     if signal and market_ctx:
         is_stale, stale_msg = stale_signal_check(signal, d, market_ctx)
         if is_stale:
@@ -731,6 +829,11 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         risk = abs(entry - sl)
         if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
             return False, f"R:R below {RISK_PARAMS['min_rr']}"
+    # Margin of safety: the reward:risk must survive a pessimistic read. When the model reports
+    # rr_pesimista, enforce it against the posture's required R:R (never below min_rr).
+    rr_pes = float(d.get("rr_pesimista", 0) or 0)
+    if rr_pes and rr_pes < RISK_PARAMS["min_rr"]:
+        return False, f"Pessimistic R:R {rr_pes:.2f} < required {RISK_PARAMS['min_rr']}"
 
     # Total capital-at-risk = sum of (qty * stop_distance / equity) across open positions.
     # By construction each risk-sized trade contributes ~max_risk_per_trade.
@@ -1117,6 +1220,10 @@ async def webhook(request: Request):
               f"stop=sl_atr_mult×ATR (sl_atr_mult={RISK_PARAMS['sl_atr_mult']})")
     valuation_txt = (f"{mrmarket['valuation_state']} (mispricing={mrmarket['mispricing_score']}, "
                      f"cluster={mrmarket['cluster']}) — {mrmarket['rationale']}")
+    # Posture string injected into the prompt. Phase 4's regime engine replaces this with a
+    # regime-derived posture; for now it reflects the active (learned) RISK_PARAMS thresholds.
+    posture_txt = (f"posture=STANDARD risk_per_trade={RISK_PARAMS['max_risk_per_trade']:.2%} "
+                   f"min_confluence={RISK_PARAMS['min_confluence']} min_RR={RISK_PARAMS['min_rr']}")
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
@@ -1128,7 +1235,8 @@ async def webhook(request: Request):
         satellite_pct=satellite_pct,
         valuation=valuation_txt,
         policy=policy,
-        feedback=feedback
+        feedback=feedback,
+        posture=posture_txt,
     )
 
     decision = await call_gemini(prompt)
@@ -1175,6 +1283,11 @@ async def webhook(request: Request):
         "ejecutado": is_valid and decision.get("action") != "NO_TRADE",
         "motivo_no_ejecutar": "" if is_valid else validation_msg,
         "reasoning": decision.get("reasoning", ""),
+        # Graham engine: pre-mortem, posture and the anti-bias audit trail (feeds the learning loop).
+        "bear_case": decision.get("bear_case", ""),
+        "posture_used": decision.get("posture_used", ""),
+        "rr_pesimista": decision.get("rr_pesimista", 0),
+        "bias_check": json.dumps(decision.get("bias_check", {}), ensure_ascii=False),
         "decision_action": decision.get("action", "NO_TRADE"),
         "signal_price": body.get("price", 0),
         "current_market_price": current_price,
