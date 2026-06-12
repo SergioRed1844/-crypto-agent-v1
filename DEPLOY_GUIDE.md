@@ -1,136 +1,118 @@
-# CryptoAgent v1.0 — Guía de Deploy
+# CryptoAgent — Guía de Deploy (Render · Paper Trading)
 
-## Paso 1: Subir código al repo GitHub
+Pipeline: **TradingView → Render (FastAPI) → RAG + market_context + Gemini → paper/Binance → Google Sheets.**
+Esta guía refleja el código real (`server.py`, `store.py`, `valuation.py`, `render.yaml`). **No usa Telegram.**
+El logging y el feedback de aprendizaje van por **Google Sheets** (`SHEETS_WEBAPP_URL`).
 
-```bash
-# En tu terminal, clona tu repo
-git clone https://github.com/SergioRed1844/-crypto-agent-v1.git
-cd -crypto-agent-v1
+> 🔒 Empezamos y nos mantenemos en `PAPER_TRADING=true`. Pasar a `false` es una decisión
+> **manual y humana**, sólo tras superar el gate de paper trading (final de esta guía).
 
-# Descomprime el tar.gz del servidor en la raíz
-# (copia los archivos: server.py, requirements.txt, Procfile, railway.json, .gitignore, carpeta rag/)
+---
 
-# Sube todo
-git add .
-git commit -m "CryptoAgent v1.0 - servidor + RAG"
-git push origin main
-```
+## Paso 0 — Requisitos
 
-## Paso 2: Configurar Railway
+- Repo en GitHub (este). Nota: el nombre empieza con guion (`-crypto-agent-v1`), lo que rompe
+  algunos comandos de terminal. Recomendado renombrarlo (Settings → General → Repository name)
+  y luego actualizar el remote local: `git remote set-url origin <nueva-url>`.
+- Cuenta en **Render** (render.com) y en **Google** (para el Apps Script).
+- `GEMINI_API_KEY` desde aistudio.google.com.
 
-1. Ve a **railway.app** → tu dashboard
-2. Click **"New Project"** → **"Deploy from GitHub repo"**
-3. Selecciona tu repo: `SergioRed1844/-crypto-agent-v1`
-4. Railway detectará automáticamente el `Procfile`
+---
 
-### Variables de entorno (CRÍTICO):
-Ve a tu servicio → **Variables** → agrega:
+## Paso 1 — Desplegar el Google Apps Script (journal + feedback)
 
-| Variable | Valor | Notas |
-|----------|-------|-------|
-| `GEMINI_API_KEY` | tu-api-key-de-gemini | La que obtuviste de aistudio.google.com. Sin ella el agente devuelve NO_TRADE |
-| `WEBHOOK_SECRET` | inventa-una-frase-secreta | Ejemplo: "mi-crypto-agent-2026-seguro" |
-| `PAPER_TRADING` | true | SIEMPRE empezar en paper. Cambiar a "false" solo tras 30+ trades validados |
-| `SHEETS_WEBAPP_URL` | url-del-apps-script | Opcional. Para logging y auto-aprendizaje en Google Sheets |
-| `PAPER_EQUITY` | 10000 | Capital simulado (USDT) para sizing y PnL en modo paper |
-| `MONITOR_INTERVAL_SEC` | 60 | Cada cuántos segundos el monitor revisa SL/TP de posiciones abiertas |
-| `DATA_DIR` | /data | Carpeta donde se guarda el estado (SQLite). **Apunta a un Volumen de Railway** (ver abajo) |
-| `BINANCE_API_KEY` | tu-key | Solo necesaria cuando PAPER_TRADING=false |
-| `BINANCE_SECRET` | tu-secret | Solo necesaria cuando PAPER_TRADING=false |
-| `MRMARKET_ENABLED` | true | Valoración conductual "Mr. Market" (Graham). Sesga compras hacia mercados subestimados |
-| `MRMARKET_BLOCK_EUPHORIA` | true | Rechaza comprar en euforia extrema. Pon `false` si tu estrategia es momentum puro |
-| `MRMARKET_INTERVAL` | 4h | Timeframe de velas para la lectura de mercado |
-| `PORT` | 8000 | Puerto del servidor |
+El agente registra cada decisión y lee feedback de aprendizaje desde una hoja de Google,
+a través de un **Apps Script desplegado como Web App**. Pasos exactos:
 
-### ⚠️ Persistencia: monta un Volumen de Railway
-El estado (operaciones, posiciones abiertas, PnL, kill-switches) se guarda en SQLite.
-Sin un volumen, **cada redeploy borra el estado**. Para evitarlo:
-1. En Railway → tu servicio → **Volumes** → **New Volume**.
-2. Mount path: `/data`.
-3. Añade la variable `DATA_DIR=/data`.
-Así el estado sobrevive reinicios y redeploys.
+1. Abre **script.google.com** → **Nuevo proyecto**.
+2. Borra el contenido por defecto y **pega todo** `google_apps_script.js` de este repo.
+3. Arriba a la derecha: **Implementar → Nueva implementación** → engranaje ⚙ → tipo **Aplicación web**.
+4. Configura: *Ejecutar como* = **Yo**; *Quién tiene acceso* = **Cualquier usuario**. Click **Implementar** y autoriza.
+5. Copia la **URL de la app web** (termina en `/exec`). Esa es tu `SHEETS_WEBAPP_URL`.
 
-> Nota: Las alertas de Telegram que aparecían en versiones anteriores **no están
-> implementadas** en el servidor actual. El logging y feedback van por Google Sheets.
+---
 
-## Paso 3: Verificar deploy
+## Paso 2 — Crear el servicio en Render (Blueprint)
 
-Una vez que Railway haga deploy, tendrás una URL como:
-`https://crypto-agent-v1-production-xxxx.up.railway.app`
+El repo incluye `render.yaml` (infra como código): servicio web Python + **disco persistente de 1 GB
+montado en `/data`** con `DATA_DIR=/data`, imprescindible para que el estado/aprendizaje (SQLite)
+sobreviva a los redeploys.
 
-Prueba en tu navegador:
-- `https://TU-URL/` → debe mostrar status del agente
-- `https://TU-URL/health` → debe decir {"status": "ok"}
-- `https://TU-URL/status` → muestra config completa
+1. Render → **New → Blueprint** → conecta este repo. Render lee `render.yaml`.
+2. Build: `pip install -r requirements.txt` · Start: `uvicorn server:app --host 0.0.0.0 --port $PORT`
+   · Health check: `/health` (ya definidos en el blueprint).
+3. En **Environment**, rellena los secretos (`sync: false`, no se versionan): ver tabla abajo.
+4. Deploy. (Si el servicio ya existía creado a mano, añade el **Disk** en `/data` y la variable
+   `DATA_DIR=/data` desde el dashboard — el blueprint no reconfigura servicios manuales.)
 
-## Paso 4: Configurar Pine Script en TradingView
+### Variables de entorno (lo que el código realmente lee)
 
-1. En TradingView, ve a **Pine Editor** (pestaña inferior)
-2. Copia TODO el contenido de `CryptoAgent_v1.pine`
-3. Click **"Add to chart"**
-4. Configura los inputs:
-   - **Webhook URL**: tu URL de Railway + `/webhook`
-   - **Webhook Secret**: el mismo que pusiste en Railway
-5. Verás el indicador con EMAs, Bollinger Bands, y la tabla de régimen
+| Variable | Obligatoria | Valor / Notas |
+|---|---|---|
+| `GEMINI_API_KEY` | **Sí** | aistudio.google.com. Modelo `gemini-2.5-flash`. Sin ella → siempre `NO_TRADE`. |
+| `WEBHOOK_SECRET` | **Sí** | Frase secreta para TradingView. Secret incorrecto → 401. |
+| `SHEETS_WEBAPP_URL` | **Sí** | URL `/exec` del Apps Script del Paso 1. |
+| `PAPER_TRADING` | **Sí = `true`** | Innegociable al inicio. |
+| `DATA_DIR` | Recomendada | `/data` (donde `store.py` escribe `cryptoagent_state.db`). |
+| `PAPER_EQUITY` | No | Capital simulado para sizing/PnL. Default **10000**. |
+| `MONITOR_INTERVAL_SEC` | No | Intervalo del monitor de posiciones. Default 60. |
+| `MRMARKET_ENABLED` / `MRMARKET_BLOCK_EUPHORIA` | No | Guardia conductual "Mr. Market" (Graham). Default true/true. |
+| `CRYPTOPANIC_API_KEY` | No | Sentimiento de noticias; degrada con elegancia si falta. |
+| `BINANCE_API_KEY` / `BINANCE_SECRET` | No | **SOLO live.** Dejar vacías en paper. |
 
-### Configurar Alertas Webhook:
-1. Click derecho en el indicador → **"Add Alert"**
-2. Condition: `CryptoAgent v1.0` → `CryptoAgent Signal`
-3. En **Notifications** → marca **"Webhook URL"**
-4. Pega: `https://TU-URL/webhook`
-5. Expiration: **"Open-ended"**
-6. Click **Create**
-7. Repite para "EXTREME VOL Alert" y "Regime Change"
+---
 
-## Paso 5: Obtener tu Telegram Chat ID
+## Paso 3 — Verificar el deploy
 
-1. Abre Telegram
-2. Busca tu bot `@CryptoAgentAlert2` y envía `/start`
-3. En tu navegador, ve a:
-   `https://api.telegram.org/bot{TU_TOKEN}/getUpdates`
-4. Busca `"chat":{"id":XXXXXXX}` — ese número es tu CHAT_ID
-5. Agrégalo como variable en Railway
+Con la URL pública de Render (`https://crypto-agent-XXXX.onrender.com`):
 
-## Paso 6: Test End-to-End
+- `GET /health` → `{"status":"ok"}`
+- `GET /status` → `paper_trading:true`, `rag.loaded:true`, kill switch inactivo
+- `GET /pipeline` → `overall: "READY"` (auto-chequeo: RAG, variables, Gemini, fuentes de datos, store)
 
-Envía un test manual con curl:
+---
+
+## Paso 4 — Test end-to-end (webhook público)
+
 ```bash
 curl -X POST https://TU-URL/webhook \
   -H "Content-Type: application/json" \
-  -d '{"secret":"tu-webhook-secret","pair":"BTCUSDT","signal_type":"LONG","confluence_score":7,"template":"T1_PULLBACK","regime":"GREEN","trend":"STRONG_UP","volatility":"NORMAL","price":87500,"rsi":45,"atr":1400}'
+  -d '{"secret":"TU_WEBHOOK_SECRET","pair":"BTCUSDT","signal_type":"T1_PULLBACK",
+       "confluence_score":7,"regime":"GREEN","trend":"STRONG_UP","volatility":"NORMAL",
+       "price":65000,"rsi":45,"atr":800}'
 ```
 
-Deberías recibir una respuesta JSON con `trade_id`, `action` (BUY/NO_TRADE/REJECTED),
-`executed`, y el objeto `decision` del agente.
+Debes recibir JSON con `trade_id`, `action` (BUY/NO_TRADE/REJECTED), `executed`, `decision`.
+Verifica además: (a) aparece una fila en la Google Sheet; (b) un trade paper aparece en
+`GET /status` y **sobrevive a un redeploy** (persistencia en el disco `/data`).
 
-## Paso 7: Paper Trading (MÍNIMO 2 semanas)
+---
 
-- El bot está en modo `PAPER_TRADING=true`
-- Las señales se procesan, se dimensionan por riesgo y se "ejecutan" de forma simulada
-- El monitor cierra automáticamente las posiciones simuladas al tocar SL/TP
-- Revisa `GET /trades` y `GET /positions` y los logs diariamente
-- Revisa los logs diariamente
-- Necesitas mínimo 30 trades con:
-  - Win rate > 50%
-  - Avg R:R > 2.0
-  - Max drawdown < 10%
-- Solo entonces cambia `PAPER_TRADING=false`
+## Paso 5 — Alertas en TradingView
 
-## Pares Recomendados para Empezar
+1. Pine Editor → pega `CryptoAgent_v1.pine` → **Add to chart**.
+2. Inputs: **Webhook URL** = `https://TU-URL/webhook`; **Webhook Secret** = el mismo `WEBHOOK_SECRET`.
+3. Crea **3 alertas** (Webhook URL = `https://TU-URL/webhook`, Open-ended): la señal principal,
+   "EXTREME VOL" y "Regime Change", según el Pine Script.
+4. Pares 4H sugeridos: **BTCUSDT, ETHUSDT, SOLUSDT**. NO usar BNBUSDT (bloqueado por el agente).
 
-Aplica el indicador en estos charts de TradingView (timeframe 4H):
-1. BTCUSDT (obligatorio)
-2. ETHUSDT
-3. SOLUSDT
+---
 
-NO aplicar en: BNBUSDT (bloqueado por el agente)
+## Paso 6 — Gate de Paper Trading (antes de discutir live)
+
+Mantén `PAPER_TRADING=true` y observa **mínimo 30 trades y 2 semanas**. Sólo se puede *discutir*
+pasar a `false` si: **win rate > 50%**, **R:R promedio ≥ 2.0**, **drawdown < 10%**. El cambio es
+manual y humano; Claude nunca lo hace.
+
+---
 
 ## Troubleshooting
 
 | Problema | Solución |
-|----------|----------|
-| Railway no despliega | Verifica que `requirements.txt` y `Procfile` están en la raíz |
-| Webhook no llega | Verifica URL en TradingView termina en `/webhook` |
-| Telegram no envía | Verifica TELEGRAM_TOKEN y CHAT_ID en variables de Railway |
-| "RAG not loaded" | Verifica que la carpeta `rag/` con los 3 archivos está en el repo |
-| Cold start lento | Agrega un cron job que haga ping a `/ping` cada 5 min |
+|---|---|
+| Render no despliega | `requirements.txt` en la raíz; revisa logs de build en el dashboard. |
+| `rag_loaded:false` | La carpeta `rag/` (3 archivos) debe estar en el repo; `scikit-learn==1.4.0`. |
+| Webhook 401 | El `secret` del body ≠ `WEBHOOK_SECRET`. |
+| Estado se pierde en redeploy | Falta el disco `/data` o `DATA_DIR` no apunta a él. |
+| Cold start lento (plan idle) | Ping periódico a `/ping`. No es un error. |
+| Binance bloqueado por región (451) | La cadena de fallback de precios lo maneja; no afecta el sizing paper. |
