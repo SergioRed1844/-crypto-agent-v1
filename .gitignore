@@ -8,3 +8,4 @@ venv/
 *.log
 *.db
 cryptoagent_state.db
+_localdata/

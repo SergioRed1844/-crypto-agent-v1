@@ -1,0 +1,2 @@
+# Dev/test-only deps (NOT installed on Render).
+pytest==8.2.0
