@@ -387,23 +387,43 @@ function getFeedback(data) {
   const total = wins + losses;
   const feedbackParts = [];
   const prefix = filterPair || "ALL";
-  
+
   if (total > 0) {
-    feedbackParts.push(prefix + " last " + recent.length + ": " + wins + "W/" + losses + "L WR:" + Math.round(wins/total*100) + "%");
+    const avgR = rrCount > 0 ? (totalRR/rrCount).toFixed(2) : "0.00";
+    feedbackParts.push(prefix + " last " + recent.length + ": " + wins + "W/" + losses + "L WR:" + Math.round(wins/total*100) + "% avgR:" + avgR);
   }
-  if (rrCount > 0) {
-    feedbackParts.push("Avg R:R: " + (totalRR/rrCount).toFixed(2));
-  }
-  if (slTooShort >= 2) feedbackParts.push("WARNING: " + slTooShort + " trades SL too short.");
-  if (tpTooHigh >= 2) feedbackParts.push("WARNING: " + tpTooHigh + " trades TP unreachable.");
+  // Per-context breakdowns: win rate by regime (col G=6) and by template (col F=5).
+  feedbackParts.push.apply(feedbackParts, wrBreakdown_(recent, 6, "regime"));
+  feedbackParts.push.apply(feedbackParts, wrBreakdown_(recent, 5, "tmpl"));
+
+  if (slTooShort >= 2) feedbackParts.push("⚠ " + slTooShort + " stops too tight → widen stops");
+  if (tpTooHigh >= 2) feedbackParts.push("⚠ " + tpTooHigh + " targets too far → take profit sooner");
   if (staleCount >= 2) feedbackParts.push(staleCount + " stale signal rejections.");
-  
+
   return {
     ok: true,
     trades: recent.length,
     pair_filter: filterPair || "ALL",
     feedback: feedbackParts.join(" | ") || "No closed trades for " + prefix
   };
+}
+
+// Win-rate breakdown by a column (e.g. regime, template). Only groups with >=3 decided trades.
+function wrBreakdown_(rows, colIdx, label) {
+  const groups = {};
+  for (let i = 0; i < rows.length; i++) {
+    const res = rows[i][23]; // resultado (col X)
+    if (res !== "WIN" && res !== "LOSS") continue;
+    const g = String(rows[i][colIdx] || "?");
+    if (!groups[g]) groups[g] = [0, 0];
+    groups[g][res === "WIN" ? 0 : 1]++;
+  }
+  const out = [];
+  for (const g in groups) {
+    const w = groups[g][0], l = groups[g][1];
+    if (w + l >= 3) out.push(label + ":" + g + " " + w + "W/" + l + "L(" + Math.round(w/(w+l)*100) + "%)");
+  }
+  return out;
 }
 
 

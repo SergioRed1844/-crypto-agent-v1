@@ -1,111 +1,102 @@
 """
-CryptoAgent v5.0 — Production Server
-TradingView → Render → RAG + Gemini + News + Range Detection → Binance → Google Sheets
-
-v5.0 Changes:
-  - FIX: Binance 451 — paper mode uses virtual balance, no Binance calls
-  - FIX: All Binance calls wrapped with region-aware error handling
-  - NEW: CryptoPanic news sentiment integration
-  - NEW: Range/channel detection for sideways market trading
-  - NEW: Compound reinvestment — profits auto-reinvest, never withdraw
-  - NEW: Multi-asset diversification scoring
-  - NEW: Configurable paper_balance via env var
-  - NEW: News sentiment score feeds into Gemini decision
-  - NEW: /pipeline endpoint shows full trading pipeline status
-  - NEW: Price data from CoinGecko as additional fallback (no Binance API needed)
+CryptoAgent v3.0 — Production Server
+Merges v2.5.2 (stable) + Binance execution via ccxt
+TradingView → Render → RAG + Gemini → Binance (when PAPER_TRADING=false) → Google Sheets
 """
-import os, json, logging, pickle, hashlib, hmac, re, time, asyncio, math
+import os, json, logging, pickle, hashlib, re, asyncio
 import numpy as np
 from datetime import datetime, timezone
-from collections import OrderedDict
 from sklearn.metrics.pairwise import cosine_similarity
 from fastapi import FastAPI, Request, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
 import httpx
+import store
+import valuation
+import market_context
+import regime
 
-# ═══════════════════════════════════════════════════════════
-# CONFIG
-# ═══════════════════════════════════════════════════════════
-RELEASE_ID = "v5.2-20260412"
+RELEASE_ID = "v3.1-20260608"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "")
 SHEETS_WEBAPP_URL = os.environ.get("SHEETS_WEBAPP_URL", "")
 PAPER_TRADING = os.environ.get("PAPER_TRADING", "true").lower() == "true"
 BINANCE_API_KEY = os.environ.get("BINANCE_API_KEY", "")
 BINANCE_SECRET = os.environ.get("BINANCE_SECRET", "")
-CRYPTOPANIC_API_KEY = os.environ.get("CRYPTOPANIC_API_KEY", "")
-PAPER_BALANCE = float(os.environ.get("PAPER_BALANCE", "400"))
+# Simulated account equity used for paper-trading position sizing and PnL.
+PAPER_EQUITY = float(os.environ.get("PAPER_EQUITY", "10000"))
+# How often (seconds) the background monitor checks open positions for SL/TP hits.
+MONITOR_INTERVAL = int(os.environ.get("MONITOR_INTERVAL_SEC", "60"))
+# "Mr. Market" behavioral valuation (Graham). Enabled by default.
+MRMARKET_ENABLED = os.environ.get("MRMARKET_ENABLED", "true").lower() == "true"
+# Hard-refuse new LONG entries when the crowd is in extreme euphoria (over-estimation).
+# Set false if your strategy is pure momentum/trend-following and you want it as bias only.
+MRMARKET_BLOCK_EUPHORIA = os.environ.get("MRMARKET_BLOCK_EUPHORIA", "true").lower() == "true"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("CryptoAgent")
-
 app = FastAPI(title="CryptoAgent", version=RELEASE_ID)
-app.add_middleware(
-    CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"],
-)
 
-# ═══════════════════════════════════════════════════════════
-# BINANCE — only init if NOT paper trading
-# ═══════════════════════════════════════════════════════════
+# Binance exchange (only initialized if keys are present)
 exchange = None
-binance_available = False
 try:
     import ccxt
-    if BINANCE_API_KEY and BINANCE_SECRET and not PAPER_TRADING:
+    if BINANCE_API_KEY and BINANCE_SECRET:
         exchange = ccxt.binance({
-            'apiKey': BINANCE_API_KEY,
-            'secret': BINANCE_SECRET,
-            'enableRateLimit': True,
-            'options': {'defaultType': 'spot'},
+            'apiKey': BINANCE_API_KEY, 'secret': BINANCE_SECRET,
+            'enableRateLimit': True, 'options': {'defaultType': 'spot'}
         })
-        try:
-            exchange.load_markets()
-            binance_available = True
-            log.info(f"Binance live — {len(exchange.markets)} markets")
-        except Exception as e:
-            log.warning(f"Binance init error (region block?): {e}")
-            exchange = None
-    elif PAPER_TRADING:
-        log.info(f"Paper trading mode — virtual balance: ${PAPER_BALANCE}")
+        log.info("Binance exchange initialized (spot)")
     else:
-        log.info("Binance keys not set")
+        log.info("Binance keys not set — paper trading only")
 except ImportError:
-    log.warning("ccxt not installed")
+    log.warning("ccxt not installed — paper trading only")
 
-# ═══════════════════════════════════════════════════════════
-# STATE
-# ═══════════════════════════════════════════════════════════
-trade_log = []
-open_positions = []
-daily_pnl = 0.0
-weekly_pnl = 0.0
-satellite_pct = 20.0
-trade_counter = 0
-last_daily_reset = datetime.now(timezone.utc).date()
-last_weekly_reset = datetime.now(timezone.utc).isocalendar()[1]
-consecutive_losses = 0
-paper_balance_usdt = PAPER_BALANCE  # Track virtual balance in paper mode
-paper_coins = {}  # Track virtual coin holdings
+# ── Durable state: load from SQLite on startup (survives Railway restarts) ──
+store.init()
+trade_log = store.all_trades()
+open_positions = store.all_positions()
+trade_counter = int(store.get_kv("trade_counter", 0))
+satellite_pct = float(store.get_kv("satellite_pct", 20.0))
+daily_pnl = float(store.get_kv("daily_pnl", 0.0))
+weekly_pnl = float(store.get_kv("weekly_pnl", 0.0))
+# Immutable-limit counter: consecutive losses (resets on any WIN). 5 in a row → kill switch.
+consecutive_losses = int(store.get_kv("consecutive_losses", 0))
 
-class TTLCache:
-    def __init__(self, ttl_seconds=3600, max_size=200):
-        self.cache = OrderedDict()
-        self.ttl = ttl_seconds
-        self.max_size = max_size
-    def add(self, key):
-        now = time.time()
-        self._evict(now)
-        self.cache[key] = now
-        if len(self.cache) > self.max_size:
-            self.cache.popitem(last=False)
-    def __contains__(self, key):
-        self._evict(time.time())
-        return key in self.cache
-    def _evict(self, now):
-        for k in [k for k, t in self.cache.items() if now - t > self.ttl]:
-            del self.cache[k]
 
-seen_signals = TTLCache(ttl_seconds=3600)
+def _utc_day():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def _utc_week():
+    iso = datetime.now(timezone.utc).isocalendar()
+    return f"{iso[0]}-W{iso[1]:02d}"
+
+
+def refresh_pnl_window():
+    """Reset daily/weekly PnL counters when the UTC day/week rolls over."""
+    global daily_pnl, weekly_pnl
+    if store.get_kv("pnl_day") != _utc_day():
+        daily_pnl = 0.0
+        store.set_kv("daily_pnl", 0.0)
+        store.set_kv("pnl_day", _utc_day())
+    if store.get_kv("pnl_week") != _utc_week():
+        weekly_pnl = 0.0
+        store.set_kv("weekly_pnl", 0.0)
+        store.set_kv("pnl_week", _utc_week())
+
+
+def add_pnl(delta_pct: float):
+    """Apply a realized PnL fraction (of equity) to the rolling counters."""
+    global daily_pnl, weekly_pnl
+    refresh_pnl_window()
+    daily_pnl += delta_pct
+    weekly_pnl += delta_pct
+    store.set_kv("daily_pnl", daily_pnl)
+    store.set_kv("weekly_pnl", weekly_pnl)
+
+
+refresh_pnl_window()
+log.info(f"State loaded: trades={len(trade_log)} open_positions={len(open_positions)} "
+         f"trade_counter={trade_counter} daily_pnl={daily_pnl:.4f} weekly_pnl={weekly_pnl:.4f}")
 
 PERSONALITY = {"O": 75, "C": 95, "E": 15, "A": 10, "N": 5}
 
@@ -114,7 +105,9 @@ RISK_PARAMS = {
     "max_total_exposure": 0.05,
     "daily_drawdown_kill": -0.03,
     "weekly_drawdown_kill": -0.05,
-    "min_confluence": 5,
+    # NEUTRAL/STANDARD baseline (regime-engine spec). AGGRESSIVE loosens to 5, CONSERVATIVE 8.
+    # The self-learning loop tunes this within RISK_FLOORS [3, 9].
+    "min_confluence": 6,
     "min_confidence": 65,
     "min_rr": 2.0,
     "atr_multiplier": 2.0,
@@ -122,11 +115,131 @@ RISK_PARAMS = {
     "satellite_max": 30,
     "protected_assets": ["BNB", "BNBUSDT", "BNBBUSD"],
     "max_entry_drift_pct": 0.005,
-    "max_consecutive_losses": 5,
-    "max_positions_per_pair": 1,
-    "min_order_usdt": 6.0,
-    "compound_reinvest": True,  # Always reinvest profits
+    # Multiplier the agent is told to use when sizing its stop (widens after stops-too-tight).
+    "sl_atr_mult": 2.0,
 }
+
+# Hard limits the self-learning loop may NEVER cross. Capital-preservation is not negotiable:
+# the bot may adapt how PICKY it is, never how much it risks or whether it has a stop.
+RISK_FLOORS = {
+    "max_risk_per_trade_max": 0.005,   # learning can never raise risk-per-trade above 0.5%
+    "min_confidence_floor": 50,        # never accept setups below 50% confidence
+    "min_confidence_ceil": 90,
+    "min_confluence_floor": 3,
+    "min_confluence_ceil": 9,
+    "min_rr_floor": 1.5,               # never take a target worse than 1.5R
+    "min_rr_ceil": 3.0,
+    "sl_atr_mult_floor": 1.5,
+    "sl_atr_mult_ceil": 3.5,
+}
+
+# Keys that the learning loop is allowed to tune. Everything else (drawdown kills,
+# max_risk_per_trade, protected_assets...) is frozen.
+_ADAPTABLE_KEYS = ["min_confidence", "min_confluence", "min_rr", "sl_atr_mult"]
+
+
+def _apply_param_overrides():
+    """Reload learned parameter overrides from the store on startup so learning persists."""
+    overrides = store.get_kv("risk_overrides", {}) or {}
+    for k, v in overrides.items():
+        if k in _ADAPTABLE_KEYS:
+            RISK_PARAMS[k] = v
+    # max_risk_per_trade can only ever have been lowered; clamp defensively.
+    RISK_PARAMS["max_risk_per_trade"] = min(RISK_PARAMS["max_risk_per_trade"],
+                                            RISK_FLOORS["max_risk_per_trade_max"])
+    if overrides:
+        log.info(f"Loaded learned overrides: {overrides}")
+
+
+_apply_param_overrides()
+
+
+def _clamp(val, lo, hi):
+    return max(lo, min(hi, val))
+
+
+def closed_trades(n=20, pair=None):
+    """Most recent closed trades (with a result), optionally filtered by pair."""
+    rows = [t for t in trade_log if t.get("resultado") in ("WIN", "LOSS", "BREAKEVEN")]
+    if pair:
+        rows = [t for t in rows if str(t.get("pair", "")).upper() == pair.upper()]
+    return rows[-n:]
+
+
+def _rate(rows, key, val="SÍ"):
+    rows = [r for r in rows if r.get(key) not in (None, "")]
+    if not rows:
+        return 0.0
+    return sum(1 for r in rows if r.get(key) == val) / len(rows)
+
+
+def adapt_parameters():
+    """
+    AGGRESSIVE self-tuning of SELECTIVITY only, bounded by RISK_FLOORS.
+    Called after each close. Adjusts how picky the agent is and how it shapes stops/targets,
+    based on rolling outcomes. Never touches risk-per-trade or the kill switches.
+    """
+    rows = closed_trades(n=20)
+    n = len(rows)
+    if n < 8:   # aggressive: act early, but not from pure noise
+        return
+    wins = sum(1 for r in rows if r.get("resultado") == "WIN")
+    losses = sum(1 for r in rows if r.get("resultado") == "LOSS")
+    decided = wins + losses
+    if decided == 0:
+        return
+    wr = wins / decided
+    sl_short_rate = _rate(rows, "sl_too_short")
+    tp_high_rate = _rate(rows, "tp_too_high")
+
+    before = {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS}
+
+    # 1) Selectivity follows win rate (aggressive steps).
+    if wr < 0.45:
+        RISK_PARAMS["min_confidence"] = _clamp(RISK_PARAMS["min_confidence"] + 5,
+                                               RISK_FLOORS["min_confidence_floor"], RISK_FLOORS["min_confidence_ceil"])
+        RISK_PARAMS["min_confluence"] = _clamp(RISK_PARAMS["min_confluence"] + 1,
+                                               RISK_FLOORS["min_confluence_floor"], RISK_FLOORS["min_confluence_ceil"])
+    elif wr > 0.60:
+        RISK_PARAMS["min_confidence"] = _clamp(RISK_PARAMS["min_confidence"] - 3,
+                                               RISK_FLOORS["min_confidence_floor"], RISK_FLOORS["min_confidence_ceil"])
+        RISK_PARAMS["min_confluence"] = _clamp(RISK_PARAMS["min_confluence"] - 1,
+                                               RISK_FLOORS["min_confluence_floor"], RISK_FLOORS["min_confluence_ceil"])
+
+    # 2) Stops too tight → tell the agent to widen its stop (more ATR).
+    if sl_short_rate > 0.30:
+        RISK_PARAMS["sl_atr_mult"] = _clamp(round(RISK_PARAMS["sl_atr_mult"] + 0.25, 2),
+                                            RISK_FLOORS["sl_atr_mult_floor"], RISK_FLOORS["sl_atr_mult_ceil"])
+
+    # 3) Targets too ambitious → take profit sooner (lower required R:R).
+    if tp_high_rate > 0.30:
+        RISK_PARAMS["min_rr"] = _clamp(round(RISK_PARAMS["min_rr"] - 0.25, 2),
+                                       RISK_FLOORS["min_rr_floor"], RISK_FLOORS["min_rr_ceil"])
+    elif wr > 0.60 and tp_high_rate < 0.10:
+        RISK_PARAMS["min_rr"] = _clamp(round(RISK_PARAMS["min_rr"] + 0.25, 2),
+                                       RISK_FLOORS["min_rr_floor"], RISK_FLOORS["min_rr_ceil"])
+
+    # 4) Satellite allocation from satellite-bucket performance.
+    sat_rows = [r for r in rows if r.get("bucket") == "SATELLITE"]
+    sat_dec = [r for r in sat_rows if r.get("resultado") in ("WIN", "LOSS")]
+    global satellite_pct
+    if len(sat_dec) >= 4:
+        sat_wr = sum(1 for r in sat_dec if r.get("resultado") == "WIN") / len(sat_dec)
+        if sat_wr > 0.55:
+            satellite_pct = _clamp(satellite_pct + 5, RISK_PARAMS["satellite_min"], RISK_PARAMS["satellite_max"])
+        elif sat_wr < 0.40:
+            satellite_pct = _clamp(satellite_pct - 5, RISK_PARAMS["satellite_min"], RISK_PARAMS["satellite_max"])
+        store.set_kv("satellite_pct", satellite_pct)
+
+    after = {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS}
+    changed = {k: (before[k], after[k]) for k in _ADAPTABLE_KEYS if before[k] != after[k]}
+    if changed:
+        store.set_kv("risk_overrides", {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS})
+        reason = (f"n={n} WR={wr:.0%} sl_short={sl_short_rate:.0%} tp_high={tp_high_rate:.0%} → "
+                  + ", ".join(f"{k}:{v[0]}→{v[1]}" for k, v in changed.items()))
+        log.info(f"LEARN adapt: {reason}")
+        store.set_kv("last_adaptation", {"at": datetime.utcnow().isoformat(), "reason": reason})
+
 
 # ═══════════════════════════════════════════════════════════
 # RAG
@@ -146,7 +259,7 @@ class RAGSearch:
                 raise ValueError("Vectorizer not fitted")
             self.chunk_count = len(self.metadata)
             self.loaded = True
-            log.info(f"RAG loaded: {self.chunk_count} chunks")
+            log.info(f"RAG loaded: {self.chunk_count} chunks, vocab={len(self.vectorizer.vocabulary_)}")
         except Exception as e:
             log.error(f"RAG load failed: {e}")
 
@@ -176,419 +289,78 @@ class RAGSearch:
 rag = RAGSearch()
 
 # ═══════════════════════════════════════════════════════════
-# MARKET CONTEXT — No Binance API needed for prices
+# MARKET CONTEXT
 # ═══════════════════════════════════════════════════════════
-SUPPORTED_PAIRS = {
-    "BTCUSDT": {"paprika": "btc-bitcoin", "gecko": "bitcoin", "key": "btc_price", "ccxt": "BTC/USDT"},
-    "ETHUSDT": {"paprika": "eth-ethereum", "gecko": "ethereum", "key": "eth_price", "ccxt": "ETH/USDT"},
-    "SOLUSDT": {"paprika": "sol-solana", "gecko": "solana", "key": "sol_price", "ccxt": "SOL/USDT"},
-}
+PRICE_KEYS = {"BTCUSDT": "btc_price", "ETHUSDT": "eth_price", "SOLUSDT": "sol_price"}
 
-async def get_market_context():
-    ctx = {
-        "fear_greed": 50, "fear_greed_label": "Neutral",
-        "btc_price": 0, "btc_24h_change": 0, "eth_price": 0, "sol_price": 0,
-        "btc_funding": 0, "timestamp": datetime.now(timezone.utc).isoformat(),
-        "news_sentiment": "neutral", "news_score": 0, "news_headlines": [],
-    }
-    async with httpx.AsyncClient(timeout=10) as client:
-        # Fear & Greed
-        try:
-            r = await client.get("https://api.alternative.me/fng/?limit=1")
-            d = r.json()
-            ctx["fear_greed"] = int(d["data"][0]["value"])
-            ctx["fear_greed_label"] = d["data"][0]["value_classification"]
-        except Exception as e:
-            log.warning(f"Fear&Greed failed: {e}")
-
-        # Prices: CoinPaprika → CoinGecko fallback (NO Binance API needed)
-        for pair, info in SUPPORTED_PAIRS.items():
-            key = info["key"]
-            try:
-                r = await client.get(f"https://api.coinpaprika.com/v1/tickers/{info['paprika']}")
-                if r.status_code == 200:
-                    d = r.json()
-                    ctx[key] = float(d.get("quotes", {}).get("USD", {}).get("price", 0))
-                    if key == "btc_price":
-                        ctx["btc_24h_change"] = float(d.get("quotes", {}).get("USD", {}).get("percent_change_24h", 0))
-                else:
-                    raise Exception(f"HTTP {r.status_code}")
-            except Exception:
-                # CoinGecko fallback (free, no key needed, no region blocks)
-                try:
-                    r = await client.get(
-                        f"https://api.coingecko.com/api/v3/simple/price?ids={info['gecko']}&vs_currencies=usd&include_24hr_change=true"
-                    )
-                    if r.status_code == 200:
-                        d = r.json().get(info['gecko'], {})
-                        ctx[key] = float(d.get("usd", 0))
-                        if key == "btc_price":
-                            ctx["btc_24h_change"] = float(d.get("usd_24h_change", 0))
-                except Exception:
-                    log.warning(f"All price sources failed for {key}")
-
-        # CryptoPanic News Sentiment
-        news = await get_crypto_news(client)
-        if news:
-            ctx["news_sentiment"] = news["sentiment"]
-            ctx["news_score"] = news["score"]
-            ctx["news_headlines"] = news["headlines"][:5]
-
-    return ctx
-
-
-async def get_crypto_news(client: httpx.AsyncClient) -> dict:
-    """Fetch news from CryptoPanic and compute sentiment score."""
-    if not CRYPTOPANIC_API_KEY:
-        return None
+async def get_market_context(pair: str = "BTCUSDT"):
+    """Delegate to the Phase-3 multi-source aggregator (6 APIs, cross-validation, TTL cache,
+    SOLO-OBSERVATION). Falls back to a minimal degraded object if the module itself errors."""
+    funding_pair = pair.upper() if pair.upper() in market_context.ASSETS else "BTCUSDT"
     try:
-        r = await client.get(
-            f"https://cryptopanic.com/api/v1/posts/?auth_token={CRYPTOPANIC_API_KEY}"
-            f"&currencies=BTC,ETH,SOL&filter=important&public=true"
-        )
-        if r.status_code != 200:
-            log.warning(f"CryptoPanic HTTP {r.status_code}")
-            return None
-        data = r.json()
-        results = data.get("results", [])
-        if not results:
-            return {"sentiment": "neutral", "score": 0, "headlines": []}
-
-        # Compute sentiment from votes
-        bullish = 0
-        bearish = 0
-        headlines = []
-        for post in results[:20]:
-            votes = post.get("votes", {})
-            bullish += int(votes.get("positive", 0))
-            bearish += int(votes.get("negative", 0))
-            title = post.get("title", "")
-            if title:
-                headlines.append(title)
-
-        total_votes = bullish + bearish
-        if total_votes > 0:
-            score = ((bullish - bearish) / total_votes) * 100  # -100 to +100
-        else:
-            score = 0
-
-        if score > 30:
-            sentiment = "strongly_bullish"
-        elif score > 10:
-            sentiment = "bullish"
-        elif score < -30:
-            sentiment = "strongly_bearish"
-        elif score < -10:
-            sentiment = "bearish"
-        else:
-            sentiment = "neutral"
-
-        return {"sentiment": sentiment, "score": round(score, 1), "headlines": headlines}
+        return await market_context.build_context(pair=pair.upper(), funding_pair=funding_pair)
     except Exception as e:
-        log.warning(f"CryptoPanic error: {e}")
-        return None
-
+        log.error(f"market_context failed, minimal fallback: {e}")
+        return {"fear_greed": 50, "fear_greed_label": "Neutral", "btc_price": 0, "btc_24h_change": 0,
+                "eth_price": 0, "sol_price": 0, "btc_funding": 0, "composite_score": 0,
+                "sources_ok": {}, "price_reliable": {}, "critical_down": ["module_error"],
+                "solo_observation": True, "degradation": ["market_context exception"]}
 
 def get_current_price(pair: str, market_ctx: dict) -> float:
-    info = SUPPORTED_PAIRS.get(pair.upper())
-    return float(market_ctx.get(info["key"], 0)) if info else 0.0
-
-
-async def get_balance() -> dict:
-    """Get balance with mark-to-market valuation."""
-    global paper_balance_usdt
-    if PAPER_TRADING:
-        coin_holdings = dict(paper_coins)
-        # Mark-to-market: estimate coin values using last known prices
-        mtm_value = 0.0
-        price_map = {"BTC": 0, "ETH": 0, "SOL": 0}
-        # Try to get prices from open positions or use a quick fetch
-        for pos in open_positions:
-            bc = pos.base_coin
-            if bc in price_map and pos.entry > 0:
-                price_map[bc] = pos.highest_price  # Use latest tracked price
-        for coin, amount in coin_holdings.items():
-            if amount > 0 and coin in price_map and price_map[coin] > 0:
-                mtm_value += amount * price_map[coin]
-        total_equity = paper_balance_usdt + mtm_value
-        return {
-            "usdt_free": round(paper_balance_usdt, 2),
-            "usdt_total": round(total_equity, 2),
-            "coins": coin_holdings,
-            "mtm_value": round(mtm_value, 2),
-            "equity": round(total_equity, 2),
-            "mode": "paper",
-        }
-
-    if not exchange:
-        return {"usdt_free": 0, "usdt_total": 0, "coins": {}, "mode": "no_exchange"}
-
-    try:
-        balance = exchange.fetch_balance()
-        usdt = balance.get('USDT', {})
-        coins = {}
-        for sym in ['BTC', 'ETH', 'SOL']:
-            free = float(balance.get(sym, {}).get('free', 0))
-            if free > 0:
-                coins[sym] = free
-        return {
-            "usdt_free": float(usdt.get('free', 0)),
-            "usdt_total": float(usdt.get('total', 0)),
-            "coins": coins,
-            "mode": "live",
-        }
-    except Exception as e:
-        log.error(f"Balance error: {e}")
-        return {"usdt_free": 0, "usdt_total": 0, "coins": {}, "error": str(e), "mode": "error"}
-
+    key = PRICE_KEYS.get(pair.upper(), "btc_price")
+    return float(market_ctx.get(key, 0))
 
 # ═══════════════════════════════════════════════════════════
-# RANGE/CHANNEL DETECTION
+# GEMINI LLM + NORMALIZER
 # ═══════════════════════════════════════════════════════════
-class RangeDetector:
-    """Detect when price is in a sideways channel for mean-reversion trading."""
-    def __init__(self):
-        self.price_history = {}  # pair -> list of prices
+SYSTEM_PROMPT = """You are a disciplined operator trained in the school of Benjamin Graham,
+adapted to a speculative asset. You are NOT a signal bot — you are an intelligent investor.
+Personality: O:75 C:95 E:15 A:10 N:5 (deliberate, skeptical, zero ego).
 
-    def add_price(self, pair: str, price: float):
-        if pair not in self.price_history:
-            self.price_history[pair] = []
-        self.price_history[pair].append({"price": price, "ts": time.time()})
-        # Keep last 200 data points
-        self.price_history[pair] = self.price_history[pair][-200:]
+MENTAL FRAME (Graham, adapted to crypto):
+- MARGIN OF SAFETY (redefined): crypto has no cash flows / intrinsic value, so your margin of
+  safety is CONFLUENCE + SURVIVABILITY. Only enter when price, technical structure, regime,
+  sentiment and news ALL point the same direction AND the reward:risk survives a PESSIMISTIC
+  scenario (assume your ATR-based stop is hit immediately): rr_pesimista >= 2.0.
+- MR. MARKET: the market is a manic-depressive partner; its prices are offers you may ignore,
+  not truths. Extreme FEAR + intact structure = potential opportunity. Extreme EUPHORIA =
+  maximum skepticism, NEVER a reason to chase. Never chase momentum out of FOMO.
+- INVESTMENT vs SPECULATION: only act when there is an articulable EDGE and a valid stop.
+- PROCESS OVER OUTCOME: a confluence-9 setup that fails ONE hard rule is rejected without exception.
 
-    def detect_range(self, pair: str, lookback: int = 50) -> dict:
-        """Detect if price is ranging and identify channel bounds."""
-        history = self.price_history.get(pair, [])
-        if len(history) < lookback:
-            return {"is_ranging": False, "reason": "insufficient_data", "data_points": len(history)}
+GOLDEN RULE: when in doubt, or when data sources contradict each other -> NO_TRADE.
+Not trading IS a position.
 
-        prices = [h["price"] for h in history[-lookback:]]
-        high = max(prices)
-        low = min(prices)
-        current = prices[-1]
-        channel_width_pct = ((high - low) / low) * 100
-
-        # Range criteria: channel < 15% width, price touched both bounds
-        near_high_count = sum(1 for p in prices if p > high * 0.97)
-        near_low_count = sum(1 for p in prices if p < low * 1.03)
-        is_ranging = (channel_width_pct < 15 and near_high_count >= 3 and near_low_count >= 3)
-
-        # Position within range (0 = bottom, 100 = top)
-        range_position = ((current - low) / (high - low) * 100) if high != low else 50
-
-        # Determine signal
-        signal = "none"
-        if is_ranging:
-            if range_position < 20:
-                signal = "BUY_RANGE_BOTTOM"
-            elif range_position > 80:
-                signal = "SELL_RANGE_TOP"
-
-        return {
-            "is_ranging": is_ranging,
-            "channel_high": round(high, 2),
-            "channel_low": round(low, 2),
-            "channel_width_pct": round(channel_width_pct, 2),
-            "range_position": round(range_position, 1),
-            "signal": signal,
-            "near_high_touches": near_high_count,
-            "near_low_touches": near_low_count,
-            "data_points": len(prices),
-        }
-
-range_detector = RangeDetector()
-
-# ═══════════════════════════════════════════════════════════
-# POSITION MODEL (inspired by banbot Order/ExitTrigger)
-# ═══════════════════════════════════════════════════════════
-class Position:
-    """Formal position with lifecycle, exit plan, and per-trade tracking."""
-    def __init__(self, trade_id, pair, direction, entry, sl, tp1, tp2,
-                 qty, cost_usdt, position_size_pct, bucket, template, opened_at, order_id):
-        self.trade_id = trade_id
-        self.pair = pair
-        self.base_coin = pair.upper().replace("USDT", "").replace("BUSD", "")
-        self.direction = direction  # LONG only for spot
-        self.bucket = bucket
-        self.template = template
-        self.entry = float(entry)
-        self.qty = float(qty)           # Exact coins bought
-        self.cost_usdt = float(cost_usdt)  # Exact USDT spent
-        self.position_size_pct = float(position_size_pct)
-        # Exit plan
-        self.sl = float(sl)
-        self.tp1 = float(tp1)
-        self.tp2 = float(tp2)
-        self.trailing_active = False
-        self.trailing_sl = 0.0
-        self.tp1_hit = False
-        self.qty_remaining = float(qty)  # Decreases on partial TP
-        # Metadata
-        self.opened_at = opened_at
-        self.order_id = order_id
-        self.status = "OPEN"  # OPEN, PARTIALLY_CLOSED, CLOSED
-        self.highest_price = float(entry)
-        self.lowest_price = float(entry)
-
-    def update_price(self, price: float):
-        """Track price extremes for trailing stop and SL/TP analysis."""
-        self.highest_price = max(self.highest_price, price)
-        self.lowest_price = min(self.lowest_price, price)
-        # Trailing stop: after TP1 hit, trail at entry (breakeven) or higher
-        if self.trailing_active and self.direction == "LONG":
-            # Trail at max(entry, highest - (entry - original_sl))
-            original_risk = abs(self.entry - self.sl) if self.sl > 0 else self.entry * 0.02
-            self.trailing_sl = max(self.entry, self.highest_price - original_risk)
-
-    def check_exit(self, price: float) -> str:
-        """Check if price triggers any exit condition. Returns reason or empty string."""
-        if self.status == "CLOSED":
-            return ""
-        self.update_price(price)
-        if self.direction == "LONG":
-            # Stop loss
-            if self.sl > 0 and price <= self.sl:
-                return "stop_loss_hit"
-            # Trailing stop (after TP1)
-            if self.trailing_active and self.trailing_sl > 0 and price <= self.trailing_sl:
-                return "trailing_stop_hit"
-            # Take profit 2
-            if self.tp2 > 0 and price >= self.tp2:
-                return "take_profit_2_hit"
-            # Take profit 1 (partial)
-            if not self.tp1_hit and self.tp1 > 0 and price >= self.tp1:
-                return "take_profit_1_hit"
-        # Time stop: position open > 24h with < 0.5% favorable move (aligned with prompt)
-        try:
-            opened = datetime.fromisoformat(self.opened_at.replace('Z', '+00:00'))
-            hours_open = (datetime.now(timezone.utc) - opened).total_seconds() / 3600
-            if hours_open > 24:
-                pnl_pct = (price - self.entry) / self.entry if self.direction == "LONG" else (self.entry - price) / self.entry
-                if pnl_pct < 0.005:
-                    return "time_stop_24h"
-        except Exception:
-            pass
-        return ""
-
-    def to_dict(self):
-        return {
-            "trade_id": self.trade_id, "pair": self.pair, "base_coin": self.base_coin,
-            "direction": self.direction, "bucket": self.bucket, "entry": self.entry,
-            "sl": self.sl, "tp1": self.tp1, "tp2": self.tp2,
-            "qty": self.qty, "qty_remaining": self.qty_remaining,
-            "cost_usdt": round(self.cost_usdt, 2),
-            "trailing_active": self.trailing_active, "trailing_sl": round(self.trailing_sl, 2),
-            "tp1_hit": self.tp1_hit, "status": self.status,
-            "highest_price": round(self.highest_price, 2),
-            "opened_at": self.opened_at, "order_id": self.order_id,
-            "position_size_pct": self.position_size_pct,
-            "risk_pct": self.position_size_pct / 100,
-        }
-
-
-def compute_position_qty(equity: float, entry: float, sl: float, max_risk_pct: float) -> float:
-    """Proper risk-based position sizing (banbot pattern).
-    risk_amount = equity * max_risk_pct
-    qty = risk_amount / abs(entry - sl)
-    """
-    if entry <= 0 or sl <= 0 or abs(entry - sl) < 0.0001:
-        # Fallback: simple % of equity
-        return equity * max_risk_pct / entry if entry > 0 else 0
-    risk_amount = equity * max_risk_pct
-    distance = abs(entry - sl)
-    qty = risk_amount / distance
-    return qty
-
-
-async def check_positions_for_exits(current_prices: dict) -> list:
-    """Position monitor (polymarket-bot pattern): scan all open positions for exit triggers."""
-    exits = []
-    for pos in list(open_positions):
-        price = current_prices.get(pos.pair.upper(), 0)
-        if price <= 0:
-            continue
-        reason = pos.check_exit(price)
-        if reason:
-            exits.append({"trade_id": pos.trade_id, "pair": pos.pair, "reason": reason, "price": price})
-    return exits
-
-# ═══════════════════════════════════════════════════════════
-# GEMINI LLM
-# ═══════════════════════════════════════════════════════════
-SYSTEM_PROMPT_TEMPLATE = """You are an institutional-grade crypto trading agent.
-Personality: O:75 C:95 E:15 A:10 N:5 (Homo Economicus, zero biases).
-
-CRITICAL: Respond ONLY in English. All JSON keys/values in English.
-Values: action: "BUY"/"SELL"/"NO_TRADE", direction: "LONG"/"SHORT", bucket: "CORE"/"SATELLITE", regime_btc: "GREEN"/"YELLOW"/"RED", confidence: 0-100.
+CRITICAL: respond ONLY in English. All JSON keys and values in English. Use EXACTLY:
+- action: "BUY", "SELL", or "NO_TRADE"   (SELL/SHORT not executable on spot, long-only)
+- direction: "LONG" or "SHORT"
+- bucket: "CORE" or "SATELLITE"
+- regime_btc: "GREEN", "YELLOW", or "RED"
+- confidence: integer 0-100 (real conviction, never 0 for BUY/SELL)
 
 IMMUTABLE RULES:
-1. CAPITAL PRESERVATION is primary.
-2. Min R:R 1:2 standard, 1:3 aggressive.
-3. MUST identify specific EDGE.
-4. REGIME determines method: uptrend=trend-following, RANGE=mean-reversion, downtrend=preservation.
-5. Max 0.5% risk/trade, max 5% total exposure.
-6. NEVER trade BNB.
-7. Pre-trade checklist: ALL 12 items pass.
-8. Stale entry (>0.5% drift) = NO_TRADE.
-9. 5+ consecutive losses = bias NO_TRADE.
+1. CAPITAL PRESERVATION is primary. A 50% loss needs 100% gain to recover.
+2. Minimum R:R 2.0 (standard), 3.0 (euphoria/conservative posture) — measured pessimistically.
+3. MUST identify a specific articulable EDGE.
+4. REGIME determines method: uptrend=trend-following, range=mean-reversion, downtrend=preserve.
+5. Max 0.5% risk per trade, max 5% total exposure.
+6. NEVER trade BNB pairs.
+7. If entry price is stale (market moved past your ATR/0.5% threshold), action = NO_TRADE.
 
-FEAR & GREED INDEX DECISION MATRIX (apply BEFORE final confidence):
-- FNG 0-10 (Extreme Fear): Strong BUY bias. Historically best entries. Add +15 confidence to BUY signals.
-- FNG 11-25 (Fear): Moderate BUY bias. Add +10 confidence to BUY signals.
-- FNG 26-45 (Low Neutral): Slight BUY bias. Add +5 confidence to BUY signals.
-- FNG 46-55 (Neutral): No adjustment. Trade purely on technicals.
-- FNG 56-75 (Greed): Caution. Subtract -5 confidence from BUY signals. Tighten SL.
-- FNG 76-90 (High Greed): High caution. Subtract -10 from BUY. Consider SELL signals more favorably.
-- FNG 91-100 (Extreme Greed): Defensive mode. Subtract -20 from BUY. Strong SELL bias. Reduce position sizes by 50%.
-IMPORTANT: FNG adjusts confidence but NEVER overrides technical invalidity. A bad setup at FNG=5 is still NO_TRADE.
+ANTI-BIAS CHECKLIST (mandatory): you MUST output a `bias_check` object with these 6 fields, each
+{"pass": true|false, "reason": "<one line>"}. If ANY is false, action MUST be NO_TRADE:
+- recency: am I extrapolating the last few candles instead of the full regime?
+- confirmation: state the strongest thesis AGAINST the trade (pre-mortem). Put it in `bear_case`.
+- anchoring: does the call depend on an arbitrary reference price (ATH, round number)?
+- sunk_cost: are recent losses pushing me to "win it back"? (check the feedback history)
+- fomo_herd: is news/sentiment euphoric AND price already moved a lot in 24h?
+- overconfidence: do the data sources disagree (price discrepancy / contradictory signals)?
 
-NEWS SENTIMENT SCORING (apply AFTER FNG adjustment):
-- strongly_bullish (score > +30): If signal is BUY/LONG, add +10 confidence. If SELL/SHORT, subtract -15 (conflict).
-- bullish (score +10 to +30): If BUY, add +5. If SELL, subtract -10.
-- neutral (score -10 to +10): No adjustment. Trade on technicals only.
-- bearish (score -10 to -30): If SELL/SHORT, add +5. If BUY/LONG, subtract -10.
-- strongly_bearish (score < -30): If SELL/SHORT, add +10. If BUY/LONG, subtract -15 (conflict).
-IMPORTANT: News-technical CONFLICT (news bearish + signal bullish or vice versa) is a WARNING. If final confidence drops below 50 after adjustments, force NO_TRADE.
-
-RANGE TRADING STRATEGY (when range_detected = true):
-- When range_position < 20%: BUY at channel bottom, SL 1% below channel_low, TP at channel_high.
-- When range_position > 80%: SELL at channel top, SL 1% above channel_high, TP at channel_low.
-- Channel width must be > 3% for profitability after fees.
-- Use tighter position sizes (0.3%) for range plays.
-- If channel breaks (price outside 105% of bounds), EXIT immediately via close-trade.
-
-STOP LOSS AND TAKE PROFIT STRATEGY:
-- SL: Always ATR * 2.0 minimum. Never tighter than 0.5% from entry.
-- TP1: R:R of 2.0 minimum (take 50% of position).
-- TP2: R:R of 3.0 (let remaining 50% ride with trailing stop).
-- Trailing stop: After TP1 hit, move SL to breakeven (entry price).
-- Time stop: If position hasn't moved 0.5% in 24h in the expected direction, consider closing.
-
-COMPOUND REINVESTMENT:
-- All profits stay and are reinvested automatically.
-- Position sizes are % of TOTAL current balance (grows with wins).
-- As balance grows, absolute position sizes grow proportionally.
-
-DIVERSIFICATION:
-- Never >40% of capital in one asset.
-- Spread across BTC, ETH, SOL when possible.
-
-AVAILABLE BALANCE: {available_balance}
-
-Respond with ONLY valid JSON."""
+PORTFOLIO: CORE 70-90% (BTC/ETH/L1s) + SATELLITE 10-30% (high-risk altcoins/memes).
+Respond with ONLY valid JSON in English."""
 
 TRADE_PROMPT = """MARKET CONTEXT:
 {market_context}
-
-FEAR & GREED INDEX: {fng_value} ({fng_label})
-Apply the FNG Decision Matrix from your rules to adjust confidence.
-
-NEWS SENTIMENT: {news_context}
-Apply News Sentiment Scoring rules. Flag any news-technical conflicts.
-
-RANGE DETECTION:
-{range_context}
 
 KNOWLEDGE BASE:
 {rag_context}
@@ -597,24 +369,34 @@ SIGNAL: {signal}
 
 CURRENT MARKET PRICE: {current_price}
 
-PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%, consecutive_losses={consecutive_losses}, available_usdt={available_usdt}
+PORTFOLIO: positions={positions}, daily_pnl={daily_pnl}, weekly_pnl={weekly_pnl}, satellite={satellite_pct}%
 
-ASSET DIVERSIFICATION: {diversification}
+MR. MARKET BEHAVIORAL READ (Graham — is the crowd under/over-estimating this price?):
+{valuation}
+Use it as a contrarian bias: prefer buying when UNDERVALUED/DEEPLY_UNDERVALUED (crowd fearful),
+demand a much stronger edge or stand aside when OVERVALUED, and NEVER buy into EUPHORIC blow-offs.
+This is a bias on top of the technical signal — it does not override regime or risk rules, and a
+cheap market can get cheaper, so still require your edge and a valid stop.
 
-SELF-LEARNING FEEDBACK:
+CURRENT ADAPTIVE POLICY (learned from your own past results — respect it):
+{policy}
+
+SELF-LEARNING FEEDBACK FROM PREVIOUS TRADES:
 {feedback}
 
-DECISION PROCESS (follow in order):
-1. Evaluate technical signal quality (confluence, template, regime).
-2. Apply Fear & Greed adjustment to confidence.
-3. Apply News Sentiment adjustment to confidence.
-4. Check for news-technical conflict. If conflict AND confidence < 50 after adjustments, force NO_TRADE.
-5. If range_detected=true, apply Range Trading Strategy for SL/TP.
-6. Set position_size_pct based on current total balance (compound reinvestment).
-7. Verify all 12 checklist items pass.
+Apply the lessons above: only take this trade if it clears the current policy thresholds; size your
+stop using sl_atr_mult × ATR; do not set a target beyond what the learned R:R supports. If recent
+results for this pair/regime/template are poor, demand a stronger edge or return NO_TRADE.
 
-Respond with ONLY this JSON:
-{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none"}}"""
+CURRENT POSTURE (regime-based; respect its risk/confluence/R:R thresholds):
+{posture}
+
+Evaluate this signal against current market price. If entry price differs >0.5% from current price, reject as stale.
+Before approving, run the anti-bias checklist honestly — if ANY check fails, return NO_TRADE.
+Compute rr_pesimista = (take_profit_1 - entry_price) / (entry_price - stop_loss) assuming the stop
+is reached first; it MUST be >= the posture's min R:R.
+Respond with ONLY this JSON (fill real values, confidence 0-100 must reflect conviction):
+{{"action":"BUY","pair":"BTCUSDT","direction":"LONG","bucket":"CORE","template":"T1_PULLBACK","entry_price":0,"stop_loss":0,"take_profit_1":0,"take_profit_2":0,"position_size_pct":0.5,"confidence":75,"regime_btc":"GREEN","trend_regime":"STRONG_UP","vol_regime":"NORMAL","confluence_score":7,"edge_description":"","reasoning":"","checklist_pass":true,"risks":[],"self_learning_adjustment":"none","posture_used":"STANDARD","rr_pesimista":2.0,"bear_case":"strongest reason this trade fails","bias_check":{{"recency":{{"pass":true,"reason":""}},"confirmation":{{"pass":true,"reason":""}},"anchoring":{{"pass":true,"reason":""}},"sunk_cost":{{"pass":true,"reason":""}},"fomo_herd":{{"pass":true,"reason":""}},"overconfidence":{{"pass":true,"reason":""}}}}}}"""
 
 _KEY_MAP = {
     "acción": "action", "accion": "action", "par": "pair",
@@ -649,7 +431,22 @@ _DEFAULTS = {
     "regime_btc": "YELLOW", "trend_regime": "RANGE", "vol_regime": "NORMAL",
     "confluence_score": 0, "edge_description": "", "reasoning": "",
     "checklist_pass": False, "risks": [], "self_learning_adjustment": "",
+    # Graham engine (Phase 2): posture + pessimistic R:R + pre-mortem + anti-bias checklist.
+    "posture_used": "", "rr_pesimista": 0, "bear_case": "", "bias_check": {},
 }
+
+# The 6 mandatory anti-bias checks (see graham-trading-philosophy skill). Canonical keys plus
+# the Spanish/variant spellings Gemini sometimes emits, mapped to canonical.
+BIAS_KEYS = ["recency", "confirmation", "anchoring", "sunk_cost", "fomo_herd", "overconfidence"]
+_BIAS_ALIASES = {
+    "recencia": "recency", "confirmación": "confirmation", "confirmacion": "confirmation",
+    "anclaje": "anchoring", "costo_hundido": "sunk_cost", "coste_hundido": "sunk_cost",
+    "sunk_cost_revenge": "sunk_cost", "venganza": "sunk_cost", "fomo": "fomo_herd",
+    "manada": "fomo_herd", "fomo_manada": "fomo_herd", "fomo_herd_check": "fomo_herd",
+    "exceso_de_confianza": "overconfidence", "exceso_confianza": "overconfidence",
+    "sobreconfianza": "overconfidence",
+}
+
 
 def normalize_gemini(d: dict) -> dict:
     result = {}
@@ -662,216 +459,300 @@ def normalize_gemini(d: dict) -> dict:
         else:
             new_val = v
         result[new_key] = new_val
+
     for field, default in _DEFAULTS.items():
         if field not in result:
             result[field] = default
+
     action = str(result.get("action", "")).upper()
     conf = 0
     try:
         conf = float(result.get("confidence", 0))
-    except (ValueError, TypeError):
+    except:
         conf = 0
     conf = max(0, min(100, conf))
     if action in ("BUY", "SELL") and conf == 0:
         confl = float(result.get("confluence_score", 0) or 0)
         conf = min(95, max(55, confl * 10))
     result["confidence"] = round(conf, 1)
-    for nf in ["entry_price", "stop_loss", "take_profit_1", "take_profit_2",
-               "position_size_pct", "confidence", "confluence_score"]:
-        val = result.get(nf, 0)
+
+    for num_field in ["entry_price", "stop_loss", "take_profit_1", "take_profit_2",
+                      "position_size_pct", "confidence", "confluence_score", "rr_pesimista"]:
+        val = result.get(num_field, 0)
         if isinstance(val, str):
             val = val.replace("%", "").replace(",", "").strip()
         try:
-            result[nf] = float(val)
-        except (ValueError, TypeError):
-            result[nf] = 0.0
+            result[num_field] = float(val)
+        except:
+            result[num_field] = 0.0
+
+    # Keep bias_check a dict; re-key any Spanish/variant subkeys to canonical names.
+    bc = result.get("bias_check")
+    if isinstance(bc, dict):
+        result["bias_check"] = {_BIAS_ALIASES.get(k.lower().strip(), k): v for k, v in bc.items()}
+    else:
+        result["bias_check"] = {}
+
     return result
 
-async def call_gemini(prompt: str, system_prompt: str, retries: int = 2) -> dict:
+
+def _bias_item_pass(v) -> tuple:
+    """Interpret one anti-bias entry. Accepts {"pass":bool,"reason":str}, bool, or str.
+    Returns (passed: bool, reason: str). Unknown/missing → fail (golden rule: doubt → NO_TRADE)."""
+    if isinstance(v, dict):
+        reason = str(v.get("reason") or v.get("razon") or v.get("razón") or "")
+        for k in ("pass", "passed", "aprobado", "ok", "result"):
+            if k in v:
+                p = v[k]
+                if isinstance(p, str):
+                    return p.strip().lower() in ("pass", "true", "yes", "sí", "si", "ok"), reason
+                return bool(p), reason
+        return False, reason or "no pass flag"
+    if isinstance(v, bool):
+        return v, ""
+    if isinstance(v, str):
+        return v.strip().lower() in ("pass", "true", "yes", "sí", "si", "ok"), v
+    return False, "unrecognized bias entry"
+
+
+def evaluate_bias_check(decision: dict) -> tuple:
+    """
+    Enforce the 6-point anti-bias checklist. Returns (ok: bool, reason: str).
+    ALL 6 checks must be present AND pass. Missing checklist or any failing/absent
+    check → not ok (the decision must become NO_TRADE). This is the implacable gate.
+    """
+    bc = decision.get("bias_check") or {}
+    if not isinstance(bc, dict) or not bc:
+        return False, "bias_check missing (required for any BUY/SELL)"
+    failed = []
+    for key in BIAS_KEYS:
+        if key not in bc:
+            failed.append(f"{key}:absent")
+            continue
+        passed, reason = _bias_item_pass(bc[key])
+        if not passed:
+            failed.append(f"{key}:{reason or 'fail'}")
+    if failed:
+        return False, "bias_check failed → NO_TRADE [" + "; ".join(failed) + "]"
+    return True, "bias_check clear (6/6)"
+
+
+async def call_gemini(prompt: str) -> dict:
     if not GEMINI_API_KEY:
         return {"action": "NO_TRADE", "reasoning": "GEMINI_API_KEY not set"}
+
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
     headers = {"Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY}
     payload = {
-        "contents": [{"parts": [{"text": system_prompt + "\n\n" + prompt}]}],
-        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 4096, "responseMimeType": "application/json"}
+        "contents": [{"parts": [{"text": SYSTEM_PROMPT + "\n\n" + prompt}]}],
+        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 4096,
+                             "responseMimeType": "application/json"}
     }
-    for attempt in range(retries + 1):
-        raw = ""
+
+    raw = ""
+    async with httpx.AsyncClient(timeout=60) as client:
         try:
-            async with httpx.AsyncClient(timeout=60) as client:
-                r = await client.post(url, headers=headers, json=payload)
-                if r.status_code == 429:
-                    await asyncio.sleep(min(30, 5 * (attempt + 1)))
-                    continue
-                if r.status_code != 200:
-                    log.error(f"Gemini HTTP {r.status_code}: {r.text[:300]}")
-                    if attempt < retries:
-                        await asyncio.sleep(3)
-                        continue
-                    return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}"}
-                data = r.json()
-                raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                return normalize_gemini(json.loads(raw))
+            r = await client.post(url, headers=headers, json=payload)
+            if r.status_code != 200:
+                body = r.text[:500]
+                log.error(f"Gemini HTTP {r.status_code}: {body}")
+                return {"action": "NO_TRADE", "reasoning": f"Gemini HTTP {r.status_code}"}
+            data = r.json()
+            raw = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            parsed = json.loads(raw)
+            return normalize_gemini(parsed)
         except json.JSONDecodeError:
-            log.error(f"Gemini bad JSON: {raw[:200]}")
+            log.error(f"Gemini invalid JSON: {raw[:500]}")
             try:
-                cleaned = re.sub(r'^```json\s*', '', raw)
-                cleaned = re.sub(r'\s*```$', '', cleaned)
-                if cleaned.count('{') > cleaned.count('}'):
-                    cleaned += '}' * (cleaned.count('{') - cleaned.count('}'))
-                return normalize_gemini(json.loads(cleaned))
-            except Exception:
-                if attempt < retries:
-                    await asyncio.sleep(2)
-                    continue
-                return {"action": "NO_TRADE", "reasoning": "Gemini invalid JSON"}
+                fixed = raw
+                if fixed.count('{') > fixed.count('}'):
+                    fixed += '""}' * (fixed.count('{') - fixed.count('}'))
+                parsed = json.loads(fixed)
+                return normalize_gemini(parsed)
+            except:
+                return {"action": "NO_TRADE", "reasoning": "Gemini returned invalid JSON"}
         except Exception as e:
             log.error(f"Gemini error: {e}")
-            if attempt < retries:
-                await asyncio.sleep(3)
-                continue
             return {"action": "NO_TRADE", "reasoning": str(e)}
-    return {"action": "NO_TRADE", "reasoning": "Gemini failed"}
 
 # ═══════════════════════════════════════════════════════════
-# BINANCE EXECUTION (with paper mode tracking)
+# BINANCE EXECUTION ENGINE
 # ═══════════════════════════════════════════════════════════
-def format_ccxt_pair(pair: str) -> str:
-    pair = pair.upper().strip()
-    if '/' in pair:
-        return pair
-    for quote in ['USDT', 'BUSD', 'USDC']:
-        if pair.endswith(quote):
-            return f"{pair[:-len(quote)]}/{quote}"
-    return pair
+def to_ccxt_pair(pair: str) -> str:
+    """BTCUSDT -> BTC/USDT (handles USDT and BUSD quote assets)."""
+    p = pair.upper()
+    if p.endswith("USDT"):
+        return p[:-4] + "/USDT"
+    if p.endswith("BUSD"):
+        return p[:-4] + "/BUSD"
+    return p
 
-def execute_trade(pair: str, action: str, position_size_pct: float, current_price: float,
-                  entry_price: float = 0, stop_loss: float = 0) -> tuple:
-    """Execute trade with proper risk-based sizing.
-    Returns (success, order_id_or_error, qty_filled, cost_usdt)."""
-    global paper_balance_usdt, paper_coins
 
-    entry = entry_price if entry_price > 0 else current_price
-    equity = paper_balance_usdt if PAPER_TRADING else 0
+def get_equity_usdt() -> float:
+    """Account equity used for risk sizing. Free USDT in live, PAPER_EQUITY in paper."""
+    if PAPER_TRADING or not exchange:
+        return PAPER_EQUITY
+    try:
+        bal = exchange.fetch_balance()
+        return float(bal.get("USDT", {}).get("free", 0)) or PAPER_EQUITY
+    except Exception as e:
+        log.warning(f"fetch_balance failed, using PAPER_EQUITY: {e}")
+        return PAPER_EQUITY
 
-    # Compute qty using risk-based sizing if SL is available
-    if stop_loss > 0 and entry > 0 and abs(entry - stop_loss) > 0.0001:
-        qty = compute_position_qty(equity if PAPER_TRADING else current_price * 100,
-                                   entry, stop_loss, RISK_PARAMS["max_risk_per_trade"])
-        invest = qty * entry
-    else:
-        # Fallback: use position_size_pct of cash
-        invest = equity * (position_size_pct / 100) if PAPER_TRADING else 0
-        qty = invest / current_price if current_price > 0 else 0
+
+def compute_position_qty(equity: float, entry: float, stop: float, cash_available: float = None,
+                         risk_pct: float = None) -> float:
+    """
+    Risk-based sizing: risk exactly `risk_pct` of equity on the stop distance.
+        qty = (equity * risk_pct) / |entry - stop|
+    `risk_pct` is the posture-resolved per-trade risk (Phase 4); when omitted it falls back to
+    the global RISK_PARAMS. It is always clamped to the immutable 0.5% ceiling. The capital-at-
+    risk (not notional) is what's controlled — max_total_exposure caps the SUM across open
+    positions. We additionally clamp notional to the cash available, never spending what we lack.
+    """
+    if equity <= 0 or entry <= 0 or stop <= 0:
+        return 0.0
+    stop_dist = abs(entry - stop)
+    if stop_dist < entry * 1e-6:
+        return 0.0
+    if risk_pct is None:
+        risk_pct = RISK_PARAMS["max_risk_per_trade"]
+    risk_pct = min(risk_pct, regime.HARD_LIMITS["max_risk_per_trade_ceiling"])  # hard ceiling wins
+    risk_amount = equity * risk_pct
+    qty = risk_amount / stop_dist
+    if cash_available is not None and cash_available > 0 and qty * entry > cash_available:
+        qty = cash_available / entry
+    return qty
+
+
+def open_long(pair: str, entry: float, stop: float, tp1: float, tp2: float, current_price: float,
+              risk_pct: float = None) -> tuple:
+    """
+    Open a LONG (spot market buy) sized by risk. Returns (success, info_dict | error_str).
+    info_dict: {order_id, qty, notional, equity, oco}. `risk_pct` is the posture's per-trade risk.
+    """
+    equity = get_equity_usdt()
+    eff_risk = min(risk_pct if risk_pct is not None else RISK_PARAMS["max_risk_per_trade"],
+                   regime.HARD_LIMITS["max_risk_per_trade_ceiling"])
 
     if PAPER_TRADING:
-        if action == 'BUY':
-            # Cap at available cash
-            invest = min(invest, paper_balance_usdt * 0.95)  # Keep 5% buffer
-            if invest < RISK_PARAMS["min_order_usdt"]:
-                return False, f"Paper order {invest:.2f} < min {RISK_PARAMS['min_order_usdt']}", 0, 0
-            base = pair.replace("USDT", "").replace("BUSD", "")
-            amount = invest / current_price
-            paper_balance_usdt -= invest
-            paper_coins[base] = paper_coins.get(base, 0) + amount
-            log.info(f"PAPER BUY: {pair} ${invest:.2f} = {amount:.8f} {base} (risk-sized). Bal: ${paper_balance_usdt:.2f}")
-            order_id = f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
-            return True, order_id, amount, invest
+        # Cash not really tracked in paper: bound notional by equity minus already-deployed.
+        deployed = sum(float(p.get("notional", 0)) for p in open_positions)
+        cash_available = max(0.0, equity - deployed)
+        qty = compute_position_qty(equity, entry or current_price, stop, cash_available, risk_pct=eff_risk)
+        if qty <= 0:
+            return False, "Sizing produced zero quantity (no cash budget or bad entry/stop)"
+        notional = qty * current_price
+        log.info(f"PAPER BUY {pair} qty={qty:.6f} notional={notional:.2f} "
+                 f"(risk {eff_risk:.2%} of {equity:.2f})")
+        return True, {"order_id": f"PAPER-{datetime.utcnow().strftime('%H%M%S')}",
+                      "qty": qty, "notional": notional, "equity": equity, "oco": None}
 
-        elif action == 'SELL':
-            base = pair.replace("USDT", "").replace("BUSD", "")
-            if base == 'BNB':
-                return False, "BNB protected", 0, 0
-            held = paper_coins.get(base, 0)
-            if held <= 0:
-                return False, f"No {base} to sell", 0, 0
-            sell_amount = min(held, qty) if qty > 0 else held
-            proceeds = sell_amount * current_price
-            if proceeds < RISK_PARAMS["min_order_usdt"]:
-                sell_amount = held
-                proceeds = sell_amount * current_price
-            paper_coins[base] = held - sell_amount
-            if paper_coins.get(base, 0) < 0.0000001:
-                paper_coins.pop(base, None)
-            paper_balance_usdt += proceeds
-            log.info(f"PAPER SELL: {pair} {sell_amount:.8f} = ${proceeds:.2f}. Bal: ${paper_balance_usdt:.2f}")
-            order_id = f"PAPER-{datetime.now(timezone.utc).strftime('%H%M%S%f')[:10]}"
-            return True, order_id, sell_amount, proceeds
-
-        return False, f"Unknown action: {action}", 0, 0
-
-    # Live trading
     if not exchange:
-        return False, "Binance not available", 0, 0
+        return False, "Binance exchange not configured"
+
     try:
-        if not exchange.markets:
-            exchange.load_markets()
-        ccxt_pair = format_ccxt_pair(pair)
-        balance = exchange.fetch_balance()
-
-        if action == 'BUY':
-            usdt_free = float(balance.get('USDT', {}).get('free', 0))
-            live_invest = min(invest, usdt_free * 0.95) if invest > 0 else usdt_free * (position_size_pct / 100)
-            if live_invest < RISK_PARAMS["min_order_usdt"]:
-                return False, f"Order {live_invest:.2f} < min. Free: {usdt_free:.2f}", 0, 0
-            if current_price <= 0:
-                return False, "Price is 0", 0, 0
-            amount = live_invest / current_price
-            if ccxt_pair in exchange.markets:
-                amount = float(exchange.amount_to_precision(ccxt_pair, amount))
-            order = exchange.create_order(symbol=ccxt_pair, type='market', side='buy', amount=amount)
-            log.info(f"LIVE BUY: {ccxt_pair} amt={amount} cost={live_invest:.2f} id={order['id']}")
-            return True, str(order['id']), amount, live_invest
-
-        elif action == 'SELL':
-            base_coin = ccxt_pair.split('/')[0]
-            if base_coin == 'BNB':
-                return False, "BNB protected", 0, 0
-            coin_free = float(balance.get(base_coin, {}).get('free', 0))
-            if coin_free <= 0:
-                return False, f"No {base_coin}", 0, 0
-            sell_amount = min(coin_free, qty) if qty > 0 else coin_free
-            if ccxt_pair in exchange.markets:
-                sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
-            if sell_amount * current_price < RISK_PARAMS["min_order_usdt"]:
-                sell_amount = coin_free
-                if ccxt_pair in exchange.markets:
-                    sell_amount = float(exchange.amount_to_precision(ccxt_pair, sell_amount))
-            order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=sell_amount)
-            proceeds = sell_amount * current_price
-            log.info(f"LIVE SELL: {ccxt_pair} amt={sell_amount} id={order['id']}")
-            return True, str(order['id']), sell_amount, proceeds
-
-        return False, f"Unknown: {action}", 0, 0
+        ccxt_pair = to_ccxt_pair(pair)
+        usdt_free = float(exchange.fetch_balance().get("USDT", {}).get("free", 0))
+        qty = compute_position_qty(equity, entry or current_price, stop, usdt_free, risk_pct=eff_risk)
+        if qty <= 0:
+            return False, "Sizing produced zero quantity (insufficient cash or bad entry/stop)"
+        notional = qty * current_price
+        if notional < 5:
+            return False, f"Notional {notional:.2f} USDT below Binance minimum (5)"
+        qty = float(exchange.amount_to_precision(ccxt_pair, qty))
+        if qty <= 0:
+            return False, "Quantity rounds to zero at exchange precision"
+        order = exchange.create_order(symbol=ccxt_pair, type="market", side="buy", amount=qty)
+        filled_qty = float(order.get("filled") or qty)
+        log.info(f"BINANCE BUY {ccxt_pair} qty={filled_qty:.6f} order_id={order['id']}")
+        oco = place_protective_oco(ccxt_pair, filled_qty, stop, tp1, tp2)
+        return True, {"order_id": str(order["id"]), "qty": filled_qty,
+                      "notional": filled_qty * current_price, "equity": equity, "oco": oco}
     except Exception as e:
-        log.error(f"Binance error: {e}")
-        return False, str(e), 0, 0
+        log.error(f"Binance open_long error: {e}")
+        return False, str(e)
+
+
+def place_protective_oco(ccxt_pair: str, qty: float, stop: float, tp1: float, tp2: float):
+    """
+    Server-side safety net (LIVE only): an OCO sell that protects the position even if
+    this bot process dies. Take-profit = tp1 (closest target), stop = stop_loss.
+    Best-effort: failures are logged but do not abort the trade (the monitor still guards it).
+    Returns the OCO order-list id or None.
+    """
+    if PAPER_TRADING or not exchange:
+        return None
+    try:
+        tp_price = float(exchange.price_to_precision(ccxt_pair, tp1))
+        stop_price = float(exchange.price_to_precision(ccxt_pair, stop))
+        stop_limit = float(exchange.price_to_precision(ccxt_pair, stop * 0.999))
+        amount = float(exchange.amount_to_precision(ccxt_pair, qty))
+        resp = exchange.private_post_order_oco({
+            "symbol": exchange.market(ccxt_pair)["id"],
+            "side": "SELL",
+            "quantity": amount,
+            "price": tp_price,                 # take-profit limit
+            "stopPrice": stop_price,           # stop trigger
+            "stopLimitPrice": stop_limit,      # stop-limit price
+            "stopLimitTimeInForce": "GTC",
+        })
+        oco_id = resp.get("orderListId")
+        log.info(f"OCO placed {ccxt_pair} tp={tp_price} stop={stop_price} listId={oco_id}")
+        return oco_id
+    except Exception as e:
+        log.error(f"OCO placement failed for {ccxt_pair} (monitor will still guard): {e}")
+        return None
+
+
+def cancel_protective_oco(ccxt_pair: str, oco_id):
+    """Cancel a resting OCO before the monitor market-closes (LIVE only)."""
+    if PAPER_TRADING or not exchange or oco_id is None:
+        return
+    try:
+        exchange.private_delete_orderlist({
+            "symbol": exchange.market(ccxt_pair)["id"],
+            "orderListId": oco_id,
+        })
+        log.info(f"Cancelled OCO {oco_id} on {ccxt_pair}")
+    except Exception as e:
+        log.warning(f"Could not cancel OCO {oco_id} (may already be filled): {e}")
+
+
+def market_sell(ccxt_pair: str, qty: float) -> tuple:
+    """Market-sell an exact quantity to close a position (LIVE only). Returns (ok, info)."""
+    if PAPER_TRADING:
+        return True, f"PAPER-SELL-{datetime.utcnow().strftime('%H%M%S')}"
+    if not exchange:
+        return False, "Binance exchange not configured"
+    try:
+        # Don't oversell: clamp to free balance (handles dust / already-filled OCO).
+        base = ccxt_pair.split("/")[0]
+        free = float(exchange.fetch_balance().get(base, {}).get("free", 0))
+        sell_qty = min(qty, free)
+        if sell_qty <= 0:
+            return False, f"No {base} balance to sell (position likely already closed)"
+        sell_qty = float(exchange.amount_to_precision(ccxt_pair, sell_qty))
+        order = exchange.create_order(symbol=ccxt_pair, type="market", side="sell", amount=sell_qty)
+        log.info(f"BINANCE SELL {ccxt_pair} qty={sell_qty:.6f} order_id={order['id']}")
+        return True, str(order["id"])
+    except Exception as e:
+        log.error(f"Binance market_sell error: {e}")
+        return False, str(e)
 
 # ═══════════════════════════════════════════════════════════
-# RISK MANAGEMENT
+# RISK MANAGER + STALE SIGNAL + VALIDATION
 # ═══════════════════════════════════════════════════════════
-def reset_pnl_if_needed():
-    global daily_pnl, weekly_pnl, last_daily_reset, last_weekly_reset
-    now = datetime.now(timezone.utc)
-    if now.date() != last_daily_reset:
-        log.info(f"Daily PnL reset: {daily_pnl:.4f} → 0")
-        daily_pnl = 0.0
-        last_daily_reset = now.date()
-    if now.isocalendar()[1] != last_weekly_reset:
-        log.info(f"Weekly PnL reset: {weekly_pnl:.4f} → 0")
-        weekly_pnl = 0.0
-        last_weekly_reset = now.isocalendar()[1]
-
 def check_kill_switches():
-    reset_pnl_if_needed()
-    if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
-        return True, f"Daily DD {daily_pnl:.2%}"
-    if weekly_pnl <= RISK_PARAMS["weekly_drawdown_kill"]:
-        return True, f"Weekly DD {weekly_pnl:.2%}"
-    if consecutive_losses >= RISK_PARAMS["max_consecutive_losses"]:
-        return True, f"Circuit breaker: {consecutive_losses} losses"
+    refresh_pnl_window()
+    if daily_pnl <= regime.HARD_LIMITS["daily_drawdown_kill"]:
+        return True, f"Daily DD {daily_pnl:.2%} > {regime.HARD_LIMITS['daily_drawdown_kill']:.2%}"
+    if weekly_pnl <= regime.HARD_LIMITS["weekly_drawdown_kill"]:
+        return True, f"Weekly DD {weekly_pnl:.2%} > {regime.HARD_LIMITS['weekly_drawdown_kill']:.2%}"
+    if consecutive_losses >= regime.HARD_LIMITS["max_consecutive_losses"]:
+        return True, f"{consecutive_losses} consecutive losses >= {regime.HARD_LIMITS['max_consecutive_losses']}"
     return False, ""
+
 
 def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     action = str(decision.get("action", "")).upper()
@@ -881,98 +762,113 @@ def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     entry = float(decision.get("entry_price") or signal.get("price") or 0)
     current = get_current_price(pair, market_ctx)
     if current <= 0:
-        return True, f"Price unavailable for {pair}"
+        return True, f"Cannot validate: market price unavailable for {pair}"
     if entry <= 0:
-        return True, "entry_price is 0"
+        return True, "Cannot validate: entry_price is 0"
     drift = abs(current - entry) / entry
     atr = float(signal.get("atr", 0) or 0)
-    sig_price = float(signal.get("price", 0) or 0)
-    threshold = (atr / sig_price) if (atr > 0 and sig_price > 0) else RISK_PARAMS["max_entry_drift_pct"]
-    threshold = max(0.003, min(0.02, threshold))
+    signal_price = float(signal.get("price", 0) or 0)
+    threshold = (atr / signal_price) if (atr > 0 and signal_price > 0) else RISK_PARAMS["max_entry_drift_pct"]
     if drift > threshold:
-        return True, f"Stale: {current:.2f} drifted {drift:.2%} from {entry:.2f}"
+        return True, f"Stale: price {current:.2f} drifted {drift:.2%} from entry {entry:.2f} (threshold {threshold:.2%})"
     return False, ""
 
-def get_diversification() -> str:
-    """Calculate current asset diversification for prompt."""
-    if not open_positions:
-        return "No open positions. Free to diversify across BTC, ETH, SOL."
-    by_pair = {}
-    for p in open_positions:
-        pair = p.pair
-        by_pair[pair] = by_pair.get(pair, 0) + 1
-    parts = [f"{pair}: {count} position(s)" for pair, count in by_pair.items()]
-    return "Current: " + ", ".join(parts)
 
-def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
+def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None, params: dict = None):
+    # `params` carries the posture-resolved thresholds for THIS signal (Phase 4); it falls back
+    # to the global RISK_PARAMS so older callers/tests still work. Hard limits (BNB, exposure,
+    # kill switches, 1-position-per-pair) are enforced from the immutable regime.HARD_LIMITS,
+    # never from `params`, so no posture can relax them.
+    params = params or RISK_PARAMS
     pair = d.get("pair", "").upper()
     action = str(d.get("action", "NO_TRADE")).upper()
-    direction = str(d.get("direction", "")).upper()
 
-    if any(p in pair for p in RISK_PARAMS["protected_assets"]):
-        return False, f"BLOCKED: {pair} (BNB)"
+    if any(p in pair for p in regime.HARD_LIMITS["protected_assets"]):
+        return False, f"BLOCKED: {pair} is protected (BNB)"
     if action == "NO_TRADE":
-        return False, d.get("reasoning", "NO_TRADE")
-
-    # SPOT-ONLY: reject SHORT signals (banbot recommendation)
-    if action == "SELL" and direction == "SHORT" and not any(
-        p.pair.upper() == pair and p.direction == "LONG" for p in open_positions
-    ):
-        return False, "SHORT rejected: spot-only mode, no LONG position to close"
-
+        return False, d.get("reasoning", "Model decided NO_TRADE")
+    # DEFENSIVE posture (panic/chaos): manage open positions only, open nothing new.
+    if params.get("no_new_trades"):
+        return False, "DEFENSIVE posture: no new trades (manage open positions only)"
+    # Spot account: only LONG (BUY) can open a position. SHORT/SELL can't be opened on spot.
+    if action == "SELL" or str(d.get("direction", "")).upper() == "SHORT":
+        return False, "SHORT/SELL not supported on spot account (long-only)"
     if not d.get("checklist_pass", False):
-        return False, "Checklist failed"
-    if signal and market_ctx:
-        is_stale, msg = stale_signal_check(signal, d, market_ctx)
-        if is_stale:
-            return False, msg
-    conf = float(d.get("confidence", 0) or 0)
-    if conf < RISK_PARAMS["min_confidence"]:
-        return False, f"Confidence {conf:.0f}% < {RISK_PARAMS['min_confidence']}%"
-    if d.get("confluence_score", 0) < RISK_PARAMS["min_confluence"]:
-        return False, f"Confluence < {RISK_PARAMS['min_confluence']}"
+        return False, "Checklist did not pass"
+    # Hard limit: at most one open position per pair.
+    if sum(1 for p in open_positions if str(p.get("pair", "")).upper() == pair) >= regime.HARD_LIMITS["max_positions_per_pair"]:
+        return False, f"Already at max {regime.HARD_LIMITS['max_positions_per_pair']} position(s) on {pair}"
 
-    entry = float(d.get("entry_price", 0) or 0)
-    sl = float(d.get("stop_loss", 0) or 0)
-    tp1 = float(d.get("take_profit_1", 0) or 0)
+    # Data-quality gate (Phase 3): if too few reliable sources, or the traded pair's price could
+    # not be cross-validated (anti-bias #6: sources disagree), stand aside — never trade blind.
+    if market_ctx is not None:
+        if market_ctx.get("solo_observation"):
+            return False, ("SOLO-OBSERVATION: >=2 critical data sources down "
+                           f"({market_ctx.get('critical_down')}) — no new trades")
+        price_reliable = market_ctx.get("price_reliable", {})
+        if pair in price_reliable and not price_reliable[pair]:
+            return False, f"Data unreliable: {pair} price sources disagree >1% — NO_TRADE (anti-bias #6)"
+
+    # GRAHAM ANTI-BIAS GATE (implacable): all 6 checks must pass, and the pre-mortem
+    # bear_case must be articulated. A failing/absent check forces NO_TRADE.
+    bias_ok, bias_reason = evaluate_bias_check(d)
+    if not bias_ok:
+        return False, bias_reason
+    if not str(d.get("bear_case", "")).strip():
+        return False, "No bear_case (pre-mortem) provided — required for any entry"
+
+    if signal and market_ctx:
+        is_stale, stale_msg = stale_signal_check(signal, d, market_ctx)
+        if is_stale:
+            return False, stale_msg
+
+    # Mr. Market contrarian guard: don't buy what the crowd wildly over-estimates.
+    if MRMARKET_ENABLED and market_ctx and action == "BUY":
+        vstate = market_ctx.get("valuation_state", "DISABLED")
+        vscore = market_ctx.get("mispricing_score", 0)
+        if MRMARKET_BLOCK_EUPHORIA and vstate == "EUPHORIC":
+            return False, f"Mr.Market: market EUPHORIC (mispricing {vscore}) — refuse to buy crowd over-estimation"
+        if vstate == "OVERVALUED" and float(d.get("confidence", 0) or 0) < params["min_confidence"] + 10:
+            return False, f"Mr.Market: OVERVALUED — require +10% confidence to buy (have {d.get('confidence')})"
+
+    conf = float(d.get("confidence", 0) or 0)
+    if conf < params["min_confidence"]:
+        return False, f"Confidence {conf:.0f}% < {params['min_confidence']}%"
+    if d.get("confluence_score", 0) < params["min_confluence"]:
+        return False, f"Confluence {d.get('confluence_score')} < {params['min_confluence']}"
+
+    entry, sl, tp1 = d.get("entry_price", 0), d.get("stop_loss", 0), d.get("take_profit_1", 0)
     if entry and sl and abs(entry - sl) < 0.0001:
-        return False, "SL = entry"
+        return False, "Invalid: stop_loss equals entry_price (zero risk)"
     if entry and sl and tp1:
         risk = abs(entry - sl)
-        if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
-            return False, f"R:R < {RISK_PARAMS['min_rr']}"
+        if risk > 0 and abs(tp1 - entry) / risk < params["min_rr"]:
+            return False, f"R:R below {params['min_rr']}"
+    # Margin of safety: the reward:risk must survive a pessimistic read. When the model reports
+    # rr_pesimista, enforce it against the posture's required R:R (never below min_rr).
+    rr_pes = float(d.get("rr_pesimista", 0) or 0)
+    if rr_pes and rr_pes < params["min_rr"]:
+        return False, f"Pessimistic R:R {rr_pes:.2f} < required {params['min_rr']}"
 
-    # Real risk validation: risk_amount = position_value * (distance_to_sl / entry)
-    if entry > 0 and sl > 0:
-        risk_per_unit = abs(entry - sl) / entry
-        pos_size_pct = d.get("position_size_pct", 0) / 100
-        actual_risk = pos_size_pct * risk_per_unit
-        if actual_risk > RISK_PARAMS["max_risk_per_trade"] * 2:
-            return False, f"Real risk {actual_risk:.3%} > 2x max_risk_per_trade"
-
-    # Exposure check
-    cur_exp = sum(p.position_size_pct / 100 for p in open_positions)
-    new_risk = d.get("position_size_pct", 0) / 100
-    if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
-        return False, f"Exposure {cur_exp + new_risk:.2%} > max"
-
-    # Diversification: max 40% in one asset
-    pair_exp = sum(p.position_size_pct / 100 for p in open_positions if p.pair.upper() == pair)
-    if pair_exp + new_risk > 0.40:
-        return False, f"{pair} would be {(pair_exp + new_risk):.0%} of portfolio (max 40%)"
-
-    # Max positions per pair
-    pair_pos = sum(1 for p in open_positions if p.pair.upper() == pair)
-    if pair_pos >= RISK_PARAMS["max_positions_per_pair"]:
-        return False, f"Max positions for {pair}"
+    # Total capital-at-risk = sum of (qty * stop_distance / equity) across open positions.
+    # By construction each risk-sized trade contributes ~max_risk_per_trade. The exposure cap
+    # is an IMMUTABLE hard limit (regime.HARD_LIMITS), never the posture's value.
+    def _risk_frac(p):
+        eq = float(p.get("equity_at_open", 0)) or 1
+        return float(p.get("qty", 0)) * abs(float(p.get("entry", 0)) - float(p.get("sl", 0))) / eq
+    cur_exp = sum(_risk_frac(p) for p in open_positions)
+    new_risk = params["max_risk_per_trade"]
+    if cur_exp + new_risk > regime.HARD_LIMITS["max_total_exposure"]:
+        return False, f"Total risk {cur_exp + new_risk:.2%} > max_total_exposure {regime.HARD_LIMITS['max_total_exposure']:.2%}"
 
     killed, reason = check_kill_switches()
     if killed:
-        return False, f"KILL: {reason}"
+        return False, f"KILL SWITCH: {reason}"
+
     return True, "All checks passed"
 
 # ═══════════════════════════════════════════════════════════
-# FEEDBACK & SHEETS
+# FEEDBACK (Sheet first, memory fallback)
 # ═══════════════════════════════════════════════════════════
 async def get_feedback(pair: str = "") -> str:
     if SHEETS_WEBAPP_URL:
@@ -985,21 +881,69 @@ async def get_feedback(pair: str = "") -> str:
                 data = r.json()
                 if data.get("ok") and data.get("feedback"):
                     return data["feedback"]
-        except Exception as e:
-            log.warning(f"Sheet feedback: {e}")
-    if len(trade_log) < 3:
-        return "Insufficient data"
-    recent = ([t for t in trade_log[-20:] if t.get("pair", "").upper() == pair.upper()][-10:]
-              if pair else trade_log[-10:])
-    if not recent:
-        return f"No trades for {pair}" if pair else "No trades"
+        except:
+            pass
+
+    return build_feedback_memory(pair)
+
+
+def _wr_breakdown(rows, key, label, min_n=3):
+    """Per-bucket win-rate breakdown (e.g. by regime or template). Returns text parts."""
+    groups = {}
+    for r in rows:
+        g = str(r.get(key, "") or "?")
+        res = r.get("resultado")
+        if res in ("WIN", "LOSS"):
+            groups.setdefault(g, [0, 0])
+            groups[g][0 if res == "WIN" else 1] += 1
+    out = []
+    for g, (w, l) in groups.items():
+        if w + l >= min_n:
+            out.append(f"{label}:{g} {w}W/{l}L({w/(w+l):.0%})")
+    return out
+
+
+def build_feedback_memory(pair: str = "") -> str:
+    """
+    Rich, actionable feedback from the in-memory trade journal (used when Sheets is absent).
+    Surfaces win rate, R:R, per-regime / per-template breakdown, and SL/TP diagnostics so the
+    LLM can learn *under which conditions* it wins or loses — not just an aggregate number.
+    """
+    closed = [t for t in trade_log if t.get("resultado") in ("WIN", "LOSS", "BREAKEVEN")]
+    if pair:
+        closed = [t for t in closed if str(t.get("pair", "")).upper() == pair.upper()]
+    recent = closed[-20:]
+    if len(recent) < 3:
+        return f"Insufficient closed trades for {pair or 'ALL'} (need 3+)"
+
     wins = sum(1 for t in recent if t.get("resultado") == "WIN")
     losses = sum(1 for t in recent if t.get("resultado") == "LOSS")
-    total = wins + losses
-    if total > 0:
-        return f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%}"
-    return "No closed trades"
+    total = wins + losses or 1
+    rr_vals = []
+    for t in recent:
+        try:
+            rr_vals.append(float(str(t.get("pnl_R", "0")).replace("R", "").replace("+", "")))
+        except (ValueError, TypeError):
+            pass
+    avg_rr = sum(rr_vals) / len(rr_vals) if rr_vals else 0
 
+    parts = [f"{pair or 'ALL'} last {len(recent)}: {wins}W/{losses}L WR:{wins/total:.0%} avgR:{avg_rr:+.2f}"]
+    # Per-context breakdowns (the "what works / what doesn't" a trader tracks).
+    parts += _wr_breakdown(recent, "regime_btc", "regime")
+    parts += _wr_breakdown(recent, "template", "tmpl")
+    parts += _wr_breakdown(recent, "valuation_state", "val")
+
+    sl_short = sum(1 for t in recent if t.get("sl_too_short") == "SÍ")
+    tp_high = sum(1 for t in recent if t.get("tp_too_high") == "SÍ")
+    if sl_short >= 2:
+        parts.append(f"⚠ {sl_short} stops too tight (price reversed our way after stop) → widen stops")
+    if tp_high >= 2:
+        parts.append(f"⚠ {tp_high} targets too far (near-misses on TP) → take profit sooner")
+    return " | ".join(parts)
+
+# ═══════════════════════════════════════════════════════════
+# SHEETS BRIDGE
+# ═══════════════════════════════════════════════════════════
 async def log_to_sheet(sheet_action: str, data: dict):
     if not SHEETS_WEBAPP_URL:
         return {"ok": False, "error": "Sheets not configured"}
@@ -1011,144 +955,355 @@ async def log_to_sheet(sheet_action: str, data: dict):
         async with httpx.AsyncClient(timeout=30) as client:
             r = await client.post(SHEETS_WEBAPP_URL, json=payload, follow_redirects=True)
             try:
-                return r.json()
-            except Exception:
+                result = r.json()
+                log.info(f"Sheet {sheet_action}: ok={result.get('ok')} row={result.get('row','?')}")
+                return result
+            except:
+                log.warning(f"Sheet {sheet_action}: non-JSON response status={r.status_code}")
                 return {"ok": False}
     except Exception as e:
         log.warning(f"Sheet error: {e}")
         return {"ok": False, "error": str(e)}
 
 # ═══════════════════════════════════════════════════════════
+# POST-TRADE DIAGNOSTICS (the agent's "trade journal" — what to learn)
+# ═══════════════════════════════════════════════════════════
+def compute_diagnostics(pos: dict, close_price: float, motivo: str) -> dict:
+    """
+    Turn raw price excursion into the lessons a trader writes in their journal:
+      - mfe_R / mae_R: best/worst the trade got, in R multiples
+      - sl_too_short: we got stopped out but price had already moved >=1R our way
+      - tp_too_high : we exited without hitting TP after getting >=80% of the way there
+      - strategy_correct: was the directional thesis right?
+    Heuristics (standard, intentionally simple) — they bias the LLM, they don't command it.
+    """
+    entry = float(pos.get("entry") or 0)
+    sl = float(pos.get("sl") or 0)
+    tp1 = float(pos.get("tp1") or 0)
+    mfe = float(pos.get("mfe") or close_price)
+    mae = float(pos.get("mae") or close_price)
+    # Make sure the close price itself counts toward the excursion.
+    mfe = max(mfe, close_price)
+    mae = min(mae, close_price)
+
+    risk_unit = abs(entry - sl)
+    if risk_unit <= 0 or entry <= 0:
+        return {"mfe_R": 0.0, "mae_R": 0.0, "sl_too_short": "NO",
+                "tp_too_high": "NO", "strategy_correct": ""}
+
+    mfe_R = (mfe - entry) / risk_unit       # LONG: favorable = price up
+    mae_R = (entry - mae) / risk_unit       # LONG: adverse = price down (positive number)
+    tp1_R = (tp1 - entry) / risk_unit if tp1 > 0 else RISK_PARAMS["min_rr"]
+
+    stopped = "SL" in motivo.upper()
+    took_profit = "TP" in motivo.upper()
+
+    sl_too_short = "SÍ" if (stopped and mfe_R >= 1.0) else "NO"
+    tp_too_high = "SÍ" if (not took_profit and tp1_R > 0 and mfe_R >= 0.8 * tp1_R) else "NO"
+    if took_profit:
+        strategy_correct = "SÍ"
+    elif mfe_R < 0.5:
+        strategy_correct = "NO"
+    else:
+        strategy_correct = "PARCIAL"
+
+    return {"mfe_R": round(mfe_R, 2), "mae_R": round(mae_R, 2),
+            "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
+            "strategy_correct": strategy_correct}
+
+
+# ═══════════════════════════════════════════════════════════
+# POSITION CLOSE (shared by manual endpoint and the auto monitor)
+# ═══════════════════════════════════════════════════════════
+async def close_position(pos: dict, close_price: float, motivo: str = "manual") -> dict:
+    """
+    Close one open position: execute the exit (live market sell / paper sim),
+    realize PnL, persist, and log to the sheet. Returns a result summary.
+    """
+    tid = pos["trade_id"]
+    entry = float(pos.get("entry") or 0)
+    sl = float(pos.get("sl") or 0)
+    if entry <= 0 or close_price <= 0:
+        return {"error": f"Invalid prices for {tid} (entry={entry} close={close_price})"}
+
+    # Spot is long-only here, but keep the direction-aware formula for safety.
+    pnl_pct = (close_price - entry) / entry if pos.get("direction") == "LONG" else (entry - close_price) / entry
+    risk = abs(entry - sl) / entry if sl > 0 else 0
+    pnl_r = pnl_pct / risk if risk > 0 else 0
+    resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
+
+    # LIVE exit: cancel the protective OCO, then market-sell the exact position qty.
+    exit_order_id = "N/A"
+    if not PAPER_TRADING and pos.get("qty", 0) > 0:
+        cancel_protective_oco(to_ccxt_pair(pos["pair"]), pos.get("oco_id"))
+        ok, info = market_sell(to_ccxt_pair(pos["pair"]), float(pos["qty"]))
+        exit_order_id = info if ok else f"SELL_FAILED:{info}"
+        if not ok:
+            log.error(f"Close {tid}: market sell failed: {info}")
+
+    # Realize PnL as a fraction of account equity (notional_pct scales price-% to equity-%).
+    notional_pct = float(pos.get("notional_pct", 0))
+    equity_delta = pnl_pct * notional_pct
+    add_pnl(equity_delta)
+    pnl_usdt = round(pnl_pct * float(pos.get("notional", 0)), 2)
+
+    # Remove from open positions (memory + store).
+    global open_positions, consecutive_losses
+    open_positions = [p for p in open_positions if p["trade_id"] != tid]
+    store.delete_position(tid)
+
+    # Immutable hard limit: track consecutive losses (reset on any non-loss). 5 → kill switch.
+    if resultado == "LOSS":
+        consecutive_losses += 1
+    elif resultado == "WIN":
+        consecutive_losses = 0
+    store.set_kv("consecutive_losses", consecutive_losses)
+
+    # Compute the trade journal entry (real diagnostics, no longer hardcoded).
+    diag = compute_diagnostics(pos, close_price, motivo)
+
+    # Update the trade record (memory + store).
+    for t in trade_log:
+        if t["trade_id"] == tid:
+            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
+                      "precio_cierre": close_price, "motivo_cierre": motivo,
+                      "pnl_usdt": pnl_usdt, "exit_order_id": exit_order_id,
+                      "closed_at": datetime.utcnow().isoformat(),
+                      "mfe_R": diag["mfe_R"], "mae_R": diag["mae_R"],
+                      "sl_too_short": diag["sl_too_short"], "tp_too_high": diag["tp_too_high"],
+                      "strategy_correct": diag["strategy_correct"]})
+            store.upsert_trade(t)
+            break
+
+    await log_to_sheet("close_trade", {
+        "trade_id": tid, "close_price": close_price, "resultado": resultado,
+        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo, "pnl_usdt": pnl_usdt,
+        "sl_too_short": diag["sl_too_short"], "tp_too_high": diag["tp_too_high"],
+        "regime_changed": "NO", "strategy_correct": diag["strategy_correct"],
+        "post_trade_notes": f"mfe={diag['mfe_R']}R mae={diag['mae_R']}R | "
+                            f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%}",
+    })
+    log.info(f"Closed {tid}: {resultado} {pnl_r:+.2f}R pnl={pnl_usdt} mfe={diag['mfe_R']}R "
+             f"mae={diag['mae_R']}R sl_short={diag['sl_too_short']} tp_high={diag['tp_too_high']} ({motivo})")
+
+    # Learn from the result: aggressively adapt selectivity params (with hard risk floors).
+    adapt_parameters()
+
+    return {"trade_id": tid, "resultado": resultado, "pnl_r": pnl_r,
+            "pnl_usdt": pnl_usdt, "exit_order_id": exit_order_id, "diagnostics": diag}
+
+
+# ═══════════════════════════════════════════════════════════
+# PRICE FEED + BACKGROUND POSITION MONITOR
+# ═══════════════════════════════════════════════════════════
+async def fetch_price(pair: str) -> float:
+    """Current price for any pair via Binance public ticker (no keys needed)."""
+    symbol = pair.upper().replace("/", "")
+    try:
+        async with httpx.AsyncClient(timeout=10) as client:
+            r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}")
+            if r.status_code == 200:
+                return float(r.json().get("price", 0))
+    except Exception as e:
+        log.warning(f"fetch_price {symbol} failed: {e}")
+    return 0.0
+
+
+async def monitor_positions():
+    """
+    Background loop: the heart of automatic risk management. Every MONITOR_INTERVAL
+    seconds, check each open position's live price and close it when SL or TP is hit.
+    Works identically in paper and live. In live it is backed by the OCO on Binance.
+    """
+    log.info(f"Position monitor started (every {MONITOR_INTERVAL}s)")
+    while True:
+        try:
+            await asyncio.sleep(MONITOR_INTERVAL)
+            refresh_pnl_window()
+            for pos in list(open_positions):
+                price = await fetch_price(pos["pair"])
+                if price <= 0:
+                    continue
+                # Track max favorable / adverse excursion (raw material for SL/TP learning).
+                if price > float(pos.get("mfe", 0)):
+                    pos["mfe"] = price
+                    store.upsert_position(pos)
+                if price < float(pos.get("mae", price)):
+                    pos["mae"] = price
+                    store.upsert_position(pos)
+                sl = float(pos.get("sl") or 0)
+                tp1 = float(pos.get("tp1") or 0)
+                tp2 = float(pos.get("tp2") or 0)
+                # LONG-only spot logic
+                if sl > 0 and price <= sl:
+                    await close_position(pos, price, "SL_HIT")
+                elif tp2 > 0 and price >= tp2:
+                    await close_position(pos, price, "TP2_HIT")
+                elif tp1 > 0 and price >= tp1:
+                    await close_position(pos, price, "TP1_HIT")
+        except asyncio.CancelledError:
+            log.info("Position monitor stopped")
+            raise
+        except Exception as e:
+            log.error(f"Monitor loop error (continuing): {e}")
+
+
+@app.on_event("startup")
+async def _start_monitor():
+    asyncio.create_task(monitor_positions())
+
+
+# ═══════════════════════════════════════════════════════════
 # ENDPOINTS
 # ═══════════════════════════════════════════════════════════
 @app.get("/")
 async def root():
-    killed, reason = check_kill_switches()
-    return {
-        "status": "CryptoAgent running", "release": RELEASE_ID,
-        "paper_trading": PAPER_TRADING, "rag_loaded": rag.loaded,
-        "total_trades": len(trade_log), "open_positions": len(open_positions),
-        "kill_switch": killed, "binance_connected": binance_available,
-        "news_enabled": bool(CRYPTOPANIC_API_KEY),
-    }
+    return {"status": "CryptoAgent running", "release": RELEASE_ID,
+            "paper_trading": PAPER_TRADING, "rag_loaded": rag.loaded,
+            "rag_chunks": rag.chunk_count, "total_trades": len(trade_log),
+            "open_positions": len(open_positions), "satellite_pct": satellite_pct,
+            "kill_switch_active": check_kill_switches()[0],
+            "binance_connected": exchange is not None}
 
 @app.get("/health")
 async def health():
     return {"status": "ok", "release": RELEASE_ID}
 
-@app.get("/ping")
-async def ping():
-    return {"pong": True, "release": RELEASE_ID}
-
-@app.get("/balance")
-async def balance_endpoint():
-    return await get_balance()
-
 @app.get("/status")
 async def get_status():
     killed, reason = check_kill_switches()
-    bal = await get_balance()
-    return {
-        "release": RELEASE_ID, "paper_trading": PAPER_TRADING,
-        "rag": {"loaded": rag.loaded, "chunks": rag.chunk_count},
-        "state": {"trades": len(trade_log), "open": len(open_positions),
-                  "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl,
-                  "consecutive_losses": consecutive_losses},
-        "kill_switch": {"active": killed, "reason": reason},
-        "balance": bal,
-        "news_enabled": bool(CRYPTOPANIC_API_KEY),
-        "feedback": await get_feedback()
-    }
+    return {"release": RELEASE_ID, "paper_trading": PAPER_TRADING,
+            "rag": {"loaded": rag.loaded, "chunks": rag.chunk_count},
+            "personality": PERSONALITY, "risk_params": RISK_PARAMS,
+            "state": {"satellite_pct": satellite_pct, "trades": len(trade_log),
+                      "open_positions": len(open_positions),
+                      "daily_pnl": daily_pnl, "weekly_pnl": weekly_pnl,
+                      "equity": get_equity_usdt()},
+            "sizing": {"paper_equity": PAPER_EQUITY,
+                       "risk_per_trade": RISK_PARAMS["max_risk_per_trade"],
+                       "monitor_interval_sec": MONITOR_INTERVAL},
+            "learning": {"adaptive_params": {k: RISK_PARAMS[k] for k in _ADAPTABLE_KEYS},
+                         "satellite_pct": satellite_pct,
+                         "overrides": store.get_kv("risk_overrides", {}),
+                         "last_adaptation": store.get_kv("last_adaptation", None),
+                         "closed_trades": len(closed_trades(n=10000))},
+            "kill_switch": {"active": killed, "reason": reason},
+            "binance": {"connected": exchange is not None, "paper": PAPER_TRADING},
+            "hard_limits": dict(regime.HARD_LIMITS),
+            "feedback": await get_feedback()}
+
 
 @app.get("/pipeline")
-async def pipeline_status():
-    """Full trading pipeline health check."""
-    p = {}
-    p["1_tradingview"] = {"status": "Configure alerts in TradingView pointing to /webhook"}
-    p["2_webhook"] = {"status": "READY", "secret_set": bool(WEBHOOK_SECRET)}
-    p["3_rag"] = {"status": "OK" if rag.loaded else "MISSING", "chunks": rag.chunk_count}
-    p["4_market_data"] = {}
+async def pipeline():
+    """
+    End-to-end readiness self-check used by the deploy runbook. Exercises every stage the webhook
+    depends on and reports overall READY / DEGRADED / DOWN.
+
+      overall = DOWN     if any CRITICAL stage fails (RAG, GEMINI_API_KEY, WEBHOOK_SECRET, store)
+              = READY    if critical OK AND market data live AND SHEETS_WEBAPP_URL set
+              = DEGRADED  otherwise (runs, but a non-critical dependency is missing/degraded)
+    """
+    checks = {}
+    checks["rag"] = {"ok": rag.loaded, "chunks": rag.chunk_count}
+    checks["env"] = {"gemini_api_key": bool(GEMINI_API_KEY),
+                     "webhook_secret": bool(WEBHOOK_SECRET),
+                     "sheets_webapp_url": bool(SHEETS_WEBAPP_URL)}
+
+    # Store must be writable (persistence depends on it).
     try:
-        ctx = await get_market_context()
-        p["4_market_data"] = {"btc": ctx["btc_price"], "fng": ctx["fear_greed"], "news": ctx["news_sentiment"], "ok": ctx["btc_price"] > 0}
+        store.set_kv("_pipeline_check", datetime.utcnow().isoformat())
+        checks["store"] = {"ok": True, "db": store.DB_PATH}
     except Exception as e:
-        p["4_market_data"] = {"ok": False, "error": str(e)}
-    p["5_gemini"] = {"key_set": bool(GEMINI_API_KEY)}
-    p["6_validation"] = {"risk_params": RISK_PARAMS}
-    p["7_execution"] = {"mode": "PAPER" if PAPER_TRADING else "LIVE", "binance_ok": binance_available or PAPER_TRADING}
-    bal = await get_balance()
-    p["7_execution"]["balance"] = bal
-    p["8_sheets"] = {"url_set": bool(SHEETS_WEBAPP_URL)}
-    if SHEETS_WEBAPP_URL:
-        try:
-            async with httpx.AsyncClient(timeout=10) as client:
-                r = await client.get(SHEETS_WEBAPP_URL + "?action=status", follow_redirects=True)
-                p["8_sheets"]["ok"] = r.status_code == 200
-        except Exception:
-            p["8_sheets"]["ok"] = False
-    p["9_feedback_loop"] = {"status": "Sheets → feedback → Gemini prompt → refined decisions"}
-    p["10_compound"] = {"enabled": True, "current_balance": bal.get("usdt_free", 0), "initial": PAPER_BALANCE}
-    all_ok = all([rag.loaded, bool(GEMINI_API_KEY), bool(WEBHOOK_SECRET), bool(SHEETS_WEBAPP_URL), (binance_available or PAPER_TRADING)])
-    p["overall"] = "READY" if all_ok else "ISSUES_FOUND"
-    return p
+        checks["store"] = {"ok": False, "error": str(e)}
+
+    # Market data: at least the critical sources must be live (else SOLO-OBSERVATION).
+    try:
+        mc = await get_market_context("BTCUSDT")
+        checks["market_data"] = {"ok": not mc.get("solo_observation", True),
+                                 "sources_ok": mc.get("sources_ok"),
+                                 "composite_score": mc.get("composite_score"),
+                                 "solo_observation": mc.get("solo_observation"),
+                                 "degradation": mc.get("degradation")}
+    except Exception as e:
+        checks["market_data"] = {"ok": False, "error": str(e)}
+
+    checks["paper_trading"] = {"ok": True, "value": PAPER_TRADING}  # informational; live is post-gate
+    checks["kill_switch"] = {"active": check_kill_switches()[0]}
+
+    critical_ok = (checks["rag"]["ok"] and checks["env"]["gemini_api_key"]
+                   and checks["env"]["webhook_secret"] and checks["store"]["ok"])
+    if not critical_ok:
+        overall = "DOWN"
+    elif checks["market_data"]["ok"] and checks["env"]["sheets_webapp_url"]:
+        overall = "READY"
+    else:
+        overall = "DEGRADED"
+    return {"overall": overall, "release": RELEASE_ID, "paper_trading": PAPER_TRADING, "checks": checks}
+
 
 @app.post("/webhook")
 async def webhook(request: Request):
-    global trade_counter, consecutive_losses
+    global trade_counter
     body = await request.json()
-
-    if not hmac.compare_digest(str(body.get("secret", "")), WEBHOOK_SECRET):
+    if body.get("secret") != WEBHOOK_SECRET:
         raise HTTPException(status_code=401, detail="Invalid secret")
 
     pair = body.get("pair", "UNKNOWN").upper()
-    signal_type = body.get("signal_type", "N/A")
-    log.info(f"Signal: {pair} | {signal_type}")
-
-    if signal_type == "KILL_SWITCH":
-        return {"action": "KILL_SWITCH", "reason": body.get("reason")}
-    if signal_type == "REGIME_CHANGE":
-        return {"action": "INFO", "regime_change": body.get("new_regime")}
+    log.info(f"Signal: {pair} | {body.get('signal_type', 'N/A')}")
 
     sig_hash = hashlib.md5(json.dumps(body, sort_keys=True).encode()).hexdigest()[:12]
-    if sig_hash in seen_signals:
-        return {"action": "DUPLICATE"}
-    seen_signals.add(sig_hash)
+    if store.has_seen(sig_hash):
+        return {"action": "DUPLICATE", "reason": "Signal already processed"}
+    store.add_seen(sig_hash)
+    store.prune_seen(keep=500)
 
-    if any(p in pair for p in RISK_PARAMS["protected_assets"]):
-        return {"action": "BLOCKED", "reason": "BNB protected"}
+    if any(p in pair for p in regime.HARD_LIMITS["protected_assets"]):
+        return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB)"}
 
     killed, kill_reason = check_kill_switches()
     if killed:
         return {"action": "BLOCKED", "reason": kill_reason}
 
-    # Gather all context
-    market_ctx = await get_market_context()
+    market_ctx = await get_market_context(pair)
     current_price = get_current_price(pair, market_ctx)
 
-    # Track price for range detection
-    range_detector.add_price(pair, current_price)
-    range_data = range_detector.detect_range(pair)
+    # Mr. Market behavioral valuation: is the crowd under/over-estimating this price right now?
+    mrmarket = {"valuation_state": "DISABLED", "mispricing_score": 0.0, "cluster": "n/a", "rationale": ""}
+    if MRMARKET_ENABLED:
+        try:
+            mrmarket = await valuation.analyze(pair, market_ctx.get("fear_greed", 50))
+            market_ctx["valuation_state"] = mrmarket["valuation_state"]
+            market_ctx["mispricing_score"] = mrmarket["mispricing_score"]
+            market_ctx["behavioral_cluster"] = mrmarket["cluster"]
+            # Populate funding (previously always 0) from the per-pair read.
+            if mrmarket.get("features", {}).get("funding") is not None:
+                market_ctx["btc_funding"] = mrmarket["features"]["funding"]
+            log.info(f"Mr.Market {pair}: {mrmarket['valuation_state']} "
+                     f"score={mrmarket['mispricing_score']} cluster={mrmarket['cluster']}")
+        except Exception as e:
+            log.warning(f"Mr.Market analysis failed: {e}")
 
-    bal = await get_balance()
-    rag_context = rag.build_context(
-        f"{signal_type} {pair} {body.get('regime','')} {body.get('template','')} risk management range",
-        k=5, max_words=1500
-    )
+    rag_query = f"{body.get('signal_type','')} {pair} {body.get('regime','')} {body.get('template','')} risk management"
+    rag_context = rag.build_context(rag_query, k=5, max_words=1500)
     feedback = await get_feedback(pair=pair)
-    diversification = get_diversification()
 
-    # Build prompts
-    system_prompt = SYSTEM_PROMPT_TEMPLATE.format(available_balance=json.dumps(bal))
-    news_ctx = f"Sentiment: {market_ctx.get('news_sentiment', 'neutral')}, Score: {market_ctx.get('news_score', 0)}/100"
-    if market_ctx.get("news_headlines"):
-        news_ctx += "\nTop headlines: " + " | ".join(market_ctx["news_headlines"][:3])
-
+    policy = (f"min_confidence={RISK_PARAMS['min_confidence']}%, "
+              f"min_confluence={RISK_PARAMS['min_confluence']}, "
+              f"min_RR={RISK_PARAMS['min_rr']}, "
+              f"stop=sl_atr_mult×ATR (sl_atr_mult={RISK_PARAMS['sl_atr_mult']})")
+    valuation_txt = (f"{mrmarket['valuation_state']} (mispricing={mrmarket['mispricing_score']}, "
+                     f"cluster={mrmarket['cluster']}) — {mrmarket['rationale']}")
+    # Phase 4: pick the posture from the live regime and resolve the per-signal thresholds
+    # (clamped to the immutable hard limits). DEFENSIVE → skip the model entirely (no new trades).
+    posture_name, posture_reason = regime.select_posture(market_ctx, body)
+    eff_params = regime.resolve_params(posture_name, RISK_PARAMS, RISK_FLOORS)
+    log.info(f"Posture {posture_name}: {posture_reason} | risk={eff_params['max_risk_per_trade']:.2%} "
+             f"confl>={eff_params['min_confluence']} RR>={eff_params['min_rr']} conf>={eff_params['min_confidence']}")
+    posture_txt = (f"{posture_name} — {posture_reason} | risk_per_trade={eff_params['max_risk_per_trade']:.2%} "
+                   f"min_confluence={eff_params['min_confluence']} min_RR={eff_params['min_rr']} "
+                   f"min_confidence={eff_params['min_confidence']}")
     prompt = TRADE_PROMPT.format(
-        market_context=json.dumps({k: v for k, v in market_ctx.items() if k != "news_headlines"}),
-        fng_value=market_ctx.get("fear_greed", 50),
-        fng_label=market_ctx.get("fear_greed_label", "Neutral"),
-        news_context=news_ctx,
-        range_context=json.dumps(range_data),
+        market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
         signal=json.dumps(body),
         current_price=f"{current_price:.2f}",
@@ -1156,95 +1311,130 @@ async def webhook(request: Request):
         daily_pnl=f"{daily_pnl:.2%}",
         weekly_pnl=f"{weekly_pnl:.2%}",
         satellite_pct=satellite_pct,
-        consecutive_losses=consecutive_losses,
-        available_usdt=f"{bal.get('usdt_free', 0):.2f}",
-        diversification=diversification,
-        feedback=feedback
+        valuation=valuation_txt,
+        policy=policy,
+        feedback=feedback,
+        posture=posture_txt,
     )
 
-    decision = await call_gemini(prompt, system_prompt)
-    is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx)
+    if eff_params.get("no_new_trades"):
+        # DEFENSIVE posture: don't even call the model — log a disciplined NO_TRADE.
+        decision = {"action": "NO_TRADE", "pair": pair,
+                    "reasoning": f"DEFENSIVE posture: {posture_reason}",
+                    "bias_check": {}, "bear_case": "", "rr_pesimista": 0}
+    else:
+        decision = await call_gemini(prompt)
+    decision["posture_used"] = posture_name  # server-computed posture is authoritative
+    is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx, params=eff_params)
 
     trade_counter += 1
+    store.set_kv("trade_counter", trade_counter)
     trade_id = f"T-{trade_counter:04d}"
 
+    # Execute on Binance if valid (BUY = open long; SELL/SHORT already rejected in validate_trade)
     binance_order_id = "N/A"
-    qty_filled = 0.0
-    cost_usdt = 0.0
-    if is_valid and decision.get("action") in ("BUY", "SELL"):
-        success, exec_msg, qty_filled, cost_usdt = execute_trade(
+    exec_info = None
+    if is_valid and decision.get("action") == "BUY":
+        success, exec_result = open_long(
             pair=decision.get("pair", pair),
-            action=decision.get("action"),
-            position_size_pct=decision.get("position_size_pct", 0),
+            entry=float(decision.get("entry_price") or current_price),
+            stop=float(decision.get("stop_loss") or 0),
+            tp1=float(decision.get("take_profit_1") or 0),
+            tp2=float(decision.get("take_profit_2") or 0),
+            risk_pct=eff_params["max_risk_per_trade"],
             current_price=current_price,
-            entry_price=decision.get("entry_price", 0),
-            stop_loss=decision.get("stop_loss", 0),
         )
         if not success:
             is_valid = False
-            validation_msg = f"Execution: {exec_msg}"
+            validation_msg = f"Binance error: {exec_result}"
         else:
-            binance_order_id = exec_msg
+            exec_info = exec_result
+            binance_order_id = exec_info["order_id"]
 
     record = {
-        "trade_id": trade_id, "timestamp": datetime.now(timezone.utc).isoformat(),
+        "trade_id": trade_id, "timestamp": datetime.utcnow().isoformat(),
         "pair": decision.get("pair", pair), "direction": decision.get("direction", ""),
         "bucket": decision.get("bucket", ""), "template": decision.get("template", ""),
         "regime_btc": decision.get("regime_btc", ""), "trend_regime": decision.get("trend_regime", ""),
         "vol_regime": decision.get("vol_regime", ""), "fear_greed": market_ctx.get("fear_greed", ""),
         "funding_rate": market_ctx.get("btc_funding", ""),
+        "composite_score": market_ctx.get("composite_score", ""),
+        "news_score": market_ctx.get("news_score", ""),
+        "fear_greed_trend": market_ctx.get("fear_greed_trend", ""),
         "confluence_score": decision.get("confluence_score", 0),
         "confidence": decision.get("confidence", 0),
-        "entry_price": decision.get("entry_price", 0), "stop_loss": decision.get("stop_loss", 0),
-        "take_profit_1": decision.get("take_profit_1", 0), "take_profit_2": decision.get("take_profit_2", 0),
+        "entry_price": decision.get("entry_price", 0),
+        "stop_loss": decision.get("stop_loss", 0),
+        "take_profit_1": decision.get("take_profit_1", 0),
+        "take_profit_2": decision.get("take_profit_2", 0),
         "position_size_pct": decision.get("position_size_pct", 0),
         "edge_description": decision.get("edge_description", ""),
         "ejecutado": is_valid and decision.get("action") != "NO_TRADE",
         "motivo_no_ejecutar": "" if is_valid else validation_msg,
         "reasoning": decision.get("reasoning", ""),
+        # Graham engine: pre-mortem, posture and the anti-bias audit trail (feeds the learning loop).
+        "bear_case": decision.get("bear_case", ""),
+        "posture_used": decision.get("posture_used", ""),
+        "posture_reason": posture_reason,
+        "rr_pesimista": decision.get("rr_pesimista", 0),
+        "bias_check": json.dumps(decision.get("bias_check", {}), ensure_ascii=False),
         "decision_action": decision.get("action", "NO_TRADE"),
-        "signal_price": body.get("price", 0), "current_market_price": current_price,
-        "signal_hash": sig_hash, "release": RELEASE_ID,
-        "feedback_used": feedback, "binance_order_id": binance_order_id,
+        "signal_price": body.get("price", 0),
+        "current_market_price": current_price,
+        "signal_hash": sig_hash,
+        "release": RELEASE_ID,
+        "feedback_used": feedback,
+        "binance_order_id": binance_order_id,
         "execution_mode": "PAPER" if PAPER_TRADING else "LIVE",
-        "news_sentiment": market_ctx.get("news_sentiment", ""),
-        "news_score": market_ctx.get("news_score", 0),
-        "range_detected": range_data.get("is_ranging", False),
-        "range_position": range_data.get("range_position", 0),
+        "qty": exec_info["qty"] if exec_info else 0,
+        "notional_usdt": round(exec_info["notional"], 2) if exec_info else 0,
+        "equity_at_open": round(exec_info["equity"], 2) if exec_info else 0,
+        "valuation_state": mrmarket.get("valuation_state", ""),
+        "mispricing_score": mrmarket.get("mispricing_score", 0),
+        "behavioral_cluster": mrmarket.get("cluster", ""),
     }
     trade_log.append(record)
-    await log_to_sheet("log_trade", record)
+    store.upsert_trade(record)
+    sheet_result = await log_to_sheet("log_trade", record)
+    log.info(f"Trade {trade_id}: action={decision.get('action')} valid={is_valid} binance={binance_order_id} sheet={sheet_result.get('ok') if isinstance(sheet_result, dict) else 'N/A'}")
 
-    if is_valid and decision.get("action") != "NO_TRADE":
-        pos_pair = decision.get("pair", pair)
-        pos_size_pct = decision.get("position_size_pct", 0)
+    if is_valid and decision.get("action") == "BUY" and exec_info:
+        equity = exec_info["equity"] or PAPER_EQUITY
+        position = {
+            "trade_id": trade_id, "pair": decision.get("pair", pair),
+            "direction": "LONG", "bucket": decision.get("bucket"),
+            # entry recorded at the actual fill (current market price), not the stale signal price
+            "entry": current_price,
+            "sl": float(decision.get("stop_loss") or 0),
+            "tp1": float(decision.get("take_profit_1") or 0),
+            "tp2": float(decision.get("take_profit_2") or 0),
+            "qty": exec_info["qty"],
+            "notional": exec_info["notional"],
+            # fraction of equity this position represents (used to convert price-% PnL to equity-% PnL)
+            "notional_pct": (exec_info["notional"] / equity) if equity > 0 else 0,
+            "equity_at_open": equity,
+            "opened_at": datetime.utcnow().isoformat(),
+            "binance_order_id": binance_order_id,
+            "oco_id": exec_info.get("oco"),
+            # Excursion tracking (max favorable / adverse price seen) — fuels SL/TP learning.
+            "mfe": current_price,
+            "mae": current_price,
+            # Snapshot of the regime/template the decision was made under, for per-context learning.
+            "regime_btc": decision.get("regime_btc", ""),
+            "template": decision.get("template", ""),
+            "confluence_score": decision.get("confluence_score", 0),
+            "valuation_state": mrmarket.get("valuation_state", ""),
+        }
+        open_positions.append(position)
+        store.upsert_position(position)
 
-        pos_obj = Position(
-            trade_id=trade_id, pair=pos_pair,
-            direction=decision.get("direction", "LONG"),
-            entry=decision.get("entry_price", current_price),
-            sl=decision.get("stop_loss", 0),
-            tp1=decision.get("take_profit_1", 0),
-            tp2=decision.get("take_profit_2", 0),
-            qty=qty_filled,            # Exact fill from execute_trade
-            cost_usdt=cost_usdt,       # Exact cost from execute_trade
-            position_size_pct=pos_size_pct,
-            bucket=decision.get("bucket", "CORE"),
-            template=decision.get("template", ""),
-            opened_at=datetime.now(timezone.utc).isoformat(),
-            order_id=binance_order_id,
-        )
-        open_positions.append(pos_obj)
-
-    return {
-        "trade_id": trade_id,
-        "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
-        "executed": is_valid and decision.get("action") != "NO_TRADE",
-        "paper_mode": PAPER_TRADING,
-        "binance_order_id": binance_order_id,
-        "decision": decision, "validation": validation_msg,
-        "balance": bal, "range": range_data,
-    }
+    return {"trade_id": trade_id,
+            "action": decision.get("action", "NO_TRADE") if is_valid else "REJECTED",
+            "executed": is_valid and decision.get("action") != "NO_TRADE",
+            "paper_mode": PAPER_TRADING,
+            "binance_order_id": binance_order_id,
+            "decision": decision,
+            "validation": validation_msg, "market_context": market_ctx}
 
 @app.get("/trades")
 async def get_trades():
@@ -1252,314 +1442,24 @@ async def get_trades():
 
 @app.get("/positions")
 async def get_positions():
-    return {"count": len(open_positions), "positions": [p.to_dict() for p in open_positions]}
-
-@app.get("/range/{pair}")
-async def get_range(pair: str):
-    """Get range detection data for a pair."""
-    return range_detector.detect_range(pair.upper())
-
-@app.get("/check-positions")
-async def check_positions_endpoint():
-    """Position monitor: scan all positions, auto-execute exits on SL/TP/trailing/time triggers."""
-    market_ctx = await get_market_context()
-    current_prices = {
-        "BTCUSDT": market_ctx.get("btc_price", 0),
-        "ETHUSDT": market_ctx.get("eth_price", 0),
-        "SOLUSDT": market_ctx.get("sol_price", 0),
-    }
-    for pos in list(open_positions):
-        price = current_prices.get(pos.pair.upper(), 0)
-        if price > 0:
-            pos.update_price(price)
-
-    exits = await check_positions_for_exits(current_prices)
-    executed = []
-    for ex in exits:
-        result = await _execute_close(ex["trade_id"], ex["price"], ex["reason"])
-        executed.append(result)
-
-    return {
-        "checked": len(open_positions) + len(executed),
-        "exits_executed": executed,
-        "positions_remaining": [p.to_dict() for p in open_positions],
-    }
-
-
-async def _execute_close(tid: str, cp: float, motivo: str, body_extra: dict = None) -> dict:
-    """Shared close logic for /close-trade and /check-positions auto-closer."""
-    global daily_pnl, weekly_pnl, consecutive_losses, paper_balance_usdt, paper_coins
-
-    pos = next((p for p in open_positions if p.trade_id == tid), None)
-    if not pos:
-        return {"trade_id": tid, "error": "not found"}
-
-    entry = pos.entry
-    sl = pos.sl
-    tp1 = pos.tp1
-    tp2 = pos.tp2
-    pair = pos.pair.upper()
-    base_coin = pos.base_coin
-    direction = pos.direction
-
-    if entry <= 0:
-        return {"trade_id": tid, "error": "invalid entry"}
-
-    # Auto-detect reason
-    if motivo == "auto":
-        detected = pos.check_exit(cp)
-        if detected:
-            motivo = detected
-
-    # PnL
-    pnl_pct = (cp - entry) / entry if direction == "LONG" else (entry - cp) / entry
-    risk = abs(entry - sl) / entry if sl > 0 else 0
-    pnl_r = pnl_pct / risk if risk > 0 else 0
-    resultado = "WIN" if pnl_pct > 0 else "LOSS" if pnl_pct < 0 else "BREAKEVEN"
-
-    # SL/TP quality analysis for self-learning
-    sl_too_short = "NO"
-    tp_too_high = "NO"
-    if resultado == "LOSS" and sl > 0 and direction == "LONG":
-        if abs(entry - sl) / entry < 0.005:
-            sl_too_short = "YES"
-    if resultado == "LOSS" and tp1 > 0 and direction == "LONG":
-        if pos.highest_price > entry and pos.highest_price < tp1:
-            tp_too_high = "YES"
-
-    # Determine sell qty — TP1 partial vs full
-    is_partial = False
-    sell_qty = pos.qty_remaining
-
-    if motivo == "take_profit_1_hit" and not pos.tp1_hit and pos.qty_remaining > 0:
-        sell_qty = pos.qty_remaining * 0.5
-        is_partial = True
-        pos.tp1_hit = True
-        pos.trailing_active = True
-        pos.qty_remaining -= sell_qty
-        pos.trailing_sl = pos.entry  # Breakeven
-        pos.status = "PARTIALLY_CLOSED"
-        log.info(f"TP1 PARTIAL {tid}: sold 50% ({sell_qty:.8f}), trailing ON, SL→{pos.entry:.2f}")
-    else:
-        sell_qty = pos.qty_remaining
-        pos.qty_remaining = 0
-        pos.status = "CLOSED"
-
-    # Execute liquidation
-    pnl_usdt = 0.0
-    if PAPER_TRADING:
-        if direction == "LONG" and sell_qty > 0:
-            proceeds = sell_qty * cp
-            pnl_usdt = proceeds - (sell_qty * entry)
-            held = paper_coins.get(base_coin, 0)
-            paper_coins[base_coin] = max(0, held - sell_qty)
-            if paper_coins.get(base_coin, 0) < 0.0000001:
-                paper_coins.pop(base_coin, None)
-            paper_balance_usdt += proceeds
-            log.info(f"PAPER CLOSE {'PARTIAL' if is_partial else 'FULL'} {tid}: "
-                     f"{sell_qty:.8f} {base_coin} @ {cp:.2f} = ${proceeds:.2f} (P&L: ${pnl_usdt:+.2f})")
-        elif direction == "SHORT":
-            pv = pos.cost_usdt * (sell_qty / pos.qty if pos.qty > 0 else 1)
-            pnl_usdt = pv * pnl_pct
-            paper_balance_usdt += pnl_usdt
-    else:
-        if exchange and direction == "LONG" and sell_qty > 0:
-            try:
-                ccxt_pair = format_ccxt_pair(pair)
-                sq = float(exchange.amount_to_precision(ccxt_pair, sell_qty)) if ccxt_pair in getattr(exchange, 'markets', {}) else sell_qty
-                order = exchange.create_order(symbol=ccxt_pair, type='market', side='sell', amount=sq)
-                pnl_usdt = sq * (cp - entry)
-                log.info(f"LIVE CLOSE {tid}: {sq} {base_coin}, order={order['id']}")
-            except Exception as e:
-                log.error(f"LIVE CLOSE {tid}: {e}")
-
-    # Update tracking
-    wpnl = (pnl_pct * 0.5 if is_partial else pnl_pct) * (pos.position_size_pct / 100)
-    daily_pnl += wpnl
-    weekly_pnl += wpnl
-
-    if resultado == "LOSS":
-        consecutive_losses += 1
-    elif resultado == "WIN":
-        consecutive_losses = 0
-
-    if not is_partial:
-        if pos in open_positions:
-            open_positions.remove(pos)
-
-    for t in trade_log:
-        if t["trade_id"] == tid:
-            t.update({"resultado": resultado, "pnl_R": f"{pnl_r:+.2f}R",
-                       "precio_cierre": cp, "motivo_cierre": motivo, "pnl_usdt": round(pnl_usdt, 2)})
-
-    duration_hours = ""
-    try:
-        opened = datetime.fromisoformat(pos.opened_at.replace('Z', '+00:00'))
-        duration_hours = f"{(datetime.now(timezone.utc) - opened).total_seconds() / 3600:.1f}"
-    except Exception:
-        pass
-
-    await log_to_sheet("close_trade", {
-        "trade_id": tid, "close_price": cp, "resultado": resultado,
-        "pnl_R": f"{pnl_r:+.2f}R", "motivo_cierre": motivo, "pnl_usdt": round(pnl_usdt, 2),
-        "duration_hours": duration_hours, "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
-        "post_trade_notes": f"Daily:{daily_pnl:.2%} Weekly:{weekly_pnl:.2%} Losses:{consecutive_losses}"
-    })
-
-    log.info(f"CLOSE {tid}: {resultado} {motivo} pnl_r={pnl_r:+.2f}R ${pnl_usdt:+.2f} partial={is_partial}")
-    return {
-        "trade_id": tid, "resultado": resultado, "motivo": motivo,
-        "pnl_r": round(pnl_r, 2), "pnl_pct": round(pnl_pct * 100, 2),
-        "pnl_usdt": round(pnl_usdt, 2), "partial": is_partial,
-        "sl_too_short": sl_too_short, "tp_too_high": tp_too_high,
-    }
-
+    return {"count": len(open_positions), "positions": open_positions}
 
 @app.post("/close-trade")
 async def close_trade(request: Request):
     body = await request.json()
     tid = body.get("trade_id")
-    cp = float(body.get("close_price", 0))
+    cp = float(body.get("close_price", 0) or 0)
     motivo = body.get("motivo", "manual")
-    result = await _execute_close(tid, cp, motivo, body)
-    bal = await get_balance()
-    result["balance"] = bal
-    return result
+    pos = next((p for p in open_positions if p["trade_id"] == tid), None)
+    if not pos:
+        return {"error": f"Position {tid} not found"}
+    if cp <= 0:
+        cp = await fetch_price(pos["pair"])
+    return await close_position(pos, cp, motivo)
 
-@app.get("/self-test")
-async def self_test():
-    results = {}
-    results["rag"] = {"loaded": rag.loaded, "chunks": rag.chunk_count}
-    results["gemini"] = {"key_set": bool(GEMINI_API_KEY)}
-    results["execution"] = {"mode": "PAPER" if PAPER_TRADING else "LIVE", "ready": binance_available or PAPER_TRADING}
-    results["sheets"] = {"url_set": bool(SHEETS_WEBAPP_URL)}
-    results["news"] = {"cryptopanic_key_set": bool(CRYPTOPANIC_API_KEY)}
-    try:
-        ctx = await get_market_context()
-        results["market"] = {"btc": ctx["btc_price"], "fng": ctx["fear_greed"], "news": ctx["news_sentiment"], "ok": ctx["btc_price"] > 0}
-    except Exception as e:
-        results["market"] = {"ok": False, "error": str(e)}
-    bal = await get_balance()
-    results["balance"] = bal
-    results["config"] = {"paper": PAPER_TRADING, "release": RELEASE_ID, "secret_set": bool(WEBHOOK_SECRET)}
-    results["overall"] = "READY" if all([
-        rag.loaded, bool(GEMINI_API_KEY), bool(WEBHOOK_SECRET), bool(SHEETS_WEBAPP_URL),
-        (binance_available or PAPER_TRADING), results.get("market", {}).get("ok", False)
-    ]) else "ISSUES"
-    return results
-
-@app.get("/test-binance")
-async def test_binance_connection():
-    """
-    Diagnostic endpoint — checks if this server can reach Binance.
-    Does NOT execute any trade. Safe to call anytime.
-    Returns detailed report of:
-      1. Public API reachability (no auth)
-      2. Geographic restriction detection (HTTP 451)
-      3. Authenticated API access (if keys are set)
-      4. Recommendation for going live
-    """
-    report = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "server_location": "unknown",
-        "public_api": {"ok": False, "details": ""},
-        "geo_blocked": None,
-        "auth_api": {"ok": False, "details": "", "tested": False},
-        "recommendation": "",
-    }
-
-    # Test 1: Public Binance API (no auth)
-    try:
-        async with httpx.AsyncClient(timeout=10) as client:
-            r = await client.get("https://api.binance.com/api/v3/ping")
-            if r.status_code == 200:
-                report["public_api"] = {"ok": True, "details": "Reachable", "status_code": 200}
-                report["geo_blocked"] = False
-            elif r.status_code == 451:
-                report["public_api"] = {"ok": False, "details": "HTTP 451 — Geographic restriction", "status_code": 451}
-                report["geo_blocked"] = True
-            else:
-                report["public_api"] = {"ok": False, "details": f"Unexpected HTTP {r.status_code}", "status_code": r.status_code}
-                report["geo_blocked"] = "unknown"
-    except httpx.TimeoutException:
-        report["public_api"] = {"ok": False, "details": "Timeout — possibly blocked or DNS issue"}
-        report["geo_blocked"] = "likely"
-    except Exception as e:
-        report["public_api"] = {"ok": False, "details": f"Error: {str(e)[:200]}"}
-        report["geo_blocked"] = "unknown"
-
-    # Test 2: Server timezone/region hint
-    try:
-        async with httpx.AsyncClient(timeout=5) as client:
-            r = await client.get("https://ipapi.co/json/")
-            if r.status_code == 200:
-                d = r.json()
-                report["server_location"] = f"{d.get('city', '?')}, {d.get('country_name', '?')} (IP: {d.get('ip', '?')})"
-    except Exception:
-        pass
-
-    # Test 3: Authenticated API (only if keys set, and only if public works)
-    if BINANCE_API_KEY and BINANCE_SECRET and report["public_api"]["ok"]:
-        report["auth_api"]["tested"] = True
-        try:
-            import ccxt
-            test_exchange = ccxt.binance({
-                'apiKey': BINANCE_API_KEY,
-                'secret': BINANCE_SECRET,
-                'enableRateLimit': True,
-                'options': {'defaultType': 'spot'},
-            })
-            # fetch_balance is the canonical authenticated test
-            bal = test_exchange.fetch_balance()
-            usdt_free = float(bal.get('USDT', {}).get('free', 0))
-            usdt_total = float(bal.get('USDT', {}).get('total', 0))
-            report["auth_api"] = {
-                "ok": True,
-                "tested": True,
-                "details": "API key valid, can read balance",
-                "usdt_free": usdt_free,
-                "usdt_total": usdt_total,
-            }
-        except Exception as e:
-            err_str = str(e)[:300]
-            report["auth_api"] = {
-                "ok": False,
-                "tested": True,
-                "details": err_str,
-                "hint": "Check API key permissions (need Spot Trading) and IP whitelist if set",
-            }
-    elif not (BINANCE_API_KEY and BINANCE_SECRET):
-        report["auth_api"]["details"] = "BINANCE_API_KEY or BINANCE_SECRET not set in env"
-    else:
-        report["auth_api"]["details"] = "Skipped — public API not reachable"
-
-    # Recommendation
-    if report["geo_blocked"] is True or report["geo_blocked"] == "likely":
-        report["recommendation"] = (
-            "CANNOT GO LIVE FROM THIS SERVER. Binance blocks this region (HTTP 451). "
-            "Options: (a) deploy server to Asia/EU region not blocked, "
-            "(b) use a VPS in allowed region, "
-            "(c) keep PAPER_TRADING=true and ignore Binance execution."
-        )
-    elif report["auth_api"].get("tested") and not report["auth_api"]["ok"]:
-        report["recommendation"] = (
-            "Binance reachable but API key fails. Check permissions and IP whitelist before going live."
-        )
-    elif report["auth_api"].get("ok"):
-        report["recommendation"] = (
-            "READY for live execution from this server. "
-            "Recommended: 1 small test trade first, monitor /trades and Binance Order History."
-        )
-    elif not (BINANCE_API_KEY and BINANCE_SECRET):
-        report["recommendation"] = (
-            "Public API ok but no Binance credentials set. "
-            "Add BINANCE_API_KEY and BINANCE_SECRET to env to test auth."
-        )
-    else:
-        report["recommendation"] = "Inconclusive. Review details above."
-
-    return report
-
+@app.get("/ping")
+async def ping():
+    return {"pong": True, "release": RELEASE_ID}
 
 if __name__ == "__main__":
     import uvicorn
