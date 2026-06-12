@@ -11,6 +11,7 @@ from fastapi import FastAPI, Request, HTTPException
 import httpx
 import store
 import valuation
+import market_context
 
 RELEASE_ID = "v3.1-20260608"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -287,39 +288,18 @@ rag = RAGSearch()
 # ═══════════════════════════════════════════════════════════
 PRICE_KEYS = {"BTCUSDT": "btc_price", "ETHUSDT": "eth_price", "SOLUSDT": "sol_price"}
 
-async def get_market_context():
-    ctx = {"fear_greed": 50, "fear_greed_label": "Neutral",
-           "btc_price": 0, "btc_24h_change": 0, "eth_price": 0, "sol_price": 0, "btc_funding": 0}
-    async with httpx.AsyncClient(timeout=10) as client:
-        try:
-            r = await client.get("https://api.alternative.me/fng/?limit=1")
-            d = r.json()
-            ctx["fear_greed"] = int(d["data"][0]["value"])
-            ctx["fear_greed_label"] = d["data"][0]["value_classification"]
-        except Exception as e:
-            log.warning(f"Fear&Greed failed: {e}")
-
-        paprika_ids = {"btc_price": "btc-bitcoin", "eth_price": "eth-ethereum", "sol_price": "sol-solana"}
-        for key, coin_id in paprika_ids.items():
-            try:
-                r = await client.get(f"https://api.coinpaprika.com/v1/tickers/{coin_id}")
-                if r.status_code == 200:
-                    d = r.json()
-                    ctx[key] = float(d.get("quotes", {}).get("USD", {}).get("price", 0))
-                    if key == "btc_price":
-                        ctx["btc_24h_change"] = float(d.get("quotes", {}).get("USD", {}).get("percent_change_24h", 0))
-                else:
-                    raise Exception(f"CoinPaprika {r.status_code}")
-            except Exception as e:
-                log.warning(f"CoinPaprika {key} failed ({e}), trying Binance")
-                try:
-                    symbol = {"btc_price": "BTCUSDT", "eth_price": "ETHUSDT", "sol_price": "SOLUSDT"}[key]
-                    r = await client.get(f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}")
-                    if r.status_code == 200:
-                        ctx[key] = float(r.json().get("price", 0))
-                except:
-                    log.warning(f"All price sources failed for {key}")
-    return ctx
+async def get_market_context(pair: str = "BTCUSDT"):
+    """Delegate to the Phase-3 multi-source aggregator (6 APIs, cross-validation, TTL cache,
+    SOLO-OBSERVATION). Falls back to a minimal degraded object if the module itself errors."""
+    funding_pair = pair.upper() if pair.upper() in market_context.ASSETS else "BTCUSDT"
+    try:
+        return await market_context.build_context(pair=pair.upper(), funding_pair=funding_pair)
+    except Exception as e:
+        log.error(f"market_context failed, minimal fallback: {e}")
+        return {"fear_greed": 50, "fear_greed_label": "Neutral", "btc_price": 0, "btc_24h_change": 0,
+                "eth_price": 0, "sol_price": 0, "btc_funding": 0, "composite_score": 0,
+                "sources_ok": {}, "price_reliable": {}, "critical_down": ["module_error"],
+                "solo_observation": True, "degradation": ["market_context exception"]}
 
 def get_current_price(pair: str, market_ctx: dict) -> float:
     key = PRICE_KEYS.get(pair.upper(), "btc_price")
@@ -794,6 +774,16 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
     if not d.get("checklist_pass", False):
         return False, "Checklist did not pass"
 
+    # Data-quality gate (Phase 3): if too few reliable sources, or the traded pair's price could
+    # not be cross-validated (anti-bias #6: sources disagree), stand aside — never trade blind.
+    if market_ctx is not None:
+        if market_ctx.get("solo_observation"):
+            return False, ("SOLO-OBSERVATION: >=2 critical data sources down "
+                           f"({market_ctx.get('critical_down')}) — no new trades")
+        price_reliable = market_ctx.get("price_reliable", {})
+        if pair in price_reliable and not price_reliable[pair]:
+            return False, f"Data unreliable: {pair} price sources disagree >1% — NO_TRADE (anti-bias #6)"
+
     # GRAHAM ANTI-BIAS GATE (implacable): all 6 checks must pass, and the pre-mortem
     # bear_case must be articulated. A failing/absent check forces NO_TRADE.
     bias_ok, bias_reason = evaluate_bias_check(d)
@@ -1191,7 +1181,7 @@ async def webhook(request: Request):
     if killed:
         return {"action": "BLOCKED", "reason": kill_reason}
 
-    market_ctx = await get_market_context()
+    market_ctx = await get_market_context(pair)
     current_price = get_current_price(pair, market_ctx)
 
     # Mr. Market behavioral valuation: is the crowd under/over-estimating this price right now?
@@ -1272,6 +1262,9 @@ async def webhook(request: Request):
         "regime_btc": decision.get("regime_btc", ""), "trend_regime": decision.get("trend_regime", ""),
         "vol_regime": decision.get("vol_regime", ""), "fear_greed": market_ctx.get("fear_greed", ""),
         "funding_rate": market_ctx.get("btc_funding", ""),
+        "composite_score": market_ctx.get("composite_score", ""),
+        "news_score": market_ctx.get("news_score", ""),
+        "fear_greed_trend": market_ctx.get("fear_greed_trend", ""),
         "confluence_score": decision.get("confluence_score", 0),
         "confidence": decision.get("confidence", 0),
         "entry_price": decision.get("entry_price", 0),
