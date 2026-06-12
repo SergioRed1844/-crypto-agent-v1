@@ -12,6 +12,7 @@ import httpx
 import store
 import valuation
 import market_context
+import regime
 
 RELEASE_ID = "v3.1-20260608"
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -57,6 +58,8 @@ trade_counter = int(store.get_kv("trade_counter", 0))
 satellite_pct = float(store.get_kv("satellite_pct", 20.0))
 daily_pnl = float(store.get_kv("daily_pnl", 0.0))
 weekly_pnl = float(store.get_kv("weekly_pnl", 0.0))
+# Immutable-limit counter: consecutive losses (resets on any WIN). 5 in a row → kill switch.
+consecutive_losses = int(store.get_kv("consecutive_losses", 0))
 
 
 def _utc_day():
@@ -102,7 +105,9 @@ RISK_PARAMS = {
     "max_total_exposure": 0.05,
     "daily_drawdown_kill": -0.03,
     "weekly_drawdown_kill": -0.05,
-    "min_confluence": 5,
+    # NEUTRAL/STANDARD baseline (regime-engine spec). AGGRESSIVE loosens to 5, CONSERVATIVE 8.
+    # The self-learning loop tunes this within RISK_FLOORS [3, 9].
+    "min_confluence": 6,
     "min_confidence": 65,
     "min_rr": 2.0,
     "atr_multiplier": 2.0,
@@ -595,44 +600,51 @@ def get_equity_usdt() -> float:
         return PAPER_EQUITY
 
 
-def compute_position_qty(equity: float, entry: float, stop: float, cash_available: float = None) -> float:
+def compute_position_qty(equity: float, entry: float, stop: float, cash_available: float = None,
+                         risk_pct: float = None) -> float:
     """
-    Risk-based sizing: risk exactly max_risk_per_trade of equity on the stop distance.
-        qty = (equity * max_risk_per_trade) / |entry - stop|
-    The capital-at-risk (not notional) is what's controlled — max_total_exposure caps the
-    SUM of per-trade risk across open positions (enforced in validate_trade), so ~10 trades
-    of 0.5% each. Here we only additionally clamp notional to the cash actually available,
-    so we never try to spend money we don't have.
+    Risk-based sizing: risk exactly `risk_pct` of equity on the stop distance.
+        qty = (equity * risk_pct) / |entry - stop|
+    `risk_pct` is the posture-resolved per-trade risk (Phase 4); when omitted it falls back to
+    the global RISK_PARAMS. It is always clamped to the immutable 0.5% ceiling. The capital-at-
+    risk (not notional) is what's controlled — max_total_exposure caps the SUM across open
+    positions. We additionally clamp notional to the cash available, never spending what we lack.
     """
     if equity <= 0 or entry <= 0 or stop <= 0:
         return 0.0
     stop_dist = abs(entry - stop)
     if stop_dist < entry * 1e-6:
         return 0.0
-    risk_amount = equity * RISK_PARAMS["max_risk_per_trade"]
+    if risk_pct is None:
+        risk_pct = RISK_PARAMS["max_risk_per_trade"]
+    risk_pct = min(risk_pct, regime.HARD_LIMITS["max_risk_per_trade_ceiling"])  # hard ceiling wins
+    risk_amount = equity * risk_pct
     qty = risk_amount / stop_dist
     if cash_available is not None and cash_available > 0 and qty * entry > cash_available:
         qty = cash_available / entry
     return qty
 
 
-def open_long(pair: str, entry: float, stop: float, tp1: float, tp2: float, current_price: float) -> tuple:
+def open_long(pair: str, entry: float, stop: float, tp1: float, tp2: float, current_price: float,
+              risk_pct: float = None) -> tuple:
     """
     Open a LONG (spot market buy) sized by risk. Returns (success, info_dict | error_str).
-    info_dict: {order_id, qty, notional, equity, oco}
+    info_dict: {order_id, qty, notional, equity, oco}. `risk_pct` is the posture's per-trade risk.
     """
     equity = get_equity_usdt()
+    eff_risk = min(risk_pct if risk_pct is not None else RISK_PARAMS["max_risk_per_trade"],
+                   regime.HARD_LIMITS["max_risk_per_trade_ceiling"])
 
     if PAPER_TRADING:
         # Cash not really tracked in paper: bound notional by equity minus already-deployed.
         deployed = sum(float(p.get("notional", 0)) for p in open_positions)
         cash_available = max(0.0, equity - deployed)
-        qty = compute_position_qty(equity, entry or current_price, stop, cash_available)
+        qty = compute_position_qty(equity, entry or current_price, stop, cash_available, risk_pct=eff_risk)
         if qty <= 0:
             return False, "Sizing produced zero quantity (no cash budget or bad entry/stop)"
         notional = qty * current_price
         log.info(f"PAPER BUY {pair} qty={qty:.6f} notional={notional:.2f} "
-                 f"(risk {RISK_PARAMS['max_risk_per_trade']:.2%} of {equity:.2f})")
+                 f"(risk {eff_risk:.2%} of {equity:.2f})")
         return True, {"order_id": f"PAPER-{datetime.utcnow().strftime('%H%M%S')}",
                       "qty": qty, "notional": notional, "equity": equity, "oco": None}
 
@@ -642,7 +654,7 @@ def open_long(pair: str, entry: float, stop: float, tp1: float, tp2: float, curr
     try:
         ccxt_pair = to_ccxt_pair(pair)
         usdt_free = float(exchange.fetch_balance().get("USDT", {}).get("free", 0))
-        qty = compute_position_qty(equity, entry or current_price, stop, usdt_free)
+        qty = compute_position_qty(equity, entry or current_price, stop, usdt_free, risk_pct=eff_risk)
         if qty <= 0:
             return False, "Sizing produced zero quantity (insufficient cash or bad entry/stop)"
         notional = qty * current_price
@@ -733,10 +745,12 @@ def market_sell(ccxt_pair: str, qty: float) -> tuple:
 # ═══════════════════════════════════════════════════════════
 def check_kill_switches():
     refresh_pnl_window()
-    if daily_pnl <= RISK_PARAMS["daily_drawdown_kill"]:
-        return True, f"Daily DD {daily_pnl:.2%} > {RISK_PARAMS['daily_drawdown_kill']:.2%}"
-    if weekly_pnl <= RISK_PARAMS["weekly_drawdown_kill"]:
-        return True, f"Weekly DD {weekly_pnl:.2%} > {RISK_PARAMS['weekly_drawdown_kill']:.2%}"
+    if daily_pnl <= regime.HARD_LIMITS["daily_drawdown_kill"]:
+        return True, f"Daily DD {daily_pnl:.2%} > {regime.HARD_LIMITS['daily_drawdown_kill']:.2%}"
+    if weekly_pnl <= regime.HARD_LIMITS["weekly_drawdown_kill"]:
+        return True, f"Weekly DD {weekly_pnl:.2%} > {regime.HARD_LIMITS['weekly_drawdown_kill']:.2%}"
+    if consecutive_losses >= regime.HARD_LIMITS["max_consecutive_losses"]:
+        return True, f"{consecutive_losses} consecutive losses >= {regime.HARD_LIMITS['max_consecutive_losses']}"
     return False, ""
 
 
@@ -760,19 +774,30 @@ def stale_signal_check(signal: dict, decision: dict, market_ctx: dict) -> tuple:
     return False, ""
 
 
-def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
+def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None, params: dict = None):
+    # `params` carries the posture-resolved thresholds for THIS signal (Phase 4); it falls back
+    # to the global RISK_PARAMS so older callers/tests still work. Hard limits (BNB, exposure,
+    # kill switches, 1-position-per-pair) are enforced from the immutable regime.HARD_LIMITS,
+    # never from `params`, so no posture can relax them.
+    params = params or RISK_PARAMS
     pair = d.get("pair", "").upper()
     action = str(d.get("action", "NO_TRADE")).upper()
 
-    if any(p in pair for p in RISK_PARAMS["protected_assets"]):
+    if any(p in pair for p in regime.HARD_LIMITS["protected_assets"]):
         return False, f"BLOCKED: {pair} is protected (BNB)"
     if action == "NO_TRADE":
         return False, d.get("reasoning", "Model decided NO_TRADE")
+    # DEFENSIVE posture (panic/chaos): manage open positions only, open nothing new.
+    if params.get("no_new_trades"):
+        return False, "DEFENSIVE posture: no new trades (manage open positions only)"
     # Spot account: only LONG (BUY) can open a position. SHORT/SELL can't be opened on spot.
     if action == "SELL" or str(d.get("direction", "")).upper() == "SHORT":
         return False, "SHORT/SELL not supported on spot account (long-only)"
     if not d.get("checklist_pass", False):
         return False, "Checklist did not pass"
+    # Hard limit: at most one open position per pair.
+    if sum(1 for p in open_positions if str(p.get("pair", "")).upper() == pair) >= regime.HARD_LIMITS["max_positions_per_pair"]:
+        return False, f"Already at max {regime.HARD_LIMITS['max_positions_per_pair']} position(s) on {pair}"
 
     # Data-quality gate (Phase 3): if too few reliable sources, or the traded pair's price could
     # not be cross-validated (anti-bias #6: sources disagree), stand aside — never trade blind.
@@ -803,37 +828,38 @@ def validate_trade(d: dict, signal: dict = None, market_ctx: dict = None):
         vscore = market_ctx.get("mispricing_score", 0)
         if MRMARKET_BLOCK_EUPHORIA and vstate == "EUPHORIC":
             return False, f"Mr.Market: market EUPHORIC (mispricing {vscore}) — refuse to buy crowd over-estimation"
-        if vstate == "OVERVALUED" and float(d.get("confidence", 0) or 0) < RISK_PARAMS["min_confidence"] + 10:
+        if vstate == "OVERVALUED" and float(d.get("confidence", 0) or 0) < params["min_confidence"] + 10:
             return False, f"Mr.Market: OVERVALUED — require +10% confidence to buy (have {d.get('confidence')})"
 
     conf = float(d.get("confidence", 0) or 0)
-    if conf < RISK_PARAMS["min_confidence"]:
-        return False, f"Confidence {conf:.0f}% < {RISK_PARAMS['min_confidence']}%"
-    if d.get("confluence_score", 0) < RISK_PARAMS["min_confluence"]:
-        return False, f"Confluence {d.get('confluence_score')} < {RISK_PARAMS['min_confluence']}"
+    if conf < params["min_confidence"]:
+        return False, f"Confidence {conf:.0f}% < {params['min_confidence']}%"
+    if d.get("confluence_score", 0) < params["min_confluence"]:
+        return False, f"Confluence {d.get('confluence_score')} < {params['min_confluence']}"
 
     entry, sl, tp1 = d.get("entry_price", 0), d.get("stop_loss", 0), d.get("take_profit_1", 0)
     if entry and sl and abs(entry - sl) < 0.0001:
         return False, "Invalid: stop_loss equals entry_price (zero risk)"
     if entry and sl and tp1:
         risk = abs(entry - sl)
-        if risk > 0 and abs(tp1 - entry) / risk < RISK_PARAMS["min_rr"]:
-            return False, f"R:R below {RISK_PARAMS['min_rr']}"
+        if risk > 0 and abs(tp1 - entry) / risk < params["min_rr"]:
+            return False, f"R:R below {params['min_rr']}"
     # Margin of safety: the reward:risk must survive a pessimistic read. When the model reports
     # rr_pesimista, enforce it against the posture's required R:R (never below min_rr).
     rr_pes = float(d.get("rr_pesimista", 0) or 0)
-    if rr_pes and rr_pes < RISK_PARAMS["min_rr"]:
-        return False, f"Pessimistic R:R {rr_pes:.2f} < required {RISK_PARAMS['min_rr']}"
+    if rr_pes and rr_pes < params["min_rr"]:
+        return False, f"Pessimistic R:R {rr_pes:.2f} < required {params['min_rr']}"
 
     # Total capital-at-risk = sum of (qty * stop_distance / equity) across open positions.
-    # By construction each risk-sized trade contributes ~max_risk_per_trade.
+    # By construction each risk-sized trade contributes ~max_risk_per_trade. The exposure cap
+    # is an IMMUTABLE hard limit (regime.HARD_LIMITS), never the posture's value.
     def _risk_frac(p):
         eq = float(p.get("equity_at_open", 0)) or 1
         return float(p.get("qty", 0)) * abs(float(p.get("entry", 0)) - float(p.get("sl", 0))) / eq
     cur_exp = sum(_risk_frac(p) for p in open_positions)
-    new_risk = RISK_PARAMS["max_risk_per_trade"]
-    if cur_exp + new_risk > RISK_PARAMS["max_total_exposure"]:
-        return False, f"Total risk {cur_exp + new_risk:.2%} > max_total_exposure {RISK_PARAMS['max_total_exposure']:.2%}"
+    new_risk = params["max_risk_per_trade"]
+    if cur_exp + new_risk > regime.HARD_LIMITS["max_total_exposure"]:
+        return False, f"Total risk {cur_exp + new_risk:.2%} > max_total_exposure {regime.HARD_LIMITS['max_total_exposure']:.2%}"
 
     killed, reason = check_kill_switches()
     if killed:
@@ -1022,9 +1048,16 @@ async def close_position(pos: dict, close_price: float, motivo: str = "manual") 
     pnl_usdt = round(pnl_pct * float(pos.get("notional", 0)), 2)
 
     # Remove from open positions (memory + store).
-    global open_positions
+    global open_positions, consecutive_losses
     open_positions = [p for p in open_positions if p["trade_id"] != tid]
     store.delete_position(tid)
+
+    # Immutable hard limit: track consecutive losses (reset on any non-loss). 5 → kill switch.
+    if resultado == "LOSS":
+        consecutive_losses += 1
+    elif resultado == "WIN":
+        consecutive_losses = 0
+    store.set_kv("consecutive_losses", consecutive_losses)
 
     # Compute the trade journal entry (real diagnostics, no longer hardcoded).
     diag = compute_diagnostics(pos, close_price, motivo)
@@ -1174,7 +1207,7 @@ async def webhook(request: Request):
     store.add_seen(sig_hash)
     store.prune_seen(keep=500)
 
-    if any(p in pair for p in RISK_PARAMS["protected_assets"]):
+    if any(p in pair for p in regime.HARD_LIMITS["protected_assets"]):
         return {"action": "BLOCKED", "reason": f"{pair} is protected (BNB)"}
 
     killed, kill_reason = check_kill_switches()
@@ -1210,10 +1243,15 @@ async def webhook(request: Request):
               f"stop=sl_atr_mult×ATR (sl_atr_mult={RISK_PARAMS['sl_atr_mult']})")
     valuation_txt = (f"{mrmarket['valuation_state']} (mispricing={mrmarket['mispricing_score']}, "
                      f"cluster={mrmarket['cluster']}) — {mrmarket['rationale']}")
-    # Posture string injected into the prompt. Phase 4's regime engine replaces this with a
-    # regime-derived posture; for now it reflects the active (learned) RISK_PARAMS thresholds.
-    posture_txt = (f"posture=STANDARD risk_per_trade={RISK_PARAMS['max_risk_per_trade']:.2%} "
-                   f"min_confluence={RISK_PARAMS['min_confluence']} min_RR={RISK_PARAMS['min_rr']}")
+    # Phase 4: pick the posture from the live regime and resolve the per-signal thresholds
+    # (clamped to the immutable hard limits). DEFENSIVE → skip the model entirely (no new trades).
+    posture_name, posture_reason = regime.select_posture(market_ctx, body)
+    eff_params = regime.resolve_params(posture_name, RISK_PARAMS, RISK_FLOORS)
+    log.info(f"Posture {posture_name}: {posture_reason} | risk={eff_params['max_risk_per_trade']:.2%} "
+             f"confl>={eff_params['min_confluence']} RR>={eff_params['min_rr']} conf>={eff_params['min_confidence']}")
+    posture_txt = (f"{posture_name} — {posture_reason} | risk_per_trade={eff_params['max_risk_per_trade']:.2%} "
+                   f"min_confluence={eff_params['min_confluence']} min_RR={eff_params['min_rr']} "
+                   f"min_confidence={eff_params['min_confidence']}")
     prompt = TRADE_PROMPT.format(
         market_context=json.dumps(market_ctx),
         rag_context=rag_context or "No RAG context",
@@ -1229,8 +1267,15 @@ async def webhook(request: Request):
         posture=posture_txt,
     )
 
-    decision = await call_gemini(prompt)
-    is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx)
+    if eff_params.get("no_new_trades"):
+        # DEFENSIVE posture: don't even call the model — log a disciplined NO_TRADE.
+        decision = {"action": "NO_TRADE", "pair": pair,
+                    "reasoning": f"DEFENSIVE posture: {posture_reason}",
+                    "bias_check": {}, "bear_case": "", "rr_pesimista": 0}
+    else:
+        decision = await call_gemini(prompt)
+    decision["posture_used"] = posture_name  # server-computed posture is authoritative
+    is_valid, validation_msg = validate_trade(decision, signal=body, market_ctx=market_ctx, params=eff_params)
 
     trade_counter += 1
     store.set_kv("trade_counter", trade_counter)
@@ -1246,6 +1291,7 @@ async def webhook(request: Request):
             stop=float(decision.get("stop_loss") or 0),
             tp1=float(decision.get("take_profit_1") or 0),
             tp2=float(decision.get("take_profit_2") or 0),
+            risk_pct=eff_params["max_risk_per_trade"],
             current_price=current_price,
         )
         if not success:
@@ -1279,6 +1325,7 @@ async def webhook(request: Request):
         # Graham engine: pre-mortem, posture and the anti-bias audit trail (feeds the learning loop).
         "bear_case": decision.get("bear_case", ""),
         "posture_used": decision.get("posture_used", ""),
+        "posture_reason": posture_reason,
         "rr_pesimista": decision.get("rr_pesimista", 0),
         "bias_check": json.dumps(decision.get("bias_check", {}), ensure_ascii=False),
         "decision_action": decision.get("action", "NO_TRADE"),
