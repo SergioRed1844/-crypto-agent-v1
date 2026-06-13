@@ -143,7 +143,12 @@ function logTrade(data) {
     rollingStats.satellite_pct,                    // AJ: satellite_%
     rollingStats.drawdown_daily,                   // AK: drawdown_diario_%
     rollingStats.drawdown_weekly,                  // AL: drawdown_semanal_%
-    ""                                             // AM: ajuste_recomendado
+    "",                                            // AM: ajuste_recomendado
+    // ── GRAHAM v6 audit trail (Phase 2/4): logged on every decision incl NO_TRADE ──
+    data.posture_used || "",                       // AN: postura_usada
+    data.rr_pesimista || "",                       // AO: RR_pesimista
+    data.bear_case || "",                          // AP: tesis_en_contra (pre-mortem)
+    data.bias_check || ""                          // AQ: bias_check (JSON 6 chequeos)
   ];
   
   sheet.getRange(newRow, 1, 1, row.length).setValues([row]);
