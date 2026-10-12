@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** lun 12 oct 13:52 (Monterrey) · velas hasta lun 12 oct 13:50 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** lun 12 oct 13:53 (Monterrey) · velas hasta lun 12 oct 13:50 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte 1, lun 12 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
