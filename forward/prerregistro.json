@@ -1,0 +1,68 @@
+{
+  "registrado_utc": "2026-10-11T23:52:46+00:00",
+  "nota": "Prueba hacia adelante en papel. Reglas congeladas: no se modifican hasta el corte final.",
+  "inicio_ventana_utc": "2026-10-12T00:00:00Z",
+  "cortes_utc": {
+    "corte_1": "2026-10-12T20:00:00Z",
+    "corte_2": "2026-10-13T20:00:00Z",
+    "corte_final": "2026-10-14T20:00:00Z"
+  },
+  "monedas": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "DOGEUSDT",
+    "ADAUSDT",
+    "AVAXUSDT",
+    "LINKUSDT"
+  ],
+  "escalas": {
+    "swing (producción)": {
+      "htf": "1d",
+      "setup": "4h",
+      "gatillo": "1h",
+      "decide_cada": "4h"
+    },
+    "intradía": {
+      "htf": "4h",
+      "setup": "1h",
+      "gatillo": "15m",
+      "decide_cada": "1h"
+    },
+    "scalp": {
+      "htf": "1h",
+      "setup": "15m",
+      "gatillo": "5m",
+      "decide_cada": "15m"
+    }
+  },
+  "reglas": "technical + regime (mismas funciones que app/agents.py), niveles de app/agents._default_levels, sin LLM ni noticias",
+  "cuenta_hipotetica": {
+    "equity_usdt_por_escala": 1000,
+    "riesgo_por_trade": 0.005,
+    "max_posiciones": 2,
+    "riesgo_correlacionado": 0.015,
+    "tope_nocional": 0.25,
+    "comision_por_lado": 0.001,
+    "slippage_por_lado": 0.0005
+  },
+  "hash_codigo": "1b7510f0d80a2b6c",
+  "hash_por_archivo": {
+    "app/__init__.py": "e3b0c44298fc1c14",
+    "app/agents.py": "96bd7104a5e515a8",
+    "app/config.py": "b36a12e866c7203e",
+    "app/data.py": "a4dfd5f65839d4b5",
+    "app/execution.py": "af4855a5a5b931be",
+    "app/graph.py": "6fece04e47d4358a",
+    "app/indicators.py": "e6bd005511919400",
+    "app/llm.py": "5dad7a108f5881f7",
+    "app/rag.py": "c7839b76df8f61ca",
+    "app/risk.py": "77190f6112ffcba0",
+    "app/server.py": "0d6f3bbbd9e06060",
+    "app/state.py": "1ee8a1d8fe0c3051",
+    "app/store.py": "f6eec3cbb8c32ad4",
+    "backtest.py": "013e92175418d957",
+    "pine/CryptoAgent_v2_sensor.pine": "4e9d66f20c1b1ac0"
+  }
+}
