@@ -1,0 +1,73 @@
+{
+ "generated_utc": "2026-10-12T03:56:22Z",
+ "fear_greed": {
+  "value": 69,
+  "label": "Greed",
+  "avg_7d": 65.9,
+  "avg_30d": 67.3
+ },
+ "stablecoins": {
+  "total_usd": 311283190646,
+  "chg_7d_pct": -0.3,
+  "chg_30d_pct": 0.83
+ },
+ "fred": {
+  "status": "sin FRED_API_KEY"
+ },
+ "polymarket": {
+  "br-presidential-runoff-2026": {
+   "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
+   "outcomes": {
+    "Yes": 0.125,
+    "No": 0.875
+   },
+   "volume": 22240895.087714978,
+   "slug": "brazil-presidential-election"
+  },
+  "us-midterms-2026": {
+   "question": "2026 Balance of Power: R Senate, R House",
+   "outcomes": {
+    "Yes": 0.085,
+    "No": 0.915
+   },
+   "volume": 7122395.293698999,
+   "slug": "balance-of-power-2026-midterms"
+  },
+  "fr-presidential-r1-2027": {
+   "question": "Will Ségolène Royal win the 2027 French presidential election?",
+   "outcomes": {
+    "Yes": 0.0005,
+    "No": 0.9995
+   },
+   "volume": 6951998.270871003,
+   "slug": "next-french-presidential-election"
+  },
+  "fr-presidential-r2-2027": {
+   "question": "Will Ségolène Royal win the 2027 French presidential election?",
+   "outcomes": {
+    "Yes": 0.0005,
+    "No": 0.9995
+   },
+   "volume": 6951998.270871003,
+   "slug": "next-french-presidential-election"
+  },
+  "us-primaries-2028": {
+   "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
+   "outcomes": {
+    "Yes": 0.0005,
+    "No": 0.9995
+   },
+   "volume": 54439735.12432899,
+   "slug": "democratic-presidential-nominee-2028"
+  },
+  "us-presidential-2028": {
+   "question": "Will LeBron James win the 2028 US Presidential Election?",
+   "outcomes": {
+    "Yes": 0.0005,
+    "No": 0.9995
+   },
+   "volume": 54891542.88410802,
+   "slug": "presidential-election-winner-2028"
+  }
+ }
+}

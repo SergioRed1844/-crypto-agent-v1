@@ -1,0 +1,110 @@
+{
+ "generated_utc": "2026-10-12T03:48:22Z",
+ "state": "CAUTION",
+ "veto_entries": false,
+ "exit_all": false,
+ "exit_alert_ids": [],
+ "size_mult": 0.5,
+ "bias": -0.202,
+ "event_risk": 0.041,
+ "extra_confluence": 2,
+ "vote": "FLAT",
+ "confidence": 58,
+ "reasons": [
+  "Precaución: sesgo -0.20"
+ ],
+ "upcoming": [
+  {
+   "id": "cpi-2026-10-14",
+   "utc": "2026-10-14T12:30:00Z",
+   "title_es": "IPC/CPI EE.UU. (sep-2026)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.404,
+   "riesgo": 0.041,
+   "ventana": [
+    "2026-10-14T10:30:00Z",
+    "2026-10-14T13:30:00Z"
+   ],
+   "en_ventana": false
+  }
+ ],
+ "recent": [
+  {
+   "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.091
+  },
+  {
+   "id": "news-bitcoin-etf-inflows-are-slowing-why-the-chart-matt-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Bitcoin ETF Inflows Are Slowing . Why the Chart Matters",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.091
+  },
+  {
+   "id": "news-zcash-zec-price-prediction-whale-accumulation-and-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Zcash ( ZEC ) Price Prediction : Whale Accumulation and ETF Outflows Put ZEC at a Critical Crossroads Around $1 , 400",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.082
+  },
+  {
+   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
+   "date": "2026-09-29",
+   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.079
+  },
+  {
+   "id": "clarity-act-cloture-fails-2026-09-15",
+   "date": "2026-09-15",
+   "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.062
+  },
+  {
+   "id": "sec-innovation-exemption-2026-09-17",
+   "date": "2026-09-17",
+   "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
+   "category": "CRYPTO_REGULATION",
+   "stance": "pro",
+   "aporte": 0.051
+  },
+  {
+   "id": "news-should-you-buy-bitcoin-or-ethereum-in-2026-2026-09-29",
+   "date": "2026-09-29",
+   "title_es": "Should You Buy Bitcoin or Ethereum in 2026 ?",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.035
+  },
+  {
+   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
+   "date": "2026-10-10",
+   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "category": "GEOPOLITICAL",
+   "stance": "anti",
+   "aporte": -0.032
+  }
+ ],
+ "alerts": [],
+ "stale": false,
+ "weights_source": "weights.json (estudio de eventos)",
+ "inputs": {
+  "market": {
+   "btc_regime": null,
+   "vol_regime": null,
+   "fear_greed": 69
+  },
+  "fred": "sin FRED_API_KEY",
+  "stablecoins_30d_pct": 0.83
+ }
+}
