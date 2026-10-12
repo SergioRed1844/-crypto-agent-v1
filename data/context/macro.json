@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-12T09:05:14Z",
+ "generated_utc": "2026-10-12T10:05:52Z",
  "fear_greed": {
   "value": 69,
   "label": "Greed",
@@ -7,8 +7,8 @@
   "avg_30d": 67.3
  },
  "stablecoins": {
-  "total_usd": 311319583199,
-  "chg_7d_pct": -0.29,
+  "total_usd": 311337686561,
+  "chg_7d_pct": -0.28,
   "chg_30d_pct": 0.84
  },
  "fred": {
@@ -21,7 +21,7 @@
     "Yes": 0.125,
     "No": 0.875
    },
-   "volume": 22242502.085198972,
+   "volume": 22242604.39750697,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,7 +30,7 @@
     "Yes": 0.085,
     "No": 0.915
    },
-   "volume": 7127859.651951998,
+   "volume": 7128129.983063998,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6951998.270871002,
+   "volume": 6951998.270871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6951998.270871002,
+   "volume": 6951998.270871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54439735.124328986,
+   "volume": 54439735.124329,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
