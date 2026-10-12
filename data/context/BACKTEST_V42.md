@@ -1,6 +1,6 @@
 # Backtest de variantes v4.2 — ¿suman las capas nuevas?
 
-Periodo 2021-01-01 → 2026-10-12 · pares BTCUSDT, ETHUSDT, SOLUSDT · comisión 0.10%/lado · slippage 0.05% · generado 2026-10-12T04:16:15Z. Sin LLM; el contexto usa pesos a priori y solo eventos con fecha anterior a la señal (sin look-ahead).
+Periodo 2021-01-01 → 2026-10-12 · pares BTCUSDT, ETHUSDT, SOLUSDT · comisión 0.10%/lado · slippage 0.05% · generado 2026-10-12T04:30:21Z. Sin LLM; el contexto usa pesos a priori y solo eventos con fecha anterior a la señal (sin look-ahead).
 
 Fuera de muestra = entradas desde 2024-06-20 (mismo corte para todas las variantes).
 
@@ -11,8 +11,11 @@ Fuera de muestra = entradas desde 2024-06-20 (mismo corte para todas las variant
 | C · + derivados (veto funding) | 8933 | 404 | 0.349 | 0.148 | 1.22 | -20.45 | 15.45 | [-0.007, 0.297] | 180 / 0.089 / [-0.135, 0.331] |
 | C2 · + derivados estricto (F&G/funding) | 8036 | 385 | 0.351 | 0.152 | 1.23 | -21.08 | 14.68 | [-0.012, 0.307] | 168 / 0.129 / [-0.11, 0.366] |
 | D · + contexto (calendario y eventos) | 8973 | 400 | 0.343 | 0.127 | 1.19 | -20.45 | 11.67 | [-0.031, 0.276] | 175 / 0.046 / [-0.183, 0.296] |
+| D1 · + solo blackout de eventos programados | 9008 | 400 | 0.343 | 0.127 | 1.19 | -20.45 | 11.74 | [-0.031, 0.276] | 175 / 0.046 / [-0.183, 0.295] |
+| D2 · + solo sesgo por eventos recientes | 9024 | 407 | 0.349 | 0.148 | 1.22 | -20.45 | 15.66 | [-0.007, 0.306] | 180 / 0.089 / [-0.135, 0.331] |
 | E · + racha (pausa tras 5 pérdidas) | 9059 | 385 | 0.325 | 0.066 | 1.1 | -38.91 | 4.15 | [-0.09, 0.226] | 166 / 0.021 / [-0.198, 0.254] |
 | F · v4.2 completo (B+C+D+E) | 8735 | 386 | 0.321 | 0.055 | 1.08 | -38.91 | 1.98 | [-0.091, 0.208] | 168 / 0.009 / [-0.209, 0.244] |
+| G · ganancia neta + derivados estricto (sin contexto ni pausa) | 7926 | 385 | 0.351 | 0.152 | 1.23 | -21.08 | 14.68 | [-0.011, 0.307] | 168 / 0.129 / [-0.11, 0.366] |
 
 ## Rejilla del filtro de ganancia neta
 
