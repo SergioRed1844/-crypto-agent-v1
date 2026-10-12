@@ -93,8 +93,8 @@ _v("etf_flow_5d_usd", "independiente", "continua", "Flujo neto 5 días de ETFs s
    "diaria", "sesgo de mercado", "USD")
 
 # ── Moderadoras (Z) ───────────────────────────────────────────
-_v("btc_regime", "moderadora", "ordinal", "Tendencia diaria de BTC: GREEN / YELLOW / RED. En RED las malas noticias "
-   "pegan más; en GREEN las buenas", "Binance 1d", "por vela", "multiplicador del sesgo")
+_v("btc_regime", "moderadora", "ordinal", "Tendencia diaria de BTC: GREEN / YELLOW / RED. Estimado 2010–2026: las "
+   "buenas noticias pegan poco en GREEN (×0.66) y más en RED (×1.12)", "Binance 1d", "por vela", "multiplicador del sesgo")
 _v("vol_regime", "moderadora", "ordinal", "Vol 30 d: LOW / NORMAL / HIGH / EXTREME", "Binance 1d", "diaria",
    "multiplicador del riesgo de evento")
 _v("fear_greed_zone", "moderadora", "ordinal", "≤20 miedo extremo / 20–80 / ≥80 codicia extrema: con codicia extrema "

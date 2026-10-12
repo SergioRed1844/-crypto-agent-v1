@@ -227,6 +227,12 @@ ok(o["final_action"] == "BUY" and o["risk"]["order"]["net_rr"] >= 1.8 and o["ris
    f"NEUTRAL → compra con ganancia neta {o['risk']['order']['net_gain_pct']:.2%} y R:R neto {o['risk']['order']['net_rr']}")
 ok(o["risk"]["order"]["context_state"] == "NEUTRAL", "la orden registra el estado de contexto")
 
+dg = asyncio.run(_ag.derivatives({"market": {"derivatives": {"funding_rate": 0.0001}, "fear_greed": {"value": 85}}}))
+df = asyncio.run(_ag.derivatives({"market": {"derivatives": {"funding_rate": 0.0007}, "fear_greed": {"value": 50}}}))
+dn = asyncio.run(_ag.derivatives({"market": {"derivatives": {"funding_rate": 0.0001}, "fear_greed": {"value": 60}}}))
+ok(dg["reports"][0]["veto"] and df["reports"][0]["veto"] and not dn["reports"][0]["veto"],
+   "derivados estricto: F&G 85 o funding 0.07% vetan; F&G 60 con funding normal no")
+
 # racha de 5 pérdidas → no más compras hasta reset
 for i in range(5):
     pid = f"L{i}"

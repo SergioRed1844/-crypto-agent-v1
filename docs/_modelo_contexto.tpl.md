@@ -61,6 +61,7 @@ Además el `risk_gate` ahora exige, siempre:
 - **Ganancia neta mínima:** objetivo ≥ **1.5%** ya restando comisión de ida y vuelta y slippage (`MIN_NET_GAIN_PCT`).
 - **R:R neto ≥ 1.8** (`MIN_NET_RR`). Ejemplo real: el scalp de BTC con stop de 0.26% era 2.5:1 bruto y **0.88:1 neto** → rechazado.
 - **Racha:** 5 pérdidas seguidas → no más compras hasta `POST /admin/reset-streak`.
+- **Derivados estricto:** Fear & Greed ≥ 80 o funding > 0.05%/8h → no compra (`DERIV_STRICT`, respaldado por el backtest).
 
 ## 3. Ponderación (qué pesa más)
 
@@ -70,15 +71,43 @@ Además el `risk_gate` ahora exige, siempre:
    acertó. p-values contra 4,000 días al azar.
 3. **Encogimiento bayesiano**: `peso = (n·evidencia + k·prior)/(n + k)` con k = 8. Con 3 eventos manda el prior;
    con 40, la evidencia. Así no sobreajustamos a dos anécdotas.
-4. **Moderadoras**: la misma noticia mala pega más con BTC en tendencia RED (×1.3) o con codicia extrema (×1.25);
-   se re-estiman cuando hay ≥15 eventos por celda.
+4. **Moderadoras**: el prior suponía que en tendencia RED las malas noticias pegan más; la evidencia 2010–2026 dice
+   otra cosa: las **buenas** noticias pegan poco en GREEN (×0.66, ya están en el precio) y más en RED (×1.12); las
+   malas pegan parecido en ambos (×1.12–1.18). El motor usa lo estimado cuando hay ≥15 eventos por celda.
 5. **Decaimiento**: el efecto de un evento se desvanece con su vida media por categoría (Fed 5 días, regulación 14,
    pandemia 21).
 6. **Probabilidad de ocurrir**: confirmado 1.0, estimado 0.8, esperado 0.7, propuesto 0.5, especulativo 0.35.
 
 Fórmulas exactas en `app/context/engine.py`. Resultados por categoría en `data/context/EVENTOS.md`.
 
-## 4. Variables del modelo
+## 4. Resultados con datos reales (corrida del 12-oct-2026)
+
+**Estudio de eventos (258 eventos, BTC desde 2010; un día cualquiera mueve |z3| = 0.75):**
+- Mueven MÁS que un día normal y con dirección confiable: **quiebras/crisis** (2.0×, el signo acierta 77%),
+  **hackeos** (1.8×, 77%), **halving/ETF/estructura** (1.7×, 74%).
+- Mueven más pero sin dirección clara: **regulación cripto** (1.65×, n = 59), **oferta** (Mt. Gox, gobiernos; 1.6×).
+- Moderado: **Fed** (1.3×, p = 0.07 con solo 42 decisiones clave), **elecciones** (1.5×, p = 0.06).
+- **No** movieron más que un día normal: aranceles (0.85×), geopolítica (1.3×, p = 0.16) y **ballenas dormidas /
+  era Satoshi (0.6×, n = 8)**. Los movimientos de monedas viejas que ya pasaron no tumbaron el mercado; la regla de
+  salida queda como seguro contra un evento que nunca ha ocurrido (que se muevan las de Satoshi), no como señal probada.
+
+**Backtest de variantes (BTC/ETH/SOL 4H, 2021–2026, fuera de muestra desde 2024-06-20, sin look-ahead):**
+
+| Capa | Fuera de muestra (trades / expectativa) | Veredicto |
+|---|---|---|
+| v4.1 reglas actuales | 180 / +0.089R | base |
+| + ganancia neta ≥1.5% y R:R neto ≥1.8 | 180 / +0.089R | sin efecto en swing (los stops de 4H son amplios); sí bloquea el scalp de 0.88:1 |
+| + derivados estricto (F&G ≥ 80 o funding > 0.05% → no compra) | 168 / **+0.129R** | **suma** → activado (`DERIV_STRICT=true`) |
+| + sesgo por eventos recientes | 180 / +0.089R | sin efecto |
+| + blackout de eventos programados | 175 / +0.046R | quitó 7 trades que ganaron; muestra muy chica para concluir |
+| + pausa tras 5 pérdidas | 166 / +0.021R | resta, pero es un límite duro de riesgo (no se quita) |
+
+Ninguna variante tiene el límite inferior del IC95 arriba de 0: **la ventaja sigue sin estar demostrada**.
+`CONTEXT_MODE` permite elegir cuánto manda el contexto: `completo` (default), `riesgo` (solo alertas on-chain,
+blackout y datos viejos) o `monitor` (solo registra). En papel, las posiciones sombra miden en vivo si el comité
+con contexto gana o pierde contra las reglas solas.
+
+## 5. Variables del modelo
 
 {{VARIABLES}}
 
@@ -87,7 +116,7 @@ del 5-nov los mercados de predicción le daban cerca de 60%, y parte del rally y
 mide la **sorpresa** (resultado − probabilidad previa), no la narrativa. (Tampoco fue "la primera vez que subieron
 las criptos": 2013, 2017 y 2020-21 fueron ciclos alcistas mayores.)
 
-## 5. Calendario a 3 años y refresco cada 15 días
+## 6. Calendario a 3 años y refresco cada 15 días
 
 - `data/context/CALENDARIO.md` (vista) y `calendar.json` (datos), {{N_EVENTS}} eventos hasta {{LAST_DATE}}.
 - Curado con fuente: FOMC, BCE, BoJ, BoE, Banxico; CPI, NFP, PCE, PIB de EE.UU.; plazos fiscales y arancelarios;
@@ -99,7 +128,7 @@ las criptos": 2013, 2017 y 2020-21 fueron ciclos alcistas mayores.)
 - **Cada hora**: vigía on-chain + noticias urgentes + señal. Alerta alta/crítica → issue de GitHub (te llega correo).
 - **Mensual**: estudio de eventos + backtest de variantes con datos reales (`BACKTEST_V42.md`).
 
-## 6. Dónde se guarda la información
+## 7. Dónde se guarda la información
 
 | Qué | Dónde |
 |---|---|
@@ -108,14 +137,14 @@ las criptos": 2013, 2017 y 2020-21 fueron ciclos alcistas mayores.)
 | Tu Google Sheet (espejo) | Pestañas Calendario, Eventos, Pesos, Alertas, Contexto vía `sheets/google_apps_script.js` |
 | Decisiones y posiciones del bot | Postgres/SQLite (`app/store.py`), cada decisión guarda el estado de contexto |
 
-## 7. APIs y MCP
+## 8. APIs y MCP
 
 {{APIS}}
 
 Los servidores MCP (CoinGecko, Dune, Glassnode, FRED, Exa, etc.) sirven para que Claude investigue en una
 sesión; el bot llama las APIs REST directo. Detalle completo: `data/context/sources/apis.json`.
 
-## 8. Qué falta y límites honestos
+## 9. Qué falta y límites honestos
 
 - **Sin ventaja demostrada todavía.** El contexto se agregó para *no operar en los peores momentos*, no porque haya
   evidencia de que gane. Se queda solo si el backtest fuera de muestra lo justifica (`BACKTEST_V42.md`).

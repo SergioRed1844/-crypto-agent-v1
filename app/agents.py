@@ -86,6 +86,9 @@ async def derivatives(s: AgentState):
             score -= 0.4; why.append("Codicia extrema: distribuir, no agregar")
         elif fg <= 20:
             score += 0.3
+    if config.DERIV_STRICT and ((fg is not None and fg >= 80) or (fr is not None and fr > 0.0005)):
+        veto = True
+        why.append("Filtro estricto v4.2: codicia extrema o funding alto → no comprar (mejoró el backtest fuera de muestra)")
     vote = "LONG" if score >= 0 and not veto else "FLAT"
     return _r("derivatives", vote, score, 60, veto, why)
 
