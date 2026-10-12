@@ -1,0 +1,56 @@
+# Refresco del modelo de contexto (CryptoAgent v4.2) — días 1 y 15 de cada mes (cada ~2 semanas).
+# Noticias de 15 días (CryptoPanic + GDELT) → eventos clasificados; auditoría de huecos del calendario con
+# Gemini + Google Search; variables de mercado; estudio de eventos (pesos); calendario a 3 años; señal; Sheets.
+# Lo nuevo sin fuente confirmada entra como "propuesto" (nunca dispara blackout). Solo datos: no opera nada.
+name: context-refresh
+on:
+  schedule:
+    - cron: "17 12 1,15 * *"
+  workflow_dispatch:
+  push:
+    branches: [v4.2-contexto]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: context
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[refresh]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v4.2-contexto
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "httpx>=0.27"
+      - name: Refresco quincenal
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CRYPTOPANIC_API_KEY: ${{ secrets.CRYPTOPANIC_API_KEY }}
+          CRYPTOPANIC_PLAN: ${{ vars.CRYPTOPANIC_PLAN || 'developer' }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          SHEETS_WEBAPP_URL: ${{ secrets.SHEETS_WEBAPP_URL }}
+          SHEETS_TOKEN: ${{ secrets.SHEETS_TOKEN }}
+        run: python -m app.context.pipeline refresh
+      - name: Avisar con un issue
+        if: hashFiles('data/context/notify.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -c "import json;d=json.load(open('data/context/notify.json'));open('/tmp/t','w').write(d['title']);open('/tmp/b','w').write(d['body'])"
+          gh issue create --title "$(cat /tmp/t)" --body-file /tmp/b || echo "no se pudo abrir el issue"
+      - name: Guardar en la rama v4.2-contexto
+        run: |
+          git config user.name "cryptoagent-context-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/context
+          if ! git diff --cached --quiet; then
+            git commit -q -m "contexto: refresco quincenal $(date -u +%F) [skip render]"
+            git pull -q --rebase origin v4.2-contexto
+            git push -q origin HEAD:v4.2-contexto
+          fi

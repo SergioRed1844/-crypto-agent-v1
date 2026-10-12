@@ -1,0 +1,5 @@
+[
+  {"event": "FOMC", "utc": "AAAA-MM-DDT18:00:00Z", "note": "Copia este formato a macro_calendar.json con fechas oficiales (federalreserve.gov, bls.gov)"},
+  {"event": "CPI",  "utc": "AAAA-MM-DDT12:30:00Z"},
+  {"event": "NFP",  "utc": "AAAA-MM-DDT12:30:00Z"}
+]

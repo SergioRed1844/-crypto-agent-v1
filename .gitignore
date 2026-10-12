@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+*.env
+.DS_Store
+venv/
+.venv/
+*.log
+*.db
+cryptoagent_state.db
+_localdata/
+datos/
+*.tmp
+data/context/notify.json.tmp

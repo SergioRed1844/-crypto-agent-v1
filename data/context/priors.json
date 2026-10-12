@@ -1,0 +1,184 @@
+{
+ "_nota": "Pesos A PRIORI (juicio experto). El estudio de eventos los ajusta con encogimiento bayesiano: peso = (n·empírico + k·prior)/(n + k). Nunca se usan sin pasar por app/context/event_study.py.",
+ "k_prior": 8,
+ "_escala": "Magnitud = EXCESO de |z3| sobre un día cualquiera (un día al azar ya mueve ~0.8). Dirección = z3 con signo de la postura (pro=+, anti=−).",
+ "tier_excess_abs_z": {
+  "1": 0.0,
+  "2": 0.1,
+  "3": 0.25,
+  "4": 0.5,
+  "5": 1.0
+ },
+ "tier_dir_z": {
+  "1": 0.03,
+  "2": 0.08,
+  "3": 0.18,
+  "4": 0.32,
+  "5": 0.55
+ },
+ "blackout_min_excess": 0.4,
+ "categories": {
+  "MONETARY_POLICY": {
+   "before_h": 6,
+   "after_h": 2,
+   "decay_days": 5,
+   "default_tier": 4
+  },
+  "MACRO_DATA": {
+   "before_h": 2,
+   "after_h": 1,
+   "decay_days": 2,
+   "default_tier": 3
+  },
+  "FISCAL": {
+   "before_h": 12,
+   "after_h": 6,
+   "decay_days": 5,
+   "default_tier": 3
+  },
+  "TRADE": {
+   "before_h": 12,
+   "after_h": 6,
+   "decay_days": 5,
+   "default_tier": 3
+  },
+  "ELECTION": {
+   "before_h": 24,
+   "after_h": 12,
+   "decay_days": 14,
+   "default_tier": 3
+  },
+  "GOV_TRANSITION": {
+   "before_h": 12,
+   "after_h": 6,
+   "decay_days": 10,
+   "default_tier": 2
+  },
+  "CRYPTO_REGULATION": {
+   "before_h": 12,
+   "after_h": 6,
+   "decay_days": 14,
+   "default_tier": 3
+  },
+  "TECH_AI_REGULATION": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 5,
+   "default_tier": 1
+  },
+  "PATENT_LICENSE": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 3,
+   "default_tier": 1
+  },
+  "CRYPTO_STRUCTURAL": {
+   "before_h": 12,
+   "after_h": 12,
+   "decay_days": 14,
+   "default_tier": 3
+  },
+  "CRYPTO_SUPPLY": {
+   "before_h": 12,
+   "after_h": 12,
+   "decay_days": 10,
+   "default_tier": 3
+  },
+  "INSTITUTIONAL_ADOPTION": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 10,
+   "default_tier": 2
+  },
+  "GEOPOLITICAL": {
+   "before_h": 6,
+   "after_h": 6,
+   "decay_days": 7,
+   "default_tier": 3
+  },
+  "FINANCIAL_CRISIS": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 14,
+   "default_tier": 4
+  },
+  "HACK_SECURITY": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 7,
+   "default_tier": 3
+  },
+  "ONCHAIN_WHALE": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 3,
+   "default_tier": 3
+  },
+  "PANDEMIC_HEALTH": {
+   "before_h": 0,
+   "after_h": 0,
+   "decay_days": 21,
+   "default_tier": 4
+  },
+  "DERIVATIVES_EXPIRY": {
+   "before_h": 2,
+   "after_h": 1,
+   "decay_days": 1,
+   "default_tier": 2
+  }
+ },
+ "moderators": {
+  "_nota": "Multiplicadores a priori sobre el efecto direccional de los eventos. Se re-estiman cuando hay >= 15 eventos por celda; si no, se quedan aquí.",
+  "btc_regime": {
+   "GREEN": {
+    "pro": 1.2,
+    "anti": 0.8
+   },
+   "YELLOW": {
+    "pro": 1.0,
+    "anti": 1.0
+   },
+   "RED": {
+    "pro": 0.8,
+    "anti": 1.3
+   }
+  },
+  "fear_greed": {
+   "greed_80": {
+    "pro": 0.8,
+    "anti": 1.25
+   },
+   "fear_20": {
+    "pro": 1.2,
+    "anti": 0.8
+   }
+  },
+  "vol_extreme_risk_mult": 1.3
+ },
+ "market_context": {
+  "_nota": "Variables de mercado (independientes cuantitativas). Umbrales a priori; el backtest de variantes dice si suman.",
+  "vix_caution": 30,
+  "dxy_20d_pct_bear": 2.0,
+  "nasdaq_20d_pct_bear": -8.0,
+  "stablecoin_30d_pct_bull": 2.0,
+  "stablecoin_30d_pct_bear": -2.0,
+  "etf_5d_flow_usd_bull": 1000000000,
+  "etf_5d_flow_usd_bear": -1000000000,
+  "bias_step": 0.1
+ },
+ "signal": {
+  "lookahead_h": 72,
+  "bias_scale": 1.5,
+  "risk_on_bias": 0.2,
+  "caution_bias": -0.2,
+  "risk_off_bias": -0.5,
+  "caution_event_risk": 0.5,
+  "stale_hours": 36,
+  "alert_hours": {
+   "critica": 72,
+   "alta": 48,
+   "media": 24
+  },
+  "extra_confluence_on_caution": 2
+ }
+}

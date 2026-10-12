@@ -1,0 +1,50 @@
+# Vigía del modelo de contexto (CryptoAgent v4.2) — cada hora. Solo LEE datos públicos; no opera nada.
+# on-chain (gastos de monedas era Satoshi / ballenas dormidas) + noticias urgentes + señal de contexto.
+# Si hay alerta alta/crítica o el contexto pasa a RISK_OFF/BLACKOUT, abre un issue (GitHub te avisa por correo).
+name: context-watch
+on:
+  schedule:
+    - cron: "37 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: context
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v4.2-contexto
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "httpx>=0.27"
+      - name: Vigía (on-chain + noticias + señal)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CRYPTOPANIC_API_KEY: ${{ secrets.CRYPTOPANIC_API_KEY }}
+          CRYPTOPANIC_PLAN: ${{ vars.CRYPTOPANIC_PLAN || 'developer' }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python -m app.context.pipeline watch
+      - name: Avisar con un issue
+        if: hashFiles('data/context/notify.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -c "import json;d=json.load(open('data/context/notify.json'));open('/tmp/t','w').write(d['title']);open('/tmp/b','w').write(d['body'])"
+          gh issue create --title "$(cat /tmp/t)" --body-file /tmp/b || echo "no se pudo abrir el issue"
+      - name: Guardar en la rama v4.2-contexto
+        run: |
+          git config user.name "cryptoagent-context-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/context
+          if ! git diff --cached --quiet; then
+            git commit -q -m "contexto: vigía $(date -u +%FT%TZ) [skip render]"
+            git pull -q --rebase origin v4.2-contexto
+            git push -q origin HEAD:v4.2-contexto
+          fi

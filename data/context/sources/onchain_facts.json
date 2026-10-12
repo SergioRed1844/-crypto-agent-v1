@@ -1,0 +1,207 @@
+{
+ "as_of": "2026-10-11",
+ "research_note": "WebSearch budget ran out partway through; the rest was checked with direct WebFetch calls on primary or reputable URLs. Fields marked 'unverified' were not re-checked in this session.",
+ "patoshi": {
+  "estimated_btc": "~1.1M BTC (Lerner, 2019). Arkham attributes ~1.096M BTC.",
+  "blocks": "~22,000 blocks, each a 50 BTC coinbase. Lerner says 99.9% are unspent.",
+  "coinbase_outputs_addresses": "~22,000 separate coinbase outputs and addresses, one per block. Arkham added '22,000 addresses' to its Satoshi Nakamoto entity on 2025-02-05.",
+  "block_range": "Starts at block 1, right after genesis (Lerner). Whale Alert puts the last Patoshi block at 54,316 (mempool.space timestamp 2010-05-03 13:17 UTC). Hashrate drops off after ~block 18k (Lerner 2020).",
+  "script_type": "P2PK: <65-byte uncompressed pubkey> OP_CHECKSIG. scriptPubKey is 0x41 + pubkey + 0xac (67 bytes). There is no address field. Esplora/mempool report scriptpubkey_type='p2pk' with no scriptpubkey_address (checked on the block 9 coinbase). Project Eleven estimates ~1.7M BTC sits in 2009-2011 P2PK coinbase outputs, not all of it Patoshi.",
+  "spent_by_patoshi": "About 800 BTC across 16 payments, each using at most 16 coinbase rewards (Cointelegraph Magazine, citing Lerner).",
+  "attribution_caveat": "Attribution is probabilistic and based on ExtraNonce/nonce patterns. Other research estimates ~750k BTC. Many non-Patoshi miners were active in 2009-2010, so 'Satoshi-era' is not the same as 'Satoshi'. Example: block 3654 moved on 2020-05-20 and is not Patoshi.",
+  "misconception_wallets": "Satoshi's coins are not in one wallet, and not in '~25 wallets'. They are ~22,000 independent 50-BTC P2PK UTXOs, each locked to its own public key. Any single Patoshi spend is a 50 BTC event. A real 'Satoshi moves' event would show up as one or more of these specific coinbase outputs being spent. I found no primary source for the '25 wallets' figure; it looks like folklore.",
+  "source_url": "https://bitslog.com/2019/04/16/the-return-of-the-deniers-and-the-revenge-of-patoshi/",
+  "source_urls_extra": [
+   "https://bitslog.com/2013/04/17/the-well-deserved-fortune-of-satoshi-nakamoto/",
+   "https://bitslog.com/2020/08/22/the-patoshi-mining-machine/",
+   "https://info.arkm.com/research/satoshi-nakamoto-owns-22-000-addresses",
+   "https://u.today/satoshi-nakamotos-last-known-mined-bitcoin-block-uncovered",
+   "https://cointelegraph.com/magazine/value-of-legacy-hunting-down-satoshi-bitcoin",
+   "https://www.projecteleven.com/blog/addressing-quantum-risks-for-bitcoin",
+   "https://cryptoslate.com/3-key-data-points-show-it-wasnt-satoshi-who-moved-50-bitcoin-today/"
+  ]
+ },
+ "genesis_note": {
+  "address": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+  "fact": "The 50 BTC genesis coinbase can never be spent because of a quirk in how the genesis block is coded. Other coins sent to the address are believed to be spendable.",
+  "receiving_is_not_moving": "The address receives tribute or dust deposits all the time. mempool.space chain_stats as of 2026-10-11: funded_txo_count=80,363, funded_txo_sum=57.58 BTC, spent_txo_count=0, plus 2 more incoming in the mempool. Example: someone sent 2.5 BTC (~$181k) to it in Feb 2026 (Arkham, 2026-02-10). Rule: alert only on inputs (vin) that spend Satoshi/Patoshi outputs, never on outputs (vout) that pay to them. Arkham/Whale Alert 'Satoshi wallet received X' headlines are noise.",
+  "source_url": "https://en.bitcoin.it/wiki/Genesis_block",
+  "source_urls_extra": [
+   "https://mempool.space/api/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
+   "https://info.arkm.com/research/satoshi-nakamoto-address-receives-181k-mysterious-btc-transfer"
+  ]
+ },
+ "entities": [
+  {
+   "name": "Satoshi Nakamoto (Patoshi)",
+   "btc_approx": 1096000,
+   "as_of": "2025-02-05",
+   "status": "Never moved, apart from ~800 BTC spent in 2009-2010.",
+   "labeled_publicly": true,
+   "arkham_url": "https://intel.arkm.com/explorer/entity/satoshi-nakamoto",
+   "arkham_url_verified": true,
+   "source_url": "https://info.arkm.com/research/satoshi-nakamoto-owns-22-000-addresses"
+  },
+  {
+   "name": "US Government",
+   "btc_approx": 328372,
+   "as_of": "2025-12-12",
+   "status": "Includes the ~127,271 BTC Prince Group forfeiture (DOJ 2025-10-14) and the >94k BTC Bitfinex-hack seizure (DOJ 2022-02-08), which may be subject to restitution to Bitfinex (unverified). History: Silk Road 69,370 BTC seized 2020-11-03. Strategic Bitcoin Reserve EO of Mar-2025: not re-verified this session.",
+   "labeled_publicly": true,
+   "arkham_url": "https://arkm.com/explorer/entity/usg",
+   "arkham_url_verified": "partial: the page title resolves to 'U.S. Government | Arkham', but Arkham builds titles from the URL slug, so this doesn't prove the entity exists",
+   "source_url": "https://bitcointreasuries.net/governments/united-states",
+   "source_urls_extra": [
+    "https://www.justice.gov/opa/pr/chairman-prince-group-indicted-operating-cambodian-forced-labor-scam-compounds-engaged",
+    "https://www.justice.gov/opa/pr/two-arrested-alleged-conspiracy-launder-45-billion-stolen-cryptocurrency",
+    "https://www.justice.gov/usao-ndca/pr/united-states-files-civil-action-forfeit-cryptocurrency-valued-over-one-billion-us"
+   ]
+  },
+  {
+   "name": "Bitfinex hack recovery (held by USG)",
+   "btc_approx": 94000,
+   "as_of": "2022-02-08",
+   "status": "Seized by DOJ, part of the USG total above. Whether it has been returned to Bitfinex was not verified. A transfer from these coins to Bitfinex could look like a large old-coin move.",
+   "labeled_publicly": true,
+   "arkham_url": null,
+   "source_url": "https://www.justice.gov/opa/pr/two-arrested-alleged-conspiracy-launder-45-billion-stolen-cryptocurrency"
+  },
+  {
+   "name": "UK Government (Qian Zhimin / Tianjin Lantian Gerui case)",
+   "btc_approx": 61245,
+   "as_of": "2024-09-17 (bitcointreasuries); CPS says '>60,000 BTC' (2025-11-11)",
+   "status": "Qian sentenced 2025-11-11. CPS is pursuing criminal confiscation and civil recovery. A High Court hearing on disposal was scheduled for 2026-02-16/17 (Caproasia); outcome not verified. Possible sale or victim compensation is a supply overhang.",
+   "labeled_publicly": "Arkham has an 'uk-government' slug (unverified)",
+   "arkham_url": "https://arkm.com/explorer/entity/uk-government",
+   "arkham_url_verified": false,
+   "source_url": "https://www.cps.gov.uk/cps/news/two-people-imprisoned-their-key-roles-largescale-money-laundering-case",
+   "source_urls_extra": [
+    "https://bitcointreasuries.net/governments/united-kingdom",
+    "https://www.caproasia.com/2026/02/13/uk-high-court-hearing-on-disposal-of-61000-bitcoins-4-billion-value-from-bitcoin-wealth-fraud-scheme-scheduled-on-16th-17th-february-2026-china-authorities-helping-investors-to-register-to-reco/"
+   ]
+  },
+  {
+   "name": "Mt. Gox Rehabilitation Trustee",
+   "btc_approx": 34689,
+   "as_of": "2025-10-27 (Arkham via The Block); ~35,000 after the internal move of 10,422.65 BTC on 2026-06-02",
+   "status": "REPAYMENT DEADLINE IS 2026-10-31, 20 days from now. High-priority watch: transfers to exchanges (Kraken/Bitstamp/Bitbank/SBI) have historically come before repayment waves.",
+   "labeled_publicly": true,
+   "arkham_url": "https://arkm.com/explorer/entity/mtgox",
+   "arkham_url_verified": false,
+   "source_url": "https://www.theblock.co/post/376205/mt-gox-postpones-repayment-deadline",
+   "source_urls_extra": [
+    "https://finance.yahoo.com/markets/crypto/articles/mt-gox-moves-739m-bitcoin-132553569.html",
+    "https://www.mtgox.com/"
+   ]
+  },
+  {
+   "name": "Bhutan (Druk Holding & Investments)",
+   "btc_approx": 518,
+   "as_of": "2026-09-15",
+   "status": "Small remaining balance: most of its mined BTC has apparently been sold or transferred. Low supply risk now.",
+   "labeled_publicly": true,
+   "arkham_url": "https://arkm.com/explorer/entity/royal-government-of-bhutan",
+   "arkham_url_verified": false,
+   "source_url": "https://bitcointreasuries.net/governments/bhutan"
+  },
+  {
+   "name": "El Salvador",
+   "btc_approx": 7801,
+   "as_of": "2026-10-11",
+   "status": "Net buyer. Reported splitting of reserves across multiple addresses (2025) not re-verified. Its moves are usually internal reshuffles, not sales.",
+   "labeled_publicly": true,
+   "arkham_url": "https://arkm.com/explorer/entity/el-salvador",
+   "arkham_url_verified": false,
+   "source_url": "https://bitcointreasuries.net/governments/el-salvador"
+  },
+  {
+   "name": "China (PlusToken seizure, attributed)",
+   "btc_approx": 190000,
+   "as_of": "2024-01-04 (stale)",
+   "status": "Figure is uncertain. PlusToken origin is widely attributed but not verified in this session, and sales may already have happened off-chain or through intermediaries. Treat as low-confidence.",
+   "labeled_publicly": "partial/unverified",
+   "arkham_url": null,
+   "source_url": "https://bitcointreasuries.net/governments/china"
+  },
+  {
+   "name": "Germany",
+   "btc_approx": 0,
+   "as_of": "2024-07-12",
+   "status": "Sold ~49,857 BTC between 2024-06-19 and 2024-07-12.",
+   "labeled_publicly": true,
+   "arkham_url": null,
+   "source_url": "https://www.bloomberg.com/news/articles/2024-07-12/germany-appears-to-finish-bitcoin-sales-data-tracker-arkham-says"
+  }
+ ],
+ "esplora_api": {
+  "base_urls": {
+   "mempool": "https://mempool.space/api",
+   "blockstream": "https://blockstream.info/api"
+  },
+  "endpoints": {
+   "GET /blocks/tip/height": "Plain-text integer (verified: 970961 on 2026-10-11).",
+   "GET /block-height/:height": "Plain-text block hash (verified for heights 9, 54316 and 100000).",
+   "GET /block/:hash": "JSON: id, height, version, timestamp, mediantime, bits, nonce, merkle_root, tx_count, size, weight, previousblockhash (mempool also returns difficulty). Cacheable forever.",
+   "GET /block/:hash/raw": "Binary serialized block, one call per block. Best for scanning every input locally.",
+   "GET /block/:hash/txids": "JSON list of txids.",
+   "GET /block/:hash/txs/:start_index": "25 txs per page; start_index must be a multiple of 25. Includes vin[].prevout. A ~4k-tx block needs ~160 calls.",
+   "GET /tx/:txid": "JSON: txid, version, locktime, size, weight, fee, vin[], vout[], status. vin[] has txid, vout, is_coinbase, scriptsig, scriptsig_asm, inner_redeemscript_asm, inner_witnessscript_asm, sequence, witness[] (omitted when empty), and prevout. YES: prevout includes value (sats), scriptpubkey, scriptpubkey_asm and scriptpubkey_type. P2PK prevouts have no scriptpubkey_address.",
+   "GET /tx/:txid/status": "JSON {confirmed, block_height, block_hash, block_time}. Docs list only the first three, but block_time is returned. Verified: tx f4184fc5... gives block_height 170, block_time 1231731025.",
+   "GET /address/:address": "chain_stats/mempool_stats: funded_txo_count, funded_txo_sum, spent_txo_count, spent_txo_sum, tx_count. A spent_txo_count increase is a cheap 'did it move?' check for a watchlist."
+  },
+  "scriptpubkey_type_values_seen": "p2pk, p2pkh, p2sh, v0_p2wpkh, v0_p2wsh, v1_p2tr, op_return. Only 'p2pk' was checked live; the rest come from the electrs codebase and were not verified this session.",
+  "p2pk_spend_signature": "A P2PK spend has a scriptSig with exactly ONE push: OP_PUSHBYTES_71/72/73 (0x47-0x49) + DER signature + sighash byte. No pubkey push and no witness. Verified on the Satoshi-to-Hal tx f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16, vin[0]: scriptsig_asm 'OP_PUSHBYTES_71 3044...01'; prevout type p2pk, value 5000000000, script 0x41 04 11db...ac. For contrast, P2PKH has two pushes (sig + 33/65-byte pubkey) and SegWit has an empty scriptSig with a witness.",
+  "detection_recipe": "1) Poll /blocks/tip/height every 60s. 2) On a new height, fetch /block-height/:h, then /block/:hash/raw. 3) Parse locally and pre-filter inputs whose scriptSig is a single 71-73-byte push with no witness (P2PK candidates). 4) For each candidate, GET /tx/:prev_txid/status and flag block_height <= 54316 (Patoshi window) or <= 100000 (2010, 'Satoshi-era'). Optionally GET /tx/:txid to read the prevout value. 5) Cross-check against a static Patoshi coinbase list (Lerner's dataset, built once offline). This costs about 150 block calls per day plus a few candidate lookups.",
+  "rate_limits_policy": {
+   "mempool": "No numeric limits are published. The docs say exceeding limits returns HTTP 429 and repeated violations may get you banned. They point to enterprise sponsorship for higher limits; self-hosting is possible (open source). Recommendations: <=1 req/s, exponential backoff on 429, cache block data forever.",
+   "blockstream": "Esplora API.md has no rate-limit statement. Blockstream's newer Explorer API tiers and auth could not be verified (fetch failed). Use it as a fallback with the same backoff.",
+   "sandbox_note": "From this Claude sandbox, Bash curl to both hosts was blocked by the egress proxy (403); WebFetch worked. Render production egress should not be affected, but test it."
+  },
+  "source_url": "https://mempool.space/docs/api/rest",
+  "source_urls_extra": [
+   "https://github.com/Blockstream/esplora/blob/master/API.md",
+   "https://mempool.space/api/tx/f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16",
+   "https://mempool.space/api/tx/f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16/status",
+   "https://mempool.space/api/block/000000000d1e2cf92a7e6afdbed6d34fc3ac2cc863d9a236ca4db394a94ece2e"
+  ]
+ },
+ "thresholds": {
+  "dormancy_definitions": "Glassnode's standard age bands are 1y-2y, 2y-3y, 3y-5y, 5y-7y, 7y-10y and >10y (Supply Last Active, Spent Output Age Bands, Spent Volume). Its long-term-holder cutoff is ~155 days. In 2025-2026 coverage, Galaxy Research, Whale Alert and Arkham call '10y+' or '2009-2011 coins' 'Satoshi-era'/'ancient' and flag moves even of tens of BTC (26.96 BTC at 12.5y; 100 BTC at 16y). Common usage: 5y+ = long-dormant, 7y+ = very old, 10y+ = ancient/Satoshi-era.",
+  "metric": "Coin Days Destroyed (BTC x days dormant) and Coin Years Destroyed are Glassnode metrics. A simple score is btc_amount x coin_age_years ('BTC-years'). Reference points: 80,000 BTC x 14.25y = 1.14M BTC-years (2025-07-04); 600 BTC x 16.5y = 9,900 (2026-09-05); 50 BTC x 11.3y = 565 (2020-05-20).",
+  "suggested_rules_heuristic": [
+   {
+    "tier": "S",
+    "condition": "Any spend of a Patoshi coinbase output (P2PK, block <= 54316, in the Patoshi list or the Arkham Satoshi entity). Minimum event size is 50 BTC.",
+    "action": "RISK_OFF immediately: block new longs and tighten stops. This has never happened; the 2020-05-20 'Satoshi' scare caused a fast ~2-3% wick on a non-Patoshi block."
+   },
+   {
+    "tier": "A",
+    "condition": ">=10,000 BTC with age >=10y, OR >=1M BTC-years",
+    "action": "RISK_OFF for 24-72h, or until it is resolved as custody/format migration vs exchange deposit (2025-07-04, then the Galaxy sale and the dip below $115k)."
+   },
+   {
+    "tier": "B",
+    "condition": ">=1,000 BTC with age >=7y, OR government/trustee entity (USG, UK, Mt. Gox, China) moving >=1,000 BTC, especially to exchange-labeled addresses",
+    "action": "DEFENSIVE posture: cut size by 50% and require higher confluence. Escalate to RISK_OFF if the destination is an exchange."
+   },
+   {
+    "tier": "C",
+    "condition": ">=100 BTC with age >=10y, OR P2PK coinbase spend with block <= 100000 that is not Patoshi",
+    "action": "CAUTION flag in the Gemini context only. Historically little lasting impact (2024-09-20, 2026-09-05, 2026-10-07)."
+   },
+   {
+    "tier": "ignore",
+    "condition": "Incoming transfers to the genesis or Satoshi addresses; moves <100 BTC at <10y",
+    "action": "No-op."
+   }
+  ],
+  "caveats": "Tier numbers are a heuristic built from the cases above, not a published standard; backtest before relying on them. A move is not a sale: many 2025-2026 awakenings went to custody or new SegWit/P2WPKH addresses (quantum or format upgrades; Decrypt 2026-08-29). Weight the destination more than the move (exchange-labeled vs fresh address). Respect the CLAUDE.md hard limits: this signal can only make the bot more defensive, never more aggressive.",
+  "source_url": "https://docs.glassnode.com/data/metric-catalog",
+  "source_urls_extra": [
+   "https://www.coindesk.com/tech/2026/10/08/bitcoin-mined-for-pennies-in-2010-moves-after-16-years-now-worth-usd8-5-million",
+   "https://decrypt.co/376866/bitcoin-oldest-coins-waking-up-2026",
+   "https://decrypt.co/375266/dormant-bitcoin-wallet-millions-wakes-up-12-years",
+   "https://decrypt.co/29533/bitcoin-price-dumps-over-fears-satoshi-nakamoto-moved-coins"
+  ]
+ }
+}

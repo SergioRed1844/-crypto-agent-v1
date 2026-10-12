@@ -1,0 +1,61 @@
+# Blueprint de Render. Región fuera de EE.UU.: Binance responde 451 a IPs estadounidenses.
+services:
+  - type: web
+    name: crypto-agent-v4
+    branch: v4.2-contexto    # los commits de datos del bot llevan [skip render]: no redespliegan
+    runtime: python
+    region: frankfurt
+    plan: starter            # siempre encendido; el plan free se duerme y TradingView corta a los 3 s
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.server:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    autoDeploy: false        # despliega a mano: un push no debe cambiar un bot que opera dinero
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: TRADING_MODE
+        value: paper
+      - key: PAPER_EQUITY
+        value: "1000"
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: ALLOWED_PAIRS
+        value: BTCUSDT,ETHUSDT,SOLUSDT
+      - key: RISK_PER_TRADE
+        value: "0.005"
+      - key: MAX_OPEN_POSITIONS
+        value: "2"
+      - key: TV_IP_ALLOWLIST
+        value: "true"
+      - key: RULES_ONLY_FALLBACK
+        value: "true"
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      - key: ADMIN_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false          # pega la URL de Neon/Supabase
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CRYPTOPANIC_API_KEY
+        sync: false
+      - key: BINANCE_API_KEY
+        sync: false          # vacío en paper
+      - key: BINANCE_SECRET
+        sync: false
+      - key: MAX_BOT_CAPITAL
+        value: "0"
+      - key: CONTEXT_REMOTE_BASE
+        value: https://raw.githubusercontent.com/SergioRed1844/-crypto-agent-v1/v4.2-contexto/data/context/
+      - key: CONTEXT_ENABLED
+        value: "true"
+      - key: CONTEXT_ONCHAIN_LIVE
+        value: "false"
+      - key: CONTEXT_EXIT_ON_CRITICAL
+        value: "true"
+      - key: MIN_NET_GAIN_PCT
+        value: "0.015"
+      - key: MIN_NET_RR
+        value: "1.8"

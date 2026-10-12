@@ -1,0 +1,57 @@
+//@version=6
+// ═══════════════════════════════════════════════════════════════
+// CryptoAgent v2.1 — SENSOR para el comité multiagente (LangGraph)
+// Avisa al servidor en CADA cierre de vela 4H; el servidor aplica las reglas (las mismas que
+// valida backtest.py) y decide. Pine no filtra: si filtrara distinto, el backtest contaría trades
+// que en vivo nunca llegarían. La tabla y los triángulos son solo visuales.
+// Alerta: Condición "CryptoAgent v2.1 Sensor" → "Any alert() function call". Una por par.
+// ═══════════════════════════════════════════════════════════════
+indicator("CryptoAgent v2.1 Sensor", overlay = true)
+
+i_secret = input.string("CAMBIA-ESTE-SECRET", "Webhook secret")
+
+// ── Cálculos visuales (mismas fórmulas que app/indicators.py) ──
+c    = close
+e21  = ta.ema(c, 21)
+e50  = ta.ema(c, 50)
+e200 = ta.ema(c, 200)
+r    = ta.rsi(c, 14)
+a    = ta.atr(14)
+volRatio = volume / ta.sma(volume, 20)
+prevHi   = ta.highest(high, 20)[1]   // en ámbito global: se actualiza en cada vela
+
+// Diario del último día CERRADO, sin repintado
+[dC, dE200] = request.security(syminfo.tickerid, "D", [close[1], ta.ema(close, 200)[1]], lookahead = barmerge.lookahead_on)
+htfUp = dC > dE200
+
+[hC, hE21, hR] = request.security(syminfo.tickerid, "60", [close, ta.ema(close, 21), ta.rsi(close, 14)], lookahead = barmerge.lookahead_off)
+
+int cs = 0
+cs += htfUp ? 2 : 0
+cs += math.abs(c - e21) <= a ? 2 : 0
+cs += (c > e50 and e50 > e200) ? 1 : 0
+cs += (volRatio > 1.5 and c >= prevHi * 0.995) ? 2 : 0
+cs += (hR >= 40 and hR <= 65 and hC > hE21) ? 2 : 0
+cs -= r > 75 ? 2 : 0
+cs := math.max(0, math.min(10, cs))
+
+plot(e21, "EMA21", color.new(color.blue, 0))
+plot(e50, "EMA50", color.new(color.orange, 0))
+plot(e200, "EMA200", color.new(color.fuchsia, 0))
+plotshape(htfUp and cs >= 5 and barstate.isconfirmed, "Candidato visual", shape.triangleup, location.belowbar, color.new(color.green, 0), size = size.small)
+
+var table t = table.new(position.top_right, 2, 3, bgcolor = color.new(color.black, 20))
+if barstate.islast
+    table.cell(t, 0, 0, "Diario > EMA200", text_color = color.white)
+    table.cell(t, 1, 0, htfUp ? "SÍ" : "NO", text_color = htfUp ? color.lime : color.red)
+    table.cell(t, 0, 1, "Confluencia (aprox)", text_color = color.white)
+    table.cell(t, 1, 1, str.tostring(cs) + "/10", text_color = color.white)
+    table.cell(t, 0, 2, "Timeframe", text_color = color.white)
+    table.cell(t, 1, 2, timeframe.period == "240" ? "4H ok" : "USA 4H", text_color = timeframe.period == "240" ? color.lime : color.red)
+
+// ── Webhook en cada cierre de vela 4H ─────────────────────────
+if barstate.isconfirmed and timeframe.period == "240"
+    msg = '{"secret":"' + i_secret + '","pair":"' + syminfo.ticker + '","signal_type":"BAR_CLOSE"' +
+          ',"price":' + str.tostring(c) + ',"atr":' + str.tostring(a) + ',"confluence_score":' + str.tostring(cs) +
+          ',"timeframe":"' + timeframe.period + '","bar_time":' + str.tostring(time) + '}'
+    alert(msg, alert.freq_once_per_bar_close)
