@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T21:51:37Z",
+ "generated_utc": "2026-10-12T22:49:56Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.956,
- "bias": -0.037,
- "event_risk": 0.088,
+ "size_mult": 0.954,
+ "bias": -0.036,
+ "event_risk": 0.092,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.088,
+   "riesgo": 0.092,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.057
+   "aporte": -0.056
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -92,7 +92,7 @@
    "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.015
+   "aporte": -0.014
   }
  ],
  "alerts": [],
