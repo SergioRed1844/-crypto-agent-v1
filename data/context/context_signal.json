@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-12T22:49:56Z",
+ "generated_utc": "2026-10-12T23:48:59Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.954,
+ "size_mult": 0.952,
  "bias": -0.036,
- "event_risk": 0.092,
+ "event_risk": 0.095,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.04, riesgo de evento 0.09"
+  "Contexto neutral: sesgo -0.04, riesgo de evento 0.10"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.092,
+   "riesgo": 0.095,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -60,7 +60,7 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.035
+   "aporte": 0.034
   },
   {
    "id": "bitget-hot-wallet-hack-2026-09-24",
@@ -68,7 +68,7 @@
    "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.024
+   "aporte": -0.023
   },
   {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
