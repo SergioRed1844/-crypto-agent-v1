@@ -10,7 +10,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: context
+  group: context-backtest
   cancel-in-progress: false
 jobs:
   backtest:
@@ -32,13 +32,17 @@ jobs:
         run: python -m app.context.event_study --fetch
       - name: Backtest de variantes v4.2
         run: python tools/backtest_variants.py --csv-dir datos --since 2021-01-01
-      - name: Guardar en la rama v4.2-contexto
+      - name: Guardar en la rama v4.2-contexto (aunque un paso anterior haya fallado)
+        if: always()
         run: |
           git config user.name "cryptoagent-context-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/context
-          if ! git diff --cached --quiet; then
-            git commit -q -m "contexto: estudio de eventos + backtest v4.2 $(date -u +%F) [skip render]"
-            git pull -q --rebase origin v4.2-contexto
-            git push -q origin HEAD:v4.2-contexto
-          fi
+          git diff --cached --quiet && exit 0
+          git commit -q -m "contexto: estudio de eventos + backtest v4.2 $(date -u +%F) [skip render]"
+          for i in 1 2 3; do
+            # si otro job empujó datos, gana lo de esta corrida (-X theirs en un rebase = los commits locales)
+            git pull -q --rebase -X theirs origin v4.2-contexto && git push -q origin HEAD:v4.2-contexto && exit 0
+            git rebase --abort 2>/dev/null; sleep $((i * 15))
+          done
+          echo "no se pudo empujar después de 3 intentos"; exit 1

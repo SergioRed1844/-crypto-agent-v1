@@ -56,8 +56,12 @@ def cryptopanic(filter_: str = "important", currencies: str = "BTC,ETH,SOL", pag
                 if r.status_code != 200:
                     last = f"HTTP {r.status_code} en {base.split('/api/')[1]}"  # sin token en el log
                     break
+                try:
+                    j = r.json()
+                except ValueError:  # 200 con HTML (página de error/caché): no es una respuesta válida
+                    last = f"respuesta no-JSON en {base.split('/api/')[1]}"
+                    break
                 ok = True
-                j = r.json()
                 for p in j.get("results", []):
                     v = p.get("votes") or {}
                     items.append({"title": clean(p.get("title")), "published_at": p.get("published_at"),

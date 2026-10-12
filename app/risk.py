@@ -17,7 +17,8 @@ def _size_mult(confluence: int) -> float:
 
 def net_economics(price: float, sl: float, tp: float, fee: float | None = None, slip: float | None = None) -> dict:
     """Economía REAL del trade: compra a mercado con slippage, comisión de ida y vuelta, stop a mercado con slippage.
-    Un 2.5:1 bruto con stop de 0.26% queda en 0.9:1 neto: por eso se filtra en neto, no en bruto."""
+    Ejemplo real (scalp BTC 12-oct-2026): precio 83,773, stop 83,598, objetivo 84,358 → 2.5:1 bruto, 0.88:1 neto.
+    Por eso se filtra en neto, no en bruto."""
     fee = config.FEE_RATE if fee is None else fee
     slip = config.SLIPPAGE if slip is None else slip
     entry = price * (1 + slip)
@@ -81,8 +82,10 @@ def evaluate(s: AgentState, equity: float, usdt_free: float, unrealized: float =
     ctx = _context(s)
     chk("contexto_sin_veto", not ctx["veto"], ctx["state"])
 
-    # Riesgo por unidad = distancia al stop + comisiones de entrada y salida
-    unit_risk = (price - sl) + (price + sl) * config.FEE_RATE if price > sl else 0
+    # Riesgo por unidad = lo que de verdad se pierde en el stop: entrada con slippage, stop a mercado con slippage
+    # y comisiones de ida y vuelta (así el 0.5% es un techo real, no nominal)
+    _e, _s = price * (1 + config.SLIPPAGE), sl * (1 - config.SLIPPAGE)
+    unit_risk = (_e - _s) + (_e + _s) * config.FEE_RATE if price > sl else 0
     risk_usdt = equity * R["risk_per_trade"] * _size_mult(cons.get("confluence", 5)) * max(0.0, min(1.0, ctx["size_mult"]))
     qty = risk_usdt / unit_risk if unit_risk > 0 else 0
     notional = qty * price

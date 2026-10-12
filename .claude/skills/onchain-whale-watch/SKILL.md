@@ -14,15 +14,18 @@ description: CryptoAgent v4.2's on-chain alert rule — detecting when Satoshi-e
   2026-09-05 (600 BTC from 2010), Mt. Gox trustee still ~34–35k BTC with an Oct-31-2026 deadline.
 
 ## Detection (`python -m app.context.onchain`, hourly in GitHub Actions + optional every 5 min in the server)
-Parse each new raw block. SATOSHI_ERA (critica): a non-coinbase input that spends a P2PK output (scriptSig =
-one DER-signature push, no pubkey, no witness) whose source block ≤ 60,000. EARLY_MINER (alta): same with source
-≤ 210,000 and ≥ 50 BTC. DORMANT_WHALE: txs ≥ 100 BTC; inputs ≥ 5 BTC are dated via /tx/:prev/status →
+Parse each new raw block. SATOSHI_ERA: an input that spends a P2PK **coinbase** output (scriptSig = one
+DER-signature push, no pubkey, no witness) whose source block ≤ 60,000 → **critica only if the tx moves
+≥ `satoshi_exit_min_btc` (500 BTC = 10 coinbases)**, otherwise alta (one 2009 coinbase may belong to another early
+miner — the 2020-05-20 move was not Patoshi). EARLY_MINER (alta): P2PK ≤ 210,000 and ≥ 50 BTC. P2PK_FLOOD
+(media): the per-block P2PK lookup cap was hit (rare in itself). DORMANT_WHALE: txs ≥ 100 BTC; inputs ≥ 5 BTC are dated via /tx/:prev/status →
 alta if ≥ 500 BTC aged ≥10y or ≥ 5,000 BTC aged ≥5y; media if ≥ 1,000 BTC aged ≥5y. Thresholds live in
 `onchain.DEFAULTS`; they are heuristics (Glassnode bands 5y/7y/10y), not a published standard — calibrate.
 
 ## Response (engine + server)
-critica → RISK_OFF + exit_all: the leader sells all bot positions to USDT once per alert id and sets the kill
-switch (human reviews, then POST /resume). alta → RISK_OFF 48 h (no new buys, positions keep their OCO).
+Windows start at `detected_utc` (block timestamps can run 2 h ahead; the watcher may lag).
+critica → RISK_OFF + exit_all: the leader sells all bot positions to USDT and sets the kill switch (human reviews,
+then POST /resume); the alert is marked done only when no positions remain, so a failed sale is retried. alta → RISK_OFF 48 h (no new buys, positions keep their OCO).
 media → CAUTION 24 h (half size, +2 confluence). The watch workflow opens a GitHub issue (email) on alta/critica.
 
 ## API etiquette (mempool.space, fallback blockstream.info)

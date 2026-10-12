@@ -97,6 +97,12 @@ def normalize(e: dict, default_status: str = "confirmed") -> dict:
         e["prior_tier"] = max(1, min(5, int(e.get("prior_tier") or 2)))
     except (TypeError, ValueError):
         e["prior_tier"] = 2
+    if "confidence" in e:
+        try:
+            c = float(e["confidence"])
+            e["confidence"] = max(0.0, min(1.0, c / 100 if c > 1 else c))  # el LLM a veces responde 85 en vez de 0.85
+        except (TypeError, ValueError):
+            e["confidence"] = 0.5
     e.setdefault("subcategory", "")
     if e.get("time_local") and not e.get("tz"):
         e["tz"] = "UTC"

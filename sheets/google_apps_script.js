@@ -525,8 +525,14 @@ function contextSheet(data) {
   if (data.token !== expected) return { ok: false, error: "token inválido" };
   if (CONTEXT_SHEETS.indexOf(data.sheet) < 0) return { ok: false, error: "pestaña no permitida: " + data.sheet };
   const header = data.header || [];
+  // Los títulos vienen de noticias: un texto que empieza con = + - @ se volvería fórmula. Se escapa con '.
+  const safe = function (v) {
+    if (v === null || v === undefined) return "";
+    if (typeof v === "string" && /^[=+\-@]/.test(v)) return "'" + v;
+    return v;
+  };
   const rows = (data.rows || []).map(function (r) {
-    return header.map(function (_, i) { const v = r[i]; return (v === null || v === undefined) ? "" : v; });
+    return header.map(function (_, i) { return safe(r[i]); });
   });
   const lock = LockService.getScriptLock();
   lock.waitLock(30000);

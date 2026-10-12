@@ -39,19 +39,11 @@ async def _process(signal: dict):
         store.finish_decision(signal["signal_id"], "ERROR", str(e)[:500], {"signal": signal})
 
 
-async def _context_tick(st: dict):
-    """Cada minuto (solo el líder): recalcula el contexto; con alerta CRÍTICA on-chain vende todo a USDT una sola vez
-    por alerta y deja el kill switch activo (reanudar con /resume después de revisar)."""
+async def _context_tick(st: dict | None = None):
+    """Recalcula el contexto; con alerta CRÍTICA on-chain vende todo a USDT y deja el kill switch activo
+    (reanudar con /resume después de revisar). Una alerta se marca atendida solo cuando ya no quedan posiciones
+    abiertas: si la venta falló (UNPROTECTED), el siguiente tick lo vuelve a intentar."""
     from .context import live
-    loop = asyncio.get_running_loop()
-    if config.CONTEXT_ONCHAIN_LIVE and loop.time() - st.get("scan", 0.0) >= 300:
-        st["scan"] = loop.time()
-        try:
-            new = await asyncio.to_thread(live.live_onchain_scan)
-            if new:
-                log.warning(f"vigía on-chain en vivo: {len(new)} alertas nuevas")
-        except Exception as e:
-            log.warning(f"vigía on-chain en vivo: {e}")
     sig = await asyncio.to_thread(live.signal, None)
     store.put("context_last", {k: sig.get(k) for k in ("generated_utc", "state", "bias", "event_risk", "size_mult",
                                                          "veto_entries", "exit_all", "reasons")})
@@ -65,15 +57,43 @@ async def _context_tick(st: dict):
     store.put("kill_reason", f"contexto: alerta crítica on-chain {new}")
     async with _trade_lock:
         res = await asyncio.to_thread(execution.emergency_flatten)
-    store.put("context_exit_done", sorted(done | set(new)))
+    left = store.open_positions()
+    if not left:
+        store.put("context_exit_done", sorted(done | set(new)))
     store.put("flatten_result", {"ts": store.now().isoformat(), "result": res, "reason": "context_exit"})
-    log.critical(f"CONTEXTO: alerta crítica {new} → salida a USDT y kill switch: {res}")
+    log.critical(f"CONTEXTO: alerta crítica {new} → salida a USDT y kill switch: {res}"
+                 f"{'' if not left else f' — quedan {len(left)} posiciones, se reintenta'}")
+
+
+async def _context_loop():
+    """Tarea propia (no frena al líder): cada minuto, si esta instancia es líder, evalúa el contexto."""
+    while True:
+        try:
+            if config.CONTEXT_ENABLED and _state["leader"]:
+                await _context_tick()
+        except Exception as e:
+            log.warning(f"contexto: {e}")
+        await asyncio.sleep(60)
+
+
+async def _onchain_loop():
+    """CONTEXT_ONCHAIN_LIVE=true: vigía on-chain dentro del servidor cada 5 min, en su propia tarea."""
+    from .context import live
+    while True:
+        try:
+            if _state["leader"]:
+                new = await asyncio.to_thread(live.live_onchain_scan)
+                if new:
+                    log.warning(f"vigía on-chain en vivo: {len(new)} alertas nuevas")
+        except Exception as e:
+            log.warning(f"vigía on-chain en vivo: {e}")
+        await asyncio.sleep(300)
 
 
 async def _leader_loop():
     """Nunca muere: cualquier error se registra y se reintenta. En cada vuelta confirma que sigue siendo
     líder; si perdió el lock (conexión caída), deja de operar hasta recuperarlo."""
-    last_rec, last_ctx, ctx_state = 0.0, 0.0, {}
+    last_rec = 0.0
     loop = asyncio.get_running_loop()
     while True:
         try:
@@ -93,12 +113,6 @@ async def _leader_loop():
                 store.put("flatten_result", {"ts": store.now().isoformat(), "result": res})
                 store.put("flatten_requested", False)
                 log.warning(f"flatten ejecutado: {res}")
-            if config.CONTEXT_ENABLED and loop.time() - last_ctx >= 60:
-                last_ctx = loop.time()
-                try:
-                    await _context_tick(ctx_state)
-                except Exception as e:
-                    log.warning(f"contexto: {e}")
             if loop.time() - last_rec >= 300 or last_rec == 0.0:
                 async with _trade_lock:
                     res = await asyncio.to_thread(execution.reconcile)
@@ -131,9 +145,14 @@ async def lifespan(app):
         log.warning("ADMIN_SECRET vacío o igual a WEBHOOK_SECRET: /status, /decisions y /kill quedan bloqueados")
     _state["started"] = store.now()
     task = asyncio.create_task(_leader_loop())
+    side = [asyncio.create_task(_context_loop())]
+    if config.CONTEXT_ONCHAIN_LIVE:
+        side.append(asyncio.create_task(_onchain_loop()))
     log.info(f"CryptoAgent {config.RELEASE_ID} | modo={config.TRADING_MODE} | llm={config.LLM_PROVIDER}:{config.GEMINI_MODEL}")
     yield
     task.cancel()
+    for t in side:
+        t.cancel()
 
 
 app = FastAPI(title="CryptoAgent v4", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)

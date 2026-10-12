@@ -48,7 +48,7 @@ PROTECTED_ASSETS = {"BNB"}  # nunca se compra ni se vende
 
 # Riesgo (de Crypto_Trading_Master_Methodology_v1)
 RISK = {
-    "risk_per_trade": float(os.environ.get("RISK_PER_TRADE", "0.005")),   # 0.5% del equity
+    "risk_per_trade": min(0.005, float(os.environ.get("RISK_PER_TRADE", "0.005"))),  # 0.5% del equity: TECHO inmutable
     "max_open_risk": 0.05,           # checklist #7
     "max_position_notional": 0.25,   # ningún trade > 25% del equity en nocional
     # BTC/ETH/SOL se mueven juntos (correlación alta): 3 posiciones = casi la misma apuesta x3

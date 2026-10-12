@@ -17,11 +17,11 @@ import httpx
 
 from . import ctx_dir, read_json, utcnow
 from . import engine, onchain
-from .pipeline import _age_h
+from .pipeline import input_ages
 from .schema import normalize
 
 log = logging.getLogger("context.live")
-FILES = ("calendar.json", "alerts_onchain.json", "macro.json", "news_events.json", "weights.json")
+FILES = ("calendar.json", "alerts_onchain.json", "macro.json", "news_events.json", "weights.json", "onchain_state.json")
 _lock = threading.Lock()
 _cache = {"t": 0.0, "files": {}, "errors": {}}
 
@@ -30,7 +30,7 @@ def _remote(name: str):
     base = os.environ.get("CONTEXT_REMOTE_BASE", "")
     if not base:
         return read_json(name)
-    r = httpx.get(base.rstrip("/") + "/" + name, timeout=15, headers={"User-Agent": "cryptoagent-server"})
+    r = httpx.get(base.rstrip("/") + "/" + name, timeout=8, headers={"User-Agent": "cryptoagent-server"})
     r.raise_for_status()
     return r.json()
 
@@ -40,22 +40,27 @@ def load(force: bool = False) -> dict:
     with _lock:
         if not force and time.time() - _cache["t"] < every and _cache["files"]:
             return _cache["files"]
-        for n in FILES:
-            try:
-                v = _remote(n)
-                if v is not None:
-                    _cache["files"][n] = v
-                    _cache["errors"].pop(n, None)
-            except Exception as e:
-                _cache["errors"][n] = f"{type(e).__name__}"
+        _cache["t"] = time.time()  # otro hilo no repite la descarga mientras esta corre
+    got, errs = {}, {}
+    for n in FILES:  # descarga FUERA del candado: un GitHub lento no bloquea a quien lee el caché
+        try:
+            v = _remote(n)
+            if v is not None:
+                got[n] = v
+        except Exception as e:
+            errs[n] = f"{type(e).__name__}"
+    with _lock:
+        _cache["files"].update(got)
+        for n in got:
+            _cache["errors"].pop(n, None)
+        _cache["errors"].update(errs)
         # alertas que detecta el propio servidor (vigía en vivo) se suman a las del repo
         local = read_json("alerts_live.json", {}) or {}
         if local.get("alerts"):
             base = (_cache["files"].get("alerts_onchain.json") or {}).get("alerts", [])
             ids = {a["id"] for a in base}
             _cache["files"]["alerts_onchain.json"] = {"alerts": base + [a for a in local["alerts"] if a["id"] not in ids]}
-        _cache["t"] = time.time()
-        return _cache["files"]
+        return dict(_cache["files"])
 
 
 def _recent(files: dict, now):
@@ -87,10 +92,9 @@ def signal(market: dict | None = None) -> dict:
         from . import event_calendar
         cal = event_calendar.build(now)
     mac = f.get("macro.json") or {}
-    ages = [a for a in (_age_h(mac.get("generated_utc"), now),
-                        _age_h((f.get("news_events.json") or {}).get("updated_utc"), now)) if a is not None]
+    age = input_ages(mac, f.get("news_events.json") or {}, f.get("onchain_state.json") or {}, now)
     sig = engine.compute(now, cal, _recent(f, now), (f.get("alerts_onchain.json") or {}).get("alerts", []), mac,
-                         market, weights=f.get("weights.json"), inputs_age_h=max(ages) if ages else 999.0)
+                         market, weights=f.get("weights.json"), inputs_age_h=999.0 if age is None else age)
     sig["fetch_errors"] = dict(_cache["errors"])
     return sig
 

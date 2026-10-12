@@ -31,13 +31,16 @@ fuerte (n≥10, p<0.05), moderada, débil, sin datos. Regime moderator multiplie
 ## Signal (`engine.compute`, contract in its docstring; file `context_signal.json`)
 magnitude_e = ½·w_abs[cat] + ½·tier_prior; event_risk = 1 − Π(1 − min(1,mag)·P(status)·proximity);
 bias = tanh(Σ stance·direction·e^(−age/decay)·confidence·moderator / 1.5) + market steps (VIX≥30, DXY+2%,
-Nasdaq −8%, stablecoins ±2%). States: on-chain critical/high or bias ≤ −0.5 → RISK_OFF (veto; critical also
+Nasdaq −8%, stablecoins ±2%). States: inputs older than 72 h, on-chain critical/high or bias ≤ −0.5 → RISK_OFF (veto; critical also
 exit_all); confirmed exact/day event of magnitude ≥ 0.4 inside its window → BLACKOUT (veto); bias ≤ −0.2,
 event_risk ≥ 0.5, medium alert or stale inputs (>36 h) → CAUTION (size ×0.5, +2 confluence);
-bias ≥ 0.2 and event_risk < 0.3 → RISK_ON (votes LONG); else NEUTRAL (size 1 − ½·event_risk, ≥0.5).
+bias ≥ 0.2 and event_risk < 0.3 → RISK_ON (full size); else NEUTRAL (size 1 − ½·event_risk, ≥0.5).
+Same-day duplicates (category, day, stance) count once; LLM confidence is clamped to [0,1]; alert windows start
+at `detected_utc`.
 
 ## Integration (trading graph)
-`agents.context` runs in parallel with technical/regime/derivatives (code, no LLM) and reads `app/context/live.py`
+`agents.context` runs in parallel with technical/regime/derivatives (code, no LLM). It reports vote FLAT and
+score ≤ 0 and `aggregate` excludes it from the LONG count — **context can only subtract, never add a vote**. and reads `app/context/live.py`
 (remote files from the v4.2-contexto branch via CONTEXT_REMOTE_BASE, cached 10 min; blackout/alerts evaluated
 with the CURRENT time). Any veto → no LLM calls, NO_TRADE. `aggregate` requires confluence 5 + extra_confluence.
 `risk.evaluate` multiplies risk by size_mult and adds checks: ganancia_neta_minima (net target ≥ 1.5%),

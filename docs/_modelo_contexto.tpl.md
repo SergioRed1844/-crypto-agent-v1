@@ -39,7 +39,8 @@ Todo corre en **papel** (`TRADING_MODE=paper`). Nada de esto mueve dinero.
  TradingView (4H) → webhook → gather ─┬─ technical  (Three Screen + confluencia 0–10)
                                       ├─ regime     (BTC diario, volatilidad)        ← capa 0, veta
                                       ├─ derivatives(funding, F&G)
-                                      └─ context    (live.py lee la señal; blackout y alertas con la hora actual)
+                                      └─ context    (live.py lee la señal; blackout y alertas con la hora actual;
+                                                     solo veta o resta, nunca suma un voto a favor)
                                       → rules_gate ─(cualquier veto)→ NO_TRADE
                                       → sentiment ∥ methodology (LLM) → aggregate (≥3 votos LONG, confluencia
                                         5 + extra del contexto) → bull ∥ bear → judge → risk_gate → execute (papel)
@@ -49,12 +50,12 @@ Todo corre en **papel** (`TRADING_MODE=paper`). Nada de esto mueve dinero.
 
 | Estado | Cuándo | Qué hace el bot |
 |---|---|---|
-| **RISK_OFF + salida** | Se gastan monedas de la era Satoshi (alerta crítica) | Vende todo lo del bot a USDT una vez, activa el kill switch (reanudas tú con `/resume`) |
-| **RISK_OFF** | Ballena dormida grande (alerta alta) o sesgo de eventos ≤ −0.5 | No compra nada nuevo; las posiciones abiertas siguen con su stop/objetivo |
+| **RISK_OFF + salida** | Se gastan ≥ 500 BTC de coinbases de la era Satoshi (bloques ≤ 60,000, P2PK) — alerta crítica | Vende todo lo del bot a USDT, activa el kill switch (reanudas tú con `/resume`); si la venta falla, reintenta cada minuto |
+| **RISK_OFF** | Una coinbase suelta de 2009–2010 (puede ser otro minero, como el 20-may-2020), ballena dormida grande (alerta alta), sesgo de eventos ≤ −0.5, o contexto sin actualizar > 72 h | No compra nada nuevo; las posiciones abiertas siguen con su stop/objetivo |
 | **BLACKOUT** | Dentro de la ventana de un evento programado *confirmado* de alto impacto (p.ej. FOMC: 6 h antes a 2 h después) | No compra nada nuevo |
 | **CAUTION** | Sesgo ≤ −0.2, riesgo de evento ≥ 0.5 en 72 h, alerta media, o datos de contexto con más de 36 h | Tamaño ×0.5 y exige confluencia técnica ≥ 7 (en vez de 5) |
 | **NEUTRAL** | Lo demás | Tamaño 1 − ½·riesgo de evento (mínimo 0.5) |
-| **RISK_ON** | Sesgo ≥ +0.2 y riesgo de evento < 0.3 | Tamaño completo; el agente de contexto vota LONG |
+| **RISK_ON** | Sesgo ≥ +0.2 y riesgo de evento < 0.3 | Tamaño completo. El contexto **nunca vota a favor** de comprar: solo puede vetar o restar |
 
 Además el `risk_gate` ahora exige, siempre:
 - **Ganancia neta mínima:** objetivo ≥ **1.5%** ya restando comisión de ida y vuelta y slippage (`MIN_NET_GAIN_PCT`).

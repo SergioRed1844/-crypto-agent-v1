@@ -104,7 +104,8 @@ async def context(s: AgentState):
         log.warning(f"contexto falló: {e}")
         sig = live.mock_signal("CAUTION")
         sig["reasons"] = [f"Contexto no disponible ({type(e).__name__}): precaución"]
-    out = _r("context", sig["vote"], sig["bias"], sig["confidence"], sig["veto_entries"], sig["reasons"][:5])
+    # Solo puede RESTAR: nunca vota LONG (no completa votos que faltan) y su score solo puede ser ≤ 0
+    out = _r("context", "FLAT", min(0.0, float(sig["bias"])), sig["confidence"], sig["veto_entries"], sig["reasons"][:5])
     out["reports"][0]["context"] = {k: sig.get(k) for k in ("state", "size_mult", "extra_confluence", "event_risk",
                                                             "bias", "exit_all", "exit_alert_ids")}
     out["reports"][0]["context"]["upcoming"] = [u["title_es"] for u in sig.get("upcoming", [])[:3]]
@@ -152,7 +153,7 @@ async def methodology(s: AgentState):
 async def aggregate(s: AgentState):
     reps = s["reports"]
     vetoes = [r for r in reps if r["veto"]]
-    longs = sum(1 for r in reps if r["vote"] == "LONG")
+    longs = sum(1 for r in reps if r["vote"] == "LONG" and r["agent"] != "context")  # el contexto no vota a favor
     w = sum(r["confidence"] for r in reps) or 1
     weighted = sum(r["score"] * r["confidence"] for r in reps) / w
     tech = next(r for r in reps if r["agent"] == "technical")

@@ -324,9 +324,13 @@ def t_scan_block():
     by = {a["type"]: a for a in al}
     ok(len(al) == 2 and set(by) == {"SATOSHI_ERA", "DORMANT_WHALE"}, f"bloque 1: 2 alertas {[a['id'][:20] for a in al]}")
     s = by.get("SATOSHI_ERA", {})
-    ok(s.get("txid") == ids["i"] and s.get("severity") == "critica" and s.get("action") == "RISK_OFF_EXIT"
-       and s.get("btc_moved") == 50.0 and s.get("oldest_input_height") == 1500 and s.get("id") == f"SATOSHI_ERA-{ids['i']}",
-       f"(i) SATOSHI_ERA crítica: {s.get('btc_moved')} BTC del bloque {s.get('oldest_input_height')}")
+    ok(s.get("txid") == ids["i"] and s.get("severity") == "alta" and s.get("action") == "RISK_OFF_BLOCK"
+       and s.get("btc_moved") == 50.0 and s.get("oldest_input_height") == 1500 and s.get("id") == f"SATOSHI_ERA-{ids['i']}"
+       and s.get("detected_utc"),
+       f"(i) 1 coinbase de 2009 (50 BTC) → SATOSHI_ERA alta, sin venta: {s.get('btc_moved')} BTC bloque {s.get('oldest_input_height')}")
+    big = {a["type"]: a for a in oc.scan_block(FakeClient(routes), 900001, {"satoshi_exit_min_btc": 50})}
+    ok(big["SATOSHI_ERA"]["severity"] == "critica" and big["SATOSHI_ERA"]["action"] == "RISK_OFF_EXIT",
+       "salida grande de coinbases era Satoshi (≥ umbral) → crítica, vende a USDT")
     w = by.get("DORMANT_WHALE", {})
     ok(w.get("txid") == ids["ii"] and w.get("severity") == "alta" and w.get("action") == "RISK_OFF_BLOCK"
        and w.get("btc_moved") == 3000.0 and abs(w.get("max_age_years", 0) - 12) < 0.01,
@@ -342,8 +346,9 @@ def t_scan_block():
 
     fc = FakeClient(routes)
     al = oc.scan_block(fc, 900001, {"max_whale_txs": 1, "max_p2pk_lookups": 0})
-    ok([a["type"] for a in al] == ["DORMANT_WHALE"] and f"/tx/{ids['iii']}" not in fc.log
-       and f"/tx/{P1}/status" not in fc.log, "topes por bloque: max_whale_txs=1 y max_p2pk_lookups=0")
+    ok([a["type"] for a in al] == ["P2PK_FLOOD", "DORMANT_WHALE"] and al[0]["severity"] == "media"
+       and f"/tx/{ids['iii']}" not in fc.log and f"/tx/{P1}/status" not in fc.log,
+       "topes por bloque: max_whale_txs=1; tope P2PK alcanzado → alerta media P2PK_FLOOD (no se ignora en silencio)")
 
     fc = FakeClient(routes)
     al = oc.scan_block(fc, 900002, {})

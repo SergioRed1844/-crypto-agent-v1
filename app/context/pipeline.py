@@ -46,14 +46,38 @@ def recent_events(now: datetime, days: int = 60) -> list[dict]:
     return out
 
 
+def input_ages(mac: dict, ne: dict, ocs: dict, now: datetime) -> float | None:
+    """Edad (h) del insumo MÁS viejo: macro, noticias y vigía on-chain. Sin vigía reciente no hay contexto confiable."""
+    ages = [a for a in (_age_h(mac.get("generated_utc"), now), _age_h(ne.get("updated_utc"), now),
+                        _age_h(ocs.get("updated_utc"), now)) if a is not None]
+    return max(ages) if ages else None
+
+
 def build_signal(now: datetime | None = None, market: dict | None = None) -> dict:
     now = now or utcnow()
     cal = event_calendar.load(now)
     alerts = (read_json("alerts_onchain.json", {}) or {}).get("alerts", [])
     mac = read_json("macro.json", {}) or {}
     ne = read_json("news_events.json", {}) or {}
-    ages = [a for a in (_age_h(mac.get("generated_utc"), now), _age_h(ne.get("updated_utc"), now)) if a is not None]
-    return engine.compute(now, cal, recent_events(now), alerts, mac, market, inputs_age_h=max(ages) if ages else None)
+    ocs = read_json("onchain_state.json", {}) or {}
+    return engine.compute(now, cal, recent_events(now), alerts, mac, market, inputs_age_h=input_ages(mac, ne, ocs, now))
+
+
+def _step(rep: dict, name: str, fn, *a, **kw):
+    """Cada recolector falla solo: el resto de la corrida sigue y el error queda en el reporte."""
+    try:
+        return fn(*a, **kw)
+    except Exception as e:
+        log.warning(f"{name}: {type(e).__name__}: {e}")
+        rep.setdefault("errores", {})[name] = f"{type(e).__name__}: {e}"[:200]
+        return None
+
+
+def _macro(rep: dict, now: datetime):
+    snap = macro.snapshot(event_calendar.load(now))
+    if snap.get("n_ok"):
+        write_json("macro.json", snap)
+    rep["macro_fuentes_ok"] = snap.get("n_ok", 0)
 
 
 def _merge_news_events(new: list[dict], now: datetime) -> int:
@@ -118,12 +142,7 @@ def run_onchain(max_blocks: int = 8, max_calls: int = onchain.MAX_CALLS) -> dict
     return rep
 
 
-def watch() -> dict:
-    now = utcnow()
-    prev = read_json("context_signal.json")
-    rep = {"modo": "watch", "inicio": iso(now)}
-    oc = run_onchain()
-    rep["onchain"] = {k: v for k, v in oc.items() if k != "new_alerts"} | {"nuevas": len(oc.get("new_alerts", []))}
+def _watch_news(rep: dict, now: datetime):
     items = []
     cp = news.cryptopanic("important", pages=1)
     items += cp["items"]
@@ -133,10 +152,16 @@ def watch() -> dict:
     urgent = [e for e in ev if e["prior_tier"] >= 3]
     rep["noticias"] = {"cryptopanic": cp["status"], "titulares": len(items), "eventos": len(ev), "urgentes": len(urgent),
                        "metodo": method, "agregados": _merge_news_events(urgent, now)}
-    try:
-        write_json("macro.json", macro.snapshot(event_calendar.load(now)))
-    except Exception as e:
-        rep["macro"] = f"error {type(e).__name__}"
+
+
+def watch() -> dict:
+    now = utcnow()
+    prev = read_json("context_signal.json")
+    rep = {"modo": "watch", "inicio": iso(now)}
+    oc = run_onchain()
+    rep["onchain"] = {k: v for k, v in oc.items() if k != "new_alerts"} | {"nuevas": len(oc.get("new_alerts", []))}
+    _step(rep, "noticias", _watch_news, rep, now)
+    _step(rep, "macro", _macro, rep, now)
     sig = build_signal(now)
     _write_views(sig, rep, now)
     _notify(prev, sig, oc.get("new_alerts", []))
@@ -144,45 +169,47 @@ def watch() -> dict:
     return rep
 
 
-def refresh(event_study: bool = True) -> dict:
-    now = utcnow()
-    prev = read_json("context_signal.json")
-    rep = {"modo": "refresh", "inicio": iso(now)}
-    # 1) Noticias de 15 días → eventos ocurridos + fechas futuras propuestas
+def _refresh_news(rep: dict, now: datetime):
     nw = news.fetch_window(15)
     ev, method = classifier.classify(nw["items"])
     rep["noticias"] = {"cryptopanic": nw["cryptopanic"], "n_cryptopanic": nw["n_cryptopanic"], "n_gdelt": nw["n_gdelt"],
                        "titulares": len(nw["items"]), "eventos": len(ev), "metodo": method,
                        "agregados": _merge_news_events([e for e in ev if e["prior_tier"] >= 2], now),
                        "propuestas_de_noticias": _merge_proposals([e for e in ev if e["status"] == "proposed"], now)}
-    rep["consenso_semana"] = news.consensus_this_week()[:20]
-    # 2) Calendario + auditoría de huecos con búsqueda web
-    cal = event_calendar.build(now)
-    au = classifier.coverage_audit(cal, now)
+
+
+def _audit(rep: dict, now: datetime):
+    au = classifier.coverage_audit(event_calendar.build(now), now)
     rep["auditoria"] = {"status": au["status"], "agregadas": _merge_proposals(au["proposals"], now)}
-    rep["calendario"] = event_calendar.refresh_files(now)
-    # 3) Mercado
-    cal = event_calendar.load(now)
-    write_json("macro.json", macro.snapshot(cal))
-    # 4) Estudio de eventos (pesos)
+
+
+def _study(rep: dict):
+    from . import event_study as es
+    info = es.fetch_all()
+    w, rows = es.run()
+    w["price_source"] = info.get("btc", {}).get("source")
+    write_json("weights.json", w)
+    write_json("event_study_events.json", rows)
+    (ctx_dir() / "EVENTOS.md").write_text(es.render_md(w, rows), encoding="utf-8")
+    rep["estudio_eventos"] = {"eventos": w["n_events"], "base_azar": w["baseline"]}
+
+
+def refresh(event_study: bool = True) -> dict:
+    now = utcnow()
+    prev = read_json("context_signal.json")
+    rep = {"modo": "refresh", "inicio": iso(now)}
+    _step(rep, "noticias", _refresh_news, rep, now)                       # 1) noticias 15 días
+    rep["consenso_semana"] = _step(rep, "consenso", news.consensus_this_week) or []
+    _step(rep, "auditoria", _audit, rep, now)                             # 2) huecos con búsqueda web
+    rep["calendario"] = _step(rep, "calendario", event_calendar.refresh_files, now)
+    _step(rep, "macro", _macro, rep, now)                                 # 3) mercado
     if event_study:
-        from . import event_study as es
-        try:
-            info = es.fetch_all()
-            w, rows = es.run()
-            w["price_source"] = info.get("btc", {}).get("source")
-            write_json("weights.json", w)
-            write_json("event_study_events.json", rows)
-            (ctx_dir() / "EVENTOS.md").write_text(es.render_md(w, rows), encoding="utf-8")
-            rep["estudio_eventos"] = {"eventos": w["n_events"], "base_azar": w["baseline"]}
-        except Exception as e:
-            rep["estudio_eventos"] = f"error {type(e).__name__}: {e}"[:200]
-    # 5) On-chain + señal + vistas + Sheets
-    oc = run_onchain()
+        _step(rep, "estudio_eventos", _study, rep)                        # 4) pesos
+    oc = run_onchain()                                                    # 5) on-chain + señal + vistas + Sheets
     rep["onchain"] = {k: v for k, v in oc.items() if k != "new_alerts"} | {"nuevas": len(oc.get("new_alerts", []))}
     sig = build_signal(now)
-    rep["sheets"] = sheets.mirror(cal, recent_events(now, 30), read_json("weights.json"),
-                                  (read_json("alerts_onchain.json", {}) or {}).get("alerts", []), sig)
+    rep["sheets"] = _step(rep, "sheets", sheets.mirror, event_calendar.load(now), recent_events(now, 30),
+                          read_json("weights.json"), (read_json("alerts_onchain.json", {}) or {}).get("alerts", []), sig)
     _write_views(sig, rep, now)
     _notify(prev, sig, oc.get("new_alerts", []))
     write_json("refresh_report.json", rep)

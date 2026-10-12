@@ -8,7 +8,7 @@ Contrato (context_signal.json):
   bias         -1..1 sesgo direccional por eventos recientes ponderados (y mercado)
   event_risk   0..1 probabilidad ponderada de un choque programado en las próximas 72 h
   extra_confluence  puntos extra de confluencia técnica que exige el comité (CAUTION)
-  vote/confidence   voto del agente de contexto en el comité (LONG solo en RISK_ON)
+  vote/confidence   informativos: en el comité el contexto solo puede vetar o restar (nunca suma un voto a favor)
 
 Fórmulas (pesos de weights.json si existe; si no, de priors.json):
   magnitud_e  = ½·w_abs[categoría] + ½·exceso_prior[tier_e]        (exceso de |z3| sobre un día cualquiera)
@@ -52,14 +52,15 @@ def direction(e: dict, W: dict, priors: dict) -> float:
     return 0.5 * c.get("w_dir", 0.08) + 0.5 * priors["tier_dir_z"][str(e["prior_tier"])]
 
 
-def _moderator(e: dict, market: dict, priors: dict) -> float:
+def _moderator(e: dict, market: dict, priors: dict, weights: dict | None = None) -> float:
     st = e.get("crypto_stance")
     if st not in ("pro", "anti"):
         return 1.0
     m = 1.0
     reg = market.get("btc_regime")
     if reg:
-        m *= priors["moderators"]["btc_regime"].get(reg, {}).get(st, 1.0)
+        est = ((weights or {}).get("moderators") or {}).get("btc_regime", {}).get(f"{reg}_{st}")
+        m *= est["mult"] if est else priors["moderators"]["btc_regime"].get(reg, {}).get(st, 1.0)
     fg = market.get("fear_greed")
     if fg is not None:
         if fg >= 80:
@@ -108,18 +109,24 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
         event_risk = min(1.0, event_risk * priors["moderators"]["vol_extreme_risk_mult"])
     upcoming.sort(key=lambda x: -x["riesgo"])
 
-    # 2) Eventos recientes ponderados → sesgo direccional
-    total = 0.0
+    # 2) Eventos recientes ponderados → sesgo direccional. La misma noticia contada por 5 medios es UN evento:
+    #    se agrupa por (categoría, día, postura) y cuenta solo el aporte más fuerte del grupo.
+    groups = {}
     for e in recent or []:
         if e["category"] not in W or e["category"] == "DERIVATIVES_EXPIRY" or not sign(e):
             continue
-        t = _dt(e["utc"])
+        t = day_window(e)[0]  # sin hora: cuenta desde el inicio del día (no espera al mediodía)
         age_d = (now - t).total_seconds() / 86400
         dec = W[e["category"]]["decay_days"]
         if age_d < 0 or age_d > 3 * dec:
             continue
-        c = sign(e) * direction(e, W, priors) * math.exp(-age_d / dec) * float(e.get("confidence", 1.0)) \
-            * _moderator(e, market, priors)
+        conf = max(0.0, min(1.0, float(e.get("confidence", 1.0))))
+        c = sign(e) * direction(e, W, priors) * math.exp(-age_d / dec) * conf * _moderator(e, market, priors, weights)
+        k = (e["category"], e["utc"][:10], e.get("crypto_stance"))
+        if k not in groups or abs(c) > abs(groups[k][0]):
+            groups[k] = (c, e)
+    total = 0.0
+    for c, e in groups.values():
         total += c
         recent_out.append({"id": e["id"], "date": e["utc"][:10], "title_es": e["title_es"], "category": e["category"],
                            "stance": e.get("crypto_stance"), "aporte": round(c, 3)})
@@ -146,20 +153,25 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
     # 4) Alertas on-chain
     active, exit_ids = [], []
     for a in alerts or []:
-        try:
-            t = _dt(a.get("block_time_utc") or a.get("ts"))
+        try:  # la ventana corre desde que se DETECTÓ (la hora del bloque puede ir 2 h adelantada o el vigía atrasarse)
+            t = _dt(a.get("detected_utc") or a.get("block_time_utc") or a.get("ts"))
         except Exception:
             continue
         hrs = S["alert_hours"].get(a.get("severity"), 0)
-        if now - timedelta(hours=hrs) <= t <= now + timedelta(minutes=5):
+        if now - timedelta(hours=hrs) <= t <= now + timedelta(hours=2):
             active.append(a)
             if a.get("severity") == "critica":
                 exit_ids.append(a["id"])
 
     # 5) Estado
     stale = inputs_age_h is not None and inputs_age_h > S["stale_hours"]
+    dead = inputs_age_h is not None and inputs_age_h > S.get("stale_veto_hours", 72)
     sev = {a.get("severity") for a in active}
-    if exit_ids or "alta" in sev:
+    if dead and not exit_ids:
+        state = "RISK_OFF"
+        reasons.insert(0, f"Contexto sin actualizar hace {inputs_age_h:.0f} h (> {S.get('stale_veto_hours', 72)} h): "
+                          "sin vigía no se compra")
+    elif exit_ids or "alta" in sev:
         state = "RISK_OFF"
         reasons.insert(0, f"Alerta on-chain {'CRÍTICA (era Satoshi)' if exit_ids else 'alta'}: "
                           f"{active[0].get('detail_es', '')[:120]}")
@@ -194,7 +206,8 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
             "exit_all": bool(exit_ids), "exit_alert_ids": exit_ids, "size_mult": size,
             "bias": round(bias, 3), "event_risk": round(event_risk, 3),
             "extra_confluence": S["extra_confluence_on_caution"] if state == "CAUTION" else 0,
-            "vote": "LONG" if state == "RISK_ON" else "FLAT", "confidence": int(50 + 40 * abs(bias)),
+            "vote": "LONG" if state == "RISK_ON" else "FLAT",  # informativo: el comité NO lo cuenta como voto a favor
+            "confidence": int(50 + 40 * abs(bias)),
             "reasons": reasons[:8], "upcoming": upcoming[:8], "recent": recent_out[:8], "alerts": active[:5],
             "stale": stale, "weights_source": "weights.json (estudio de eventos)" if weights else "priors.json (a priori)",
             "inputs": {"market": {k: market.get(k) for k in ("btc_regime", "vol_regime", "fear_greed")},

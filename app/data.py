@@ -104,30 +104,15 @@ async def fetch_fear_greed() -> dict:
 
 
 async def fetch_news(symbol: str) -> list[dict]:
-    """Titulares recientes (CryptoPanic si hay key, si no GDELT). Solo titulares: el LLM no navega."""
+    """Titulares recientes (CryptoPanic v2 si la key sirve, si no GDELT). Solo titulares: el LLM no navega."""
     if config.DATA_MODE == "mock":
         return [{"title": f"{symbol} ETF inflows continue for third week", "source": "mock"}]
-    items = []
-    async with httpx.AsyncClient(timeout=8) as c:
-        if config.CRYPTOPANIC_API_KEY:
-            try:
-                r = await c.get("https://cryptopanic.com/api/v1/posts/",
-                                params={"auth_token": config.CRYPTOPANIC_API_KEY, "currencies": symbol,
-                                        "filter": "hot", "public": "true"})
-                for p in r.json().get("results", [])[:12]:
-                    items.append({"title": p.get("title", ""), "source": "CryptoPanic",
-                                  "published_at": p.get("published_at")})
-            except Exception as e:
-                log.warning(f"CryptoPanic: {e}")
-        if not items:
-            try:
-                r = await c.get("https://api.gdeltproject.org/api/v2/doc/doc",
-                                params={"query": f"{symbol} crypto", "mode": "artlist", "format": "json",
-                                        "maxrecords": 12, "timespan": "1d"})
-                for a in r.json().get("articles", [])[:12]:
-                    items.append({"title": a.get("title", ""), "source": "GDELT", "published_at": a.get("seendate")})
-            except Exception as e:
-                log.warning(f"GDELT: {e}")
+    from .context import news as cnews
+    cp = await asyncio.to_thread(cnews.cryptopanic, "hot", symbol, 1)
+    items = [{"title": i["title"], "source": i["source"], "published_at": i["published_at"]} for i in cp["items"][:12]]
+    if not items:
+        arts = await asyncio.to_thread(cnews.gdelt, f'"{symbol}" crypto', "1d", 12)
+        items = [{"title": a["title"], "source": "GDELT", "published_at": a["published_at"]} for a in arts]
     return items
 
 

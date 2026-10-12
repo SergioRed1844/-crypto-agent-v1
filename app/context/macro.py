@@ -111,6 +111,9 @@ def polymarket_prob(url_or_slug: str) -> dict | None:
 def snapshot(calendar: list[dict] | None = None) -> dict:
     out = {"generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "fear_greed": fear_greed(), "stablecoins": stablecoins(), "fred": fred_moderators(), "polymarket": {}}
+    # n_ok: cuántas fuentes respondieron. Si es 0 el llamador NO sobrescribe el snapshot anterior (no "refresca" vacío)
+    out["n_ok"] = sum([out["fear_greed"].get("value") is not None, out["stablecoins"].get("total_usd") is not None,
+                       out["fred"].get("status") == "ok"])
     for e in (calendar or []):
         if e.get("prediction_market_url") and e["utc"] >= out["generated_utc"] and e["prior_tier"] >= 3:
             p = polymarket_prob(e["prediction_market_url"])

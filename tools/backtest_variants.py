@@ -103,7 +103,9 @@ def context_eval(hist_sched, hist_all, priors, t: pd.Timestamp, fg):
     day = now.date().isoformat()
     cal = [e for e in hist_sched if abs((datetime.fromisoformat(e["date"]).date() - now.date()).days) <= 3]
     recent = [e for e in hist_all if e["date"] < day and e["date"] >= (now - timedelta(days=60)).date().isoformat()]
-    return engine.compute(now, cal, recent, [], {}, {"btc_regime": "GREEN", "fear_greed": fg}, priors, None, 1)
+    # weights={} → SOLO priors: los pesos de weights.json se estimaron con toda la muestra (sería look-ahead).
+    # btc_regime GREEN no es un supuesto: las señales de reglas solo existen cuando el régimen de BTC vota LONG (GREEN).
+    return engine.compute(now, cal, recent, [], {}, {"btc_regime": "GREEN", "fear_greed": fg}, priors, {}, 1)
 
 
 def main(argv=None):
@@ -177,6 +179,9 @@ def main(argv=None):
          "F · v4.2 completo (B+C+D+E)": build(net=True, der=True, ctx=True)}
     pause = {"E · + racha (pausa tras 5 pérdidas)": 5, "F · v4.2 completo (B+C+D+E)": 5}
     ref_tr = bt.portfolio(data, base, fee, a.slippage)
+    # corte fuera de muestra por FECHA, igual para todas las variantes (comparan el mismo periodo)
+    t0, t1 = since, max(d["4h"].index[-1] for d in data.values())
+    oos_from = str(t0 + (t1 - t0) * (1 - a.oos_frac))
     res = {}
     for name, sigs in V.items():
         tr = portfolio_v42(data, sigs, fee, a.slippage, pause.get(name))
@@ -184,9 +189,9 @@ def main(argv=None):
         if name.startswith("A ·"):
             assert [x["R"] for x in sorted(ref_tr, key=lambda x: x["exit_time"])] == [x["R"] for x in tr], \
                 "el simulador v4.2 sin filtros debe ser idéntico al de backtest.py"
-        cut = int(len(tr) * (1 - a.oos_frac))
         res[name] = {"señales": sum(len(s) for s in sigs.values()), "total": bt.metrics(tr),
-                     "en_muestra": bt.metrics(tr[:cut]), "fuera_de_muestra": bt.metrics(tr[cut:]),
+                     "en_muestra": bt.metrics([x for x in tr if x["entry_time"] < oos_from]),
+                     "fuera_de_muestra": bt.metrics([x for x in tr if x["entry_time"] >= oos_from]),
                      "por_par": {p: bt.metrics([x for x in tr if x["pair"] == p]) for p in pairs}}
     grid = {}
     for g, r in ((0.0, 0.0), (0.01, 1.5), (0.015, 1.8), (0.025, 2.0), (0.04, 2.0)):
@@ -199,6 +204,7 @@ def main(argv=None):
         states[f["ctx_state"]] = states.get(f["ctx_state"], 0) + 1
     out = {"generado_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
            "periodo": f"{since.date()} → {data[pairs[0]]['4h'].index[-1].date()}", "pares": pairs,
+           "fuera_de_muestra_desde": oos_from[:10],
            "comision": fee, "slippage": a.slippage, "limites": {k: R_[k] for k in (
                "risk_per_trade", "max_open_positions", "max_correlated_risk", "min_rr", "min_net_gain_pct", "min_net_rr")},
            "variantes": res, "rejilla_ganancia_neta": grid, "estados_contexto_en_señales": states,
@@ -216,6 +222,7 @@ def render(o):
          f"Periodo {o['periodo']} · pares {', '.join(o['pares'])} · comisión {o['comision']:.2%}/lado · slippage "
          f"{o['slippage']:.2%} · generado {o['generado_utc']}. Sin LLM; el contexto usa pesos a priori y solo eventos "
          "con fecha anterior a la señal (sin look-ahead).", "",
+         f"Fuera de muestra = entradas desde {o['fuera_de_muestra_desde']} (mismo corte para todas las variantes).", "",
          "| Variante | Señales | Trades | Ganadas | Expectativa R | PF | Máx DD R | Retorno % | IC95 R | Fuera de muestra: trades / exp. R / IC95 |",
          "|---|---|---|---|---|---|---|---|---|---|"]
     for k, v in o["variantes"].items():

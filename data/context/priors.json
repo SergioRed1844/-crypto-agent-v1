@@ -179,6 +179,8 @@
    "alta": 48,
    "media": 24
   },
-  "extra_confluence_on_caution": 2
+  "extra_confluence_on_caution": 2,
+  "stale_veto_hours": 72,
+  "_stale": "stale_hours: más viejo → CAUTION; stale_veto_hours: más viejo → RISK_OFF (sin vigía no se compra)"
  }
 }

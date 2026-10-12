@@ -32,6 +32,9 @@ DEFAULTS = {
     "satoshi_max_height": 60000,  # P2PK de aquí para abajo = era Satoshi (incluye Patoshi)
     "early_max_height": 210000,   # primera era de recompensa (50 BTC)
     "early_min_btc": 50,
+    # Una sola coinbase de 2009 puede ser de OTRO minero temprano (el 2020-05-20 no era Patoshi): solo una salida
+    # grande de monedas coinbase P2PK de la era Satoshi es "crítica" (vende a USDT); menos que eso es "alta".
+    "satoshi_exit_min_btc": 500,
     "max_p2pk_lookups": 40,       # inputs P2PK examinados por bloque
     "whale_min_btc": 100,         # salida total mínima para examinar una tx
     "input_min_btc": 5,           # inputs más chicos no se fechan
@@ -267,9 +270,11 @@ def _iso(ts) -> str:
 
 
 def _alert(typ, sev, txid, height, btime, sats, extra, detail):
+    # detected_utc: la ventana de la alerta corre desde que la VIMOS (la hora del bloque puede ir adelantada o el
+    # vigía pudo atrasarse); el motor usa esta marca.
     return {"id": f"{typ}-{txid}", "type": typ, "severity": sev, "txid": txid, "block_height": height,
-            "block_time_utc": _iso(btime), "btc_moved": round(sats / SAT, 8), **extra, "detail_es": detail,
-            "url": f"https://mempool.space/tx/{txid}", "action": ACTION[sev]}
+            "block_time_utc": _iso(btime), "detected_utc": _iso(time.time()), "btc_moved": round(sats / SAT, 8),
+            **extra, "detail_es": detail, "url": f"https://mempool.space/tx/{txid}", "action": ACTION[sev]}
 
 
 def _p2pk_rule(client, txs, height, btime, c, out):
@@ -290,11 +295,13 @@ def _p2pk_rule(client, txs, height, btime, c, out):
             ph = st.get("block_height")
             if not st.get("confirmed") or ph is None or ph > c["early_max_height"]:
                 continue  # P2PK moderno: no se pide la tx
-            outs = client.tx(v["prev_txid"]).get("vout") or []
+            ptx = client.tx(v["prev_txid"])
+            outs = ptx.get("vout") or []
             if v["prev_vout"] >= len(outs):
                 continue
             sats = int(outs[v["prev_vout"]]["value"])
-            if ph <= c["satoshi_max_height"]:
+            coinbase = bool((ptx.get("vin") or [{}])[0].get("is_coinbase"))
+            if ph <= c["satoshi_max_height"] and coinbase:
                 hits["SATOSHI_ERA"].append((ph, sats))
             elif sats >= c["early_min_btc"] * SAT:
                 hits["EARLY_MINER"].append((ph, sats))
@@ -303,14 +310,21 @@ def _p2pk_rule(client, txs, height, btime, c, out):
                 continue
             sats, oldest = sum(s for _, s in hs), min(h for h, _ in hs)
             btc = f"{sats / SAT:,.2f} BTC P2PK"
-            if typ == "SATOSHI_ERA":
-                sev, det = "critica", f"Se gastaron {btc} de la era Satoshi (input más viejo: bloque {oldest})."
+            if typ == "SATOSHI_ERA" and sats >= c["satoshi_exit_min_btc"] * SAT:
+                sev, det = "critica", f"Se gastaron {btc} de coinbases de la era Satoshi (input más viejo: bloque {oldest})."
+            elif typ == "SATOSHI_ERA":
+                sev, det = "alta", (f"Se gastaron {btc} de coinbase de 2009-2010 (bloque {oldest}); puede ser otro minero "
+                                    f"temprano, no Satoshi: bloquea compras, no vende.")
             else:
                 sev, det = "alta", f"Minero temprano gastó {btc} (input más viejo: bloque {oldest})."
             out.append(_alert(typ, sev, tx["txid"], height, btime, sats,
                               {"oldest_input_height": oldest, "n_inputs": len(hs)}, det))
         if capped:
             log.warning("bloque %d: tope de %d consultas P2PK alcanzado", height, c["max_p2pk_lookups"])
+            # tantos gastos P2PK en un bloque es raro en sí: precaución aunque no se alcanzaron a fechar todos
+            out.append(_alert("P2PK_FLOOD", "media", f"bloque-{height}", height, btime, 0,
+                              {"n_inputs": lookups}, f"Bloque {height} con más de {c['max_p2pk_lookups']} gastos P2PK: "
+                              "posible movimiento masivo de monedas antiguas (no se fecharon todos)."))
             return
 
 

@@ -27,8 +27,8 @@ RULES = [
     (r"\b(hack(ed)?|exploit(ed)?|drain(ed)?|stolen|heist)\b", "HACK_SECURITY", "HACK", "anti", 3),
     (r"\b(bankrupt|insolven|halts? withdrawals|withdrawals (halted|paused|suspended)|collapse[sd]?)\b",
      "FINANCIAL_CRISIS", "FAILURE", "anti", 4),
-    (r"\b(etf)\b.*\b(approv|launch|record inflow|inflows)", "CRYPTO_STRUCTURAL", "ETF", "pro", 3),
-    (r"\b(etf)\b.*\b(reject|den(y|ies|ied)|delay|outflow)", "CRYPTO_STRUCTURAL", "ETF", "anti", 2),
+    (r"\b(etf)s?\b.*\b(reject|den(y|ies|ied)|delay|outflows?|slow|slowing|exodus|bleed)", "CRYPTO_STRUCTURAL", "ETF", "anti", 2),
+    (r"\b(etf)s?\b.*\b(approv|launch|record inflow|inflows)", "CRYPTO_STRUCTURAL", "ETF", "pro", 3),
     (r"\b(sec|cftc|doj|regulator)\b.*\b(sues?|lawsuit|charges?|crackdown|ban)", "CRYPTO_REGULATION", "ENFORCEMENT", "anti", 3),
     (r"\b(crypto|stablecoin|bitcoin|digital asset)\b.*\b(bill|act|law)\b.*\b(pass|sign|approv|enact)",
      "CRYPTO_REGULATION", "LEGISLATION", "pro", 3),
@@ -51,19 +51,38 @@ RULES = [
     (r"\b(ai act|ai regulation|antitrust|export controls?)\b", "TECH_AI_REGULATION", "AI", "uncertain", 1),
 ]
 _RX = [(re.compile(p, re.I), c, s, st, t) for p, c, s, st, t in RULES]
+# Opinión / especulación / listas: no son eventos (sin LLM no se puede distinguir matiz; mejor descartarlas)
+_OPINION = re.compile(r"(\?|\bprice prediction\b|\bpredicts?\b|\bshould you\b|\bhow to\b|\bwhy\b|\bcould\b|"
+                      r"\bmight\b|\btop \d+\b|\bbest\b|\bopinion\b|\banalyst says\b|\bwill .{0,30}(hit|reach)\b)", re.I)
+_CRYPTO_WORDS = re.compile(r"\b(bitcoin|btc|crypto\w*|stablecoins?|digital assets?|ethereum|ether|exchange|defi|"
+                           r"tokens?|wallets?|blockchain|binance|coinbase|tether|usdt|usdc|mt\.? ?gox|satoshi)\b", re.I)
+_CRYPTO_CATS = {"HACK_SECURITY", "FINANCIAL_CRISIS", "CRYPTO_STRUCTURAL", "CRYPTO_REGULATION", "INSTITUTIONAL_ADOPTION",
+                "CRYPTO_SUPPLY", "ONCHAIN_WHALE"}
+
+
+def _when(item: dict, d: str) -> dict:
+    """Hora UTC de publicación si la hay y coincide con el día del evento (para que cuente desde ese minuto)."""
+    p = str(item.get("published_at") or "")
+    if len(p) >= 16 and p[:10] == d and p[10] == "T":
+        return {"time_local": p[11:16], "tz": "UTC", "date_precision": "exact"}
+    return {}
 
 
 def keyword_classify(item: dict) -> dict | None:
     t = item.get("title", "")
+    if _OPINION.search(t):
+        return None
     for rx, cat, sub, st, tier in _RX:
         if rx.search(t):
+            if cat in _CRYPTO_CATS and not _CRYPTO_WORDS.search(t):
+                return None  # p.ej. "ZEC ETF outflows": no habla de BTC ni del mercado cripto en general
             votes = int(item.get("votes_important") or 0)
             tier2 = min(5, tier + (1 if votes >= 10 else 0))
             d = (item.get("published_at") or datetime.now(timezone.utc).isoformat())[:10]
             return {"id": f"news-{slug(t, 50)}-{d}", "date": d, "category": cat, "subcategory": sub, "country": "GLOBAL",
                     "title_es": t, "crypto_stance": st, "prior_tier": tier2, "status": "happened", "scheduled": False,
                     "surprise": "surprise", "source_url": item.get("url", ""), "source_title": item.get("source", ""),
-                    "confidence": 0.4, "origin": f"palabras-clave/{item.get('origin', '')}"}
+                    "confidence": 0.3, "origin": f"palabras-clave/{item.get('origin', '')}", **_when(item, d)}
     return None
 
 
@@ -140,7 +159,7 @@ def llm_classify(items: list[dict], batch: int = 40) -> list[dict] | None:
                     "confidence": float(r.get("confidence") or 0.5), "origin": f"gemini/{it.get('origin', '')}"}
             if re.fullmatch(r"\d{4}-\d{2}-\d{2}", d or ""):
                 out.append({**base, "id": f"news-{slug(it['title'], 50)}-{d}", "date": d, "status": "happened",
-                            "scheduled": False, "surprise": "surprise"})
+                            "scheduled": False, "surprise": "surprise", **_when(it, d)})
             fd = r.get("future_date") or ""
             if re.fullmatch(r"\d{4}-\d{2}-\d{2}", fd) and fd > datetime.now(timezone.utc).date().isoformat():
                 out.append({**base, "id": f"prop-{slug(base['title_es'], 50)}-{fd}", "date": fd, "status": "proposed",
