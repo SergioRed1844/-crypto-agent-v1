@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** lun 12 oct 11:54 (Monterrey) · velas hasta lun 12 oct 11:50 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** lun 12 oct 12:53 (Monterrey) · velas hasta lun 12 oct 12:50 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte 1, lun 12 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
@@ -56,14 +56,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.03R | 1 tr · −1.05R | 2 tr · −2.20R | −1.54% |
-| ETH | 0 tr · −0.24R (abierta) | — (0 señ.) | 1 tr · −1.06R | −1.20% |
-| SOL | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.49% |
-| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.43% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.28% |
-| ADA | 0 tr · −0.83R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −3.89% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −4.55% |
-| LINK | 0 tr · −0.76R (abierta) | — (0 señ.) | 2 tr · −2.09R | −3.35% |
+| BTC | 1 tr · −1.03R | 1 tr · −1.05R | 2 tr · −2.20R | −1.55% |
+| ETH | 0 tr · −0.24R (abierta) | — (0 señ.) | 1 tr · −1.06R | −0.91% |
+| SOL | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.26% |
+| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.48% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.20% |
+| ADA | 0 tr · −0.83R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −4.24% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −5.65% |
+| LINK | 0 tr · −0.76R (abierta) | — (0 señ.) | 2 tr · −2.09R | −3.42% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
