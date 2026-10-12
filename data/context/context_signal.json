@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-12T04:08:14Z",
+ "generated_utc": "2026-10-12T04:33:52Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.979,
- "bias": -0.066,
- "event_risk": 0.042,
+ "bias": -0.047,
+ "event_risk": 0.043,
  "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 52,
+ "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.07, riesgo de evento 0.04"
+  "Contexto neutral: sesgo -0.05, riesgo de evento 0.04"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.042,
+   "riesgo": 0.043,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -30,30 +30,6 @@
   }
  ],
  "recent": [
-  {
-   "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.088
-  },
-  {
-   "id": "news-zcash-zec-price-prediction-whale-accumulation-and-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Zcash ( ZEC ) Price Prediction : Whale Accumulation and ETF Outflows Put ZEC at a Critical Crossroads Around $1 , 400",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.079
-  },
-  {
-   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
-   "date": "2026-09-29",
-   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.076
-  },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
    "date": "2026-09-15",
@@ -71,20 +47,28 @@
    "aporte": 0.049
   },
   {
-   "id": "news-should-you-buy-bitcoin-or-ethereum-in-2026-2026-09-29",
-   "date": "2026-09-29",
-   "title_es": "Should You Buy Bitcoin or Ethereum in 2026 ?",
-   "category": "INSTITUTIONAL_ADOPTION",
+   "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
+   "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.033
+   "aporte": 0.042
   },
   {
-   "id": "news-remittix-announces-november-24-rtx-launch-as-carda-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Remittix Announces November 24 RTX Launch as Cardano Advances Petrobras Fuel Research and NEAR Intents Responds to Bitget Hack",
+   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
+   "date": "2026-09-29",
+   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.036
+  },
+  {
+   "id": "bitget-hot-wallet-hack-2026-09-24",
+   "date": "2026-09-24",
+   "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.029
+   "aporte": -0.026
   },
   {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
@@ -92,10 +76,28 @@
    "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
    "category": "GEOPOLITICAL",
    "stance": "anti",
-   "aporte": -0.029
+   "aporte": -0.022
+  },
+  {
+   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.021
+  },
+  {
+   "id": "news-crypto-hack-spurs-463-million-in-customer-outflows-2026-09-29",
+   "date": "2026-09-29",
+   "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.016
   }
  ],
  "alerts": [],
+ "cause": "none",
+ "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
  "inputs": {
@@ -105,6 +107,6 @@
    "fear_greed": 69
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.83
+  "stablecoins_30d_pct": 0.84
  }
 }

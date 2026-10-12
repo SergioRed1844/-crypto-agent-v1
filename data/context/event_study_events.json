@@ -2216,7 +2216,7 @@
  {
   "id": "terra-ust-collapse-2022-05-09",
   "date": "2022-05-09",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 5,
   "title_es": "Colapso de Terra: UST pierde paridad y LUNA se hunde",
@@ -2252,7 +2252,7 @@
  {
   "id": "celsius-freezes-withdrawals-2022-06-12",
   "date": "2022-06-12",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 4,
   "title_es": "Celsius congela retiros",
@@ -2288,7 +2288,7 @@
  {
   "id": "3ac-liquidation-order-2022-06-29",
   "date": "2022-06-29",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 3,
   "title_es": "Corte de BVI ordena liquidar a Three Arrows Capital",
@@ -2468,7 +2468,7 @@
  {
   "id": "ftx-halts-withdrawals-2022-11-08",
   "date": "2022-11-08",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 5,
   "title_es": "FTX congela retiros; Binance firma carta de intención de compra",
@@ -2504,7 +2504,7 @@
  {
   "id": "ftx-bankruptcy-2022-11-11",
   "date": "2022-11-11",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 5,
   "title_es": "FTX y Alameda se declaran en bancarrota",
@@ -2522,7 +2522,7 @@
  {
   "id": "genesis-halts-withdrawals-2022-11-16",
   "date": "2022-11-16",
-  "category": "CRYPTO_STRUCTURAL",
+  "category": "FINANCIAL_CRISIS",
   "stance": "anti",
   "tier": 3,
   "title_es": "Genesis suspende retiros (contagio FTX)",

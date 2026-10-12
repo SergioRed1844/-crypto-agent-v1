@@ -1,6 +1,6 @@
 # Estudio de eventos — ¿qué mueve a BTC?
 
-Generado 2026-10-12T04:25:25Z. Precios 2010-07-18 → 2026-10-11. 258 de 261 eventos históricos con precio suficiente.
+Generado 2026-10-12T04:44:24Z. Precios 2010-07-18 → 2026-10-11. 258 de 261 eventos históricos con precio suficiente.
 
 Referencia: un día cualquiera mueve |z3| = 0.751 en promedio (4000 días al azar). Un tipo de evento **pesa** si mueve más que eso (p_abs < 0.05) y tiene **dirección** si el signo de su postura pro/anti acierta más del 50% (p_dir < 0.05).
 
@@ -8,10 +8,10 @@ Referencia: un día cualquiera mueve |z3| = 0.751 en promedio (4000 días al aza
 |---|---|---|---|---|---|---|---|---|---|---|
 | Regulación cripto | 59 | 1.237 | 1.65 | 0.001 | 0.559 | 0.556 | 0.2483 | 0.46 | 0.511 | magnitud fuerte, dirección débil |
 | Política monetaria | 42 | 0.962 | 1.28 | 0.07 | 0.27 | 0.562 | 0.2983 | 0.23 | 0.261 | magnitud moderada, dirección débil |
-| Estructura cripto (halving, ETF, upgrades) | 25 | 1.286 | 1.71 | 0.0055 | 1.048 | 0.737 | 0.0318 | 0.479 | 0.796 | magnitud fuerte, dirección fuerte |
+| Crisis financiera / quiebras | 20 | 1.65 | 2.2 | 0.0015 | 1.443 | 0.789 | 0.0096 | 0.766 | 1.095 | magnitud fuerte, dirección fuerte |
+| Estructura cripto (halving, ETF, upgrades) | 19 | 1.076 | 1.43 | 0.0565 | 0.632 | 0.692 | 0.1334 | 0.285 | 0.444 | magnitud moderada, dirección débil |
 | Adopción institucional | 18 | 1.082 | 1.44 | 0.0645 | 0.663 | 0.611 | 0.2403 | 0.35 | 0.536 | magnitud moderada, dirección débil |
 | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 15 | 1.175 | 1.57 | 0.045 | 0.161 | 0.7 | 0.1719 | 0.409 | 0.201 | magnitud fuerte, dirección débil |
-| Crisis financiera / quiebras | 14 | 1.52 | 2.02 | 0.0065 | 1.209 | 0.769 | 0.0461 | 0.612 | 0.831 | magnitud fuerte, dirección fuerte |
 | Comercio / aranceles | 13 | 0.635 | 0.85 | 0.6637 | 0.57 | 0.692 | 0.1334 | 0.107 | 0.463 | magnitud débil, dirección débil |
 | Hackeo / seguridad | 13 | 1.33 | 1.77 | 0.0235 | 0.759 | 0.769 | 0.0461 | 0.436 | 0.527 | magnitud fuerte, dirección fuerte |
 | Elección | 12 | 1.149 | 1.53 | 0.062 | 1.681 | 0.75 | 0.3125 | 0.371 | 0.702 | magnitud moderada, dirección débil |
@@ -49,11 +49,11 @@ Pesos = encogimiento bayesiano hacia el prior (k = 8.0): con pocos eventos manda
 | 2013-12-05 | PBoC prohíbe a instituciones financieras operar con bitcoin | Regulación cripto | anti | -1.882 | -4.837 | -2.46 | -2.944 |
 | 2023-03-12 | Cierre de Signature; Tesoro/Fed/FDIC garantizan depósitos y crean BTFP | Política monetaria | pro | 2.848 | 4.365 | 4.104 | 2.388 |
 | 2026-08-18 | SEC propone 'Regulation Crypto Assets' con safe harbor | Regulación cripto | pro | 0.358 | 4.341 | 4.679 | 2.422 |
-| 2022-06-12 | Celsius congela retiros | Estructura cripto (halving, ETF, upgrades) | anti | -1.618 | -4.308 | -4.415 | -1.432 |
+| 2022-06-12 | Celsius congela retiros | Crisis financiera / quiebras | anti | -1.618 | -4.308 | -4.415 | -1.432 |
 | 2026-06-01 | Strategy revela su primera venta de BTC desde 2022 | Adopción institucional | anti | -1.612 | -3.992 | -3.024 | -2.413 |
 | 2026-08-20 | Trump presiona por el CLARITY Act en reunión cripto en la Casa Blanca | Regulación cripto | pro | 3.106 | 3.625 | 3.067 | 2.205 |
 | 2026-06-02 | Mt. Gox mueve 10,422.65 BTC de cold storage (116.30 BTC a hot wallet) antes del plazo 2026 | Oferta cripto (Mt. Gox, gobiernos, unlocks) | neutral | -3.576 | -3.418 | -2.455 | -1.801 |
-| 2022-11-08 | FTX congela retiros; Binance firma carta de intención de compra | Estructura cripto (halving, ETF, upgrades) | anti | -3.834 | -3.316 | -2.839 | -1.062 |
+| 2022-11-08 | FTX congela retiros; Binance firma carta de intención de compra | Crisis financiera / quiebras | anti | -3.834 | -3.316 | -2.839 | -1.062 |
 | 2020-11-03 | Elección presidencial de EE.UU. 2020 | Elección | neutral | 1.167 | 3.291 | 1.704 | 2.212 |
 | 2020-11-03 | DOJ incauta y mueve ~69,370 BTC hackeados de Silk Road ('Individual X'); comunicado 2020-1 | Oferta cripto (Mt. Gox, gobiernos, unlocks) | anti | 1.167 | 3.291 | 1.704 | 2.212 |
 | 2017-09-12 | Jamie Dimon (JPMorgan) llama 'fraude' a bitcoin | Adopción institucional | anti | -0.338 | -3.219 | -0.522 | -0.084 |

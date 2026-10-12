@@ -1,25 +1,25 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-12T04:08:14Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-12T04:33:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.07 · riesgo de evento 0.04 · tamaño ×0.979 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.05 · riesgo de evento 0.04 · tamaño ×0.979 · compras permitidas
 
-- Contexto neutral: sesgo -0.07, riesgo de evento 0.04
+- Contexto neutral: sesgo -0.05, riesgo de evento 0.04
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.042 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.043 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.088 |
-| Zcash ( ZEC ) Price Prediction : Whale Accumulation and ETF Outflows Put ZEC at  | 2026-10-01 | anti | -0.079 |
-| Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.076 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.060 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.049 |
-| Should You Buy Bitcoin or Ethereum in 2026 ? | 2026-09-29 | pro | +0.033 |
-| Remittix Announces November 24 RTX Launch as Cardano Advances Petrobras Fuel Res | 2026-10-01 | anti | -0.029 |
-| A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.029 |
+| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.042 |
+| Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.036 |
+| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.026 |
+| A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.022 |
+| Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.021 |
+| Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.016 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,15 +28,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "refresh",
- "inicio": "2026-10-12T04:08:14Z",
+ "inicio": "2026-10-12T04:33:52Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
-  "n_gdelt": 240,
-  "titulares": 172,
-  "eventos": 30,
+  "n_gdelt": 120,
+  "titulares": 61,
+  "eventos": 10,
   "metodo": "palabras-clave",
-  "agregados": 9,
+  "agregados": 0,
   "propuestas_de_noticias": 0
  },
  "consenso_semana": [
@@ -210,20 +210,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
  },
  "onchain": {
   "scanned": [
-   971037,
-   971040
+   971041,
+   971043
   ],
-  "calls": 32,
+  "calls": 56,
   "stopped": null,
   "nuevas": 0
  },
- "noticias": {
-  "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
-  "metodo": "palabras-clave",
-  "agregados": 0
+ "sheets": {
+  "status": "sin SHEETS_WEBAPP_URL (opcional)"
  }
 }
 ```
