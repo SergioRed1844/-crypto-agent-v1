@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-12T04:44:19Z",
+ "generated_utc": "2026-10-12T05:08:45Z",
  "fear_greed": {
   "value": 69,
   "label": "Greed",
@@ -21,7 +21,7 @@
     "Yes": 0.125,
     "No": 0.875
    },
-   "volume": 22241083.47771497,
+   "volume": 22241083.477714982,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,7 +30,7 @@
     "Yes": 0.085,
     "No": 0.915
    },
-   "volume": 7124070.016206,
+   "volume": 7124070.016205998,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6951998.270871002,
+   "volume": 6951998.270871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6951998.270871002,
+   "volume": 6951998.270871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54439735.124328986,
+   "volume": 54439735.124329,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
@@ -66,7 +66,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891542.88410801,
+   "volume": 54891542.884108074,
    "slug": "presidential-election-winner-2028"
   }
  },
