@@ -2,11 +2,11 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** lun 12 oct 13:53 (Monterrey) · velas hasta lun 12 oct 13:50 · fuente Binance (data-api.binance.vision)  
-**Estado:** en curso — próximo corte: **Corte 1, lun 12 oct 14:00** (Monterrey)  
+**Actualizado:** lun 12 oct 14:51 (Monterrey) · velas hasta lun 12 oct 14:50 · fuente Binance (data-api.binance.vision)  
+**Estado:** en curso — próximo corte: **Corte 2, mar 13 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
-**Las 3 escalas juntas (3,000 hipotéticos): −22.62 USDT** — cerrado −21.71, flotante −0.91, 8 trades cerrados, 1 posiciones abiertas.
+**Las 3 escalas juntas (3,000 hipotéticos): −23.23 USDT** — cerrado −21.71, flotante −1.52, 8 trades cerrados, 1 posiciones abiertas.
 
 ![P&L por escala](curva.svg)
 
@@ -14,7 +14,7 @@
 
 | Escala | Trades cerrados | Ganadas | Cerrado USDT | Flotante USDT | **Total USDT** | Abiertas | Señales de compra |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Swing (1D / 4H / 1H) | 1 | 0% | −3.87 | −0.91 | **−4.78** | 1 | 15 |
+| Swing (1D / 4H / 1H) | 1 | 0% | −3.87 | −1.52 | **−5.39** | 1 | 15 |
 | Intradía (4H / 1H / 15m) | 2 | 0% | −6.42 | 0.00 | **−6.42** | 0 | 5 |
 | Scalp (1H / 15m / 5m) | 5 | 0% | −11.42 | 0.00 | **−11.42** | 0 | 72 |
 
@@ -24,7 +24,7 @@ Cada corte se congela una sola vez al pasar su hora (no se reescribe).
 
 | Corte | Hora (Monterrey) | Estado | Swing USDT | Intradía USDT | Scalp USDT | Trades cerrados |
 | --- | --- | --- | ---: | ---: | ---: | ---: |
-| Corte 1 | lun 12 oct 14:00 | pendiente | — | — | — | — |
+| Corte 1 | lun 12 oct 14:00 | guardado | −5.39 | −6.42 | −11.42 | 8 |
 | Corte 2 | mar 13 oct 14:00 | pendiente | — | — | — | — |
 | Corte final | mié 14 oct 14:00 | pendiente | — | — | — | — |
 
@@ -34,7 +34,7 @@ Lo flotante ya descuenta la comisión de entrada y de salida: una posición apen
 
 | Escala | Moneda | Entrada (Monterrey) | Precio entrada | Precio actual | Stop | Objetivo | R flotante | USDT flotante |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Swing | ETH | dom 11 oct 18:00 | 2,538.21 | 2,530.4 | 2,489.88 | 2,659.03 | −0.24 | −0.91 |
+| Swing | ETH | dom 11 oct 18:00 | 2,538.21 | 2,521.59 | 2,489.88 | 2,659.03 | −0.41 | −1.52 |
 
 ## Operaciones cerradas
 
@@ -56,14 +56,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.03R | 1 tr · −1.05R | 2 tr · −2.20R | −1.17% |
-| ETH | 0 tr · −0.24R (abierta) | — (0 señ.) | 1 tr · −1.06R | −0.70% |
-| SOL | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −2.78% |
-| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.18% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −1.92% |
-| ADA | 0 tr · −0.83R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −3.77% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −4.65% |
-| LINK | 0 tr · −0.76R (abierta) | — (0 señ.) | 2 tr · −2.09R | −2.76% |
+| BTC | 1 tr · −1.03R | 1 tr · −1.05R | 2 tr · −2.20R | −0.78% |
+| ETH | 0 tr · −0.41R (abierta) | — (0 señ.) | 1 tr · −1.06R | −0.52% |
+| SOL | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −2.36% |
+| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −2.86% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −1.58% |
+| ADA | 0 tr · −0.81R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −3.49% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −3.72% |
+| LINK | 1 tr · −1.01R | — (0 señ.) | 2 tr · −2.09R | −1.96% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
