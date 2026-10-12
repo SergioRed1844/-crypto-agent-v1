@@ -1,14 +1,14 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-12T11:00:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-12T11:59:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.04 · riesgo de evento 0.06 · tamaño ×0.972 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.04 · riesgo de evento 0.06 · tamaño ×0.971 · compras permitidas
 
 - Contexto neutral: sesgo -0.04, riesgo de evento 0.06
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.056 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.058 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -19,7 +19,7 @@ Actualizado 2026-10-12T11:00:32Z UTC. Se recalcula cada hora; el calendario y lo
 | Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.025 |
 | Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.021 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.021 |
-| Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.016 |
+| Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.015 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-12T11:00:32Z",
+ "inicio": "2026-10-12T11:59:30Z",
  "onchain": {
   "scanned": [
-   971076,
-   971083
+   971084,
+   971089
   ],
-  "calls": 130,
+  "calls": 81,
   "stopped": null,
   "nuevas": 0
  },

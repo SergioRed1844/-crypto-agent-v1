@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T11:00:32Z",
+ "generated_utc": "2026-10-12T11:59:30Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.972,
+ "size_mult": 0.971,
  "bias": -0.044,
- "event_risk": 0.056,
+ "event_risk": 0.058,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.056,
+   "riesgo": 0.058,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -92,7 +92,7 @@
    "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.016
+   "aporte": -0.015
   }
  ],
  "alerts": [],
