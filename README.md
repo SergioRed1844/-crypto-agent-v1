@@ -1,5 +1,7 @@
 # forward-test — CryptoAgent v4.1 en papel
 
+**Tablero (se actualiza solo cada hora): [forward/results/README.md](forward/results/README.md)**
+
 Prueba hacia adelante **sin dinero**: reglas congeladas el 2026-10-11 (ver `forward/prerregistro.json`),
 8 monedas × 3 escalas (swing 1D/4H/1H, intradía 4H/1H/15m, scalp 1H/15m/5m), cuenta hipotética de 1,000 USDT
 por escala, 0.5% de riesgo por trade, comisión 0.1% y slippage 0.05% por lado.

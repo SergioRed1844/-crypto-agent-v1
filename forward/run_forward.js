@@ -125,4 +125,7 @@ function runWindow(D, sc, from, to) {
   fs.appendFileSync(log, [latest.generated_utc, JSON.stringify(source), new Date(dataUntil).toISOString(),
     p("swing").trades, p("swing").ret_pct ?? 0, p("intradia").trades, p("intradia").ret_pct ?? 0, p("scalp").trades, p("scalp").ret_pct ?? 0].join(",") + "\n");
   console.log(JSON.stringify(Object.fromEntries(Object.keys(SCALES).map(n => [n, latest.scales[n].portfolio]))));
+  // tablero (solo lectura de resultados; si falla no afecta la prueba)
+  try { console.log("tablero:", JSON.stringify(require("./report.js").build())); }
+  catch (e) { console.error("tablero falló (la prueba sigue):", e.message); }
 })().catch(e => { console.error(e); process.exit(1); });
