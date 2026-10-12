@@ -96,7 +96,7 @@ def signal(market: dict | None = None) -> dict:
     sig = engine.compute(now, cal, _recent(f, now), (f.get("alerts_onchain.json") or {}).get("alerts", []), mac,
                          market, weights=f.get("weights.json"), inputs_age_h=999.0 if age is None else age)
     sig["fetch_errors"] = dict(_cache["errors"])
-    return sig
+    return engine.apply_mode(sig, os.environ.get("CONTEXT_MODE", "completo").lower())
 
 
 def mock_signal(state: str = "NEUTRAL") -> dict:

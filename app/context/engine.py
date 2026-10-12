@@ -167,22 +167,24 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
     stale = inputs_age_h is not None and inputs_age_h > S["stale_hours"]
     dead = inputs_age_h is not None and inputs_age_h > S.get("stale_veto_hours", 72)
     sev = {a.get("severity") for a in active}
+    cause = "none"
     if dead and not exit_ids:
-        state = "RISK_OFF"
+        state, cause = "RISK_OFF", "stale"
         reasons.insert(0, f"Contexto sin actualizar hace {inputs_age_h:.0f} h (> {S.get('stale_veto_hours', 72)} h): "
                           "sin vigía no se compra")
     elif exit_ids or "alta" in sev:
-        state = "RISK_OFF"
+        state, cause = "RISK_OFF", "onchain"
         reasons.insert(0, f"Alerta on-chain {'CRÍTICA (era Satoshi)' if exit_ids else 'alta'}: "
                           f"{active[0].get('detail_es', '')[:120]}")
     elif blackout:
-        state = "BLACKOUT"
+        state, cause = "BLACKOUT", "blackout"
         reasons.insert(0, "Blackout por evento programado: " + "; ".join(f"{e['title_es']} ({e['utc']})" for e in blackout[:3]))
     elif bias <= S["risk_off_bias"]:
-        state = "RISK_OFF"
+        state, cause = "RISK_OFF", "bias"
         reasons.insert(0, f"Sesgo de eventos muy negativo ({bias:+.2f})")
     elif bias <= S["caution_bias"] or event_risk >= S["caution_event_risk"] or "media" in sev or stale:
         state = "CAUTION"
+        cause = "onchain" if "media" in sev else "stale" if stale else "bias" if bias <= S["caution_bias"] else "event_risk"
         why = []
         if bias <= S["caution_bias"]:
             why.append(f"sesgo {bias:+.2f}")
@@ -194,7 +196,7 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
             why.append(f"datos de contexto viejos ({inputs_age_h:.0f} h)")
         reasons.insert(0, "Precaución: " + ", ".join(why))
     elif bias >= S["risk_on_bias"] and event_risk < 0.3:
-        state = "RISK_ON"
+        state, cause = "RISK_ON", "bias"
         reasons.insert(0, f"Contexto favorable: sesgo {bias:+.2f}, riesgo de evento {event_risk:.2f}")
     else:
         state = "NEUTRAL"
@@ -209,9 +211,31 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
             "vote": "LONG" if state == "RISK_ON" else "FLAT",  # informativo: el comité NO lo cuenta como voto a favor
             "confidence": int(50 + 40 * abs(bias)),
             "reasons": reasons[:8], "upcoming": upcoming[:8], "recent": recent_out[:8], "alerts": active[:5],
-            "stale": stale, "weights_source": "weights.json (estudio de eventos)" if weights else "priors.json (a priori)",
+            "cause": cause, "mode": "completo", "stale": stale, "weights_source": "weights.json (estudio de eventos)" if weights else "priors.json (a priori)",
             "inputs": {"market": {k: market.get(k) for k in ("btc_regime", "vol_regime", "fear_greed")},
                        "fred": fr.get("status"), "stablecoins_30d_pct": sc.get("chg_30d_pct")}}
+
+
+MODES = ("completo", "riesgo", "monitor")
+
+
+def apply_mode(sig: dict, mode: str) -> dict:
+    """CONTEXT_MODE: cuánto manda el contexto en las compras (la salida por alerta CRÍTICA aplica en todos).
+      completo → todo (blackout, alertas, sesgo de noticias, riesgo de evento, datos viejos)
+      riesgo   → solo lo duro: alertas on-chain, blackout de eventos programados y datos viejos; el sesgo de noticias
+                 y el riesgo de evento solo se registran
+      monitor  → se calcula y se registra, pero no cambia ninguna compra (para medir en papel sin afectar)"""
+    mode = mode if mode in MODES else "completo"
+    sig = dict(sig, mode=mode)
+    if mode == "completo":
+        return sig
+    if mode == "riesgo" and sig.get("cause") in ("onchain", "blackout", "stale"):
+        return sig
+    if sig.get("exit_all"):
+        return sig
+    sig.update(state_raw=sig["state"], state="NEUTRAL", veto_entries=False, size_mult=1.0, extra_confluence=0,
+               reasons=[f"Modo {mode}: {sig['state']} solo se registra"] + sig["reasons"][:6])
+    return sig
 
 
 def explain_md(sig: dict) -> str:

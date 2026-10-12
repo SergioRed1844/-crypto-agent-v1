@@ -38,6 +38,8 @@ SLIPPAGE = float(os.environ.get("SLIPPAGE", "0.0005"))  # 0.05% estimado en la c
 
 # Modelo de contexto (v4.2): calendario, eventos, on-chain. Ver docs/MODELO_CONTEXTO.md
 CONTEXT_ENABLED = _b("CONTEXT_ENABLED", "true")
+# completo | riesgo (solo alertas on-chain, blackout y datos viejos) | monitor (solo registra). Ver engine.apply_mode
+CONTEXT_MODE = os.environ.get("CONTEXT_MODE", "completo").lower()
 CONTEXT_ONCHAIN_LIVE = _b("CONTEXT_ONCHAIN_LIVE", "false")  # vigía on-chain también dentro del servidor (cada 5 min)
 # Una alerta CRÍTICA (se gastan monedas de la era Satoshi) vende todo a USDT y activa el kill switch (reanudar a mano)
 CONTEXT_EXIT_ON_CRITICAL = _b("CONTEXT_EXIT_ON_CRITICAL", "true")

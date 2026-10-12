@@ -141,6 +141,15 @@ g = asyncio.run(_ag.aggregate(st))["portfolio"]["consensus"]
 ok(g["gate"] == "INSUFFICIENT" and g["long_votes"] == 2,
    f"el contexto no completa votos a favor (2 votos reales → {g['gate']}): solo puede restar")
 
+r_bias = engine.apply_mode(engine.compute(NOW, [], crisis, [], {}, {"btc_regime": "RED"}, PRI, {}, 1), "riesgo")
+r_blk = engine.apply_mode(s1, "riesgo")
+m_blk = engine.apply_mode(s1, "monitor")
+m_exit = engine.apply_mode(s4, "monitor")
+ok(not r_bias["veto_entries"] and r_bias["size_mult"] == 1.0 and r_blk["veto_entries"],
+   "modo riesgo: el sesgo de noticias solo se registra; el blackout sí veta")
+ok(not m_blk["veto_entries"] and m_exit["exit_all"] and m_exit["veto_entries"],
+   "modo monitor: nada cambia las compras, salvo la salida por alerta crítica")
+
 # ── estudio de eventos sobre precios sintéticos con efecto conocido ──
 rng = random.Random(3)
 d0, px, p = date(2015, 1, 1), {}, 100.0

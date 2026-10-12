@@ -7,9 +7,12 @@ Variantes (todas sin LLM, sin look-ahead; el contexto usa SOLO pesos a priori y 
   B  + ganancia neta (objetivo neto ≥ MIN_NET_GAIN_PCT y R:R neto ≥ MIN_NET_RR)
   C  + derivados: veto por funding > 0.10%/8h (como en producción)
   C2 + derivados estricto: además F&G ≥ 80 o funding > 0.05% → no compra
-  D  + contexto: blackout por eventos programados, sesgo por eventos recientes, tamaño y confluencia por estado
+  D  + contexto completo: blackout por eventos programados, sesgo por eventos recientes, tamaño y confluencia
+  D1 + solo blackout (≈ CONTEXT_MODE=riesgo; las alertas on-chain no se pueden reconstruir en la historia)
+  D2 + solo sesgo por eventos recientes
   E  + racha: 5 pérdidas seguidas → pausa de 7 días (en producción la pausa dura hasta el reset manual)
   F  v4.2 completo = B + C + D + E
+  G  ganancia neta + derivados estricto (sin contexto ni pausa)
 Escribe data/context/backtest_v42.json y data/context/BACKTEST_V42.md.
 """
 import argparse
@@ -149,7 +152,7 @@ def main(argv=None):
                              "ctx_extra": ctx["extra_confluence"], "ctx_bias": ctx["bias"]}
     loop.close()
 
-    def build(net=False, der=False, der_strict=False, ctx=False):
+    def build(net=False, der=False, der_strict=False, ctx=False, ctx_only=None):
         out = {}
         for p in pairs:
             out[p] = {}
@@ -162,6 +165,12 @@ def main(argv=None):
                 if der_strict and ((f["fg"] or 0) >= 80 or (f["funding"] or 0) > 0.0005):
                     continue
                 size = 1.0
+                if ctx_only == "blackout" and f["ctx_state"] == "BLACKOUT":
+                    continue
+                if ctx_only == "sesgo":
+                    if f["ctx_state"] == "RISK_OFF" or (f["ctx_state"] == "CAUTION" and sg["cs"] < R_["min_confluence"] + 2):
+                        continue
+                    size = 0.5 if f["ctx_state"] == "CAUTION" else 1.0
                 if ctx:
                     if f["ctx_veto"] or sg["cs"] < R_["min_confluence"] + f["ctx_extra"]:
                         continue
@@ -175,8 +184,11 @@ def main(argv=None):
          "C · + derivados (veto funding)": build(der=True),
          "C2 · + derivados estricto (F&G/funding)": build(der_strict=True),
          "D · + contexto (calendario y eventos)": build(ctx=True),
+         "D1 · + solo blackout de eventos programados": build(ctx_only="blackout"),
+         "D2 · + solo sesgo por eventos recientes": build(ctx_only="sesgo"),
          "E · + racha (pausa tras 5 pérdidas)": build(),
-         "F · v4.2 completo (B+C+D+E)": build(net=True, der=True, ctx=True)}
+         "F · v4.2 completo (B+C+D+E)": build(net=True, der=True, ctx=True),
+         "G · ganancia neta + derivados estricto (sin contexto ni pausa)": build(net=True, der_strict=True)}
     pause = {"E · + racha (pausa tras 5 pérdidas)": 5, "F · v4.2 completo (B+C+D+E)": 5}
     ref_tr = bt.portfolio(data, base, fee, a.slippage)
     # corte fuera de muestra por FECHA, igual para todas las variantes (comparan el mismo periodo)

@@ -51,6 +51,8 @@ services:
         value: https://raw.githubusercontent.com/SergioRed1844/-crypto-agent-v1/v4.2-contexto/data/context/
       - key: CONTEXT_ENABLED
         value: "true"
+      - key: CONTEXT_MODE
+        value: completo        # completo | riesgo | monitor (ver docs/MODELO_CONTEXTO.md)
       - key: CONTEXT_ONCHAIN_LIVE
         value: "false"
       - key: CONTEXT_EXIT_ON_CRITICAL
