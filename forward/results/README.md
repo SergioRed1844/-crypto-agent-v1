@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** lun 12 oct 07:58 (Monterrey) · velas hasta lun 12 oct 07:55 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** lun 12 oct 08:57 (Monterrey) · velas hasta lun 12 oct 08:55 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte 1, lun 12 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
@@ -56,14 +56,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 0 tr · −0.44R (abierta) | 1 tr · −1.05R | 2 tr · −2.20R | −1.27% |
-| ETH | 0 tr · +0.06R (abierta) | — (0 señ.) | 1 tr · −1.06R | −0.20% |
-| SOL | 0 tr · −0.19R (abierta) | — (0 señ.) | — (0 señ.) | −1.00% |
-| XRP | 0 tr · −0.36R (abierta) | — (0 señ.) | — (0 señ.) | −1.59% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −1.04% |
-| ADA | 0 tr · −0.20R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −1.70% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −0.72% |
-| LINK | 0 tr · −0.15R (abierta) | — (0 señ.) | 2 tr · −2.09R | −1.38% |
+| BTC | 0 tr · −0.44R (abierta) | 1 tr · −1.05R | 2 tr · −2.20R | −1.30% |
+| ETH | 0 tr · +0.06R (abierta) | — (0 señ.) | 1 tr · −1.06R | −0.51% |
+| SOL | 0 tr · −0.19R (abierta) | — (0 señ.) | — (0 señ.) | −2.19% |
+| XRP | 0 tr · −0.36R (abierta) | — (0 señ.) | — (0 señ.) | −2.18% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −1.97% |
+| ADA | 0 tr · −0.20R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −3.61% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.24% |
+| LINK | 0 tr · −0.15R (abierta) | — (0 señ.) | 2 tr · −2.09R | −2.36% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
