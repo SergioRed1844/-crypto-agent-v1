@@ -1,14 +1,14 @@
 {
  "modo": "refresh",
- "inicio": "2026-10-12T03:48:22Z",
+ "inicio": "2026-10-12T04:08:14Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
-  "n_gdelt": 360,
-  "titulares": 269,
-  "eventos": 42,
+  "n_gdelt": 240,
+  "titulares": 172,
+  "eventos": 30,
   "metodo": "palabras-clave",
-  "agregados": 41,
+  "agregados": 9,
   "propuestas_de_noticias": 0
  },
  "consenso_semana": [
@@ -172,6 +172,7 @@
   },
   "huecos": []
  },
+ "macro_fuentes_ok": 2,
  "estudio_eventos": {
   "eventos": 258,
   "base_azar": {
@@ -181,10 +182,10 @@
  },
  "onchain": {
   "scanned": [
-   971034,
-   971036
+   971037,
+   971040
   ],
-  "calls": 37,
+  "calls": 32,
   "stopped": null,
   "nuevas": 0
  },

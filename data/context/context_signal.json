@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-12T04:06:49Z",
- "state": "CAUTION",
+ "generated_utc": "2026-10-12T04:08:14Z",
+ "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
- "bias": -0.202,
+ "size_mult": 0.979,
+ "bias": -0.066,
  "event_risk": 0.042,
- "extra_confluence": 2,
+ "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 58,
+ "confidence": 52,
  "reasons": [
-  "Precaución: sesgo -0.20"
+  "Contexto neutral: sesgo -0.07, riesgo de evento 0.04"
  ],
  "upcoming": [
   {
@@ -36,15 +36,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.091
-  },
-  {
-   "id": "news-bitcoin-etf-inflows-are-slowing-why-the-chart-matt-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Bitcoin ETF Inflows Are Slowing . Why the Chart Matters",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.091
+   "aporte": 0.088
   },
   {
    "id": "news-zcash-zec-price-prediction-whale-accumulation-and-2026-10-01",
@@ -52,7 +44,7 @@
    "title_es": "Zcash ( ZEC ) Price Prediction : Whale Accumulation and ETF Outflows Put ZEC at a Critical Crossroads Around $1 , 400",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.082
+   "aporte": -0.079
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
@@ -60,7 +52,7 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.079
+   "aporte": 0.076
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -68,7 +60,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.062
+   "aporte": -0.06
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -76,7 +68,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.051
+   "aporte": 0.049
   },
   {
    "id": "news-should-you-buy-bitcoin-or-ethereum-in-2026-2026-09-29",
@@ -84,7 +76,15 @@
    "title_es": "Should You Buy Bitcoin or Ethereum in 2026 ?",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.035
+   "aporte": 0.033
+  },
+  {
+   "id": "news-remittix-announces-november-24-rtx-launch-as-carda-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Remittix Announces November 24 RTX Launch as Cardano Advances Petrobras Fuel Research and NEAR Intents Responds to Bitget Hack",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.029
   },
   {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
@@ -92,7 +92,7 @@
    "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
    "category": "GEOPOLITICAL",
    "stance": "anti",
-   "aporte": -0.032
+   "aporte": -0.029
   }
  ],
  "alerts": [],
