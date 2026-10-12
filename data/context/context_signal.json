@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-12T17:54:33Z",
+ "generated_utc": "2026-10-12T18:53:32Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.963,
+ "size_mult": 0.961,
  "bias": -0.038,
- "event_risk": 0.075,
+ "event_risk": 0.078,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.04, riesgo de evento 0.07"
+  "Contexto neutral: sesgo -0.04, riesgo de evento 0.08"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.075,
+   "riesgo": 0.078,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -107,6 +107,6 @@
    "fear_greed": 69
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.84
+  "stablecoins_30d_pct": 0.83
  }
 }
