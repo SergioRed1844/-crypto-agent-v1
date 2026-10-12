@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T18:53:32Z",
+ "generated_utc": "2026-10-12T19:52:36Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.961,
- "bias": -0.038,
- "event_risk": 0.078,
+ "size_mult": 0.96,
+ "bias": -0.037,
+ "event_risk": 0.081,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.078,
+   "riesgo": 0.081,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
