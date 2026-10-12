@@ -98,7 +98,7 @@ function runWindow(D, sc, from, to) {
 (async () => {
   const now = Date.now();
   fs.mkdirSync(OUT, { recursive: true });
-  if (now > FINAL + 2 * 36e5) { console.log("Prueba terminada (corte final pasado): no se descarga nada."); return; }
+  if (now > FINAL + 24 * 36e5) { console.log("Prueba terminada (corte final + 24 h): no se descarga nada."); return; }
   if (now < START) { console.log("La ventana aún no empieza."); }
   let host = await pickBinance(), source = host ? `Binance (${host})` : "Coinbase (respaldo: Binance bloqueó la IP del runner)";
   console.log("Fuente:", source);
