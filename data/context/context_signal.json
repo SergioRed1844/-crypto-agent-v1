@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-12T12:58:56Z",
+ "generated_utc": "2026-10-12T13:57:59Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.97,
- "bias": -0.044,
- "event_risk": 0.061,
+ "size_mult": 0.968,
+ "bias": -0.043,
+ "event_risk": 0.063,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.061,
+   "riesgo": 0.063,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -60,7 +60,7 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.036
+   "aporte": 0.035
   },
   {
    "id": "bitget-hot-wallet-hack-2026-09-24",
