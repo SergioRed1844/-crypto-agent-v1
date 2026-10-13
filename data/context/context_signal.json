@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T14:35:41Z",
+ "generated_utc": "2026-10-13T15:34:44Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.912,
- "bias": -0.031,
- "event_risk": 0.176,
+ "size_mult": 0.908,
+ "bias": -0.03,
+ "event_risk": 0.184,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.176,
+   "riesgo": 0.184,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -71,20 +71,20 @@
    "aporte": -0.021
   },
   {
-   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.018
-  },
-  {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
    "date": "2026-10-10",
    "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
    "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.018
+  },
+  {
+   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.017
   },
   {
    "id": "news-crypto-hack-spurs-463-million-in-customer-outflows-2026-09-29",
