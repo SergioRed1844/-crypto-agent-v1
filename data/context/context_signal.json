@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T22:28:34Z",
+ "generated_utc": "2026-10-13T23:06:08Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.877,
+ "size_mult": 0.874,
  "bias": -0.025,
- "event_risk": 0.245,
+ "event_risk": 0.252,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 50,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.245,
+   "riesgo": 0.252,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.053
+   "aporte": -0.052
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
