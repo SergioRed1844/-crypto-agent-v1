@@ -1,19 +1,19 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-13T19:34:54Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-13T20:30:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.22 · tamaño ×0.891 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.23 · tamaño ×0.887 · compras permitidas
 
-- Contexto neutral: sesgo -0.03, riesgo de evento 0.22
+- Contexto neutral: sesgo -0.03, riesgo de evento 0.23
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.217 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.226 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.053 |
-| SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.044 |
+| SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.043 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.037 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.032 |
 | Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.021 |
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-13T19:34:54Z",
+ "inicio": "2026-10-13T20:30:29Z",
  "onchain": {
   "scanned": [
-   971291,
-   971291
+   971292,
+   971297
   ],
-  "calls": 14,
+  "calls": 137,
   "stopped": null,
   "nuevas": 0
  },

@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-13T19:34:54Z",
+ "generated_utc": "2026-10-13T20:30:29Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.891,
+ "size_mult": 0.887,
  "bias": -0.029,
- "event_risk": 0.217,
+ "event_risk": 0.226,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.03, riesgo de evento 0.22"
+  "Contexto neutral: sesgo -0.03, riesgo de evento 0.23"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.217,
+   "riesgo": 0.226,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -44,7 +44,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.044
+   "aporte": 0.043
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
