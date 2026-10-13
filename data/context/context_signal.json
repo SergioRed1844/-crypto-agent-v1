@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-13T03:49:12Z",
+ "generated_utc": "2026-10-13T04:44:38Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.944,
+ "size_mult": 0.941,
  "bias": -0.034,
- "event_risk": 0.113,
+ "event_risk": 0.117,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.03, riesgo de evento 0.11"
+  "Contexto neutral: sesgo -0.03, riesgo de evento 0.12"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.113,
+   "riesgo": 0.117,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.056
+   "aporte": -0.055
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -44,7 +44,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.046
+   "aporte": 0.045
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
@@ -107,6 +107,6 @@
    "fear_greed": 57
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.76
+  "stablecoins_30d_pct": 0.74
  }
 }
