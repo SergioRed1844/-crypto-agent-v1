@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-13T09:40:05Z",
+ "generated_utc": "2026-10-13T10:39:11Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.928,
+ "size_mult": 0.925,
  "bias": -0.032,
- "event_risk": 0.144,
+ "event_risk": 0.15,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.03, riesgo de evento 0.14"
+  "Contexto neutral: sesgo -0.03, riesgo de evento 0.15"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.144,
+   "riesgo": 0.15,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.055
+   "aporte": -0.054
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -52,7 +52,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.039
+   "aporte": 0.038
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
@@ -71,18 +71,18 @@
    "aporte": -0.022
   },
   {
-   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
-   "date": "2026-10-10",
-   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
-   "category": "GEOPOLITICAL",
-   "stance": "anti",
-   "aporte": -0.019
-  },
-  {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
    "date": "2026-10-01",
    "title_es": "Cryptohack Roundup : $387M Bitget Hack",
    "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.018
+  },
+  {
+   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
+   "date": "2026-10-10",
+   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.018
   },
@@ -92,7 +92,7 @@
    "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.014
+   "aporte": -0.013
   }
  ],
  "alerts": [],
