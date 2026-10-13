@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** mar 13 oct 06:37 (Monterrey) · velas hasta mar 13 oct 06:35 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** mar 13 oct 07:36 (Monterrey) · velas hasta mar 13 oct 07:35 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte 2, mar 13 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
@@ -62,14 +62,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.13R (abierta) | 2 tr · −2.51R (abierta) | 4 tr · −4.35R | −0.44% |
-| ETH | 1 tr · −1.21R (abierta) | — (0 señ.) | 1 tr · −1.06R | −1.30% |
-| SOL | 1 tr · −1.62R (abierta) | — (0 señ.) | — (0 señ.) | −4.44% |
-| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.43% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −3.46% |
-| ADA | 1 tr · −1.01R | 1 tr · −1.02R | 2 tr · −2.08R | −7.26% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −7.12% |
-| LINK | 1 tr · −1.18R (abierta) | — (0 señ.) | 2 tr · −2.09R | −3.45% |
+| BTC | 1 tr · −1.13R (abierta) | 2 tr · −2.51R (abierta) | 4 tr · −4.35R | −0.41% |
+| ETH | 1 tr · −1.21R (abierta) | — (0 señ.) | 1 tr · −1.06R | −1.03% |
+| SOL | 1 tr · −1.62R (abierta) | — (0 señ.) | — (0 señ.) | −3.96% |
+| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −3.11% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.88% |
+| ADA | 1 tr · −1.01R | 1 tr · −1.02R | 2 tr · −2.08R | −6.62% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −6.18% |
+| LINK | 1 tr · −1.18R (abierta) | — (0 señ.) | 2 tr · −2.09R | −2.66% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
