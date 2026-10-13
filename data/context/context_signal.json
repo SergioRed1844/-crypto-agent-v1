@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-13T01:47:17Z",
+ "generated_utc": "2026-10-13T02:42:30Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.948,
+ "size_mult": 0.946,
  "bias": -0.035,
- "event_risk": 0.104,
+ "event_risk": 0.108,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
  "reasons": [
-  "Contexto neutral: sesgo -0.04, riesgo de evento 0.10"
+  "Contexto neutral: sesgo -0.03, riesgo de evento 0.11"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.104,
+   "riesgo": 0.108,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -52,7 +52,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.04
+   "aporte": 0.039
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
