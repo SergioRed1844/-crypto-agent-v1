@@ -1,18 +1,18 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-13T16:34:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-13T17:33:08Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.19 · tamaño ×0.904 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.20 · tamaño ×0.9 · compras permitidas
 
-- Contexto neutral: sesgo -0.03, riesgo de evento 0.19
+- Contexto neutral: sesgo -0.03, riesgo de evento 0.20
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.192 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.2 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.054 |
+| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.053 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.044 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.038 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.033 |
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-13T16:34:05Z",
+ "inicio": "2026-10-13T17:33:08Z",
  "onchain": {
   "scanned": [
-   971267,
-   971274
+   971275,
+   971278
   ],
-  "calls": 97,
+  "calls": 80,
   "stopped": null,
   "nuevas": 0
  },
