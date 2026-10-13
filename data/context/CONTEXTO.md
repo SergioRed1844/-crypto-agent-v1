@@ -1,14 +1,14 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-13T06:42:44Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-13T07:41:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.13 · tamaño ×0.936 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.03 · riesgo de evento 0.13 · tamaño ×0.934 · compras permitidas
 
 - Contexto neutral: sesgo -0.03, riesgo de evento 0.13
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.127 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.132 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Actualizado 2026-10-13T06:42:44Z UTC. Se recalcula cada hora; el calendario y lo
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.045 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.039 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.034 |
-| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.023 |
+| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.022 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.019 |
 | Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.018 |
 | Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.014 |
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-13T06:42:44Z",
+ "inicio": "2026-10-13T07:41:48Z",
  "onchain": {
   "scanned": [
-   971199,
-   971203
+   971204,
+   971209
   ],
-  "calls": 49,
+  "calls": 62,
   "stopped": null,
   "nuevas": 0
  },

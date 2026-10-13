@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-13T06:42:44Z",
+ "generated_utc": "2026-10-13T07:41:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.936,
+ "size_mult": 0.934,
  "bias": -0.033,
- "event_risk": 0.127,
+ "event_risk": 0.132,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 51,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.127,
+   "riesgo": 0.132,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -68,7 +68,7 @@
    "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.023
+   "aporte": -0.022
   },
   {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
