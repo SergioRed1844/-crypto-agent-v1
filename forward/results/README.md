@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** mar 13 oct 15:07 (Monterrey) · velas hasta mar 13 oct 15:05 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** mar 13 oct 15:29 (Monterrey) · velas hasta mar 13 oct 15:25 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte final, mié 14 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
@@ -63,14 +63,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.16R (abierta) | 2 tr · −2.46R (abierta) | 5 tr · −5.42R | −0.43% |
-| ETH | 1 tr · −1.11R (abierta) | — (0 señ.) | 1 tr · −1.06R | −1.03% |
-| SOL | 1 tr · −1.31R (abierta) | — (0 señ.) | — (0 señ.) | −3.78% |
-| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −2.84% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.47% |
-| ADA | 1 tr · −1.01R | 1 tr · −1.02R | 2 tr · −2.08R | −5.99% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −6.20% |
-| LINK | 1 tr · −1.06R (abierta) | — (0 señ.) | 2 tr · −2.09R | −3.14% |
+| BTC | 1 tr · −1.16R (abierta) | 2 tr · −2.46R (abierta) | 5 tr · −5.42R | −0.47% |
+| ETH | 1 tr · −1.11R (abierta) | — (0 señ.) | 1 tr · −1.06R | −1.09% |
+| SOL | 1 tr · −1.31R (abierta) | — (0 señ.) | — (0 señ.) | −3.89% |
+| XRP | 1 tr · −1.02R | — (0 señ.) | — (0 señ.) | −2.96% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −2.62% |
+| ADA | 1 tr · −1.01R | 1 tr · −1.02R | 2 tr · −2.08R | −6.23% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −6.39% |
+| LINK | 1 tr · −1.06R (abierta) | — (0 señ.) | 2 tr · −2.09R | −3.30% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
