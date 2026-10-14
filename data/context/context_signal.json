@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-14T05:22:10Z",
+ "generated_utc": "2026-10-14T06:21:17Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.837,
- "bias": -0.023,
- "event_risk": 0.327,
+ "size_mult": 0.83,
+ "bias": -0.022,
+ "event_risk": 0.34,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 50,
  "reasons": [
-  "Contexto neutral: sesgo -0.02, riesgo de evento 0.33"
+  "Contexto neutral: sesgo -0.02, riesgo de evento 0.34"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.327,
+   "riesgo": 0.34,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.052
+   "aporte": -0.051
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -60,7 +60,7 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.032
+   "aporte": 0.031
   },
   {
    "id": "bitget-hot-wallet-hack-2026-09-24",
@@ -107,6 +107,6 @@
    "fear_greed": 62
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.85
+  "stablecoins_30d_pct": 0.84
  }
 }
