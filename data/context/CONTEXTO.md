@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T16:12:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T17:11:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.00 · tamaño ×1.0 · compras permitidas
 
@@ -11,7 +11,7 @@ Actualizado 2026-10-14T16:12:29Z UTC. Se recalcula cada hora; el calendario y lo
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.050 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.041 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.035 |
-| Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.031 |
+| Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.030 |
 | Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.018 |
 | Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.015 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.015 |
@@ -24,13 +24,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T16:12:29Z",
+ "inicio": "2026-10-14T17:11:30Z",
  "onchain": {
   "scanned": [
-   971419,
-   971426
+   971427,
+   971434
   ],
-  "calls": 117,
+  "calls": 98,
   "stopped": null,
   "nuevas": 0
  },
