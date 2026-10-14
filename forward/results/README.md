@@ -2,11 +2,11 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** mié 14 oct 09:13 (Monterrey) · velas hasta mié 14 oct 09:10 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** mié 14 oct 10:12 (Monterrey) · velas hasta mié 14 oct 10:10 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte final, mié 14 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
-**Las 3 escalas juntas (3,000 hipotéticos): −42.52 USDT** — cerrado −41.86, flotante −0.66, 17 trades cerrados, 2 posiciones abiertas.
+**Las 3 escalas juntas (3,000 hipotéticos): −49.51 USDT** — cerrado −49.51, flotante 0.00, 19 trades cerrados, 0 posiciones abiertas.
 
 ![P&L por escala](curva.svg)
 
@@ -14,7 +14,7 @@
 
 | Escala | Trades cerrados | Ganadas | Cerrado USDT | Flotante USDT | **Total USDT** | Abiertas | Señales de compra |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Swing (1D / 4H / 1H) | 2 | 0% | −7.70 | −0.66 | **−8.36** | 2 | 37 |
+| Swing (1D / 4H / 1H) | 4 | 0% | −15.35 | 0.00 | **−15.35** | 0 | 39 |
 | Intradía (4H / 1H / 15m) | 4 | 0% | −12.53 | 0.00 | **−12.53** | 0 | 20 |
 | Scalp (1H / 15m / 5m) | 11 | 0% | −21.63 | 0.00 | **−21.63** | 0 | 102 |
 
@@ -32,15 +32,14 @@ Cada corte se congela una sola vez al pasar su hora (no se reescribe).
 
 Lo flotante ya descuenta la comisión de entrada y de salida: una posición apenas arriba de su precio de entrada todavía sale negativa.
 
-| Escala | Moneda | Entrada (Monterrey) | Precio entrada | Precio actual | Stop | Objetivo | R flotante | USDT flotante |
-| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Swing | BTC | lun 12 oct 22:00 | 83,372.8 | 83,465.9 | 81,727.3 | 87,486.6 | −0.04 | −0.15 |
-| Swing | ETH | lun 12 oct 22:00 | 2,509.99 | 2,504.75 | 2,438.37 | 2,689.06 | −0.13 | −0.50 |
+Ninguna.
 
 ## Operaciones cerradas
 
 | Escala | Moneda | Entrada | Salida | Precio entrada → salida | Motivo | R | USDT |
 | --- | --- | --- | --- | ---: | --- | ---: | ---: |
+| Swing | BTC | lun 12 oct 22:00 | mié 14 oct 06:00 | 83,372.8 → 81,686.5 | stop | −1.02 | −3.83 |
+| Swing | ETH | lun 12 oct 22:00 | mié 14 oct 06:00 | 2,509.99 → 2,437.15 | stop | −1.02 | −3.81 |
 | Intradía | BTC | mar 13 oct 04:00 | mié 14 oct 06:00 | 83,665.8 → 82,647.7 | stop | −1.04 | −3.54 |
 | Scalp | BTC | mié 14 oct 02:00 | mié 14 oct 03:15 | 83,624.1 → 83,293.7 | stop | −1.09 | −1.49 |
 | Scalp | BTC | mar 13 oct 22:00 | mar 13 oct 23:45 | 83,741.9 → 83,371.2 | stop | −1.08 | −1.61 |
@@ -66,14 +65,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.07R (abierta) | 3 tr · −3.14R | 8 tr · −8.68R | −2.15% |
-| ETH | 1 tr · −1.15R (abierta) | — (0 señ.) | 1 tr · −1.06R | −4.04% |
-| SOL | 1 tr · −1.40R (abierta) | — (0 señ.) | — (0 señ.) | −6.24% |
-| XRP | 1 tr · −1.08R (abierta) | — (0 señ.) | — (0 señ.) | −5.30% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −5.04% |
-| ADA | 1 tr · −1.20R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −9.28% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −9.89% |
-| LINK | 1 tr · −1.10R (abierta) | — (0 señ.) | 2 tr · −2.09R | −7.02% |
+| BTC | 2 tr · −2.05R | 3 tr · −3.14R | 8 tr · −8.68R | −2.54% |
+| ETH | 2 tr · −2.04R | — (0 señ.) | 1 tr · −1.06R | −4.22% |
+| SOL | 2 tr · −2.03R | — (0 señ.) | — (0 señ.) | −6.71% |
+| XRP | 2 tr · −2.03R | — (0 señ.) | — (0 señ.) | −5.88% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −5.50% |
+| ADA | 1 tr · −1.73R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −10.03% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −10.52% |
+| LINK | 1 tr · −1.72R (abierta) | — (0 señ.) | 2 tr · −2.09R | −6.95% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
