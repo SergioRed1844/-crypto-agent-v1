@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-14T11:16:42Z",
+ "generated_utc": "2026-10-14T11:21:04Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -107,6 +107,6 @@
    "fear_greed": 62
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.84
+  "stablecoins_30d_pct": 0.81
  }
 }
