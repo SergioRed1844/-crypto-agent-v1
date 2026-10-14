@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-14T22:06:52Z",
- "state": "NEUTRAL",
+ "generated_utc": "2026-10-14T22:35:36Z",
+ "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 1.0,
+ "size_mult": 0.5,
  "bias": -0.015,
  "event_risk": 0.0,
- "extra_confluence": 0,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 50,
  "reasons": [
-  "Contexto neutral: sesgo -0.02, riesgo de evento 0.00"
+  "Precaución: alerta on-chain media"
  ],
  "upcoming": [],
  "recent": [
@@ -56,20 +56,20 @@
    "aporte": -0.018
   },
   {
-   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.015
-  },
-  {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
    "date": "2026-10-10",
    "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
    "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.015
+  },
+  {
+   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
+   "date": "2026-10-01",
+   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.014
   },
   {
    "id": "news-crypto-hack-spurs-463-million-in-customer-outflows-2026-09-29",
@@ -80,8 +80,23 @@
    "aporte": -0.011
   }
  ],
- "alerts": [],
- "cause": "none",
+ "alerts": [
+  {
+   "id": "P2PK_FLOOD-bloque-971472",
+   "type": "P2PK_FLOOD",
+   "severity": "media",
+   "txid": "bloque-971472",
+   "block_height": 971472,
+   "block_time_utc": "2026-10-14T22:09:56Z",
+   "detected_utc": "2026-10-14T22:35:49Z",
+   "btc_moved": 0.0,
+   "n_inputs": 40,
+   "detail_es": "Bloque 971472 con más de 40 gastos P2PK: posible movimiento masivo de monedas antiguas (no se fecharon todos).",
+   "url": "https://mempool.space/tx/bloque-971472",
+   "action": "CAUTION"
+  }
+ ],
+ "cause": "onchain",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",

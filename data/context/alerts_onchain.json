@@ -1,4 +1,19 @@
 {
- "updated_utc": "2026-10-14T22:07:34Z",
- "alerts": []
+ "updated_utc": "2026-10-14T22:36:12Z",
+ "alerts": [
+  {
+   "id": "P2PK_FLOOD-bloque-971472",
+   "type": "P2PK_FLOOD",
+   "severity": "media",
+   "txid": "bloque-971472",
+   "block_height": 971472,
+   "block_time_utc": "2026-10-14T22:09:56Z",
+   "detected_utc": "2026-10-14T22:35:49Z",
+   "btc_moved": 0.0,
+   "n_inputs": 40,
+   "detail_es": "Bloque 971472 con más de 40 gastos P2PK: posible movimiento masivo de monedas antiguas (no se fecharon todos).",
+   "url": "https://mempool.space/tx/bloque-971472",
+   "action": "CAUTION"
+  }
+ ]
 }
