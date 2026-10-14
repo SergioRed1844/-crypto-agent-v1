@@ -1,20 +1,16 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T13:15:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T13:59:51Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: BLACKOUT** · sesgo -0.02 · riesgo de evento 0.40 · tamaño ×0.0 · VETO a compras
+**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.00 · tamaño ×1.0 · compras permitidas
 
-- Blackout por evento programado: IPC/CPI EE.UU. (sep-2026) (2026-10-14T12:30:00Z)
-
-| Próximo evento | UTC | Categoría | Magnitud | Riesgo |
-|---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.404 |
+- Contexto neutral: sesgo -0.02, riesgo de evento 0.00
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.050 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.041 |
-| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.036 |
+| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.035 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.031 |
 | Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.019 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.016 |
@@ -28,13 +24,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T13:15:07Z",
+ "inicio": "2026-10-14T13:59:51Z",
  "onchain": {
   "scanned": [
-   971400,
-   971407
+   971408,
+   971409
   ],
-  "calls": 106,
+  "calls": 71,
   "stopped": null,
   "nuevas": 0
  },
