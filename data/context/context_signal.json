@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-14T11:21:04Z",
+ "generated_utc": "2026-10-14T12:16:00Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.051
+   "aporte": -0.05
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -44,7 +44,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.042
+   "aporte": 0.041
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
