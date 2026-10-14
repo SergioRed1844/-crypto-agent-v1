@@ -2,7 +2,7 @@
 
 > **Simulación con dinero hipotético.** No hay keys ni órdenes reales: el bot solo lee velas públicas de Binance y calcula qué habría hecho con las reglas congeladas.
 
-**Actualizado:** mié 14 oct 08:14 (Monterrey) · velas hasta mié 14 oct 08:10 · fuente Binance (data-api.binance.vision)  
+**Actualizado:** mié 14 oct 09:13 (Monterrey) · velas hasta mié 14 oct 09:10 · fuente Binance (data-api.binance.vision)  
 **Estado:** en curso — próximo corte: **Corte final, mié 14 oct 14:00** (Monterrey)  
 **Ventana:** dom 11 oct 18:00 → mié 14 oct 14:00 (Monterrey) · 8 monedas × 3 escalas · cuenta de 1,000 USDT por escala · 0.5% de riesgo por trade (1R ≈ 5 USDT) · comisión y slippage incluidos
 
@@ -66,14 +66,14 @@ Cada moneda corrida sola con su propia cuenta (por eso no suma igual que el port
 
 | Moneda | Swing | Intradía | Scalp | Buy & hold desde el inicio |
 | --- | ---: | ---: | ---: | ---: |
-| BTC | 1 tr · −1.07R (abierta) | 3 tr · −3.14R | 8 tr · −8.68R | −1.73% |
-| ETH | 1 tr · −1.15R (abierta) | — (0 señ.) | 1 tr · −1.06R | −3.34% |
-| SOL | 1 tr · −1.40R (abierta) | — (0 señ.) | — (0 señ.) | −5.83% |
-| XRP | 1 tr · −1.08R (abierta) | — (0 señ.) | — (0 señ.) | −4.29% |
-| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −4.78% |
-| ADA | 1 tr · −1.20R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −9.20% |
-| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −9.77% |
-| LINK | 1 tr · −1.10R (abierta) | — (0 señ.) | 2 tr · −2.09R | −5.94% |
+| BTC | 1 tr · −1.07R (abierta) | 3 tr · −3.14R | 8 tr · −8.68R | −2.15% |
+| ETH | 1 tr · −1.15R (abierta) | — (0 señ.) | 1 tr · −1.06R | −4.04% |
+| SOL | 1 tr · −1.40R (abierta) | — (0 señ.) | — (0 señ.) | −6.24% |
+| XRP | 1 tr · −1.08R (abierta) | — (0 señ.) | — (0 señ.) | −5.30% |
+| DOGE | — (0 señ.) | — (0 señ.) | — (0 señ.) | −5.04% |
+| ADA | 1 tr · −1.20R (abierta) | 1 tr · −1.02R | 2 tr · −2.08R | −9.28% |
+| AVAX | — (0 señ.) | — (0 señ.) | — (0 señ.) | −9.89% |
+| LINK | 1 tr · −1.10R (abierta) | — (0 señ.) | 2 tr · −2.09R | −7.02% |
 
 ## Línea base histórica (mismas reglas, antes de la ventana)
 
