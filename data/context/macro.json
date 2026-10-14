@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-14T23:09:45Z",
+ "generated_utc": "2026-10-14T23:11:40Z",
  "fear_greed": {
   "value": 62,
   "label": "Greed",
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54439767.734329045,
+   "volume": 54439767.73432896,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
@@ -66,7 +66,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891765.18410809,
+   "volume": 54891765.184108,
    "slug": "presidential-election-winner-2028"
   }
  },
