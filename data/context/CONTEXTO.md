@@ -1,14 +1,14 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T02:24:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T03:23:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.29 · tamaño ×0.856 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.30 · tamaño ×0.85 · compras permitidas
 
-- Contexto neutral: sesgo -0.02, riesgo de evento 0.29
+- Contexto neutral: sesgo -0.02, riesgo de evento 0.30
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.289 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.301 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T02:24:52Z",
+ "inicio": "2026-10-14T03:23:56Z",
  "onchain": {
   "scanned": [
-   971336,
-   971338
+   971339,
+   971343
   ],
-  "calls": 39,
+  "calls": 69,
   "stopped": null,
   "nuevas": 0
  },
