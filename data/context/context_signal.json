@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-14T15:18:11Z",
+ "generated_utc": "2026-10-14T16:12:29Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -53,21 +53,21 @@
    "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.019
-  },
-  {
-   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
-   "date": "2026-10-10",
-   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
-   "category": "GEOPOLITICAL",
-   "stance": "anti",
-   "aporte": -0.016
+   "aporte": -0.018
   },
   {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
    "date": "2026-10-01",
    "title_es": "Cryptohack Roundup : $387M Bitget Hack",
    "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.015
+  },
+  {
+   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
+   "date": "2026-10-10",
+   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.015
   },
