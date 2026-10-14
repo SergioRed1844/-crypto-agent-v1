@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T18:10:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T18:51:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.00 · tamaño ×1.0 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-14T18:10:31Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.050 |
+| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.049 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.041 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.035 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.030 |
@@ -24,13 +24,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T18:10:31Z",
+ "inicio": "2026-10-14T18:51:27Z",
  "onchain": {
   "scanned": [
-   971435,
-   971442
+   971443,
+   971450
   ],
-  "calls": 150,
+  "calls": 100,
   "stopped": null,
   "nuevas": 0
  },
