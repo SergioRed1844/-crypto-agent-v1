@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-14T19:13:42Z",
+ "generated_utc": "2026-10-14T20:08:53Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -29,7 +29,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.041
+   "aporte": 0.04
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
@@ -92,6 +92,6 @@
    "fear_greed": 62
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.87
+  "stablecoins_30d_pct": 0.86
  }
 }
