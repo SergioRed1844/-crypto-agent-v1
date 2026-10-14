@@ -1,14 +1,14 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T00:26:49Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T01:25:51Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.27 · tamaño ×0.867 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.28 · tamaño ×0.861 · compras permitidas
 
-- Contexto neutral: sesgo -0.02, riesgo de evento 0.27
+- Contexto neutral: sesgo -0.02, riesgo de evento 0.28
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.266 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.277 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -17,8 +17,8 @@ Actualizado 2026-10-14T00:26:49Z UTC. Se recalcula cada hora; el calendario y lo
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.037 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.032 |
 | Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.020 |
-| Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.017 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.017 |
+| Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.016 |
 | Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.012 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T00:26:49Z",
+ "inicio": "2026-10-14T01:25:51Z",
  "onchain": {
   "scanned": [
-   971317,
-   971324
+   971325,
+   971331
   ],
-  "calls": 115,
+  "calls": 77,
   "stopped": null,
   "nuevas": 0
  },
