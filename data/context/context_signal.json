@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-13T23:30:20Z",
+ "generated_utc": "2026-10-14T00:26:49Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.872,
+ "size_mult": 0.867,
  "bias": -0.024,
- "event_risk": 0.256,
+ "event_risk": 0.266,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 50,
  "reasons": [
-  "Contexto neutral: sesgo -0.02, riesgo de evento 0.26"
+  "Contexto neutral: sesgo -0.02, riesgo de evento 0.27"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.256,
+   "riesgo": 0.266,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -104,7 +104,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 57
+   "fear_greed": 62
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": 0.78
