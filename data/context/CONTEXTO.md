@@ -1,14 +1,14 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T06:21:17Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-14T07:20:16Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.34 · tamaño ×0.83 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.02 · riesgo de evento 0.35 · tamaño ×0.823 · compras permitidas
 
-- Contexto neutral: sesgo -0.02, riesgo de evento 0.34
+- Contexto neutral: sesgo -0.02, riesgo de evento 0.35
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.34 |
+| IPC/CPI EE.UU. (sep-2026) | 2026-10-14T12:30:00Z | Dato macro | 0.404 | 0.355 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -16,7 +16,7 @@ Actualizado 2026-10-14T06:21:17Z UTC. Se recalcula cada hora; el calendario y lo
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.042 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.036 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.031 |
-| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.020 |
+| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.019 |
 | Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.016 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.016 |
 | Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.012 |
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T06:21:17Z",
+ "inicio": "2026-10-14T07:20:16Z",
  "onchain": {
   "scanned": [
-   971355,
-   971362
+   971363,
+   971370
   ],
-  "calls": 54,
+  "calls": 93,
   "stopped": null,
   "nuevas": 0
  },

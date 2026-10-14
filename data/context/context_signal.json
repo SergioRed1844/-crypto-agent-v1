@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-14T06:21:17Z",
+ "generated_utc": "2026-10-14T07:20:16Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.83,
+ "size_mult": 0.823,
  "bias": -0.022,
- "event_risk": 0.34,
+ "event_risk": 0.355,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 50,
  "reasons": [
-  "Contexto neutral: sesgo -0.02, riesgo de evento 0.34"
+  "Contexto neutral: sesgo -0.02, riesgo de evento 0.35"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.34,
+   "riesgo": 0.355,
    "ventana": [
     "2026-10-14T10:30:00Z",
     "2026-10-14T13:30:00Z"
@@ -68,7 +68,7 @@
    "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.02
+   "aporte": -0.019
   },
   {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
