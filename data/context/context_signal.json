@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T18:50:58Z",
+ "generated_utc": "2026-10-15T19:46:18Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.198,
+ "bias": -0.195,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Bitcoin price today : BTC falls 3 . 6 % as US wholesale inflation jumps 1 . 3 % in September",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.108
+   "aporte": -0.106
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -37,7 +37,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.064
+   "aporte": -0.063
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -61,7 +61,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.033
+   "aporte": 0.032
   },
   {
    "id": "news-1-palestinian-killed-in-israeli-airstrike-on-gaza-2026-10-15",
