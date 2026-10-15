@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T03:05:59Z",
+ "generated_utc": "2026-10-15T04:01:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -45,7 +45,7 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.03
+   "aporte": 0.029
   },
   {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
