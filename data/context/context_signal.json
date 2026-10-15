@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T19:46:18Z",
+ "generated_utc": "2026-10-15T20:31:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.195,
+ "bias": -0.194,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Bitcoin price today : BTC falls 3 . 6 % as US wholesale inflation jumps 1 . 3 % in September",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.106
+   "aporte": -0.105
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -29,7 +29,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.094
+   "aporte": -0.093
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -69,7 +69,7 @@
    "title_es": "1 Palestinian killed in Israeli airstrike on Gaza - Xinhua",
    "category": "GEOPOLITICAL",
    "stance": "anti",
-   "aporte": -0.03
+   "aporte": -0.029
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
