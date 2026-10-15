@@ -1,27 +1,27 @@
 {
- "generated_utc": "2026-10-15T21:44:29Z",
- "state": "CAUTION",
+ "generated_utc": "2026-10-15T22:43:22Z",
+ "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
- "bias": -0.19,
+ "size_mult": 1.0,
+ "bias": -0.192,
  "event_risk": 0.0,
- "extra_confluence": 2,
+ "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Precaución: alerta on-chain media"
+  "Contexto neutral: sesgo -0.19, riesgo de evento 0.00"
  ],
  "upcoming": [],
  "recent": [
   {
-   "id": "news-bitcoin-price-today-btc-falls-3-6-as-us-wholesale-2026-10-15",
+   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
    "date": "2026-10-15",
-   "title_es": "Bitcoin price today : BTC falls 3 . 6 % as US wholesale inflation jumps 1 . 3 % in September",
+   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.102
+   "aporte": -0.107
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -29,7 +29,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.092
+   "aporte": -0.091
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -80,23 +80,8 @@
    "aporte": 0.028
   }
  ],
- "alerts": [
-  {
-   "id": "P2PK_FLOOD-bloque-971472",
-   "type": "P2PK_FLOOD",
-   "severity": "media",
-   "txid": "bloque-971472",
-   "block_height": 971472,
-   "block_time_utc": "2026-10-14T22:09:56Z",
-   "detected_utc": "2026-10-14T22:35:49Z",
-   "btc_moved": 0.0,
-   "n_inputs": 40,
-   "detail_es": "Bloque 971472 con más de 40 gastos P2PK: posible movimiento masivo de monedas antiguas (no se fecharon todos).",
-   "url": "https://mempool.space/tx/bloque-971472",
-   "action": "CAUTION"
-  }
- ],
- "cause": "onchain",
+ "alerts": [],
+ "cause": "none",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",

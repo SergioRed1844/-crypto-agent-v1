@@ -1,15 +1,15 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-15T21:44:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-15T22:43:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.19 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.19 · riesgo de evento 0.00 · tamaño ×1.0 · compras permitidas
 
-- Precaución: alerta on-chain media
+- Contexto neutral: sesgo -0.19, riesgo de evento 0.00
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Bitcoin price today : BTC falls 3 . 6 % as US wholesale inflation jumps 1 . 3 %  | 2026-10-15 | anti | -0.102 |
-| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.092 |
+| Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.107 |
+| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.091 |
 | The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.062 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.046 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.037 |
@@ -24,23 +24,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-15T21:44:29Z",
+ "inicio": "2026-10-15T22:43:22Z",
  "onchain": {
   "scanned": [
-   971621,
-   971626
+   971627,
+   971629
   ],
-  "calls": 145,
+  "calls": 72,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 11,
-  "eventos": 1,
-  "urgentes": 1,
+  "titulares": 53,
+  "eventos": 2,
+  "urgentes": 2,
   "metodo": "palabras-clave",
-  "agregados": 0
+  "agregados": 1
  },
  "macro_fuentes_ok": 2
 }

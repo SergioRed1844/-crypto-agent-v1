@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-15T21:44:29Z",
+ "updated_utc": "2026-10-15T22:43:22Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -1481,6 +1481,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-15T17:45:00Z"
+  },
+  {
+   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
+   "date": "2026-10-15",
+   "category": "MACRO_DATA",
+   "subcategory": "CPI",
+   "country": "GLOBAL",
+   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.ibtimes.com/producer-price-inflation-was-much-hotter-expected-stocks-still-climbed-3808644",
+   "source_title": "ibtimes.com",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "20:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-15T20:45:00Z"
   }
  ]
 }
