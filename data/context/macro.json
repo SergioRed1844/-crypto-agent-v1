@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T17:52:06Z",
+ "generated_utc": "2026-10-15T18:50:41Z",
  "fear_greed": {
   "value": 53,
   "label": "Neutral",
@@ -7,7 +7,7 @@
   "avg_30d": 66.8
  },
  "stablecoins": {
-  "total_usd": 305527291459,
+  "total_usd": 305507145000,
   "chg_7d_pct": -0.59,
   "chg_30d_pct": 0.6
  },
@@ -18,10 +18,10 @@
   "br-presidential-runoff-2026": {
    "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "outcomes": {
-    "Yes": 0.235,
-    "No": 0.765
+    "Yes": 0.225,
+    "No": 0.775
    },
-   "volume": 24389109.79166898,
+   "volume": 24402919.91450197,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,25 +30,25 @@
     "Yes": 0.085,
     "No": 0.915
    },
-   "volume": 7355807.524570999,
+   "volume": 7355807.524570998,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0005,
-    "No": 0.9995
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6951998.270871001,
+   "volume": 6969486.540871001,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0005,
-    "No": 0.9995
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6951998.270871001,
+   "volume": 6969486.540871001,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -66,7 +66,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891766.19410801,
+   "volume": 54891766.194108,
    "slug": "presidential-election-winner-2028"
   }
  },
