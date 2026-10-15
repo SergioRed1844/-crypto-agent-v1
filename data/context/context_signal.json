@@ -1,20 +1,28 @@
 {
- "generated_utc": "2026-10-15T10:54:38Z",
+ "generated_utc": "2026-10-15T10:58:54Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": 0.0,
+ "bias": -0.043,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 50,
+ "confidence": 51,
  "reasons": [
   "Precaución: alerta on-chain media"
  ],
  "upcoming": [],
  "recent": [
+  {
+   "id": "news-ubs-extends-fed-tightening-cycle-forecast-with-mar-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.066
+  },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
    "date": "2026-09-15",
@@ -70,14 +78,6 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.01
-  },
-  {
-   "id": "news-bitget-reveals-new-details-of-388m-crypto-hack-2026-09-28",
-   "date": "2026-09-28",
-   "title_es": "Bitget Reveals New Details of $388M Crypto Hack",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.009
   }
  ],
  "alerts": [

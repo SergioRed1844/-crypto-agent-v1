@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-15T10:54:38Z",
+ "updated_utc": "2026-10-15T10:58:54Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -683,6 +683,27 @@
    "origin": "palabras-clave/GDELT",
    "date_precision": "day",
    "utc": "2026-10-10T12:00:00Z"
+  },
+  {
+   "id": "news-ubs-extends-fed-tightening-cycle-forecast-with-mar-2026-10-15",
+   "date": "2026-10-15",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.aol.com/articles/ubs-extends-fed-tightening-cycle-092129000.html",
+   "source_title": "aol.com",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-15T10:00:00Z"
   }
  ]
 }
