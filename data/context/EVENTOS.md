@@ -1,27 +1,27 @@
 # Estudio de eventos — ¿qué mueve a BTC?
 
-Generado 2026-10-12T04:44:24Z. Precios 2010-07-18 → 2026-10-11. 258 de 261 eventos históricos con precio suficiente.
+Generado 2026-10-15T17:13:40Z. Precios 2010-07-18 → 2026-10-14. 258 de 261 eventos históricos con precio suficiente.
 
 Referencia: un día cualquiera mueve |z3| = 0.751 en promedio (4000 días al azar). Un tipo de evento **pesa** si mueve más que eso (p_abs < 0.05) y tiene **dirección** si el signo de su postura pro/anti acierta más del 50% (p_dir < 0.05).
 
 | Categoría | n | \|z3\| | × azar | p | Efecto dir. | Acierto signo | p | Peso magnitud (exceso) | Peso dirección | Evidencia |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Regulación cripto | 59 | 1.237 | 1.65 | 0.001 | 0.559 | 0.556 | 0.2483 | 0.46 | 0.511 | magnitud fuerte, dirección débil |
-| Política monetaria | 42 | 0.962 | 1.28 | 0.07 | 0.27 | 0.562 | 0.2983 | 0.23 | 0.261 | magnitud moderada, dirección débil |
-| Crisis financiera / quiebras | 20 | 1.65 | 2.2 | 0.0015 | 1.443 | 0.789 | 0.0096 | 0.766 | 1.095 | magnitud fuerte, dirección fuerte |
-| Estructura cripto (halving, ETF, upgrades) | 19 | 1.076 | 1.43 | 0.0565 | 0.632 | 0.692 | 0.1334 | 0.285 | 0.444 | magnitud moderada, dirección débil |
-| Adopción institucional | 18 | 1.082 | 1.44 | 0.0645 | 0.663 | 0.611 | 0.2403 | 0.35 | 0.536 | magnitud moderada, dirección débil |
-| Oferta cripto (Mt. Gox, gobiernos, unlocks) | 15 | 1.175 | 1.57 | 0.045 | 0.161 | 0.7 | 0.1719 | 0.409 | 0.201 | magnitud fuerte, dirección débil |
-| Comercio / aranceles | 13 | 0.635 | 0.85 | 0.6637 | 0.57 | 0.692 | 0.1334 | 0.107 | 0.463 | magnitud débil, dirección débil |
-| Hackeo / seguridad | 13 | 1.33 | 1.77 | 0.0235 | 0.759 | 0.769 | 0.0461 | 0.436 | 0.527 | magnitud fuerte, dirección fuerte |
-| Elección | 12 | 1.149 | 1.53 | 0.062 | 1.681 | 0.75 | 0.3125 | 0.371 | 0.702 | magnitud moderada, dirección débil |
-| Geopolítica | 12 | 0.973 | 1.3 | 0.1559 | -0.154 | 0.364 | 0.8867 | 0.295 | 0.021 | magnitud débil, dirección débil |
-| Cambio de gobierno | 9 | 0.852 | 1.13 | 0.3148 | 0.955 | 1.0 | 0.0625 | 0.174 | 0.437 | magnitud débil, dirección débil |
-| Ballenas on-chain / era Satoshi | 8 | 0.452 | 0.6 | 0.8871 | — | — | 1.0 | 0.0 | 0.188 | magnitud débil, dirección sin datos |
-| Fiscal / deuda | 6 | 2.421 | 3.22 | 0.0055 | 0.852 | 0.5 | 0.6875 | 0.84 | 0.386 | magnitud moderada, dirección débil |
+| Política monetaria | 42 | 0.962 | 1.28 | 0.0555 | 0.27 | 0.562 | 0.2983 | 0.23 | 0.261 | magnitud moderada, dirección débil |
+| Crisis financiera / quiebras | 20 | 1.65 | 2.2 | 0.001 | 1.443 | 0.789 | 0.0096 | 0.766 | 1.095 | magnitud fuerte, dirección fuerte |
+| Estructura cripto (halving, ETF, upgrades) | 19 | 1.076 | 1.43 | 0.056 | 0.632 | 0.692 | 0.1334 | 0.285 | 0.444 | magnitud moderada, dirección débil |
+| Adopción institucional | 18 | 1.082 | 1.44 | 0.0615 | 0.663 | 0.611 | 0.2403 | 0.35 | 0.536 | magnitud moderada, dirección débil |
+| Oferta cripto (Mt. Gox, gobiernos, unlocks) | 15 | 1.175 | 1.57 | 0.047 | 0.161 | 0.7 | 0.1719 | 0.409 | 0.201 | magnitud fuerte, dirección débil |
+| Comercio / aranceles | 13 | 0.635 | 0.85 | 0.6592 | 0.57 | 0.692 | 0.1334 | 0.107 | 0.463 | magnitud débil, dirección débil |
+| Hackeo / seguridad | 13 | 1.33 | 1.77 | 0.0215 | 0.759 | 0.769 | 0.0461 | 0.436 | 0.527 | magnitud fuerte, dirección fuerte |
+| Elección | 12 | 1.149 | 1.53 | 0.054 | 1.681 | 0.75 | 0.3125 | 0.371 | 0.702 | magnitud moderada, dirección débil |
+| Geopolítica | 12 | 0.973 | 1.3 | 0.1649 | -0.154 | 0.364 | 0.8867 | 0.295 | 0.021 | magnitud débil, dirección débil |
+| Cambio de gobierno | 9 | 0.852 | 1.14 | 0.3053 | 0.955 | 1.0 | 0.0625 | 0.174 | 0.437 | magnitud débil, dirección débil |
+| Ballenas on-chain / era Satoshi | 8 | 0.452 | 0.6 | 0.8906 | — | — | 1.0 | 0.0 | 0.188 | magnitud débil, dirección sin datos |
+| Fiscal / deuda | 6 | 2.421 | 3.23 | 0.0045 | 0.852 | 0.5 | 0.6875 | 0.84 | 0.386 | magnitud moderada, dirección débil |
 | Dato macro | 5 | 1.201 | 1.6 | 0.1089 | 1.201 | 1.0 | 0.0312 | 0.309 | 0.56 | magnitud débil, dirección moderada |
-| Pandemia / salud | 4 | 2.042 | 2.72 | 0.0135 | 2.671 | 1.0 | 0.125 | 0.639 | 0.885 | magnitud débil, dirección débil |
-| Regulación tecnología / IA | 3 | 0.809 | 1.08 | 0.3653 | -0.27 | 0.667 | 0.5 | 0.258 | 0.091 | magnitud débil, dirección débil |
+| Pandemia / salud | 4 | 2.042 | 2.72 | 0.013 | 2.671 | 1.0 | 0.125 | 0.639 | 0.885 | magnitud débil, dirección débil |
+| Regulación tecnología / IA | 3 | 0.809 | 1.08 | 0.3373 | -0.27 | 0.667 | 0.5 | 0.258 | 0.091 | magnitud débil, dirección débil |
 | Patentes / licencias | 0 | — | — | 1.0 | — | — | 1.0 | 0.0 | 0.03 | magnitud sin datos, dirección sin datos |
 | Vencimiento de derivados | 0 | — | — | 1.0 | — | — | 1.0 | 0.1 | 0.08 | magnitud sin datos, dirección sin datos |
 

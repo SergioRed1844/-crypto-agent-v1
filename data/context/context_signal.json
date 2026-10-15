@@ -1,20 +1,28 @@
 {
- "generated_utc": "2026-10-15T16:49:04Z",
+ "generated_utc": "2026-10-15T17:03:45Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.062,
+ "bias": -0.129,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 52,
+ "confidence": 55,
  "reasons": [
   "Precaución: alerta on-chain media"
  ],
  "upcoming": [],
  "recent": [
+  {
+   "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
+   "category": "TRADE",
+   "stance": "anti",
+   "aporte": -0.096
+  },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
    "date": "2026-10-15",
@@ -48,12 +56,12 @@
    "aporte": 0.033
   },
   {
-   "id": "news-report-shines-light-on-how-much-iran-war-is-costin-2026-10-15",
+   "id": "news-1-palestinian-killed-in-israeli-airstrike-on-gaza-2026-10-15",
    "date": "2026-10-15",
-   "title_es": "Report shines light on how much Iran War is costing American households",
+   "title_es": "1 Palestinian killed in Israeli airstrike on Gaza - Xinhua",
    "category": "GEOPOLITICAL",
    "stance": "anti",
-   "aporte": -0.029
+   "aporte": -0.03
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
@@ -64,20 +72,12 @@
    "aporte": 0.028
   },
   {
-   "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "Cryptohack Roundup : $387M Bitget Hack",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.013
-  },
-  {
-   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
-   "date": "2026-10-10",
-   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "id": "news-ukraine-braces-for-hardest-winter-yet-as-trump-ene-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Ukraine braces for hardest winter yet as Trump energy ceasefire unravels – The Irish Times",
    "category": "GEOPOLITICAL",
-   "stance": "anti",
-   "aporte": -0.013
+   "stance": "pro",
+   "aporte": 0.015
   }
  ],
  "alerts": [

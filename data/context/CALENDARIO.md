@@ -1,6 +1,6 @@
 # Calendario de contexto — 3 años
 
-Generado 2026-10-11 22:33 (Monterrey). 343 eventos a futuro (confirmado 223, esperado 42, especulativo 8, estimado 70). Horas en Monterrey; 'mes' = fecha aún no publicada (estimado por regla).
+Generado 2026-10-15 11:03 (Monterrey). 344 eventos a futuro (confirmado 222, esperado 42, especulativo 8, estimado 72). Horas en Monterrey; 'mes' = fecha aún no publicada (estimado por regla).
 
 Importancia: ★ 1 (mínimo) … ★★★★★ 5 (crítico). Los pesos los recalibra el estudio de eventos (`weights.json`); la importancia aquí es la a priori de la investigación.
 
@@ -8,7 +8,6 @@ Importancia: ★ 1 (mínimo) … ★★★★★ 5 (crítico). Los pesos los rec
 
 | Fecha (MTY) | Evento | Categoría | País | Estado | ★ |
 |---|---|---|---|---|---|
-| 2026-10-14 06:30 | [IPC/CPI EE.UU. (sep-2026)](https://www.bls.gov/schedule/2026/10_sched.htm) | Dato macro | US | confirmado | ★★★★ |
 | 2026-10-28 12:00 | [Decisión FOMC (27-28 oct); conferencia de Warsh 14:30](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) | Política monetaria | US | confirmado | ★★★★ |
 | 2026-10-31 | [Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)](https://www.mtgox.com/img/pdf/20251027_1cc36334-e8b2-4fe4-8135-97d9a149e4f7_announcement_en.pdf) | Oferta cripto (Mt. Gox, gobiernos, unlocks) | JP | confirmado | ★★★★ |
 | 2026-11-03 | [EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas)](https://en.wikipedia.org/wiki/2026_United_States_elections) | Elección | US | confirmado | ★★★★ |
@@ -33,12 +32,12 @@ Importancia: ★ 1 (mínimo) … ★★★★★ 5 (crítico). Los pesos los rec
 | 2027-05-07 06:30 | [Empleo EE.UU./NFP (abr-2027)](https://www.bls.gov/schedule/news_release/empsit.htm) | Dato macro | US | confirmado | ★★★★ |
 | 2027-05-12 06:30 | [IPC/CPI EE.UU. (abr-2027)](https://www.bls.gov/schedule/news_release/cpi.htm) | Dato macro | US | confirmado | ★★★★ |
 | 2027-06-04 06:30 | [Empleo EE.UU./NFP (may-2027)](https://www.bls.gov/schedule/news_release/empsit.htm) | Dato macro | US | confirmado | ★★★★ |
+| 2027-06-09 12:00 | [Decisión FOMC (8-9 jun) + SEP/dot plot; conferencia de Warsh 14:30](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) | Política monetaria | US | confirmado | ★★★★★ |
 
 ## 2026-10
 
 | Fecha (MTY) | Evento | Categoría | País | Estado | ★ | Por qué importa |
 |---|---|---|---|---|---|---|
-| 2026-10-14 06:30 | [IPC/CPI EE.UU. (sep-2026)](https://www.bls.gov/schedule/2026/10_sched.htm) | Dato macro | US | confirmado | ★★★★ | La inflación vs. consenso reprecia de inmediato la probabilidad de recortes de la Fed; sorpresas de 0.1 pp suelen mover BTC varios puntos. |
 | 2026-10-19 | [GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago-2026) sobre oferta/venta de stablecoins con nexo EE.UU. y emisores extranjeros](https://www.pymnts.com/legal/2026/occ-races-the-clock-to-finish-genius-act-stablecoin-rules/) | Regulación cripto | US | confirmado | ★★ | Define si emisores extranjeros (p. ej. Tether) pueden seguir vendiéndose en EE.UU., lo que afecta la liquidez en stablecoins que alimenta al mercado cripto. |
 | 2026-10-20 | [SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; exenciones de oferta de $5M/$75M y safe harbor de 'investment contract')](https://www.orrick.com/en/Insights/2026/10/The-CLARITY-Act-Stalls-in-the-Senate-Whats-Next-for-Digital-Asset-Regulation) | Regulación cripto | US | confirmado | ★★ | Es el primer gran marco de la SEC para tokens; el tono de los comentarios y el calendario de adopción pesan en altcoins ante el fracaso de CLARITY en el Senado. |
 | 2026-10-25 | [Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula](https://agenciabrasil.ebc.com.br/politica/noticia/2026-09/flavio-e-lula-vao-disputar-2o-turno-para-presidente-da-republica) | Elección | BR | confirmado | ★★★ | Define rumbo fiscal 2027+ (techo de deuda vs continuidad de gasto); BRL/Ibovespa ya descuentan victoria de Flávio, un triunfo de Lula sería sorpresa de riesgo p |
@@ -561,3 +560,5 @@ Importancia: ★ 1 (mínimo) … ★★★★★ 5 (crítico). Los pesos los rec
 |---|---|---|---|---|---|---|
 | 2029-10-05 | [Empleo EE.UU. / NFP (estimado 2029-10-05)](https://www.bls.gov/schedule/news_release/empsit.htm) | Dato macro | US | estimado | ★★★ | Empleo vs consenso: cambia la probabilidad de recortes/alzas de la Fed. |
 | 2029-10 (mes) | [CPI EE.UU. (fecha por confirmar, 2029-10)](https://www.bls.gov/schedule/news_release/cpi.htm) | Dato macro | US | estimado | ★★★ | Inflación vs consenso: mueve la expectativa de tasas en minutos. |
+| 2029-10 (mes) | [FOMC (fecha por confirmar, 2029-10)](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm) | Política monetaria | US | estimado | ★★★★ | Decisión de tasas de la Fed: reprecia liquidez global; la Fed publica el calendario del año siguiente a mediados de año. |
+| 2029-10-15 | [Canadá: elección federal (fecha fija, salvo disolución anticipada)](https://en.wikipedia.org/wiki/Next_Canadian_federal_election) | Elección | CA | estimado | ★ | Carney gobierna con mayoría desde abril-2026; impacto acotado al CAD; marco de stablecoins en desarrollo. |

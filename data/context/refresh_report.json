@@ -1,14 +1,14 @@
 {
  "modo": "refresh",
- "inicio": "2026-10-12T04:33:52Z",
+ "inicio": "2026-10-15T17:03:45Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
-  "n_gdelt": 120,
-  "titulares": 61,
-  "eventos": 10,
+  "n_gdelt": 180,
+  "titulares": 129,
+  "eventos": 42,
   "metodo": "palabras-clave",
-  "agregados": 0,
+  "agregados": 33,
   "propuestas_de_noticias": 0
  },
  "consenso_semana": [
@@ -32,6 +32,14 @@
    "title": "ECB President Lagarde Speaks",
    "country": "EUR",
    "date": "2026-10-14T04:30:00-04:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": ""
+  },
+  {
+   "title": "EU Economic Summit",
+   "country": "EUR",
+   "date": "2026-10-14T06:15:00-04:00",
    "impact": "Medium",
    "forecast": "",
    "previous": ""
@@ -85,6 +93,14 @@
    "previous": ""
   },
   {
+   "title": "EU Economic Summit",
+   "country": "EUR",
+   "date": "2026-10-15T06:15:00-04:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": ""
+  },
+  {
    "title": "Core PPI m/m",
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
@@ -97,7 +113,7 @@
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
    "impact": "High",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "previous": "1.4%"
   },
   {
@@ -105,7 +121,7 @@
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
    "impact": "High",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "previous": "0.4%"
   },
   {
@@ -121,7 +137,7 @@
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
    "impact": "Medium",
-   "forecast": "26.5",
+   "forecast": "28.2",
    "previous": "37.8"
   },
   {
@@ -129,7 +145,7 @@
    "country": "USD",
    "date": "2026-10-15T08:30:00-04:00",
    "impact": "Medium",
-   "forecast": "195K",
+   "forecast": "199K",
    "previous": "197K"
   },
   {
@@ -162,13 +178,13 @@
   "agregadas": 0
  },
  "calendario": {
-  "events": 345,
-  "eventos_a_futuro": 343,
+  "events": 347,
+  "eventos_a_futuro": 344,
   "por_status": {
-   "confirmed": 223,
+   "confirmed": 222,
    "expected": 42,
    "speculative": 8,
-   "scheduled_estimate": 70
+   "scheduled_estimate": 72
   },
   "huecos": []
  },
@@ -182,10 +198,10 @@
  },
  "onchain": {
   "scanned": [
-   971041,
-   971043
+   971599,
+   971599
   ],
-  "calls": 56,
+  "calls": 36,
   "stopped": null,
   "nuevas": 0
  },

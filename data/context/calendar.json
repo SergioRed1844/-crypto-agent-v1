@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-12T04:33:52Z",
+ "generated_utc": "2026-10-15T17:03:45Z",
  "horizon_years": 3,
  "events": [
   {
@@ -6543,6 +6543,43 @@
    "source_title": "Estimado: BLS publica a mediados de mes",
    "origin": "regla",
    "utc": "2029-10-12T12:00:00Z"
+  },
+  {
+   "id": "fomc-estimado-2029-10",
+   "date": "2029-10-15",
+   "date_precision": "month",
+   "status": "scheduled_estimate",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "US",
+   "title_es": "FOMC (fecha por confirmar, 2029-10)",
+   "why_es": "Decisión de tasas de la Fed: reprecia liquidez global; la Fed publica el calendario del año siguiente a mediados de año.",
+   "crypto_stance": "uncertain",
+   "prior_tier": 4,
+   "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+   "source_title": "Estimado por patrón de 8 reuniones/año",
+   "origin": "regla",
+   "utc": "2029-10-15T12:00:00Z"
+  },
+  {
+   "id": "ca-federal-2029",
+   "date": "2029-10-15",
+   "time_local": null,
+   "tz": null,
+   "date_precision": "day",
+   "status": "scheduled_estimate",
+   "category": "ELECTION",
+   "subcategory": "LEGISLATIVE",
+   "country": "CA",
+   "gdp_share_pct": 1.985,
+   "title_es": "Canadá: elección federal (fecha fija, salvo disolución anticipada)",
+   "why_es": "Carney gobierna con mayoría desde abril-2026; impacto acotado al CAD; marco de stablecoins en desarrollo.",
+   "crypto_stance": "neutral",
+   "prior_tier": 1,
+   "source_url": "https://en.wikipedia.org/wiki/Next_Canadian_federal_election",
+   "source_title": "Next Canadian federal election - Wikipedia",
+   "origin": "investigacion-2026-10-11",
+   "utc": "2029-10-15T12:00:00Z"
   }
  ]
 }
