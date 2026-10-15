@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-15T14:50:53Z",
+ "updated_utc": "2026-10-15T14:54:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -725,6 +725,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-15T13:00:00Z"
+  },
+  {
+   "id": "news-greenback-eases-from-18-month-high-as-us-treasury-2026-10-15",
+   "date": "2026-10-15",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "Greenback eases from 18 - month high as US Treasury yields fall ; Fed hike bets ease",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/greenback-eases-18-month-high-us-treasury-yields-fall-fed-hike-bets-ease",
+   "source_title": "businesstimes.com.sg",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "14:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-15T14:00:00Z"
+  },
+  {
+   "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
+   "date": "2026-10-15",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.ibtimes.com/ppi-was-much-higher-expected-odds-fed-rate-hike-edged-down-anyway-3808612",
+   "source_title": "ibtimes.com",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "14:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-15T14:15:00Z"
   }
  ]
 }

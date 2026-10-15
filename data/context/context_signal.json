@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T14:50:53Z",
+ "generated_utc": "2026-10-15T14:54:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.061,
+ "bias": -0.063,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -16,12 +16,12 @@
  "upcoming": [],
  "recent": [
   {
-   "id": "news-ubs-extends-fed-tightening-cycle-forecast-with-mar-2026-10-15",
+   "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
    "date": "2026-10-15",
-   "title_es": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise",
+   "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.064
+   "aporte": -0.066
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
