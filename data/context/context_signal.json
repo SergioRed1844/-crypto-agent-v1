@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T14:54:52Z",
+ "generated_utc": "2026-10-15T15:50:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.063,
+ "bias": -0.062,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.066
+   "aporte": -0.065
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -61,21 +61,21 @@
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.029
-  },
-  {
-   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
-   "date": "2026-10-10",
-   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
-   "category": "GEOPOLITICAL",
-   "stance": "anti",
-   "aporte": -0.014
+   "aporte": 0.028
   },
   {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
    "date": "2026-10-01",
    "title_es": "Cryptohack Roundup : $387M Bitget Hack",
    "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.013
+  },
+  {
+   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
+   "date": "2026-10-10",
+   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.013
   }
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.6
+  "stablecoins_30d_pct": 0.59
  }
 }
