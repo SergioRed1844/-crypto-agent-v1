@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T22:43:22Z",
+ "generated_utc": "2026-10-15T22:47:01Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 1.0,
- "bias": -0.192,
+ "bias": -0.189,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.107
+   "aporte": -0.106
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",

@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-15T22:43:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-15T22:47:01Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.19 · riesgo de evento 0.00 · tamaño ×1.0 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-15T22:43:22Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.107 |
+| Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.106 |
 | Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.091 |
 | The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.062 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.046 |
@@ -24,23 +24,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-15T22:43:22Z",
+ "inicio": "2026-10-15T22:47:01Z",
  "onchain": {
-  "scanned": [
-   971627,
-   971629
-  ],
-  "calls": 72,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 53,
+  "titulares": 40,
   "eventos": 2,
   "urgentes": 2,
   "metodo": "palabras-clave",
-  "agregados": 1
+  "agregados": 0
  },
  "macro_fuentes_ok": 2
 }
