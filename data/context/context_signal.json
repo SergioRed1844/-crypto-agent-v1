@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-14T23:09:59Z",
+ "generated_utc": "2026-10-15T00:05:03Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.015,
+ "bias": -0.001,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -37,7 +37,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.035
+   "aporte": 0.034
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
@@ -46,14 +46,6 @@
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
    "aporte": 0.03
-  },
-  {
-   "id": "bitget-hot-wallet-hack-2026-09-24",
-   "date": "2026-09-24",
-   "title_es": "Hackeo a hot wallet de Bitget (~$352M); suspende retiros",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.018
   },
   {
    "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
@@ -78,6 +70,14 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.011
+  },
+  {
+   "id": "news-bitget-reveals-new-details-of-388m-crypto-hack-2026-09-28",
+   "date": "2026-09-28",
+   "title_es": "Bitget Reveals New Details of $388M Crypto Hack",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.009
   }
  ],
  "alerts": [
@@ -104,9 +104,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 62
+   "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.86
+  "stablecoins_30d_pct": 0.85
  }
 }

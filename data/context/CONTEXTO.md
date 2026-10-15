@@ -1,8 +1,8 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-14T23:09:59Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-15T00:05:03Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.01 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.00 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: alerta on-chain media
 
@@ -10,12 +10,12 @@ Actualizado 2026-10-14T23:09:59Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.049 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.040 |
-| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.035 |
+| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.034 |
 | Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows | 2026-09-29 | pro | +0.030 |
-| Hackeo a hot wallet de Bitget (~$352M); suspende retiros | 2026-09-24 | anti | -0.018 |
 | A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later | 2026-10-10 | anti | -0.015 |
 | Cryptohack Roundup : $387M Bitget Hack | 2026-10-01 | anti | -0.014 |
 | Crypto Hack Spurs $463 Million in Customer Outflows at Bitget | 2026-09-29 | anti | -0.011 |
+| Bitget Reveals New Details of $388M Crypto Hack | 2026-09-28 | anti | -0.009 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -24,10 +24,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-14T23:09:59Z",
+ "inicio": "2026-10-15T00:05:03Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   971479,
+   971481
+  ],
+  "calls": 63,
   "stopped": null,
   "nuevas": 0
  },
