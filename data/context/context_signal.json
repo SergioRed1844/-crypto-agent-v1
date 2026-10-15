@@ -1,15 +1,15 @@
 {
- "generated_utc": "2026-10-15T12:52:49Z",
+ "generated_utc": "2026-10-15T13:51:51Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.043,
+ "bias": -0.062,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 51,
+ "confidence": 52,
  "reasons": [
   "Precaución: alerta on-chain media"
  ],
@@ -21,7 +21,7 @@
    "title_es": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.065
+   "aporte": -0.064
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -48,6 +48,14 @@
    "aporte": 0.033
   },
   {
+   "id": "news-report-shines-light-on-how-much-iran-war-is-costin-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Report shines light on how much Iran War is costing American households",
+   "category": "GEOPOLITICAL",
+   "stance": "anti",
+   "aporte": -0.03
+  },
+  {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
    "date": "2026-09-29",
    "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
@@ -70,14 +78,6 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.013
-  },
-  {
-   "id": "news-crypto-hack-spurs-463-million-in-customer-outflows-2026-09-29",
-   "date": "2026-09-29",
-   "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.01
   }
  ],
  "alerts": [

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-15T12:52:49Z",
+ "updated_utc": "2026-10-15T13:51:51Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -704,6 +704,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-15T10:00:00Z"
+  },
+  {
+   "id": "news-report-shines-light-on-how-much-iran-war-is-costin-2026-10-15",
+   "date": "2026-10-15",
+   "category": "GEOPOLITICAL",
+   "subcategory": "CONFLICT",
+   "country": "GLOBAL",
+   "title_es": "Report shines light on how much Iran War is costing American households",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.aol.com/articles/report-shines-light-much-iran-114025000.html",
+   "source_title": "aol.com",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "13:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-15T13:00:00Z"
   }
  ]
 }
