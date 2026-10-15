@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-15T11:53:44Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-15T12:03:08Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.04 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -24,21 +24,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-15T11:53:44Z",
+ "inicio": "2026-10-15T12:03:08Z",
  "onchain": {
   "scanned": [
-   971558,
-   971565
+   971566,
+   971567
   ],
-  "calls": 74,
+  "calls": 29,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 21,
+  "eventos": 1,
+  "urgentes": 1,
   "metodo": "palabras-clave",
   "agregados": 0
  },
