@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T22:47:01Z",
+ "generated_utc": "2026-10-15T23:15:32Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 1.0,
- "bias": -0.189,
+ "bias": -0.188,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.106
+   "aporte": -0.105
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -37,7 +37,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.062
+   "aporte": -0.061
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -45,7 +45,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.046
+   "aporte": -0.045
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
