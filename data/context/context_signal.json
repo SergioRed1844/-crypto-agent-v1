@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T10:58:54Z",
+ "generated_utc": "2026-10-15T11:53:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "title_es": "UBS extends Fed tightening cycle forecast with March rate hike after inflation surprise",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.066
+   "aporte": -0.065
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
