@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T04:01:17Z",
+ "generated_utc": "2026-10-15T05:00:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.001,
+ "bias": -0.0,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -29,7 +29,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.04
+   "aporte": 0.039
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
@@ -69,7 +69,7 @@
    "title_es": "Crypto Hack Spurs $463 Million in Customer Outflows at Bitget",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.011
+   "aporte": -0.01
   },
   {
    "id": "news-bitget-reveals-new-details-of-388m-crypto-hack-2026-09-28",
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.61
+  "stablecoins_30d_pct": 0.6
  }
 }
