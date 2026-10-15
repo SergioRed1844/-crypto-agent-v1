@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T01:04:05Z",
+ "generated_utc": "2026-10-15T02:03:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.049
+   "aporte": -0.048
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.85
+  "stablecoins_30d_pct": 0.61
  }
 }
