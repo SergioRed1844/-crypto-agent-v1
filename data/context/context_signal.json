@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-15T13:51:51Z",
+ "generated_utc": "2026-10-15T14:50:53Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.062,
+ "bias": -0.061,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.59
+  "stablecoins_30d_pct": 0.6
  }
 }
