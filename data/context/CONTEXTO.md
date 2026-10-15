@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-15T17:19:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-15T17:48:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.13 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-15T17:19:30Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.096 |
+| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.095 |
 | The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.064 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.046 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.038 |
@@ -24,19 +24,19 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-15T17:19:30Z",
+ "inicio": "2026-10-15T17:48:07Z",
  "onchain": {
   "scanned": [
-   971600,
-   971600
+   971601,
+   971605
   ],
-  "calls": 46,
+  "calls": 47,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 20,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "palabras-clave",
