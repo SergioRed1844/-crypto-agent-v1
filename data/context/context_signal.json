@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T15:50:01Z",
+ "generated_utc": "2026-10-15T16:49:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -29,7 +29,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.047
+   "aporte": -0.046
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -53,7 +53,7 @@
    "title_es": "Report shines light on how much Iran War is costing American households",
    "category": "GEOPOLITICAL",
    "stance": "anti",
-   "aporte": -0.03
+   "aporte": -0.029
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
