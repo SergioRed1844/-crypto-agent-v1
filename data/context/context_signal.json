@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T08:56:36Z",
+ "generated_utc": "2026-10-15T09:55:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.034
+   "aporte": 0.033
   },
   {
    "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.6
+  "stablecoins_30d_pct": 0.59
  }
 }
