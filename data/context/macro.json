@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T02:06:57Z",
+ "generated_utc": "2026-10-15T03:05:45Z",
  "fear_greed": {
   "value": 53,
   "label": "Neutral",
@@ -7,7 +7,7 @@
   "avg_30d": 66.8
  },
  "stablecoins": {
-  "total_usd": 305555579051,
+  "total_usd": 305548815746,
   "chg_7d_pct": -0.58,
   "chg_30d_pct": 0.61
  },
@@ -18,10 +18,10 @@
   "br-presidential-runoff-2026": {
    "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "outcomes": {
-    "Yes": 0.155,
-    "No": 0.845
+    "Yes": 0.165,
+    "No": 0.835
    },
-   "volume": 23211787.73330597,
+   "volume": 23229827.913748976,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,7 +30,7 @@
     "Yes": 0.085,
     "No": 0.915
    },
-   "volume": 7301826.895606998,
+   "volume": 7302491.562273997,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54439767.73432898,
+   "volume": 54439767.73432899,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
@@ -66,7 +66,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891765.18410802,
+   "volume": 54891765.18410805,
    "slug": "presidential-election-winner-2028"
   }
  },

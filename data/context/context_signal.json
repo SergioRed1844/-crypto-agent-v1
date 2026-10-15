@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T02:03:06Z",
+ "generated_utc": "2026-10-15T03:02:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -48,18 +48,18 @@
    "aporte": 0.03
   },
   {
-   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
-   "date": "2026-10-10",
-   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
-   "category": "GEOPOLITICAL",
-   "stance": "anti",
-   "aporte": -0.015
-  },
-  {
    "id": "news-cryptohack-roundup-387m-bitget-hack-2026-10-01",
    "date": "2026-10-01",
    "title_es": "Cryptohack Roundup : $387M Bitget Hack",
    "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.014
+  },
+  {
+   "id": "news-a-u-s-brokered-ceasefire-was-supposed-to-end-the-w-2026-10-10",
+   "date": "2026-10-10",
+   "title_es": "A U . S .- brokered ceasefire was supposed to end the war in Gaza . A year later , progress has stalled",
+   "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.014
   },
