@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-15T17:03:45Z",
+ "generated_utc": "2026-10-15T17:19:30Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -29,7 +29,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.065
+   "aporte": -0.064
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -107,6 +107,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.59
+  "stablecoins_30d_pct": 0.6
  }
 }
