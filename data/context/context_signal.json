@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T13:29:21Z",
+ "generated_utc": "2026-10-16T14:28:25Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.257,
- "event_risk": 0.04,
+ "bias": -0.254,
+ "event_risk": 0.042,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 60,
  "reasons": [
-  "Precaución: sesgo -0.26"
+  "Precaución: sesgo -0.25"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.04,
+   "riesgo": 0.042,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.092
+   "aporte": -0.091
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -44,7 +44,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.081
+   "aporte": -0.08
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -52,7 +52,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.078
+   "aporte": -0.077
   },
   {
    "id": "news-fed-warsh-sees-ai-boosting-productivity-but-gives-2026-10-16",
@@ -68,7 +68,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.055
+   "aporte": -0.054
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -76,7 +76,7 @@
    "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.044
+   "aporte": -0.043
   },
   {
    "id": "sec-innovation-exemption-2026-09-17",
@@ -107,6 +107,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.77
+  "stablecoins_30d_pct": 0.76
  }
 }

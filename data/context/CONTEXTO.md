@@ -1,23 +1,23 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-16T13:29:21Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-16T14:28:25Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.26 · riesgo de evento 0.04 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.25 · riesgo de evento 0.04 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.26
+- Precaución: sesgo -0.25
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.04 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.042 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman | 2026-10-16 | anti | -0.092 |
-| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.081 |
-| Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.078 |
+| China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman | 2026-10-16 | anti | -0.091 |
+| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.080 |
+| Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.077 |
 | Fed Warsh sees AI boosting productivity but gives no signal on next rate hike | 2026-10-16 | anti | -0.064 |
-| The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.055 |
-| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.044 |
+| The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.054 |
+| Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.043 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.036 |
 | Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.031 |
 
@@ -28,21 +28,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-16T13:29:21Z",
+ "inicio": "2026-10-16T14:28:25Z",
  "onchain": {
   "scanned": [
-   971714,
-   971714
+   971715,
+   971721
   ],
-  "calls": 16,
+  "calls": 166,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 80,
-  "eventos": 4,
-  "urgentes": 3,
+  "eventos": 3,
+  "urgentes": 2,
   "metodo": "palabras-clave",
   "agregados": 0
  },
