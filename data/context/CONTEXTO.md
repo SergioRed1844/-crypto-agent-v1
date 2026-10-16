@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-16T10:32:06Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-16T10:35:46Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.27 · riesgo de evento 0.04 · tamaño ×0.5 · compras permitidas
 
@@ -15,7 +15,7 @@ Actualizado 2026-10-16T10:32:06Z UTC. Se recalcula cada hora; el calendario y lo
 | China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman | 2026-10-16 | anti | -0.094 |
 | Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.083 |
 | Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.083 |
-| There a 35 % Chance That the Fed Hikes Rates at Least 4 Times by September 2027  | 2026-10-16 | anti | -0.066 |
+| Fed Warsh sees AI boosting productivity but gives no signal on next rate hike | 2026-10-16 | anti | -0.066 |
 | The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.056 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.044 |
 | SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.036 |
@@ -28,21 +28,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-16T10:32:06Z",
+ "inicio": "2026-10-16T10:35:46Z",
  "onchain": {
   "scanned": [
-   971692,
-   971697
+   971698,
+   971698
   ],
-  "calls": 57,
+  "calls": 20,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 40,
-  "eventos": 1,
-  "urgentes": 1,
+  "eventos": 2,
+  "urgentes": 2,
   "metodo": "palabras-clave",
   "agregados": 1
  },

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-16T10:32:06Z",
+ "updated_utc": "2026-10-16T10:35:46Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -1565,6 +1565,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-16T10:00:00Z"
+  },
+  {
+   "id": "news-fed-warsh-sees-ai-boosting-productivity-but-gives-2026-10-16",
+   "date": "2026-10-16",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "Fed Warsh sees AI boosting productivity but gives no signal on next rate hike",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.aol.co.uk/articles/fed-warsh-sees-ai-boosting-092755000.html",
+   "source_title": "aol.co.uk",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "10:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T10:15:00Z"
   }
  ]
 }
