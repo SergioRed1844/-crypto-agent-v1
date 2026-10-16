@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T04:37:50Z",
+ "generated_utc": "2026-10-16T05:36:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.236,
- "event_risk": 0.028,
+ "bias": -0.234,
+ "event_risk": 0.029,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
  "reasons": [
-  "Precaución: sesgo -0.24"
+  "Precaución: sesgo -0.23"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -31,14 +31,6 @@
  ],
  "recent": [
   {
-   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.094
-  },
-  {
    "id": "news-kansas-libertarian-drew-cranmer-criticizes-iran-wa-2026-10-16",
    "date": "2026-10-16",
    "title_es": "Kansas Libertarian Drew Cranmer criticizes Iran war , tariffs and rising costs ahead of midterms : President overstepped his bounds",
@@ -47,12 +39,20 @@
    "aporte": -0.094
   },
   {
+   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.092
+  },
+  {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
    "date": "2026-10-15",
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.087
+   "aporte": -0.086
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -60,7 +60,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.059
+   "aporte": -0.058
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -107,6 +107,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.74
+  "stablecoins_30d_pct": 0.75
  }
 }
