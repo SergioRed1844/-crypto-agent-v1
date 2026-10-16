@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T02:44:04Z",
+ "generated_utc": "2026-10-16T03:38:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.987,
- "bias": -0.181,
- "event_risk": 0.026,
+ "bias": -0.178,
+ "event_risk": 0.027,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.026,
+   "riesgo": 0.027,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.098
+   "aporte": -0.096
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -52,7 +52,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.06
+   "aporte": -0.059
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -79,20 +79,20 @@
    "aporte": 0.032
   },
   {
-   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
-   "date": "2026-09-29",
-   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.028
-  },
-  {
    "id": "news-1-palestinian-killed-in-israeli-airstrike-on-gaza-2026-10-15",
    "date": "2026-10-15",
    "title_es": "1 Palestinian killed in Israeli airstrike on Gaza - Xinhua",
    "category": "GEOPOLITICAL",
    "stance": "anti",
    "aporte": -0.028
+  },
+  {
+   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
+   "date": "2026-09-29",
+   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.027
   }
  ],
  "alerts": [],
@@ -107,6 +107,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.75
+  "stablecoins_30d_pct": 0.74
  }
 }
