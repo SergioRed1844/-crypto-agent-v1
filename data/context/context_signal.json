@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T18:28:59Z",
+ "generated_utc": "2026-10-16T19:23:51Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.381,
- "event_risk": 0.05,
+ "bias": -0.378,
+ "event_risk": 0.052,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.05,
+   "riesgo": 0.052,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.323,
+   "aporte": -0.317,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.308,
+   "aporte": -0.307,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.299,
+   "aporte": -0.297,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.276,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.255,
+   "aporte": 0.254,
    "fuente": "noticia"
   },
   {
@@ -90,16 +90,16 @@
    "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.235,
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
-   "id": "news-ethereum-fell-5-as-its-etf-comeback-lasted-one-day-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Ethereum cae 5% tras efímero rebote de sus ETF",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.143,
+   "id": "news-rate-hike-odds-tumble-after-warsh-does-not-address-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Probabilidades de alza de tasas caen tras silencio de Warsh sobre reunión FOMC",
+   "category": "MONETARY_POLICY",
+   "stance": "pro",
+   "aporte": 0.183,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.77
+  "stablecoins_30d_pct": 0.76
  }
 }
