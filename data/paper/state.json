@@ -1,0 +1,34 @@
+{
+ "started_utc": "2026-10-16T18:25:24Z",
+ "pairs": [
+  "BTCUSDT",
+  "ETHUSDT",
+  "SOLUSDT"
+ ],
+ "goal_trades": 30,
+ "min_days": 14,
+ "status": "corriendo",
+ "last_bar": {
+  "BTCUSDT": "2026-10-16 16:00:00+00:00",
+  "ETHUSDT": "2026-10-16 16:00:00+00:00",
+  "SOLUSDT": "2026-10-16 16:00:00+00:00"
+ },
+ "portfolios": {
+  "A": {
+   "positions": {},
+   "trades": [],
+   "streak": 0,
+   "pause_until": null
+  },
+  "B": {
+   "positions": {},
+   "trades": [],
+   "streak": 0,
+   "pause_until": null
+  }
+ },
+ "decisions": [],
+ "notified": [],
+ "runs": 1,
+ "updated_utc": "2026-10-16T18:25:24Z"
+}
