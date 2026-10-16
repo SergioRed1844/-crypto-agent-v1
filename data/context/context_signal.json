@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T09:33:06Z",
+ "generated_utc": "2026-10-16T10:32:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.226,
- "event_risk": 0.034,
+ "bias": -0.265,
+ "event_risk": 0.036,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 59,
+ "confidence": 60,
  "reasons": [
-  "Precaución: sesgo -0.23"
+  "Precaución: sesgo -0.26"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.034,
+   "riesgo": 0.036,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,15 +36,7 @@
    "title_es": "China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.095
-  },
-  {
-   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.085
+   "aporte": -0.094
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -53,6 +45,22 @@
    "category": "TRADE",
    "stance": "anti",
    "aporte": -0.083
+  },
+  {
+   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.083
+  },
+  {
+   "id": "news-there-a-35-chance-that-the-fed-hikes-rates-at-leas-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "There a 35 % Chance That the Fed Hikes Rates at Least 4 Times by September 2027 , Which Can Decimate the AI - Driven Bull Market",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.066
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -85,14 +93,6 @@
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
    "aporte": 0.031
-  },
-  {
-   "id": "news-measure-crypto-startup-funding-beyond-bitcoin-etf-2026-09-29",
-   "date": "2026-09-29",
-   "title_es": "Measure Crypto Startup Funding Beyond Bitcoin ETF Inflows",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.027
   }
  ],
  "alerts": [],

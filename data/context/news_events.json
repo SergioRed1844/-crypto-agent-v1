@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-16T09:33:06Z",
+ "updated_utc": "2026-10-16T10:32:06Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -1544,6 +1544,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-16T07:45:00Z"
+  },
+  {
+   "id": "news-there-a-35-chance-that-the-fed-hikes-rates-at-leas-2026-10-16",
+   "date": "2026-10-16",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "There a 35 % Chance That the Fed Hikes Rates at Least 4 Times by September 2027 , Which Can Decimate the AI - Driven Bull Market",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "https://www.aol.com/articles/theres-35-chance-fed-hikes-082602000.html",
+   "source_title": "aol.com",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T10:00:00Z"
   }
  ]
 }
