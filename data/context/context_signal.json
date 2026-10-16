@@ -1,19 +1,34 @@
 {
- "generated_utc": "2026-10-15T23:42:34Z",
+ "generated_utc": "2026-10-16T00:41:35Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 1.0,
- "bias": -0.187,
- "event_risk": 0.0,
+ "size_mult": 0.988,
+ "bias": -0.182,
+ "event_risk": 0.024,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.19, riesgo de evento 0.00"
+  "Contexto neutral: sesgo -0.18, riesgo de evento 0.02"
  ],
- "upcoming": [],
+ "upcoming": [
+  {
+   "id": "us-genius-treasury-nprm-comments-2026-10-19",
+   "utc": "2026-10-19T12:00:00Z",
+   "title_es": "GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago-2026) sobre oferta/venta de stablecoins con nexo EE.UU. y emisores extranjeros",
+   "category": "CRYPTO_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.28,
+   "riesgo": 0.024,
+   "ventana": [
+    "2026-10-18T12:00:00Z",
+    "2026-10-20T06:00:00Z"
+   ],
+   "en_ventana": false
+  }
+ ],
  "recent": [
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -21,7 +36,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.104
+   "aporte": -0.102
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -29,7 +44,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.091
+   "aporte": -0.09
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -89,7 +104,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 53
+   "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": 0.6
