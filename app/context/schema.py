@@ -38,6 +38,7 @@ STATUSES = ("confirmed", "scheduled_estimate", "expected", "speculative", "happe
 P_OCCUR = {"confirmed": 1.0, "happened": 1.0, "scheduled_estimate": 0.8, "expected": 0.7,
            "proposed": 0.5, "speculative": 0.35}
 PRECISIONS = ("exact", "day", "month", "quarter", "year")
+COUNTRY_ALIAS = {"UK": "GB", "USA": "US", "EUROZONE": "EU", "EZ": "EU", "WORLD": "GLOBAL", "GL": "GLOBAL"}
 TIER_LABEL = {1: "mínimo", 2: "bajo", 3: "medio", 4: "alto", 5: "crítico"}
 
 
@@ -84,7 +85,7 @@ def normalize(e: dict, default_status: str = "confirmed") -> dict:
     if e["category"] not in CATEGORIES:
         raise ValueError(f"categoría desconocida {e['category']} en {e.get('id')}")
     e.setdefault("country", "GLOBAL")
-    e["country"] = str(e["country"]).upper()
+    e["country"] = COUNTRY_ALIAS.get(str(e["country"]).upper(), str(e["country"]).upper())
     e.setdefault("status", default_status)
     if e["status"] not in STATUSES:
         raise ValueError(f"status inválido {e['status']} en {e.get('id')}")

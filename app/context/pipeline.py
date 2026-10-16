@@ -96,9 +96,13 @@ def _merge_news_events(new: list[dict], now: datetime) -> int:
 def _merge_proposals(props: list[dict], now: datetime) -> int:
     cur = {e["id"]: e for e in (read_json("sources/calendar_proposed.json", []) or [])}
     n0 = len(cur)
+    known = event_calendar.load_curated()
     for p in props:
         if p.get("status") == "proposed":
             cur.setdefault(p["id"], p)
+    # lo que ya está en el calendario curado (misma categoría, país y fecha ±2 días) no se guarda como propuesta
+    cur = {k: normalize(e, "proposed") for k, e in cur.items()}
+    cur = {k: e for k, e in cur.items() if not event_calendar.is_dup(e, known)}
     keep = [e for e in cur.values() if e["date"] >= now.date().isoformat()]
     write_json("sources/calendar_proposed.json", sorted(keep, key=lambda e: e["date"])[:400])
     return len(keep) - n0

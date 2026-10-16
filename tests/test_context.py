@@ -128,6 +128,19 @@ late = [ev(id="h", date="2026-10-12", time_local="01:00", tz="UTC", category="HA
            status="happened", prior_tier=5)]
 ok(engine.compute(datetime(2026, 10, 12, 2, 0, tzinfo=timezone.utc), [], late, [], {}, {}, PRI, {}, 1)["bias"] < 0,
    "hackeo de la 01:00 UTC cuenta desde la 01:00 (no espera al mediodía)")
+many = [ev(id=f"n{i}", date="2026-10-11", category=c, crypto_stance="anti", status="happened", prior_tier=5,
+          origin="gemini/GDELT", confidence=0.9)
+        for i, c in enumerate(("HACK_SECURITY", "CRYPTO_REGULATION", "TRADE", "GEOPOLITICAL", "MACRO_DATA",
+                               "INSTITUTIONAL_ADOPTION", "CRYPTO_STRUCTURAL", "FISCAL"))]
+nm = engine.compute(NOW, [], many, [], {}, {}, PRI, {}, 1)
+ok(nm["state"] == "CAUTION" and not nm["veto_entries"] and nm["bias"] > -0.5,
+   f"8 noticias malas fuertes (no curadas) → máximo CAUTION, nunca veto por sí solas (sesgo {nm['bias']})")
+st5 = [ev(id=f"e{i}", date=f"2026-10-{11 - i:02d}", category="HACK_SECURITY", crypto_stance="anti", status="happened",
+          prior_tier=4) for i in range(4)]
+c1 = engine.compute(NOW, [], st5[:1], [], {}, {}, PRI, {}, 1)["bias"]
+c4 = engine.compute(NOW, [], st5, [], {}, {}, PRI, {}, 1)["bias"]
+ok(c4 < c1 and c4 > 2.2 * c1, f"4 hackeos en días distintos suman con rendimientos decrecientes ({c1} → {c4})")
+ok(normalize({**dup[0], "country": "UK"})["country"] == "GB", "país UK → GB (dedup con el calendario curado)")
 import logging  # noqa: E402
 logging.basicConfig(level=logging.INFO)
 ok(logging.getLogger("httpx").getEffectiveLevel() >= logging.WARNING,

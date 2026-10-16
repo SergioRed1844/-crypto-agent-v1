@@ -125,11 +125,26 @@ def compute(now: datetime | None = None, calendar: list | None = None, recent: l
         k = (e["category"], e["utc"][:10], e.get("crypto_stance"))
         if k not in groups or abs(c) > abs(groups[k][0]):
             groups[k] = (c, e)
-    total = 0.0
-    for c, e in groups.values():
-        total += c
-        recent_out.append({"id": e["id"], "date": e["utc"][:10], "title_es": e["title_es"], "category": e["category"],
-                           "stance": e.get("crypto_stance"), "aporte": round(c, 3)})
+    # Rendimientos decrecientes por (categoría, postura): el 2º evento del mismo tipo pesa la mitad, el 3º un cuarto…
+    # y lo que viene de NOTICIAS (no curado) tiene tope: solo puede llevar a CAUTION, nunca a un veto por sí solo.
+    per = {}
+    for (cat, _day, st), (c, e) in groups.items():
+        news = str(e.get("origin", "")).startswith(("gemini/", "palabras-clave/")) or str(e.get("id", "")).startswith("news-")
+        per.setdefault((cat, st, news), []).append((c, e))
+    cur_total = news_total = 0.0
+    for (cat, st, news), lst in per.items():
+        lst.sort(key=lambda x: -abs(x[0]))
+        for i, (c, e) in enumerate(lst):
+            ci = c * 0.5 ** i
+            if news:
+                news_total += ci
+            else:
+                cur_total += ci
+            recent_out.append({"id": e["id"], "date": e["utc"][:10], "title_es": e["title_es"], "category": e["category"],
+                               "stance": e.get("crypto_stance"), "aporte": round(ci, 3), "fuente": "noticia" if news else "curado"})
+    cap = S.get("news_cap", 0.6)
+    news_total = cap * math.tanh(news_total / cap)
+    total = cur_total + news_total
     bias = math.tanh(total / S["bias_scale"])
     recent_out.sort(key=lambda x: -abs(x["aporte"]))
 

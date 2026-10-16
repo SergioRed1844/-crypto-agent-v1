@@ -29,6 +29,13 @@ def load_curated() -> list[dict]:
     return out
 
 
+def is_dup(e: dict, curated: list[dict]) -> bool:
+    """¿Ya está en el calendario curado? Misma categoría y país, fecha a ±2 días."""
+    d = parse_day(e["date"])
+    return any(c["category"] == e["category"] and c["country"] == e["country"] and
+               abs((parse_day(c["date"]) - d).days) <= 2 for c in curated)
+
+
 def load_proposed(curated: list[dict]) -> list[dict]:
     """Propuestas (auditoría Gemini / noticias) que aún no confirma una fuente curada. Nunca disparan blackout."""
     out = []
@@ -37,10 +44,7 @@ def load_proposed(curated: list[dict]) -> list[dict]:
             e = normalize(e, "proposed")
         except ValueError:
             continue
-        d = parse_day(e["date"])
-        dup = any(c["category"] == e["category"] and c["country"] == e["country"] and
-                  abs((parse_day(c["date"]) - d).days) <= 2 for c in curated)
-        if not dup:
+        if not is_dup(e, curated):
             e["status"] = "proposed"
             out.append(e)
     return out

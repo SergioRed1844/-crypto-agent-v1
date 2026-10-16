@@ -102,7 +102,12 @@ SYS_CLS = ("Eres analista de contexto macro y cripto. Recibes TITULARES numerado
            "país ISO-2 o GLOBAL, crypto_stance (pro=empuja BTC al alza, anti=a la baja, neutral, uncertain), "
            "prior_tier 1-5 (5 = puede mover BTC >5% en días), event_date YYYY-MM-DD si ocurrió, future_date YYYY-MM-DD "
            "si anuncia algo PROGRAMADO a futuro (votación, decisión, plazo, elección), título corto en español y "
-           "confidence 0-1. No inventes fechas: si no hay, deja vacío.")
+           "confidence 0-1. No inventes fechas: si no hay, deja vacío. CALIBRA prior_tier: 5 solo para choques de todo el "
+           "mercado (decisión sorpresa de la Fed, quiebra de un exchange grande, aprobación o rechazo de un ETF de BTC, guerra "
+           "entre potencias); 4 para datos macro de EE.UU. muy fuera de consenso, hackeos de más de 500 millones de dólares, "
+           "leyes cripto aprobadas; 3 para noticias relevantes de BTC o del mercado completo; 1-2 para el resto. "
+           "relevant=false para: noticias de una sola altcoin (que no sea ETH), empresas pequeñas, columnas de opinión, "
+           "predicciones de precio y análisis. confidence >= 0.8 solo si el hecho está confirmado en el titular.")
 
 
 # Diagnóstico de la última corrida (va al reporte; nunca incluye la key)
