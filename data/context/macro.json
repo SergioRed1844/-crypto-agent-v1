@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-16T12:45:56Z",
+ "generated_utc": "2026-10-16T13:31:14Z",
  "fear_greed": {
   "value": 63,
   "label": "Greed",
@@ -7,7 +7,7 @@
   "avg_30d": 67.2
  },
  "stablecoins": {
-  "total_usd": 305248178171,
+  "total_usd": 305242099335,
   "chg_7d_pct": -0.44,
   "chg_30d_pct": 0.77
  },
@@ -21,7 +21,7 @@
     "Yes": 0.235,
     "No": 0.765
    },
-   "volume": 24962211.76795196,
+   "volume": 24966942.809619963,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
