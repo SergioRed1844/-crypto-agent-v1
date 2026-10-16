@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T17:43:20Z",
- "state": "RISK_OFF",
- "veto_entries": true,
+ "generated_utc": "2026-10-16T18:24:39Z",
+ "state": "CAUTION",
+ "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.0,
- "bias": -0.844,
- "event_risk": 0.048,
- "extra_confluence": 0,
+ "size_mult": 0.5,
+ "bias": -0.381,
+ "event_risk": 0.049,
+ "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 83,
+ "confidence": 65,
  "reasons": [
-  "Sesgo de eventos muy negativo (-0.84)"
+  "Precaución: sesgo -0.38"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.048,
+   "riesgo": 0.049,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,8 @@
    "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.328
+   "aporte": -0.324,
+   "fuente": "noticia"
   },
   {
    "id": "news-u-s-spot-bitcoin-etfs-shed-261-4-million-on-octobe-2026-10-14",
@@ -44,7 +45,8 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.309
+   "aporte": -0.308,
+   "fuente": "noticia"
   },
   {
    "id": "news-cryptohack-roundup-ledger-halts-sales-amid-86m-the-2026-10-15",
@@ -52,7 +54,8 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.3
+   "aporte": -0.299,
+   "fuente": "noticia"
   },
   {
    "id": "news-white-house-crypto-adviser-company-financially-ben-2026-10-15",
@@ -60,15 +63,8 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.292
-  },
-  {
-   "id": "news-ethereum-fell-5-as-its-etf-comeback-lasted-one-day-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Ethereum cae 5% tras efímero rebote de sus ETF",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.288
+   "aporte": -0.292,
+   "fuente": "noticia"
   },
   {
    "id": "news-ethereum-led-nearly-1-billion-in-crypto-liquidatio-2026-10-16",
@@ -76,15 +72,8 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.277
-  },
-  {
-   "id": "news-thailand-tightens-crypto-rules-for-new-spot-etfs-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Tailandia endurece normas para nuevos ETF spot de criptomonedas",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.271
+   "aporte": -0.277,
+   "fuente": "noticia"
   },
   {
    "id": "news-zcash-jumped-8-after-its-etfs-took-in-money-for-th-2026-10-16",
@@ -92,7 +81,26 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.256
+   "aporte": 0.255,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-fed-officials-say-theyre-troubled-by-hot-inflation-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.235,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-ethereum-fell-5-as-its-etf-comeback-lasted-one-day-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Ethereum cae 5% tras efímero rebote de sus ETF",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "anti",
+   "aporte": -0.143,
+   "fuente": "noticia"
   }
  ],
  "alerts": [],
