@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-16T15:27:37Z",
+ "updated_utc": "2026-10-16T16:26:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -1586,6 +1586,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-16T10:15:00Z"
+  },
+  {
+   "id": "news-us-inflation-rises-to-3-7-percent-reviving-prospec-2026-10-16",
+   "date": "2026-10-16",
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOMC",
+   "country": "GLOBAL",
+   "title_es": "US inflation rises to 3 . 7 percent , reviving prospects of Fed rate hike",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "source_url": "http://www.afghanistannews.net/news/279374411/us-inflation-rises-to-3-7-percent-reviving-prospects-of-fed-rate-hike",
+   "source_title": "afghanistannews.net",
+   "confidence": 0.3,
+   "origin": "palabras-clave/GDELT",
+   "time_local": "11:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T11:00:00Z"
   }
  ]
 }

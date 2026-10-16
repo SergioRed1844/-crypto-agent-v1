@@ -1,15 +1,15 @@
 {
- "generated_utc": "2026-10-16T15:27:37Z",
+ "generated_utc": "2026-10-16T16:26:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.252,
- "event_risk": 0.044,
+ "bias": -0.249,
+ "event_risk": 0.046,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 60,
+ "confidence": 59,
  "reasons": [
   "Precaución: sesgo -0.25"
  ],
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.044,
+   "riesgo": 0.046,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -52,12 +52,12 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.075
+   "aporte": -0.074
   },
   {
-   "id": "news-fed-warsh-sees-ai-boosting-productivity-but-gives-2026-10-16",
+   "id": "news-us-inflation-rises-to-3-7-percent-reviving-prospec-2026-10-16",
    "date": "2026-10-16",
-   "title_es": "Fed Warsh sees AI boosting productivity but gives no signal on next rate hike",
+   "title_es": "US inflation rises to 3 . 7 percent , reviving prospects of Fed rate hike",
    "category": "MONETARY_POLICY",
    "stance": "anti",
    "aporte": -0.063
@@ -68,7 +68,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.054
+   "aporte": -0.053
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -84,7 +84,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.036
+   "aporte": 0.035
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
@@ -107,6 +107,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.76
+  "stablecoins_30d_pct": 0.78
  }
 }
