@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T21:39:49Z",
+ "generated_utc": "2026-10-16T22:20:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.377,
- "event_risk": 0.057,
+ "bias": -0.383,
+ "event_risk": 0.058,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.057,
+   "riesgo": 0.058,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -31,21 +31,30 @@
  ],
  "recent": [
   {
+   "id": "news-tech-stocks-tumble-as-ai-debt-fears-rattle-wall-st-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
+   "category": "FINANCIAL_CRISIS",
+   "stance": "anti",
+   "aporte": -0.508,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-u-s-spot-bitcoin-etfs-shed-261-4-million-on-octobe-2026-10-14",
    "date": "2026-10-14",
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.304,
+   "aporte": -0.303,
    "fuente": "noticia"
   },
   {
-   "id": "news-u-s-treasury-yields-investors-digest-week-of-hot-i-2026-10-16",
+   "id": "news-from-ai-to-oil-us-import-export-prices-rise-sharpl-2026-10-16",
    "date": "2026-10-16",
-   "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
+   "title_es": "Precios de importación y exportación de EE.UU. suben en septiembre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.303,
+   "aporte": -0.299,
    "fuente": "noticia"
   },
   {
@@ -54,7 +63,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.293,
+   "aporte": -0.292,
    "fuente": "noticia"
   },
   {
@@ -63,7 +72,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.289,
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -81,7 +90,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.252,
+   "aporte": 0.251,
    "fuente": "noticia"
   },
   {
@@ -90,16 +99,7 @@
    "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.228,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-fed-chair-warsh-avoids-speculation-on-rate-hikes-w-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Presidente de la Fed evita especulaciones sobre alzas de tipos",
-   "category": "MONETARY_POLICY",
-   "stance": "pro",
-   "aporte": 0.183,
+   "aporte": -0.227,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.75
+  "stablecoins_30d_pct": 0.76
  }
 }
