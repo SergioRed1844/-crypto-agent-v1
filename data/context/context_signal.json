@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T14:32:03Z",
+ "generated_utc": "2026-10-16T15:27:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.254,
- "event_risk": 0.042,
+ "bias": -0.252,
+ "event_risk": 0.044,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 60,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.042,
+   "riesgo": 0.044,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.091
+   "aporte": -0.09
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -44,7 +44,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.08
+   "aporte": -0.079
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -52,7 +52,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.077
+   "aporte": -0.075
   },
   {
    "id": "news-fed-warsh-sees-ai-boosting-productivity-but-gives-2026-10-16",
@@ -60,7 +60,7 @@
    "title_es": "Fed Warsh sees AI boosting productivity but gives no signal on next rate hike",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.064
+   "aporte": -0.063
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
