@@ -1,5 +1,5 @@
 # Respaldo del cron de GitHub (que puede tardar horas en arrancar o saltarse corridas): dispara cada hora
-# el vigía de contexto (la prueba en papel terminó el 14-oct), y al terminar (~5 h) se relanza a sí mismo. Repo público:
+# el vigía de contexto y la prueba en papel v4.2, y al terminar (~5 h) se relanza a sí mismo. Repo público:
 # los minutos de Actions no cuestan. Solo dispara workflows de datos; no opera nada.
 name: heartbeat
 on:
@@ -27,6 +27,7 @@ jobs:
         run: |
           for i in 1 2 3 4 5; do
             gh workflow run context-watch.yml --ref main || echo "context-watch no disponible"
+            gh workflow run paper-v42.yml --ref main || echo "paper-v42 no disponible"
             [ "$i" -lt 5 ] && sleep 3540
           done
       - name: Relevo
