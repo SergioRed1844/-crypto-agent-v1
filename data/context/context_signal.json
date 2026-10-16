@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T06:39:55Z",
+ "generated_utc": "2026-10-16T07:29:42Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.231,
- "event_risk": 0.03,
+ "bias": -0.229,
+ "event_risk": 0.031,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Kansas Libertarian Drew Cranmer criticizes Iran war , tariffs and rising costs ahead of midterms : President overstepped his bounds",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.093
+   "aporte": -0.092
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -44,7 +44,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.09
+   "aporte": -0.089
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -52,7 +52,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.086
+   "aporte": -0.085
   },
   {
    "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
@@ -60,7 +60,7 @@
    "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.058
+   "aporte": -0.057
   },
   {
    "id": "clarity-act-cloture-fails-2026-09-15",
@@ -76,7 +76,7 @@
    "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.037
+   "aporte": 0.036
   },
   {
    "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
