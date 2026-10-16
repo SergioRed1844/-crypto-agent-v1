@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T11:31:17Z",
+ "generated_utc": "2026-10-16T12:30:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.262,
- "event_risk": 0.037,
+ "bias": -0.26,
+ "event_risk": 0.039,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 60,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.037,
+   "riesgo": 0.039,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -44,7 +44,7 @@
    "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.082
+   "aporte": -0.081
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -52,7 +52,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.082
+   "aporte": -0.08
   },
   {
    "id": "news-fed-warsh-sees-ai-boosting-productivity-but-gives-2026-10-16",
