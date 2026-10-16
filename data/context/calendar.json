@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-16T17:32:47Z",
+ "generated_utc": "2026-10-16T17:43:20Z",
  "horizon_years": 3,
  "events": [
   {
@@ -124,6 +124,40 @@
    "source_title": "Flávio e Lula vão disputar 2º turno para presidente da República - Agência Brasil",
    "origin": "investigacion-2026-10-11",
    "utc": "2026-10-25T12:00:00Z"
+  },
+  {
+   "date": "2026-10-27",
+   "category": "ELECTION",
+   "country": "IL",
+   "title_es": "Israel: elecciones generales a la Knesset",
+   "prior_tier": 2,
+   "source_url": "https://www.electionguide.org/",
+   "why_es": "Celebración programada de las elecciones parlamentarias en Israel, evento geopolítico con impacto en la estabilidad de Oriente Medio y primas de riesgo global.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-israel-elecciones-generales-a-la-knesset-2026-10-27",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-10-27T12:00:00Z"
+  },
+  {
+   "date": "2026-10-28",
+   "category": "MONETARY_POLICY",
+   "country": "CA",
+   "title_es": "Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report",
+   "prior_tier": 2,
+   "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+   "why_es": "Anuncio de tipos de interés y publicación del informe de previsiones macroeconómicas trimestral por el Consejo de Gobierno del BoC.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-decision-de-tipos-de-interes-del-banco-de-canada-b-2026-10-28",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-10-28T12:00:00Z"
   },
   {
    "id": "fomc-2026-10-28",
@@ -376,6 +410,23 @@
    "utc": "2026-11-05T12:00:00Z"
   },
   {
+   "date": "2026-11-05",
+   "category": "MONETARY_POLICY",
+   "country": "UK",
+   "title_es": "Decisión del Banco de Inglaterra (MPC) + Monetary Policy Report (MPR) y minutas",
+   "prior_tier": 1,
+   "source_url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+   "why_es": "Decisión sobre la Bank Rate de Reino Unido junto al informe trimestral de política monetaria con proyecciones de inflación y PIB.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-decision-del-banco-de-inglaterra-mpc-monetary-poli-2026-11-05",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-11-05T12:00:00Z"
+  },
+  {
    "id": "banxico-2026-11-05",
    "date": "2026-11-05",
    "time_local": "13:00",
@@ -431,6 +482,23 @@
    "source_title": "BLS - Schedule of Releases for the Employment Situation",
    "origin": "investigacion-2026-10-11",
    "utc": "2026-11-06T13:30:00Z"
+  },
+  {
+   "date": "2026-11-07",
+   "category": "ELECTION",
+   "country": "NZ",
+   "title_es": "Nueva Zelanda: elecciones generales",
+   "prior_tier": 2,
+   "source_url": "https://www.idea.int/data-tools/data/elections",
+   "why_es": "Elecciones nacionales para renovar los 120 escaños del Parlamento neozelandés.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-nueva-zelanda-elecciones-generales-2026-11-07",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-11-07T12:00:00Z"
   },
   {
    "id": "us-clarity-lameduck-reconsider-2026-11",
@@ -778,6 +846,23 @@
    "utc": "2026-12-04T13:30:00Z"
   },
   {
+   "date": "2026-12-09",
+   "category": "MONETARY_POLICY",
+   "country": "CA",
+   "title_es": "Decisión de tipos de interés del Banco de Canadá (BoC)",
+   "prior_tier": 2,
+   "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+   "why_es": "Última reunión programada de política monetaria de 2026 del Banco de Canadá.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-decision-de-tipos-de-interes-del-banco-de-canada-b-2026-12-09",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-12-09T12:00:00Z"
+  },
+  {
    "id": "fomc-2026-12-09",
    "date": "2026-12-09",
    "time_local": "14:00",
@@ -835,6 +920,23 @@
    "utc": "2026-12-11T12:00:00Z"
   },
   {
+   "date": "2026-12-14",
+   "category": "GEOPOLITICAL",
+   "country": "GLOBAL",
+   "title_es": "Inicio de la Cumbre de Líderes del G20 2026 en Miami (14 y 15 de diciembre)",
+   "prior_tier": 1,
+   "source_url": "https://g20.org/",
+   "why_es": "Cumbre de jefes de Estado del G20 en el Trump National Doral (Miami, EE.UU.), centrada en comercio multilateral, aranceles, finanzas globales y nuevas tecnologías/activos digitales.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-inicio-de-la-cumbre-de-lideres-del-g20-2026-en-mia-2026-12-14",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2026-12-14T12:00:00Z"
+  },
+  {
    "id": "eth-glamsterdam-mainnet-est",
    "date": "2026-12-15",
    "time_local": null,
@@ -889,6 +991,23 @@
    "source_url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
    "source_title": "Bank of England - Upcoming MPC dates",
    "origin": "investigacion-2026-10-11",
+   "utc": "2026-12-17T12:00:00Z"
+  },
+  {
+   "date": "2026-12-17",
+   "category": "MONETARY_POLICY",
+   "country": "UK",
+   "title_es": "Decisión de tipos de interés del Banco de Inglaterra (MPC) y minutas",
+   "prior_tier": 1,
+   "source_url": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
+   "why_es": "Última decisión del año sobre tipos del Comité de Política Monetaria británico.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-decision-de-tipos-de-interes-del-banco-de-inglater-2026-12-17",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
    "utc": "2026-12-17T12:00:00Z"
   },
   {
@@ -1258,6 +1377,23 @@
    "utc": "2027-01-22T12:00:00Z"
   },
   {
+   "date": "2027-01-27",
+   "category": "MONETARY_POLICY",
+   "country": "CA",
+   "title_es": "Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report",
+   "prior_tier": 2,
+   "source_url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+   "why_es": "Primera fijación de tipos de 2027 acompañada de informe macroeconómico completo.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-decision-de-tipos-de-interes-del-banco-de-canada-b-2027-01-27",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2027-01-27T12:00:00Z"
+  },
+  {
    "id": "fomc-2027-01-27",
    "date": "2027-01-27",
    "time_local": "14:00",
@@ -1371,6 +1507,23 @@
    "source_title": "2027 German presidential election - Wikipedia",
    "origin": "investigacion-2026-10-11",
    "utc": "2027-01-30T12:00:00Z"
+  },
+  {
+   "date": "2027-01-31",
+   "category": "CRYPTO_REGULATION",
+   "country": "EU",
+   "title_es": "Vence el primer plazo nacional de reporte tributario cripto bajo DAC8 (ej. Países Bajos)",
+   "prior_tier": 2,
+   "source_url": "https://taxation-customs.ec.europa.eu/taxation/tax-co-operation-and-control/general",
+   "why_es": "Los proveedores de servicios de criptoactivos (CASPs) deben presentar ante las agencias tributarias locales los informes con las transacciones de residentes comunitarios efectuadas durante 2026.",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-vence-el-primer-plazo-nacional-de-reporte-tributar-2027-01-31",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2027-01-31T12:00:00Z"
   },
   {
    "id": "boe-2027-02-04",

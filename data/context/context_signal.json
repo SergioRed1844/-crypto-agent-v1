@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T17:41:09Z",
- "state": "CAUTION",
- "veto_entries": false,
+ "generated_utc": "2026-10-16T17:43:20Z",
+ "state": "RISK_OFF",
+ "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
- "bias": -0.246,
+ "size_mult": 0.0,
+ "bias": -0.844,
  "event_risk": 0.048,
- "extra_confluence": 2,
+ "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 58,
+ "confidence": 83,
  "reasons": [
-  "Precaución: sesgo -0.21"
+  "Sesgo de eventos muy negativo (-0.84)"
  ],
  "upcoming": [
   {
@@ -31,68 +31,68 @@
  ],
  "recent": [
   {
-   "id": "news-xinhua-headlines-chinese-toy-gift-makers-eye-new-g-2026-10-16",
+   "id": "news-u-s-treasury-yields-investors-digest-week-of-hot-i-2026-10-16",
    "date": "2026-10-16",
-   "title_es": "Xinhua Headlines : Chinese toy , gift makers eye new growth from reciprocal China - U . S . tariff cuts",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.096
-  },
-  {
-   "id": "news-non-tariff-barriers-biggest-hurdle-in-india-china-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Non - tariff barriers biggest hurdle in India - China trade : FM Nirmala Sitharaman",
-   "category": "TRADE",
-   "stance": "anti",
-   "aporte": -0.094
-  },
-  {
-   "id": "news-trump-tariff-threat-built-a-us-copper-mountain-but-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Trump tariff threat built a US copper mountain , but the effects are fading",
-   "category": "TRADE",
-   "stance": "anti",
-   "aporte": -0.082
-  },
-  {
-   "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
+   "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.072
+   "aporte": -0.328
   },
   {
-   "id": "news-us-inflation-rises-to-3-7-percent-reviving-prospec-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "US inflation rises to 3 . 7 percent , reviving prospects of Fed rate hike",
-   "category": "MONETARY_POLICY",
+   "id": "news-u-s-spot-bitcoin-etfs-shed-261-4-million-on-octobe-2026-10-14",
+   "date": "2026-10-14",
+   "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
+   "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.063
+   "aporte": -0.309
   },
   {
-   "id": "news-the-ppi-was-much-higher-than-expected-odds-of-a-fe-2026-10-15",
+   "id": "news-cryptohack-roundup-ledger-halts-sales-amid-86m-the-2026-10-15",
    "date": "2026-10-15",
-   "title_es": "The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anyway .",
-   "category": "MONETARY_POLICY",
+   "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
+   "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.053
+   "aporte": -0.3
   },
   {
-   "id": "clarity-act-cloture-fails-2026-09-15",
-   "date": "2026-09-15",
-   "title_es": "Senado rechaza cloture del CLARITY Act (49-50)",
+   "id": "news-white-house-crypto-adviser-company-financially-ben-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.043
+   "aporte": -0.292
   },
   {
-   "id": "news-sec-sues-fake-crypto-ai-platform-alleges-12-5m-tak-2026-10-01",
-   "date": "2026-10-01",
-   "title_es": "SEC sues fake crypto AI platform , alleges $12 . 5M taken from 300 investors",
+   "id": "news-ethereum-fell-5-as-its-etf-comeback-lasted-one-day-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Ethereum cae 5% tras efímero rebote de sus ETF",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "anti",
+   "aporte": -0.288
+  },
+  {
+   "id": "news-ethereum-led-nearly-1-billion-in-crypto-liquidatio-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.277
+  },
+  {
+   "id": "news-thailand-tightens-crypto-rules-for-new-spot-etfs-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Tailandia endurece normas para nuevos ETF spot de criptomonedas",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.036
+   "aporte": -0.271
+  },
+  {
+   "id": "news-zcash-jumped-8-after-its-etfs-took-in-money-for-th-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.256
   }
  ],
  "alerts": [],

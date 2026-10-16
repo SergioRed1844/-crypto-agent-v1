@@ -1,6 +1,6 @@
 # Estudio de eventos — ¿qué mueve a BTC?
 
-Generado 2026-10-16T17:41:46Z. Precios 2010-07-18 → 2026-10-15. 258 de 261 eventos históricos con precio suficiente.
+Generado 2026-10-16T17:55:11Z. Precios 2010-07-18 → 2026-10-15. 258 de 261 eventos históricos con precio suficiente.
 
 Referencia: un día cualquiera mueve |z3| = 0.751 en promedio (4000 días al azar). Un tipo de evento **pesa** si mueve más que eso (p_abs < 0.05) y tiene **dirección** si el signo de su postura pro/anti acierta más del 50% (p_dir < 0.05).
 
