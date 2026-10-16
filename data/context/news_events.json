@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-16T20:22:51Z",
+ "updated_utc": "2026-10-16T21:21:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3222,6 +3222,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-16T17:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "CENTRAL_BANK_SPEECH",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Presidente de la Fed evita especulaciones sobre alzas de tipos",
+   "source_url": "https://wjbo.iheart.com/content/2026-10-16-fed-chair-warsh-avoids-speculation-on-rate-hikes/",
+   "source_title": "wjbo.iheart.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-chair-warsh-avoids-speculation-on-rate-hikes-w-2026-10-16",
+   "date": "2026-10-16",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T18:30:00Z"
   }
  ]
 }
