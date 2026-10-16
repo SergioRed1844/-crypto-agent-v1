@@ -105,21 +105,71 @@ SYS_CLS = ("Eres analista de contexto macro y cripto. Recibes TITULARES numerado
            "confidence 0-1. No inventes fechas: si no hay, deja vacío.")
 
 
+# Diagnóstico de la última corrida (va al reporte; nunca incluye la key)
+DIAG = {"model": None, "ok": 0, "errors": []}
+_MODEL = {"name": None}
+
+
+def _err(r, key: str) -> str:
+    try:
+        e = r.json().get("error", {})
+        msg = f"HTTP {r.status_code} {e.get('status', '')}: {str(e.get('message', ''))[:160]}"
+    except Exception:
+        msg = f"HTTP {r.status_code}"
+    return msg.replace(key, "***") if key else msg
+
+
+def _resolve_model(key: str) -> str:
+    """El modelo configurado; si Google responde 404 (modelo retirado o no disponible para esta key), elige el Flash
+    más nuevo que la key sí tenga habilitado para generateContent."""
+    if _MODEL["name"]:
+        return _MODEL["name"]
+    want = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    try:
+        r = httpx.get("https://generativelanguage.googleapis.com/v1beta/models", params={"pageSize": 200},
+                      headers={"x-goog-api-key": key}, timeout=20)
+        if r.status_code != 200:
+            DIAG["errors"].append("listar modelos: " + _err(r, key))
+            _MODEL["name"] = want
+            return want
+        names = [m["name"].split("/")[-1] for m in r.json().get("models", [])
+                 if "generateContent" in (m.get("supportedGenerationMethods") or [])]
+        if want in names:
+            _MODEL["name"] = want
+        else:
+            flash = sorted((n for n in names if "flash" in n and "lite" not in n and "image" not in n
+                            and "tts" not in n and "live" not in n), reverse=True)
+            _MODEL["name"] = next((n for n in flash if n.endswith("latest")), None) or (flash[0] if flash else want)
+            DIAG["errors"].append(f"{want} no disponible para esta key; se usa {_MODEL['name']}")
+    except Exception as e:
+        DIAG["errors"].append(f"listar modelos: {type(e).__name__}")
+        _MODEL["name"] = want
+    return _MODEL["name"]
+
+
 def _gemini(payload: dict, timeout: int = 60) -> dict | None:
     key = os.environ.get("GEMINI_API_KEY", "")
     if not key:
         return None
-    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model = _resolve_model(key)
+    DIAG["model"] = model
     for attempt in range(3):
         try:
             r = httpx.post(GEM.format(m=model), json=payload, headers={"x-goog-api-key": key}, timeout=timeout)
-            if r.status_code == 429:
-                time.sleep(10 * (attempt + 1))
-                continue
-            r.raise_for_status()
-            return r.json()
         except Exception as e:
-            log.warning(f"Gemini intento {attempt + 1}: {type(e).__name__} {getattr(getattr(e, 'response', None), 'status_code', '')}")
+            DIAG["errors"].append(f"{type(e).__name__}")
+            time.sleep(3)
+            continue
+        if r.status_code == 200:
+            DIAG["ok"] += 1
+            return r.json()
+        DIAG["errors"].append(_err(r, key))
+        log.warning(f"Gemini intento {attempt + 1}: {DIAG['errors'][-1]}")
+        if r.status_code in (429, 500, 503):
+            time.sleep(10 * (attempt + 1))
+            continue
+        break  # 400/401/403/404: reintentar no sirve
+    DIAG["errors"] = DIAG["errors"][-8:]
     return None
 
 
@@ -134,7 +184,7 @@ def llm_classify(items: list[dict], batch: int = 40) -> list[dict] | None:
     """None si no hay LLM (el llamador usa las reglas de palabras clave)."""
     if not os.environ.get("GEMINI_API_KEY"):
         return None
-    out = []
+    out, answered = [], 0
     for k in range(0, len(items), batch):
         chunk = items[k:k + batch]
         lines = "\n".join(f"{i}. [{(it.get('published_at') or '')[:10]}] {it['title']}" for i, it in enumerate(chunk))
@@ -144,6 +194,7 @@ def llm_classify(items: list[dict], batch: int = 40) -> list[dict] | None:
                                              "responseMimeType": "application/json", "responseSchema": CLS_SCHEMA}})
         try:
             rows = json.loads(_text(resp)).get("items", []) if resp else []
+            answered += 1 if resp else 0
         except json.JSONDecodeError:
             rows = []
         for r in rows:
@@ -164,7 +215,7 @@ def llm_classify(items: list[dict], batch: int = 40) -> list[dict] | None:
             if re.fullmatch(r"\d{4}-\d{2}-\d{2}", fd) and fd > datetime.now(timezone.utc).date().isoformat():
                 out.append({**base, "id": f"prop-{slug(base['title_es'], 50)}-{fd}", "date": fd, "status": "proposed",
                             "date_precision": "day", "why_es": f"Detectado en noticia: {it['title'][:120]}"})
-    return out
+    return out if answered or not items else None  # Gemini no respondió nada → el llamador usa palabras clave
 
 
 def classify(items: list[dict]) -> tuple[list[dict], str]:

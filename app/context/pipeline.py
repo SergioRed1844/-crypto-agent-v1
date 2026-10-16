@@ -152,6 +152,7 @@ def _watch_news(rep: dict, now: datetime):
     urgent = [e for e in ev if e["prior_tier"] >= 3]
     rep["noticias"] = {"cryptopanic": cp["status"], "titulares": len(items), "eventos": len(ev), "urgentes": len(urgent),
                        "metodo": method, "agregados": _merge_news_events(urgent, now)}
+    rep["gemini"] = dict(classifier.DIAG)
 
 
 def watch() -> dict:
@@ -210,6 +211,7 @@ def refresh(event_study: bool = True) -> dict:
     sig = build_signal(now)
     rep["sheets"] = _step(rep, "sheets", sheets.mirror, event_calendar.load(now), recent_events(now, 30),
                           read_json("weights.json"), (read_json("alerts_onchain.json", {}) or {}).get("alerts", []), sig)
+    rep["gemini"] = dict(classifier.DIAG)
     _write_views(sig, rep, now)
     _notify(prev, sig, oc.get("new_alerts", []))
     write_json("refresh_report.json", rep)
