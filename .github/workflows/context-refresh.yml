@@ -31,7 +31,7 @@ jobs:
       - name: Refresco quincenal
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.8-flash' }}
           CRYPTOPANIC_API_KEY: ${{ secrets.CRYPTOPANIC_API_KEY }}
           CRYPTOPANIC_PLAN: ${{ vars.CRYPTOPANIC_PLAN || 'developer' }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
