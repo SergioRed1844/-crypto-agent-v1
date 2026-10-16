@@ -124,7 +124,7 @@ def _resolve_model(key: str) -> str:
     más nuevo que la key sí tenga habilitado para generateContent."""
     if _MODEL["name"]:
         return _MODEL["name"]
-    want = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    want = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
     try:
         r = httpx.get("https://generativelanguage.googleapis.com/v1beta/models", params={"pageSize": 200},
                       headers={"x-goog-api-key": key}, timeout=20)
@@ -164,6 +164,12 @@ def _gemini(payload: dict, timeout: int = 60) -> dict | None:
             DIAG["ok"] += 1
             return r.json()
         DIAG["errors"].append(_err(r, key))
+        if r.status_code == 404:  # modelo retirado para esta key: Google sugiere el reemplazo en el mensaje
+            m = re.search(r"use models/([\w.\-]+)", DIAG["errors"][-1])
+            if m and m.group(1) != model:
+                model = _MODEL["name"] = DIAG["model"] = m.group(1)
+                DIAG["errors"].append(f"cambio automático de modelo a {model}")
+                continue
         log.warning(f"Gemini intento {attempt + 1}: {DIAG['errors'][-1]}")
         if r.status_code in (429, 500, 503):
             time.sleep(10 * (attempt + 1))
@@ -190,7 +196,7 @@ def llm_classify(items: list[dict], batch: int = 40) -> list[dict] | None:
         lines = "\n".join(f"{i}. [{(it.get('published_at') or '')[:10]}] {it['title']}" for i, it in enumerate(chunk))
         resp = _gemini({"systemInstruction": {"parts": [{"text": SYS_CLS}]},
                         "contents": [{"role": "user", "parts": [{"text": f"<datos>\n{lines}\n</datos>"}]}],
-                        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 8192,
+                        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 16384,
                                              "responseMimeType": "application/json", "responseSchema": CLS_SCHEMA}})
         try:
             rows = json.loads(_text(resp)).get("items", []) if resp else []

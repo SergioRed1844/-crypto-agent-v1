@@ -20,7 +20,7 @@ services:
       - key: LLM_PROVIDER
         value: gemini
       - key: GEMINI_MODEL
-        value: gemini-2.5-flash
+        value: gemini-3.8-flash   # 2.5 ya no está disponible para keys nuevas
       - key: ALLOWED_PAIRS
         value: BTCUSDT,ETHUSDT,SOLUSDT
       - key: RISK_PER_TRADE
