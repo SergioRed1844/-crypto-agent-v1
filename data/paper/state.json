@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-16 16:00:00+00:00",
-  "ETHUSDT": "2026-10-16 16:00:00+00:00",
-  "SOLUSDT": "2026-10-16 16:00:00+00:00"
+  "BTCUSDT": "2026-10-16 20:00:00+00:00",
+  "ETHUSDT": "2026-10-16 20:00:00+00:00",
+  "SOLUSDT": "2026-10-16 20:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -29,6 +29,7 @@
  },
  "decisions": [],
  "notified": [],
- "runs": 1,
- "updated_utc": "2026-10-16T18:25:24Z"
+ "runs": 2,
+ "updated_utc": "2026-10-16T22:04:00Z",
+ "n_signals": 0
 }
