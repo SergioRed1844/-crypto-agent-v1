@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T05:36:50Z",
+ "generated_utc": "2026-10-16T06:35:54Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.234,
- "event_risk": 0.029,
+ "bias": -0.231,
+ "event_risk": 0.03,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Kansas Libertarian Drew Cranmer criticizes Iran war , tariffs and rising costs ahead of midterms : President overstepped his bounds",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.094
+   "aporte": -0.093
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -44,7 +44,7 @@
    "title_es": "Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed .",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.092
+   "aporte": -0.09
   },
   {
    "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
@@ -84,7 +84,7 @@
    "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.032
+   "aporte": 0.031
   },
   {
    "id": "news-1-palestinian-killed-in-israeli-airstrike-on-gaza-2026-10-15",
@@ -107,6 +107,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.75
+  "stablecoins_30d_pct": 0.77
  }
 }
