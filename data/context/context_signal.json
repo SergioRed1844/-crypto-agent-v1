@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T21:21:52Z",
+ "generated_utc": "2026-10-16T21:39:49Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.377,
- "event_risk": 0.056,
+ "event_risk": 0.057,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.056,
+   "riesgo": 0.057,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.305,
+   "aporte": -0.304,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.304,
+   "aporte": -0.303,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.294,
+   "aporte": -0.293,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.275,
+   "aporte": -0.274,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.229,
+   "aporte": -0.228,
    "fuente": "noticia"
   },
   {
