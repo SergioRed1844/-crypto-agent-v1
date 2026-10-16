@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T18:24:39Z",
+ "generated_utc": "2026-10-16T18:28:59Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.381,
- "event_risk": 0.049,
+ "event_risk": 0.05,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.049,
+   "riesgo": 0.05,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Rendimientos de bonos del Tesoro de EE. UU. asimilan datos elevados de inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.324,
+   "aporte": -0.323,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.292,
+   "aporte": -0.291,
    "fuente": "noticia"
   },
   {
