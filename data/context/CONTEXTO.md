@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-16T22:24:25Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-16T23:20:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.06 · tamaño ×0.5 · compras permitidas
 
@@ -8,18 +8,18 @@ Actualizado 2026-10-16T22:24:25Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.058 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.061 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.508 |
-| ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares | 2026-10-14 | anti | -0.303 |
-| Precios de importación y exportación de EE.UU. suben en septiembre | 2026-10-16 | anti | -0.299 |
-| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.292 |
-| Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS | 2026-10-15 | anti | -0.288 |
-| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.274 |
-| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.251 |
-| Funcionarios de la Fed preocupados por datos elevados de inflación | 2026-10-15 | anti | -0.227 |
+| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.507 |
+| ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares | 2026-10-14 | anti | -0.302 |
+| Precios de importación y exportación de EE.UU. suben en septiembre | 2026-10-16 | anti | -0.293 |
+| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.290 |
+| Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS | 2026-10-15 | anti | -0.287 |
+| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.273 |
+| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.250 |
+| Funcionarios de la Fed preocupados por datos elevados de inflación | 2026-10-15 | anti | -0.225 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,24 +28,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-16T22:24:25Z",
+ "inicio": "2026-10-16T23:20:07Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   971773,
+   971780
+  ],
+  "calls": 80,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 50,
+  "eventos": 10,
+  "urgentes": 10,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 2
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2

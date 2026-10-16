@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-16T22:24:25Z",
+ "updated_utc": "2026-10-16T23:20:07Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3224,6 +3224,27 @@
    "utc": "2026-10-16T17:15:00Z"
   },
   {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_SELLOFF",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Wall Street a media sesión: caída tecnológica impulsa rotación defensiva",
+   "source_url": "https://www.fool.com/coverage/stock-market-today/2026/10/16/stock-market-midday-oct-16-tech-stocks-slide-as-investors-rotate-into-defensive-sectors/?source=iedfolrf0000001",
+   "source_title": "fool.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-stock-market-midday-oct-16-tech-stocks-slide-as-in-2026-10-16",
+   "date": "2026-10-16",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T18:00:00Z"
+  },
+  {
    "category": "MONETARY_POLICY",
    "subcategory": "CENTRAL_BANK_SPEECH",
    "country": "US",
@@ -3298,6 +3319,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-from-ai-to-oil-us-import-export-prices-rise-sharpl-2026-10-16",
+   "date": "2026-10-16",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T20:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_SELLOFF",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Las acciones estadounidenses caen arrastradas por la liquidación en tecnológicas",
+   "source_url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/10/16/us-markets-weighed-down-by-extended-sell-off-in-the-tech-sector/",
+   "source_title": "bnnbloomberg.ca",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-markets-today-u-s-stocks-weighed-down-by-extended-2026-10-16",
    "date": "2026-10-16",
    "status": "happened",
    "scheduled": false,

@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T22:24:25Z",
+ "generated_utc": "2026-10-16T23:20:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.383,
- "event_risk": 0.058,
+ "event_risk": 0.061,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.058,
+   "riesgo": 0.061,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.508,
+   "aporte": -0.507,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.303,
+   "aporte": -0.302,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Precios de importación y exportación de EE.UU. suben en septiembre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.299,
+   "aporte": -0.293,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.292,
+   "aporte": -0.29,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.288,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.251,
+   "aporte": 0.25,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.227,
+   "aporte": -0.225,
    "fuente": "noticia"
   }
  ],
