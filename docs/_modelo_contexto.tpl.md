@@ -76,7 +76,9 @@ Además el `risk_gate` ahora exige, siempre:
    malas pegan parecido en ambos (×1.12–1.18). El motor usa lo estimado cuando hay ≥15 eventos por celda.
 5. **Decaimiento**: el efecto de un evento se desvanece con su vida media por categoría (Fed 5 días, regulación 14,
    pandemia 21).
-6. **Probabilidad de ocurrir**: confirmado 1.0, estimado 0.8, esperado 0.7, propuesto 0.5, especulativo 0.35.
+6. **Noticias con tope**: lo que viene de noticias (Gemini sobre GDELT) puede llevar como máximo a CAUTION; un veto
+   necesita un evento curado, un blackout o una alerta on-chain. El 2º evento del mismo tipo pesa la mitad, el 3º un cuarto.
+7. **Probabilidad de ocurrir**: confirmado 1.0, estimado 0.8, esperado 0.7, propuesto 0.5, especulativo 0.35.
 
 Fórmulas exactas en `app/context/engine.py`. Resultados por categoría en `data/context/EVENTOS.md`.
 

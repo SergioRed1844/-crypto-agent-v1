@@ -35,7 +35,9 @@ Nasdaq −8%, stablecoins ±2%). States: inputs older than 72 h, on-chain critic
 exit_all); confirmed exact/day event of magnitude ≥ 0.4 inside its window → BLACKOUT (veto); bias ≤ −0.2,
 event_risk ≥ 0.5, medium alert or stale inputs (>36 h) → CAUTION (size ×0.5, +2 confluence);
 bias ≥ 0.2 and event_risk < 0.3 → RISK_ON (full size); else NEUTRAL (size 1 − ½·event_risk, ≥0.5).
-Same-day duplicates (category, day, stance) count once; LLM confidence is clamped to [0,1]; alert windows start
+Same-day duplicates (category, day, stance) count once; repeated events of the same (category, stance) add with
+weights 1, ½, ¼…; news-derived events (origin gemini/ or palabras-clave/) are capped at ±0.6 raw (max bias ≈ ±0.38,
+so news alone can reach CAUTION but never a veto); LLM confidence is clamped to [0,1]; alert windows start
 at `detected_utc`.
 
 ## Integration (trading graph)
