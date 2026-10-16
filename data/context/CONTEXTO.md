@@ -1,25 +1,25 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-16T17:21:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-16T17:32:47Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.25 · riesgo de evento 0.05 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.21 · riesgo de evento 0.05 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.25
+- Precaución: sesgo -0.21
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.047 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.048 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman | 2026-10-16 | anti | -0.089 |
-| Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers | 2026-10-15 | anti | -0.078 |
+| Xinhua Headlines : Chinese toy , gift makers eye new growth from reciprocal Chin | 2026-10-16 | pro | +0.096 |
+| Non - tariff barriers biggest hurdle in India - China trade : FM Nirmala Sithara | 2026-10-16 | anti | -0.094 |
+| Trump tariff threat built a US copper mountain , but the effects are fading | 2026-10-15 | anti | -0.082 |
 | Producer Price Inflation Was Much Hotter Than Expected . Stocks Still Climbed . | 2026-10-15 | anti | -0.072 |
 | US inflation rises to 3 . 7 percent , reviving prospects of Fed rate hike | 2026-10-16 | anti | -0.063 |
 | The PPI Was Much Higher Than Expected . Odds of a Fed Rate Hike Edged Down Anywa | 2026-10-15 | anti | -0.053 |
 | Senado rechaza cloture del CLARITY Act (49-50) | 2026-09-15 | anti | -0.043 |
-| SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca | 2026-09-17 | pro | +0.035 |
-| Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip | 2026-10-01 | pro | +0.030 |
+| SEC sues fake crypto AI platform , alleges $12 . 5M taken from 300 investors | 2026-10-01 | anti | -0.036 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,15 +28,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "refresh",
- "inicio": "2026-10-16T17:21:29Z",
+ "inicio": "2026-10-16T17:32:47Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
-  "n_gdelt": 240,
-  "titulares": 148,
-  "eventos": 0,
-  "metodo": "gemini",
-  "agregados": 0,
+  "n_gdelt": 180,
+  "titulares": 132,
+  "eventos": 29,
+  "metodo": "palabras-clave",
+  "agregados": 21,
   "propuestas_de_noticias": 0
  },
  "consenso_semana": [
@@ -226,15 +226,26 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
  },
  "onchain": {
   "scanned": [
-   971735,
-   971742
+   971743,
+   971744
   ],
-  "calls": 143,
+  "calls": 26,
   "stopped": null,
   "nuevas": 0
  },
  "sheets": {
   "status": "sin SHEETS_WEBAPP_URL (opcional)"
+ },
+ "gemini": {
+  "model": "gemini-2.5-flash",
+  "ok": 0,
+  "errors": [
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro"
+  ]
  }
 }
 ```

@@ -1,6 +1,6 @@
 # Calendario de contexto — 3 años
 
-Generado 2026-10-16 11:21 (Monterrey). 344 eventos a futuro (confirmado 222, esperado 42, especulativo 8, estimado 72). Horas en Monterrey; 'mes' = fecha aún no publicada (estimado por regla).
+Generado 2026-10-16 11:32 (Monterrey). 344 eventos a futuro (confirmado 222, esperado 42, especulativo 8, estimado 72). Horas en Monterrey; 'mes' = fecha aún no publicada (estimado por regla).
 
 Importancia: ★ 1 (mínimo) … ★★★★★ 5 (crítico). Los pesos los recalibra el estudio de eventos (`weights.json`); la importancia aquí es la a priori de la investigación.
 

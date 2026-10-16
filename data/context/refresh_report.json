@@ -1,14 +1,14 @@
 {
  "modo": "refresh",
- "inicio": "2026-10-16T17:21:29Z",
+ "inicio": "2026-10-16T17:32:47Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
-  "n_gdelt": 240,
-  "titulares": 148,
-  "eventos": 0,
-  "metodo": "gemini",
-  "agregados": 0,
+  "n_gdelt": 180,
+  "titulares": 132,
+  "eventos": 29,
+  "metodo": "palabras-clave",
+  "agregados": 21,
   "propuestas_de_noticias": 0
  },
  "consenso_semana": [
@@ -198,14 +198,25 @@
  },
  "onchain": {
   "scanned": [
-   971735,
-   971742
+   971743,
+   971744
   ],
-  "calls": 143,
+  "calls": 26,
   "stopped": null,
   "nuevas": 0
  },
  "sheets": {
   "status": "sin SHEETS_WEBAPP_URL (opcional)"
+ },
+ "gemini": {
+  "model": "gemini-2.5-flash",
+  "ok": 0,
+  "errors": [
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro",
+   "HTTP 404 NOT_FOUND: This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and impro"
+  ]
  }
 }

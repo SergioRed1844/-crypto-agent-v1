@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-16T17:21:29Z",
+ "generated_utc": "2026-10-16T17:32:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.247,
- "event_risk": 0.047,
+ "bias": -0.211,
+ "event_risk": 0.048,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 59,
+ "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.25"
+  "Precaución: sesgo -0.21"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.047,
+   "riesgo": 0.048,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -31,20 +31,28 @@
  ],
  "recent": [
   {
-   "id": "news-china-non-tariff-barriers-biggest-hurdle-for-trade-2026-10-16",
+   "id": "news-xinhua-headlines-chinese-toy-gift-makers-eye-new-g-2026-10-16",
    "date": "2026-10-16",
-   "title_es": "China Non - Tariff Barriers Biggest Hurdle For Trade Ties : Sitharaman",
+   "title_es": "Xinhua Headlines : Chinese toy , gift makers eye new growth from reciprocal China - U . S . tariff cuts",
    "category": "TRADE",
-   "stance": "anti",
-   "aporte": -0.089
+   "stance": "pro",
+   "aporte": 0.096
   },
   {
-   "id": "news-holiday-toy-prices-surge-as-tariffs-war-driven-ene-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Holiday toy prices surge as tariffs , war - driven energy costs squeeze shoppers",
+   "id": "news-non-tariff-barriers-biggest-hurdle-in-india-china-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Non - tariff barriers biggest hurdle in India - China trade : FM Nirmala Sitharaman",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.078
+   "aporte": -0.094
+  },
+  {
+   "id": "news-trump-tariff-threat-built-a-us-copper-mountain-but-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Trump tariff threat built a US copper mountain , but the effects are fading",
+   "category": "TRADE",
+   "stance": "anti",
+   "aporte": -0.082
   },
   {
    "id": "news-producer-price-inflation-was-much-hotter-than-expe-2026-10-15",
@@ -79,20 +87,12 @@
    "aporte": -0.043
   },
   {
-   "id": "sec-innovation-exemption-2026-09-17",
-   "date": "2026-09-17",
-   "title_es": "SEC lanza exención de innovación; CFTC envía reglas cripto a la Casa Blanca",
-   "category": "CRYPTO_REGULATION",
-   "stance": "pro",
-   "aporte": 0.035
-  },
-  {
-   "id": "news-bitcoin-etf-inflows-hit-2-39b-in-2026-but-3-altcoi-2026-10-01",
+   "id": "news-sec-sues-fake-crypto-ai-platform-alleges-12-5m-tak-2026-10-01",
    "date": "2026-10-01",
-   "title_es": "Bitcoin ETF Inflows Hit $2 . 39B in 2026 , but 3 Altcoins Slip",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.03
+   "title_es": "SEC sues fake crypto AI platform , alleges $12 . 5M taken from 300 investors",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.036
   }
  ],
  "alerts": [],
