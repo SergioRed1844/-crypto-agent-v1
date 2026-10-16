@@ -247,6 +247,7 @@ def process_bars(state: dict, live: dict, now: datetime, ctx_fn=context_now) -> 
     finally:
         loop.close()
     state["decisions"] = (state["decisions"] + out)[-300:]
+    state["n_signals"] = state.get("n_signals", 0) + len(out)
     return out
 
 
@@ -295,6 +296,9 @@ def render(state: dict, dfs: dict, now: datetime) -> str:
          "portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).", "",
          f"**Inicio:** {f(state['started_utc'])} (Monterrey) · **Actualizado:** {f(_iso(now))} · **Día {g['dias']}** · "
          f"**Estado:** {state['status']}", "",
+         f"Última vela 4H revisada: {f(max(state['last_bar'].values()))} · señales técnicas desde el inicio: "
+         f"{state.get('n_signals', 0)} · corridas: {state['runs']}. Sin señal = las reglas no vieron setup (p.ej. BTC "
+         "sin tendencia diaria alcista); es normal pasar días sin operar en swing.", "",
          "| Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |",
          "|---|---|---|---|---|---|---|---|---|---|"]
     for k, name in (("A", "A · reglas v4.1"), ("B", "B · v4.2 completo")):
