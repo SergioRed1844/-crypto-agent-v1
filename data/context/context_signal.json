@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T20:00:55Z",
+ "generated_utc": "2026-10-17T20:59:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.381,
- "event_risk": 0.189,
+ "event_risk": 0.197,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.144,
+   "riesgo": 0.15,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.053,
+   "riesgo": 0.055,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.477,
+   "aporte": -0.475,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.325,
+   "aporte": -0.318,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.288,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -77,16 +77,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.277,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-cryptohack-roundup-ledger-halts-sales-amid-86m-the-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.276,
    "fuente": "noticia"
   },
   {
@@ -95,7 +86,16 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cryptohack-roundup-ledger-halts-sales-amid-86m-the-2026-10-15",
+   "date": "2026-10-15",
+   "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.23,
+   "aporte": 0.229,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.222,
+   "aporte": 0.22,
    "fuente": "noticia"
   }
  ],
