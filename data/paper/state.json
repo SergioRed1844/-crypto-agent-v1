@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-17 08:00:00+00:00",
-  "ETHUSDT": "2026-10-17 08:00:00+00:00",
-  "SOLUSDT": "2026-10-17 08:00:00+00:00"
+  "BTCUSDT": "2026-10-17 12:00:00+00:00",
+  "ETHUSDT": "2026-10-17 12:00:00+00:00",
+  "SOLUSDT": "2026-10-17 12:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 5.092183934069994,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-17T10:00:00Z"
+     "last_checked": "2026-10-17T11:00:00Z"
     },
     "BTCUSDT": {
      "pair": "BTCUSDT",
@@ -36,7 +36,7 @@
      "unit": 2313.351557687151,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-17T10:00:00Z"
+     "last_checked": "2026-10-17T11:00:00Z"
     }
    },
    "trades": [],
@@ -106,10 +106,24 @@
    "neta": 0.1153,
    "rr_neto": 2.3,
    "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-10-17T12:00:00Z",
+   "pair": "ETHUSDT",
+   "cs": 6,
+   "precio": 2434.2,
+   "A": "máx 2 posiciones",
+   "ctx": "CAUTION",
+   "fg": 55,
+   "funding": 4.4777564646e-06,
+   "funding_src": "okx",
+   "neta": 0.0724,
+   "rr_neto": 2.2,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
   }
  ],
  "notified": [],
- "runs": 22,
- "updated_utc": "2026-10-17T11:09:37Z",
- "n_signals": 4
+ "runs": 23,
+ "updated_utc": "2026-10-17T12:08:40Z",
+ "n_signals": 5
 }
