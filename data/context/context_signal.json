@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T10:10:01Z",
+ "generated_utc": "2026-10-17T10:13:45Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.127,
+ "event_risk": 0.128,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.095,
+   "riesgo": 0.096,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -129,6 +129,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.61
+  "stablecoins_30d_pct": 0.6
  }
 }
