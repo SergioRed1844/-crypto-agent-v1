@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T00:19:09Z",
+ "updated_utc": "2026-10-17T00:44:51Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3390,6 +3390,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-16T21:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "MARKETS_SELLOFF",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bolsas de EE.UU. caen por venta masiva en tecnología y aumento del petróleo",
+   "source_url": "http://www.bignewsnetwork.com/news/279380176/us-stocks-sink-amid-tech-sell-off-surging-oil-prices",
+   "source_title": "bignewsnetwork.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-stocks-sink-amid-tech-sell-off-surging-oil-pri-2026-10-16",
+   "date": "2026-10-16",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T23:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "BONDS",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
+   "source_url": "https://economictimes.indiatimes.com/news/international/us/us-bond-10-year-yields-suffer-biggest-weekly-drop-in-over-year-why-is-treasury-note-down/articleshow/135005333.cms",
+   "source_title": "economictimes.indiatimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-us-bond-10-year-yields-suffer-biggest-weekly-drop-2026-10-16",
+   "date": "2026-10-16",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-16T23:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "INFLATION",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Temores de nueva ola de inflación ante el aumento de costos de energía",
+   "source_url": "https://komonews.com/news/nation-world/inflations-next-wave-could-be-building-as-energy-costs-spread-through-economy",
+   "source_title": "komonews.com",
+   "confidence": 0.7,
+   "origin": "gemini/GDELT",
+   "id": "news-inflation-next-wave-could-be-building-as-energy-co-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T00:00:00Z"
   }
  ]
 }

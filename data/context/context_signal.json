@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T00:19:09Z",
+ "generated_utc": "2026-10-17T00:44:51Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.383,
- "event_risk": 0.085,
+ "bias": -0.382,
+ "event_risk": 0.087,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.063,
+   "riesgo": 0.064,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.023,
+   "riesgo": 0.024,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -54,12 +54,30 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-us-bond-10-year-yields-suffer-biggest-weekly-drop-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.306,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-u-s-stocks-sink-amid-tech-sell-off-surging-oil-pri-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Bolsas de EE.UU. caen por venta masiva en tecnología y aumento del petróleo",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.305,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-u-s-spot-bitcoin-etfs-shed-261-4-million-on-octobe-2026-10-14",
    "date": "2026-10-14",
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.301,
+   "aporte": -0.3,
    "fuente": "noticia"
   },
   {
@@ -69,15 +87,6 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.288,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-from-ai-to-oil-us-import-export-prices-rise-sharpl-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Precios de importación y exportación de EE.UU. suben en septiembre",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -105,15 +114,6 @@
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.249,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-fed-officials-say-theyre-troubled-by-hot-inflation-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.223,
    "fuente": "noticia"
   }
  ],
