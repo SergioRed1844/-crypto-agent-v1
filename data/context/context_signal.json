@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T11:08:37Z",
+ "generated_utc": "2026-10-17T11:12:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.132,
+ "event_risk": 0.133,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.099,
+   "riesgo": 0.1,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -68,7 +68,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.288,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.247,
+   "aporte": 0.246,
    "fuente": "noticia"
   },
   {
