@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T14:10:29Z",
+ "generated_utc": "2026-10-17T14:23:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.15,
+ "event_risk": 0.151,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.113,
+   "riesgo": 0.114,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.041,
+   "riesgo": 0.042,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -68,7 +68,7 @@
    "title_es": "Acciones tecnológicas pierden 1 billón de dólares ante subida del petróleo a 110 dólares",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.266,
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.232,
+   "aporte": 0.231,
    "fuente": "noticia"
   }
  ],
