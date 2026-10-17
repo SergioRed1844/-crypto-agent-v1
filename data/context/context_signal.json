@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T00:44:51Z",
+ "generated_utc": "2026-10-17T01:18:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.087,
+ "event_risk": 0.089,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.064,
+   "riesgo": 0.066,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.505,
+   "aporte": -0.504,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.306,
+   "aporte": 0.303,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bolsas de EE.UU. caen por venta masiva en tecnología y aumento del petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.305,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.288,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.272,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.249,
+   "aporte": 0.248,
    "fuente": "noticia"
   }
  ],
@@ -129,6 +129,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.75
+  "stablecoins_30d_pct": 0.62
  }
 }
