@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-16T23:20:07Z",
+ "generated_utc": "2026-10-17T00:19:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.383,
- "event_risk": 0.061,
+ "event_risk": 0.085,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,10 +21,24 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.061,
+   "riesgo": 0.063,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "us-sec-reg-crypto-assets-comments-2026-10-20",
+   "utc": "2026-10-20T12:00:00Z",
+   "title_es": "SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; exenciones de oferta de $5M/$75M y safe harbor de 'investment contract')",
+   "category": "CRYPTO_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.28,
+   "riesgo": 0.023,
+   "ventana": [
+    "2026-10-19T12:00:00Z",
+    "2026-10-21T06:00:00Z"
    ],
    "en_ventana": false
   }
@@ -36,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.507,
+   "aporte": -0.505,
    "fuente": "noticia"
   },
   {
@@ -45,16 +59,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.302,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-from-ai-to-oil-us-import-export-prices-rise-sharpl-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Precios de importación y exportación de EE.UU. suben en septiembre",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.293,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -63,7 +68,16 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.288,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-from-ai-to-oil-us-import-export-prices-rise-sharpl-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Precios de importación y exportación de EE.UU. suben en septiembre",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -72,7 +86,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.287,
+   "aporte": -0.286,
    "fuente": "noticia"
   },
   {
@@ -81,7 +95,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.273,
+   "aporte": -0.272,
    "fuente": "noticia"
   },
   {
@@ -90,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.25,
+   "aporte": 0.249,
    "fuente": "noticia"
   },
   {
@@ -99,7 +113,7 @@
    "title_es": "Funcionarios de la Fed preocupados por datos elevados de inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.225,
+   "aporte": -0.223,
    "fuente": "noticia"
   }
  ],
@@ -112,9 +126,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 63
+   "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.76
+  "stablecoins_30d_pct": 0.75
  }
 }
