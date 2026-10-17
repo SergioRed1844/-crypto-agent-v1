@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T17:03:37Z",
+ "generated_utc": "2026-10-17T17:31:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.383,
- "event_risk": 0.168,
+ "event_risk": 0.171,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.127,
+   "riesgo": 0.13,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.047,
+   "riesgo": 0.048,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.481,
+   "aporte": -0.48,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,16 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.346,
+   "aporte": -0.342,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-banks-could-slow-stablecoin-growth-by-paying-saver-2026-10-17",
+   "date": "2026-10-17",
+   "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.29,
    "fuente": "noticia"
   },
   {
@@ -68,16 +77,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.281,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-white-house-crypto-adviser-company-financially-ben-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.273,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.218,
+   "aporte": 0.216,
    "fuente": "noticia"
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T17:03:37Z",
+ "updated_utc": "2026-10-17T17:31:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3600,6 +3600,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-17T10:00:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "stablecoins",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
+   "source_url": "https://www.coindesk.com/business/2026/10/14/banks-could-slow-stablecoin-growth-by-paying-savers-more-bis-paper-finds",
+   "source_title": "coindesk.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-banks-could-slow-stablecoin-growth-by-paying-saver-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T13:00:00Z"
   },
   {
    "category": "GEOPOLITICAL",
