@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T19:42:07Z",
+ "generated_utc": "2026-10-17T20:00:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.381,
- "event_risk": 0.187,
+ "event_risk": 0.189,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.142,
+   "riesgo": 0.144,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.052,
+   "riesgo": 0.053,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.327,
+   "aporte": -0.325,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.222,
    "fuente": "noticia"
   }
  ],
