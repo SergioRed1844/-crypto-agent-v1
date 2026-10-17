@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T22:37:31Z",
+ "generated_utc": "2026-10-17T22:58:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.21,
+ "event_risk": 0.213,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.16,
+   "riesgo": 0.163,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.059,
+   "riesgo": 0.06,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.473,
+   "aporte": -0.472,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.308,
+   "aporte": -0.306,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.253,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {

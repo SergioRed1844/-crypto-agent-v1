@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-17T22:37:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-17T22:58:11Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.21 · tamaño ×0.5 · compras permitidas
 
@@ -8,17 +8,17 @@ Actualizado 2026-10-17T22:37:31Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.16 |
-| SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.059 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.163 |
+| SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.06 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.473 |
-| Petróleo crudo Brent toca los 110 dólares por barril | 2026-10-17 | anti | -0.308 |
+| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.472 |
+| Petróleo crudo Brent toca los 110 dólares por barril | 2026-10-17 | anti | -0.306 |
 | Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.302 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.285 |
-| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.255 |
-| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.253 |
+| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.254 |
+| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.252 |
 | Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.227 |
 | Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013 | 2026-10-17 | pro | +0.217 |
 
@@ -29,20 +29,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-17T22:37:31Z",
+ "inicio": "2026-10-17T22:58:11Z",
  "onchain": {
   "scanned": [
-   971910,
-   971911
+   971912,
+   971912
   ],
-  "calls": 24,
+  "calls": 20,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 37,
-  "eventos": 9,
+  "titulares": 27,
+  "eventos": 11,
   "urgentes": 2,
   "metodo": "gemini",
   "agregados": 0
