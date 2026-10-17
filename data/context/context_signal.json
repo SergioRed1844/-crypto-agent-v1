@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T06:13:36Z",
+ "generated_utc": "2026-10-17T06:17:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.383,
- "event_risk": 0.108,
+ "event_risk": 0.109,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.497,
+   "aporte": -0.496,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.294,
+   "aporte": -0.293,
    "fuente": "noticia"
   },
   {
