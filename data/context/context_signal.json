@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T22:03:08Z",
+ "generated_utc": "2026-10-17T22:37:31Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.205,
+ "event_risk": 0.21,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.157,
+   "riesgo": 0.16,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.058,
+   "riesgo": 0.059,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.474,
+   "aporte": -0.473,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.311,
+   "aporte": -0.308,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.303,
+   "aporte": -0.302,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.286,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.227,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.218,
+   "aporte": 0.217,
    "fuente": "noticia"
   }
  ],
