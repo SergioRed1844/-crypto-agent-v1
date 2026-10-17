@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T05:14:32Z",
+ "generated_utc": "2026-10-17T06:07:24Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.383,
- "event_risk": 0.104,
+ "event_risk": 0.108,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.078,
+   "riesgo": 0.081,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,16 +50,16 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.498,
+   "aporte": -0.497,
    "fuente": "noticia"
   },
   {
-   "id": "news-s-p-500-logs-biggest-weekly-loss-since-june-as-oil-2026-10-17",
+   "id": "news-tech-stocks-erase-1-trillion-of-wealth-as-oil-surg-2026-10-17",
    "date": "2026-10-17",
-   "title_es": "S&P 500 registra mayor pérdida semanal desde junio por petróleo a $110 y dudas en IA",
+   "title_es": "Acciones tecnológicas pierden 1 billón de dólares ante subida del petróleo a 110 dólares",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.318,
+   "aporte": -0.331,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.295,
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.279,
+   "aporte": 0.274,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.268,
+   "aporte": -0.267,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.244,
+   "aporte": 0.243,
    "fuente": "noticia"
   }
  ],

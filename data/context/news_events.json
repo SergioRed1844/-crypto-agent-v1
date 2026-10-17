@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T05:14:32Z",
+ "updated_utc": "2026-10-17T06:07:24Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3455,6 +3455,27 @@
    "utc": "2026-10-17T00:00:00Z"
   },
   {
+   "category": "MACRO_DATA",
+   "subcategory": "Market Shock",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 4,
+   "title_es": "Acciones tecnológicas pierden 1 billón de dólares ante subida del petróleo a 110 dólares",
+   "source_url": "https://www.nbcnews.com/business/rcna603919",
+   "source_title": "nbcnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-tech-stocks-erase-1-trillion-of-wealth-as-oil-surg-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T00:15:00Z"
+  },
+  {
    "category": "MONETARY_POLICY",
    "subcategory": "",
    "country": "US",
@@ -3466,6 +3487,27 @@
    "confidence": 0.75,
    "origin": "gemini/GDELT",
    "id": "news-the-weekly-bottom-line-price-pressures-strengthen-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T02:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Crecen las expectativas de subidas de tipos en diciembre por parte de la Fed y el BCE",
+   "source_url": "https://www.actionforex.com/contributors/fundamental-analysis/657809-fed-and-ecb-december-rate-hikes-look-increasingly-likely/",
+   "source_title": "actionforex.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-and-ecb-december-rate-hikes-look-increasingly-2026-10-17",
    "date": "2026-10-17",
    "status": "happened",
    "scheduled": false,
@@ -3495,6 +3537,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-17T03:00:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Los grandes bancos de EE. UU. sufren su peor racha semanal de pérdidas desde 2008",
+   "source_url": "https://www.moneycontrol.com/news/business/big-us-bank-stocks-log-worst-weekly-losing-streak-since-2008-14054272.html",
+   "source_title": "moneycontrol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-big-us-bank-stocks-log-worst-weekly-losing-streak-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T05:15:00Z"
   }
  ]
 }
