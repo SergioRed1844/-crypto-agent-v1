@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-17T21:58:59Z",
+ "generated_utc": "2026-10-17T22:03:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.156,
+   "riesgo": 0.157,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.057,
+   "riesgo": 0.058,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Petróleo crudo Brent toca los 110 dólares por barril",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.312,
+   "aporte": -0.311,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.219,
+   "aporte": 0.218,
    "fuente": "noticia"
   }
  ],
