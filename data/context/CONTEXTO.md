@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-17T14:06:16Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-17T14:10:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.15 · tamaño ×0.5 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-17T14:06:16Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.112 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.113 |
 | SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.041 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -29,27 +29,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-17T14:06:16Z",
+ "inicio": "2026-10-17T14:10:29Z",
  "onchain": {
   "scanned": [
-   971862,
-   971869
+   971870,
+   971871
   ],
-  "calls": 79,
+  "calls": 30,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 40,
+  "eventos": 4,
+  "urgentes": 2,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 2
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2

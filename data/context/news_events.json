@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T14:06:16Z",
+ "updated_utc": "2026-10-17T14:10:29Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3558,6 +3558,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-17T05:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "CENTRAL_BANK_SPEECH",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El presidente de la Fed evita dar señales sobre el futuro de las tasas de interés",
+   "source_url": "https://www.arkansasonline.com/news/2026/oct/17/fed-chair-withholds-signal-on-interest-rates/",
+   "source_title": "arkansasonline.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-chair-withholds-signal-on-interest-rates-the-a-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T10:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "CENTRAL_BANK_POLICY",
+   "country": "EU",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "Lagarde respalda respuesta medida tras situarse la inflación de la eurozona en 3,8%",
+   "source_url": "https://econotimes.com/Lagarde-Backs-Measured-Response-as-Euro-Area-Inflation-Reaches-3-8-1755882",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-lagarde-backs-measured-response-as-euro-area-infla-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T10:00:00Z"
   }
  ]
 }
