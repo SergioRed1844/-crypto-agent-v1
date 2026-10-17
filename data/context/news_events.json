@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T17:31:37Z",
+ "updated_utc": "2026-10-17T18:02:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3747,6 +3747,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-17T16:15:00Z"
+  },
+  {
+   "category": "FISCAL",
+   "subcategory": "sovereign_debt",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
+   "source_url": "https://247wallst.com/personal-finance/2026/10/17/americas-debt-crisis-just-hit-a-milestone-not-seen-since-2013/",
+   "source_title": "247wallst.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-america-debt-crisis-just-hit-a-milestone-not-seen-2026-10-17",
+   "date": "2026-10-17",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-17T17:45:00Z"
   }
  ]
 }
