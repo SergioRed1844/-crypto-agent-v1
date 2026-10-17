@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-17T02:17:17Z",
+ "generated_utc": "2026-10-17T02:20:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -68,7 +68,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.297,
+   "aporte": 0.296,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
