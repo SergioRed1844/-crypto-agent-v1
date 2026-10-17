@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T09:10:55Z",
+ "generated_utc": "2026-10-17T10:10:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.383,
- "event_risk": 0.122,
+ "bias": -0.382,
+ "event_risk": 0.127,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.092,
+   "riesgo": 0.095,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.034,
+   "riesgo": 0.035,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.492,
+   "aporte": -0.491,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Acciones tecnológicas pierden 1 billón de dólares ante subida del petróleo a 110 dólares",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.31,
+   "aporte": -0.304,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.289,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.279,
+   "aporte": -0.278,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.272,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.265,
+   "aporte": -0.264,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.257,
+   "aporte": 0.252,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.24,
+   "aporte": 0.239,
    "fuente": "noticia"
   }
  ],
