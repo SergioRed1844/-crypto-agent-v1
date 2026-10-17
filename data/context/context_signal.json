@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-17T01:18:11Z",
+ "generated_utc": "2026-10-17T02:17:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.089,
+ "event_risk": 0.092,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.066,
+   "riesgo": 0.069,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,25 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.504,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-us-bond-10-year-yields-suffer-biggest-weekly-drop-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.303,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-u-s-stocks-sink-amid-tech-sell-off-surging-oil-pri-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Bolsas de EE.UU. caen por venta masiva en tecnología y aumento del petróleo",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.301,
+   "aporte": -0.502,
    "fuente": "noticia"
   },
   {
@@ -77,7 +59,25 @@
    "title_es": "ETF spot de Bitcoin en EE. UU. registran salidas por 261 millones de dólares",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.3,
+   "aporte": -0.298,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-bond-10-year-yields-suffer-biggest-weekly-drop-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Rendimiento del bono a 10 años de EE.UU. registra su mayor caída semanal en más de un año",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.297,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-u-s-stocks-sink-amid-tech-sell-off-surging-oil-pri-2026-10-16",
+   "date": "2026-10-16",
+   "title_es": "Bolsas de EE.UU. caen por venta masiva en tecnología y aumento del petróleo",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.295,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.287,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Firma de asesor cripto de la Casa Blanca se benefició de la Ley GENIUS",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.286,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.248,
+   "aporte": 0.247,
    "fuente": "noticia"
   }
  ],
