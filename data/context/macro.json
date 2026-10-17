@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-17T03:20:44Z",
+ "generated_utc": "2026-10-17T04:18:55Z",
  "fear_greed": {
   "value": 55,
   "label": "Greed",
@@ -7,8 +7,8 @@
   "avg_30d": 67.3
  },
  "stablecoins": {
-  "total_usd": 304842114309,
-  "chg_7d_pct": -0.37,
+  "total_usd": 304861990441,
+  "chg_7d_pct": -0.36,
   "chg_30d_pct": 0.62
  },
  "fred": {
@@ -18,10 +18,10 @@
   "br-presidential-runoff-2026": {
    "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "outcomes": {
-    "Yes": 0.235,
-    "No": 0.765
+    "Yes": 0.225,
+    "No": 0.775
    },
-   "volume": 25299320.07076597,
+   "volume": 25309262.191154975,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,7 +30,7 @@
     "Yes": 0.095,
     "No": 0.905
    },
-   "volume": 7593828.754499996,
+   "volume": 7618758.1645,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
