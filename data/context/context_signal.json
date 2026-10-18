@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T00:56:16Z",
+ "generated_utc": "2026-10-18T01:29:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.383,
- "event_risk": 0.23,
+ "bias": -0.382,
+ "event_risk": 0.235,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.177,
+   "riesgo": 0.181,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.065,
+   "riesgo": 0.067,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.47,
+   "aporte": -0.469,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "El Nasdaq cae un 4,48% por temores de inflación en el sector tecnológico",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.308,
+   "aporte": -0.305,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.253,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.249,
+   "aporte": -0.248,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.225,
+   "aporte": 0.224,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.213,
+   "aporte": 0.212,
    "fuente": "noticia"
   }
  ],
@@ -129,6 +129,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.62
+  "stablecoins_30d_pct": 0.54
  }
 }
