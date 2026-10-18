@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T08:48:56Z",
+ "generated_utc": "2026-10-18T09:47:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.313,
+ "event_risk": 0.325,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.245,
+   "riesgo": 0.255,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.09,
+   "riesgo": 0.094,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.459,
+   "aporte": -0.457,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -68,16 +68,16 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.276,
    "fuente": "noticia"
   },
   {
-   "id": "news-wall-street-review-nasdaq-sinks-4-48-percent-as-in-2026-10-18",
+   "id": "news-charting-the-global-economy-inflationary-pressures-2026-10-18",
    "date": "2026-10-18",
-   "title_es": "El Nasdaq cae un 4,48% por temores de inflación en el sector tecnológico",
+   "title_es": "Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconómico",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.264,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.247,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.218,
+   "aporte": 0.217,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.2,
+   "aporte": 0.198,
    "fuente": "noticia"
   }
  ],
@@ -129,6 +129,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.55
+  "stablecoins_30d_pct": 0.54
  }
 }

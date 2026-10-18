@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-18T08:48:56Z",
+ "updated_utc": "2026-10-18T09:47:58Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3852,6 +3852,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-18T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconómico",
+   "source_url": "https://economictimes.indiatimes.com/small-biz/trade/exports/insights/charting-the-global-economy-inflationary-pressures-mount-in-us/articleshow/135023323.cms",
+   "source_title": "economictimes.indiatimes.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-charting-the-global-economy-inflationary-pressures-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T04:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Presidente de la Fed mantiene abierta la perspectiva de tasas y califica a la IA de shock de oferta positivo",
+   "source_url": "http://www.taiwansun.com/news/279377929/not-going-to-prejudge-fed-chair-keeps-rate-outlook-open-calls-ai-positive-supply-shock",
+   "source_title": "taiwansun.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-not-going-to-prejudge-fed-chair-keeps-rate-outlook-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "08:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T08:30:00Z"
   }
  ]
 }

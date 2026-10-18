@@ -1,26 +1,26 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-18T08:48:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-18T09:47:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.31 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.33 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.38
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.245 |
-| SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.09 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.255 |
+| SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.094 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.459 |
-| Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.290 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.277 |
-| El Nasdaq cae un 4,48% por temores de inflación en el sector tecnológico | 2026-10-18 | anti | -0.262 |
-| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.247 |
-| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.238 |
-| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.218 |
-| Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013 | 2026-10-17 | pro | +0.200 |
+| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.457 |
+| Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.288 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.276 |
+| Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconó | 2026-10-18 | anti | -0.264 |
+| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.246 |
+| Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.236 |
+| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.217 |
+| Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013 | 2026-10-17 | pro | +0.198 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,23 +29,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-18T08:48:56Z",
+ "inicio": "2026-10-18T09:47:58Z",
  "onchain": {
   "scanned": [
-   971959,
-   971962
+   971963,
+   971970
   ],
-  "calls": 50,
+  "calls": 64,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 5,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 22,
+  "eventos": 3,
+  "urgentes": 2,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 2
  },
  "gemini": {
   "model": "gemini-3.8-flash",
