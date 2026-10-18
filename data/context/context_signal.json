@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T21:49:22Z",
+ "generated_utc": "2026-10-18T22:36:15Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.369,
- "event_risk": 0.392,
+ "bias": -0.368,
+ "event_risk": 0.395,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.155,
+   "riesgo": 0.16,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.524,
+   "aporte": 0.523,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.441,
+   "aporte": -0.44,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.22,
+   "aporte": -0.219,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.213,
    "fuente": "noticia"
   },
   {
@@ -129,6 +129,6 @@
    "fear_greed": 53
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.54
+  "stablecoins_30d_pct": 0.55
  }
 }
