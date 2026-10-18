@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-18T09:47:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-18T09:50:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.38 · riesgo de evento 0.33 · tamaño ×0.5 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-18T09:47:58Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.255 |
+| GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago- | 2026-10-19T12:00:00Z | Regulación cripto | 0.28 | 0.256 |
 | SEC: cierre de comentarios de 'Regulation Crypto Assets' (propuesta 18-ago-2026; | 2026-10-20T12:00:00Z | Regulación cripto | 0.28 | 0.094 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -16,7 +16,7 @@ Actualizado 2026-10-18T09:47:58Z UTC. Se recalcula cada hora; el calendario y lo
 | Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.457 |
 | Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.288 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.276 |
-| Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconó | 2026-10-18 | anti | -0.264 |
+| Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconó | 2026-10-18 | anti | -0.263 |
 | Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.246 |
 | Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.236 |
 | Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.217 |
@@ -29,23 +29,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-18T09:47:58Z",
+ "inicio": "2026-10-18T09:50:55Z",
  "onchain": {
   "scanned": [
-   971963,
-   971970
+   971971,
+   971971
   ],
-  "calls": 64,
+  "calls": 15,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 22,
-  "eventos": 3,
-  "urgentes": 2,
+  "titulares": 20,
+  "eventos": 2,
+  "urgentes": 1,
   "metodo": "gemini",
-  "agregados": 2
+  "agregados": 0
  },
  "gemini": {
   "model": "gemini-3.8-flash",
