@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T15:42:36Z",
+ "generated_utc": "2026-10-18T16:06:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.37,
- "event_risk": 0.367,
+ "bias": -0.371,
+ "event_risk": 0.368,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.12,
+   "riesgo": 0.122,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.534,
+   "aporte": 0.533,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
