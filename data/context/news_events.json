@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-18T10:47:10Z",
+ "updated_utc": "2026-10-18T11:40:35Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3894,6 +3894,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-18T08:30:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "banking_crisis",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
+   "source_url": "https://www.nbcnewyork.com/news/business/money-report/startups-scramble-to-meet-payroll-pay-bills-after-svbs-swift-collapse/4146460/",
+   "source_title": "nbcnewyork.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-companies-scramble-to-meet-payroll-pay-bills-after-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T10:30:00Z"
   }
  ]
 }
