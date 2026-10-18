@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-18T11:40:35Z",
+ "updated_utc": "2026-10-18T11:46:14Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3894,6 +3894,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-18T08:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
+   "source_url": "https://www.dailyforex.com/forex-technical-analysis/2026/10/weerkly-pairs-in-focus-19th-to-23rd-october-2026/250813",
+   "source_title": "dailyforex.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-dollar-outlook-after-inflation-shock-hits-tech-and-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T10:00:00Z"
   },
   {
    "category": "FINANCIAL_CRISIS",

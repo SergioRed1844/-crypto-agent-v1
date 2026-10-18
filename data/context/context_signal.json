@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T11:40:35Z",
+ "generated_utc": "2026-10-18T11:46:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.371,
- "event_risk": 0.35,
+ "event_risk": 0.351,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.276,
+   "riesgo": 0.277,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -77,16 +77,16 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.275,
+   "aporte": -0.274,
    "fuente": "noticia"
   },
   {
-   "id": "news-charting-the-global-economy-inflationary-pressures-2026-10-18",
+   "id": "news-dollar-outlook-after-inflation-shock-hits-tech-and-2026-10-18",
    "date": "2026-10-18",
-   "title_es": "Aumentan las presiones inflacionarias en Estados Unidos según reporte macroeconómico",
+   "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.267,
    "fuente": "noticia"
   },
   {
