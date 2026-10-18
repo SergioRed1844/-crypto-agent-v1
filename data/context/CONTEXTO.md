@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-18T21:37:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-18T21:39:38Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.37 · riesgo de evento 0.39 · tamaño ×0.5 · compras permitidas
 
@@ -16,7 +16,7 @@ Actualizado 2026-10-18T21:37:00Z UTC. Se recalcula cada hora; el calendario y lo
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.524 |
 | Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.442 |
 | Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.275 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.267 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.266 |
 | Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.238 |
 | Ledger suspende ventas tras investigación por robo de 86 millones de dólares | 2026-10-15 | anti | -0.220 |
 | Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petró | 2026-10-18 | anti | -0.218 |
@@ -29,21 +29,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-18T21:37:00Z",
+ "inicio": "2026-10-18T21:39:38Z",
  "onchain": {
   "scanned": [
-   972054,
-   972060
+   972061,
+   972061
   ],
-  "calls": 60,
+  "calls": 11,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 51,
+  "titulares": 11,
   "eventos": 3,
-  "urgentes": 1,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
