@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T01:29:58Z",
+ "generated_utc": "2026-10-18T01:55:18Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.382,
- "event_risk": 0.235,
+ "event_risk": 0.239,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -21,7 +21,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.181,
+   "riesgo": 0.184,
    "ventana": [
     "2026-10-18T12:00:00Z",
     "2026-10-20T06:00:00Z"
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.067,
+   "riesgo": 0.068,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.469,
+   "aporte": -0.468,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "El Nasdaq cae un 4,48% por temores de inflación en el sector tecnológico",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.305,
+   "aporte": -0.302,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.299,
+   "aporte": -0.298,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Crisis de deuda en EE. UU. alcanza un hito no visto desde 2013",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.212,
+   "aporte": 0.211,
    "fuente": "noticia"
   }
  ],
