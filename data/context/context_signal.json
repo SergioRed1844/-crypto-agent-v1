@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-18T13:44:17Z",
+ "generated_utc": "2026-10-18T13:48:13Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -86,7 +86,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
