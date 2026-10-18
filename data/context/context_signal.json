@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T18:39:52Z",
+ "generated_utc": "2026-10-18T18:53:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.37,
- "event_risk": 0.378,
+ "event_risk": 0.379,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.136,
+   "riesgo": 0.137,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.446,
+   "aporte": -0.445,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.232,
+   "aporte": -0.231,
    "fuente": "noticia"
   },
   {
