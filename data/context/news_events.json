@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-17T23:57:14Z",
+ "updated_utc": "2026-10-18T00:56:16Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3810,6 +3810,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-17T21:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "interest_rate_outlook",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Posible nueva subida de tipos de la Fed ante la persistente inflación",
+   "source_url": "https://www.koaa.com/politics/economy/another-interest-rate-hike-may-be-ahead-as-fed-battles-inflation",
+   "source_title": "koaa.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-another-interest-rate-hike-may-be-ahead-as-fed-bat-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "market_selloff",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Nasdaq cae un 4,48% por temores de inflación en el sector tecnológico",
+   "source_url": "https://www.theepochtimes.com/business/wall-street-review-nasdaq-sinks-4-48-percent-as-inflation-fears-hit-ai-stocks-6105146",
+   "source_title": "theepochtimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-wall-street-review-nasdaq-sinks-4-48-percent-as-in-2026-10-18",
+   "date": "2026-10-18",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-18T00:00:00Z"
   }
  ]
 }
