@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-18T21:39:38Z",
+ "generated_utc": "2026-10-18T21:49:22Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.369,
- "event_risk": 0.391,
+ "event_risk": 0.392,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.154,
+   "riesgo": 0.155,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.442,
+   "aporte": -0.441,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.275,
+   "aporte": -0.274,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.218,
+   "aporte": -0.217,
    "fuente": "noticia"
   },
   {
