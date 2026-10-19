@@ -125,3 +125,6 @@ jobs:
         env: { TOKEN: "${{ github.token }}" }
         run: |
           bash .github/scripts/fx_store_push.sh out "fx-data - carry $(date -u +%FT%TZ)"
+      - name: Recalcular backtest de carry
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh workflow run fx-carry-backtest.yml --ref fx-agente -R "$GITHUB_REPOSITORY" || echo "no se pudo despachar"
