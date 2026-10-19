@@ -41,8 +41,8 @@ def load(offline: bool = False):
                 series[s] = D.price(s, client)
         if offline:
             fg = _json(os.path.join(C.CACHE_DIR, "fear_greed.json"))
-            fears = {"en": {}, "es": {}}
-            attn = {}
+            fears = {lang: D.fears_index(lang, offline=True) for lang in ("en", "es")}
+            attn = {k: D.wiki_views(lang, art, offline=True) for k, (lang, art) in C.WIKI_ATTENTION.items()}
         else:
             fg = D.fear_greed(client)
             fears = {lang: D.fears_index(lang, client) for lang in ("en", "es")}

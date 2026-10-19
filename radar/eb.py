@@ -38,9 +38,11 @@ def tau2_across(effects: list[float], variances: list[float], floor: float, cap:
     return float(min(max(est, floor), cap))
 
 
-def prior_var(tau2_all: float, w: float, floor: float) -> float:
-    """El corpus reparte la variación real entre setups: w alto → prior más ancho (le cree antes a los datos)."""
-    return max(floor, tau2_all * 2.0 * max(0.0, min(1.0, w)))
+def prior_var(tau2_all: float, w: float, floor: float, w_bar: float = 0.5) -> float:
+    """El corpus REPARTE la variación real entre setups estimada por EB: τ0² = τ²·w/w̄. En promedio el prior conserva
+    la τ² que dicen los datos; un setup con mejor evidencia (w > w̄) tiene prior más ancho y le cree antes a su
+    historia. (Hasta el 18-oct se usaba τ²·2w, que encogía de más porque w̄ ≈ 0.29; ver docs/RADAR_EB.md.)"""
+    return max(floor, tau2_all * max(0.0, min(1.0, w)) / max(w_bar, 1e-3))
 
 
 def normal_posterior(y: float, v: float, prior_mean: float, prior_v: float) -> tuple[float, float, float]:

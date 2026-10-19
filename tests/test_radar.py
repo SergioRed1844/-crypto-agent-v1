@@ -130,8 +130,13 @@ lvl, why = decide(pr, {"euforia": False, "gsy": "ok", "damage_event": False}, No
 ok(lvl == "ALERTA", f"con ventaja grande y muchos episodios la regla Selectivo alerta ({lvl}: {why})")
 lvl2, _ = decide(pr, {"euforia": True, "gsy": "ok"}, None, "crypto")
 ok(lvl2 == "VETADA", "euforia (F&G ≥ 80) veta")
-pr_c = dict(pr, p=C.ALERT["p_min"] + 0.02, q10=C.ALERT["q10_min"] + 0.02)
-ok(decide(pr_c, {}, "CAUTION", "crypto")[0] == "VIGILANCIA", "contexto CAUTION sube la exigencia +5 pp")
+pr_c = dict(pr, base=0.40, q10=0.42, p=0.47, lift=0.07, ret=0.05, n_eff=50)
+ok(decide(pr_c, {}, None, "crypto")[0] == "ALERTA" and decide(pr_c, {}, "CAUTION", "crypto")[0] == "VIGILANCIA",
+   "regla relativa: alerta si le gana con credibilidad a un día cualquiera; CAUTION sube la exigencia +5 pp")
+pr_s = dict(pr_c, p=C.ALERT["p_min"] + 0.02, q10=C.ALERT["q10_min"] + 0.02)
+ok(decide(pr_s, {}, None, "crypto", rule="selectivo")[0] == "ALERTA" and
+   decide(pr_s, {}, "CAUTION", "crypto", rule="selectivo")[0] == "VIGILANCIA", "regla selectiva (absoluta) disponible")
+ok(decide(dict(pr_c, q10=0.39), {}, None, "us")[0] == "VIGILANCIA", "si la cota baja no supera la base, no alerta")
 
 btc0 = make("BTC", N0, 1, "crypto", 0.03, shocks=shocks, rebound=0.0)
 panels_null = [build_panel(btc0, "crypto", btc0, aux)] + [

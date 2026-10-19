@@ -51,7 +51,7 @@ def bars_for(h_days: int, cls: str) -> int:
     return h_days if cls == "crypto" else max(1, round(h_days * 5 / 7))
 
 
-# ── Umbral de alerta ("Selectivo") ──────────────────────────────────────────────────────────────────────
+# ── Umbral de alerta (regla "relativo" por defecto; ver model.decide) ──────────────────────────────────────────────────────────────────────
 def _f(name, default):
     try:
         return float(os.getenv(name, default))
@@ -60,8 +60,9 @@ def _f(name, default):
 
 
 ALERT = {
-    "p_min": _f("RADAR_P_MIN", 0.65),          # probabilidad encogida de ganar ≥ meta neta
-    "q10_min": _f("RADAR_Q10_MIN", 0.55),      # cota baja (percentil 10 de la posterior)
+    "rule": os.getenv("RADAR_RULE", "relativo"),  # relativo | selectivo | moderado (ver model.decide)
+    "p_min": _f("RADAR_P_MIN", 0.65),          # (selectivo) probabilidad encogida de ganar ≥ meta neta
+    "q10_min": _f("RADAR_Q10_MIN", 0.55),      # (selectivo) cota baja (percentil 10 de la posterior)
     "lift_min": _f("RADAR_LIFT_MIN", 0.05),    # mejor que comprar un día cualquiera de ese activo
     "ret_min": _f("RADAR_RET_MIN", 0.03),      # rendimiento neto esperado encogido
     "neff_min": int(_f("RADAR_NEFF_MIN", 8)),  # episodios independientes mínimos del setup en la clase

@@ -345,7 +345,7 @@ def fear_greed(client=None) -> dict[str, float]:
     return old
 
 
-def wiki_views(lang: str, article: str, client=None, start: str = "2015-07-01") -> dict[str, float]:
+def wiki_views(lang: str, article: str, client=None, start: str = "2015-07-01", offline: bool = False) -> dict[str, float]:
     """Vistas diarias de un artículo de Wikipedia (usuarios, todos los accesos). Caché incremental."""
     key = f"wiki_{lang}_{_safe(article)}"
     p = os.path.join(C.CACHE_DIR, key + ".json")
@@ -355,6 +355,8 @@ def wiki_views(lang: str, article: str, client=None, start: str = "2015-07-01") 
             old = json.load(open(p))
         except ValueError:
             old = {}
+    if offline:
+        return old
     if old:
         start = (date.fromisoformat(max(old)) - timedelta(days=3)).isoformat()
     end = (datetime.now(timezone.utc).date() - timedelta(days=1)).isoformat()
@@ -379,10 +381,10 @@ def wiki_views(lang: str, article: str, client=None, start: str = "2015-07-01") 
     return old
 
 
-def fears_index(lang: str, client=None) -> dict[str, float]:
+def fears_index(lang: str, client=None, offline: bool = False) -> dict[str, float]:
     """Índice tipo FEARS (Da-Engelberg-Gao 2015) con Wikipedia: suma de log-vistas de términos de ansiedad.
     Es un PROXY (Wikipedia ≠ Google; C08-012 lo marca como hipótesis para México)."""
-    series = [wiki_views(lang, t, client) for t in C.FEARS_TERMS[lang]]
+    series = [wiki_views(lang, t, client, offline=offline) for t in C.FEARS_TERMS[lang]]
     days = sorted(set().union(*[set(s) for s in series])) if series else []
     out = {}
     for d in days:

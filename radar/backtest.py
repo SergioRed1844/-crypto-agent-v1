@@ -16,6 +16,8 @@ from . import eb
 from .model import Model, base_rates, clusters, collect, decide
 from .setups import SETUPS, risk_flags
 
+RULES = ("relativo", "selectivo", "moderado")
+
 
 def evaluate(panels, split: str | None = None) -> dict:
     split = split or C.SPLIT_DATE
@@ -34,10 +36,11 @@ def evaluate(panels, split: str | None = None) -> dict:
                 continue
             y, net, mae = it.out[(h, 1)]
             raw_asset = eb.jeffreys(pred["k"], pred["n"]) if pred["n"] else pred["raw_setup"]
-            level, _ = decide(pred, flags, None, it.cls)
+            levels = {r: decide(pred, flags, None, it.cls, rule=r)[0] for r in RULES}
             rows.append(dict(sid=it.sid, cls=it.cls, h=h, sym=it.sym, date=it.date, y=int(y), net=net, mae=mae,
                              p_eb=pred["p"], q10=pred["q10"], p_base=pred["base"], p_raw=raw_asset,
-                             p_pool=pred["raw_setup"], ret_pred=pred["ret"], level=level, inst=it))
+                             p_pool=pred["raw_setup"], ret_pred=pred["ret"], base_ret=pred["base_ret"],
+                             level=levels[C.ALERT["rule"]], levels=levels, inst=it))
     # tasa base en prueba (comprar un día cualquiera después del corte)
     test_base = defaultdict(list)
     test_base_sym = {}
@@ -48,7 +51,7 @@ def evaluate(panels, split: str | None = None) -> dict:
                 test_base[(p.cls, h)].append((b["b"], b["m"]))
                 test_base_sym[(p.sym, h)] = (b["b"], b["m"])
     out = {"split": split, "n_specs": train.n_specs, "n_test_rows": len(rows), "by": [], "calib": [],
-           "alerts": [], "setups": [], "train_tau_logit": float(np.sqrt(train.tau2_all)),
+           "alerts": [], "alerts_summary": {}, "setups": [], "train_tau_logit": float(np.sqrt(train.tau2_all)),
            "dow_train": train.dow, "lag": []}
     for (cls, h) in sorted({(r["cls"], r["h"]) for r in rows}):
         rr = [r for r in rows if r["cls"] == cls and r["h"] == h]
@@ -72,11 +75,11 @@ def evaluate(panels, split: str | None = None) -> dict:
                                  "real": float(np.mean([r["y"] for r in rr]))})
     # por setup (todas las clases y horizontes): ¿el setup superó a un día cualquiera fuera de muestra?
     for sid in SETUPS:
-        for h in C.HORIZONS:
-            rr = [r for r in rows if r["sid"] == sid and r["h"] == h]
+        for cls, h in sorted({(r["cls"], r["h"]) for r in rows if r["sid"] == sid}):
+            rr = [r for r in rows if r["sid"] == sid and r["h"] == h and r["cls"] == cls]
             if not rr:
                 continue
-            out["setups"].append({"sid": sid, "h": h, "n": len(rr),
+            out["setups"].append({"sid": sid, "cls": cls, "h": h, "n": len(rr),
                                   "n_clusters": len(clusters([r["inst"] for r in rr])),
                                   "hit": float(np.mean([r["y"] for r in rr])),
                                   "base": float(np.mean([r["p_base"] for r in rr])),
@@ -86,26 +89,15 @@ def evaluate(panels, split: str | None = None) -> dict:
                                                                      for r in rr])),
                                   "net_base": float(np.nanmean([test_base_sym.get((r["sym"], h), (np.nan, np.nan))[1]
                                                                 for r in rr]))})
-    # regla de alerta Selectivo (sin tope semanal ni contexto v4.2, que no existe en la historia)
-    al = [r for r in rows if r["level"] == "ALERTA"]
-    seen, uniq = set(), []
-    for r in sorted(al, key=lambda r: (r["sym"], r["sid"], r["date"], -r["p_eb"])):
-        key = (r["sym"], r["sid"], r["date"])
-        if key in seen:
-            continue
-        seen.add(key)
-        uniq.append(r)
-    out["alerts_summary"] = {
-        "n": len(uniq), "n_clusters": len(clusters([r["inst"] for r in uniq])) if uniq else 0,
-        "hit": float(np.mean([r["y"] for r in uniq])) if uniq else float("nan"),
-        "pred": float(np.mean([r["p_eb"] for r in uniq])) if uniq else float("nan"),
-        "net_mean": float(np.mean([r["net"] for r in uniq])) if uniq else float("nan"),
-        "net_median": float(np.median([r["net"] for r in uniq])) if uniq else float("nan"),
-        "worst_mae": float(np.min([r["mae"] for r in uniq])) if uniq else float("nan"),
-        "per_year": (len(uniq) / max(0.5, _years_since(split))) if uniq else 0.0,
-    }
-    out["alerts"] = [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items() if k != "inst"}
-                     for r in sorted(uniq, key=lambda r: r["date"])][-60:]
+    # reglas de alerta (sin tope semanal ni contexto v4.2, que no existen hacia atrás). Se reportan las tres.
+    out["rules"] = {}
+    for rule in RULES:
+        uniq = _uniq([r for r in rows if r["levels"][rule] == "ALERTA"])
+        out["rules"][rule] = _summ(uniq, split)
+        if rule == C.ALERT["rule"]:
+            out["alerts_summary"] = out["rules"][rule]
+            out["alerts"] = [{k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()
+                              if k not in ("inst", "levels")} for r in sorted(uniq, key=lambda r: r["date"])][-60:]
     # ventana de entrada: ¿la mejor ventana en entrenamiento también lo fue en prueba?
     for (sid, cls, h), g in sorted(train.groups.items()):
         t = g.get("lag_table")
@@ -127,6 +119,30 @@ def evaluate(panels, split: str | None = None) -> dict:
         by_cls[p.cls].append(p)
     out["dow_test"] = {cls: test_model._dow_table(ps, 7, split, "9999") for cls, ps in by_cls.items()}
     return out
+
+
+def _uniq(al):
+    seen, uniq = set(), []
+    for r in sorted(al, key=lambda r: (r["sym"], r["sid"], r["date"], -r["p_eb"])):
+        key = (r["sym"], r["sid"], r["date"])
+        if key in seen:
+            continue
+        seen.add(key)
+        uniq.append(r)
+    return uniq
+
+
+def _summ(u, split):
+    if not u:
+        return {"n": 0, "n_clusters": 0, "hit": float("nan"), "pred": float("nan"), "base": float("nan"),
+                "net_mean": float("nan"), "net_median": float("nan"), "base_ret": float("nan"),
+                "worst_mae": float("nan"), "pos": float("nan"), "per_year": 0.0}
+    return {"n": len(u), "n_clusters": len(clusters([r["inst"] for r in u])),
+            "hit": float(np.mean([r["y"] for r in u])), "pred": float(np.mean([r["p_eb"] for r in u])),
+            "base": float(np.mean([r["p_base"] for r in u])),
+            "net_mean": float(np.mean([r["net"] for r in u])), "net_median": float(np.median([r["net"] for r in u])),
+            "base_ret": float(np.mean([r["base_ret"] for r in u])), "worst_mae": float(np.min([r["mae"] for r in u])),
+            "pos": float(np.mean([r["net"] > 0 for r in u])), "per_year": len(u) / max(0.5, _years_since(split))}
 
 
 def _years_since(d: str) -> float:
@@ -159,21 +175,27 @@ def render_md(ev: dict, full_summary: dict | None = None, health: dict | None = 
     for c in ev["calib"]:
         L.append(f"| {c['tramo']} | {c['n']} | {_pct(c['pred'])} | {_pct(c['real'])} |")
     L += ["", "## 3. Setups fuera de muestra vs comprar un día cualquiera", "",
-          "| Setup | Horizonte | Disparos | Episodios | Acierto | Base local (predicción) | Día cualquiera real (prueba) | "
-          "Predicho EB | Neto medio | Neto día cualquiera (prueba) |", "|---|---|---|---|---|---|---|---|---|---|"]
+          "| Setup | Clase | Horizonte | Disparos | Episodios | Acierto | Base local (predicción) | Día cualquiera real "
+          "(prueba) | Predicho EB | Neto medio | Neto día cualquiera (prueba) |", "|---|---|---|---|---|---|---|---|---|---|---|"]
     for s in ev["setups"]:
-        L.append(f"| {s['sid']} | {s['h']} d | {s['n']} | {s['n_clusters']} | {_pct(s['hit'])} | {_pct(s['base'])} | "
+        L.append(f"| {s['sid']} | {s['cls']} | {s['h']} d | {s['n']} | {s['n_clusters']} | {_pct(s['hit'])} | {_pct(s['base'])} | "
                  f"{_pct(s['hit_base_test'])} | {_pct(s['pred'])} | {_pct(s['net'])} | {_pct(s['net_base'])} |")
-    a = ev["alerts_summary"]
-    L += ["", "## 4. Regla de alerta Selectivo en el periodo de prueba", "",
-          f"Alertas: **{a['n']}** ({a['n_clusters']} episodios; ~{a['per_year']:.1f}/año sin tope semanal) · "
-          f"acierto real **{_pct(a['hit'])}** vs predicho {_pct(a['pred'])} · neto medio {_pct(a['net_mean'])} · "
-          f"mediana {_pct(a['net_median'])} · peor caída durante la tenencia {_pct(a['worst_mae'])}.", "",
-          "Sin contexto v4.2 ni verificación de noticias (no existen hacia atrás): en vivo hay más filtros, no menos.", ""]
+    L += ["", "## 4. Reglas de alerta en el periodo de prueba", "",
+          f"Regla activa: **{C.ALERT['rule']}**. Sin contexto v4.2 ni verificación de noticias ni tope semanal (no existen "
+          "hacia atrás): en vivo hay más filtros, no menos. Se reportan las tres reglas para que se vea el costo de cada una.",
+          "", "| Regla | Alertas | Episodios | Por año | Acierto | Día cualquiera (local) | Predicho | Neto medio | "
+          "Mediana | Neto día cualquiera | % positivas | Peor caída |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for rule, a in ev["rules"].items():
+        L.append(f"| {rule} | {a['n']} | {a['n_clusters']} | {a['per_year']:.1f} | {_pct(a['hit'])} | {_pct(a['base'])} | "
+                 f"{_pct(a['pred'])} | {_pct(a['net_mean'])} | {_pct(a['net_median'])} | {_pct(a['base_ret'])} | "
+                 f"{_pct(a['pos'], 0)} | {_pct(a['worst_mae'])} |")
+    L.append("")
     if ev["alerts"]:
-        L += ["| Fecha | Activo | Setup | Horizonte | P | Ganó | Neto | Peor caída |", "|---|---|---|---|---|---|---|---|"]
-        for r in ev["alerts"][-25:]:
-            L.append(f"| {r['date']} | {r['sym']} | {r['sid']} | {r['h']} d | {_pct(r['p_eb'], 0)} | "
+        L += [f"Alertas de la regla activa ({C.ALERT['rule']}):", "",
+              "| Fecha | Activo | Setup | Horizonte | P | Base | Ganó | Neto | Peor caída |",
+              "|---|---|---|---|---|---|---|---|---|"]
+        for r in ev["alerts"][-30:]:
+            L.append(f"| {r['date']} | {r['sym']} | {r['sid']} | {r['h']} d | {_pct(r['p_eb'], 0)} | {_pct(r['p_base'], 0)} | "
                      f"{'sí' if r['y'] else 'no'} | {_pct(r['net'])} | {_pct(r['mae'])} |")
     L += ["", "## 5. Mejor día de compra", "", "### Ventana de entrada después del disparador",
           "| Setup | Clase | Horizonte | Encogido entrenamiento (t+1,2,3,5,8) | P(mejor) | Crudo prueba |",

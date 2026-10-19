@@ -87,6 +87,7 @@ SETUPS: dict[str, Setup] = {s.id: s for s in [
           "Ver volumen del retroceso y si el soporte (media de 50) aguantó al cierre.", in_corpus=False),
 ]}
 
+W_BAR = round(float(np.mean([s.weight(c) for s in SETUPS.values() for c in s.classes])), 4)   # w promedio
 CAL_EVIDENCE = ("E5", 0.4)    # efectos de calendario: correlacionales y erosionados (C08-008, C11-006)
 CAL_WEIGHT = round(E_WEIGHT[CAL_EVIDENCE[0]] * CAL_EVIDENCE[1], 3)
 

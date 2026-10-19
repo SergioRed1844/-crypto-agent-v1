@@ -18,7 +18,7 @@ import numpy as np
 
 from . import config as C
 from . import eb
-from .setups import CAL_WEIGHT, SETUPS, Panel, risk_flags, triggers, vetoed
+from .setups import CAL_WEIGHT, SETUPS, W_BAR, Panel, risk_flags, triggers, vetoed
 
 FLOOR_LOGIT = 0.05 ** 2      # τ mínimo ≈ ±1 pp alrededor de 50%
 CAP_LOGIT = 1.0
@@ -213,9 +213,9 @@ class Model:
         self.tau2r_all = eb.tau2_across([r["e_raw"] for r in eligible], [r["ve"] for r in eligible], FLOOR_RET, CAP_RET)
         for (sid, cls, h), r in raw.items():
             w = SETUPS[sid].weight(cls)
-            pv = eb.prior_var(self.tau2_all, w, FLOOR_LOGIT)
+            pv = eb.prior_var(self.tau2_all, w, FLOOR_LOGIT, W_BAR)
             d, dv, B = eb.normal_posterior(r["y"], r["v"], 0.0, pv)
-            pvr = eb.prior_var(self.tau2r_all, w, FLOOR_RET)
+            pvr = eb.prior_var(self.tau2r_all, w, FLOOR_RET, W_BAR)
             e, evar, Br = eb.normal_posterior(r["e_raw"], r["ve"], 0.0, pvr)
             g = dict(sid=sid, cls=cls, h=h, w=w, n_inst=r["n_inst"], n_eff=r["n_eff"], k_eff=round(r["k_eff"], 2),
                      raw_p=eb.jeffreys(r["k_eff"], r["n_eff"]), b_bar=r["b_bar"], delta_raw=r["y"], v=r["v"],
@@ -375,9 +375,18 @@ class Model:
 
 
 # ── decisión de alerta ──────────────────────────────────────────────────────────────────────────────────
-def decide(pred: dict, flags: dict, ctx_state: str | None, cls: str, extra: float = 0.0) -> tuple[str, list[str]]:
-    """ALERTA si pasa el umbral Selectivo y ningún veto; VIGILANCIA si es candidato pero no llega; VETADA si un veto."""
+def decide(pred: dict, flags: dict, ctx_state: str | None, cls: str, extra: float = 0.0,
+           rule: str | None = None) -> tuple[str, list[str]]:
+    """ALERTA si pasa la regla y ningún veto; VIGILANCIA si es candidato pero no llega; VETADA si un veto.
+
+    Reglas (C.ALERT['rule']):
+    - "relativo" (por defecto desde el 19-oct): la probabilidad encogida le gana a comprar un día cualquiera con
+      ≥ 90% de credibilidad (q10 ≥ base) y por ≥ +5 pp, con neto esperado ≥ 3% y ≥ 8 episodios.
+    - "selectivo": además P ≥ 65% y q10 ≥ 55% absolutos. Con la meta de ganancia neta (1.5/3/5%) las tasas base son de
+      25–45%, así que casi nunca se alcanza (1 alerta en 4.8 años fuera de muestra).
+    - "moderado": P ≥ 60% absoluta + ventaja ≥ 5 pp + neto ≥ 3%."""
     A = C.ALERT
+    rule = rule or A.get("rule", "relativo")
     why = []
     v = vetoed(flags, pred["h"])
     if v:
@@ -386,11 +395,18 @@ def decide(pred: dict, flags: dict, ctx_state: str | None, cls: str, extra: floa
     if cls == "crypto" and ctx_state == "CAUTION":
         bump += A["caution_extra"]
         why.append(f"contexto v4.2 en CAUTION: exigencia +{A['caution_extra'] * 100:.0f} pp")
-    checks = [(pred["p"] >= A["p_min"] + bump, f"P {pred['p']:.0%} < {A['p_min'] + bump:.0%}"),
-              (pred["q10"] >= A["q10_min"] + bump, f"cota baja {pred['q10']:.0%} < {A['q10_min'] + bump:.0%}"),
-              (pred["lift"] >= A["lift_min"], f"ventaja vs día cualquiera {pred['lift'] * 100:+.1f} pp < "
-                                              f"{A['lift_min'] * 100:.0f} pp"),
-              (pred["ret"] >= A["ret_min"], f"rendimiento neto esperado {pred['ret']:.1%} < {A['ret_min']:.0%}"),
-              (pred["n_eff"] >= A["neff_min"], f"solo {pred['n_eff']} episodios independientes (< {A['neff_min']})")]
+    checks = []
+    if rule == "selectivo":
+        checks += [(pred["p"] >= A["p_min"] + bump, f"P {pred['p']:.0%} < {A['p_min'] + bump:.0%}"),
+                   (pred["q10"] >= A["q10_min"] + bump, f"cota baja {pred['q10']:.0%} < {A['q10_min'] + bump:.0%}")]
+    elif rule == "moderado":
+        checks += [(pred["p"] >= 0.60 + bump, f"P {pred['p']:.0%} < {0.60 + bump:.0%}")]
+    else:
+        checks += [(pred["q10"] >= pred["base"] + bump,
+                    f"cota baja {pred['q10']:.0%} no supera a un día cualquiera ({pred['base'] + bump:.0%})")]
+    checks += [(pred["lift"] >= A["lift_min"] + (bump if rule == "relativo" else 0.0),
+                f"ventaja vs día cualquiera {pred['lift'] * 100:+.1f} pp < {(A['lift_min']) * 100:.0f} pp"),
+               (pred["ret"] >= A["ret_min"], f"rendimiento neto esperado {pred['ret']:.1%} < {A['ret_min']:.0%}"),
+               (pred["n_eff"] >= A["neff_min"], f"solo {pred['n_eff']} episodios independientes (< {A['neff_min']})")]
     fails = [msg for ok, msg in checks if not ok]
     return ("ALERTA", why) if not fails else ("VIGILANCIA", why + fails)
