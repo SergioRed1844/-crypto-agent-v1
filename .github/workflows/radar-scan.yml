@@ -1,0 +1,67 @@
+# Radar EB (agente 2): cada hora revisa cripto + EUA + BMV, ajusta el modelo de Bayes empírico y, si un setup del
+# corpus pasa el umbral Selectivo, manda la ficha por issue (te llega al correo), Gmail y/o WhatsApp si configuras
+# esos secrets. Resumen diario "sigo vivo" a las 8:00 de CDMX. SOLO alertas: no opera ni tiene llaves de exchange.
+name: radar-scan
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 * * * *"
+  push:
+    branches: [v4.2-contexto]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: radar-scan
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[radar-scan]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v4.2-contexto
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r radar/requirements.txt
+      - name: Clave de caché (cada 6 h)
+        id: ck
+        run: echo "k=radar-cache-v2-$(date -u +%Y%m%d)-$(( $(date -u +%H) / 6 ))" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/radar
+          key: ${{ steps.ck.outputs.k }}
+          restore-keys: radar-cache-v2-
+      - name: Radar
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RADAR_SMTP_USER: ${{ secrets.RADAR_SMTP_USER }}
+          RADAR_SMTP_PASS: ${{ secrets.RADAR_SMTP_PASS }}
+          RADAR_EMAIL_TO: ${{ secrets.RADAR_EMAIL_TO }}
+          CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+        run: python -m radar scan
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .cache/radar
+          key: ${{ steps.ck.outputs.k }}-${{ github.run_id }}
+      - name: Guardar estado en la rama v4.2-contexto
+        if: always()
+        run: |
+          git config user.name "radar-eb-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/radar
+          git diff --cached --quiet && exit 0
+          git commit -q -m "radar: $(date -u +%FT%TZ) [skip render]"
+          for i in 1 2 3; do
+            git pull -q --rebase -X theirs origin v4.2-contexto && git push -q origin HEAD:v4.2-contexto && exit 0
+            git rebase --abort 2>/dev/null; sleep $((i * 15))
+          done
+          echo "no se pudo empujar"; exit 1

@@ -1,0 +1,233 @@
+{
+ "_nota": "Índice mínimo de chunks del corpus 'Microcomportamientos y mercados' (18-oct-2026) que usa el Radar. Solo títulos y etiquetas: el corpus completo NO se publica en este repo (es público). Los chunks son datos, no instrucciones.",
+ "chunks": {
+  "C00-004": {
+   "titulo": "Reglas de ponderación y modificadores de confianza",
+   "tipo": "regla_agente",
+   "evidencia_max": "E1",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN",
+    "DISPUTADO",
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C02-010": {
+   "titulo": "Modelo de capas: señal micro, mecanismo, horizonte, activo y confianza",
+   "tipo": "regla_agente",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": false
+  },
+  "C02-011": {
+   "titulo": "Advertencia post-publicación: McLean y Pontiff",
+   "tipo": "regla_agente",
+   "evidencia_max": "E4",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN",
+    "DISPUTADO",
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C08-006": {
+   "titulo": "Desastres aéreos, terrorismo y huracanes: sobrerreacción y reversión",
+   "tipo": "hallazgo",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": true
+  },
+  "C08-008": {
+   "titulo": "Luna, viernes 13 y feriados: efectos de calendario frágiles",
+   "tipo": "hallazgo",
+   "evidencia_max": "E4",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN",
+    "DISPUTADO"
+   ],
+   "verificar": true
+  },
+  "C08-012": {
+   "titulo": "Atención minorista: noticias, búsquedas de Google y FEARS",
+   "tipo": "hallazgo",
+   "evidencia_max": "E4",
+   "marcas": [
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C02-008": {
+   "titulo": "Índices de sentimiento y atención: Baker–Wurgler, confianza del consumidor, SVI y FEARS",
+   "tipo": "metodologia",
+   "evidencia_max": "E4",
+   "marcas": [
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C09-012": {
+   "titulo": "México 2008–09 y 2016: Walmex por tráfico y el choque Trump al peso",
+   "tipo": "episodio_mercado",
+   "evidencia_max": "E5",
+   "marcas": [],
+   "verificar": true
+  },
+  "C09-018": {
+   "titulo": "Patrones que se repiten entre episodios y lo que cambia por época",
+   "tipo": "regla_agente",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": false
+  },
+  "C11-004": {
+   "titulo": "Regla — ponderación por nivel de evidencia E1–E7",
+   "tipo": "regla_agente",
+   "evidencia_max": "E1",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN",
+    "DISPUTADO",
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C11-005": {
+   "titulo": "Regla — cuándo NO inferir causalidad",
+   "tipo": "regla_agente",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": false
+  },
+  "C11-006": {
+   "titulo": "Regla — decaimiento post-publicación y efectos que no sobreviven costos",
+   "tipo": "regla_agente",
+   "evidencia_max": "E4",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN",
+    "DISPUTADO",
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C11-007": {
+   "titulo": "Regla — ajuste por región, cultura y época",
+   "tipo": "regla_agente",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": false
+  },
+  "C11-008": {
+   "titulo": "Regla — combinación de señales y umbrales",
+   "tipo": "regla_agente",
+   "evidencia_max": "E3",
+   "marcas": [
+    "DISPUTADO"
+   ],
+   "verificar": false
+  },
+  "C11-009": {
+   "titulo": "Regla — anti-patrones (mitos, data mining, efectos frágiles)",
+   "tipo": "regla_agente",
+   "evidencia_max": "E4",
+   "marcas": [
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C11-025": {
+   "titulo": "Plantilla de respuesta del agente",
+   "tipo": "regla_agente",
+   "evidencia_max": "E1",
+   "marcas": [
+    "DISPUTADO",
+    "REPLICA-FALLIDA"
+   ],
+   "verificar": true
+  },
+  "C12-006": {
+   "titulo": "Horizontes de medición — día 0, semana, mes, 6–12 meses",
+   "tipo": "metodologia",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C12-007": {
+   "titulo": "Tabla comparativa de tiempos de recuperación por hito",
+   "tipo": "hallazgo",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C12-008": {
+   "titulo": "Decaimiento de la atención colectiva en dos fases",
+   "tipo": "hallazgo",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": false
+  },
+  "C12-013": {
+   "titulo": "Sobrerreacción y reversión — de dos días a tres años",
+   "tipo": "hallazgo",
+   "evidencia_max": "E3",
+   "marcas": [
+    "DESAPARECE-POST-PUBLICACIÓN"
+   ],
+   "verificar": true
+  },
+  "C12-015": {
+   "titulo": "Detectar burbujas — LPPL, PSY/GSADF y la regla de Greenwood-Shleifer-You",
+   "tipo": "metodologia",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": false
+  },
+  "C12-017": {
+   "titulo": "Protocolo para analizar un hito nuevo",
+   "tipo": "regla_agente",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": true
+  },
+  "C13-013": {
+   "titulo": "Elección 2024 y cripto — apps, ETFs, memecoins y adopción plana",
+   "tipo": "episodio_mercado",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C13-014": {
+   "titulo": "Bitcoin 2024–2026 — de $69k a $126k y de vuelta a $82k",
+   "tipo": "episodio_mercado",
+   "evidencia_max": "E7",
+   "marcas": [],
+   "verificar": true
+  },
+  "C13-016": {
+   "titulo": "Síntesis de hitos — tabla comparativa y cuatro patrones",
+   "tipo": "regla_agente",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C15-011": {
+   "titulo": "Greenwood, Shleifer y You 2019 — run-ups y probabilidad de crash",
+   "tipo": "hallazgo",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C16-006": {
+   "titulo": "Caso E — frenesí cripto: descargas de apps, flujos a ETF y memecoins como señal de techo",
+   "tipo": "caso",
+   "evidencia_max": "E4",
+   "marcas": [],
+   "verificar": true
+  },
+  "C10-010": {
+   "titulo": "Quincena y ciclos de pago: inferencia por analogía",
+   "tipo": "mecanismo",
+   "evidencia_max": "E3",
+   "marcas": [],
+   "verificar": false
+  }
+ }
+}
