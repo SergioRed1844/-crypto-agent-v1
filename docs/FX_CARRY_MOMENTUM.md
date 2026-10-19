@@ -86,6 +86,33 @@ Moskowitz-Ooi-Pedersen 2012; Moreira-Muir 2017; BNP 2008). Las primas se publica
   - drawdown máximo < 8%.
 - **Si no se cumple:** no se opera y se reporta tal cual.
 
+## Resultado (19-oct-2026, datos completos ene-2015 → sep-2026) — **NO pasa la compuerta: no se opera**
+
+| | combinado | combinado costos ×2 | solo carry | solo momentum |
+|---|---|---|---|---|
+| retorno total 2016→2026 | −1.3% | −7.5% (apagado por DD 8%) | +2.6% | −7.3% (apagado por DD 8%) |
+| Sharpe / PSR | −0.04 / 0.45 | −0.71 / 0.01 | 0.10 / 0.63 | −0.80 / 0.00 |
+| drawdown máx. | 7.3% | 8.1% | 5.5% | 8.1% |
+| % semanas positivas | 53% | — | 53% | — |
+| peor semana | −1.5% | −1.1% | −1.6% | −0.7% |
+
+Por era (combinado):
+
+| era | resultado |
+|---|---|
+| 2016–2019 | −5.9% |
+| 2020–2021 | −0.4% |
+| 2022–2024 | +5.5% (Sharpe 0.54) |
+| 2025–2026 | −0.2% |
+
+- **Momentum:** perdió de forma sostenida, lo cual coincide con lo que reporta la literatura tras 2010.
+- **Carry:** solo ganó cuando las tasas de emergentes estaban altas (2022–2024), y ni así es estadísticamente
+  distinto de cero.
+- **Gobernador semanal:** funcionó. Saltó 4 veces y ninguna semana pasó de −1.56%.
+- **Costos:** fueron chicos (US$69 en 10 años sobre US$2,000), así que el problema no es el costo sino la prima.
+
+Detalle: `data/fx/CARRY_BACKTEST.md`.
+
 ## Cambios posteriores
 - 19-oct-2026, **antes de ver datos**: corrección de un error de unidades en el filtro de choque del carry (el
   retorno semanal y su σ ahora se miden con los mismos pesos). No cambia ninguna regla.
