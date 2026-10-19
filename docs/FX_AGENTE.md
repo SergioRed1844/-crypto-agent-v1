@@ -20,21 +20,21 @@ la peor semana y la racha de semanas negativas se reportan tal cual en `data/fx/
 
 ## Resultado del backtest (19-oct-2026) — **sin ventaja neta: el agente no opera**
 
-Datos: velas de 1 minuto bid/ask de Dukascopy de ene-2015 a 16-oct-2026, 5 pares, 18 grupos (par, slot) y unos 31 mil
-eventos simulados. La primera corrida tuvo ~93% de los días; la reparación de los días faltantes vuelve a correr
-el backtest sola (`data/fx/BACKTEST.md` siempre tiene la versión vigente).
+Datos completos: velas de 1 minuto bid/ask de Dukascopy (ene-2015 → 16-oct-2026), 5 pares, 18 grupos (par, slot),
+33,274 eventos simulados.
 
 - **Walk-forward 2018 → 2026:** el EB no activó **ningún** (par, slot) en ningún año. 0 operaciones fuera de muestra.
-- **¿Costo o señal?** Con solo el spread real (cuenta ECN) o con **costo cero**, el EB activa 2–3 grupos en algún
-  año, y esas operaciones **pierden** fuera de muestra (−0.20 a −0.24 R por operación). O sea, no es que OANDA
-  sea caro: después de los primeros 15 minutos ya no queda un drift explotable en estos pares.
-- **Dentro de muestra**, la mejor de 12 variantes por grupo tiene t < 1.7 en todos los casos (lo que da el azar con
-  ~200 ensayos). El único rastro de drift bruto es el slot de las 10:00 NY (t ≈ 2 antes de costos en USD/CHF y
-  USD/MXN), y desaparece con costos.
-- **Conclusión honesta:** la Estrategia A del corpus (Almeida et al. 1998, datos de los 90) no sobrevive en
-  2015–2026 con costos minoristas. El agente queda **listo y seguro, pero plano**: mide todos los slots en práctica
-  (z y spreads reales del broker) y solo operaría si un refresco mensual del backtest validara un grupo fuera de
-  muestra.
+- **¿Costo o señal?** Ni con solo el spread (cuenta ECN) ni con **costo cero** se activa nada. Con la muestra al
+  93% sí se activaban 2–3 grupos con costo cero, y esos perdían fuera de muestra. O sea, no es que OANDA sea caro:
+  después de los primeros 15 minutos no queda un drift explotable en estos pares.
+- **Dentro de muestra:** la mejor de 12 variantes por grupo tiene t < 1.5 en todos los casos, que es lo que da el
+  azar con ~200 ensayos.
+- **Conclusión:** la Estrategia A del corpus (Almeida et al. 1998, datos de los 90) no sobrevive en 2015–2026. El
+  agente queda **listo y seguro, pero plano**:
+  - en práctica mide todos los slots (z y spreads reales del broker);
+  - solo operaría si un refresco mensual validara un grupo fuera de muestra.
+- **Estrategia B (carry + momentum):** también se probó, pre-registrada, y **tampoco pasa** (Sharpe −0.04 de 2016 a
+  2026). Ver `docs/FX_CARRY_MOMENTUM.md`.
 
 ## Arquitectura (capas del corpus F15-014)
 
