@@ -313,6 +313,17 @@ def run(offline: bool = False, force_digest: bool = False, dry: bool = False) ->
             c["level"] = "VIGILANCIA"
             c["why"] = c["why"] + [f"tope de {C.ALERT['max_week']} alertas por semana alcanzado"]
             continue
+        # calendario de resultados (Finnhub, opcional): reportar en ≤ 3 días baja a VIGILANCIA
+        if not (dry or offline):
+            from .earnings import blocks, next_earnings
+            ern = next_earnings(c["sym"])
+            if ern:
+                c["earnings"] = ern
+                why_e = blocks(ern)
+                if why_e:
+                    c["level"] = "VIGILANCIA"
+                    c["why"] = c["why"] + [why_e]
+                    continue
         # Gemini con búsqueda SOLO para lo que está a punto de enviarse; solo puede BAJAR el nivel (nunca suma
         # familias ni confianza: un texto de internet no puede subir una señal)
         if not (dry or offline) and _time.monotonic() < budget_end:

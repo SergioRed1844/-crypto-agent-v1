@@ -1,10 +1,10 @@
 # Copia de los datos públicos que usa el Radar (precios diarios, Fear&Greed, vistas de Wikipedia) a la rama
-# `radar-data`, para poder analizar sin red. Solo corre a mano o al empujar a radar-eb con [snapshot] en el mensaje.
+# `radar-data`, para poder analizar sin red. Solo corre a mano o al empujar a v4.2-contexto con [snapshot] en el mensaje.
 name: radar-snapshot
 on:
   workflow_dispatch:
   push:
-    branches: [radar-eb]
+    branches: [v4.2-contexto]
 permissions:
   contents: write
 concurrency:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: radar-eb
+          ref: v4.2-contexto
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

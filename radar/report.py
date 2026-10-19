@@ -112,6 +112,9 @@ def ficha_md(c: dict) -> str:
         for f_ in (n.get("fuentes") or [])[:4]:
             L.append(f"- [{f_.get('titulo', 'fuente')[:90]}]({f_.get('url')})")
         L.append("")
+    ern = c.get("earnings") or {}
+    if ern.get("date"):
+        L += [f"**RESULTADOS TRIMESTRALES:** próximo reporte {ern['date']} (en {ern.get('days')} días; Finnhub)", ""]
     L += [f"**RIESGOS REVISADOS:** run-up 2 años (neto de mercado) {pct(fl.get('gsy_runup_2y'), 0)} → GSY "
           f"{fl.get('gsy')} · euforia {'SÍ' if fl.get('euforia') else 'no'} · Fear&Greed {fl.get('fear_greed') or '—'} · "
           f"VIX {fl.get('vix') or '—'}", ""]

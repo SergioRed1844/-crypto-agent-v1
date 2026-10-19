@@ -7,7 +7,7 @@ on:
   schedule:
     - cron: "41 * * * *"
   push:
-    branches: [radar-eb]
+    branches: [v4.2-contexto]
 permissions:
   contents: write
   issues: write
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: radar-eb
+          ref: v4.2-contexto
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -45,13 +45,14 @@ jobs:
           RADAR_EMAIL_TO: ${{ secrets.RADAR_EMAIL_TO }}
           CALLMEBOT_PHONE: ${{ secrets.CALLMEBOT_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
         run: python -m radar scan
       - uses: actions/cache/save@v4
         if: always()
         with:
           path: .cache/radar
           key: ${{ steps.ck.outputs.k }}-${{ github.run_id }}
-      - name: Guardar estado en la rama radar-eb
+      - name: Guardar estado en la rama v4.2-contexto
         if: always()
         run: |
           git config user.name "radar-eb-bot"
@@ -60,7 +61,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "radar: $(date -u +%FT%TZ) [skip render]"
           for i in 1 2 3; do
-            git pull -q --rebase -X theirs origin radar-eb && git push -q origin HEAD:radar-eb && exit 0
+            git pull -q --rebase -X theirs origin v4.2-contexto && git push -q origin HEAD:v4.2-contexto && exit 0
             git rebase --abort 2>/dev/null; sleep $((i * 15))
           done
           echo "no se pudo empujar"; exit 1

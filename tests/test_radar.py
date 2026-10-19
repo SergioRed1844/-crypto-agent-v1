@@ -242,6 +242,12 @@ ok(calls[n0:] == ["1mo", "max"] and abs(s_after.close[0] / (base_s.close[0] * 0.
 D.fetch_yahoo = orig_fy
 os.remove(D.cache_path("AAPL"))
 
+from radar import earnings as E  # noqa: E402
+ok(E.next_earnings("AAPL") is None, "sin FINNHUB_API_KEY el calendario de resultados no hace nada")
+ok(E.blocks({"date": "2026-10-21", "days": 2, "hour": "amc"}) and E.blocks({"date": "2026-11-20", "days": 30}) is None,
+   "reportar en ≤3 días baja a VIGILANCIA; más lejos solo se informa")
+ok(not E.applies("SPY") and not E.applies("WALMEX.MX") and E.applies("NVDA"), "resultados solo para acciones de EUA")
+
 # ── 7. corrida completa sin red (caché sintética) ───────────────────────────────────────────────────────
 from radar import pipeline as P  # noqa: E402
 os.makedirs(C.CACHE_DIR, exist_ok=True)

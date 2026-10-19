@@ -1,12 +1,12 @@
 # Radar EB (agente 2, solo alertas): validación fuera de muestra con datos reales. Corre al empujar cambios del
-# modelo a la rama radar-eb y una vez al mes (el cron vive en main). No opera nada; no usa llaves de exchange.
+# modelo a la rama v4.2-contexto y una vez al mes (el cron vive en main). No opera nada; no usa llaves de exchange.
 name: radar-backtest
 on:
   workflow_dispatch:
   schedule:
     - cron: "29 4 3 * *"
   push:
-    branches: [radar-eb]
+    branches: [v4.2-contexto]
     paths: ["radar/**", "tests/test_radar.py", ".github/workflows/radar-backtest.yml"]
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: radar-eb
+          ref: v4.2-contexto
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,7 +43,7 @@ jobs:
         with:
           path: .cache/radar
           key: ${{ steps.ck.outputs.k }}-bt-${{ github.run_id }}
-      - name: Guardar en la rama radar-eb
+      - name: Guardar en la rama v4.2-contexto
         if: always()
         run: |
           git config user.name "radar-eb-bot"
@@ -52,7 +52,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "radar: validación fuera de muestra $(date -u +%FT%TZ) [skip render]"
           for i in 1 2 3; do
-            git pull -q --rebase -X theirs origin radar-eb && git push -q origin HEAD:radar-eb && exit 0
+            git pull -q --rebase -X theirs origin v4.2-contexto && git push -q origin HEAD:v4.2-contexto && exit 0
             git rebase --abort 2>/dev/null; sleep $((i * 15))
           done
           echo "no se pudo empujar"; exit 1

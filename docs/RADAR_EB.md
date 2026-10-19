@@ -127,13 +127,14 @@ En todas las reglas:
 | Gmail privado | `RADAR_SMTP_USER`, `RADAR_SMTP_PASS` (contraseña de aplicación), `RADAR_EMAIL_TO` (opcional) | HTML con tablas |
 | WhatsApp | `CALLMEBOT_PHONE`, `CALLMEBOT_APIKEY` | Texto corto; la ficha completa va por correo |
 | Noticias | `GEMINI_API_KEY` (ya existe) | Solo puede bajar el nivel de una alerta |
+| Resultados trimestrales | `FINNHUB_API_KEY` (gratis, 60 llamadas/min) | Acción de EUA que reporta en ≤ 3 días → VIGILANCIA; si no, se informa la fecha |
 
 ## Límites conocidos (honestos)
 
 - Wikipedia es **proxy** de Google Trends/FEARS. Para México es una hipótesis (C08-012).
 - Las vistas se usan con rezago de 1 día.
-- No hay flujos de ETF, resultados trimestrales ni calendario de reportes por emisora. El Radar no sabe si mañana
-  reporta la empresa: revísalo tú (está en "siguiente verificación").
+- No hay flujos de ETF. El calendario de resultados solo existe para acciones de EUA y solo si se agrega
+  `FINNHUB_API_KEY`; en la BMV revísalo tú (está en "siguiente verificación").
 - Los eventos políticos históricos son los ~260 curados del v4.2, así que el setup de choque político tiene pocos
   episodios. Por eso sale ancho y encogido.
 - 7 setups × 3 clases × 3 horizontes ≈ 50 especificaciones probadas. Algún "ganador" puede ser azar
