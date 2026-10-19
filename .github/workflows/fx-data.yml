@@ -51,7 +51,11 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q numpy httpx
-      - run: python -m fx.data_dukascopy year ${{ matrix.sym }} ${{ matrix.year }} out
+      - name: Descargar y reintentar días fallidos
+        run: |
+          python -m fx.data_dukascopy year ${{ matrix.sym }} ${{ matrix.year }} out || echo "con fallas: reparo"
+          python -m fx.data_dukascopy repair ${{ matrix.sym }} ${{ matrix.year }} out out2
+          mv out2/* out/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
