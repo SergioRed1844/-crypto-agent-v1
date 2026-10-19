@@ -32,6 +32,9 @@ description: Agente FX (agente 3, opera en OANDA v20) — Estrategia A del corpu
 12. **Resultado vigente (19-oct-2026): sin ventaja neta, 0 grupos activos** — ni con costo cero hay R>0 fuera de
     muestra. `model.json` solo activa grupos validados fuera de muestra; el motor mide (no opera) los inactivos para
     calibrar spreads y escalas. No "rescatar" la estrategia moviendo la rejilla: eso es data-mining (punto 6).
+13. **Estrategia B (carry + momentum, `fx/carry/`)** se pre-registró en `docs/FX_CARRY_MOMENTUM.md` y NO pasó su
+    compuerta (Sharpe −0.04, 2016–2026). Toda estrategia nueva: pre-registro con fecha ANTES de bajar datos,
+    compuerta fija, y se reporta tal cual aunque salga mal.
 
 ## Archivos
 `fx/config.py` · `fx/calendar.py` · `fx/data_dukascopy.py` · `fx/events.py` · `fx/model.py` · `fx/risk.py` ·

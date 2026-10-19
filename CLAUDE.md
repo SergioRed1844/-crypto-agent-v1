@@ -56,6 +56,8 @@ Motor + webhook (`python -m fx run`) y monitor independiente (`python -m fx moni
 para visualización e intents (FLATTEN/PAUSE/RESUME/CHECK/SIGNAL). Método y operación: `docs/FX_AGENTE.md`;
 validación: `data/fx/BACKTEST.md`; skill: `fx-event-drift`. Pruebas: `python -m tests.test_fx`.
 `FX_MODE=live` + `FX_LIVE_CONFIRM` solo los pone un humano tras la compuerta de práctica; Claude nunca.
+Estado 19-oct-2026: A (intradía macro) y B (carry + momentum, `fx/carry/`, pre-registrada) **sin ventaja neta** →
+0 grupos activos; el motor solo observa. Toda estrategia nueva se pre-registra antes de ver datos.
 
 ## Non-negotiable safety rules
 - **`PAPER_TRADING=true` always** during all development (in v4.x: `TRADING_MODE=paper`). Flipping to live is a manual
