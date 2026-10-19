@@ -1,0 +1,490 @@
+{
+ "alerts": [],
+ "seen": {
+  "AVAX|PULLBACK_TENDENCIA|2026-10-17": {
+   "level": "VIGILANCIA",
+   "utc": "2026-10-19T04:01:49+00:00"
+  },
+  "QQQ|PULLBACK_TENDENCIA|2026-10-16": {
+   "level": "VIGILANCIA",
+   "utc": "2026-10-19T04:01:49+00:00"
+  },
+  "NVDA|PULLBACK_TENDENCIA|2026-10-15": {
+   "level": "VIGILANCIA",
+   "utc": "2026-10-19T04:01:49+00:00"
+  },
+  "META|PULLBACK_TENDENCIA|2026-10-16": {
+   "level": "VIGILANCIA",
+   "utc": "2026-10-19T04:01:49+00:00"
+  }
+ },
+ "runs": [
+  "2026-10-19T04:01:49+00:00"
+ ],
+ "last_scan_utc": "2026-10-19T04:01:49+00:00",
+ "health": {
+  "AAPL": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "AC.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "ADA": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "ALSEA.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "AMXB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "AMZN": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "ASURB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "AVAX": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "BBAJIOO.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "BCH": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "BIMBOA.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "BTC": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "CEMEXCPO.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "DIA": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "DOGE": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "DOT": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "ETH": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "FEMSAUBD.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GAPB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GFNORTEO.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GLD": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GMEXICOB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GOOGL": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "GRUMAB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "IWM": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "JPM": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "KIMBERA.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "KOFUBL.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "LINK": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "LIVEPOLC-1.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "LTC": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "META": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "MSFT": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "MXN=X": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché yahoo"
+  },
+  "NAFTRACISHRS.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "NVDA": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "OMAB.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "ORBIA.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "PINFRA.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "QQQ": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "SMH": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "SOL": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "SPY": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "TRX": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "TSLA": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "WALMEX.MX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "WMT": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLE": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLF": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLI": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLK": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLP": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLU": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLV": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XLY": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XOM": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "XRP": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "caché binance"
+  },
+  "^MXX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "^VIX": {
+   "ok": true,
+   "last": "2026-10-16",
+   "nota": "caché yahoo"
+  },
+  "fear_greed": {
+   "ok": true,
+   "last": "2026-10-19",
+   "nota": "alternative.me"
+  },
+  "wiki_en_Recession": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Stock_market_crash": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Inflation": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Unemployment": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Bankruptcy": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Financial_crisis": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_es_Recesión": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_es_Crisis_económica": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_es_Inflación": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_es_Devaluación": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_es_Desempleo": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Bitcoin": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Ethereum": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Solana__blockchain_platform_": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Ripple_Labs": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Dogecoin": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "wiki_en_Cryptocurrency": {
+   "ok": true,
+   "last": "2026-10-15",
+   "nota": "wikimedia"
+  },
+  "contexto_v42": {
+   "ok": true,
+   "last": "2026-10-19T03:31:37Z",
+   "nota": "CAUTION"
+  }
+ },
+ "skipped": [],
+ "last_candidates": [
+  {
+   "sym": "AVAX",
+   "cls": "crypto",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-10-17",
+   "level": "VIGILANCIA",
+   "why": [
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 44%",
+    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +2.1 pp < 5 pp"
+   ],
+   "p": 0.415,
+   "base": 0.394,
+   "ret": 0.008,
+   "h": 7
+  },
+  {
+   "sym": "QQQ",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-10-16",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +3.9 pp < 5 pp"
+   ],
+   "p": 0.325,
+   "base": 0.286,
+   "ret": 0.0029,
+   "h": 7
+  },
+  {
+   "sym": "NVDA",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-10-15",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.3 pp < 5 pp"
+   ],
+   "p": 0.453,
+   "base": 0.411,
+   "ret": 0.0074,
+   "h": 7
+  },
+  {
+   "sym": "META",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-10-16",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+   ],
+   "p": 0.409,
+   "base": 0.367,
+   "ret": 0.0063,
+   "h": 7
+  }
+ ],
+ "digest_issue": {
+  "2026-10": 5
+ },
+ "last_digest_date": "2026-10-18",
+ "notify_log": [
+  "issue #5 creado",
+  "comentario en #5"
+ ]
+}
