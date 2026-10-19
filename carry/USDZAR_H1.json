@@ -2,17 +2,9 @@
  "code": "ZAR",
  "sym": "USDZAR",
  "months": 141,
- "failed": [
-  "2015-07: USDZAR/2015/06/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-09: USDZAR/2015/08/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-10: USDZAR/2015/09/BID_candles_hour_1.bi5: ReadTimeout",
-  "2015-11: USDZAR/2015/10/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-12: USDZAR/2015/11/BID_candles_hour_1.bi5: HTTP 503",
-  "2016-01: USDZAR/2016/00/ASK_candles_hour_1.bi5: HTTP 503",
-  "2016-02: USDZAR/2016/01/BID_candles_hour_1.bi5: HTTP 503"
- ],
- "bars": 69318,
- "median_mid": 15.33364,
+ "failed": [],
+ "bars": 72928,
+ "median_mid": 15.26778,
  "scale_ok": true,
  "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"

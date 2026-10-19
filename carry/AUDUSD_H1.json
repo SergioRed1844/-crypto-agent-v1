@@ -2,15 +2,10 @@
  "code": "AUD",
  "sym": "AUDUSD",
  "months": 141,
- "failed": [
-  "2015-01: AUDUSD/2015/00/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-02: AUDUSD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-04: AUDUSD/2015/03/ASK_candles_hour_1.bi5: ReadTimeout",
-  "2019-11: AUDUSD/2019/10/ASK_candles_hour_1.bi5: ConnectTimeout"
- ],
- "bars": 71219,
- "median_mid": 0.71031,
+ "failed": [],
+ "bars": 73232,
+ "median_mid": 0.71113,
  "scale_ok": true,
- "first": "2015-03-01T22:00Z",
+ "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"
 }

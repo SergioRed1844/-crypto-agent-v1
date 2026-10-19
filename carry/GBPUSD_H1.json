@@ -2,16 +2,10 @@
  "code": "GBP",
  "sym": "GBPUSD",
  "months": 141,
- "failed": [
-  "2015-01: GBPUSD/2015/00/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-02: GBPUSD/2015/01/ASK_candles_hour_1.bi5: RemoteProtocolError",
-  "2015-03: GBPUSD/2015/02/ASK_candles_hour_1.bi5: ReadTimeout",
-  "2015-04: GBPUSD/2015/03/ASK_candles_hour_1.bi5: ReadTimeout",
-  "2018-06: GBPUSD/2018/05/ASK_candles_hour_1.bi5: ConnectError"
- ],
- "bars": 70686,
- "median_mid": 1.30635,
+ "failed": [],
+ "bars": 73230,
+ "median_mid": 1.30921,
  "scale_ok": true,
- "first": "2015-05-01T00:00Z",
+ "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"
 }

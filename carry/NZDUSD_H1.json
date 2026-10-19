@@ -2,15 +2,9 @@
  "code": "NZD",
  "sym": "NZDUSD",
  "months": 141,
- "failed": [
-  "2015-02: NZDUSD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-03: NZDUSD/2015/02/ASK_candles_hour_1.bi5: HTTP 503",
-  "2015-06: NZDUSD/2015/05/ASK_candles_hour_1.bi5: ConnectError",
-  "2020-10: NZDUSD/2020/09/BID_candles_hour_1.bi5: ConnectError",
-  "2024-02: NZDUSD/2024/01/BID_candles_hour_1.bi5: ConnectError"
- ],
- "bars": 70655,
- "median_mid": 0.65657,
+ "failed": [],
+ "bars": 73223,
+ "median_mid": 0.65834,
  "scale_ok": true,
  "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"

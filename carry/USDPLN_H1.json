@@ -2,18 +2,10 @@
  "code": "PLN",
  "sym": "USDPLN",
  "months": 141,
- "failed": [
-  "2015-01: USDPLN/2015/00/ASK_candles_hour_1.bi5: ReadTimeout",
-  "2015-02: USDPLN/2015/01/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-03: USDPLN/2015/02/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-04: USDPLN/2015/03/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-05: USDPLN/2015/04/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-06: USDPLN/2015/05/BID_candles_hour_1.bi5: ReadTimeout",
-  "2015-11: USDPLN/2015/10/BID_candles_hour_1.bi5: ConnectTimeout"
- ],
- "bars": 69550,
- "median_mid": 3.85972,
+ "failed": [],
+ "bars": 73124,
+ "median_mid": 3.85115,
  "scale_ok": true,
- "first": "2015-07-01T00:00Z",
+ "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"
 }

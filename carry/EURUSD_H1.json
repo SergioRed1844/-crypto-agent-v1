@@ -2,17 +2,10 @@
  "code": "EUR",
  "sym": "EURUSD",
  "months": 141,
- "failed": [
-  "2015-01: EURUSD/2015/00/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-02: EURUSD/2015/01/ASK_candles_hour_1.bi5: ConnectTimeout",
-  "2015-04: EURUSD/2015/03/BID_candles_hour_1.bi5: HTTP 503",
-  "2015-06: EURUSD/2015/05/BID_candles_hour_1.bi5: ConnectTimeout",
-  "2019-01: EURUSD/2019/00/BID_candles_hour_1.bi5: ConnectTimeout",
-  "2019-11: EURUSD/2019/10/BID_candles_hour_1.bi5: ConnectError"
- ],
- "bars": 70162,
- "median_mid": 1.12082,
+ "failed": [],
+ "bars": 73233,
+ "median_mid": 1.12128,
  "scale_ok": true,
- "first": "2015-03-01T22:00Z",
+ "first": "2015-01-01T22:00Z",
  "last": "2026-09-30T23:00Z"
 }
