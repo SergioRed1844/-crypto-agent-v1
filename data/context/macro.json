@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-19T17:22:56Z",
+ "generated_utc": "2026-10-19T17:26:38Z",
  "fear_greed": {
   "value": 59,
   "label": "Greed",
@@ -7,7 +7,7 @@
   "avg_30d": 66.8
  },
  "stablecoins": {
-  "total_usd": 304647099817,
+  "total_usd": 304646060166,
   "chg_7d_pct": -0.54,
   "chg_30d_pct": 0.36
  },
