@@ -1,0 +1,26 @@
+{
+ "code": "NOK",
+ "sym": "USDNOK",
+ "months": 141,
+ "failed": [
+  "2015-11: USDNOK/2015/10/ASK_candles_hour_1.bi5: HTTP 503",
+  "2016-01: USDNOK/2016/00/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-04: USDNOK/2016/03/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-05: USDNOK/2016/04/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-08: USDNOK/2016/07/ASK_candles_hour_1.bi5: ReadTimeout",
+  "2016-09: USDNOK/2016/08/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-10: USDNOK/2016/09/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-11: USDNOK/2016/10/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-12: USDNOK/2016/11/BID_candles_hour_1.bi5: HTTP 503",
+  "2017-01: USDNOK/2017/00/BID_candles_hour_1.bi5: HTTP 503",
+  "2017-02: USDNOK/2017/01/ASK_candles_hour_1.bi5: ConnectTimeout",
+  "2017-03: USDNOK/2017/02/ASK_candles_hour_1.bi5: HTTP 503",
+  "2021-09: USDNOK/2021/08/ASK_candles_hour_1.bi5: ConnectError",
+  "2023-07: USDNOK/2023/06/BID_candles_hour_1.bi5: ConnectTimeout"
+ ],
+ "bars": 65899,
+ "median_mid": 9.0655,
+ "scale_ok": true,
+ "first": "2015-01-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}

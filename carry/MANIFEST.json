@@ -1,0 +1,228 @@
+[
+ {
+  "code": "AUD",
+  "sym": "AUDUSD",
+  "months": 141,
+  "failed": [
+   "2015-01: AUDUSD/2015/00/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-02: AUDUSD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-04: AUDUSD/2015/03/ASK_candles_hour_1.bi5: ReadTimeout",
+   "2019-11: AUDUSD/2019/10/ASK_candles_hour_1.bi5: ConnectTimeout"
+  ],
+  "bars": 71219,
+  "median_mid": 0.71031,
+  "scale_ok": true,
+  "first": "2015-03-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "EUR",
+  "sym": "EURUSD",
+  "months": 141,
+  "failed": [
+   "2015-01: EURUSD/2015/00/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-02: EURUSD/2015/01/ASK_candles_hour_1.bi5: ConnectTimeout",
+   "2015-04: EURUSD/2015/03/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-06: EURUSD/2015/05/BID_candles_hour_1.bi5: ConnectTimeout",
+   "2019-01: EURUSD/2019/00/BID_candles_hour_1.bi5: ConnectTimeout",
+   "2019-11: EURUSD/2019/10/BID_candles_hour_1.bi5: ConnectError"
+  ],
+  "bars": 70162,
+  "median_mid": 1.12082,
+  "scale_ok": true,
+  "first": "2015-03-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "GBP",
+  "sym": "GBPUSD",
+  "months": 141,
+  "failed": [
+   "2015-01: GBPUSD/2015/00/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-02: GBPUSD/2015/01/ASK_candles_hour_1.bi5: RemoteProtocolError",
+   "2015-03: GBPUSD/2015/02/ASK_candles_hour_1.bi5: ReadTimeout",
+   "2015-04: GBPUSD/2015/03/ASK_candles_hour_1.bi5: ReadTimeout",
+   "2018-06: GBPUSD/2018/05/ASK_candles_hour_1.bi5: ConnectError"
+  ],
+  "bars": 70686,
+  "median_mid": 1.30635,
+  "scale_ok": true,
+  "first": "2015-05-01T00:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "NZD",
+  "sym": "NZDUSD",
+  "months": 141,
+  "failed": [
+   "2015-02: NZDUSD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-03: NZDUSD/2015/02/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-06: NZDUSD/2015/05/ASK_candles_hour_1.bi5: ConnectError",
+   "2020-10: NZDUSD/2020/09/BID_candles_hour_1.bi5: ConnectError",
+   "2024-02: NZDUSD/2024/01/BID_candles_hour_1.bi5: ConnectError"
+  ],
+  "bars": 70655,
+  "median_mid": 0.65657,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "CAD",
+  "sym": "USDCAD",
+  "months": 141,
+  "failed": [
+   "2015-02: USDCAD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-04: USDCAD/2015/03/ASK_candles_hour_1.bi5: HTTP 503",
+   "2024-04: USDCAD/2024/03/BID_candles_hour_1.bi5: ConnectTimeout"
+  ],
+  "bars": 71695,
+  "median_mid": 1.32809,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "CHF",
+  "sym": "USDCHF",
+  "months": 141,
+  "failed": [
+   "2015-01: USDCHF/2015/00/ASK_candles_hour_1.bi5: RemoteProtocolError",
+   "2015-03: USDCHF/2015/02/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-05: USDCHF/2015/04/ASK_candles_hour_1.bi5: ConnectTimeout"
+  ],
+  "bars": 71688,
+  "median_mid": 0.93922,
+  "scale_ok": true,
+  "first": "2015-02-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "HUF",
+  "sym": "USDHUF",
+  "months": 141,
+  "failed": [
+   "2015-02: USDHUF/2015/01/BID_candles_hour_1.bi5: HTTP 503"
+  ],
+  "bars": 64128,
+  "median_mid": 305.145,
+  "scale_ok": true,
+  "first": "2015-01-02T07:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "JPY",
+  "sym": "USDJPY",
+  "months": 141,
+  "failed": [
+   "2015-02: USDJPY/2015/01/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-04: USDJPY/2015/03/BID_candles_hour_1.bi5: HTTP 503"
+  ],
+  "bars": 72224,
+  "median_mid": 114.69875,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "MXN",
+  "sym": "USDMXN",
+  "months": 141,
+  "failed": [
+   "2015-01: USDMXN/2015/00/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-03: USDMXN/2015/02/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-07: USDMXN/2015/06/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-08: USDMXN/2015/07/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-09: USDMXN/2015/08/ASK_candles_hour_1.bi5: HTTP 503"
+  ],
+  "bars": 70353,
+  "median_mid": 19.02069,
+  "scale_ok": true,
+  "first": "2015-02-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "NOK",
+  "sym": "USDNOK",
+  "months": 141,
+  "failed": [
+   "2015-11: USDNOK/2015/10/ASK_candles_hour_1.bi5: HTTP 503",
+   "2016-01: USDNOK/2016/00/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-04: USDNOK/2016/03/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-05: USDNOK/2016/04/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-08: USDNOK/2016/07/ASK_candles_hour_1.bi5: ReadTimeout",
+   "2016-09: USDNOK/2016/08/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-10: USDNOK/2016/09/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-11: USDNOK/2016/10/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-12: USDNOK/2016/11/BID_candles_hour_1.bi5: HTTP 503",
+   "2017-01: USDNOK/2017/00/BID_candles_hour_1.bi5: HTTP 503",
+   "2017-02: USDNOK/2017/01/ASK_candles_hour_1.bi5: ConnectTimeout",
+   "2017-03: USDNOK/2017/02/ASK_candles_hour_1.bi5: HTTP 503",
+   "2021-09: USDNOK/2021/08/ASK_candles_hour_1.bi5: ConnectError",
+   "2023-07: USDNOK/2023/06/BID_candles_hour_1.bi5: ConnectTimeout"
+  ],
+  "bars": 65899,
+  "median_mid": 9.0655,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "PLN",
+  "sym": "USDPLN",
+  "months": 141,
+  "failed": [
+   "2015-01: USDPLN/2015/00/ASK_candles_hour_1.bi5: ReadTimeout",
+   "2015-02: USDPLN/2015/01/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-03: USDPLN/2015/02/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-04: USDPLN/2015/03/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-05: USDPLN/2015/04/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-06: USDPLN/2015/05/BID_candles_hour_1.bi5: ReadTimeout",
+   "2015-11: USDPLN/2015/10/BID_candles_hour_1.bi5: ConnectTimeout"
+  ],
+  "bars": 69550,
+  "median_mid": 3.85972,
+  "scale_ok": true,
+  "first": "2015-07-01T00:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "SEK",
+  "sym": "USDSEK",
+  "months": 141,
+  "failed": [
+   "2015-02: USDSEK/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-08: USDSEK/2015/07/BID_candles_hour_1.bi5: ReadTimeout",
+   "2015-09: USDSEK/2015/08/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-10: USDSEK/2015/09/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-11: USDSEK/2015/10/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-02: USDSEK/2016/01/BID_candles_hour_1.bi5: ReadTimeout",
+   "2016-03: USDSEK/2016/02/BID_candles_hour_1.bi5: HTTP 503",
+   "2021-01: USDSEK/2021/00/ASK_candles_hour_1.bi5: ConnectError"
+  ],
+  "bars": 69103,
+  "median_mid": 9.29221,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ },
+ {
+  "code": "ZAR",
+  "sym": "USDZAR",
+  "months": 141,
+  "failed": [
+   "2015-07: USDZAR/2015/06/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-09: USDZAR/2015/08/BID_candles_hour_1.bi5: HTTP 503",
+   "2015-10: USDZAR/2015/09/BID_candles_hour_1.bi5: ReadTimeout",
+   "2015-11: USDZAR/2015/10/ASK_candles_hour_1.bi5: HTTP 503",
+   "2015-12: USDZAR/2015/11/BID_candles_hour_1.bi5: HTTP 503",
+   "2016-01: USDZAR/2016/00/ASK_candles_hour_1.bi5: HTTP 503",
+   "2016-02: USDZAR/2016/01/BID_candles_hour_1.bi5: HTTP 503"
+  ],
+  "bars": 69318,
+  "median_mid": 15.33364,
+  "scale_ok": true,
+  "first": "2015-01-01T22:00Z",
+  "last": "2026-09-30T23:00Z"
+ }
+]

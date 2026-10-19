@@ -1,0 +1,20 @@
+{
+ "code": "SEK",
+ "sym": "USDSEK",
+ "months": 141,
+ "failed": [
+  "2015-02: USDSEK/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+  "2015-08: USDSEK/2015/07/BID_candles_hour_1.bi5: ReadTimeout",
+  "2015-09: USDSEK/2015/08/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-10: USDSEK/2015/09/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-11: USDSEK/2015/10/BID_candles_hour_1.bi5: HTTP 503",
+  "2016-02: USDSEK/2016/01/BID_candles_hour_1.bi5: ReadTimeout",
+  "2016-03: USDSEK/2016/02/BID_candles_hour_1.bi5: HTTP 503",
+  "2021-01: USDSEK/2021/00/ASK_candles_hour_1.bi5: ConnectError"
+ ],
+ "bars": 69103,
+ "median_mid": 9.29221,
+ "scale_ok": true,
+ "first": "2015-01-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}

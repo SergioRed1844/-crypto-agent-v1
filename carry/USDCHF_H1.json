@@ -1,0 +1,15 @@
+{
+ "code": "CHF",
+ "sym": "USDCHF",
+ "months": 141,
+ "failed": [
+  "2015-01: USDCHF/2015/00/ASK_candles_hour_1.bi5: RemoteProtocolError",
+  "2015-03: USDCHF/2015/02/ASK_candles_hour_1.bi5: HTTP 503",
+  "2015-05: USDCHF/2015/04/ASK_candles_hour_1.bi5: ConnectTimeout"
+ ],
+ "bars": 71688,
+ "median_mid": 0.93922,
+ "scale_ok": true,
+ "first": "2015-02-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}

@@ -1,0 +1,13 @@
+{
+ "code": "HUF",
+ "sym": "USDHUF",
+ "months": 141,
+ "failed": [
+  "2015-02: USDHUF/2015/01/BID_candles_hour_1.bi5: HTTP 503"
+ ],
+ "bars": 64128,
+ "median_mid": 305.145,
+ "scale_ok": true,
+ "first": "2015-01-02T07:00Z",
+ "last": "2026-09-30T23:00Z"
+}

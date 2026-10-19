@@ -1,0 +1,17 @@
+{
+ "code": "MXN",
+ "sym": "USDMXN",
+ "months": 141,
+ "failed": [
+  "2015-01: USDMXN/2015/00/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-03: USDMXN/2015/02/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-07: USDMXN/2015/06/ASK_candles_hour_1.bi5: HTTP 503",
+  "2015-08: USDMXN/2015/07/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-09: USDMXN/2015/08/ASK_candles_hour_1.bi5: HTTP 503"
+ ],
+ "bars": 70353,
+ "median_mid": 19.02069,
+ "scale_ok": true,
+ "first": "2015-02-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}

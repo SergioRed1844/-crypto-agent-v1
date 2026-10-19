@@ -1,0 +1,14 @@
+{
+ "code": "JPY",
+ "sym": "USDJPY",
+ "months": 141,
+ "failed": [
+  "2015-02: USDJPY/2015/01/BID_candles_hour_1.bi5: HTTP 503",
+  "2015-04: USDJPY/2015/03/BID_candles_hour_1.bi5: HTTP 503"
+ ],
+ "bars": 72224,
+ "median_mid": 114.69875,
+ "scale_ok": true,
+ "first": "2015-01-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}

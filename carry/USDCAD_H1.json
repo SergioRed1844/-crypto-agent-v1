@@ -1,0 +1,15 @@
+{
+ "code": "CAD",
+ "sym": "USDCAD",
+ "months": 141,
+ "failed": [
+  "2015-02: USDCAD/2015/01/ASK_candles_hour_1.bi5: HTTP 503",
+  "2015-04: USDCAD/2015/03/ASK_candles_hour_1.bi5: HTTP 503",
+  "2024-04: USDCAD/2024/03/BID_candles_hour_1.bi5: ConnectTimeout"
+ ],
+ "bars": 71695,
+ "median_mid": 1.32809,
+ "scale_ok": true,
+ "first": "2015-01-01T22:00Z",
+ "last": "2026-09-30T23:00Z"
+}
