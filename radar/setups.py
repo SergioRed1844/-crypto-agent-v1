@@ -147,9 +147,10 @@ def build_panel(s, cls: str, bench, aux: dict) -> Panel:
     mxn = aux.get("mxn")
     if mxn is not None and len(mxn):
         mr = F.log_ret(mxn.close)
-        f["mxn_r1"] = F.align_series(s.dates, mxn.dates, mr, 0)
-        f["mxn_sig60"] = F.align_series(s.dates, mxn.dates, F.roll_std(mr, 60, shift=1), 0)
-        f["mxn_ret5"] = F.align_series(s.dates, mxn.dates, F.pct_change(mxn.close, 5), 0)
+        # rezago de 1 día de FX: en vivo la barra del día aún no cierra a la hora de la BMV → misma regla en historia
+        f["mxn_r1"] = F.align_before(s.dates, mxn.dates, mr)
+        f["mxn_sig60"] = F.align_before(s.dates, mxn.dates, F.roll_std(mr, 60, shift=1))
+        f["mxn_ret5"] = F.align_before(s.dates, mxn.dates, F.pct_change(mxn.close, 5))
     else:
         f["mxn_r1"] = f["mxn_sig60"] = f["mxn_ret5"] = np.full(len(s), np.nan)
     fg = F.align(s.dates, aux.get("fg") or {}, 1)

@@ -16,6 +16,7 @@ import os
 import time
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from urllib.parse import quote
 
 import numpy as np
@@ -90,12 +91,15 @@ def cache_path(sym: str) -> str:
     return os.path.join(C.CACHE_DIR, f"{_safe(sym)}.csv")
 
 
-def save_cache(s: Series) -> None:
-    """CSV con una primera línea de metadatos JSON (fuente, barra parcial, hora de actualización)."""
+def save_cache(s: Series, full: bool = False) -> None:
+    """CSV con una primera línea de metadatos JSON: fuente, barra parcial, última actualización y ÚLTIMA DESCARGA
+    COMPLETA (full_utc). El refresco completo diario depende de full_utc, no de 'updated' (que cambia cada hora)."""
     os.makedirs(C.CACHE_DIR, exist_ok=True)
     tmp = cache_path(s.sym) + ".tmp"
-    meta = {"source": s.source, "partial_last": bool(s.partial_last),
-            "updated": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    prev = cache_meta(s.sym)
+    meta = {"source": s.source, "partial_last": bool(s.partial_last), "updated": now,
+            "full_utc": now if full else prev.get("full_utc")}
     with open(tmp, "w", newline="") as fh:
         fh.write("#" + json.dumps(meta) + "\n")
         w = csv.writer(fh)
@@ -104,6 +108,23 @@ def save_cache(s: Series) -> None:
             w.writerow([d, f"{s.open[i]:.10g}", f"{s.high[i]:.10g}", f"{s.low[i]:.10g}", f"{s.close[i]:.10g}",
                         f"{s.volume[i]:.6g}"])
     os.replace(tmp, cache_path(s.sym))
+
+
+def cache_meta(sym: str) -> dict:
+    p = cache_path(sym)
+    try:
+        with open(p) as fh:
+            first = fh.readline()
+        return json.loads(first[1:]) if first.startswith("#") else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _hours_since(iso: str | None) -> float:
+    try:
+        return (datetime.now(timezone.utc) - datetime.fromisoformat(iso)).total_seconds() / 3600
+    except (TypeError, ValueError):
+        return 1e9
 
 
 def load_cache(sym: str) -> tuple[Series | None, float]:
@@ -185,9 +206,12 @@ def fetch_binance(client, sym: str, since: str = "2017-08-01") -> Series:
 
 
 def _yahoo_complete(local_date: str, sym: str) -> bool:
-    """¿La vela de ese día ya cerró? US y BMV cierran ≈21:00 UTC; damos margen a 21:30."""
+    """¿La vela de ese día ya cerró? US y BMV cierran ≈21:00 UTC (margen a 21:30). FX (=X) cierra a medianoche de
+    Londres: se da por cerrada a la 01:00 UTC del día siguiente."""
     now = datetime.now(timezone.utc)
     d = date.fromisoformat(local_date)
+    if sym.endswith("=X"):
+        return now >= datetime(d.year, d.month, d.day, 1, 0, tzinfo=timezone.utc) + timedelta(days=1)
     return now >= datetime(d.year, d.month, d.day, 21, 30, tzinfo=timezone.utc)
 
 
@@ -206,7 +230,12 @@ def fetch_yahoo(client, sym: str, rng: str = "max") -> Series:
     ts = r.get("timestamp") or []
     q = (r.get("indicators", {}).get("quote") or [{}])[0]
     adj = ((r.get("indicators", {}).get("adjclose") or [{}])[0]).get("adjclose")
-    off = int((r.get("meta") or {}).get("gmtoffset") or 0)
+    meta = r.get("meta") or {}
+    try:
+        tz = ZoneInfo(meta.get("exchangeTimezoneName") or "UTC")
+    except Exception:  # noqa: BLE001
+        tz = None
+    off = int(meta.get("gmtoffset") or 0)
     rows = []
     for i, t in enumerate(ts):
         c = q.get("close", [None] * len(ts))[i]
@@ -215,7 +244,9 @@ def fetch_yahoo(client, sym: str, rng: str = "max") -> Series:
         f = 1.0
         if adj and adj[i] is not None and c:
             f = adj[i] / c                                   # ajuste por dividendos/splits a toda la vela
-        d = datetime.fromtimestamp(t + off, timezone.utc).strftime("%Y-%m-%d")
+        # fecha local de CADA barra con su propio horario (verano/invierno); un solo gmtoffset corría un día las
+        # barras de FX del otro periodo (USD/MXN se sella a medianoche de Londres)
+        d = (datetime.fromtimestamp(t, tz) if tz else datetime.fromtimestamp(t + off, timezone.utc)).strftime("%Y-%m-%d")
         def g(k):
             v = q.get(k, [None] * len(ts))[i]
             return None if v is None else v * f
@@ -269,33 +300,48 @@ def fetch_fred_csv(client, sym: str) -> Series:
     return from_rows(sym, rows, "fred")
 
 
+def _consistent(old: Series, new: Series, tol: float = 0.002) -> bool:
+    """¿Los cierres que se traslapan coinciden? Si Yahoo re-ajustó (split/dividendo), la historia vieja ya no
+    empata y hay que bajar todo de nuevo (pegar barras re-ajustadas sobre viejas crea caídas falsas)."""
+    od = dict(zip(old.dates, old.close))
+    pairs = [(od[d], c) for d, c in zip(new.dates[:-3], new.close[:-3]) if d in od]
+    return all(abs(c / o - 1) <= tol for o, c in pairs) if pairs else True
+
+
 def price(sym: str, client=None, full_after_h: float = 20.0) -> Series | None:
-    """Serie diaria con caché. Refresco completo si la caché tiene > full_after_h horas; si no, incremental."""
+    """Serie diaria con caché. Descarga completa si la última COMPLETA tiene > full_after_h horas (o si el traslape
+    no empata); si no, incremental."""
     cached, age = load_cache(sym)
+    full_age = _hours_since(cache_meta(sym).get("full_utc")) if cached is not None else 1e9
     if cached is not None and C.asset_class(sym) != "crypto":
         try:
             check_daily(cached)
         except RuntimeError:
-            cached, age = None, 1e9                     # caché vieja con barras no diarias: se descarta
+            cached, age, full_age = None, 1e9, 1e9      # caché vieja con barras no diarias: se descarta
     cls = C.asset_class(sym)
     if age < 0.75 and cached is not None:            # ya se actualizó en los últimos 45 min
         HEALTH[sym] = {"ok": True, "last": cached.last_date, "nota": f"caché {cached.source}"}
         return cached
     own = client is None
     client = client or _client()
-    new, err = None, None
+    new, err, is_full = None, None, False
     try:
         if cls == "crypto" and sym in C.CRYPTO:
             since = "2017-08-01"
-            if cached is not None and age < full_after_h and len(cached) > 30:
+            is_full = True
+            if cached is not None and full_age < full_after_h and len(cached) > 30:
                 since = cached.dates[-5]
+                is_full = False
             new = fetch_binance(client, sym, since)
         else:
-            rng = "max" if (cached is None or age >= full_after_h) else "1mo"
+            is_full = cached is None or full_age >= full_after_h
             try:
-                new = fetch_yahoo(client, sym, rng)
+                new = fetch_yahoo(client, sym, "max" if is_full else "1mo")
+                if not is_full and cached is not None and not _consistent(cached, new):
+                    new, is_full = fetch_yahoo(client, sym, "max"), True
             except Exception as e:  # noqa: BLE001
                 err = e
+                is_full = True
                 if sym in FRED_IDS:
                     new = fetch_fred_csv(client, sym)
                 elif cls == "us" or sym == "^VIX":
@@ -308,8 +354,8 @@ def price(sym: str, client=None, full_after_h: float = 20.0) -> Series | None:
         if own:
             client.close()
     if new is not None and len(new):
-        full = new if (cached is None or new.dates[0] <= (cached.dates[0] if cached else "9999")) else merge(cached, new)
-        save_cache(full)
+        full = new if (cached is None or is_full) else merge(cached, new)
+        save_cache(full, full=is_full)
         HEALTH[sym] = {"ok": True, "last": full.last_date, "nota": new.source + (f" (respaldo; {err})" if err else "")}
         return full
     HEALTH[sym] = {"ok": False, "last": cached.last_date if cached else None,

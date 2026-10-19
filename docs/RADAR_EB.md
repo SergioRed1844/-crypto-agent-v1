@@ -80,18 +80,21 @@ EUA 0.2%, BMV 0.6%.
     w = E5 × 0.4 = 0.16 y el piso de concentración es 2000·(1−w) ≈ 1680, lo que da un encogimiento muy fuerte.
   - Si la diferencia encogida es < 0.5 pp, el Radar dice que ningún día destaca. **Solo sirve como desempate.**
 
-## Regla de alerta (por defecto **relativo**; `RADAR_RULE=relativo|selectivo|moderado`)
+## Regla de alerta (por defecto **relativo**; `RADAR_RULE=relativo|estricta|selectivo`)
 
 - **relativo:** ALERTA si se cumplen todas:
-  - la cota baja de la probabilidad encogida (q10) supera la tasa de comprar un día cualquiera del último año, es
-    decir, ≥ 90% de credibilidad de que es mejor;
-  - ventaja ≥ +5 pp;
-  - neto esperado ≥ 3%;
+  - la ventaja sobre comprar un día cualquiera es creíble: la cota baja de la probabilidad, con la tasa base fija, es
+    ≥ base (≈ 90%);
+  - la ventaja es de ≥ +5 pp;
+  - el neto esperado supera al de un día cualquiera por ≥ 1 pp;
   - ≥ 8 episodios independientes;
   - ningún veto.
-- **selectivo:** además pide P ≥ 65% y q10 ≥ 55% absolutos. Con las metas netas (1.5/3/5%), las tasas base son de
-  25–45%, así que casi nunca se cumple: 2 alertas en 4.8 años fuera de muestra.
-- **moderado:** P ≥ 60% absoluta, ventaja ≥ +5 pp y neto ≥ 3%.
+- **estricta:** como relativo, pero con neto esperado ≥ 3% absoluto. A 7 días casi nunca se cumple: 0 alertas en la
+  prueba.
+- **selectivo:** P ≥ 65% y q10 ≥ 55% absolutos. Es inalcanzable con metas netas, porque la tasa base es de 25–45%.
+
+La probabilidad es de ganar **al menos la meta neta**, no solo "subir". Por eso se ve baja (30–50%). La ficha también
+muestra cuántos episodios pasados terminaron con neto > 0 (dato crudo) y P(ventaja > 0).
 
 En todas las reglas:
 - Máximo 3 alertas por semana. Las demás pasan al resumen como VIGILANCIA.
@@ -187,3 +190,34 @@ con datos reales, hubo estos cambios:
 Para llegar aquí se probaron 2 variantes de prior × 3 reglas sobre el mismo periodo de prueba, así que hay riesgo de
 sobreajuste. Las tres reglas se siguen reportando en `BACKTEST.md`, y el seguimiento en vivo de las alertas
 (`state.json`) es la prueba que de verdad cuenta.
+
+### Segunda ronda (19-oct, después de la revisión independiente)
+
+Correcciones de sobre-confianza:
+
+- **Tasa base local.** La mezcla del último año con el largo plazo ya no usa K0 = 4 fijo. Ahora λ se **estima** con el
+  periodo de ajuste: cuánto de la desviación del último año se sostiene en el semestre siguiente.
+  - Resultado: λ ≈ 0 en cripto, 0–0.3 en EUA y 0.06–0.47 en BMV. La tasa reciente casi no se sostiene.
+  - La varianza de ese pronóstico entra al intervalo que se muestra. **No entra a la decisión**, que solo mira la
+    incertidumbre de la ventaja.
+- **Episodios independientes.** Los disparos a menos de min(h, 30) días son un solo episodio, en la clase y también
+  dentro de cada activo. Antes eran 3 días, y las tenencias de 30 y 90 días se traslapaban.
+- **Purga en el corte.** El entrenamiento solo usa resultados cuya salida es anterior al corte.
+- **Activo sin disparos propios.** Hereda la ventaja del setup, con varianza extra.
+- **USD/MXN.** Va con rezago de un día de mercado, porque su barra cierra a medianoche de Londres, después de la BMV.
+- **Caché.** La descarga completa ahora es diaria de verdad (`full_utc`), y se repite si el traslape no empata
+  (splits).
+- **Gemini.** Ya no suma "familias" ni confianza, y sus enlaces se eliminan.
+
+Con eso, la regla "relativo" con neto ≥ 3% absoluto ya no daba ninguna alerta. Se cambió a **neto ≥ +1 pp sobre un
+día cualquiera** (la misma lógica relativa). En la prueba (2022–oct 2026) quedó así:
+
+- 17 alertas en 10 episodios, ~3.5 al año, casi todas acciones/ETF de EUA (pánico sin daño a 30 días y capitulación a
+  7 días);
+- 59% llegaron a la meta, contra 31% de un día cualquiera;
+- neto medio +2.2% contra +0.5%, mediana +3.2%;
+- 65% terminaron en positivo;
+- peor caída durante la tenencia −12%.
+
+Es la segunda vez que se elige una regla mirando el mismo periodo de prueba. Esas cifras son optimistas: el juez real
+es el seguimiento en vivo.

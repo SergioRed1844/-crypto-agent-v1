@@ -294,25 +294,15 @@ def run(offline: bool = False, force_digest: bool = False, dry: bool = False) ->
     panels, series, ctx, skipped = load(offline)
     model = Model().fit(panels)
     cands = scan_candidates(model, panels, ctx)
-    # Gemini solo para candidatos que ya pasaron los números; solo puede bajar el nivel
+    # tope semanal y deduplicación ANTES de gastar la verificación de noticias
     from .narrative import check_cause
-    for c in [c for c in cands if c["level"] == "ALERTA"][:5]:
-        if dry or offline:
-            break
-        n = check_cause(c["sym"], c["date"], c.get("r1") or 0.0, c.get("b_r1"))
-        if n:
-            c["news"] = n
-            c["families"] = c["families"] + (["noticias sin daño"] if n.get("causa") in ("macro", "sentimiento")
-                                             else [])
-            if n.get("causa") == "fundamental":
-                c["level"] = "VIGILANCIA"
-                c["why"] = c["why"] + ["la búsqueda de noticias sugiere causa fundamental propia del activo"]
-    # tope semanal y deduplicación
+    import time as _time
     week_ago = (now - timedelta(days=7)).isoformat()
     sent_week = [a for a in st["alerts"] if a.get("sent_utc", "") >= week_ago]
     room = max(0, C.ALERT["max_week"] - len(sent_week))
     new_alerts = []
     cooldown_from = (now.date() - timedelta(days=C.ALERT["cooldown_days"])).isoformat()
+    budget_end = _time.monotonic() + float(os.getenv("RADAR_NEWS_BUDGET_S", "180"))
     for c in sorted([c for c in cands if c["level"] == "ALERTA"], key=lambda c: (-c["pred"]["lift"], -c["pred"]["ret"])):
         key = f"{c['sym']}|{c['sid']}|{c['date']}"
         recent_same = any(a["sym"] == c["sym"] and a["sid"] == c["sid"] and a["date"] >= cooldown_from
@@ -323,9 +313,22 @@ def run(offline: bool = False, force_digest: bool = False, dry: bool = False) ->
             c["level"] = "VIGILANCIA"
             c["why"] = c["why"] + [f"tope de {C.ALERT['max_week']} alertas por semana alcanzado"]
             continue
+        # Gemini con búsqueda SOLO para lo que está a punto de enviarse; solo puede BAJAR el nivel (nunca suma
+        # familias ni confianza: un texto de internet no puede subir una señal)
+        if not (dry or offline) and _time.monotonic() < budget_end:
+            try:
+                nws = check_cause(c["sym"], c["date"], c.get("r1") or 0.0, c.get("b_r1"))
+            except Exception as e:  # noqa: BLE001
+                nws = {"causa": "desconocida", "resumen": f"verificación de noticias falló ({type(e).__name__})",
+                       "fuentes": []}
+            if isinstance(nws, dict):
+                c["news"] = nws
+                if nws.get("causa") == "fundamental":
+                    c["level"] = "VIGILANCIA"
+                    c["why"] = c["why"] + ["la búsqueda de noticias sugiere causa fundamental propia del activo"]
+                    continue
         room -= 1
         new_alerts.append(c)
-    for c in new_alerts:
         md = R.ficha_md(c)
         title = f"🟢 Radar EB: {c['sym']} — {SETUPS[c['sid']].nombre} (P {c['pred']['p']:.0%}, {c['pred']['h']} d)"
         sent = {} if dry else N.send_alert(title, md, R.short_txt(c))
@@ -334,7 +337,9 @@ def run(offline: bool = False, force_digest: bool = False, dry: bool = False) ->
                              "base": round(c["pred"]["base"], 4), "ret": round(c["pred"]["ret"], 4),
                              "price": c["price"], "sent_utc": now.isoformat(timespec="seconds"), "sent": sent,
                              "outcome": None})
+        st["seen"][key] = {"level": "ALERTA", "utc": now.isoformat(timespec="seconds")}
         _write_ficha(c, md)
+        save_state(st)        # guardar tras CADA envío: si algo truena después, no se repite la alerta
     for c in cands:
         st["seen"].setdefault(f"{c['sym']}|{c['sid']}|{c['date']}",
                               {"level": c["level"], "utc": now.isoformat(timespec="seconds")})
@@ -358,6 +363,7 @@ def run(offline: bool = False, force_digest: bool = False, dry: bool = False) ->
         title = f"📡 Radar EB {local.date().isoformat()}: {len(new_alerts)} alertas, {len(recent)} disparos en 24 h"
         digest_sent = {} if dry else N.send_digest(title, md, st, local.strftime("%Y-%m"))
         st["last_digest_date"] = local.date().isoformat()
+        save_state(st)
         os.makedirs(C.OUT_DIR, exist_ok=True)
         open(os.path.join(C.OUT_DIR, "ULTIMO_RESUMEN.md"), "w").write(md)
     st["notify_log"] = N.LOG[-20:]

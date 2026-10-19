@@ -17,6 +17,8 @@ from . import config as C
 from .report import md_to_html
 
 log = logging.getLogger("radar.notify")
+for _n in ("httpx", "httpcore"):          # la URL de CallMeBot lleva la apikey: nunca registrar peticiones
+    logging.getLogger(_n).setLevel(logging.WARNING)
 LOG: list[str] = []      # bitácora sin secretos (va al estado)
 
 

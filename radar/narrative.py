@@ -53,10 +53,25 @@ def check_cause(sym: str, date: str, move: float, market_move: float | None) -> 
         "texto.\n<analisis>\n" + txt[:3000] + "\n</analisis>"}]}],
         "generationConfig": {"temperature": 0, "responseMimeType": "application/json", "responseSchema": SCHEMA}})
     if not r2:
-        return {"causa": "desconocida", "resumen": txt[:300], "fuentes": src[:5]}
+        return {"causa": "desconocida", "resumen": _clean(txt)[:300],
+                "fuentes": [f for f in src[:5] if str(f.get("url", "")).startswith("https://")]}
     try:
         js = json.loads(_text(r2))
     except ValueError:
         js = {"causa": "desconocida", "resumen": txt[:300]}
-    js["fuentes"] = src[:5]
+    if not isinstance(js, dict):
+        js = {"causa": "desconocida", "resumen": ""}
+    if js.get("causa") not in ("fundamental", "macro", "sentimiento", "desconocida"):
+        js["causa"] = "desconocida"
+    js["resumen"] = _clean(str(js.get("resumen", "")))[:400]
+    js["fuentes"] = [{"titulo": _clean(f["titulo"])[:120], "url": f["url"]} for f in src[:5]
+                     if str(f.get("url", "")).startswith("https://")]
     return js
+
+
+def _clean(t: str) -> str:
+    """Quita enlaces/markdown del texto del LLM: lo que va al issue público y al correo no puede traer links ajenos."""
+    import re
+    t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", t)
+    t = re.sub(r"https?://\S+|www\.\S+", "[enlace omitido]", t)
+    return t.replace("<", "‹").replace(">", "›").replace("|", "/")

@@ -60,11 +60,12 @@ def _f(name, default):
 
 
 ALERT = {
-    "rule": os.getenv("RADAR_RULE", "relativo"),  # relativo | selectivo | moderado (ver model.decide)
+    "rule": os.getenv("RADAR_RULE", "relativo"),  # relativo | estricta | selectivo (ver model.decide)
+    "excess_min": _f("RADAR_EXCESS_MIN", 0.01),   # (relativo) neto esperado − neto de un día cualquiera
     "p_min": _f("RADAR_P_MIN", 0.65),          # (selectivo) probabilidad encogida de ganar ≥ meta neta
     "q10_min": _f("RADAR_Q10_MIN", 0.55),      # (selectivo) cota baja (percentil 10 de la posterior)
     "lift_min": _f("RADAR_LIFT_MIN", 0.05),    # mejor que comprar un día cualquiera de ese activo
-    "ret_min": _f("RADAR_RET_MIN", 0.03),      # rendimiento neto esperado encogido
+    "ret_min": _f("RADAR_RET_MIN", 0.03),      # (estricta/selectivo) rendimiento neto esperado encogido
     "neff_min": int(_f("RADAR_NEFF_MIN", 8)),  # episodios independientes mínimos del setup en la clase
     "max_week": int(_f("RADAR_MAX_WEEK", 3)),  # tope de alertas sueltas por semana (rodante 7 días)
     "caution_extra": _f("RADAR_CAUTION_EXTRA", 0.05),  # contexto v4.2 en CAUTION → +5 pp de exigencia

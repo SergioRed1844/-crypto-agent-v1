@@ -14,8 +14,10 @@ description: Radar EB (agente 2, solo alertas) — setups de compra del corpus d
    Nunca contar instancias correlacionadas como n.
 5. **Sin mirar al futuro:** setups con información ≤ cierre t; compra a la apertura de t+1; σ excluye el día t;
    Wikipedia con rezago 1 día; tasa base local solo con resultados realizados en t. Hay pruebas para cada cosa.
-6. **Regla por defecto `relativo`:** q10 > base local, ventaja ≥5 pp, neto ≥3%, ≥8 episodios. Una P absoluta
-   (selectivo, 65%) es casi inalcanzable con metas netas: no volver a ella sin re-validar.
+6. **Regla por defecto `relativo`:** cota baja de la ventaja (base fija) ≥ base local, ventaja ≥5 pp, neto ≥ +1 pp
+   sobre un día cualquiera, ≥8 episodios. `estricta` (neto ≥3%) y `selectivo` (P ≥65%) casi nunca disparan.
+   Tasa base local = largo plazo + λ·(último año − largo plazo) con λ ESTIMADO (no fijo); episodios = clusters de
+   min(h,30) días; purga en el corte. Los intervalos mostrados incluyen la incertidumbre de la base.
 7. **Todo veto/ajuste solo RESTA** (euforia, daño fundamental, GSY ≥150% a 90 d, CAUTION +5 pp, Gemini causa
    fundamental → VIGILANCIA). Nada sube una señal fuera del modelo.
 8. **Calendario (día de la semana) se encoge fuerte** (w=0.16, piso 2000·(1−w)): solo desempate.

@@ -88,8 +88,13 @@ def ficha_md(c: dict) -> str:
          f"(IC80 {pct(pr['q10'], 0)}–{pct(pr['q90'], 0)}) | {pct(pr['base'], 0)} |",
          f"| Rendimiento neto esperado | **{pct(pr['ret'], 1, True)}** (cota baja {pct(pr['ret_q10'], 1, True)}) | "
          f"{pct(pr['base_ret'], 1, True)} |",
-         f"| Ventaja | **{pp(pr['lift'])}** | — |",
+         f"| Ventaja (lo único que el setup agrega) | **{pp(pr['lift'])}** · P(ventaja > 0) "
+         f"{pct(pr.get('p_lift_pos'), 0)} | — |",
+         f"| Episodios pasados que terminaron con ganancia neta > 0 (crudo, el setup en la clase) | "
+         f"{pct(pr.get('pos_p'), 0)} | — |",
          f"| Riesgo de caída ≥ {pct(-C.MAE_LIMIT[c['cls']], 0)} durante la tenencia | {pct(pr['mae_p'], 0)} | — |", "",
+         "_La probabilidad es de ganar AL MENOS la meta neta (no solo 'subir'); por eso se ve baja. Lo que importa es la "
+         "ventaja contra comprar un día cualquiera y qué tan creíble es._", "",
          f"Historia: {pr['k']}/{pr['n']} aciertos crudos en {c['sym']}; el setup en {CLS_ES[c['cls']]}: "
          f"{pr['n_inst']} disparos = {pr['n_eff']} episodios independientes, crudo {pct(pr['raw_setup'], 0)}. "
          f"Aparece ~{c.get('freq', '—')} veces/año en este activo (Poisson-Gamma).", "",

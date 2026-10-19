@@ -96,3 +96,18 @@ def align(dates: list[str], mapping: dict[str, float], ffill_days: int = 0) -> n
 
 def align_series(dates: list[str], s_dates: list[str], values: np.ndarray, ffill_days: int = 4) -> np.ndarray:
     return align(dates, dict(zip(s_dates, values.tolist())), ffill_days)
+
+
+def align_before(dates: list[str], s_dates: list[str], values: np.ndarray, max_gap_days: int = 5) -> np.ndarray:
+    """Valor de la última fecha de la serie ESTRICTAMENTE anterior a cada fecha (rezago de un día de mercado).
+    Para USD/MXN: su barra del día D cierra a medianoche de Londres, después del cierre de la BMV."""
+    import bisect
+    from datetime import date
+    out = np.full(len(dates), np.nan)
+    if not len(s_dates):
+        return out
+    for i, d in enumerate(dates):
+        j = bisect.bisect_left(s_dates, d) - 1
+        if j >= 0 and (date.fromisoformat(d) - date.fromisoformat(s_dates[j])).days <= max_gap_days:
+            out[i] = values[j]
+    return out

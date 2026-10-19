@@ -107,15 +107,22 @@ manual = pb.close[t0 + 7] / pb.open[t0 + 1] - 1 - C.COST_RT["crypto"]
 ok(o is not None and abs(o[1] - manual) < 1e-12, "resultado = apertura de t+1 → cierre de t+7, neto de costos")
 ok(outcome(pb, len(pb.close) - 3, 1, 7) is None, "sin futuro suficiente → sin resultado (no se rellena)")
 
-from radar.model import local_base  # noqa: E402
-bl1, _ = local_base(pb, 7, 0.4, 0.0, (-1, 1))
+from radar.model import shrink_weight, trailing_base  # noqa: E402
+t1 = trailing_base(pb, 7, (-1, 1))
 pb2 = build_panel(btc, "crypto", btc, aux)
 ii = 900
 pb2.close = pb2.close.copy()
 pb2.close[ii + 1:] *= 3.0                   # cambiar solo el futuro (barras posteriores a i)
-bl2, _ = local_base(pb2, 7, 0.4, 0.0, (-1, 1))
-ok(abs(bl1[ii] - bl2[ii]) < 1e-12, "tasa base local en i solo usa resultados ya realizados en i (sin futuro)")
-ok(0 < bl1[ii] < 1 and bl1[100] == 0.4, "tasa base local acotada; sin historia usa la del periodo")
+t2 = trailing_base(pb2, 7, (-1, 1))
+ok(abs(t1["bt"][ii] - t2["bt"][ii]) < 1e-12, "tasa del último año en i solo usa resultados ya realizados en i (sin futuro)")
+ok(np.isnan(t1["bt"][100]), "sin historia suficiente la tasa local queda vacía (se usa la de largo plazo)")
+lam0, _ = shrink_weight(list(np.random.default_rng(3).normal(0, .1, 300)), list(np.random.default_rng(4).normal(0, .1, 300)))
+xx = np.random.default_rng(5).normal(0, .1, 300)
+lam1, _ = shrink_weight(list(xx), list(0.8 * xx + np.random.default_rng(6).normal(0, .02, 300)))
+ok(lam0 < 0.2 and 0.7 < lam1 < 0.9, f"λ de la tasa local: ~0 si no se sostiene ({lam0:.2f}), ~0.8 si sí ({lam1:.2f})")
+dts = ["2026-07-01", "2026-07-02", "2026-07-03"]
+ab = F.align_before(["2026-07-02", "2026-07-03"], dts, np.array([1.0, 2.0, 3.0]))
+ok(ab.tolist() == [1.0, 2.0], "USD/MXN con rezago de un día de mercado (sin mirar al cierre de Londres)")
 
 # ── 5. modelo: con efecto sembrado lo detecta; sin efecto encoge ────────────────────────────────────────
 alts = [make(s, N0, 10 + k, "crypto", 0.04, shocks=shocks, rebound=0.20) for k, s in enumerate(["ETH", "SOL", "XRP", "ADA"])]
@@ -124,19 +131,34 @@ m_eff = Model().fit(panels_eff)
 g = m_eff.groups[("PANICO_SIN_DANO", "crypto", 7)]
 ok(g["delta"] > 0.3 and g["n_eff"] >= 20, f"efecto real sembrado → ventaja encogida positiva (δ={g['delta']:.2f}, "
                                            f"episodios={g['n_eff']})")
+hi_cut = btc.dates[1200]
+m_a = Model().fit(panels_eff, "0000", hi_cut)
+panels_mod = []
+for pp in panels_eff:
+    q = build_panel(D.from_rows(pp.sym, [(d, pp.open[k], pp.high[k], pp.low[k], pp.close[k] * (5 if d >= hi_cut else 1), 1)
+                                          for k, d in enumerate(pp.dates)], "x"), "crypto", btc, aux)
+    panels_mod.append(q)
+m_b = Model().fit(panels_mod, "0000", hi_cut)
+same = all(abs(m_a.groups[k]["delta"] - m_b.groups[k]["delta"]) < 1e-9 for k in m_a.groups if k in m_b.groups)
+ok(same and m_a.base["BTC"][7] == m_b.base["BTC"][7], "purga: el ajuste hasta hi no cambia si cambian precios posteriores a hi")
 pr = m_eff.predict("PANICO_SIN_DANO", "crypto", 7, "ETH")
-ok(pr["p"] > pr["base"] and pr["q10"] <= pr["p"] <= pr["q90"], "predicción con IC ordenado y por encima de la base")
+ok(pr["p"] > pr["base"] and pr["q10"] <= pr["q10_lift"] <= pr["p"] <= pr["q90"],
+   "predicción con IC ordenado (el IC mostrado incluye la incertidumbre de la tasa base)")
 lvl, why = decide(pr, {"euforia": False, "gsy": "ok", "damage_event": False}, None, "crypto")
 ok(lvl == "ALERTA", f"con ventaja grande y muchos episodios la regla Selectivo alerta ({lvl}: {why})")
 lvl2, _ = decide(pr, {"euforia": True, "gsy": "ok"}, None, "crypto")
 ok(lvl2 == "VETADA", "euforia (F&G ≥ 80) veta")
-pr_c = dict(pr, base=0.40, q10=0.42, p=0.47, lift=0.07, ret=0.05, n_eff=50)
+pr_c = dict(pr, base=0.40, q10=0.41, q10_lift=0.42, p=0.47, lift=0.07, ret=0.05, n_eff=50)
 ok(decide(pr_c, {}, None, "crypto")[0] == "ALERTA" and decide(pr_c, {}, "CAUTION", "crypto")[0] == "VIGILANCIA",
    "regla relativa: alerta si le gana con credibilidad a un día cualquiera; CAUTION sube la exigencia +5 pp")
 pr_s = dict(pr_c, p=C.ALERT["p_min"] + 0.02, q10=C.ALERT["q10_min"] + 0.02)
 ok(decide(pr_s, {}, None, "crypto", rule="selectivo")[0] == "ALERTA" and
    decide(pr_s, {}, "CAUTION", "crypto", rule="selectivo")[0] == "VIGILANCIA", "regla selectiva (absoluta) disponible")
-ok(decide(dict(pr_c, q10=0.39), {}, None, "us")[0] == "VIGILANCIA", "si la cota baja no supera la base, no alerta")
+ok(decide(dict(pr_c, q10_lift=0.39), {}, None, "us")[0] == "VIGILANCIA", "si la cota baja no supera la base, no alerta")
+ok(decide(dict(pr_c, ret=0.012, base_ret=0.005), {}, None, "us")[0] == "VIGILANCIA",
+   "regla relativa: si el neto esperado no supera por ≥1 pp al de un día cualquiera, no alerta")
+ok(decide(dict(pr_c, ret=0.02, base_ret=0.005), {}, None, "us", rule="estricta")[0] == "VIGILANCIA",
+   "regla estricta exige neto ≥ 3% absoluto")
 
 btc0 = make("BTC", N0, 1, "crypto", 0.03, shocks=shocks, rebound=0.0)
 panels_null = [build_panel(btc0, "crypto", btc0, aux)] + [
@@ -171,6 +193,54 @@ httpx.get = orig
 ok(not any("SECRETO123" in m for m in N.LOG), "falla de WhatsApp no deja la apikey en la bitácora")
 os.environ.pop("CALLMEBOT_PHONE")
 os.environ.pop("CALLMEBOT_APIKEY")
+
+from radar.narrative import _clean  # noqa: E402
+ok("http" not in _clean("ve a [aquí](https://malo.example) o https://x.y/z") and "aquí" in _clean("[aquí](https://a.b)"),
+   "el texto de Gemini pierde enlaces antes de ir al issue/correo")
+import radar.pipeline as _P  # noqa: E402
+ok('"noticias sin daño"' not in open(_P.__file__).read(), "las noticias (LLM) no pueden sumar familias ni subir confianza")
+
+# caché: refresco completo diario aunque se actualice cada hora, y re-descarga si el traslape no empata (splits)
+calls = []
+base_s = make("AAPL", 400, 9, "us", 0.01)
+orig_fy = D.fetch_yahoo
+
+
+def fake_yahoo(client, sym, rng="max", factor=[1.0]):
+    calls.append(rng)
+    k = 40 if rng == "1mo" else len(base_s)
+    rows = [(d, base_s.open[i], base_s.high[i], base_s.low[i], base_s.close[i] * factor[0], 1)
+            for i, d in enumerate(base_s.dates)][-k:]
+    return D.from_rows(sym, rows, "yahoo")
+
+
+D.fetch_yahoo = fake_yahoo
+os.makedirs(C.CACHE_DIR, exist_ok=True)
+D.price("AAPL", client=object())
+meta = D.cache_meta("AAPL")
+meta["updated"] = (datetime.now(timezone.utc) - timedelta(hours=2)).isoformat()
+txt = open(D.cache_path("AAPL")).read().split("\n", 1)
+open(D.cache_path("AAPL"), "w").write("#" + json.dumps(meta) + "\n" + txt[1])
+D.price("AAPL", client=object())
+ok(calls == ["max", "1mo"], f"primera descarga completa y luego incremental ({calls})")
+meta = D.cache_meta("AAPL")
+meta["updated"] = (datetime.now(timezone.utc) - timedelta(hours=2)).isoformat()
+meta["full_utc"] = (datetime.now(timezone.utc) - timedelta(hours=30)).isoformat()
+txt = open(D.cache_path("AAPL")).read().split("\n", 1)
+open(D.cache_path("AAPL"), "w").write("#" + json.dumps(meta) + "\n" + txt[1])
+D.price("AAPL", client=object())
+ok(calls[-1] == "max", "si la última descarga COMPLETA tiene > 20 h, se baja todo de nuevo")
+meta = D.cache_meta("AAPL")
+meta["updated"] = (datetime.now(timezone.utc) - timedelta(hours=2)).isoformat()
+txt = open(D.cache_path("AAPL")).read().split("\n", 1)
+open(D.cache_path("AAPL"), "w").write("#" + json.dumps(meta) + "\n" + txt[1])
+fake_yahoo.__defaults__[1][0] = 0.25        # Yahoo re-ajustó toda la historia (split 4:1)
+n0 = len(calls)
+s_after = D.price("AAPL", client=object())
+ok(calls[n0:] == ["1mo", "max"] and abs(s_after.close[0] / (base_s.close[0] * 0.25) - 1) < 1e-6,
+   "split: el traslape no empata → re-descarga completa (sin caídas falsas)")
+D.fetch_yahoo = orig_fy
+os.remove(D.cache_path("AAPL"))
 
 # ── 7. corrida completa sin red (caché sintética) ───────────────────────────────────────────────────────
 from radar import pipeline as P  # noqa: E402

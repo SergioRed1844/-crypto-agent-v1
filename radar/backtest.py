@@ -13,10 +13,10 @@ import numpy as np
 
 from . import config as C
 from . import eb
-from .model import Model, base_rates, clusters, collect, decide
+from .model import Model, base_rates, clusters, collect, decide, gap_for
 from .setups import SETUPS, risk_flags
 
-RULES = ("relativo", "selectivo", "moderado")
+RULES = ("relativo", "estricta", "selectivo")
 
 
 def evaluate(panels, split: str | None = None) -> dict:
@@ -56,7 +56,7 @@ def evaluate(panels, split: str | None = None) -> dict:
     for (cls, h) in sorted({(r["cls"], r["h"]) for r in rows}):
         rr = [r for r in rows if r["cls"] == cls and r["h"] == h]
         y = np.array([r["y"] for r in rr])
-        res = {"cls": cls, "h": h, "n": len(rr), "n_clusters": len(clusters([r["inst"] for r in rr])),
+        res = {"cls": cls, "h": h, "n": len(rr), "n_clusters": len(clusters([r["inst"] for r in rr], gap_for(h))),
                "hit": float(y.mean())}
         for k in ("p_eb", "p_base", "p_raw", "p_pool"):
             res["brier_" + k[2:]] = eb.brier(np.array([r[k] for r in rr]), y)
@@ -80,7 +80,7 @@ def evaluate(panels, split: str | None = None) -> dict:
             if not rr:
                 continue
             out["setups"].append({"sid": sid, "cls": cls, "h": h, "n": len(rr),
-                                  "n_clusters": len(clusters([r["inst"] for r in rr])),
+                                  "n_clusters": len(clusters([r["inst"] for r in rr], gap_for(h))),
                                   "hit": float(np.mean([r["y"] for r in rr])),
                                   "base": float(np.mean([r["p_base"] for r in rr])),
                                   "pred": float(np.mean([r["p_eb"] for r in rr])),
