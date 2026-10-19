@@ -1,6 +1,6 @@
 # Backtest del agente FX — Estrategia A (reacción intradía a datos macro)
 
-Generado 2026-10-19T15:04:07.723473+00:00 · filas de eventos 31246 · huella `b2453f7f85f3`
+Generado 2026-10-19T16:01:06.159289+00:00 · filas de eventos 33274 · huella `7e658114797a`
 
 Walk-forward: grupos (par, slot) activos por año de prueba → 2018: 0 · 2019: 0 · 2020: 0 · 2021: 0 · 2022: 0 · 2023: 0 · 2024: 0 · 2025: 0 · 2026: 0
 
@@ -14,31 +14,31 @@ publicado tiene 0 grupos activos, así que el motor corre pero no abre posicione
 | supuesto | operaciones fuera de muestra | R medio fuera de muestra | grupos que el EB activó (año) |
 |---|---|---|---|
 | costos OANDA estimados (base) | 0 | — | — |
-| solo spread real (cuenta ECN) | 30 | -0.239 | 2018: USDJPY · US_1400; 2023: EURUSD · US_1000; 2024: EURUSD · US_1000 |
-| costo cero (límite teórico) | 24 | -0.201 | 2018: USDJPY · US_1400; 2023: EURUSD · US_1000 |
+| solo spread real (cuenta ECN) | 0 | — | — |
+| costo cero (límite teórico) | 0 | — | — |
 
 ## Diagnóstico con toda la muestra (dentro de muestra: explica, no valida)
 
 | grupo | mejor variante | n días | R neto | t | R bruto mom 120 min | t bruto | costo (R) |
 |---|---|---|---|---|---|---|---|
-| EURUSD · UK_1200 | rev 60m z≥3 | 47 | +0.039 | 0.42 | +0.018 | 0.35 | 0.084 |
-| EURUSD · US_0830 | rev 360m z≥3 | 153 | +0.045 | 0.72 | -0.026 | -0.61 | 0.050 |
-| EURUSD · US_1000 | mom 60m z≥3 | 74 | +0.133 | 1.64 | +0.035 | 0.84 | 0.043 |
-| EURUSD · US_1400 | rev 60m z≥3 | 96 | +0.054 | 0.67 | -0.030 | -0.69 | 0.069 |
-| GBPUSD · UK_1200 | rev 60m z≥3 | 91 | -0.008 | -0.11 | -0.020 | -0.45 | 0.079 |
-| GBPUSD · US_0830 | rev 120m z≥3 | 128 | +0.045 | 0.65 | -0.042 | -0.98 | 0.057 |
-| GBPUSD · US_1000 | mom 60m z≥3 | 55 | +0.098 | 0.98 | +0.027 | 0.69 | 0.051 |
-| GBPUSD · US_1400 | mom 360m z≥3 | 109 | -0.013 | -0.20 | +0.010 | 0.29 | 0.085 |
-| USDCHF · US_0830 | rev 360m z≥3 | 158 | +0.049 | 0.81 | -0.028 | -0.64 | 0.093 |
-| USDCHF · US_1000 | mom 360m z≥3 | 70 | +0.016 | 0.23 | +0.087 | 1.98 | 0.084 |
-| USDCHF · US_1400 | rev 120m z≥3 | 128 | -0.064 | -0.96 | +0.022 | 0.59 | 0.136 |
-| USDJPY · US_0830 | mom 360m z≥3 | 163 | +0.007 | 0.11 | +0.042 | 0.76 | 0.054 |
-| USDJPY · US_1000 | mom 360m z≥3 | 124 | +0.038 | 0.75 | -0.020 | -0.58 | 0.042 |
-| USDJPY · US_1400 | rev 120m z≥2 | 310 | -0.023 | -0.62 | -0.060 | -1.63 | 0.068 |
-| USDMXN · MX_1300 | rev 360m z≥3 | 87 | -0.067 | -0.89 | -0.015 | -0.31 | 0.129 |
-| USDMXN · US_0830 | rev 360m z≥3 | 106 | +0.020 | 0.27 | -0.063 | -1.41 | 0.104 |
-| USDMXN · US_1000 | mom 120m z≥2 | 220 | +0.003 | 0.07 | +0.095 | 2.11 | 0.092 |
-| USDMXN · US_1400 | rev 120m z≥3 | 141 | -0.092 | -1.55 | -0.024 | -0.69 | 0.128 |
+| EURUSD · UK_1200 | rev 60m z≥3 | 52 | -0.043 | -0.46 | +0.052 | 1.01 | 0.083 |
+| EURUSD · US_0830 | rev 360m z≥3 | 165 | +0.022 | 0.38 | -0.017 | -0.42 | 0.049 |
+| EURUSD · US_1000 | mom 60m z≥3 | 80 | +0.102 | 1.30 | +0.032 | 0.80 | 0.043 |
+| EURUSD · US_1400 | rev 60m z≥3 | 111 | +0.035 | 0.46 | -0.028 | -0.66 | 0.069 |
+| GBPUSD · UK_1200 | mom 120m z≥3 | 93 | -0.054 | -0.75 | -0.006 | -0.15 | 0.079 |
+| GBPUSD · US_0830 | rev 120m z≥3 | 141 | +0.036 | 0.54 | -0.031 | -0.74 | 0.057 |
+| GBPUSD · US_1000 | mom 60m z≥3 | 60 | +0.095 | 0.96 | +0.049 | 1.32 | 0.051 |
+| GBPUSD · US_1400 | mom 120m z≥3 | 129 | -0.039 | -0.64 | +0.009 | 0.27 | 0.085 |
+| USDCHF · US_0830 | rev 360m z≥3 | 170 | +0.052 | 0.91 | -0.025 | -0.60 | 0.094 |
+| USDCHF · US_1000 | mom 360m z≥3 | 74 | +0.018 | 0.27 | +0.089 | 2.22 | 0.084 |
+| USDCHF · US_1400 | rev 120m z≥3 | 132 | -0.063 | -0.94 | +0.017 | 0.46 | 0.137 |
+| USDJPY · US_0830 | mom 360m z≥3 | 168 | -0.003 | -0.05 | +0.029 | 0.54 | 0.054 |
+| USDJPY · US_1000 | mom 360m z≥3 | 127 | +0.042 | 0.82 | -0.025 | -0.72 | 0.043 |
+| USDJPY · US_1400 | rev 120m z≥3 | 152 | -0.043 | -0.69 | -0.047 | -1.26 | 0.068 |
+| USDMXN · MX_1300 | rev 360m z≥3 | 93 | -0.054 | -0.77 | -0.016 | -0.36 | 0.129 |
+| USDMXN · US_0830 | rev 360m z≥3 | 111 | +0.014 | 0.20 | -0.074 | -1.70 | 0.104 |
+| USDMXN · US_1000 | mom 120m z≥2 | 232 | -0.022 | -0.51 | +0.069 | 1.61 | 0.091 |
+| USDMXN · US_1400 | rev 120m z≥3 | 146 | -0.078 | -1.35 | -0.010 | -0.29 | 0.127 |
 
 Lectura: la mejor de 12 variantes por grupo con t < 2 es lo que se espera por azar entre ~200 ensayos; el R bruto muestra si había drift antes de costos.
 
