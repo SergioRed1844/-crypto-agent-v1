@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T13:22:39Z",
+ "updated_utc": "2026-10-19T13:26:18Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4083,6 +4083,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T10:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "CN",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Banco central de China evalúa tasa a un día como tipo de referencia principal",
+   "source_url": "https://www.aol.com/articles/chinas-central-bank-studies-making-084732000.html",
+   "source_title": "aol.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-china-central-bank-studies-making-overnight-rate-i-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T11:30:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Alarma cripto: nuevo mercado de 10.000 millones preocupa a EE. UU. y Europa",
+   "source_url": "https://www.bankingnews.gr/kriptonomismata/articles/905933/crypto-alarm-the-new-10-billion-market-concerning-the-us-and-europe",
+   "source_title": "bankingnews.gr",
+   "confidence": 0.7,
+   "origin": "gemini/GDELT",
+   "id": "news-crypto-alarm-the-new-10-billion-market-concerning-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T12:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Posible alza de tasas adicional mientras la Fed combate la inflación",
+   "source_url": "https://www.abc15.com/politics/economy/another-interest-rate-hike-may-be-ahead-as-fed-battles-inflation",
+   "source_title": "abc15.com",
+   "confidence": 0.7,
+   "origin": "gemini/GDELT",
+   "id": "news-another-interest-rate-hike-may-be-ahead-as-fed-bat-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T12:30:00Z"
   }
  ]
 }
