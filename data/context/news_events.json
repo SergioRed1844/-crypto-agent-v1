@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T13:26:18Z",
+ "updated_utc": "2026-10-19T14:21:57Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4146,6 +4146,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T12:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "CN",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
+   "source_url": "https://www.crowdfundinsider.com/2026/10/319478-bitcoin-btc-asian-equities-nasdaq-futures-rise-after-china-gdp-exceeds-growth-forecasts/",
+   "source_title": "crowdfundinsider.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-btc-asian-equities-nasdaq-futures-rise-aft-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T13:45:00Z"
   }
  ]
 }
