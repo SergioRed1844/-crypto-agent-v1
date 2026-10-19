@@ -1,0 +1,23 @@
+# Agente FX (agente 3): el día 2 de cada mes vuelve a bajar las velas del año en curso (y del anterior en enero)
+# a la rama fx-data; al terminar, fx-data dispara fx-backtest, que publica model.json en fx-agente (el VPS lo baja
+# cada 6 h). El cron solo corre desde main; el código y las copias que de verdad se ejecutan viven en fx-agente.
+name: fx-monthly
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "37 6 2 * *"
+permissions:
+  actions: write
+  contents: read
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar fx-data en fx-agente
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          y=$(date -u +%Y); m=$(date -u +%m)
+          years="[$y]"; [ "$m" = "01" ] && years="[$((y - 1)),$y]"
+          gh workflow run fx-data.yml --ref fx-agente -f years="$years"
