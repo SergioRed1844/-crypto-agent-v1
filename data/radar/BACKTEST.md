@@ -2,7 +2,7 @@
 
 Entrenamiento: disparos **antes de 2022-01-01** · Prueba: **desde 2022-01-01**. Especificaciones probadas (setup × clase × horizonte): **48** — con tantas pruebas, algún resultado bueno puede ser azar (C11-009 B). Umbrales fijados el 18-oct-2026 antes de ver datos.
 
-τ entre setups (logit, entrenamiento): 0.139
+τ entre setups (logit, entrenamiento): 0.140
 
 ## 1. ¿El encogimiento EB predice mejor? (Brier, menor es mejor)
 
@@ -12,11 +12,11 @@ Entrenamiento: disparos **antes de 2022-01-01** · Prueba: **desde 2022-01-01**.
 | bmv | 30 d | 484 | 45 | 41.3% | 0.2487 | 0.2501 | 0.2501 | 0.2399 | +0.6% | 32.3% |
 | bmv | 90 d | 477 | 43 | 41.3% | 0.2450 | 0.2451 | 0.2568 | 0.2471 | +0.0% | 37.9% |
 | crypto | 7 d | 291 | 70 | 28.9% | 0.2385 | 0.2374 | 0.2828 | 0.2706 | -0.5% | 38.3% |
-| crypto | 30 d | 290 | 32 | 25.2% | 0.2520 | 0.2550 | 0.2765 | 0.2377 | +1.2% | 39.4% |
+| crypto | 30 d | 290 | 32 | 25.2% | 0.2519 | 0.2550 | 0.2765 | 0.2377 | +1.2% | 39.4% |
 | crypto | 90 d | 289 | 31 | 33.2% | 0.3048 | 0.3084 | 0.3096 | 0.2676 | +1.2% | 39.5% |
 | us | 7 d | 541 | 103 | 38.3% | 0.2366 | 0.2405 | 0.2421 | 0.2382 | +1.6% | 30.8% |
 | us | 30 d | 540 | 44 | 45.0% | 0.2612 | 0.2639 | 0.2563 | 0.2474 | +1.0% | 37.8% |
-| us | 90 d | 529 | 42 | 52.7% | 0.2595 | 0.2612 | 0.2594 | 0.2453 | +0.7% | 44.7% |
+| us | 90 d | 529 | 42 | 52.7% | 0.2595 | 0.2612 | 0.2593 | 0.2453 | +0.7% | 44.7% |
 
 Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB < crudo, el encogimiento sirvió (la promesa de James-Stein).
 
@@ -24,10 +24,10 @@ Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB
 
 | Tramo predicho | n | Predicho | Real |
 |---|---|---|---|
-| 0%–40% | 1804 | 32.6% | 38.7% |
-| 40%–50% | 1352 | 44.5% | 41.3% |
-| 50%–60% | 662 | 54.2% | 34.3% |
-| 60%–70% | 57 | 65.4% | 31.6% |
+| 0%–40% | 1800 | 32.6% | 38.7% |
+| 40%–50% | 1356 | 44.5% | 41.4% |
+| 50%–60% | 660 | 54.2% | 34.2% |
+| 60%–70% | 59 | 65.2% | 32.2% |
 | 70%–100% | 55 | 81.0% | 43.6% |
 
 ## 3. Setups fuera de muestra vs comprar un día cualquiera
@@ -78,10 +78,10 @@ Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB
 | PULLBACK_TENDENCIA | bmv | 90 d | 270 | 42 | 40.0% | 46.0% | 40.1% | 45.8% | 2.9% | 2.6% |
 | PULLBACK_TENDENCIA | crypto | 7 d | 81 | 34 | 49.4% | 47.8% | 38.3% | 48.2% | 1.8% | 0.0% |
 | PULLBACK_TENDENCIA | crypto | 30 d | 80 | 20 | 30.0% | 51.3% | 38.7% | 50.5% | -1.6% | 1.8% |
-| PULLBACK_TENDENCIA | crypto | 90 d | 79 | 19 | 29.1% | 63.3% | 37.7% | 62.1% | -3.4% | 6.2% |
+| PULLBACK_TENDENCIA | crypto | 90 d | 79 | 19 | 29.1% | 63.3% | 37.7% | 62.0% | -3.4% | 6.2% |
 | PULLBACK_TENDENCIA | us | 7 d | 237 | 99 | 35.4% | 31.8% | 33.5% | 35.6% | 0.2% | 0.2% |
 | PULLBACK_TENDENCIA | us | 30 d | 236 | 43 | 36.4% | 38.6% | 39.7% | 39.6% | 1.1% | 1.7% |
-| PULLBACK_TENDENCIA | us | 90 d | 225 | 41 | 44.9% | 44.6% | 46.8% | 46.2% | 5.7% | 5.9% |
+| PULLBACK_TENDENCIA | us | 90 d | 225 | 41 | 44.9% | 44.6% | 46.8% | 46.1% | 5.7% | 5.9% |
 
 ## 4. Reglas de alerta en el periodo de prueba
 
@@ -150,7 +150,7 @@ Alertas de la regla activa (relativo):
 | PULLBACK_TENDENCIA | crypto | 7 d | 43% · 43% · 43% · 43% · 43% | 20% · 19% · 19% · 23% · 19% | 49% · 42% · 40% · 39% · 31% |
 | PULLBACK_TENDENCIA | crypto | 30 d | 41% · 41% · 41% · 41% · 41% | 19% · 20% · 19% · 23% · 19% | 30% · 26% · 26% · 32% · 28% |
 | PULLBACK_TENDENCIA | crypto | 90 d | 50% · 50% · 50% · 50% · 50% | 19% · 20% · 19% · 23% · 19% | 29% · 25% · 24% · 23% · 24% |
-| PULLBACK_TENDENCIA | us | 7 d | 37% · 37% · 36% · 36% · 36% | 21% · 20% · 19% · 21% · 19% | 35% · 33% · 36% · 32% · 32% |
+| PULLBACK_TENDENCIA | us | 7 d | 37% · 37% · 37% · 37% · 37% | 21% · 20% · 19% · 21% · 19% | 35% · 33% · 36% · 32% · 32% |
 | PULLBACK_TENDENCIA | us | 30 d | 42% · 42% · 42% · 42% · 42% | 19% · 20% · 19% · 23% · 19% | 36% · 37% · 39% · 39% · 35% |
 | PULLBACK_TENDENCIA | us | 90 d | 47% · 47% · 47% · 47% · 47% | 20% · 20% · 19% · 22% · 19% | 45% · 46% · 43% · 44% · 45% |
 
@@ -168,81 +168,81 @@ Escepticismo de calendario: peso de evidencia 0.16 (E5 × 0.4 por publicación a
 
 | Serie | OK | Último dato | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-10-16 | yahoo |
-| AC.MX | sí | 2026-10-16 | yahoo |
+| AAPL | sí | 2026-10-19 | yahoo |
+| AC.MX | sí | 2026-10-19 | yahoo |
 | ADA | sí | 2026-10-19 | binance |
-| ALSEA.MX | sí | 2026-10-16 | yahoo |
-| AMXB.MX | sí | 2026-10-16 | yahoo |
-| AMZN | sí | 2026-10-16 | yahoo |
-| ASURB.MX | sí | 2026-10-16 | yahoo |
+| ALSEA.MX | sí | 2026-10-19 | yahoo |
+| AMXB.MX | sí | 2026-10-19 | yahoo |
+| AMZN | sí | 2026-10-19 | yahoo |
+| ASURB.MX | sí | 2026-10-19 | yahoo |
 | AVAX | sí | 2026-10-19 | binance |
-| BBAJIOO.MX | sí | 2026-10-16 | yahoo |
+| BBAJIOO.MX | sí | 2026-10-19 | yahoo |
 | BCH | sí | 2026-10-19 | binance |
-| BIMBOA.MX | sí | 2026-10-16 | yahoo |
+| BIMBOA.MX | sí | 2026-10-19 | yahoo |
 | BTC | sí | 2026-10-19 | binance |
-| CEMEXCPO.MX | sí | 2026-10-16 | yahoo |
-| DIA | sí | 2026-10-16 | yahoo |
+| CEMEXCPO.MX | sí | 2026-10-19 | yahoo |
+| DIA | sí | 2026-10-19 | yahoo |
 | DOGE | sí | 2026-10-19 | binance |
 | DOT | sí | 2026-10-19 | binance |
 | ETH | sí | 2026-10-19 | binance |
-| FEMSAUBD.MX | sí | 2026-10-16 | yahoo |
-| GAPB.MX | sí | 2026-10-16 | yahoo |
-| GFNORTEO.MX | sí | 2026-10-16 | yahoo |
-| GLD | sí | 2026-10-16 | yahoo |
-| GMEXICOB.MX | sí | 2026-10-16 | yahoo |
-| GOOGL | sí | 2026-10-16 | yahoo |
-| GRUMAB.MX | sí | 2026-10-16 | yahoo |
-| IWM | sí | 2026-10-16 | yahoo |
-| JPM | sí | 2026-10-16 | yahoo |
-| KIMBERA.MX | sí | 2026-10-16 | yahoo |
-| KOFUBL.MX | sí | 2026-10-16 | yahoo |
+| FEMSAUBD.MX | sí | 2026-10-19 | yahoo |
+| GAPB.MX | sí | 2026-10-19 | yahoo |
+| GFNORTEO.MX | sí | 2026-10-19 | yahoo |
+| GLD | sí | 2026-10-19 | yahoo |
+| GMEXICOB.MX | sí | 2026-10-19 | yahoo |
+| GOOGL | sí | 2026-10-19 | yahoo |
+| GRUMAB.MX | sí | 2026-10-19 | yahoo |
+| IWM | sí | 2026-10-19 | yahoo |
+| JPM | sí | 2026-10-19 | yahoo |
+| KIMBERA.MX | sí | 2026-10-19 | yahoo |
+| KOFUBL.MX | sí | 2026-10-19 | yahoo |
 | LINK | sí | 2026-10-19 | binance |
-| LIVEPOLC-1.MX | sí | 2026-10-16 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-10-19 | yahoo |
 | LTC | sí | 2026-10-19 | binance |
-| META | sí | 2026-10-16 | yahoo |
-| MSFT | sí | 2026-10-16 | yahoo |
+| META | sí | 2026-10-19 | yahoo |
+| MSFT | sí | 2026-10-19 | yahoo |
 | MXN=X | sí | 2026-10-19 | yahoo |
-| NAFTRACISHRS.MX | sí | 2026-10-16 | yahoo |
-| NVDA | sí | 2026-10-16 | yahoo |
-| OMAB.MX | sí | 2026-10-16 | yahoo |
-| ORBIA.MX | sí | 2026-10-16 | yahoo |
-| PINFRA.MX | sí | 2026-10-16 | yahoo |
-| QQQ | sí | 2026-10-16 | yahoo |
-| SMH | sí | 2026-10-16 | yahoo |
+| NAFTRACISHRS.MX | sí | 2026-10-19 | yahoo |
+| NVDA | sí | 2026-10-19 | yahoo |
+| OMAB.MX | sí | 2026-10-19 | yahoo |
+| ORBIA.MX | sí | 2026-10-19 | yahoo |
+| PINFRA.MX | sí | 2026-10-19 | yahoo |
+| QQQ | sí | 2026-10-19 | yahoo |
+| SMH | sí | 2026-10-19 | yahoo |
 | SOL | sí | 2026-10-19 | binance |
-| SPY | sí | 2026-10-16 | yahoo |
+| SPY | sí | 2026-10-19 | yahoo |
 | TRX | sí | 2026-10-19 | binance |
-| TSLA | sí | 2026-10-16 | yahoo |
-| WALMEX.MX | sí | 2026-10-16 | yahoo |
-| WMT | sí | 2026-10-16 | yahoo |
-| XLE | sí | 2026-10-16 | yahoo |
-| XLF | sí | 2026-10-16 | yahoo |
-| XLI | sí | 2026-10-16 | yahoo |
-| XLK | sí | 2026-10-16 | yahoo |
-| XLP | sí | 2026-10-16 | yahoo |
-| XLU | sí | 2026-10-16 | yahoo |
-| XLV | sí | 2026-10-16 | yahoo |
-| XLY | sí | 2026-10-16 | yahoo |
-| XOM | sí | 2026-10-16 | yahoo |
+| TSLA | sí | 2026-10-19 | yahoo |
+| WALMEX.MX | sí | 2026-10-19 | yahoo |
+| WMT | sí | 2026-10-19 | yahoo |
+| XLE | sí | 2026-10-19 | yahoo |
+| XLF | sí | 2026-10-19 | yahoo |
+| XLI | sí | 2026-10-19 | yahoo |
+| XLK | sí | 2026-10-19 | yahoo |
+| XLP | sí | 2026-10-19 | yahoo |
+| XLU | sí | 2026-10-19 | yahoo |
+| XLV | sí | 2026-10-19 | yahoo |
+| XLY | sí | 2026-10-19 | yahoo |
+| XOM | sí | 2026-10-19 | yahoo |
 | XRP | sí | 2026-10-19 | binance |
-| ^MXX | sí | 2026-10-16 | yahoo |
-| ^VIX | sí | 2026-10-16 | yahoo |
-| contexto_v42 | sí | 2026-10-19T03:31:37Z | CAUTION |
+| ^MXX | sí | 2026-10-19 | yahoo |
+| ^VIX | sí | 2026-10-19 | yahoo |
+| contexto_v42 | sí | 2026-10-19T18:18:45Z | CAUTION |
 | fear_greed | sí | 2026-10-19 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-10-15 | wikimedia |
-| wiki_en_Bitcoin | sí | 2026-10-15 | wikimedia |
-| wiki_en_Cryptocurrency | sí | 2026-10-15 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-10-15 | wikimedia |
-| wiki_en_Ethereum | sí | 2026-10-15 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-10-15 | wikimedia |
-| wiki_en_Inflation | sí | 2026-10-15 | wikimedia |
-| wiki_en_Recession | sí | 2026-10-15 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-10-15 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-10-15 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-10-15 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-10-15 | wikimedia |
-| wiki_es_Crisis_económica | sí | 2026-10-15 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-10-15 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-10-15 | wikimedia |
-| wiki_es_Inflación | sí | 2026-10-15 | wikimedia |
-| wiki_es_Recesión | sí | 2026-10-15 | wikimedia |
+| wiki_en_Bankruptcy | sí | 2026-10-18 | wikimedia |
+| wiki_en_Bitcoin | sí | 2026-10-18 | wikimedia |
+| wiki_en_Cryptocurrency | sí | 2026-10-18 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-10-18 | wikimedia |
+| wiki_en_Ethereum | sí | 2026-10-18 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-10-18 | wikimedia |
+| wiki_en_Inflation | sí | 2026-10-18 | wikimedia |
+| wiki_en_Recession | sí | 2026-10-18 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-10-18 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-10-18 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-10-18 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-10-18 | wikimedia |
+| wiki_es_Crisis_económica | sí | 2026-10-18 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-10-18 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-10-18 | wikimedia |
+| wiki_es_Inflación | sí | 2026-10-18 | wikimedia |
+| wiki_es_Recesión | sí | 2026-10-18 | wikimedia |
