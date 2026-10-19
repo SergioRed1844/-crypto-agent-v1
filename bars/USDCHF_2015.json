@@ -1,0 +1,16 @@
+{
+ "sym": "USDCHF",
+ "year": 2015,
+ "days_requested": 313,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 369632,
+ "scale": {
+  "ok": true,
+  "median_mid": 0.96279,
+  "median_spread_pips": 1.6
+ },
+ "first_utc": "2015-01-01T22:00Z",
+ "last_utc": "2015-12-31T21:59Z",
+ "bytes": 3486316
+}

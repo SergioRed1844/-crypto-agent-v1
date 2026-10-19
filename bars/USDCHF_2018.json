@@ -1,0 +1,37 @@
+{
+ "sym": "USDCHF",
+ "year": 2018,
+ "days_requested": 313,
+ "days_failed": 39,
+ "fails": [
+  "2018-01-12: USDCHF/2018/00/12/ASK_candles_min_1.bi5: HTTP 503",
+  "2018-01-14: USDCHF/2018/00/14/ASK_candles_min_1.bi5: ReadTimeout",
+  "2018-01-18: USDCHF/2018/00/18/BID_candles_min_1.bi5: HTTP 503",
+  "2018-01-29: USDCHF/2018/00/29/BID_candles_min_1.bi5: ReadTimeout",
+  "2018-02-01: USDCHF/2018/01/01/ASK_candles_min_1.bi5: HTTP 503",
+  "2018-02-04: USDCHF/2018/01/04/BID_candles_min_1.bi5: ReadTimeout",
+  "2018-02-05: USDCHF/2018/01/05/BID_candles_min_1.bi5: ReadTimeout",
+  "2018-02-06: USDCHF/2018/01/06/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-07: USDCHF/2018/01/07/ASK_candles_min_1.bi5: HTTP 503",
+  "2018-02-08: USDCHF/2018/01/08/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-09: USDCHF/2018/01/09/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-11: USDCHF/2018/01/11/BID_candles_min_1.bi5: RemoteProtocolError",
+  "2018-02-13: USDCHF/2018/01/13/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-14: USDCHF/2018/01/14/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-15: USDCHF/2018/01/15/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2018-02-16: USDCHF/2018/01/16/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-19: USDCHF/2018/01/19/BID_candles_min_1.bi5: HTTP 503",
+  "2018-02-21: USDCHF/2018/01/21/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2018-02-22: USDCHF/2018/01/22/ASK_candles_min_1.bi5: HTTP 503",
+  "2018-02-27: USDCHF/2018/01/27/ASK_candles_min_1.bi5: ConnectTimeout"
+ ],
+ "minutes": 323857,
+ "scale": {
+  "ok": true,
+  "median_mid": 0.98827,
+  "median_spread_pips": 1.1
+ },
+ "first_utc": "2018-01-01T22:04Z",
+ "last_utc": "2018-12-31T21:59Z",
+ "bytes": 2810988
+}

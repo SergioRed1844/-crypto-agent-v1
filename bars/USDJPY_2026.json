@@ -1,0 +1,16 @@
+{
+ "sym": "USDJPY",
+ "year": 2026,
+ "days_requested": 249,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 295618,
+ "scale": {
+  "ok": true,
+  "median_mid": 158.772,
+  "median_spread_pips": 0.5
+ },
+ "first_utc": "2026-01-01T22:04Z",
+ "last_utc": "2026-10-18T23:59Z",
+ "bytes": 2735716
+}

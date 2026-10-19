@@ -1,0 +1,37 @@
+{
+ "sym": "GBPUSD",
+ "year": 2022,
+ "days_requested": 312,
+ "days_failed": 53,
+ "fails": [
+  "2022-01-09: GBPUSD/2022/00/09/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-12: GBPUSD/2022/00/12/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-19: GBPUSD/2022/00/19/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-20: GBPUSD/2022/00/20/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-21: GBPUSD/2022/00/21/BID_candles_min_1.bi5: ReadTimeout",
+  "2022-01-23: GBPUSD/2022/00/23/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-24: GBPUSD/2022/00/24/BID_candles_min_1.bi5: HTTP 503",
+  "2022-01-25: GBPUSD/2022/00/25/BID_candles_min_1.bi5: HTTP 503",
+  "2022-01-26: GBPUSD/2022/00/26/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-01-27: GBPUSD/2022/00/27/BID_candles_min_1.bi5: HTTP 503",
+  "2022-01-30: GBPUSD/2022/00/30/BID_candles_min_1.bi5: HTTP 503",
+  "2022-01-31: GBPUSD/2022/00/31/BID_candles_min_1.bi5: HTTP 503",
+  "2022-02-01: GBPUSD/2022/01/01/BID_candles_min_1.bi5: HTTP 503",
+  "2022-02-02: GBPUSD/2022/01/02/ASK_candles_min_1.bi5: ReadTimeout",
+  "2022-02-03: GBPUSD/2022/01/03/BID_candles_min_1.bi5: HTTP 503",
+  "2022-02-04: GBPUSD/2022/01/04/BID_candles_min_1.bi5: HTTP 503",
+  "2022-02-06: GBPUSD/2022/01/06/BID_candles_min_1.bi5: HTTP 503",
+  "2022-02-13: GBPUSD/2022/01/13/BID_candles_min_1.bi5: HTTP 503",
+  "2022-03-13: GBPUSD/2022/02/13/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-03-14: GBPUSD/2022/02/14/ASK_candles_min_1.bi5: HTTP 503"
+ ],
+ "minutes": 314631,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.21267,
+  "median_spread_pips": 1.1
+ },
+ "first_utc": "2022-01-02T22:01Z",
+ "last_utc": "2022-12-30T21:59Z",
+ "bytes": 3202588
+}

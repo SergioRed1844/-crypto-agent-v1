@@ -1,0 +1,37 @@
+{
+ "sym": "GBPUSD",
+ "year": 2015,
+ "days_requested": 313,
+ "days_failed": 21,
+ "fails": [
+  "2015-01-06: GBPUSD/2015/00/06/BID_candles_min_1.bi5: ReadTimeout",
+  "2015-01-09: GBPUSD/2015/00/09/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-11: GBPUSD/2015/00/11/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-15: GBPUSD/2015/00/15/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-18: GBPUSD/2015/00/18/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-20: GBPUSD/2015/00/20/BID_candles_min_1.bi5: RemoteProtocolError",
+  "2015-01-21: GBPUSD/2015/00/21/BID_candles_min_1.bi5: ReadTimeout",
+  "2015-01-22: GBPUSD/2015/00/22/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-23: GBPUSD/2015/00/23/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-25: GBPUSD/2015/00/25/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-26: GBPUSD/2015/00/26/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-27: GBPUSD/2015/00/27/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-28: GBPUSD/2015/00/28/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-29: GBPUSD/2015/00/29/BID_candles_min_1.bi5: HTTP 503",
+  "2015-02-02: GBPUSD/2015/01/02/BID_candles_min_1.bi5: ReadTimeout",
+  "2015-02-03: GBPUSD/2015/01/03/BID_candles_min_1.bi5: HTTP 503",
+  "2015-02-05: GBPUSD/2015/01/05/ASK_candles_min_1.bi5: ConnectError",
+  "2015-02-09: GBPUSD/2015/01/09/BID_candles_min_1.bi5: ConnectTimeout",
+  "2015-04-24: GBPUSD/2015/03/24/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2015-04-29: GBPUSD/2015/03/29/BID_candles_min_1.bi5: ConnectError"
+ ],
+ "minutes": 347591,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.53259,
+  "median_spread_pips": 1.0
+ },
+ "first_utc": "2015-01-01T22:00Z",
+ "last_utc": "2015-12-31T21:59Z",
+ "bytes": 3416900
+}

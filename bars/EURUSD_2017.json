@@ -1,0 +1,37 @@
+{
+ "sym": "EURUSD",
+ "year": 2017,
+ "days_requested": 313,
+ "days_failed": 21,
+ "fails": [
+  "2017-01-03: EURUSD/2017/00/03/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-04: EURUSD/2017/00/04/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-05: EURUSD/2017/00/05/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-06: EURUSD/2017/00/06/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-09: EURUSD/2017/00/09/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-16: EURUSD/2017/00/16/ASK_candles_min_1.bi5: ReadTimeout",
+  "2017-01-17: EURUSD/2017/00/17/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-18: EURUSD/2017/00/18/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-01-19: EURUSD/2017/00/19/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-01-22: EURUSD/2017/00/22/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-01-24: EURUSD/2017/00/24/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-25: EURUSD/2017/00/25/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-26: EURUSD/2017/00/26/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-01-27: EURUSD/2017/00/27/BID_candles_min_1.bi5: HTTP 503",
+  "2017-01-29: EURUSD/2017/00/29/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-01-31: EURUSD/2017/00/31/ASK_candles_min_1.bi5: HTTP 503",
+  "2017-02-01: EURUSD/2017/01/01/BID_candles_min_1.bi5: HTTP 503",
+  "2017-02-03: EURUSD/2017/01/03/BID_candles_min_1.bi5: HTTP 503",
+  "2017-02-06: EURUSD/2017/01/06/BID_candles_min_1.bi5: HTTP 503",
+  "2017-02-08: EURUSD/2017/01/08/BID_candles_min_1.bi5: HTTP 503"
+ ],
+ "minutes": 345875,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.14557,
+  "median_spread_pips": 0.3
+ },
+ "first_utc": "2017-01-01T22:00Z",
+ "last_utc": "2017-12-29T21:59Z",
+ "bytes": 3069912
+}

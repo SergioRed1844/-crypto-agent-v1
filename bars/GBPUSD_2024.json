@@ -1,0 +1,16 @@
+{
+ "sym": "GBPUSD",
+ "year": 2024,
+ "days_requested": 314,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 372396,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.27207,
+  "median_spread_pips": 0.8
+ },
+ "first_utc": "2024-01-01T22:00Z",
+ "last_utc": "2024-12-31T21:59Z",
+ "bytes": 3161472
+}

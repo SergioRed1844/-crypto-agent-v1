@@ -1,0 +1,37 @@
+{
+ "sym": "USDMXN",
+ "year": 2015,
+ "days_requested": 313,
+ "days_failed": 43,
+ "fails": [
+  "2015-01-02: USDMXN/2015/00/02/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-04: USDMXN/2015/00/04/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-06: USDMXN/2015/00/06/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-07: USDMXN/2015/00/07/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-08: USDMXN/2015/00/08/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-09: USDMXN/2015/00/09/BID_candles_min_1.bi5: ReadTimeout",
+  "2015-01-12: USDMXN/2015/00/12/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-13: USDMXN/2015/00/13/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-14: USDMXN/2015/00/14/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-15: USDMXN/2015/00/15/BID_candles_min_1.bi5: RemoteProtocolError",
+  "2015-01-18: USDMXN/2015/00/18/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-19: USDMXN/2015/00/19/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-20: USDMXN/2015/00/20/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-21: USDMXN/2015/00/21/BID_candles_min_1.bi5: RemoteProtocolError",
+  "2015-01-22: USDMXN/2015/00/22/BID_candles_min_1.bi5: HTTP 503",
+  "2015-01-23: USDMXN/2015/00/23/ASK_candles_min_1.bi5: HTTP 503",
+  "2015-01-28: USDMXN/2015/00/28/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2015-01-29: USDMXN/2015/00/29/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2015-03-04: USDMXN/2015/02/04/BID_candles_min_1.bi5: HTTP 503",
+  "2015-03-10: USDMXN/2015/02/10/BID_candles_min_1.bi5: HTTP 503"
+ ],
+ "minutes": 293100,
+ "scale": {
+  "ok": true,
+  "median_mid": 15.68847,
+  "median_spread_pips": 54.8
+ },
+ "first_utc": "2015-01-01T23:01Z",
+ "last_utc": "2015-12-31T21:49Z",
+ "bytes": 3443444
+}

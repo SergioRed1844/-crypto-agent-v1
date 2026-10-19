@@ -1,0 +1,37 @@
+{
+ "sym": "USDCHF",
+ "year": 2020,
+ "days_requested": 314,
+ "days_failed": 44,
+ "fails": [
+  "2020-01-10: USDCHF/2020/00/10/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-16: USDCHF/2020/00/16/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-20: USDCHF/2020/00/20/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-23: USDCHF/2020/00/23/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-24: USDCHF/2020/00/24/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-26: USDCHF/2020/00/26/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-27: USDCHF/2020/00/27/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-28: USDCHF/2020/00/28/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-29: USDCHF/2020/00/29/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-30: USDCHF/2020/00/30/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-02-02: USDCHF/2020/01/02/ASK_candles_min_1.bi5: ReadTimeout",
+  "2020-02-03: USDCHF/2020/01/03/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-05: USDCHF/2020/01/05/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-10: USDCHF/2020/01/10/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-02-12: USDCHF/2020/01/12/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-13: USDCHF/2020/01/13/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-14: USDCHF/2020/01/14/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2020-02-16: USDCHF/2020/01/16/BID_candles_min_1.bi5: ConnectError",
+  "2020-02-17: USDCHF/2020/01/17/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-21: USDCHF/2020/01/21/BID_candles_min_1.bi5: HTTP 503"
+ ],
+ "minutes": 316588,
+ "scale": {
+  "ok": true,
+  "median_mid": 0.94369,
+  "median_spread_pips": 0.9
+ },
+ "first_utc": "2020-01-01T22:04Z",
+ "last_utc": "2020-12-31T21:59Z",
+ "bytes": 2729432
+}

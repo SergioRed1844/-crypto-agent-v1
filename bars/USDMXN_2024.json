@@ -1,0 +1,35 @@
+{
+ "sym": "USDMXN",
+ "year": 2024,
+ "days_requested": 314,
+ "days_failed": 18,
+ "fails": [
+  "2024-01-03: USDMXN/2024/00/03/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-01-08: USDMXN/2024/00/08/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-01-16: USDMXN/2024/00/16/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-01-17: USDMXN/2024/00/17/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-01-18: USDMXN/2024/00/18/BID_candles_min_1.bi5: HTTP 503",
+  "2024-01-21: USDMXN/2024/00/21/BID_candles_min_1.bi5: HTTP 503",
+  "2024-01-22: USDMXN/2024/00/22/BID_candles_min_1.bi5: HTTP 503",
+  "2024-01-23: USDMXN/2024/00/23/BID_candles_min_1.bi5: HTTP 503",
+  "2024-01-24: USDMXN/2024/00/24/BID_candles_min_1.bi5: HTTP 503",
+  "2024-01-28: USDMXN/2024/00/28/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-01-30: USDMXN/2024/00/30/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-02-01: USDMXN/2024/01/01/ASK_candles_min_1.bi5: HTTP 503",
+  "2024-02-04: USDMXN/2024/01/04/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2024-02-06: USDMXN/2024/01/06/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2024-02-08: USDMXN/2024/01/08/BID_candles_min_1.bi5: ConnectTimeout",
+  "2024-03-06: USDMXN/2024/02/06/BID_candles_min_1.bi5: ConnectError",
+  "2024-03-07: USDMXN/2024/02/07/BID_candles_min_1.bi5: ConnectTimeout",
+  "2024-07-15: USDMXN/2024/06/15/BID_candles_min_1.bi5: ConnectTimeout"
+ ],
+ "minutes": 347634,
+ "scale": {
+  "ok": true,
+  "median_mid": 18.3647,
+  "median_spread_pips": 55.8
+ },
+ "first_utc": "2024-01-01T22:42Z",
+ "last_utc": "2024-12-31T21:59Z",
+ "bytes": 4841424
+}

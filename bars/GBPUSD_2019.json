@@ -1,0 +1,37 @@
+{
+ "sym": "GBPUSD",
+ "year": 2019,
+ "days_requested": 313,
+ "days_failed": 47,
+ "fails": [
+  "2019-01-10: GBPUSD/2019/00/10/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-11: GBPUSD/2019/00/11/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-14: GBPUSD/2019/00/14/BID_candles_min_1.bi5: HTTP 503",
+  "2019-01-16: GBPUSD/2019/00/16/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-17: GBPUSD/2019/00/17/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-20: GBPUSD/2019/00/20/ASK_candles_min_1.bi5: RemoteProtocolError",
+  "2019-01-21: GBPUSD/2019/00/21/BID_candles_min_1.bi5: RemoteProtocolError",
+  "2019-01-22: GBPUSD/2019/00/22/BID_candles_min_1.bi5: HTTP 503",
+  "2019-01-23: GBPUSD/2019/00/23/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-25: GBPUSD/2019/00/25/ASK_candles_min_1.bi5: HTTP 503",
+  "2019-01-27: GBPUSD/2019/00/27/BID_candles_min_1.bi5: HTTP 503",
+  "2019-01-28: GBPUSD/2019/00/28/BID_candles_min_1.bi5: HTTP 503",
+  "2019-01-29: GBPUSD/2019/00/29/ASK_candles_min_1.bi5: ReadTimeout",
+  "2019-01-30: GBPUSD/2019/00/30/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2019-02-05: GBPUSD/2019/01/05/BID_candles_min_1.bi5: HTTP 503",
+  "2019-02-06: GBPUSD/2019/01/06/BID_candles_min_1.bi5: HTTP 503",
+  "2019-02-08: GBPUSD/2019/01/08/BID_candles_min_1.bi5: ConnectError",
+  "2019-02-10: GBPUSD/2019/01/10/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2019-02-12: GBPUSD/2019/01/12/BID_candles_min_1.bi5: ConnectTimeout",
+  "2019-11-11: GBPUSD/2019/10/11/ASK_candles_min_1.bi5: HTTP 503"
+ ],
+ "minutes": 317875,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.27459,
+  "median_spread_pips": 1.0
+ },
+ "first_utc": "2019-01-01T22:06Z",
+ "last_utc": "2019-12-27T21:59Z",
+ "bytes": 3067812
+}

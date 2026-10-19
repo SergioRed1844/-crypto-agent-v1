@@ -1,0 +1,37 @@
+{
+ "sym": "EURUSD",
+ "year": 2020,
+ "days_requested": 314,
+ "days_failed": 21,
+ "fails": [
+  "2020-01-05: EURUSD/2020/00/05/ASK_candles_min_1.bi5: RemoteProtocolError",
+  "2020-01-08: EURUSD/2020/00/08/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-09: EURUSD/2020/00/09/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-14: EURUSD/2020/00/14/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-16: EURUSD/2020/00/16/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-17: EURUSD/2020/00/17/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-19: EURUSD/2020/00/19/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-20: EURUSD/2020/00/20/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-21: EURUSD/2020/00/21/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-22: EURUSD/2020/00/22/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-23: EURUSD/2020/00/23/BID_candles_min_1.bi5: HTTP 503",
+  "2020-01-24: EURUSD/2020/00/24/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-26: EURUSD/2020/00/26/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-27: EURUSD/2020/00/27/ASK_candles_min_1.bi5: ConnectTimeout",
+  "2020-01-28: EURUSD/2020/00/28/ASK_candles_min_1.bi5: HTTP 503",
+  "2020-01-29: EURUSD/2020/00/29/BID_candles_min_1.bi5: ReadTimeout",
+  "2020-01-30: EURUSD/2020/00/30/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-02: EURUSD/2020/01/02/BID_candles_min_1.bi5: HTTP 503",
+  "2020-02-05: EURUSD/2020/01/05/ASK_candles_min_1.bi5: ConnectError",
+  "2020-02-06: EURUSD/2020/01/06/ASK_candles_min_1.bi5: ConnectTimeout"
+ ],
+ "minutes": 348805,
+ "scale": {
+  "ok": true,
+  "median_mid": 1.13841,
+  "median_spread_pips": 0.3
+ },
+ "first_utc": "2020-01-01T22:02Z",
+ "last_utc": "2020-12-31T21:59Z",
+ "bytes": 3233392
+}
