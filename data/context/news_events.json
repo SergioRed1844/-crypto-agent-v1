@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T21:20:24Z",
+ "updated_utc": "2026-10-19T22:15:15Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4314,6 +4314,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T19:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El oro cae antes de la reunión de política monetaria de la Reserva Federal",
+   "source_url": "https://econotimes.com/Gold-Falls-Below-4-150-Ahead-of-Federal-Reserve-Policy-Meeting-1756829",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-falls-below-4-150-ahead-of-federal-reserve-po-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T20:15:00Z"
   }
  ]
 }
