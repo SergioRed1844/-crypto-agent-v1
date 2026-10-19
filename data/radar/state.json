@@ -20,9 +20,10 @@
  },
  "runs": [
   "2026-10-19T04:01:49+00:00",
-  "2026-10-19T04:19:28+00:00"
+  "2026-10-19T04:19:28+00:00",
+  "2026-10-19T05:30:03+00:00"
  ],
- "last_scan_utc": "2026-10-19T04:19:28+00:00",
+ "last_scan_utc": "2026-10-19T05:30:03+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -411,7 +412,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-19T03:31:37Z",
+   "last": "2026-10-19T05:15:51Z",
    "nota": "CAUTION"
   }
  },
@@ -442,11 +443,11 @@
    "level": "VIGILANCIA",
    "why": [
     "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.9 pp < 5 pp"
+    "ventaja vs día cualquiera +3.8 pp < 5 pp"
    ],
-   "p": 0.325,
+   "p": 0.324,
    "base": 0.286,
-   "ret": 0.0029,
+   "ret": 0.0028,
    "h": 7
   },
   {
@@ -457,11 +458,11 @@
    "level": "VIGILANCIA",
    "why": [
     "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.3 pp < 5 pp"
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
    ],
    "p": 0.453,
    "base": 0.411,
-   "ret": 0.0074,
+   "ret": 0.0073,
    "h": 7
   },
   {
@@ -472,11 +473,11 @@
    "level": "VIGILANCIA",
    "why": [
     "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+    "ventaja vs día cualquiera +4.1 pp < 5 pp"
    ],
-   "p": 0.409,
+   "p": 0.408,
    "base": 0.367,
-   "ret": 0.0063,
+   "ret": 0.0062,
    "h": 7
   }
  ],
