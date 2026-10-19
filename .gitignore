@@ -12,3 +12,4 @@ _localdata/
 datos/
 *.tmp
 data/context/notify.json.tmp
+.cache/
