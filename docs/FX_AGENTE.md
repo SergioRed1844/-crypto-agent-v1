@@ -4,7 +4,7 @@ Diseño de investigación, no recomendación de inversión. Hoy corre solo en **
 
 ## Qué hace, en cinco líneas
 
-1. En cada **slot de anuncios** (8:30, 10:00 y 14:00 de Nueva York; BCE; BoE; Banxico 13:00 CDMX) mide cuánto se
+1. En cada **slot de anuncios** (8:30, 10:00 y 14:00 de Nueva York; BoE 12:00 Londres; Banxico 13:00 CDMX) mide cuánto se
    movió cada par en los primeros 15 minutos contra lo normal en ese minuto (**z**). Si |z| es grande, hubo sorpresa.
 2. No compite por los primeros segundos (eso es de los bancos, F15-001/F14-016): entra en **T+15** a favor (o en
    contra, si los datos dicen reversión) de esa reacción, con **stop en el servidor del broker** y salida por tiempo.
@@ -17,6 +17,24 @@ Diseño de investigación, no recomendación de inversión. Hoy corre solo en **
 minoristas de CFD pierden (ESMA, F00/F16). Lo que sí se puede garantizar por construcción es el **techo de pérdida
 semanal** (−1.5%, salvo gaps) y que el agente no opere si los datos no muestran ventaja. El % de semanas positivas,
 la peor semana y la racha de semanas negativas se reportan tal cual en `data/fx/BACKTEST.md`.
+
+## Resultado del backtest (19-oct-2026) — **sin ventaja neta: el agente no opera**
+
+Datos: velas de 1 minuto bid/ask de Dukascopy de ene-2015 a 16-oct-2026, 5 pares, 18 grupos (par, slot) y unos 31 mil
+eventos simulados. La primera corrida tuvo ~93% de los días; la reparación de los días faltantes vuelve a correr
+el backtest sola (`data/fx/BACKTEST.md` siempre tiene la versión vigente).
+
+- **Walk-forward 2018 → 2026:** el EB no activó **ningún** (par, slot) en ningún año. 0 operaciones fuera de muestra.
+- **¿Costo o señal?** Con solo el spread real (cuenta ECN) o con **costo cero**, el EB activa 2–3 grupos en algún
+  año, y esas operaciones **pierden** fuera de muestra (−0.20 a −0.24 R por operación). O sea, no es que OANDA
+  sea caro: después de los primeros 15 minutos ya no queda un drift explotable en estos pares.
+- **Dentro de muestra**, la mejor de 12 variantes por grupo tiene t < 1.7 en todos los casos (lo que da el azar con
+  ~200 ensayos). El único rastro de drift bruto es el slot de las 10:00 NY (t ≈ 2 antes de costos en USD/CHF y
+  USD/MXN), y desaparece con costos.
+- **Conclusión honesta:** la Estrategia A del corpus (Almeida et al. 1998, datos de los 90) no sobrevive en
+  2015–2026 con costos minoristas. El agente queda **listo y seguro, pero plano**: mide todos los slots en práctica
+  (z y spreads reales del broker) y solo operaría si un refresco mensual del backtest validara un grupo fuera de
+  muestra.
 
 ## Arquitectura (capas del corpus F15-014)
 
@@ -65,8 +83,11 @@ se compensa con el umbral de |z| y con el EB.
 - Se activa un grupo con su mejor variante solo si **P(μ>0) ≥ 0.942** (= 1 − 0.2/√12 por elegir entre 12) y n ≥ 12.
 - **Walk-forward anual expansivo**: para operar el año Y se entrena con todo lo anterior a Y. Primer año fuera de
   muestra: 2018.
-- Validación extra: **DSR** (N=12 y N=60), **PBO** por CSCV con 16 bloques sobre las 12 variantes, y **signo
-  aleatorio** (mismas entradas con dirección al azar, 2000 sorteos).
+- Validación extra: **DSR** y **PBO** (CSCV, 16 bloques) con N = todos los ensayos par × slot × variante, **signo
+  aleatorio** (mismas entradas con dirección al azar, 2000 sorteos) y **sensibilidad de costos** (OANDA, solo
+  spread, costo cero).
+- `model.json` solo activa un grupo si el EB lo elige con toda la muestra **y** ya operó fuera de muestra con R
+  medio > 0 (≥10 operaciones).
 
 ## Riesgo (capital de referencia US$2,000)
 
@@ -143,6 +164,12 @@ local (F15-016). OANDA Global Markets (BVI) acepta residentes en México. Fiscal
 como intereses o ganancia patrimonial, a la tarifa anual, declaradas en abril, convertidas con el FIX de Banxico;
 la bitácora del agente (append-only, con P&L y financiamiento por operación) sirve de soporte.
 
-## Cambios declarados después de ver datos
+## Cambios de diseño (con fecha)
 
-(ninguno todavía)
+- **19-oct-2026, antes de ver datos:** se quitó el BCE (14:15 CET): su entrada en T+15 cae justo a las 8:30 NY, en
+  los datos de EE. UU. Los topes entre slots se calculan con el horario de verano real de cada día (BoE sale antes
+  de las 8:30 NY; la mañana de EE. UU. sale antes de las 14:00 NY) y no se entra a ±5 min del T0 de otro slot.
+- **19-oct-2026, antes de ver datos:** las variantes que el tope vuelve idénticas (mismo minuto de salida) se cuentan
+  una sola vez; DSR y PBO usan todos los ensayos (par × slot × variante), no solo 12.
+- **19-oct-2026, después de ver datos (no cambia el veredicto):** el reporte agrega la sensibilidad de costos y el
+  diagnóstico por grupo; `model.json` solo activa grupos con resultado positivo fuera de muestra.

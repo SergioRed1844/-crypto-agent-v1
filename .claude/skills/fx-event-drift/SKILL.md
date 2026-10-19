@@ -29,6 +29,9 @@ description: Agente FX (agente 3, opera en OANDA v20) — Estrategia A del corpu
    Precio > 5 s de viejo → no se decide. El VPS es por disponibilidad, no para ganar la carrera de los segundos.
 10. **Monitor aparte** (`python -m fx monitor`): NAV del broker, solo cierra y escribe `KILL`; el motor lo respeta.
 11. **Nunca prometer ganancia semanal.** Reportar % de semanas positivas, peor semana y DSR/PBO tal cual.
+12. **Resultado vigente (19-oct-2026): sin ventaja neta, 0 grupos activos** — ni con costo cero hay R>0 fuera de
+    muestra. `model.json` solo activa grupos validados fuera de muestra; el motor mide (no opera) los inactivos para
+    calibrar spreads y escalas. No "rescatar" la estrategia moviendo la rejilla: eso es data-mining (punto 6).
 
 ## Archivos
 `fx/config.py` · `fx/calendar.py` · `fx/data_dukascopy.py` · `fx/events.py` · `fx/model.py` · `fx/risk.py` ·
