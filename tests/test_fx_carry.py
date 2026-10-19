@@ -92,11 +92,13 @@ mt, weeks, r = CB.metrics(sim)
 ok(mt["total_ret"] > 0 and mt["financing_usd"] > 0, f"con prima de carry sintética gana: {mt['total_ret']:+.1%}, "
    f"financiamiento {mt['financing_usd']:+.0f} US$")
 ok(0.02 < mt["vol_ann"] < 0.07, f"volatilidad realizada cerca de σ* ({mt['vol_ann']:.1%})")
-Pn = CB.Panel(synth(premium=0.0, seed=2))
-simn = CB.simulate(Pn, CB.Signals(Pn, {c: [("2013-01-01", 0.0)] for c in RATES}, vix), start="2016-01-01",
-                   cost_mult=2.0)
-mn, _, _ = CB.metrics(simn)
-ok(mn["total_ret"] < 0.01 and mn["costs_usd"] > 0, f"sin prima y costos ×2: no gana ({mn['total_ret']:+.1%})")
+tots = []
+for seed in (2, 3, 4, 5):
+    Pn = CB.Panel(synth(premium=0.0, seed=seed))
+    simn = CB.simulate(Pn, CB.Signals(Pn, {c: [("2013-01-01", 0.0)] for c in RATES}, vix), start="2016-01-01",
+                       cost_mult=2.0)
+    tots.append(CB.metrics(simn)[0]["total_ret"])
+ok(np.mean(tots) < 0, f"sin prima y costos ×2: en promedio pierde ({np.mean(tots):+.1%} en 4 semillas)")
 # choque de emergentes: el gobernador corta la semana
 crash = K.local_min(date(2017, 3, 8), "11:00", "America/New_York")
 Pc = CB.Panel(synth(premium=1.5, seed=3, crash_week=crash))

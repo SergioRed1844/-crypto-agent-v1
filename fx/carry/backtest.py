@@ -284,7 +284,7 @@ def simulate(P: Panel, S: Signals, factors: str = "both", cost_mult: float = 1.0
             w, info = S.targets(last_close_j, d_today, carry_week_ret)
             wc = info.get("w_carry")
             if wc is not None:
-                carry_prev_w = wc / max(math.sqrt(max(wc @ (S.cov * 252) @ wc, 1e-12)), 1e-9) * CC.SIGMA_TARGET
+                carry_prev_w = wc        # mismos pesos (Σ|w|=1) con los que targets() mide su σ semanal
             if factors == "carry" and wc is not None:
                 w = _solo(info["w_carry"] * info["m_carry"], S)
             elif factors == "mom" and info.get("w_mom") is not None:
