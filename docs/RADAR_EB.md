@@ -80,19 +80,20 @@ EUA 0.2%, BMV 0.6%.
     w = E5 × 0.4 = 0.16 y el piso de concentración es 2000·(1−w) ≈ 1680, lo que da un encogimiento muy fuerte.
   - Si la diferencia encogida es < 0.5 pp, el Radar dice que ningún día destaca. **Solo sirve como desempate.**
 
-## Regla Selectivo (configurable con variables `RADAR_*`)
+## Regla de alerta (por defecto **relativo**; `RADAR_RULE=relativo|selectivo|moderado`)
 
-Para que salga una ALERTA se tienen que cumplir todas:
+- **relativo:** ALERTA si se cumplen todas:
+  - la cota baja de la probabilidad encogida (q10) supera la tasa de comprar un día cualquiera del último año, es
+    decir, ≥ 90% de credibilidad de que es mejor;
+  - ventaja ≥ +5 pp;
+  - neto esperado ≥ 3%;
+  - ≥ 8 episodios independientes;
+  - ningún veto.
+- **selectivo:** además pide P ≥ 65% y q10 ≥ 55% absolutos. Con las metas netas (1.5/3/5%), las tasas base son de
+  25–45%, así que casi nunca se cumple: 2 alertas en 4.8 años fuera de muestra.
+- **moderado:** P ≥ 60% absoluta, ventaja ≥ +5 pp y neto ≥ 3%.
 
-- P encogida ≥ 65%;
-- cota baja (q10) ≥ 55%;
-- ventaja ≥ +5 pp sobre un día cualquiera;
-- neto esperado ≥ 3%;
-- ≥ 8 episodios independientes;
-- ningún veto.
-
-Límites de envío:
-
+En todas las reglas:
 - Máximo 3 alertas por semana. Las demás pasan al resumen como VIGILANCIA.
 - La misma combinación de activo y setup no se repite antes de 7 días.
 
@@ -165,3 +166,24 @@ Límites de envío:
   canales y corrida completa.
 - `radar/corpus_refs.json` es un índice mínimo del corpus (solo títulos y etiquetas). **El corpus completo no se
   publica** porque el repo es público.
+
+## Cambios declarados después de ver datos (regla anti data-mining, C11-009 B)
+
+Los setups y sus umbrales se fijaron el 18-oct-2026, antes de ver resultados. El 19-oct, después del primer backtest
+con datos reales, hubo estos cambios:
+
+1. **Corrección de datos, no de modelo.**
+   - Yahoo con `range=max` devolvía barras mensuales en historias largas: AAPL, BMV y otros quedaban fuera, y los
+     ETF de EUA salían mensuales.
+   - Ahora se usan `period1/period2` y `check_daily`.
+2. **Comparador.** Se pasó de la tasa base de todo el periodo a la tasa base local del último año, encogida hacia la
+   del periodo con K0 = 4.
+   - Motivo: los setups se agrupan en ciertos regímenes. Las capitulaciones caen en mercados bajistas, y compararlas
+     contra la tasa de un mercado alcista mezclaba régimen con setup.
+3. **Prior del corpus.** Se pasó de τ²·2w a τ²·w/w̄, que es lo que dice este documento: el corpus reparte, no encoge
+   de más. Con w̄ ≈ 0.29, la versión 2w encogía todo hacia cero.
+4. **Regla por defecto.** Se pasó de "selectivo" a "relativo". La meta neta hace inalcanzable una P absoluta de 65%.
+
+Para llegar aquí se probaron 2 variantes de prior × 3 reglas sobre el mismo periodo de prueba, así que hay riesgo de
+sobreajuste. Las tres reglas se siguen reportando en `BACKTEST.md`, y el seguimiento en vivo de las alertas
+(`state.json`) es la prueba que de verdad cuenta.
