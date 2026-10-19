@@ -1,10 +1,10 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-19T17:45:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-19T18:18:45Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.36 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.37
+- Precaución: sesgo -0.36
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -13,12 +13,12 @@ Actualizado 2026-10-19T17:45:04Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.494 |
-| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.416 |
-| Inflación de la eurozona escala al 3,8% ante subida del costo energético | 2026-10-19 | anti | -0.313 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.493 |
+| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.415 |
+| Inflación de la eurozona escala al 3,8% ante subida del costo energético | 2026-10-19 | anti | -0.309 |
 | Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.301 |
-| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.289 |
-| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.279 |
+| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.286 |
+| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.278 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.251 |
 | Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.224 |
 
@@ -29,30 +29,28 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-19T17:45:04Z",
+ "inicio": "2026-10-19T18:18:45Z",
  "onchain": {
   "scanned": [
-   972185,
-   972185
+   972186,
+   972188
   ],
-  "calls": 20,
+  "calls": 48,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 57,
-  "eventos": 13,
-  "urgentes": 6,
+  "titulares": 17,
+  "eventos": 2,
+  "urgentes": 2,
   "metodo": "gemini",
-  "agregados": 1
+  "agregados": 0
  },
  "gemini": {
   "model": "gemini-3.8-flash",
-  "ok": 2,
-  "errors": [
-   "ReadTimeout"
-  ]
+  "ok": 1,
+  "errors": []
  },
  "macro_fuentes_ok": 2
 }
