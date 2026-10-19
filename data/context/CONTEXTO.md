@@ -1,10 +1,10 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-19T15:21:03Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-19T16:20:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.34 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.34
+- Precaución: sesgo -0.35
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -13,14 +13,14 @@ Actualizado 2026-10-19T15:21:03Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.497 |
-| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.419 |
-| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.304 |
-| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.283 |
-| Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas | 2026-10-17 | anti | -0.255 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.253 |
-| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.226 |
-| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.192 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.496 |
+| Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.418 |
+| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.303 |
+| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.298 |
+| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.282 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.252 |
+| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.225 |
+| Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre | 2026-10-16 | pro | +0.191 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,23 +29,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-19T15:21:03Z",
+ "inicio": "2026-10-19T16:20:31Z",
  "onchain": {
   "scanned": [
-   972161,
-   972168
+   972169,
+   972175
   ],
-  "calls": 65,
+  "calls": 164,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 19,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 23,
+  "eventos": 4,
+  "urgentes": 1,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 1
  },
  "gemini": {
   "model": "gemini-3.8-flash",

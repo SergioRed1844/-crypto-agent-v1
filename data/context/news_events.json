@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T15:21:03Z",
+ "updated_utc": "2026-10-19T16:20:31Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4167,6 +4167,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T13:45:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "ETF_FLOWS",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
+   "source_url": "https://www.aol.com/articles/ether-etfs-given-back-62-143035000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-ether-etfs-have-given-back-62-of-this-year-inflows-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "15:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T15:30:00Z"
   }
  ]
 }
