@@ -1,18 +1,22 @@
 # Radar EB — validación fuera de muestra
 
-Entrenamiento: disparos **antes de 2022-01-01** · Prueba: **desde 2022-01-01**. Especificaciones probadas (setup × clase × horizonte): **24** — con tantas pruebas, algún resultado bueno puede ser azar (C11-009 B). Umbrales fijados el 18-oct-2026 antes de ver datos.
+Entrenamiento: disparos **antes de 2022-01-01** · Prueba: **desde 2022-01-01**. Especificaciones probadas (setup × clase × horizonte): **48** — con tantas pruebas, algún resultado bueno puede ser azar (C11-009 B). Umbrales fijados el 18-oct-2026 antes de ver datos.
 
-τ entre setups (logit, entrenamiento): 0.050
+τ entre setups (logit, entrenamiento): 0.219
 
 ## 1. ¿El encogimiento EB predice mejor? (Brier, menor es mejor)
 
 | Clase | Horizonte | Filas | Episodios | Acierto real | Brier EB | Brier tasa base | Brier crudo activo | Brier crudo setup | Skill vs base | Día cualquiera (prueba) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| crypto | 7 d | 291 | 90 | 28.9% | 0.2357 | 0.2355 | 0.2825 | 0.2737 | -0.1% | 38.3% |
-| crypto | 30 d | 290 | 89 | 25.2% | 0.2447 | 0.2449 | 0.2799 | 0.2478 | +0.1% | 39.4% |
-| crypto | 90 d | 289 | 88 | 33.2% | 0.2591 | 0.2596 | 0.2986 | 0.2656 | +0.2% | 39.5% |
-| us | 7 d | 39 | 26 | 71.8% | 0.2281 | 0.2279 | 0.2453 | 0.2350 | -0.1% | 65.7% |
-| us | 30 d | 29 | 19 | 89.7% | 0.1144 | 0.1143 | 0.1331 | 0.1108 | -0.0% | 91.7% |
+| bmv | 7 d | 484 | 156 | 29.8% | 0.2110 | 0.2093 | 0.2204 | 0.2151 | -0.8% | 26.7% |
+| bmv | 30 d | 479 | 154 | 42.2% | 0.2577 | 0.2622 | 0.2523 | 0.2408 | +1.7% | 32.3% |
+| bmv | 90 d | 472 | 150 | 40.5% | 0.2527 | 0.2559 | 0.2545 | 0.2447 | +1.2% | 37.9% |
+| crypto | 7 d | 291 | 90 | 28.9% | 0.2179 | 0.2165 | 0.2825 | 0.2737 | -0.6% | 38.3% |
+| crypto | 30 d | 290 | 89 | 25.2% | 0.2180 | 0.2206 | 0.2799 | 0.2478 | +1.2% | 39.4% |
+| crypto | 90 d | 289 | 88 | 33.2% | 0.2476 | 0.2517 | 0.2986 | 0.2656 | +1.6% | 39.5% |
+| us | 7 d | 541 | 145 | 38.3% | 0.2349 | 0.2387 | 0.2421 | 0.2375 | +1.6% | 30.8% |
+| us | 30 d | 540 | 144 | 45.0% | 0.2584 | 0.2638 | 0.2544 | 0.2466 | +2.1% | 37.8% |
+| us | 90 d | 529 | 137 | 52.7% | 0.2549 | 0.2588 | 0.2598 | 0.2460 | +1.5% | 44.7% |
 
 Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB < crudo, el encogimiento sirvió (la promesa de James-Stein).
 
@@ -20,38 +24,47 @@ Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB
 
 | Tramo predicho | n | Predicho | Real |
 |---|---|---|---|
-| 0%–40% | 48 | 37.2% | 18.8% |
-| 40%–50% | 433 | 45.5% | 27.7% |
-| 50%–60% | 345 | 53.8% | 32.5% |
-| 60%–70% | 60 | 62.9% | 45.0% |
-| 70%–100% | 52 | 79.5% | 75.0% |
+| 0%–40% | 2068 | 31.8% | 35.9% |
+| 40%–50% | 1265 | 44.5% | 42.1% |
+| 50%–60% | 488 | 53.9% | 41.0% |
+| 60%–70% | 89 | 63.9% | 48.3% |
+| 70%–100% | 5 | 71.7% | 20.0% |
 
 ## 3. Setups fuera de muestra vs comprar un día cualquiera
 
-| Setup | Horizonte | Disparos | Episodios | Acierto | Día cualquiera | Predicho EB | Neto medio | Neto día cualquiera |
-|---|---|---|---|---|---|---|---|---|
-| PANICO_SIN_DANO | 7 d | 78 | 15 | 20.5% | 47.6% | 47.7% | -8.3% | 3.0% |
-| PANICO_SIN_DANO | 30 d | 78 | 15 | 26.9% | 50.2% | 50.1% | -3.3% | 15.9% |
-| PANICO_SIN_DANO | 90 d | 75 | 14 | 40.0% | 52.5% | 52.3% | -1.7% | 51.6% |
-| CAPITULACION | 7 d | 58 | 13 | 20.7% | 46.9% | 47.0% | -6.2% | 2.9% |
-| CAPITULACION | 30 d | 58 | 13 | 13.8% | 48.7% | 48.6% | -10.8% | 16.8% |
-| CAPITULACION | 90 d | 58 | 13 | 27.6% | 52.3% | 52.2% | -6.2% | 64.8% |
-| CHOQUE_POLITICO | 7 d | 26 | 3 | 7.7% | 46.4% | 46.4% | -6.2% | 2.6% |
-| CHOQUE_POLITICO | 30 d | 26 | 3 | 11.5% | 49.1% | 49.1% | -6.7% | 14.9% |
-| CHOQUE_POLITICO | 90 d | 26 | 3 | 7.7% | 52.3% | 52.4% | -13.8% | 57.1% |
-| ATENCION_MOMENTUM | 7 d | 51 | 28 | 27.5% | 46.2% | 46.3% | -0.6% | 2.6% |
-| ATENCION_MOMENTUM | 30 d | 51 | 28 | 39.2% | 48.8% | 48.8% | 4.1% | 14.6% |
-| ATENCION_MOMENTUM | 90 d | 51 | 28 | 49.0% | 52.0% | 51.8% | 19.8% | 51.7% |
-| PULLBACK_TENDENCIA | 7 d | 117 | 65 | 58.1% | 54.1% | 54.2% | 4.1% | 4.6% |
-| PULLBACK_TENDENCIA | 30 d | 106 | 58 | 44.3% | 56.9% | 56.9% | 8.5% | 22.7% |
-| PULLBACK_TENDENCIA | 90 d | 79 | 42 | 29.1% | 52.6% | 52.4% | -3.4% | 72.6% |
+| Setup | Horizonte | Disparos | Episodios | Acierto | Base local (predicción) | Día cualquiera real (prueba) | Predicho EB | Neto medio | Neto día cualquiera (prueba) |
+|---|---|---|---|---|---|---|---|---|---|
+| PANICO_SIN_DANO | 7 d | 192 | 27 | 34.9% | 32.6% | 32.9% | 36.6% | -2.3% | 0.0% |
+| PANICO_SIN_DANO | 30 d | 192 | 27 | 41.7% | 38.0% | 37.8% | 39.7% | -0.9% | 1.3% |
+| PANICO_SIN_DANO | 90 d | 192 | 27 | 47.4% | 45.2% | 42.4% | 45.7% | 3.7% | 4.7% |
+| CAPITULACION | 7 d | 110 | 32 | 30.0% | 34.4% | 35.1% | 37.1% | -2.5% | -0.0% |
+| CAPITULACION | 30 d | 110 | 32 | 30.0% | 35.9% | 38.4% | 38.2% | -4.5% | 1.3% |
+| CAPITULACION | 90 d | 110 | 32 | 44.5% | 40.9% | 40.5% | 42.5% | 1.7% | 4.6% |
+| CHOQUE_POLITICO | 7 d | 125 | 8 | 24.8% | 31.4% | 31.5% | 31.9% | -1.2% | -0.0% |
+| CHOQUE_POLITICO | 30 d | 125 | 8 | 51.2% | 38.3% | 36.8% | 39.0% | 2.7% | 1.2% |
+| CHOQUE_POLITICO | 90 d | 125 | 8 | 50.4% | 46.2% | 42.1% | 46.9% | 5.7% | 4.3% |
+| MIEDO_HOGARES | 7 d | 99 | 8 | 44.4% | 23.9% | 26.2% | 24.2% | 1.8% | 0.0% |
+| MIEDO_HOGARES | 30 d | 99 | 8 | 44.4% | 31.2% | 33.8% | 31.5% | 2.6% | 1.0% |
+| MIEDO_HOGARES | 90 d | 99 | 8 | 52.5% | 39.6% | 41.2% | 39.8% | 6.4% | 3.6% |
+| CHOQUE_PESO | 7 d | 144 | 27 | 29.2% | 27.3% | 27.7% | 31.9% | -0.8% | -0.4% |
+| CHOQUE_PESO | 30 d | 139 | 25 | 48.2% | 34.7% | 32.9% | 38.8% | 1.8% | 0.3% |
+| CHOQUE_PESO | 90 d | 139 | 25 | 38.8% | 43.0% | 37.9% | 44.7% | 2.1% | 2.0% |
+| ATENCION_MOMENTUM | 7 d | 51 | 28 | 27.5% | 41.4% | 38.4% | 41.7% | -0.6% | 0.1% |
+| ATENCION_MOMENTUM | 30 d | 51 | 28 | 39.2% | 45.6% | 39.6% | 45.4% | 4.1% | 2.1% |
+| ATENCION_MOMENTUM | 90 d | 51 | 28 | 49.0% | 51.8% | 40.8% | 48.6% | 19.8% | 7.2% |
+| PULLBACK_TENDENCIA | 7 d | 595 | 216 | 34.3% | 33.8% | 31.9% | 36.2% | 0.3% | -0.1% |
+| PULLBACK_TENDENCIA | 30 d | 593 | 214 | 35.4% | 42.0% | 37.0% | 39.2% | 0.7% | 1.1% |
+| PULLBACK_TENDENCIA | 90 d | 574 | 206 | 40.4% | 49.3% | 42.4% | 45.0% | 3.1% | 4.4% |
 
 ## 4. Regla de alerta Selectivo en el periodo de prueba
 
-Alertas: **0** (0 episodios; ~0.0/año sin tope semanal) · acierto real **—** vs predicho — · neto medio — · mediana — · peor caída durante la tenencia —.
+Alertas: **1** (1 episodios; ~0.2/año sin tope semanal) · acierto real **100.0%** vs predicho 71.8% · neto medio 3.1% · mediana 3.1% · peor caída durante la tenencia -13.4%.
 
 Sin contexto v4.2 ni verificación de noticias (no existen hacia atrás): en vivo hay más filtros, no menos.
 
+| Fecha | Activo | Setup | Horizonte | P | Ganó | Neto | Peor caída |
+|---|---|---|---|---|---|---|---|
+| 2026-03-09 | GMEXICOB.MX | CHOQUE_PESO | 30 d | 72% | sí | 3.1% | -13.4% |
 
 ## 5. Mejor día de compra
 
@@ -61,25 +74,44 @@ Sin contexto v4.2 ni verificación de noticias (no existen hacia atrás): en viv
 | ATENCION_MOMENTUM | crypto | 7 d | 46% · 46% · 46% · 46% · 46% | 19% · 20% · 20% · 23% · 19% | 27% · 31% · 27% · 37% · 39% |
 | ATENCION_MOMENTUM | crypto | 30 d | 49% · 49% · 49% · 49% · 49% | 19% · 20% · 20% · 23% · 18% | 39% · 37% · 33% · 37% · 39% |
 | ATENCION_MOMENTUM | crypto | 90 d | 35% · 35% · 35% · 35% · 35% | 19% · 20% · 20% · 22% · 19% | 49% · 49% · 49% · 53% · 47% |
+| CAPITULACION | bmv | 7 d | 36% · 36% · 36% · 36% · 36% | 19% · 20% · 20% · 22% · 19% | 29% · 21% · 29% · 50% · 21% |
+| CAPITULACION | bmv | 30 d | 47% · 47% · 47% · 47% · 47% | 18% · 20% · 20% · 23% · 19% | 29% · 29% · 21% · 21% · 29% |
+| CAPITULACION | bmv | 90 d | 54% · 54% · 54% · 54% · 54% | 20% · 20% · 20% · 22% · 18% | 36% · 29% · 36% · 21% · 29% |
 | CAPITULACION | crypto | 7 d | 51% · 51% · 51% · 51% · 51% | 19% · 20% · 20% · 23% · 19% | 21% · 29% · 40% · 47% · 52% |
 | CAPITULACION | crypto | 30 d | 42% · 42% · 42% · 42% · 42% | 19% · 20% · 19% · 23% · 19% | 14% · 21% · 28% · 22% · 34% |
 | CAPITULACION | crypto | 90 d | 40% · 40% · 40% · 40% · 40% | 19% · 20% · 20% · 22% · 19% | 28% · 31% · 34% · 38% · 43% |
+| CAPITULACION | us | 7 d | 43% · 43% · 41% · 41% · 43% | 34% · 26% · 9% · 8% · 23% | 45% · 53% · 53% · 37% · 29% |
+| CAPITULACION | us | 30 d | 46% · 46% · 46% · 46% · 46% | 19% · 19% · 19% · 22% · 20% | 55% · 50% · 53% · 58% · 53% |
+| CAPITULACION | us | 90 d | 50% · 50% · 50% · 50% · 50% | 19% · 20% · 19% · 22% · 20% | 74% · 68% · 66% · 68% · 58% |
+| CHOQUE_PESO | bmv | 7 d | 34% · 34% · 34% · 34% · 34% | 20% · 20% · 20% · 22% · 18% | 29% · 28% · 22% · 39% · 37% |
+| CHOQUE_PESO | bmv | 30 d | 43% · 43% · 43% · 43% · 43% | 20% · 20% · 19% · 22% · 19% | 48% · 43% · 41% · 40% · 45% |
+| CHOQUE_PESO | bmv | 90 d | 47% · 47% · 47% · 47% · 47% | 19% · 20% · 20% · 23% · 18% | 39% · 37% · 40% · 42% · 40% |
+| PANICO_SIN_DANO | bmv | 7 d | 35% · 35% · 35% · 35% · 35% | 19% · 20% · 20% · 22% · 19% | 40% · 53% · 87% · 53% · 73% |
+| PANICO_SIN_DANO | bmv | 30 d | 35% · 35% · 35% · 35% · 35% | 20% · 20% · 19% · 22% · 19% | 73% · 67% · 73% · 53% · 67% |
+| PANICO_SIN_DANO | bmv | 90 d | 44% · 44% · 44% · 44% · 44% | 19% · 20% · 19% · 23% · 19% | 40% · 40% · 47% · 40% · 40% |
 | PANICO_SIN_DANO | crypto | 7 d | 48% · 48% · 48% · 48% · 48% | 19% · 20% · 19% · 23% · 19% | 21% · 23% · 23% · 36% · 67% |
 | PANICO_SIN_DANO | crypto | 30 d | 34% · 34% · 34% · 34% · 34% | 19% · 19% · 20% · 22% · 20% | 24% · 20% · 20% · 35% · 33% |
 | PANICO_SIN_DANO | crypto | 90 d | 34% · 34% · 34% · 34% · 34% | 19% · 20% · 19% · 22% · 19% | 40% · 37% · 37% · 41% · 55% |
+| PANICO_SIN_DANO | us | 7 d | 35% · 35% · 35% · 35% · 35% | 19% · 20% · 19% · 23% · 19% | 44% · 57% · 40% · 38% · 47% |
+| PANICO_SIN_DANO | us | 30 d | 38% · 38% · 38% · 38% · 38% | 20% · 20% · 19% · 22% · 19% | 50% · 61% · 51% · 38% · 41% |
+| PANICO_SIN_DANO | us | 90 d | 45% · 45% · 45% · 45% · 45% | 19% · 20% · 20% · 23% · 19% | 54% · 58% · 56% · 54% · 56% |
+| PULLBACK_TENDENCIA | bmv | 7 d | 35% · 32% · 31% · 29% · 27% | 79% · 15% · 5% · 1% · 0% | 29% · 27% · 30% · 27% · 30% |
+| PULLBACK_TENDENCIA | bmv | 30 d | 36% · 36% · 36% · 36% · 36% | 22% · 20% · 19% · 22% · 17% | 36% · 36% · 41% · 35% · 33% |
+| PULLBACK_TENDENCIA | bmv | 90 d | 45% · 45% · 45% · 45% · 45% | 18% · 20% · 20% · 23% · 20% | 40% · 38% · 40% · 41% · 38% |
 | PULLBACK_TENDENCIA | crypto | 7 d | 43% · 43% · 43% · 43% · 43% | 20% · 19% · 19% · 23% · 19% | 49% · 42% · 40% · 39% · 31% |
 | PULLBACK_TENDENCIA | crypto | 30 d | 46% · 46% · 46% · 46% · 46% | 19% · 20% · 19% · 23% · 19% | 30% · 26% · 26% · 32% · 28% |
 | PULLBACK_TENDENCIA | crypto | 90 d | 50% · 50% · 50% · 50% · 50% | 19% · 19% · 19% · 23% · 19% | 29% · 25% · 24% · 23% · 24% |
-| PULLBACK_TENDENCIA | us | 7 d | 56% · 56% · 56% · 56% · 56% | 20% · 20% · 19% · 22% · 19% | 78% · 71% · 65% · 61% · 66% |
-| PULLBACK_TENDENCIA | us | 30 d | 78% · 78% · 78% · 78% · 78% | 20% · 20% · 19% · 21% · 19% | 88% · 92% · 83% · 100% · 95% |
+| PULLBACK_TENDENCIA | us | 7 d | 34% · 34% · 34% · 34% · 34% | 21% · 20% · 18% · 22% · 19% | 35% · 33% · 36% · 32% · 32% |
+| PULLBACK_TENDENCIA | us | 30 d | 39% · 39% · 39% · 39% · 39% | 20% · 19% · 18% · 23% · 20% | 36% · 37% · 39% · 39% · 35% |
+| PULLBACK_TENDENCIA | us | 90 d | 44% · 44% · 44% · 44% · 44% | 21% · 19% · 19% · 22% · 19% | 45% · 46% · 43% · 44% · 45% |
 
 ### Día de la semana (comprar un día cualquiera, 7 días)
 
 | Clase | Días | Encogido entrenamiento | P(mejor) | Crudo prueba |
 |---|---|---|---|---|
 | crypto | lunes · martes · miércoles · jueves · viernes · sábado · domingo | 44.2% · 44.2% · 44.2% · 44.2% · 44.2% · 44.2% · 44.2% | 15% · 14% · 14% · 15% · 14% · 13% · 16% | 37.6% · 38.2% · 39.3% · 38.8% · 39.5% · 37.6% · 37.0% |
-| us | lunes · martes · miércoles · jueves · viernes · sábado · domingo | 74.0% · 74.0% · 74.0% · 74.0% · 74.0% · 74.0% · 74.0% | 14% · 14% · 14% · 16% · 13% · 14% · 15% | 72.1% · 59.3% · 66.7% · 70.3% · 67.3% · 69.2% · 54.8% |
-| bmv |  |  |  | 43.0% |
+| us | lunes · martes · miércoles · jueves · viernes | 27.9% · 27.9% · 27.9% · 27.9% · 27.9% | 20% · 20% · 19% · 21% · 20% | 30.1% · 30.7% · 30.9% · 31.5% · 30.8% |
+| bmv | lunes · martes · miércoles · jueves · viernes | 26.1% · 26.1% · 26.1% · 26.1% · 26.1% | 19% · 21% · 19% · 21% · 20% | 26.4% · 27.3% · 27.2% · 26.5% · 26.2% |
 
 Escepticismo de calendario: peso de evidencia 0.16 (E5 × 0.4 por publicación antigua, C08-008/C11-006) → concentración mínima del prior 2000·(1−w).
 
@@ -165,6 +197,3 @@ Escepticismo de calendario: peso de evidencia 0.16 (E5 × 0.4 por publicación a
 | wiki_es_Devaluación | sí | 2026-10-15 | wikimedia |
 | wiki_es_Inflación | sí | 2026-10-15 | wikimedia |
 | wiki_es_Recesión | sí | 2026-10-15 | wikimedia |
-
-
-Activos sin historia suficiente o sin datos: IWM, SMH, GLD, AAPL, MSFT, GOOGL, META, TSLA, JPM, XOM, WMT, NAFTRACISHRS.MX, WALMEX.MX, GFNORTEO.MX, AMXB.MX, FEMSAUBD.MX, GMEXICOB.MX, CEMEXCPO.MX, BIMBOA.MX, GAPB.MX, ASURB.MX, OMAB.MX, AC.MX, ORBIA.MX, PINFRA.MX, ALSEA.MX, LIVEPOLC-1.MX, BBAJIOO.MX, GRUMAB.MX, KIMBERA.MX
