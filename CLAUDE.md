@@ -35,6 +35,13 @@ reach exchanges.
 - **market-data-pipeline** — data sources (v1 catalog; v4.2 sources are in `data/context/sources/apis.json`).
 - **deploy-render-runbook** — deploying (v4.2 blueprint: `render.yaml`, `branch: v4.2-contexto`, autoDeploy off).
 
+## Radar EB — agente 2 (rama `radar-eb`, solo alertas)
+Vigía horario de cripto + EUA + BMV que **no opera**: setups de compra del corpus de microcomportamientos
+(pánico sin daño, capitulación, choque político, miedo de hogares, choque del peso, atención+momentum, retroceso en
+tendencia) → modelo de **Bayes empírico** (`radar/`) → regla Selectivo → ficha por issue/Gmail/WhatsApp (CallMeBot)
+y resumen diario 8:00 CDMX. Método: `docs/RADAR_EB.md`; validación: `data/radar/BACKTEST.md`; skill: `radar-eb-model`.
+Pruebas: `python -m tests.test_radar`. El Radar nunca toca `app/` ni llaves de exchange; sus vetos solo restan.
+
 ## Non-negotiable safety rules
 - **`PAPER_TRADING=true` always** during all development (in v4.x: `TRADING_MODE=paper`). Flipping to live is a manual
   human decision made only after the paper gate (≥30 trades, ≥2 weeks, win rate >50%, avg R:R ≥2.0, drawdown <10%).
