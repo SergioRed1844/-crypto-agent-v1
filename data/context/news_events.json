@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T18:18:45Z",
+ "updated_utc": "2026-10-19T19:17:46Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4169,6 +4169,27 @@
    "utc": "2026-10-19T13:45:00Z"
   },
   {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Expectativas de mercado sobre posible subida de tasas de la Fed",
+   "source_url": "https://www.fool.com/investing/2026/10/19/will-the-fed-raise-rates-this-month-heres-what-mar/?source=iedfolrf0000001",
+   "source_title": "fool.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-will-the-fed-raise-rates-this-month-here-what-mark-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T14:15:00Z"
+  },
+  {
    "category": "MACRO_DATA",
    "subcategory": "",
    "country": "EU",
@@ -4209,6 +4230,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T15:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Banqueros centrales contemplan tasas más altas por demanda de liquidez de IA",
+   "source_url": "https://www.bangkokpost.com/business/general/3339839/central-bankers-eye-higher-rates-as-ai-boom-fuels-scramble-for-cash",
+   "source_title": "bangkokpost.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-bangkok-post-central-bankers-eye-higher-rates-as-a-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "15:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T15:45:00Z"
   },
   {
    "category": "CRYPTO_REGULATION",
