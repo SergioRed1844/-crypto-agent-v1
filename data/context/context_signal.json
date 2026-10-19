@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T10:25:26Z",
+ "generated_utc": "2026-10-19T11:12:39Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.356,
- "event_risk": 0.469,
+ "event_risk": 0.475,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.262,
+   "riesgo": 0.271,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.505,
+   "aporte": 0.503,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.425,
+   "aporte": -0.424,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.229,
+   "aporte": -0.228,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.204,
+   "aporte": -0.203,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.196,
+   "aporte": 0.195,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Mercado reduce apuestas de subida de tasas de la Fed para octubre",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.182,
+   "aporte": 0.181,
    "fuente": "noticia"
   }
  ],
