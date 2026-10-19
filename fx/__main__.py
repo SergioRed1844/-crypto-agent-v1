@@ -248,9 +248,9 @@ def main(argv=None):
     a = ap.parse_args(argv)
     if a.cmd == "backtest":
         from .backtest import run
-        res = run(a.bars, a.out)
+        run(a.bars, a.out)
         print(open(os.path.join(a.out, "BACKTEST.md")).read())
-        return 0 if "error" not in res else 1
+        return 0
     if a.cmd == "run":
         asyncio.run(_run())
     elif a.cmd == "monitor":

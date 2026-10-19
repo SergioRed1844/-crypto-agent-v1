@@ -322,12 +322,13 @@ def run(bars_dir: str, out_dir: str = C.DATA_DIR, cache_dir: str = C.CACHE_DIR) 
     fp = _fingerprint(bars_dir)
     rows = build_rows(bars, os.path.join(cache_dir, "events.json.gz"), fp)
     cands, models = walk_forward(rows)
+    res = {"rows": len(rows), "fingerprint": fp, "generated": datetime.now(timezone.utc).isoformat(),
+           "wf_active": {y: len(m["active"]) for y, m in models.items()}, "diagnostic": diagnostic(rows)}
     if not cands:
-        res = {"error": "sin candidatos fuera de muestra", "rows": len(rows)}
+        res["no_trades"] = "ningún (par, slot) pasó el umbral del EB en ningún año del walk-forward"
     else:
         start_m = min(c["entry_m"] for c in cands)
         end_m = max(c["exit_m"] for c in cands)
-        res = {"rows": len(rows), "fingerprint": fp, "generated": datetime.now(timezone.utc).isoformat()}
         for name, cm in (("base", 1.0), ("estres_x2", C.COST_STRESS)):
             tr, eng, sk = portfolio(cands, bars, cm)
             wk = weekly(tr, start_m, end_m)
@@ -344,21 +345,63 @@ def run(bars_dir: str, out_dir: str = C.DATA_DIR, cache_dir: str = C.CACHE_DIR) 
         res["random_sign"] = random_sign(cands, rows)
         res["by_group"] = _by_group(res["trades_base"])
         res["by_era"] = _by_era(res["weeks_base"])
-        res["models"] = {y: {f"{s}|{sl}": {k: g[k] for k in ("dir", "hold", "z", "p_pos", "post_mean", "n")}
-                             for (s, sl), g in m["active"].items()} for y, m in models.items()}
+    res["cost_sensitivity"] = cost_sensitivity(rows)
+    res["models"] = {y: {f"{s}|{sl}": {k: g[k] for k in ("dir", "hold", "z", "p_pos", "post_mean", "n")}
+                         for (s, sl), g in m["active"].items()} for y, m in models.items()}
     os.makedirs(out_dir, exist_ok=True)
-    if "error" not in res:
-        final = M.fit(rows)
-        last_day = max(date.fromisoformat(r["day"]) for r in rows)
-        model_json = M.serializable(final, last_day, {"scales": scales_now(bars), "fingerprint": fp,
-                                                      "risk": vars(C.RISK), "version": 2})
-        json.dump(model_json, open(os.path.join(out_dir, "model.json"), "w"), indent=1, default=str)
-    else:
-        model_json = None       # sin validación fuera de muestra no se publica modelo
+    # Modelo para operar: lo que el EB activa con TODOS los datos, pero solo si ese grupo ya operó fuera de muestra
+    # (≥10 operaciones) con R medio > 0. Sin validación fuera de muestra el grupo queda inactivo.
+    final = M.fit(rows)
+    oos_ok = {k for k, v in res.get("by_group", {}).items() if v["n"] >= 10 and v["avg_R"] > 0}
+    final["active"] = {k: g for k, g in final["active"].items() if f"{k[0]}|{k[1]}" in oos_ok}
+    last_day = max(date.fromisoformat(r["day"]) for r in rows)
+    model_json = M.serializable(final, last_day, {"scales": scales_now(bars), "fingerprint": fp,
+                                                  "risk": vars(C.RISK), "version": 2})
+    json.dump(model_json, open(os.path.join(out_dir, "model.json"), "w"), indent=1, default=str)
     slim = {k: v for k, v in res.items() if k not in ("trades_base",)}
     json.dump(slim, open(os.path.join(out_dir, "backtest.json"), "w"), indent=1, default=str)
     open(os.path.join(out_dir, "BACKTEST.md"), "w").write(report(res, model_json))
     return res
+
+
+def cost_sensitivity(rows: list[dict]) -> dict:
+    """¿El problema es el costo o la señal? Mismo walk-forward con (a) costos OANDA, (b) solo el spread de
+    Dukascopy (cuenta ECN), (c) costo cero. Si ni con costo cero hay R>0 fuera de muestra, no hay drift."""
+    def strip(r, frac_extra: bool):
+        p = C.PAIRS[r["sym"]]
+        extra = (p.oanda_markup_pips + 2 * p.slip_pips) * p.pip / r["risk_px"] if frac_extra else r["R_cost"]
+        return dict(r, R=r["R"] + extra, R_cost=r["R_cost"] - extra)
+    out = {}
+    for name, rr in (("oanda", rows), ("ecn_solo_spread", [strip(r, True) for r in rows]),
+                     ("costo_cero", [strip(r, False) for r in rows])):
+        c, ms = walk_forward(rr)
+        R = np.array([x["R"] for x in c]) if c else np.zeros(0)
+        out[name] = {"oos_trades": len(c), "oos_avg_R": float(R.mean()) if len(R) else None,
+                     "active": {y: sorted(f"{a}|{b}" for a, b in m["active"]) for y, m in ms.items() if m["active"]}}
+    return out
+
+
+def diagnostic(rows: list[dict]) -> dict:
+    """Con TODA la muestra (dentro de muestra, solo para explicar): por (par, slot) la mejor variante neta y el R
+    bruto del momentum a 120 min con |z|≥2, con su t. Sirve para ver si el problema es la señal o el costo."""
+    st = M.group_stats(rows)
+    best = {}
+    for (v, sym, slot), (n, m, var) in st.items():
+        t = m / math.sqrt(var) if var > 0 else 0.0
+        k = f"{sym}|{slot}"
+        if n >= C.EB_MIN_N and (k not in best or t > best[k]["t"]):
+            best[k] = {"variant": f"{v[0]} {v[1]}m z≥{v[2]:g}", "n": n, "net_R": m, "t": t}
+    gross = defaultdict(list)
+    for r in rows:
+        if r["dir"] == "mom" and r["hold"] == 120 and M.eligible(r, 2.0):
+            gross[f"{r['sym']}|{r['slot']}"].append((r["R"] + r["R_cost"], r["R_cost"]))
+    for k, v in gross.items():
+        a = np.array(v)
+        if k in best and len(a) > 2:
+            best[k]["gross_mom120"] = float(a[:, 0].mean())
+            best[k]["t_gross_mom120"] = float(a[:, 0].mean() / a[:, 0].std(ddof=1) * math.sqrt(len(a)))
+            best[k]["cost_R"] = float(a[:, 1].mean())
+    return dict(sorted(best.items()))
 
 
 def _by_group(trades):
@@ -381,6 +424,45 @@ def _by_era(weeks):
     return out
 
 
+def _sens_table(res: dict) -> list[str]:
+    lab = {"oanda": "costos OANDA estimados (base)", "ecn_solo_spread": "solo spread real (cuenta ECN)",
+           "costo_cero": "costo cero (límite teórico)"}
+    L = ["## ¿Costo o señal? Mismo walk-forward con tres supuestos de costo", "",
+         "| supuesto | operaciones fuera de muestra | R medio fuera de muestra | grupos que el EB activó (año) |",
+         "|---|---|---|---|"]
+    for k, v in res.get("cost_sensitivity", {}).items():
+        act = "; ".join(f"{y}: {', '.join(x.replace('|', ' · ') for x in g)}" for y, g in v["active"].items()) or "—"
+        r = f"{v['oos_avg_R']:+.3f}" if v["oos_avg_R"] is not None else "—"
+        L.append(f"| {lab.get(k, k)} | {v['oos_trades']} | {r} | {act} |")
+    return L + [""]
+
+
+def _diag_table(res: dict) -> list[str]:
+    L = ["## Diagnóstico con toda la muestra (dentro de muestra: explica, no valida)", "",
+         "| grupo | mejor variante | n días | R neto | t | R bruto mom 120 min | t bruto | costo (R) |",
+         "|---|---|---|---|---|---|---|---|"]
+    for k, d in res.get("diagnostic", {}).items():
+        L.append(f"| {k.replace('|', ' · ')} | {d['variant']} | {d['n']} | {d['net_R']:+.3f} | {d['t']:.2f} | "
+                 f"{d.get('gross_mom120', float('nan')):+.3f} | {d.get('t_gross_mom120', float('nan')):.2f} | "
+                 f"{d.get('cost_R', float('nan')):.3f} |")
+    L += ["", "Lectura: la mejor de 12 variantes por grupo con t < 2 es lo que se espera por azar entre ~200 ensayos; el "
+          "R bruto muestra si había drift antes de costos.", ""]
+    return L
+
+
+def _model_table(model_json: dict) -> list[str]:
+    L = ["## Modelo vigente (entrenado con todo hasta " + model_json["trained_until"] + ")", "",
+         f"Umbral P(ventaja>0) ajustado por variantes: {model_json['p_adj']:.3f}. Solo se activan grupos que además "
+         "operaron fuera de muestra con R medio > 0.", "",
+         "| grupo | dirección | horizonte | z mín | P(ventaja>0) | R medio a posteriori | n |",
+         "|---|---|---|---|---|---|---|"]
+    for k, g in sorted(model_json["active"].items()):
+        L.append(f"| {k.replace('|', ' · ')} | {g['dir']} | {g['hold']} min | {g['z']} | {g['p_pos']:.3f} | {g['post_mean']:+.3f} | {g['n']} |")
+    if not model_json["active"]:
+        L.append("| — ningún grupo pasa: el agente no opera | | | | | | |")
+    return L
+
+
 def _pct(x, d=1):
     return f"{100 * x:+.{d}f}%"
 
@@ -389,8 +471,15 @@ def report(res: dict, model_json: dict) -> str:
     L = ["# Backtest del agente FX — Estrategia A (reacción intradía a datos macro)", "",
          f"Generado {res.get('generated', '')} · filas de eventos {res.get('rows')} · huella `{res.get('fingerprint')}`",
          ""]
-    if "error" in res:
-        return "\n".join(L + [f"**{res['error']}**"]) + "\n"
+    wf = res.get("wf_active", {})
+    L += ["Walk-forward: grupos (par, slot) activos por año de prueba → " +
+          " · ".join(f"{y}: {n}" for y, n in sorted(wf.items())), ""]
+    if "no_trades" in res:
+        L += ["## Veredicto: **sin ventaja neta — el agente no opera**", "",
+              f"{res['no_trades']}. Con costos reales ningún horario/par mostró un drift posterior creíble; el modelo",
+              "publicado tiene 0 grupos activos, así que el motor corre pero no abre posiciones.", ""]
+        L += _sens_table(res) + _diag_table(res) + _model_table(model_json)
+        return "\n".join(L) + "\n"
     b, s = res["base"], res["estres_x2"]
     L += ["## Fuera de muestra (walk-forward anual, 2018 → hoy, capital inicial US$2,000)", "",
           "| métrica | costos base | costos ×2 |", "|---|---|---|"]
@@ -414,14 +503,8 @@ def report(res: dict, model_json: dict) -> str:
         L.append(f"| {k} | {v['weeks']} | {_pct(v['ret'])} | {v['pos']} | {v['neg']} | {_pct(v['worst'])} |")
     L += ["", "## Por (par, slot) fuera de muestra", "", "| grupo | n | R medio | aciertos |", "|---|---|---|---|"]
     for k, v in res["by_group"].items():
-        L.append(f"| {k} | {v['n']} | {v['avg_R']:+.3f} | {_pct(v['hit'], 0)} |")
-    L += ["", "## Modelo vigente (entrenado con todo hasta " + model_json["trained_until"] + ")", "",
-          f"Umbral P(ventaja>0) ajustado por variantes: {model_json['p_adj']:.3f}", "",
-          "| grupo | dirección | horizonte | z mín | P(ventaja>0) | R medio a posteriori | n |", "|---|---|---|---|---|---|---|"]
-    for k, g in sorted(model_json["active"].items()):
-        L.append(f"| {k} | {g['dir']} | {g['hold']} min | {g['z']} | {g['p_pos']:.3f} | {g['post_mean']:+.3f} | {g['n']} |")
-    if not model_json["active"]:
-        L.append("| — ningún grupo pasa el umbral: el agente no opera | | | | | | |")
+        L.append(f"| {k.replace('|', ' · ')} | {v['n']} | {v['avg_R']:+.3f} | {_pct(v['hit'], 0)} |")
+    L += [""] + _sens_table(res) + _diag_table(res) + _model_table(model_json)
     L += ["", "Bloqueos del motor de riesgo (base): " + json.dumps(b["skipped"], ensure_ascii=False),
           "", "Notas: costos = spread real cruzado + sobreprecio OANDA estimado + deslizamiento; el estrés ×2 los duplica."
           " Los resultados históricos se descuentan ~50% para planear (F14-017). Nada aquí es garantía."]
