@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-19T19:17:46Z",
+ "generated_utc": "2026-10-19T20:16:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.365,
+ "bias": -0.366,
  "event_risk": 0.482,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.37"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.491,
+   "aporte": 0.49,
    "fuente": "noticia"
   },
   {
@@ -59,16 +59,16 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.414,
+   "aporte": -0.413,
    "fuente": "noticia"
   },
   {
-   "id": "news-euro-area-inflation-reaches-3-8-as-energy-prices-r-2026-10-19",
+   "id": "news-10-year-treasury-yield-falls-15-basis-points-as-na-2026-10-19",
    "date": "2026-10-19",
-   "title_es": "Inflación de la eurozona escala al 3,8% ante subida del costo energético",
+   "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.303,
+   "aporte": -0.326,
    "fuente": "noticia"
   },
   {
@@ -77,16 +77,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.3,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-btc-asian-equities-nasdaq-futures-rise-aft-2026-10-19",
-   "date": "2026-10-19",
-   "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.28,
+   "aporte": -0.298,
    "fuente": "noticia"
   },
   {
@@ -95,7 +86,16 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.275,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-btc-asian-equities-nasdaq-futures-rise-aft-2026-10-19",
+   "date": "2026-10-19",
+   "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.274,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.249,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.222,
    "fuente": "noticia"
   }
  ],

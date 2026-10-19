@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T19:17:46Z",
+ "updated_utc": "2026-10-19T20:16:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4272,6 +4272,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T16:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
+   "source_url": "https://econotimes.com/10-Year-Treasury-Yield-Falls-15-Basis-Points-as-Nasdaq-100-Slides-5-5-1756768",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-10-year-treasury-yield-falls-15-basis-points-as-na-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T19:15:00Z"
   }
  ]
 }
