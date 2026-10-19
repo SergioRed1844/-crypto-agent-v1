@@ -1,27 +1,22 @@
 {
  "sym": "USDJPY",
  "year": 2018,
- "days_requested": 313,
- "days_failed": 10,
+ "repaired_days": 5,
+ "days_requested": 9,
+ "days_failed": 4,
  "fails": [
-  "2018-01-10: USDJPY/2018/00/10/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-01-12: USDJPY/2018/00/12/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-01-15: USDJPY/2018/00/15/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-16: USDJPY/2018/00/16/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-17: USDJPY/2018/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-18: USDJPY/2018/00/18/BID_candles_min_1.bi5: HTTP 503",
+  "2018-01-16: USDJPY/2018/00/16/ASK_candles_min_1.bi5: HTTP 503",
+  "2018-01-18: USDJPY/2018/00/18/ASK_candles_min_1.bi5: HTTP 503",
   "2018-01-19: USDJPY/2018/00/19/BID_candles_min_1.bi5: HTTP 503",
-  "2018-02-07: USDJPY/2018/01/07/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2018-02-09: USDJPY/2018/01/09/BID_candles_min_1.bi5: ConnectTimeout",
-  "2018-02-11: USDJPY/2018/01/11/BID_candles_min_1.bi5: ConnectTimeout"
+  "2018-02-09: USDJPY/2018/01/09/ASK_candles_min_1.bi5: ConnectTimeout"
  ],
- "minutes": 360073,
+ "minutes": 367152,
  "scale": {
   "ok": true,
-  "median_mid": 110.8065,
+  "median_mid": 110.8045,
   "median_spread_pips": 0.3
  },
  "first_utc": "2018-01-01T22:00Z",
  "last_utc": "2018-12-31T21:59Z",
- "bytes": 3044260
+ "bytes": 3105776
 }

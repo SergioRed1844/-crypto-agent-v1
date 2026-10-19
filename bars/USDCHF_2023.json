@@ -1,37 +1,17 @@
 {
  "sym": "USDCHF",
  "year": 2023,
- "days_requested": 313,
- "days_failed": 21,
- "fails": [
-  "2023-01-09: USDCHF/2023/00/09/BID_candles_min_1.bi5: ReadTimeout",
-  "2023-01-10: USDCHF/2023/00/10/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-12: USDCHF/2023/00/12/ASK_candles_min_1.bi5: ReadTimeout",
-  "2023-01-13: USDCHF/2023/00/13/BID_candles_min_1.bi5: ReadTimeout",
-  "2023-01-15: USDCHF/2023/00/15/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-18: USDCHF/2023/00/18/ASK_candles_min_1.bi5: HTTP 503",
-  "2023-01-19: USDCHF/2023/00/19/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-22: USDCHF/2023/00/22/ASK_candles_min_1.bi5: HTTP 503",
-  "2023-01-23: USDCHF/2023/00/23/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-24: USDCHF/2023/00/24/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-26: USDCHF/2023/00/26/BID_candles_min_1.bi5: RemoteProtocolError",
-  "2023-01-27: USDCHF/2023/00/27/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-30: USDCHF/2023/00/30/BID_candles_min_1.bi5: HTTP 503",
-  "2023-01-31: USDCHF/2023/00/31/BID_candles_min_1.bi5: HTTP 503",
-  "2023-02-01: USDCHF/2023/01/01/BID_candles_min_1.bi5: HTTP 503",
-  "2023-02-05: USDCHF/2023/01/05/ASK_candles_min_1.bi5: ConnectError",
-  "2023-02-07: USDCHF/2023/01/07/BID_candles_min_1.bi5: ConnectError",
-  "2023-02-12: USDCHF/2023/01/12/BID_candles_min_1.bi5: ConnectError",
-  "2023-02-13: USDCHF/2023/01/13/BID_candles_min_1.bi5: HTTP 503",
-  "2023-12-18: USDCHF/2023/11/18/ASK_candles_min_1.bi5: ConnectTimeout"
- ],
- "minutes": 344987,
+ "repaired_days": 17,
+ "days_requested": 17,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 369080,
  "scale": {
   "ok": true,
-  "median_mid": 0.89728,
+  "median_mid": 0.8982,
   "median_spread_pips": 1.0
  },
  "first_utc": "2023-01-01T22:13Z",
  "last_utc": "2023-12-29T21:59Z",
- "bytes": 2912268
+ "bytes": 3129892
 }

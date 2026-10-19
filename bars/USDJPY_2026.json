@@ -1,7 +1,8 @@
 {
  "sym": "USDJPY",
  "year": 2026,
- "days_requested": 249,
+ "repaired_days": 0,
+ "days_requested": 0,
  "days_failed": 0,
  "fails": [],
  "minutes": 295618,

@@ -1,37 +1,25 @@
 {
  "sym": "GBPUSD",
  "year": 2026,
- "days_requested": 249,
- "days_failed": 33,
+ "repaired_days": 16,
+ "days_requested": 23,
+ "days_failed": 7,
  "fails": [
-  "2026-01-01: GBPUSD/2026/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-05: GBPUSD/2026/00/05/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-06: GBPUSD/2026/00/06/BID_candles_min_1.bi5: HTTP 503",
   "2026-01-07: GBPUSD/2026/00/07/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-11: GBPUSD/2026/00/11/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-12: GBPUSD/2026/00/12/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-13: GBPUSD/2026/00/13/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-14: GBPUSD/2026/00/14/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-16: GBPUSD/2026/00/16/ASK_candles_min_1.bi5: HTTP 503",
-  "2026-01-21: GBPUSD/2026/00/21/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-23: GBPUSD/2026/00/23/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-25: GBPUSD/2026/00/25/ASK_candles_min_1.bi5: HTTP 503",
-  "2026-01-27: GBPUSD/2026/00/27/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-28: GBPUSD/2026/00/28/BID_candles_min_1.bi5: HTTP 503",
+  "2026-01-12: GBPUSD/2026/00/12/ASK_candles_min_1.bi5: HTTP 503",
+  "2026-01-27: GBPUSD/2026/00/27/ASK_candles_min_1.bi5: HTTP 503",
   "2026-01-29: GBPUSD/2026/00/29/ASK_candles_min_1.bi5: HTTP 503",
-  "2026-02-01: GBPUSD/2026/01/01/BID_candles_min_1.bi5: HTTP 503",
-  "2026-02-02: GBPUSD/2026/01/02/BID_candles_min_1.bi5: HTTP 503",
-  "2026-02-03: GBPUSD/2026/01/03/BID_candles_min_1.bi5: ConnectError",
-  "2026-02-04: GBPUSD/2026/01/04/BID_candles_min_1.bi5: HTTP 503",
-  "2026-02-05: GBPUSD/2026/01/05/BID_candles_min_1.bi5: HTTP 503"
+  "2026-02-03: GBPUSD/2026/01/03/BID_candles_min_1.bi5: HTTP 503",
+  "2026-02-04: GBPUSD/2026/01/04/ASK_candles_min_1.bi5: HTTP 503",
+  "2026-02-10: GBPUSD/2026/01/10/BID_candles_min_1.bi5: HTTP 503"
  ],
- "minutes": 261450,
+ "minutes": 284009,
  "scale": {
   "ok": true,
-  "median_mid": 1.34313,
+  "median_mid": 1.34326,
   "median_spread_pips": 0.7
  },
  "first_utc": "2026-01-02T00:00Z",
  "last_utc": "2026-10-18T23:59Z",
- "bytes": 2330988
+ "bytes": 2536648
 }

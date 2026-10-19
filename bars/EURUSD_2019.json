@@ -1,37 +1,21 @@
 {
  "sym": "EURUSD",
  "year": 2019,
- "days_requested": 313,
- "days_failed": 50,
+ "repaired_days": 42,
+ "days_requested": 45,
+ "days_failed": 3,
  "fails": [
-  "2019-01-03: EURUSD/2019/00/03/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-10: EURUSD/2019/00/10/ASK_candles_min_1.bi5: ReadTimeout",
-  "2019-01-16: EURUSD/2019/00/16/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-18: EURUSD/2019/00/18/BID_candles_min_1.bi5: ReadTimeout",
-  "2019-01-21: EURUSD/2019/00/21/BID_candles_min_1.bi5: HTTP 503",
-  "2019-01-22: EURUSD/2019/00/22/BID_candles_min_1.bi5: HTTP 503",
-  "2019-01-23: EURUSD/2019/00/23/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-24: EURUSD/2019/00/24/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-25: EURUSD/2019/00/25/BID_candles_min_1.bi5: HTTP 503",
-  "2019-01-27: EURUSD/2019/00/27/BID_candles_min_1.bi5: RemoteProtocolError",
-  "2019-01-28: EURUSD/2019/00/28/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-29: EURUSD/2019/00/29/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-30: EURUSD/2019/00/30/ASK_candles_min_1.bi5: HTTP 503",
-  "2019-01-31: EURUSD/2019/00/31/BID_candles_min_1.bi5: HTTP 503",
-  "2019-02-04: EURUSD/2019/01/04/BID_candles_min_1.bi5: HTTP 503",
-  "2019-02-07: EURUSD/2019/01/07/BID_candles_min_1.bi5: HTTP 503",
-  "2019-02-08: EURUSD/2019/01/08/BID_candles_min_1.bi5: HTTP 503",
-  "2019-02-12: EURUSD/2019/01/12/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2019-02-13: EURUSD/2019/01/13/BID_candles_min_1.bi5: ConnectTimeout",
-  "2019-02-14: EURUSD/2019/01/14/ASK_candles_min_1.bi5: ConnectTimeout"
+  "2019-01-16: EURUSD/2019/00/16/BID_candles_min_1.bi5: HTTP 503",
+  "2019-01-31: EURUSD/2019/00/31/BID_candles_min_1.bi5: ConnectTimeout",
+  "2019-02-13: EURUSD/2019/01/13/ASK_candles_min_1.bi5: HTTP 503"
  ],
- "minutes": 308542,
+ "minutes": 368101,
  "scale": {
   "ok": true,
-  "median_mid": 1.11855,
+  "median_mid": 1.11954,
   "median_spread_pips": 0.3
  },
  "first_utc": "2019-01-01T22:02Z",
  "last_utc": "2019-12-31T21:59Z",
- "bytes": 2670060
+ "bytes": 3193948
 }

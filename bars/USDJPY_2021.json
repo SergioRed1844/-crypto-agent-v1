@@ -1,32 +1,17 @@
 {
  "sym": "USDJPY",
  "year": 2021,
- "days_requested": 313,
- "days_failed": 15,
- "fails": [
-  "2021-01-01: USDJPY/2021/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-03: USDJPY/2021/00/03/ASK_candles_min_1.bi5: HTTP 503",
-  "2021-01-04: USDJPY/2021/00/04/ASK_candles_min_1.bi5: HTTP 503",
-  "2021-01-05: USDJPY/2021/00/05/ASK_candles_min_1.bi5: HTTP 503",
-  "2021-01-07: USDJPY/2021/00/07/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-08: USDJPY/2021/00/08/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-10: USDJPY/2021/00/10/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-11: USDJPY/2021/00/11/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-13: USDJPY/2021/00/13/ASK_candles_min_1.bi5: HTTP 503",
-  "2021-01-15: USDJPY/2021/00/15/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-17: USDJPY/2021/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-18: USDJPY/2021/00/18/BID_candles_min_1.bi5: HTTP 503",
-  "2021-01-19: USDJPY/2021/00/19/BID_candles_min_1.bi5: ReadTimeout",
-  "2021-10-03: USDJPY/2021/09/03/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2021-10-07: USDJPY/2021/09/07/BID_candles_min_1.bi5: ConnectError"
- ],
- "minutes": 355967,
+ "repaired_days": 10,
+ "days_requested": 10,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 370036,
  "scale": {
   "ok": true,
-  "median_mid": 109.8655,
+  "median_mid": 109.829,
   "median_spread_pips": 0.3
  },
- "first_utc": "2021-01-06T00:00Z",
+ "first_utc": "2021-01-04T00:00Z",
  "last_utc": "2021-12-31T21:59Z",
- "bytes": 2940908
+ "bytes": 3053684
 }

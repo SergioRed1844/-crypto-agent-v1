@@ -1,31 +1,17 @@
 {
  "sym": "EURUSD",
  "year": 2015,
- "days_requested": 313,
- "days_failed": 14,
- "fails": [
-  "2015-01-11: EURUSD/2015/00/11/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-14: EURUSD/2015/00/14/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-15: EURUSD/2015/00/15/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-16: EURUSD/2015/00/16/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-18: EURUSD/2015/00/18/BID_candles_min_1.bi5: ReadTimeout",
-  "2015-01-19: EURUSD/2015/00/19/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-23: EURUSD/2015/00/23/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-26: EURUSD/2015/00/26/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-27: EURUSD/2015/00/27/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2015-01-28: EURUSD/2015/00/28/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-29: EURUSD/2015/00/29/BID_candles_min_1.bi5: ReadTimeout",
-  "2015-01-30: EURUSD/2015/00/30/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2015-02-01: EURUSD/2015/01/01/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2015-02-02: EURUSD/2015/01/02/ASK_candles_min_1.bi5: ConnectTimeout"
- ],
- "minutes": 357108,
+ "repaired_days": 11,
+ "days_requested": 11,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 372583,
  "scale": {
   "ok": true,
-  "median_mid": 1.10796,
+  "median_mid": 1.11082,
   "median_spread_pips": 0.3
  },
  "first_utc": "2015-01-01T22:00Z",
  "last_utc": "2015-12-31T21:59Z",
- "bytes": 3320888
+ "bytes": 3470296
 }

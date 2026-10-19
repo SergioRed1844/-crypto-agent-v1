@@ -1,37 +1,22 @@
 {
  "sym": "EURUSD",
  "year": 2016,
- "days_requested": 313,
- "days_failed": 23,
+ "repaired_days": 15,
+ "days_requested": 19,
+ "days_failed": 4,
  "fails": [
-  "2016-01-03: EURUSD/2016/00/03/BID_candles_min_1.bi5: HTTP 503",
-  "2016-01-04: EURUSD/2016/00/04/ASK_candles_min_1.bi5: HTTP 503",
+  "2016-01-04: EURUSD/2016/00/04/BID_candles_min_1.bi5: HTTP 503",
   "2016-01-05: EURUSD/2016/00/05/BID_candles_min_1.bi5: HTTP 503",
   "2016-01-06: EURUSD/2016/00/06/BID_candles_min_1.bi5: HTTP 503",
-  "2016-01-08: EURUSD/2016/00/08/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-01-15: EURUSD/2016/00/15/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-01-17: EURUSD/2016/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2016-01-21: EURUSD/2016/00/21/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-01-25: EURUSD/2016/00/25/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-01-26: EURUSD/2016/00/26/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-01-27: EURUSD/2016/00/27/BID_candles_min_1.bi5: RemoteProtocolError",
-  "2016-01-28: EURUSD/2016/00/28/BID_candles_min_1.bi5: HTTP 503",
-  "2016-01-29: EURUSD/2016/00/29/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2016-02-01: EURUSD/2016/01/01/BID_candles_min_1.bi5: HTTP 503",
-  "2016-02-02: EURUSD/2016/01/02/BID_candles_min_1.bi5: ReadTimeout",
-  "2016-02-03: EURUSD/2016/01/03/BID_candles_min_1.bi5: HTTP 503",
-  "2016-02-04: EURUSD/2016/01/04/ASK_candles_min_1.bi5: HTTP 503",
-  "2016-02-07: EURUSD/2016/01/07/BID_candles_min_1.bi5: HTTP 503",
-  "2016-02-18: EURUSD/2016/01/18/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2016-03-13: EURUSD/2016/02/13/BID_candles_min_1.bi5: ConnectTimeout"
+  "2016-01-08: EURUSD/2016/00/08/BID_candles_min_1.bi5: ConnectTimeout"
  ],
- "minutes": 346649,
+ "minutes": 367825,
  "scale": {
   "ok": true,
-  "median_mid": 1.11441,
+  "median_mid": 1.11383,
   "median_spread_pips": 0.3
  },
  "first_utc": "2016-01-07T00:00Z",
  "last_utc": "2016-12-30T21:59Z",
- "bytes": 3196912
+ "bytes": 3392328
 }

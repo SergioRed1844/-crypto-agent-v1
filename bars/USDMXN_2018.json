@@ -1,33 +1,19 @@
 {
  "sym": "USDMXN",
  "year": 2018,
- "days_requested": 313,
- "days_failed": 16,
+ "repaired_days": 12,
+ "days_requested": 13,
+ "days_failed": 1,
  "fails": [
-  "2018-01-01: USDMXN/2018/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-10: USDMXN/2018/00/10/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-01-11: USDMXN/2018/00/11/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-12: USDMXN/2018/00/12/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-14: USDMXN/2018/00/14/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-15: USDMXN/2018/00/15/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-16: USDMXN/2018/00/16/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-17: USDMXN/2018/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-18: USDMXN/2018/00/18/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-21: USDMXN/2018/00/21/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-01-24: USDMXN/2018/00/24/BID_candles_min_1.bi5: HTTP 503",
-  "2018-01-26: USDMXN/2018/00/26/BID_candles_min_1.bi5: ConnectTimeout",
-  "2018-04-20: USDMXN/2018/03/20/BID_candles_min_1.bi5: HTTP 503",
-  "2018-05-02: USDMXN/2018/04/02/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-05-03: USDMXN/2018/04/03/ASK_candles_min_1.bi5: HTTP 503",
-  "2018-05-04: USDMXN/2018/04/04/BID_candles_min_1.bi5: HTTP 503"
+  "2018-01-11: USDMXN/2018/00/11/ASK_candles_min_1.bi5: ReadTimeout"
  ],
- "minutes": 346910,
+ "minutes": 363329,
  "scale": {
   "ok": true,
-  "median_mid": 19.03245,
-  "median_spread_pips": 50.9
+  "median_mid": 19.0191,
+  "median_spread_pips": 50.6
  },
  "first_utc": "2018-01-02T00:00Z",
  "last_utc": "2018-12-31T21:59Z",
- "bytes": 4657692
+ "bytes": 4883440
 }

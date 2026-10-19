@@ -1,28 +1,19 @@
 {
  "sym": "USDMXN",
  "year": 2020,
- "days_requested": 314,
- "days_failed": 11,
+ "repaired_days": 8,
+ "days_requested": 9,
+ "days_failed": 1,
  "fails": [
-  "2020-01-01: USDMXN/2020/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2020-01-02: USDMXN/2020/00/02/ASK_candles_min_1.bi5: HTTP 503",
-  "2020-01-03: USDMXN/2020/00/03/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2020-01-07: USDMXN/2020/00/07/BID_candles_min_1.bi5: HTTP 503",
-  "2020-01-10: USDMXN/2020/00/10/ASK_candles_min_1.bi5: ConnectError",
-  "2020-01-17: USDMXN/2020/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2020-03-23: USDMXN/2020/02/23/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2020-09-08: USDMXN/2020/08/08/BID_candles_min_1.bi5: HTTP 503",
-  "2020-09-13: USDMXN/2020/08/13/BID_candles_min_1.bi5: HTTP 503",
-  "2020-09-16: USDMXN/2020/08/16/BID_candles_min_1.bi5: ConnectError",
-  "2020-09-18: USDMXN/2020/08/18/BID_candles_min_1.bi5: ConnectTimeout"
+  "2020-01-17: USDMXN/2020/00/17/ASK_candles_min_1.bi5: HTTP 503"
  ],
- "minutes": 349216,
+ "minutes": 359852,
  "scale": {
   "ok": true,
-  "median_mid": 21.76542,
-  "median_spread_pips": 71.7
+  "median_mid": 21.71611,
+  "median_spread_pips": 71.0
  },
- "first_utc": "2020-01-05T22:06Z",
+ "first_utc": "2020-01-02T00:00Z",
  "last_utc": "2020-12-31T21:57Z",
- "bytes": 5053244
+ "bytes": 5198756
 }

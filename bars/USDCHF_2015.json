@@ -1,7 +1,8 @@
 {
  "sym": "USDCHF",
  "year": 2015,
- "days_requested": 313,
+ "repaired_days": 0,
+ "days_requested": 0,
  "days_failed": 0,
  "fails": [],
  "minutes": 369632,

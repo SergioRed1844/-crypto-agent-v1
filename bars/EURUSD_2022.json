@@ -1,36 +1,22 @@
 {
  "sym": "EURUSD",
  "year": 2022,
- "days_requested": 312,
- "days_failed": 19,
+ "repaired_days": 13,
+ "days_requested": 17,
+ "days_failed": 4,
  "fails": [
-  "2022-01-12: EURUSD/2022/00/12/BID_candles_min_1.bi5: HTTP 503",
-  "2022-01-14: EURUSD/2022/00/14/BID_candles_min_1.bi5: HTTP 503",
   "2022-01-19: EURUSD/2022/00/19/ASK_candles_min_1.bi5: HTTP 503",
-  "2022-01-20: EURUSD/2022/00/20/ASK_candles_min_1.bi5: HTTP 503",
-  "2022-01-21: EURUSD/2022/00/21/BID_candles_min_1.bi5: HTTP 503",
-  "2022-01-24: EURUSD/2022/00/24/BID_candles_min_1.bi5: HTTP 503",
-  "2022-01-25: EURUSD/2022/00/25/ASK_candles_min_1.bi5: HTTP 503",
-  "2022-01-27: EURUSD/2022/00/27/BID_candles_min_1.bi5: HTTP 503",
-  "2022-01-30: EURUSD/2022/00/30/BID_candles_min_1.bi5: HTTP 503",
-  "2022-01-31: EURUSD/2022/00/31/ASK_candles_min_1.bi5: HTTP 503",
-  "2022-02-01: EURUSD/2022/01/01/BID_candles_min_1.bi5: ReadTimeout",
-  "2022-02-02: EURUSD/2022/01/02/ASK_candles_min_1.bi5: ConnectError",
-  "2022-02-04: EURUSD/2022/01/04/BID_candles_min_1.bi5: HTTP 503",
-  "2022-02-06: EURUSD/2022/01/06/BID_candles_min_1.bi5: HTTP 503",
-  "2022-02-10: EURUSD/2022/01/10/ASK_candles_min_1.bi5: ConnectError",
-  "2022-03-10: EURUSD/2022/02/10/BID_candles_min_1.bi5: ConnectTimeout",
-  "2022-03-14: EURUSD/2022/02/14/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2022-03-15: EURUSD/2022/02/15/ASK_candles_min_1.bi5: ConnectError",
-  "2022-12-20: EURUSD/2022/11/20/ASK_candles_min_1.bi5: ConnectTimeout"
+  "2022-02-01: EURUSD/2022/01/01/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-03-10: EURUSD/2022/02/10/ASK_candles_min_1.bi5: HTTP 503",
+  "2022-12-20: EURUSD/2022/11/20/ASK_candles_min_1.bi5: ReadTimeout"
  ],
- "minutes": 348623,
+ "minutes": 366900,
  "scale": {
   "ok": true,
-  "median_mid": 1.05007,
+  "median_mid": 1.05192,
   "median_spread_pips": 0.5
  },
  "first_utc": "2022-01-02T22:03Z",
  "last_utc": "2022-12-30T21:59Z",
- "bytes": 3238328
+ "bytes": 3385512
 }

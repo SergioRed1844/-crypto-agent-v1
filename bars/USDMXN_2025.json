@@ -1,37 +1,26 @@
 {
  "sym": "USDMXN",
  "year": 2025,
- "days_requested": 313,
- "days_failed": 20,
+ "repaired_days": 7,
+ "days_requested": 15,
+ "days_failed": 8,
  "fails": [
-  "2025-01-01: USDMXN/2025/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-02: USDMXN/2025/00/02/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-05: USDMXN/2025/00/05/BID_candles_min_1.bi5: HTTP 503",
+  "2025-01-02: USDMXN/2025/00/02/ASK_candles_min_1.bi5: HTTP 503",
   "2025-01-06: USDMXN/2025/00/06/BID_candles_min_1.bi5: HTTP 503",
   "2025-01-07: USDMXN/2025/00/07/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-10: USDMXN/2025/00/10/ASK_candles_min_1.bi5: HTTP 503",
-  "2025-01-12: USDMXN/2025/00/12/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-13: USDMXN/2025/00/13/BID_candles_min_1.bi5: HTTP 503",
+  "2025-01-13: USDMXN/2025/00/13/ASK_candles_min_1.bi5: HTTP 503",
   "2025-01-15: USDMXN/2025/00/15/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-16: USDMXN/2025/00/16/ASK_candles_min_1.bi5: HTTP 503",
-  "2025-01-17: USDMXN/2025/00/17/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-19: USDMXN/2025/00/19/BID_candles_min_1.bi5: HTTP 503",
-  "2025-01-23: USDMXN/2025/00/23/ASK_candles_min_1.bi5: HTTP 503",
-  "2025-01-24: USDMXN/2025/00/24/ASK_candles_min_1.bi5: HTTP 503",
-  "2025-01-30: USDMXN/2025/00/30/BID_candles_min_1.bi5: HTTP 503",
-  "2025-06-24: USDMXN/2025/05/24/ASK_candles_min_1.bi5: ConnectTimeout",
-  "2025-06-25: USDMXN/2025/05/25/ASK_candles_min_1.bi5: ConnectError",
-  "2025-06-26: USDMXN/2025/05/26/ASK_candles_min_1.bi5: ConnectError",
-  "2025-06-29: USDMXN/2025/05/29/BID_candles_min_1.bi5: ConnectError",
-  "2025-06-30: USDMXN/2025/05/30/BID_candles_min_1.bi5: ConnectError"
+  "2025-01-17: USDMXN/2025/00/17/BID_candles_min_1.bi5: ReadTimeout",
+  "2025-01-23: USDMXN/2025/00/23/ASK_candles_min_1.bi5: ReadTimeout",
+  "2025-01-30: USDMXN/2025/00/30/ASK_candles_min_1.bi5: ConnectError"
  ],
- "minutes": 346587,
+ "minutes": 356385,
  "scale": {
   "ok": true,
-  "median_mid": 18.78211,
+  "median_mid": 18.80507,
   "median_spread_pips": 55.3
  },
  "first_utc": "2025-01-03T00:00Z",
  "last_utc": "2025-12-31T21:58Z",
- "bytes": 4628500
+ "bytes": 4768020
 }

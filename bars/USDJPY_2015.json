@@ -1,32 +1,22 @@
 {
  "sym": "USDJPY",
  "year": 2015,
- "days_requested": 313,
- "days_failed": 15,
+ "repaired_days": 7,
+ "days_requested": 11,
+ "days_failed": 4,
  "fails": [
-  "2015-01-01: USDJPY/2015/00/01/ASK_candles_min_1.bi5: ReadTimeout",
   "2015-01-02: USDJPY/2015/00/02/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-04: USDJPY/2015/00/04/BID_candles_min_1.bi5: HTTP 503",
   "2015-01-05: USDJPY/2015/00/05/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-06: USDJPY/2015/00/06/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-07: USDJPY/2015/00/07/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-08: USDJPY/2015/00/08/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-09: USDJPY/2015/00/09/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-11: USDJPY/2015/00/11/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-15: USDJPY/2015/00/15/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-16: USDJPY/2015/00/16/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-18: USDJPY/2015/00/18/ASK_candles_min_1.bi5: HTTP 503",
-  "2015-01-19: USDJPY/2015/00/19/BID_candles_min_1.bi5: HTTP 503",
   "2015-01-22: USDJPY/2015/00/22/BID_candles_min_1.bi5: HTTP 503",
-  "2015-01-23: USDJPY/2015/00/23/ASK_candles_min_1.bi5: HTTP 503"
+  "2015-01-23: USDJPY/2015/00/23/BID_candles_min_1.bi5: HTTP 503"
  ],
- "minutes": 356968,
+ "minutes": 366808,
  "scale": {
   "ok": true,
-  "median_mid": 120.661,
+  "median_mid": 120.5625,
   "median_spread_pips": 0.4
  },
- "first_utc": "2015-01-12T00:00Z",
+ "first_utc": "2015-01-06T00:00Z",
  "last_utc": "2015-12-31T21:59Z",
- "bytes": 3124412
+ "bytes": 3215476
 }

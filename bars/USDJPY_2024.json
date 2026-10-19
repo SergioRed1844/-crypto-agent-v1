@@ -1,21 +1,17 @@
 {
  "sym": "USDJPY",
  "year": 2024,
- "days_requested": 314,
- "days_failed": 4,
- "fails": [
-  "2024-01-01: USDJPY/2024/00/01/BID_candles_min_1.bi5: HTTP 503",
-  "2024-01-04: USDJPY/2024/00/04/BID_candles_min_1.bi5: HTTP 503",
-  "2024-01-07: USDJPY/2024/00/07/BID_candles_min_1.bi5: ReadTimeout",
-  "2024-01-09: USDJPY/2024/00/09/BID_candles_min_1.bi5: HTTP 503"
- ],
- "minutes": 370209,
+ "repaired_days": 2,
+ "days_requested": 2,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 373086,
  "scale": {
   "ok": true,
-  "median_mid": 151.485,
+  "median_mid": 151.4235,
   "median_spread_pips": 0.6
  },
  "first_utc": "2024-01-02T00:00Z",
  "last_utc": "2024-12-31T21:59Z",
- "bytes": 3635252
+ "bytes": 3656440
 }

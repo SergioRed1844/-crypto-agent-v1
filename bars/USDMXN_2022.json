@@ -1,19 +1,17 @@
 {
  "sym": "USDMXN",
  "year": 2022,
- "days_requested": 312,
- "days_failed": 2,
- "fails": [
-  "2022-01-04: USDMXN/2022/00/04/BID_candles_min_1.bi5: ConnectTimeout",
-  "2022-01-10: USDMXN/2022/00/10/BID_candles_min_1.bi5: ConnectError"
- ],
- "minutes": 365866,
+ "repaired_days": 2,
+ "days_requested": 2,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 368702,
  "scale": {
   "ok": true,
-  "median_mid": 20.09584,
+  "median_mid": 20.10117,
   "median_spread_pips": 56.8
  },
  "first_utc": "2022-01-02T22:30Z",
  "last_utc": "2022-12-30T21:59Z",
- "bytes": 5214344
+ "bytes": 5251464
 }
