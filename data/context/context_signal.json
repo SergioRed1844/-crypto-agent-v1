@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-19T00:26:54Z",
+ "generated_utc": "2026-10-19T00:34:18Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.173,
+   "riesgo": 0.174,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.216,
    "fuente": "noticia"
   },
   {
