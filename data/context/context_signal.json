@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-19T22:15:15Z",
+ "generated_utc": "2026-10-19T22:37:03Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -68,7 +68,7 @@
    "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.313,
+   "aporte": -0.31,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.296,
+   "aporte": -0.295,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.272,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.263,
+   "aporte": 0.261,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.248,
+   "aporte": -0.247,
    "fuente": "noticia"
   },
   {
