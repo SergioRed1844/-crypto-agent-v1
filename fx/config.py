@@ -55,17 +55,16 @@ SLOTS: tuple[Slot, ...] = (
     Slot("US_0830", "America/New_York", "08:30", note="NFP, IPC, ventas minoristas, PIB, solicitudes de desempleo"),
     Slot("US_1000", "America/New_York", "10:00", note="ISM, JOLTS, confianza del consumidor"),
     Slot("US_1400", "America/New_York", "14:00", note="FOMC (decisión y minutas)"),
-    Slot("EU_1415", "Europe/Berlin", "14:15", ("EURUSD", "USDCHF", "GBPUSD"), note="BCE (desde 2022)"),
-    Slot("EU_1345", "Europe/Berlin", "13:45", ("EURUSD", "USDCHF", "GBPUSD"), note="BCE (hasta 2022)"),
     Slot("UK_1200", "Europe/London", "12:00", ("GBPUSD", "EURUSD"), note="Banco de Inglaterra"),
     Slot("MX_1300", "America/Mexico_City", "13:00", ("USDMXN",), note="Banxico"),
 )
 
-# Nadie cruza otro slot mayor con la posición abierta (regla conocida de antemano, F14-016 "Exclusiones"): los
-# europeos salen antes de las 8:30 NY y los de la mañana de EE. UU. antes de las 14:00 NY (FOMC). Además no se entra
-# a ±5 min del T0 de otro slot del mismo par (``calendar.slot_guards``).
-SLOT_EXIT_CAP_NY = {"EU_1415": "08:25", "EU_1345": "08:25", "UK_1200": "08:25", "US_0830": "13:55",
-                    "US_1000": "13:55"}
+# Nadie cruza otro slot mayor con la posición abierta (regla conocida de antemano, F14-016 "Exclusiones"): la
+# posición sale 5 min antes del T0 de los slots listados (calculado ese día, con el horario de verano real), y si eso
+# deja menos de MIN_HOLD_MIN no se entra. Además no se entra a ±5 min del T0 de otro slot del mismo par.
+# El BCE (14:15 CET) quedó fuera ANTES de ver datos: su T+15 cae justo en las 8:30 NY de los datos de EE. UU.
+SLOT_EXIT_BEFORE = {"UK_1200": ("US_0830",), "US_0830": ("US_1400",), "US_1000": ("US_1400",)}
+MIN_HOLD_MIN = 10
 
 # ── Estrategia A (F14-016) — rejilla pequeña y declarada para DSR/PBO ─────────────────────────────────────────────
 ENTRY_LAG_MIN = 15                 # señal = signo de la reacción T0→T+15; entrada en T+15 (ventana T+5..T+20)

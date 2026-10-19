@@ -84,13 +84,17 @@ def forced_exit_min(entry_m: int) -> int:
 
 
 def exit_cap_min(slot_name: str, entry_m: int) -> int:
-    """Salida forzada del día y, para slots europeos, tope antes de las 8:30 NY (config.SLOT_EXIT_CAP_NY)."""
+    """Lo primero entre la salida forzada del día (16:50 NY; viernes 15:55) y 5 min antes del T0 de los slots de
+    ``config.SLOT_EXIT_BEFORE`` que caen después de la entrada (fechas y horas reales de ese día)."""
     cut = forced_exit_min(entry_m)
-    cap = C.SLOT_EXIT_CAP_NY.get(slot_name)
-    if cap:
-        c = to_min(datetime.combine(ny(entry_m).date(), _hm(cap), NY))
-        if c > entry_m:
-            cut = min(cut, c)
+    d = ny(entry_m).date()
+    for name in C.SLOT_EXIT_BEFORE.get(slot_name, ()):
+        s = next((x for x in C.SLOTS if x.name == name), None)
+        if s is None:
+            continue
+        t = slot_min(s, d) - C.EVENT_GUARD_MIN
+        if t > entry_m:
+            cut = min(cut, t)
     return cut
 
 

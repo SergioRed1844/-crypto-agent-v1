@@ -196,14 +196,16 @@ def build(b: Bars, slot: C.Slot, z_min: float | None = None, holds=C.HOLD_GRID, 
                    float(np.median(spreads[max(0, k - 60):k])), K.entry_blackout(entry_m, guards), entry_m)
         mom = 1 if ret > 0 else -1
         cut = K.exit_cap_min(slot.name, entry_m)
+        seen_exit = set()
         for hold in holds:
-            sh = _sigma_h(b, i0, i15, t0, hold)
+            exit_m = min(entry_m + hold, cut)
+            if exit_m - entry_m < C.MIN_HOLD_MIN or exit_m in seen_exit:
+                continue      # horizonte que el tope vuelve idéntico a uno menor: no es otra variante
+            seen_exit.add(exit_m)
+            sh = _sigma_h(b, i0, i15, t0, exit_m - entry_m)
             if sh is None:
                 continue
             stop_dist = stop_distance(sh, (b.ao[ie] + b.bo[ie]) / 2, ev.spread, pair)
-            exit_m = min(entry_m + hold, cut)
-            if exit_m <= entry_m:
-                continue
             for dname, dsign in (("mom", 1), ("rev", -1)):
                 ev.sims[(dname, hold)] = simulate(b, ie, mom * dsign, stop_dist, exit_m, pair)
                 ev.sims[(dname, hold)]["side"] = mom * dsign

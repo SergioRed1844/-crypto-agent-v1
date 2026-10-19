@@ -82,13 +82,17 @@ async def _run():
         equity = broker.balance
     else:
         broker = feed
-        equity = (await feed.summary())["nav"]
+        acc = await feed.summary()
+        if acc["currency"] != "USD":
+            raise SystemExit(f"La cuenta está en {acc['currency']}: el motor calcula riesgo y topes en USD. Abre la "
+                             "cuenta (o subcuenta) de OANDA en USD.")
+        equity = acc["nav"]
     eng = Engine(broker, model, store, equity, mode, known_events=events, kill_path=kill)
     stop = asyncio.Event()
     loop = asyncio.get_running_loop()
     for sg in (signal.SIGTERM, signal.SIGINT):
         loop.add_signal_handler(sg, stop.set)
-    syms = sorted({s for s, _ in model["_active"]}) or list(C.PAIRS)
+    syms = list(C.PAIRS)        # todos: si el modelo activa un par nuevo en el refresco, ya tiene precios
 
     def st(msg):
         eng.status["stream"] = msg

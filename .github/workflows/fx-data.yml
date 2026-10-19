@@ -101,17 +101,23 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q numpy httpx
-      - name: Partir de lo publicado
+      - name: Lo ya publicado
         run: |
-          mkdir -p out/bars
+          mkdir -p old new out/bars
           if git fetch -q --depth 1 origin fx-data; then
-            git archive FETCH_HEAD bars | tar -x -C out 2>/dev/null || true
+            git archive FETCH_HEAD bars | tar -x -C old 2>/dev/null || true
           fi
+          mkdir -p old/bars
       - uses: actions/download-artifact@v4
         with:
           pattern: bars-*
           merge-multiple: true
-          path: out/bars
+          path: new
+      - name: Unir minuto a minuto (nunca se pierde un día ya bueno)
+        run: |
+          python -m fx.data_dukascopy merge old/bars new out/bars
+          cp new/*.json out/bars/ 2>/dev/null || true
+          for f in old/bars/*; do b=$(basename "$f"); [ -e "out/bars/$b" ] || cp "$f" out/bars/; done
       - name: Manifiesto y cobertura
         run: |
           python - <<'EOF'

@@ -49,7 +49,8 @@ ok(K.slot_min(SL["US_0830"], date(2026, 1, 15)) == utc(2026, 1, 15, 13, 30) and
 ok(K.slot_min(SL["MX_1300"], date(2026, 7, 15)) == utc(2026, 7, 15, 19, 0) and
    K.slot_min(SL["MX_1300"], date(2021, 7, 15)) == utc(2021, 7, 15, 18, 0),
    "Banxico 13:00 CDMX: sin horario de verano desde 2022, con DST en 2021")
-ok(K.slot_min(SL["EU_1415"], date(2026, 1, 15)) == utc(2026, 1, 15, 13, 15), "BCE 14:15 CET = 13:15 UTC en invierno")
+ok(K.slot_min(SL["UK_1200"], date(2026, 1, 15)) == utc(2026, 1, 15, 12, 0) and
+   K.slot_min(SL["UK_1200"], date(2026, 7, 15)) == utc(2026, 7, 15, 11, 0), "BoE 12:00 Londres = 12:00/11:00 UTC")
 sun_open = K.local_min(date(2026, 10, 18), "17:00", "America/New_York")
 ok(K.fx_week(sun_open) == "2026-W43" and K.fx_week(sun_open - 1) == "2026-W42", "semana FX abre domingo 17:00 NY")
 ok(K.week_open_min(sun_open + 3000) == sun_open and K.next_week_open_min(sun_open + 10) == sun_open + 7 * 1440,
@@ -67,11 +68,15 @@ ok(K.entry_blackout(ny(date(2026, 10, 24), "10:00")) == "mercado cerrado" and
    K.entry_blackout(ny(date(2026, 10, 20), "08:45")) is None, "blackouts: cierre, viernes, fin de año, rollover, fix")
 ev = ny(date(2026, 10, 28), "14:00")
 ok(K.entry_blackout(ev + 3, (ev,)) and K.entry_blackout(ev + 15, (ev,)) is None, "T−5/T+5 de evento conocido")
-ecb = K.slot_min(SL["EU_1415"], date(2026, 1, 15)) + 15
-ok(K.entry_blackout(ecb, K.slot_guards("EURUSD", date(2026, 1, 15), "EU_1415")) and
-   K.ny(K.exit_cap_min("EU_1345", ecb - 30)).strftime("%H:%M") == "08:25" and
-   K.ny(K.exit_cap_min("US_0830", ny(date(2026, 1, 15), "08:45"))).strftime("%H:%M") == "13:55",
-   "BCE en invierno entra justo a las 8:30 NY → bloqueado; topes antes de 8:30 y de 14:00 NY")
+uk_n = K.slot_min(SL["UK_1200"], date(2026, 1, 15)) + 15
+uk_m = K.slot_min(SL["UK_1200"], date(2026, 3, 20)) + 15          # semana de desfase DST (EE. UU. ya cambió)
+ok(K.ny(uk_n).strftime("%H:%M") == "07:15" and K.ny(K.exit_cap_min("UK_1200", uk_n)).strftime("%H:%M") == "08:25"
+   and K.ny(uk_m).strftime("%H:%M") == "08:15" and K.ny(K.exit_cap_min("UK_1200", uk_m)).strftime("%H:%M") == "08:25"
+   and K.ny(K.exit_cap_min("US_0830", ny(date(2026, 1, 15), "08:45"))).strftime("%H:%M") == "13:55"
+   and K.exit_cap_min("US_1400", ny(date(2026, 1, 15), "14:15")) == ny(date(2026, 1, 15), "16:50"),
+   "topes entre slots calculados con el DST real de cada día (BoE antes de 8:30 NY; mañana antes de 14:00)")
+ok(K.entry_blackout(ny(date(2026, 1, 15), "08:31"), K.slot_guards("EURUSD", date(2026, 1, 15), "UK_1200")) and
+   "EU_1415" not in SL, "no se entra a ±5 min del T0 de otro slot; BCE fuera (su T+15 = 8:30 NY)")
 cal = os.path.join(TMP, "cal.json")
 json.dump({"events": [{"date": "2026-10-28", "time_local": "14:00", "tz": "America/New_York", "status": "confirmed",
                        "title_es": "Decisión FOMC", "source_url": "https://www.federalreserve.gov/x"},
@@ -198,6 +203,9 @@ pe = B.pbo_cscv(Xe, S=10)["pbo"]
 xw = np.random.default_rng(1).standard_normal(300) * 0.01 + 0.001
 ok(0.3 < pb < 0.7 and pe < 0.1 and B.dsr(xw, list(np.random.default_rng(2).normal(0, 0.05, 12)), 12) <= B.psr(xw),
    f"PBO: ruido ≈ 0.5 ({pb:.2f}), con ventaja real ≈ 0 ({pe:.2f}); DSR ≤ PSR")
+Xt, keys = B.trial_matrix(rows_d)
+ok(len(keys) >= 6 and Xt.shape[1] == len(keys) and len({k[3] for k in keys}) >= 2,
+   f"ensayos para DSR/PBO = (par, slot, dirección, horizonte, z): {len(keys)}")
 rs = B.random_sign(cands, rows_d, 300)
 ok(rs["p_value"] < 0.05, f"benchmark de signo aleatorio (p={rs['p_value']:.3f})")
 
@@ -215,6 +223,13 @@ def handler(req: httpx.Request):
             return httpx.Response(201, json={"orderCancelTransaction": {"reason": "BOUNDS_VIOLATION"}})
         return httpx.Response(201, json={"orderFillTransaction": {"id": "9", "time": "2026-10-19T12:45:00.123456789Z",
                                          "fullVWAP": "1.10012", "tradeOpened": {"tradeID": "77", "units": "1500"}}})
+    if req.url.path.endswith("/trades/88/close"):
+        return httpx.Response(201, json={"orderCancelTransaction": {"reason": "MARKET_HALTED"}})
+    if req.url.path.endswith("/trades/77"):
+        return httpx.Response(200, json={"trade": {"id": "77", "instrument": "EUR_USD", "state": "CLOSED",
+                                                   "initialUnits": "1500", "currentUnits": "0", "price": "1.10012",
+                                                   "averageClosePrice": "1.09876", "realizedPL": "-2.04",
+                                                   "financing": "0.0", "openTime": "2026-10-19T12:45:00Z"}})
     if req.url.path.endswith("/close"):
         return httpx.Response(200, json={"orderFillTransaction": {"price": "1.10100", "pl": "1.32",
                                                                   "time": "2026-10-19T14:45:00Z"}})
@@ -247,6 +262,13 @@ async def oanda_case():
         ok("tok-SECRETO" not in str(e) and "1234567" not in str(e), "errores sin token ni cuenta")
     ok(sent["instrument"] == "EUR_USD" and (await b.close("77"))["pl"] == 1.32 and (await b.summary())["nav"] == 2001.5,
        "cierre y resumen de cuenta")
+    try:
+        await b.close("88")
+        ok(False, "cierre cancelado")
+    except OrderRejected as e:
+        ok("MARKET_HALTED" in str(e), "cierre cancelado (mercado detenido) → error, no se da por cerrado")
+    t = await b.trade("77")
+    ok(t["state"] == "CLOSED" and t["pl"] == -2.04 and t["price"] == 1.09876, "consulta de trade cerrado con su P&L")
     await b.aclose()
     try:
         OandaBroker("live", token="x", account="y")
@@ -392,6 +414,59 @@ async def monitor_case():
 fb, acts, k1, acts2 = asyncio.run(monitor_case())
 ok(k1 and "semana" in k1 and fb.closed >= 1, "monitor: NAV −1.6% en la semana → cierra todo y escribe KILL")
 ok(any("salida forzada" in a for a in acts2), "monitor cierra trades vencidos (16:50 NY + 2 min)")
+
+# ── cierres duplicados, reconciliación y reinicio ─────────────────────────────────────────────────────────────────
+from fx.engine import Live  # noqa: E402
+
+
+async def lifecycle_case():
+    clk = Clock(); clk.t = ny(date(2026, 10, 20), "09:00") * 60
+    dbp = os.path.join(TMP, "life.db")
+    pb = PaperBroker(2000)
+    eng = Engine(pb, model, Store(dbp), 2000, "paper", clock=clk)
+    pb.on_tx = eng.on_tx
+    m = int(clk.t // 60)
+    pb.feed(Quote("EURUSD", 1.1000, 1.1001, clk.t, clk.t))
+
+    async def open_one(sym, cid, stop):
+        f = await pb.market(sym, 1000, stop, 9.9, cid)
+        pos = Position(sym, 1, 1000, f.price, stop, (f.price - stop) * 1000, m, m + 60, 1100, -1, f.trade_id)
+        eng.risk.on_open(pos); eng.live[sym] = Live(pos, f.trade_id, cid)
+        return f
+    f1 = await open_one("EURUSD", "fx-US_0830-EURUSD-1", 1.0990)
+    clk.t += 30
+    pb.feed(Quote("EURUSD", 1.0985, 1.0986, clk.t, clk.t))          # salta el stop: el broker avisa por on_tx
+    pl1 = pb.closed[-1]["pl"]
+    eng._closed("EURUSD", f1.trade_id, pl1, "PUT duplicado")        # el PUT llega después: no cuenta dos veces
+    once = abs(eng.risk.equity - (2000 + pl1)) < 1e-9 and eng.risk.streak == 1 and not eng.live
+    # el broker cierra sin aviso (stream caído): la reconciliación liquida con el P&L real
+    pb.on_tx = None
+    pb.feed(Quote("EURUSD", 1.1000, 1.1001, clk.t + 1, clk.t + 1))
+    f2 = await open_one("EURUSD", "fx-US_0830-EURUSD-2", 1.0990)
+    pb.feed(Quote("EURUSD", 1.0980, 1.0981, clk.t + 2, clk.t + 2))
+    await eng.reconcile()
+    settled = not eng.live and abs(eng.risk.equity - pb.balance) < 1e-9 and "EURUSD" not in eng.risk.open
+    # trade del agente en el broker que el motor no conoce → se adopta con stop y salida
+    pb.feed(Quote("USDJPY", 150.00, 150.01, clk.t + 3, clk.t + 3))
+    await pb.market("USDJPY", 500, 149.50, 999, f"fx-US_0830-USDJPY-{m}")
+    await eng.reconcile()
+    adopted = "USDJPY" in eng.live and eng.live["USDJPY"].pos.deadline_m == K.exit_cap_min("US_0830", m) and \
+        not eng.halt
+    await eng.handle_intent({"action": "PAUSE"})
+    eq_before = eng.risk.equity
+    # reinicio: mismo almacén, broker de papel nuevo (se recarga desde el almacén)
+    eng2 = Engine(PaperBroker(2000), model, Store(dbp), 2000, "paper", clock=clk)
+    restored = (eng2.halt == "pausa manual" and "USDJPY" in eng2.live and "USDJPY" in eng2.risk.open and
+                abs(eng2.risk.equity - eq_before) < 1e-9 and eng2.risk.day_realized == eng.risk.day_realized and
+                eng2.risk.streak == eng.risk.streak)
+    return once, settled, adopted, restored
+
+
+once, settled, adopted, restored = asyncio.run(lifecycle_case())
+ok(once, "cierre avisado por stream y por PUT se cuenta una sola vez")
+ok(settled, "trade cerrado en el broker sin aviso → la reconciliación lo liquida con su P&L real")
+ok(adopted, "trade del agente desconocido para el motor → adoptado con stop y salida forzada")
+ok(restored, "reinicio: pausa manual, posiciones, P&L del día y capital de papel sobreviven")
 
 shutil.rmtree(TMP, ignore_errors=True)
 print(f"{sum(res)}/{len(res)} {'OK' if all(res) else 'FALLA'}")

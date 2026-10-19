@@ -181,11 +181,25 @@ class OandaBroker:
                     client_id, {"id": f.get("id"), "halfSpreadCost": f.get("halfSpreadCost"),
                                 "financing": f.get("financing")})
 
+    async def trade(self, trade_id: str) -> dict:
+        """Estado de un trade (abierto o cerrado). ``trade_id`` puede ser '@<client id>'."""
+        t = (await self._req("GET", f"/v3/accounts/{self.account}/trades/{trade_id}"))["trade"]
+        return {"id": t["id"], "state": t.get("state"), "sym": OANDA_TO_SYM.get(t["instrument"], t["instrument"]),
+                "units": float(t.get("currentUnits") or t.get("initialUnits") or 0),
+                "price": float(t.get("averageClosePrice") or t.get("price") or 0),
+                "pl": float(t.get("realizedPL", 0)) + float(t.get("financing", 0) or 0),
+                "stop": float(t["stopLossOrder"]["price"]) if t.get("stopLossOrder") else None,
+                "client_id": (t.get("clientExtensions") or {}).get("id", ""),
+                "open_time": rfc3339(t.get("openTime", ""))}
+
     async def close(self, trade_id: str) -> dict:
         t_sent = time.time()
         d = await self._req("PUT", f"/v3/accounts/{self.account}/trades/{trade_id}/close",
                             content=json.dumps({"units": "ALL"}))
-        f = d.get("orderFillTransaction") or {}
+        f = d.get("orderFillTransaction")
+        if not f:
+            c = d.get("orderCancelTransaction") or {}
+            raise OrderRejected(f"cierre no llenado: {c.get('reason') or 'sin fill'}")
         return {"price": float(f.get("fullVWAP") or f.get("price") or 0), "pl": float(f.get("pl", 0)),
                 "financing": float(f.get("financing", 0)), "t_fill": rfc3339(f.get("time", "")),
                 "t_sent": t_sent, "t_ack": time.time()}
@@ -278,7 +292,7 @@ class PaperBroker:
         q2u = 1.0 if tr["sym"].endswith("USD") else 1.0 / px
         pl = (px - tr["price"]) * tr["units"] * q2u
         self.balance += pl
-        rec = {**tr, "exit": px, "pl": pl, "t_exit": t}
+        rec = {**tr, "id": tid, "exit": px, "pl": pl, "t_exit": t}
         self.closed.append(rec)
         return {"price": px, "pl": pl, "financing": 0.0, "t_fill": t, "t_sent": t, "t_ack": time.time()}
 
@@ -309,6 +323,36 @@ class PaperBroker:
         self.trades[tid] = {"sym": sym, "units": float(units), "price": px, "stop": stop, "client_id": client_id,
                             "t": q.t_provider or t_sent}
         return Fill(tid, sym, float(units), px, q.t_provider or t_sent, t_sent, time.time(), stop, client_id)
+
+    async def trade(self, trade_id: str) -> dict:
+        if trade_id.startswith("@"):
+            cid = trade_id[1:]
+            hit = [k for k, t in self.trades.items() if t["client_id"] == cid]
+            hit_c = [c for c in self.closed if c["client_id"] == cid]
+            if hit:
+                trade_id = hit[0]
+            elif hit_c:
+                c = hit_c[-1]
+                return {"id": c["id"], "state": "CLOSED", "pl": c["pl"], "price": c["exit"], "units": c["units"]}
+            else:
+                raise OrderRejected("trade inexistente")
+        if trade_id in self.trades:
+            t = self.trades[trade_id]
+            return {"id": trade_id, "state": "OPEN", "sym": t["sym"], "units": t["units"], "price": t["price"],
+                    "stop": t["stop"], "client_id": t["client_id"], "open_time": t["t"], "pl": 0.0}
+        for c in reversed(self.closed):
+            if c["id"] == trade_id:
+                return {"id": trade_id, "state": "CLOSED", "pl": c["pl"], "price": c["exit"], "units": c["units"]}
+        raise OrderRejected("trade inexistente")
+
+    def dump(self) -> dict:
+        return {"balance": self.balance, "trades": self.trades, "n": self._n, "closed": self.closed[-50:]}
+
+    def load(self, st: dict):
+        self.balance = float(st.get("balance", self.balance))
+        self.trades = dict(st.get("trades", {}))
+        self._n = int(st.get("n", 0))
+        self.closed = list(st.get("closed", []))
 
     async def close(self, trade_id: str) -> dict:
         t = self.trades.get(trade_id)

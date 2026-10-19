@@ -59,7 +59,9 @@ def make_app(store: Store, secret: str, allow_ips=C.TRADINGVIEW_IPS, trust_proxy
         clean = {k: v for k, v in body.items() if k != "secret"}
         clean["action"] = action
         clean["t_recv"] = t0
-        iid = str(body.get("id") or hashlib.sha1(raw).hexdigest())[:80]
+        # Sin "id", el mismo mensaje fijo (p. ej. un FLATTEN guardado en TradingView) solo se deduplica dentro del
+        # mismo minuto: los reintentos de TradingView caen juntos y un FLATTEN de mañana no se pierde.
+        iid = str(body.get("id") or f"{hashlib.sha1(raw).hexdigest()[:24]}-{int(t0 // 60)}")[:80]
         new = store.put_intent(iid, clean, ip)
         if action == "SIGNAL" and new:
             store.done_intent(iid, "telemetría")

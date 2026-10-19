@@ -288,6 +288,22 @@ if __name__ == "__main__":
         st = repair(sym, year, src, out, until=date.today() - timedelta(days=1))
         print(json.dumps({k: v for k, v in st.items() if k != "fails"}))
         sys.exit(0)
+    if cmd == "merge":
+        # merge OLD_DIR NEW_DIR OUT_DIR: une minuto a minuto lo publicado con lo recién bajado (nunca se pierde un
+        # día que ya estaba bien porque la descarga nueva haya fallado ese día).
+        old_d, new_d, out_d = sys.argv[2], sys.argv[3], sys.argv[4]
+        os.makedirs(out_d, exist_ok=True)
+        for f in sorted(os.listdir(new_d)):
+            if not f.endswith(".npz.xz"):
+                continue
+            parts = [decode(open(os.path.join(new_d, f), "rb").read())]
+            if os.path.exists(os.path.join(old_d, f)):
+                parts.insert(0, decode(open(os.path.join(old_d, f), "rb").read()))
+            b = concat(parts)
+            with open(os.path.join(out_d, f), "wb") as fh:
+                fh.write(encode(b))
+            print(f, "minutos:", [len(p["t"]) for p in parts], "→", len(b["t"]))
+        sys.exit(0)
     if cmd == "coverage":
         rows = coverage(sys.argv[2])
         for r in rows:

@@ -54,13 +54,16 @@ def load_bars(bars_dir: str, syms=None) -> dict[str, E.Bars]:
 
 
 def _fingerprint(bars_dir: str) -> str:
+    """Huella de todo lo que determina las filas de eventos: contenido de las velas y del código que las produce."""
     h = hashlib.sha1()
     for f in sorted(os.listdir(bars_dir)):
         if f.endswith(".npz.xz"):
-            st = os.stat(os.path.join(bars_dir, f))
-            h.update(f"{f}:{st.st_size}".encode())
-    src = "".join(open(os.path.join(os.path.dirname(__file__), n)).read() for n in ("events.py", "config.py"))
-    h.update(src.encode())
+            h.update(f.encode())
+            with open(os.path.join(bars_dir, f), "rb") as fh:
+                h.update(hashlib.sha1(fh.read()).digest())
+    for n in ("events.py", "config.py", "calendar.py", "backtest.py", "data_dukascopy.py"):
+        with open(os.path.join(os.path.dirname(__file__), n), "rb") as fh:
+            h.update(fh.read())
     return h.hexdigest()[:12]
 
 
@@ -136,7 +139,7 @@ def portfolio(cands: list[dict], bars: dict[str, E.Bars] | None = None, cost_mul
             xm, _, rr, pos = heapq.heappop(heap)
             acts = close(rr, pos, xm, _R(rr, cost_mult))
             if any(a.startswith("flatten") for a in acts):
-                flatten(xm)
+                flatten(xm + 1)      # el resto sale al minuto siguiente del stop que disparó el tope
         if eng.off:
             skipped["apagado"] += 1
             continue
@@ -229,17 +232,29 @@ def summarize(trades, weeks, eng, equity0=EQUITY0) -> dict:
     }
 
 
-# ── PBO (CSCV) sobre las 12 variantes fijas aplicadas a todos los grupos ───────────────────────────────────────────
-def variant_matrix(rows: list[dict]):
-    V = M.variants()
-    days = sorted({r["day"] for r in rows})
-    di = {d: i for i, d in enumerate(days)}
-    X = np.zeros((len(days), len(V)))
-    for j, (d, h, z) in enumerate(V):
-        for r in rows:
-            if r["dir"] == d and r["hold"] == h and M.eligible(r, z):
-                X[di[r["day"]], j] += r["R"]
-    return X, V
+# ── PBO (CSCV) y DSR sobre TODAS las pruebas: cada (par, slot, variante) es un ensayo ───────────────────────────────
+def trial_matrix(rows: list[dict], min_n: int = C.EB_MIN_N):
+    """Matriz semanas × ensayos con la suma semanal de R neto de cada (par, slot, dirección, horizonte, z).
+    Es lo que el EB elige por grupo: N = número de columnas es el número honesto de ensayos para DSR/PBO."""
+    cols = defaultdict(lambda: defaultdict(float))
+    counts = defaultdict(int)
+    for r in rows:
+        for z in C.Z_GRID:
+            if M.eligible(r, z):
+                k = (r["sym"], r["slot"], r["dir"], r["hold"], z)
+                cols[k][K.fx_week(r["exit_m"])] += r["R"]
+                counts[k] += 1
+    keys = sorted(k for k in cols if counts[k] >= min_n)
+    if not keys:
+        return np.zeros((0, 0)), []
+    weeks = sorted({w for k in keys for w in cols[k]})
+    X = np.array([[cols[k].get(w, 0.0) for k in keys] for w in weeks])
+    return X, keys
+
+
+def weekly_sr(X: np.ndarray) -> list[float]:
+    sd = X.std(axis=0, ddof=1)
+    return [float(m / s) if s > 0 else 0.0 for m, s in zip(X.mean(axis=0), sd)]
 
 
 def pbo_cscv(X: np.ndarray, S: int = 16) -> dict:
@@ -297,7 +312,8 @@ def scales_now(bars: dict[str, E.Bars]) -> dict:
             rets = np.array([r[2] for r in rows[-C.SCALE_WINDOW_DAYS:]])
             spreads = np.array([r[3] for r in rows[-60:]])
             out[f"{sym}|{slot.name}"] = {"sigma_slot": E.robust_scale(rets), "spread_typ": float(np.median(spreads)),
-                                         "last_day": rows[-1][0].isoformat()}
+                                         "last_day": rows[-1][0].isoformat(),
+                                         "abs_hist": [round(abs(float(x)), 8) for x in rets]}
     return out
 
 
@@ -319,24 +335,26 @@ def run(bars_dir: str, out_dir: str = C.DATA_DIR, cache_dir: str = C.CACHE_DIR) 
             if name == "base":
                 res["weeks_base"] = wk
                 res["trades_base"] = tr
-        X, V = variant_matrix(rows)
-        srs = [float(np.mean(X[:, j]) / np.std(X[:, j], ddof=1)) if np.std(X[:, j]) > 0 else 0.0
-               for j in range(len(V))]
+        X, keys = trial_matrix(rows)
+        srs = weekly_sr(X) if len(keys) else [0.0]
         rets = np.array([w["ret"] for w in res["weeks_base"]])
-        res["dsr_n12"] = dsr(rets, srs, 12)
-        res["dsr_n60"] = dsr(rets, srs, 60)
-        res["pbo"] = pbo_cscv(X)
+        res["n_trials"] = len(keys)
+        res["dsr"] = dsr(rets, srs, max(len(keys), 2))
+        res["pbo"] = pbo_cscv(X) if len(keys) >= 2 else {"pbo": None, "why": "menos de 2 ensayos"}
         res["random_sign"] = random_sign(cands, rows)
         res["by_group"] = _by_group(res["trades_base"])
         res["by_era"] = _by_era(res["weeks_base"])
         res["models"] = {y: {f"{s}|{sl}": {k: g[k] for k in ("dir", "hold", "z", "p_pos", "post_mean", "n")}
                              for (s, sl), g in m["active"].items()} for y, m in models.items()}
-    final = M.fit(rows)
-    last_day = max(date.fromisoformat(r["day"]) for r in rows) if rows else date.today()
-    model_json = M.serializable(final, last_day, {"scales": scales_now(bars), "fingerprint": fp,
-                                                  "risk": vars(C.RISK), "version": 1})
     os.makedirs(out_dir, exist_ok=True)
-    json.dump(model_json, open(os.path.join(out_dir, "model.json"), "w"), indent=1, default=str)
+    if "error" not in res:
+        final = M.fit(rows)
+        last_day = max(date.fromisoformat(r["day"]) for r in rows)
+        model_json = M.serializable(final, last_day, {"scales": scales_now(bars), "fingerprint": fp,
+                                                      "risk": vars(C.RISK), "version": 2})
+        json.dump(model_json, open(os.path.join(out_dir, "model.json"), "w"), indent=1, default=str)
+    else:
+        model_json = None       # sin validación fuera de muestra no se publica modelo
     slim = {k: v for k, v in res.items() if k not in ("trades_base",)}
     json.dump(slim, open(os.path.join(out_dir, "backtest.json"), "w"), indent=1, default=str)
     open(os.path.join(out_dir, "BACKTEST.md"), "w").write(report(res, model_json))
@@ -387,8 +405,8 @@ def report(res: dict, model_json: dict) -> str:
                       ("max_losing_weeks_row", "racha máx. de semanas negativas", str)):
         L.append(f"| {lab} | {f(b[k])} | {f(s[k])} |")
     rs = res["random_sign"]
-    L += ["", f"**DSR** (N=12 variantes): {res['dsr_n12']:.2f} · (N=60): {res['dsr_n60']:.2f} · "
-              f"**PBO** (CSCV {res['pbo'].get('S')} bloques): {res['pbo'].get('pbo')}",
+    L += ["", f"**DSR** (N = {res['n_trials']} ensayos par×slot×variante): {res['dsr']:.2f} · "
+              f"**PBO** (CSCV {res['pbo'].get('S')} bloques sobre esos ensayos): {res['pbo'].get('pbo')}",
           f"**Signo aleatorio**: R medio real {rs.get('avg_R', 0):+.3f} vs aleatorio {rs.get('rand_avg_R', 0):+.3f}"
           f" (p = {rs.get('p_value', float('nan')):.3f}, n = {rs.get('n')})", "",
           "## Por era", "", "| era | semanas | retorno | + | − | peor semana |", "|---|---|---|---|---|---|"]
