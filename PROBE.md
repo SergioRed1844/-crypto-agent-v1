@@ -2,7 +2,7 @@
 
 | par | día | minutos | mid mediano | spread mediano (pips) | escala ok |
 |---|---|---|---|---|---|
-| EURUSD | 2015-01-15 | error | EURUSD/2015/00/15/BID_candles_min_1.bi5: HTTP 503 | | |
+| EURUSD | 2015-01-15 | 1440 | 1.17014 | 0.3 | True |
 | EURUSD | 2020-03-09 | 1437 | 1.14234 | 0.5 | True |
 | EURUSD | 2024-01-05 | 1318 | 1.09393 | 0.3 | True |
 | EURUSD | 2026-10-16 | 1260 | 1.12364 | 0.3 | True |
