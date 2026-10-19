@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-19T16:20:31Z",
+ "generated_utc": "2026-10-19T17:19:16Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.496,
+   "aporte": 0.494,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.418,
+   "aporte": -0.416,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.303,
+   "aporte": -0.302,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.298,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.252,
+   "aporte": -0.251,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.225,
+   "aporte": -0.224,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.191,
+   "aporte": 0.19,
    "fuente": "noticia"
   }
  ],

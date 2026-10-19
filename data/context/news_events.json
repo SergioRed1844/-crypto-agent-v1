@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T16:20:31Z",
+ "updated_utc": "2026-10-19T17:19:16Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4188,6 +4188,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T15:30:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "",
+   "country": "EU",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "La ABE pone a USDC bajo supervisión estricta de tokens significativos",
+   "source_url": "https://www.newsbtc.com/regulation/european-banking-authority-puts-usdc-under-significant-token-supervision/",
+   "source_title": "newsbtc.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-european-banking-authority-puts-usdc-under-signifi-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T16:15:00Z"
   }
  ]
 }
