@@ -25,7 +25,10 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q numpy httpx
-      - run: python -m fx.data_dukascopy probe out || echo "PROBE_FAIL=1" >> "$GITHUB_ENV"
+      - run: |
+          mkdir -p out
+          python -m fx.data_dukascopy probe out > out/probe.log 2>&1 || echo "PROBE_FAIL=1" >> "$GITHUB_ENV"
+          cat out/probe.log
       - name: Publicar sonda en fx-data
         env: { TOKEN: "${{ github.token }}" }
         run: |
