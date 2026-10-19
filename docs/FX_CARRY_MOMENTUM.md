@@ -87,4 +87,5 @@ Moskowitz-Ooi-Pedersen 2012; Moreira-Muir 2017; BNP 2008). Las primas se publica
 - **Si no se cumple:** no se opera y se reporta tal cual.
 
 ## Cambios posteriores
-(ninguno)
+- 19-oct-2026, **antes de ver datos**: corrección de un error de unidades en el filtro de choque del carry (el
+  retorno semanal y su σ ahora se miden con los mismos pesos). No cambia ninguna regla.
