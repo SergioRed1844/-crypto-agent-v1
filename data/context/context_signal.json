@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T05:15:51Z",
+ "generated_utc": "2026-10-19T05:29:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.365,
- "event_risk": 0.432,
+ "event_risk": 0.434,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.211,
+   "riesgo": 0.214,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.432,
+   "aporte": -0.431,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   }
  ],
