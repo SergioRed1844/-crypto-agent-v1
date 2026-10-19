@@ -67,6 +67,11 @@ ok(K.entry_blackout(ny(date(2026, 10, 24), "10:00")) == "mercado cerrado" and
    K.entry_blackout(ny(date(2026, 10, 20), "08:45")) is None, "blackouts: cierre, viernes, fin de año, rollover, fix")
 ev = ny(date(2026, 10, 28), "14:00")
 ok(K.entry_blackout(ev + 3, (ev,)) and K.entry_blackout(ev + 15, (ev,)) is None, "T−5/T+5 de evento conocido")
+ecb = K.slot_min(SL["EU_1415"], date(2026, 1, 15)) + 15
+ok(K.entry_blackout(ecb, K.slot_guards("EURUSD", date(2026, 1, 15), "EU_1415")) and
+   K.ny(K.exit_cap_min("EU_1345", ecb - 30)).strftime("%H:%M") == "08:25" and
+   K.ny(K.exit_cap_min("US_0830", ny(date(2026, 1, 15), "08:45"))).strftime("%H:%M") == "13:55",
+   "BCE en invierno entra justo a las 8:30 NY → bloqueado; topes antes de 8:30 y de 14:00 NY")
 cal = os.path.join(TMP, "cal.json")
 json.dump({"events": [{"date": "2026-10-28", "time_local": "14:00", "tz": "America/New_York", "status": "confirmed",
                        "title_es": "Decisión FOMC", "source_url": "https://www.federalreserve.gov/x"},

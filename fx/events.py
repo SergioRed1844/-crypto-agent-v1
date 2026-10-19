@@ -144,7 +144,10 @@ def simulate(b: Bars, ie: int, side: int, stop_dist: float, exit_m: int, pair: C
     mid_e = (b.ao[ie] + b.bo[ie]) / 2
     stop = avoid_round(entry - side * stop_dist, side, pair.pip, entry)
     risk = (entry - stop) * side
-    ix = min(_first_ge(b.t, exit_m), len(b.t) - 1)
+    ix = _first_ge(b.t, exit_m)
+    # Sin vela en los 5 min posteriores a la salida (hueco o fin de ventana): se sale al cierre de la última vela
+    # anterior, nunca al precio del día siguiente.
+    use_close = ix >= len(b.t) or b.t[ix] - exit_m > 5
     why, px, jx = "tiempo", None, ix
     for j in range(ie, ix):
         if side > 0 and b.bl[j] <= stop:
@@ -154,10 +157,15 @@ def simulate(b: Bars, ie: int, side: int, stop_dist: float, exit_m: int, pair: C
             px, why, jx = max(stop, b.ao[j]), "stop", j
             break
     if px is None:
-        px = b.bo[ix] if side > 0 else b.ao[ix]
+        if use_close:
+            jx = max(ix - 1, ie)
+            px = b.bc[jx] if side > 0 else b.ac[jx]
+        else:
+            px = b.bo[ix] if side > 0 else b.ao[ix]
     xm = int(b.t[jx])
     half_e = (b.ao[ie] - b.bo[ie]) / 2
-    half_x = max((b.ao[jx] - b.bo[jx]) / 2, 0.0)
+    at_close = why == "tiempo" and use_close
+    half_x = max(((b.ac[jx] - b.bc[jx]) if at_close else (b.ao[jx] - b.bo[jx])) / 2, 0.0)
     extra = (pair.oanda_markup_pips + 2 * pair.slip_pips) * pair.pip
     cost = half_e + half_x + extra
     pnl = (px - entry) * side - extra - (cost_mult - 1.0) * cost
@@ -183,10 +191,11 @@ def build(b: Bars, slot: C.Slot, z_min: float | None = None, holds=C.HOLD_GRID, 
         if abs(z) < z_min:
             continue
         entry_m = int(b.t[ie])
+        guards = tuple(known) + K.slot_guards(b.sym, d, slot.name)
         ev = Event(b.sym, slot.name, d, t0, ret, z, sig, float(spread),
-                   float(np.median(spreads[max(0, k - 60):k])), K.entry_blackout(entry_m, known), entry_m)
+                   float(np.median(spreads[max(0, k - 60):k])), K.entry_blackout(entry_m, guards), entry_m)
         mom = 1 if ret > 0 else -1
-        cut = K.forced_exit_min(entry_m)
+        cut = K.exit_cap_min(slot.name, entry_m)
         for hold in holds:
             sh = _sigma_h(b, i0, i15, t0, hold)
             if sh is None:

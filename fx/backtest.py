@@ -16,7 +16,7 @@ import math
 import os
 import random
 from collections import defaultdict
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import numpy as np
 
@@ -32,12 +32,24 @@ EULER = 0.5772156649
 
 
 # ── datos y eventos ────────────────────────────────────────────────────────────────────────────────────────────────
+def ny_window_mask(t: np.ndarray, start_h: float = 5.0, end_h: float = 17.5) -> np.ndarray:
+    """Minutos cuyo horario de Nueva York cae en [start_h, end_h): todo lo que la estrategia usa (6:00 NY es el
+    T−60 más temprano; 16:50 NY la salida forzada). Reduce memoria a la mitad sin cambiar resultados."""
+    days = np.asarray(t, dtype=np.int64) // 1440
+    ud, inv = np.unique(days, return_inverse=True)
+    off = np.array([K.NY.utcoffset(datetime(1970, 1, 1) + timedelta(days=int(d), hours=12)).total_seconds() / 60
+                    for d in ud])
+    local = (np.asarray(t, dtype=np.int64) + off[inv].astype(np.int64)) % 1440
+    return (local >= start_h * 60) & (local < end_h * 60)
+
+
 def load_bars(bars_dir: str, syms=None) -> dict[str, E.Bars]:
     out = {}
     for s in syms or C.PAIRS:
         raw = D.load(s, bars_dir)
         if len(raw["t"]):
-            out[s] = E.Bars.from_raw(s, raw)
+            keep = ny_window_mask(raw["t"])
+            out[s] = E.Bars.from_raw(s, {k: np.asarray(v)[keep] for k, v in raw.items()})
     return out
 
 

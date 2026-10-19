@@ -247,12 +247,12 @@ class Engine:
         dist = E.stop_distance(sh, q.mid, q.spread, pair)
         stop = E.avoid_round(ref - side * dist, side, pair.pip, ref)
         dist = (ref - stop) * side
-        black = K.entry_blackout(m, tuple(self.known))
+        black = K.entry_blackout(m, tuple(self.known) + K.slot_guards(j.sym, K.ny(m).date(), j.slot))
         dec = self.risk.size(m, j.sym, side, ref, dist, n_event, black)
         if not dec.ok:
             return self._skip(j, rec, "; ".join(dec.reasons))
         nxt = [e - C.EVENT_GUARD_MIN for e in self.known if e > m]
-        deadline = min([m + hold, K.forced_exit_min(m)] + nxt[:1])
+        deadline = min([m + hold, K.exit_cap_min(j.slot, m)] + nxt[:1])
         if deadline - m < 10:
             return self._skip(j, rec, "salida forzada o evento mayor a menos de 10 min")
         bound = ref + side * max(2 * q.spread, 2 * pair.pip)

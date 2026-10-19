@@ -47,6 +47,16 @@ Pruebas: `python -m tests.test_radar`. El Radar nunca toca `app/` (salvo leer `a
 ni llaves de exchange; sus vetos solo restan. Secrets opcionales: `RADAR_SMTP_USER`/`RADAR_SMTP_PASS`/`RADAR_EMAIL_TO`,
 `CALLMEBOT_PHONE`/`CALLMEBOT_APIKEY`, `FINNHUB_API_KEY` (calendario de resultados); `GEMINI_API_KEY` ya existe.
 
+## Agente FX — agente 3 (rama `fx-agente`, opera FX en OANDA v20; hoy solo paper/practice)
+Estrategia A del corpus FX: en cada slot macro (8:30/10:00/14:00 NY, BCE, BoE, Banxico 13:00 CDMX) mide la reacción
+de 15 min (z contra la escala robusta del slot) y apuesta al drift posterior con stop en el broker y salida por
+tiempo. Qué (par, slot) se opera y en qué dirección lo decide un **Bayes empírico escéptico** en walk-forward con
+costos reales (velas bid/ask de Dukascopy en la rama `fx-data`). Motor de riesgo con **gobernador semanal −1.5%**.
+Motor + webhook (`python -m fx run`) y monitor independiente (`python -m fx monitor`) en un VPS; TradingView solo
+para visualización e intents (FLATTEN/PAUSE/RESUME/CHECK/SIGNAL). Método y operación: `docs/FX_AGENTE.md`;
+validación: `data/fx/BACKTEST.md`; skill: `fx-event-drift`. Pruebas: `python -m tests.test_fx`.
+`FX_MODE=live` + `FX_LIVE_CONFIRM` solo los pone un humano tras la compuerta de práctica; Claude nunca.
+
 ## Non-negotiable safety rules
 - **`PAPER_TRADING=true` always** during all development (in v4.x: `TRADING_MODE=paper`). Flipping to live is a manual
   human decision made only after the paper gate (≥30 trades, ≥2 weeks, win rate >50%, avg R:R ≥2.0, drawdown <10%).

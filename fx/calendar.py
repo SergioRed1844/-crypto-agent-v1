@@ -83,6 +83,22 @@ def forced_exit_min(entry_m: int) -> int:
     return to_min(datetime.combine(t.date(), _hm(cut), NY))
 
 
+def exit_cap_min(slot_name: str, entry_m: int) -> int:
+    """Salida forzada del día y, para slots europeos, tope antes de las 8:30 NY (config.SLOT_EXIT_CAP_NY)."""
+    cut = forced_exit_min(entry_m)
+    cap = C.SLOT_EXIT_CAP_NY.get(slot_name)
+    if cap:
+        c = to_min(datetime.combine(ny(entry_m).date(), _hm(cap), NY))
+        if c > entry_m:
+            cut = min(cut, c)
+    return cut
+
+
+def slot_guards(sym: str, d: date, exclude: str = "") -> tuple[int, ...]:
+    """T0 (minuto UTC) de los demás slots que aplican al par ese día: no se entra a ±5 min de ellos."""
+    return tuple(slot_min(s, d) for s in C.SLOTS if s.name != exclude and (not s.pairs or sym in s.pairs))
+
+
 @lru_cache(maxsize=4096)
 def _london_fix(d: date) -> int:
     tz, hhmm, _ = C.LONDON_FIX

@@ -61,6 +61,12 @@ SLOTS: tuple[Slot, ...] = (
     Slot("MX_1300", "America/Mexico_City", "13:00", ("USDMXN",), note="Banxico"),
 )
 
+# Nadie cruza otro slot mayor con la posición abierta (regla conocida de antemano, F14-016 "Exclusiones"): los
+# europeos salen antes de las 8:30 NY y los de la mañana de EE. UU. antes de las 14:00 NY (FOMC). Además no se entra
+# a ±5 min del T0 de otro slot del mismo par (``calendar.slot_guards``).
+SLOT_EXIT_CAP_NY = {"EU_1415": "08:25", "EU_1345": "08:25", "UK_1200": "08:25", "US_0830": "13:55",
+                    "US_1000": "13:55"}
+
 # ── Estrategia A (F14-016) — rejilla pequeña y declarada para DSR/PBO ─────────────────────────────────────────────
 ENTRY_LAG_MIN = 15                 # señal = signo de la reacción T0→T+15; entrada en T+15 (ventana T+5..T+20)
 Z_GRID = (2.0, 3.0)                # |z| mínimo
