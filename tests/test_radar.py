@@ -107,6 +107,16 @@ manual = pb.close[t0 + 7] / pb.open[t0 + 1] - 1 - C.COST_RT["crypto"]
 ok(o is not None and abs(o[1] - manual) < 1e-12, "resultado = apertura de t+1 → cierre de t+7, neto de costos")
 ok(outcome(pb, len(pb.close) - 3, 1, 7) is None, "sin futuro suficiente → sin resultado (no se rellena)")
 
+from radar.model import local_base  # noqa: E402
+bl1, _ = local_base(pb, 7, 0.4, 0.0, (-1, 1))
+pb2 = build_panel(btc, "crypto", btc, aux)
+ii = 900
+pb2.close = pb2.close.copy()
+pb2.close[ii + 1:] *= 3.0                   # cambiar solo el futuro (barras posteriores a i)
+bl2, _ = local_base(pb2, 7, 0.4, 0.0, (-1, 1))
+ok(abs(bl1[ii] - bl2[ii]) < 1e-12, "tasa base local en i solo usa resultados ya realizados en i (sin futuro)")
+ok(0 < bl1[ii] < 1 and bl1[100] == 0.4, "tasa base local acotada; sin historia usa la del periodo")
+
 # ── 5. modelo: con efecto sembrado lo detecta; sin efecto encoge ────────────────────────────────────────
 alts = [make(s, N0, 10 + k, "crypto", 0.04, shocks=shocks, rebound=0.20) for k, s in enumerate(["ETH", "SOL", "XRP", "ADA"])]
 panels_eff = [pb] + [build_panel(s, "crypto", btc, aux) for s in alts]

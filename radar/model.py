@@ -63,6 +63,43 @@ def base_rates(p: Panel, h: int, lo: str = "0000", hi: str = "9999") -> dict:
             "n": int(len(net)), "nets": net, "succ": succ, "entry_dates": [p.dates[j + 1] for j in idx]}
 
 
+K0_LOCAL = 4.0               # la tasa del último año pesa como n_eff ventanas; la histórica como 4
+
+
+def local_base(p: Panel, h: int, b_full: float, m_full: float, clip: tuple[float, float]) -> tuple[np.ndarray, np.ndarray]:
+    """Tasa base LOCAL en cada barra i: compras de un día cualquiera del último año cuyo resultado ya se conoce en i
+    (entradas t ∈ [i−año, i−H]), encogida hacia la tasa del periodo con peso K0_LOCAL. Así un setup en 2022 se compara
+    contra 2022 (mercado bajista) y no contra 2021; y en vivo el comparador es lo que pasó en el último año."""
+    H = C.bars_for(h, p.cls)
+    W = 365 if p.cls == "crypto" else 252
+    n = len(p.close)
+    succ = np.zeros(n)
+    net = np.zeros(n)
+    has = np.zeros(n)
+    t = np.arange(WARMUP, max(WARMUP, n - H))
+    if len(t):
+        entry = np.where(np.isfinite(p.open[t + 1]) & (p.open[t + 1] > 0), p.open[t + 1], p.close[t])
+        nt = np.clip(p.close[t + H] / entry - 1 - C.COST_RT[p.cls], clip[0], clip[1])
+        succ[t] = nt >= C.TARGET[h]
+        net[t] = nt
+        has[t] = 1
+    cs, cn, cm = np.r_[0, np.cumsum(succ)], np.r_[0, np.cumsum(has)], np.r_[0, np.cumsum(net)]
+    i = np.arange(n)
+    hi = np.clip(i - H + 1, 0, n)            # entradas t ≤ i − H  → índice exclusivo i − H + 1
+    lo = np.clip(i - W, 0, n)
+    lo = np.minimum(lo, hi)
+    cnt = cn[hi] - cn[lo]
+    with np.errstate(invalid="ignore", divide="ignore"):
+        bt = (cs[hi] - cs[lo]) / cnt
+        mt = (cm[hi] - cm[lo]) / cnt
+    neff = cnt / H
+    bf = b_full if np.isfinite(b_full) else 0.5
+    mf = m_full if np.isfinite(m_full) else 0.0
+    bl = np.where(cnt > 0, (neff * np.nan_to_num(bt) + K0_LOCAL * bf) / (neff + K0_LOCAL), bf)
+    ml = np.where(cnt > 0, (neff * np.nan_to_num(mt) + K0_LOCAL * mf) / (neff + K0_LOCAL), mf)
+    return bl, ml
+
+
 @dataclass
 class Instance:
     sid: str
@@ -116,6 +153,7 @@ class Model:
         self.tau2_all = FLOOR_LOGIT
         self.tau2r_all = FLOOR_RET
         self.dow = {}           # cls → tabla
+        self.local = {}         # sym → h → (tasa base local, neto medio local) por barra
         self.period = ("0000", "9999")
         self.n_specs = 0
 
@@ -135,6 +173,9 @@ class Model:
                 for sym, b in br.items():
                     m = float(np.clip(b["nets"], lo_c, hi_c).mean()) if b["n"] else np.nan
                     self.base[sym][h] = {"b": b["b"], "m": m, "n": b["n"]}
+                for p in ps:
+                    bb = self.base[p.sym][h]
+                    self.local.setdefault(p.sym, {})[h] = local_base(p, h, bb["b"], bb["m"], (lo_c, hi_c))
             self.dow[cls] = self._dow_table(ps, br_h=7, lo=lo, hi=hi)
         inst = collect(panels, lo, hi)
         self._fit_groups(inst, panels)
@@ -151,14 +192,14 @@ class Model:
             by[(it.sid, it.cls)].append(it)
         for (sid, cls), items in by.items():
             for h in C.HORIZONS:
-                usable = [it for it in items if (h, 1) in it.out and np.isfinite(self.base[it.sym][h]["b"])]
+                usable = [it for it in items if (h, 1) in it.out and np.isfinite(self._lb(it.sym, h, it.i)[0])]
                 if not usable:
                     continue
                 cl = clusters(usable)
                 s_c = [np.mean([it.out[(h, 1)][0] for it in c]) for c in cl]
-                b_c = [np.mean([self.base[it.sym][h]["b"] for it in c]) for c in cl]
+                b_c = [np.mean([self._lb(it.sym, h, it.i)[0] for it in c]) for c in cl]
                 lo_c, hi_c = self.clip[(cls, h)]
-                x_c = [np.mean([np.clip(it.out[(h, 1)][1], lo_c, hi_c) - self.base[it.sym][h]["m"] for it in c])
+                x_c = [np.mean([np.clip(it.out[(h, 1)][1], lo_c, hi_c) - self._lb(it.sym, h, it.i)[1] for it in c])
                        for c in cl]
                 n_eff, k_eff, b_bar = len(cl), float(np.sum(s_c)), float(np.mean(b_c))
                 y, v = eb.logit_lift(k_eff, n_eff, b_bar)
@@ -190,8 +231,8 @@ class Model:
             for sym, its in per.items():
                 k = sum(it.out[(h, 1)][0] for it in its)
                 n = len(its)
-                ya, va = eb.logit_lift(k, n, self.base[sym][h]["b"])
-                xs = np.array([np.clip(it.out[(h, 1)][1], lo_c, hi_c) - self.base[sym][h]["m"] for it in its])
+                ya, va = eb.logit_lift(k, n, float(np.mean([self._lb(sym, h, it.i)[0] for it in its])))
+                xs = np.array([np.clip(it.out[(h, 1)][1], lo_c, hi_c) - self._lb(sym, h, it.i)[1] for it in its])
                 if n >= 2:
                     within.append(float(np.var(xs, ddof=1)))
                 stats[sym] = dict(k=int(k), n=n, y=ya, v=va, xr=float(xs.mean()), xs=xs)
@@ -260,12 +301,20 @@ class Model:
         tab["w"] = CAL_WEIGHT
         return tab
 
+    def _lb(self, sym: str, h: int, i: int) -> tuple[float, float]:
+        bl, ml = self.local[sym][h]
+        return float(bl[i]), float(ml[i])
+
     # ── predicción ──────────────────────────────────────────────────────────────────────────────────────
-    def predict(self, sid: str, cls: str, h: int, sym: str) -> dict | None:
+    def predict(self, sid: str, cls: str, h: int, sym: str, i: int | None = None) -> dict | None:
+        """i = barra del disparo: el comparador es la tasa base local (último año) en esa barra."""
         g = self.groups.get((sid, cls, h))
         b = self.base.get(sym, {}).get(h)
         if g is None or b is None or not np.isfinite(b["b"]):
             return None
+        if i is not None and sym in self.local and h in self.local[sym]:
+            bl, ml = self._lb(sym, h, i)
+            b = {"b": bl, "m": ml, "n": b["n"]}
         a = g["assets"].get(sym)
         if a is None:
             d, dv = g["delta"], g["delta_var"] + g["tau2_assets"]

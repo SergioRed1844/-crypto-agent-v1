@@ -192,8 +192,12 @@ def _yahoo_complete(local_date: str, sym: str) -> bool:
 
 
 def fetch_yahoo(client, sym: str, rng: str = "max") -> Series:
+    """Diario de Yahoo. OJO: con range=max Yahoo baja la granularidad (barras mensuales/trimestrales) en historias
+    largas; por eso se pide con period1/period2 explícitos y se verifica que la serie sea diaria."""
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{quote(sym, safe='')}"
-    js = _get(client, url, {"range": rng, "interval": "1d", "includeAdjustedClose": "true",
+    now = int(time.time()) + 86_400
+    p1 = int(datetime(2000, 1, 1, tzinfo=timezone.utc).timestamp()) if rng == "max" else now - 40 * 86_400
+    js = _get(client, url, {"period1": p1, "period2": now, "interval": "1d", "includeAdjustedClose": "true",
                             "events": "div,splits"}).json()
     res = (js.get("chart") or {}).get("result") or []
     if not res:
@@ -216,10 +220,22 @@ def fetch_yahoo(client, sym: str, rng: str = "max") -> Series:
             v = q.get(k, [None] * len(ts))[i]
             return None if v is None else v * f
         rows.append((d, g("open"), g("high"), g("low"), c * f, q.get("volume", [0] * len(ts))[i] or 0))
+    rows = [r for r in rows if date.fromisoformat(r[0]).weekday() < 5]      # bolsa y FX: sin fines de semana
     s = from_rows(sym, rows, "yahoo")
+    check_daily(s)
     if len(s) and not _yahoo_complete(s.last_date, sym):
         s.partial_last = True
     return s
+
+
+def check_daily(s: Series) -> None:
+    """Rechaza series que no son diarias (mediana de separación > 4 días): mezclarlas arruina los horizontes."""
+    if len(s) < 30:
+        return
+    d = np.array([date.fromisoformat(x).toordinal() for x in s.dates[-400:]])
+    gap = float(np.median(np.diff(d)))
+    if gap > 4:
+        raise RuntimeError(f"serie no diaria (separación mediana {gap:.0f} días)")
 
 
 def fetch_stooq(client, sym: str) -> Series:
@@ -229,7 +245,9 @@ def fetch_stooq(client, sym: str) -> Series:
     rows = []
     for r in csv.DictReader(io.StringIO(txt)):
         rows.append((r.get("Date"), r.get("Open"), r.get("High"), r.get("Low"), r.get("Close"), r.get("Volume")))
+    rows = [r for r in rows if r[0] and date.fromisoformat(r[0]).weekday() < 5]
     s = from_rows(sym, rows, "stooq")
+    check_daily(s)
     if not len(s):
         raise RuntimeError(f"stooq sin datos para {sym}")
     if not _yahoo_complete(s.last_date, sym):
@@ -254,6 +272,11 @@ def fetch_fred_csv(client, sym: str) -> Series:
 def price(sym: str, client=None, full_after_h: float = 20.0) -> Series | None:
     """Serie diaria con caché. Refresco completo si la caché tiene > full_after_h horas; si no, incremental."""
     cached, age = load_cache(sym)
+    if cached is not None and C.asset_class(sym) != "crypto":
+        try:
+            check_daily(cached)
+        except RuntimeError:
+            cached, age = None, 1e9                     # caché vieja con barras no diarias: se descarta
     cls = C.asset_class(sym)
     if age < 0.75 and cached is not None:            # ya se actualizó en los últimos 45 min
         HEALTH[sym] = {"ok": True, "last": cached.last_date, "nota": f"caché {cached.source}"}

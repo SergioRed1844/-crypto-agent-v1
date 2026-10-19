@@ -207,7 +207,7 @@ def scan_candidates(model: Model, panels, ctx, today: date | None = None) -> lis
 
 
 def _candidate(model, p, i, sid, ctx):
-    preds = {h: model.predict(sid, p.cls, h, p.sym) for h in C.HORIZONS}
+    preds = {h: model.predict(sid, p.cls, h, p.sym, i) for h in C.HORIZONS}
     preds = {h: v for h, v in preds.items() if v}
     if not preds:
         return None

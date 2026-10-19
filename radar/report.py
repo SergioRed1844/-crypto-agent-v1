@@ -80,7 +80,7 @@ def ficha_md(c: dict) -> str:
     L = [f"## {head} — {c['sym']} ({CLS_ES[c['cls']]}) · {s.nombre}", "",
          f"**Disparo:** cierre del {c['date']} · precio {c['price']:.6g} · horizonte sugerido **{pr['h']} días**", "",
          f"**LECTURA:** {c['lectura']}", "",
-         "| | Este setup en este activo (encogido) | Comprar un día cualquiera |", "|---|---|---|",
+         "| | Este setup en este activo (encogido) | Comprar un día cualquiera (último año) |", "|---|---|---|",
          f"| Probabilidad de ganar ≥ {pct(C.TARGET[pr['h']], 1)} neto en {pr['h']} días | **{pct(pr['p'], 0)}** "
          f"(IC80 {pct(pr['q10'], 0)}–{pct(pr['q90'], 0)}) | {pct(pr['base'], 0)} |",
          f"| Rendimiento neto esperado | **{pct(pr['ret'], 1, True)}** (cota baja {pct(pr['ret_q10'], 1, True)}) | "
