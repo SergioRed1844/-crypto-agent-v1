@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T09:30:00Z",
+ "updated_utc": "2026-10-19T10:25:26Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3999,6 +3999,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T03:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Gobernador del Banco de Japón señala inflación subyacente cercana a meta",
+   "source_url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/boj-chief-says-underlying-inflation-quite-close-price-goal",
+   "source_title": "businesstimes.com.sg",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-boj-chief-says-underlying-inflation-quite-close-to-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "06:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T06:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Mercado reduce apuestas de subida de tasas de la Fed para octubre",
+   "source_url": "https://www.business-standard.com/markets/commodities/gold-silver-prices-rise-as-traders-pare-bets-on-october-fed-rate-hike-126101900270_1.html",
+   "source_title": "business-standard.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-silver-prices-rise-as-traders-pare-bets-on-oc-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "06:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T06:45:00Z"
   }
  ]
 }

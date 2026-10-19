@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-19T09:30:00Z",
+ "generated_utc": "2026-10-19T10:25:26Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.353,
- "event_risk": 0.462,
+ "bias": -0.356,
+ "event_risk": 0.469,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.35"
+  "Precaución: sesgo -0.36"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.252,
+   "riesgo": 0.262,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.506,
+   "aporte": 0.505,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.426,
+   "aporte": -0.425,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.23,
+   "aporte": -0.229,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.205,
+   "aporte": -0.204,
    "fuente": "noticia"
   },
   {
@@ -108,12 +108,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-gold-prices-rise-as-fed-rate-hike-bets-fade-anz-se-2026-10-19",
+   "id": "news-gold-silver-prices-rise-as-traders-pare-bets-on-oc-2026-10-19",
    "date": "2026-10-19",
-   "title_es": "Oro sube ante disipación de apuestas de alzas de tasas de la Fed",
+   "title_es": "Mercado reduce apuestas de subida de tasas de la Fed para octubre",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.178,
+   "aporte": 0.182,
    "fuente": "noticia"
   }
  ],
