@@ -30,7 +30,7 @@ jobs:
       - run: pip install -q -r radar/requirements.txt
       - name: Clave de caché (cada 6 h)
         id: ck
-        run: echo "k=radar-cache-v2-$(date -u +%Y%m%d)-$(( $(date -u +%H) / 6 ))" >> "$GITHUB_OUTPUT"
+        run: echo "k=radar-cache-v2-$(date -u +%Y%m%d)-$(( 10#$(date -u +%H) / 6 ))" >> "$GITHUB_OUTPUT"
       - uses: actions/cache/restore@v4
         with:
           path: .cache/radar
