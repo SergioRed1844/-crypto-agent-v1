@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T17:23:13Z",
+ "updated_utc": "2026-10-19T17:45:04Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4167,6 +4167,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T13:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "EU",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación de la eurozona escala al 3,8% ante subida del costo energético",
+   "source_url": "https://econotimes.com/Euro-Area-Inflation-Reaches-3-8-as-Energy-Prices-Rise-18-9-1756505",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-euro-area-inflation-reaches-3-8-as-energy-prices-r-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T14:45:00Z"
   },
   {
    "category": "INSTITUTIONAL_ADOPTION",
