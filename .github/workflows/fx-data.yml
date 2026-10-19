@@ -1,0 +1,83 @@
+# Agente FX: descarga velas de 1 minuto bid/ask de Dukascopy (2015 → ayer) y las guarda en la rama `fx-data`.
+# Se dispara con un push a fx-agente cuyo mensaje lleve [fx-probe] (sonda rápida) o [fx-data] (descarga completa),
+# o a mano desde Actions. El espacio de trabajo de Claude no alcanza Dukascopy; GitHub Actions sí.
+name: fx-data
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Años a bajar (JSON), p. ej. [2026]"
+        default: "[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026]"
+  push:
+    branches: [fx-agente]
+permissions:
+  contents: write
+concurrency:
+  group: fx-data
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[fx-probe]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - run: python -m fx.data_dukascopy probe out || echo "PROBE_FAIL=1" >> "$GITHUB_ENV"
+      - name: Publicar sonda en fx-data
+        env: { TOKEN: "${{ github.token }}" }
+        run: |
+          bash .github/scripts/fx_store_push.sh out "fx-data: sonda $(date -u +%FT%TZ)"
+          test -z "$PROBE_FAIL"
+
+  bars:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[fx-data]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        sym: [EURUSD, GBPUSD, USDJPY, USDCHF, USDMXN]
+        year: ${{ fromJSON(github.event.inputs.years || '[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - run: python -m fx.data_dukascopy year ${{ matrix.sym }} ${{ matrix.year }} out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bars-${{ matrix.sym }}-${{ matrix.year }}
+          path: out/
+          retention-days: 3
+          if-no-files-found: ignore
+
+  collect:
+    needs: bars
+    if: always() && needs.bars.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: bars-*
+          merge-multiple: true
+          path: out/bars
+      - name: Manifiesto
+        run: |
+          python - <<'EOF'
+          import json, glob, os
+          rows = [json.load(open(p)) for p in sorted(glob.glob("out/bars/*.json"))]
+          json.dump(rows, open("out/MANIFEST.json", "w"), indent=1)
+          bad = [r for r in rows if not r["scale"]["ok"] or r["days_failed"] > max(3, r["days_requested"] // 50)]
+          print(len(rows), "archivos;", len(bad), "con problemas")
+          for r in bad: print(r["sym"], r["year"], r["scale"], r["days_failed"], r["fails"][:3])
+          EOF
+      - name: Publicar en fx-data
+        env: { TOKEN: "${{ github.token }}" }
+        run: bash .github/scripts/fx_store_push.sh out "fx-data: velas $(date -u +%FT%TZ)"
