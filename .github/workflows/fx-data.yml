@@ -29,7 +29,7 @@ jobs:
       - name: Publicar sonda en fx-data
         env: { TOKEN: "${{ github.token }}" }
         run: |
-          bash .github/scripts/fx_store_push.sh out "fx-data: sonda $(date -u +%FT%TZ)"
+          bash .github/scripts/fx_store_push.sh out "fx-data - sonda $(date -u +%FT%TZ)"
           test -z "$PROBE_FAIL"
 
   bars:
@@ -80,4 +80,5 @@ jobs:
           EOF
       - name: Publicar en fx-data
         env: { TOKEN: "${{ github.token }}" }
-        run: bash .github/scripts/fx_store_push.sh out "fx-data: velas $(date -u +%FT%TZ)"
+        run: |
+          bash .github/scripts/fx_store_push.sh out "fx-data - velas $(date -u +%FT%TZ)"
