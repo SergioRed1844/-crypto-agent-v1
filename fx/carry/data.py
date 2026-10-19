@@ -93,6 +93,45 @@ def download(code: str, out: str, workers: int = 4, until: date | None = None) -
     return st
 
 
+def repair(code: str, src: str, out: str, workers: int = 2, rounds: int = 3) -> dict:
+    """Vuelve a pedir los meses que faltan (Dukascopy responde 503 bajo carga) y fusiona con lo que ya había."""
+    c = CC.BY_CODE[code]
+    have = load(code, src) if os.path.exists(os.path.join(src, f"{c.sym}_H1.npz.xz")) else D.concat([])
+    present = {(K_ym(m)) for m in np.unique(np.asarray(have["t"]) // 1440 * 1440)} if len(have["t"]) else set()
+    want = [ym for ym in months(CC.START_YEAR, date.today()) if ym not in present]
+    parts, fails = [have], []
+    with D._client() as cl:
+        for _ in range(rounds):
+            fails = []
+            with ThreadPoolExecutor(workers) as ex:
+                futs = {ex.submit(fetch_month, cl, c.sym, y, m): (y, m) for y, m in want}
+                for f, (y, m) in futs.items():
+                    try:
+                        parts.append(f.result())
+                    except Exception as e:
+                        fails.append(((y, m), str(e)[:80]))
+            want = [ym for ym, _ in fails]
+            if not want:
+                break
+            time.sleep(20)
+    b = D.concat(parts)
+    os.makedirs(out, exist_ok=True)
+    with open(os.path.join(out, f"{c.sym}_H1.npz.xz"), "wb") as fh:
+        fh.write(D.encode(b))
+    mid = (np.median(b["bc"]) + np.median(b["ac"])) / 2 * c.point if len(b["t"]) else 0
+    st = {"code": code, "sym": c.sym, "months": len(list(months(CC.START_YEAR, date.today()))),
+          "failed": [f"{y}-{m:02d}: {e}" for (y, m), e in fails], "bars": int(len(b["t"])),
+          "median_mid": round(float(mid), 5), "scale_ok": bool(c.rng[0] <= mid <= c.rng[1]),
+          "first": D._ts(b["t"][0]) if len(b["t"]) else None, "last": D._ts(b["t"][-1]) if len(b["t"]) else None}
+    json.dump(st, open(os.path.join(out, f"{c.sym}_H1.json"), "w"), indent=1)
+    return st
+
+
+def K_ym(minute: int) -> tuple[int, int]:
+    d = datetime.fromtimestamp(int(minute) * 60, timezone.utc)
+    return d.year, d.month
+
+
 def load(code: str, d: str) -> dict:
     c = CC.BY_CODE[code]
     with open(os.path.join(d, f"{c.sym}_H1.npz.xz"), "rb") as fh:
@@ -267,6 +306,10 @@ if __name__ == "__main__":
         st = download(sys.argv[2], sys.argv[3])
         print(json.dumps({k: v for k, v in st.items() if k != "failed"}), len(st["failed"]), "meses fallidos")
         sys.exit(0 if st["scale_ok"] and len(st["failed"]) <= 2 else 1)
+    if cmd == "repair":
+        st = repair(sys.argv[2], sys.argv[3], sys.argv[4])
+        print(json.dumps({k: v for k, v in st.items() if k != "failed"}), st["failed"])
+        sys.exit(0)
     if cmd == "aux":
         print(json.dumps(fetch_aux(sys.argv[2]), indent=1))
         sys.exit(0)
