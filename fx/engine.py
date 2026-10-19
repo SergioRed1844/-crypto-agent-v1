@@ -165,11 +165,16 @@ class Engine:
 
     # ── plan del día ──────────────────────────────────────────────────────────────────────────────────────────
     def plan(self, d: date):
+        """Un trabajo por (par, slot) del día. Los grupos inactivos también se miden (z, spread de ESTE broker):
+        así la práctica calibra costos y escalas aunque el modelo no opere nada (F15-017 B)."""
         self.jobs = []
-        for (sym, slot_name), g in self.model.get("_active", {}).items():
-            slot = next(s for s in C.SLOTS if s.name == slot_name)
-            if d.weekday() < 5:
-                self.jobs.append(Job(sym, slot_name, K.slot_min(slot, d), g))
+        act = self.model.get("_active", {})
+        if d.weekday() < 5:
+            for slot in C.SLOTS:
+                for sym in C.PAIRS:
+                    if slot.pairs and sym not in slot.pairs:
+                        continue
+                    self.jobs.append(Job(sym, slot.name, K.slot_min(slot, d), act.get((sym, slot.name))))
         self.planned_day = d
         self.store.log("plan", {"day": d.isoformat(), "jobs": [(j.sym, j.slot, j.t0) for j in self.jobs]})
 
@@ -284,6 +289,8 @@ class Engine:
         if ret is None or not sig:
             return {"ok": False, "why": "sin precios del slot o sin escala"}
         z = ret / sig
+        if j.group is None:
+            return {"ok": False, "why": "observación (grupo inactivo)", "z": z, "spread": q.spread if q else None}
         if abs(z) < j.group["z"]:
             return {"ok": False, "why": f"|z|={abs(z):.2f} < {j.group['z']}", "z": z}
         side = (1 if ret > 0 else -1) * (1 if j.group["dir"] == "mom" else -1)

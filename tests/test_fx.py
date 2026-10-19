@@ -342,6 +342,9 @@ eng, pb = asyncio.run(replay())
 opens = eng.store.journal("open")
 closes = eng.store.journal("close")
 ok(len(opens) >= 3 and len(closes) == len(opens) and not eng.live, f"motor: {len(opens)} entradas y todas cerradas")
+obs = [x for x in eng.store.journal("signal", 2000) if str(x.get("why", "")).startswith("observación")]
+ok(obs and all(x["slot"] != "US_0830" for x in obs) and eng.store.get("spread:EURUSD|US_1000"),
+   f"grupos inactivos se observan (z y spread del broker) sin operar: {len(obs)} registros")
 o = opens[-1]
 ok(o["latency"]["t_sent"] >= o["latency"]["t_event"] and o["latency"]["t_recv"] <= o["latency"]["t_decision"],
    "relojes de latencia completos y ordenados")
