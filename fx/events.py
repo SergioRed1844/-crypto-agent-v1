@@ -203,5 +203,5 @@ def to_rows(events: list[Event]) -> list[dict]:
             rows.append({"sym": e.sym, "slot": e.slot, "day": e.day.isoformat(), "t0": e.t0, "entry_m": e.entry_m,
                          "z": round(e.z, 3), "ret15": e.ret15, "spread_ok": e.spread_ok, "blackout": e.blackout,
                          "dir": dname, "hold": hold, **{k: s[k] for k in ("R", "R_cost", "why", "exit_m", "bps",
-                                                                         "side")}})
+                                                                         "side", "risk_px", "entry", "stop")}})
     return rows
