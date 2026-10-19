@@ -1,0 +1,95 @@
+# Estrategia B (carry + momentum): velas de 1 hora bid/ask de 13 monedas contra USD (Dukascopy), tasas de
+# política (BIS; respaldo OCDE/FRED) y VIX (FRED) → rama fx-data, carpeta carry/.
+# [fx-carry-probe] = sonda; [fx-carry-data] = descarga completa. También a mano.
+name: fx-carry-data
+on:
+  workflow_dispatch:
+  push:
+    branches: [fx-agente]
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: fx-carry-data
+  cancel-in-progress: false
+jobs:
+  probe:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[fx-carry-probe]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - run: |
+          mkdir -p out/carry
+          python -m fx.carry.data probe out/carry > out/carry/probe.log 2>&1 || true
+          cat out/carry/probe.log
+      - name: Publicar sonda
+        env: { TOKEN: "${{ github.token }}" }
+        run: |
+          bash .github/scripts/fx_store_push.sh out "fx-data - sonda carry $(date -u +%FT%TZ)"
+
+  pairs:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[fx-carry-data]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        code: [EUR, JPY, GBP, CHF, AUD, NZD, CAD, NOK, SEK, MXN, ZAR, PLN, HUF]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - run: python -m fx.carry.data pair ${{ matrix.code }} out || echo "con fallas"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carry-${{ matrix.code }}
+          path: out/
+          retention-days: 3
+
+  aux:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[fx-carry-data]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - run: python -m fx.carry.data aux out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: carry-aux
+          path: out/
+          retention-days: 3
+
+  collect:
+    needs: [pairs, aux]
+    if: always() && needs.pairs.result != 'skipped'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: carry-*
+          merge-multiple: true
+          path: out/carry
+      - name: Manifiesto
+        run: |
+          python - <<'EOF'
+          import json, glob
+          rows = [json.load(open(p)) for p in sorted(glob.glob("out/carry/*_H1.json"))]
+          json.dump(rows, open("out/carry/MANIFEST.json", "w"), indent=1)
+          for r in rows: print(r["code"], r["bars"], r["scale_ok"], len(r["failed"]), r["first"], r["last"])
+          EOF
+          cat out/carry/aux.json || true
+      - name: Publicar en fx-data
+        env: { TOKEN: "${{ github.token }}" }
+        run: |
+          bash .github/scripts/fx_store_push.sh out "fx-data - carry $(date -u +%FT%TZ)"
