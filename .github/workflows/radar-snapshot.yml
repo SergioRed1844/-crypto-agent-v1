@@ -1,0 +1,49 @@
+# Copia de los datos públicos que usa el Radar (precios diarios, Fear&Greed, vistas de Wikipedia) a la rama
+# `radar-data`, para poder analizar sin red. Solo corre a mano o al empujar a radar-eb con [snapshot] en el mensaje.
+name: radar-snapshot
+on:
+  workflow_dispatch:
+  push:
+    branches: [radar-eb]
+permissions:
+  contents: write
+concurrency:
+  group: radar-snapshot
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[snapshot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: radar-eb
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r radar/requirements.txt
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/radar
+          key: radar-cache-v2-snapshot
+          restore-keys: radar-cache-v2-
+      - name: Bajar/actualizar datos
+        run: python -c "from radar import pipeline as P; P.load(False)"
+      - name: Empaquetar y guardar en radar-data
+        run: |
+          tar czf /tmp/radar_cache.tgz .cache/radar
+          ls -la /tmp/radar_cache.tgz
+          git config user.name "radar-eb-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin radar-data >/dev/null; then
+            git fetch -q origin radar-data && git checkout -q radar-data
+          else
+            git checkout -q --orphan radar-data && git rm -rq --cached . && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          fi
+          cp /tmp/radar_cache.tgz radar_cache.tgz
+          printf "Datos públicos del Radar EB (caché). Generado %s\n" "$(date -u +%FT%TZ)" > README.md
+          git add radar_cache.tgz README.md
+          git commit -q -m "radar-data: snapshot $(date -u +%FT%TZ) [skip render]" || exit 0
+          git push -q origin radar-data
