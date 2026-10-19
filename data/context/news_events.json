@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T05:34:11Z",
+ "updated_utc": "2026-10-19T06:28:56Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3978,6 +3978,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-18T15:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Oro sube ante disipación de apuestas de alzas de tasas de la Fed",
+   "source_url": "https://econotimes.com/Gold-Prices-Rise-as-Fed-Rate-Hike-Bets-Fade-ANZ-Sees-5-000-in-2027-1756234",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-prices-rise-as-fed-rate-hike-bets-fade-anz-se-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T03:30:00Z"
   }
  ]
 }

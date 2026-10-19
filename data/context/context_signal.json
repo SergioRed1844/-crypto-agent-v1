@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-19T05:34:11Z",
+ "generated_utc": "2026-10-19T06:28:56Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.365,
- "event_risk": 0.434,
+ "bias": -0.355,
+ "event_risk": 0.44,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.37"
+  "Precaución: sesgo -0.36"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.214,
+   "riesgo": 0.222,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.512,
+   "aporte": 0.511,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.431,
+   "aporte": -0.43,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.266,
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.209,
    "fuente": "noticia"
   },
   {
@@ -104,16 +104,16 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.2,
+   "aporte": 0.199,
    "fuente": "noticia"
   },
   {
-   "id": "news-dollar-outlook-after-inflation-shock-hits-tech-and-2026-10-18",
-   "date": "2026-10-18",
-   "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.185,
+   "id": "news-gold-prices-rise-as-fed-rate-hike-bets-fade-anz-se-2026-10-19",
+   "date": "2026-10-19",
+   "title_es": "Oro sube ante disipación de apuestas de alzas de tasas de la Fed",
+   "category": "MONETARY_POLICY",
+   "stance": "pro",
+   "aporte": 0.183,
    "fuente": "noticia"
   }
  ],
