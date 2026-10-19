@@ -58,13 +58,16 @@ def confidence(c: dict) -> tuple[str, str]:
     return lab, calc
 
 
-def _refs_line(sid: str) -> str:
+def _refs_line(sid: str, cls: str | None = None) -> str:
     s = SETUPS[sid]
     if not s.refs:
         return "fuera del corpus (literatura general de trading)"
     R = refs()
     out = []
     for r in s.refs:
+        r, _, only = r.partition(":")
+        if only and cls and only != cls:
+            continue
         meta = R.get(r, {})
         mark = " ⚠️verificar" if meta.get("verificar") else ""
         out.append(f"{r} «{meta.get('titulo', '?')}» [{meta.get('evidencia_max', '?')}]{mark}")
@@ -111,7 +114,7 @@ def ficha_md(c: dict) -> str:
         L += ["**Por qué no es alerta / ajustes:** " + "; ".join(c["why"]), ""]
     L += [f"**QUÉ NO INFERIR:** {s.no_inferir}", "",
           f"**SIGUIENTE VERIFICACIÓN:** {s.verificar}", "",
-          f"**CORPUS:** {_refs_line(c['sid'])}", "",
+          f"**CORPUS:** {_refs_line(c['sid'], c['cls'])}", "",
           f"_Costos supuestos ida y vuelta: {pct(C.COST_RT[c['cls']], 2)} (estimación). {DISCLAIMER}_"]
     return "\n".join(L)
 

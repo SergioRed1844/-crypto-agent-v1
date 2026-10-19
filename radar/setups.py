@@ -30,7 +30,7 @@ class Setup:
     evidence: str                        # nivel E del mejor respaldo aplicable
     decay: float                         # C11-006
     applic: dict                         # aplicabilidad por clase (C11-007)
-    refs: list = field(default_factory=list)   # chunks del corpus
+    refs: list = field(default_factory=list)   # chunks del corpus ("ID:clase" = solo para esa clase)
     mecanismo: str = ""
     no_inferir: str = ""
     verificar: str = ""
@@ -48,13 +48,13 @@ SETUPS: dict[str, Setup] = {s.id: s for s in [
           "Que el precio 'ya tocó piso'. Si hay daño fundamental (quiebra, hackeo, fraude) la reversión es parcial.",
           "Confirmar que la caída no viene de una noticia propia del activo (resultados, hackeo, demanda)."),
     Setup("CAPITULACION", "Capitulación con miedo extremo", ("crypto", "us", "bmv"), (90, 30), 30, "E4", 0.4,
-          {"us": 1.0, "crypto": 0.7, "bmv": 0.8}, ["C12-013", "C09-018", "C13-014", "C12-007"],
+          {"us": 1.0, "crypto": 0.7, "bmv": 0.8}, ["C12-013", "C09-018", "C13-014:crypto", "C12-007"],
           "Sobrerreacción a narrativas: perdedores extremos tienden a revertir a meses/años (De Bondt y Thaler, 1985) "
           "[E4]; el IPC cayó −24% a −27% en 1995, 2008 y 2020 y se recuperó en 6–12 meses [E5].",
           "Que la caída terminó: los pisos de choques sistémicos (Lehman) tardan años; el modelo no fecha el piso.",
           "Revisar si es choque financiero sistémico (solvencia) o de sentimiento; liquidez y deuda del emisor."),
     Setup("CHOQUE_POLITICO", "Reversión tras choque político/comercial", ("crypto", "us", "bmv"), (30, 7), 10,
-          "E4", 0.6, {"us": 1.0, "crypto": 0.7, "bmv": 0.8}, ["C13-016", "C12-007", "C13-014", "C12-006"],
+          "E4", 0.6, {"us": 1.0, "crypto": 0.7, "bmv": 0.8}, ["C13-016", "C12-007", "C13-014:crypto", "C12-006"],
           "En choques no financieros la mediana de recuperación del índice va de días a ~2 meses; el mercado "
           "sobrerreacciona y revierte salvo cambio estructural (síntesis de 10 hitos, C13-016) [E4]; aranceles "
           "detonaron las mayores liquidaciones cripto (C13-014) [E7].",
