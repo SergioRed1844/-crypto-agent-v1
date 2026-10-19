@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-19T22:15:27+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-19
+Última corrida: **2026-10-19T23:14:31+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-19
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -108,7 +108,7 @@ Todavía ninguna.
 | LTC | sí | 2026-10-19 | binance |
 | META | sí | 2026-10-19 | yahoo |
 | MSFT | sí | 2026-10-19 | yahoo |
-| MXN=X | sí | 2026-10-19 | yahoo |
+| MXN=X | sí | 2026-10-20 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-10-19 | yahoo |
 | NVDA | sí | 2026-10-19 | yahoo |
 | OMAB.MX | sí | 2026-10-19 | yahoo |
@@ -134,7 +134,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-19 | binance |
 | ^MXX | sí | 2026-10-19 | yahoo |
 | ^VIX | sí | 2026-10-19 | yahoo |
-| contexto_v42 | sí | 2026-10-19T21:20:24Z | CAUTION |
+| contexto_v42 | sí | 2026-10-19T22:37:03Z | CAUTION |
 | fear_greed | sí | 2026-10-19 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-18 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-18 | wikimedia |
