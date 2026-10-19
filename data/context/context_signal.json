@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T11:24:32Z",
+ "generated_utc": "2026-10-19T12:23:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.366,
- "event_risk": 0.477,
+ "bias": -0.365,
+ "event_risk": 0.482,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,12 +35,12 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.273,
+   "riesgo": 0.28,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   }
  ],
  "recent": [
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.503,
+   "aporte": 0.502,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.424,
+   "aporte": -0.423,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.259,
+   "aporte": -0.258,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -104,16 +104,16 @@
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.195,
+   "aporte": 0.194,
    "fuente": "noticia"
   },
   {
-   "id": "news-boj-chief-says-underlying-inflation-quite-close-to-2026-10-19",
+   "id": "news-gold-silver-prices-rise-as-traders-pare-bets-on-oc-2026-10-19",
    "date": "2026-10-19",
-   "title_es": "Gobernador del Banco de Japón señala inflación subyacente cercana a meta",
+   "title_es": "Mercado reduce apuestas de subida de tasas de la Fed para octubre",
    "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.18,
+   "stance": "pro",
+   "aporte": 0.179,
    "fuente": "noticia"
   }
  ],
