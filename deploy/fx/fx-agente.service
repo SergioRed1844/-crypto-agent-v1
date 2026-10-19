@@ -1,0 +1,22 @@
+[Unit]
+Description=fx-agente motor + webhook (OANDA v20)
+After=network-online.target chrony.service
+Wants=network-online.target
+
+[Service]
+User=fxagent
+WorkingDirectory=/opt/fx-agente
+EnvironmentFile=/etc/fx-agente.env
+ExecStart=/opt/fx-agente/.venv/bin/python -m fx run
+Restart=always
+RestartSec=3
+Nice=-5
+# Endurecimiento
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/fx-agente /opt/fx-agente/data
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

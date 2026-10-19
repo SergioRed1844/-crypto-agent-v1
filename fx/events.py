@@ -100,21 +100,29 @@ def robust_scale(x: np.ndarray) -> float:
     return float(1.4826 * np.median(np.abs(x))) if len(x) else float("nan")
 
 
-def _sigma_h(b: Bars, i0: int, i15: int, t0: int, hold: int) -> float | None:
-    """σ (log) esperada de T+15 a T+15+hold: base previa + exceso del evento con decaimiento exponencial."""
-    lo = _first_ge(b.t, t0 - 60)
-    pre = b.mid_c(np.arange(lo, i0 + 1))
-    post_lo = _first_ge(b.t, t0 + 5)
-    post = b.mid_c(np.arange(max(post_lo - 1, 0), i15 + 1))
-    if len(pre) < 20 or len(post) < 5:
+def sigma_h_from(pre_mids: np.ndarray, post_mids: np.ndarray, hold: int) -> float | None:
+    """σ (log) esperada de T+15 a T+15+hold a partir de mids de 1 minuto: ``pre`` = T−60..T0, ``post`` =
+    T+4..T+15. Varianza base previa + exceso del evento que decae con vida media HALF_LIFE_MIN (kernel F14-005)."""
+    if len(pre_mids) < 20 or len(post_mids) < 5:
         return None
-    s_base2 = float(np.var(np.diff(np.log(pre))))
-    s_post2 = float(np.var(np.diff(np.log(post))))
+    s_base2 = float(np.var(np.diff(np.log(pre_mids))))
+    s_post2 = float(np.var(np.diff(np.log(post_mids))))
     k = math.log(2) / HALF_LIFE_MIN
     excess = max(s_post2 - s_base2, 0.0) / math.exp(-k * 10)
     lag = C.ENTRY_LAG_MIN
     var = hold * s_base2 + excess / k * (math.exp(-k * lag) - math.exp(-k * (lag + hold)))
     return math.sqrt(max(var, 0.0))
+
+
+def stop_distance(sigma_h: float, mid: float, spread: float, pair: C.Pair) -> float:
+    """1.5·σ_h en precio, con piso de 3× el spread y 6 pips (60 en emergentes)."""
+    return max(C.STOP_SIGMA * sigma_h * mid, 3 * spread, (60 if pair.em else 6) * pair.pip)
+
+
+def _sigma_h(b: Bars, i0: int, i15: int, t0: int, hold: int) -> float | None:
+    lo = _first_ge(b.t, t0 - 60)
+    post_lo = _first_ge(b.t, t0 + 5)
+    return sigma_h_from(b.mid_c(np.arange(lo, i0 + 1)), b.mid_c(np.arange(max(post_lo - 1, 0), i15 + 1)), hold)
 
 
 def avoid_round(stop: float, side: int, pip: float, entry: float) -> float:
@@ -183,9 +191,7 @@ def build(b: Bars, slot: C.Slot, z_min: float | None = None, holds=C.HOLD_GRID, 
             sh = _sigma_h(b, i0, i15, t0, hold)
             if sh is None:
                 continue
-            mid = (b.ao[ie] + b.bo[ie]) / 2
-            floor = max(3 * ev.spread, (60 if pair.em else 6) * pair.pip)
-            stop_dist = max(C.STOP_SIGMA * sh * mid, floor)
+            stop_dist = stop_distance(sh, (b.ao[ie] + b.bo[ie]) / 2, ev.spread, pair)
             exit_m = min(entry_m + hold, cut)
             if exit_m <= entry_m:
                 continue

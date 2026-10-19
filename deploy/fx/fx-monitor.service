@@ -1,0 +1,20 @@
+[Unit]
+Description=fx-agente monitor independiente y kill-switch
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=fxagent
+WorkingDirectory=/opt/fx-agente
+EnvironmentFile=/etc/fx-agente.env
+ExecStart=/opt/fx-agente/.venv/bin/python -m fx monitor
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/fx-agente
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

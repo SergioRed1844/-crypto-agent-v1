@@ -168,7 +168,7 @@ def download_year(sym: str, year: int, out_dir: str, workers: int = 8, until: da
             except Exception as e:
                 fails.append(f"{d}: {e}")
     b = concat(parts)
-    stats = {"sym": sym, "year": year, "days_requested": len(ds), "days_failed": len(fails), "fails": fails[:20],
+    stats = {"sym": sym, "year": year, "days_requested": len(ds), "days_failed": len(fails), "fails": fails[:400],
              "minutes": int(len(b["t"])), "scale": check_scale(sym, b),
              "first_utc": _ts(b["t"][0]) if len(b["t"]) else None,
              "last_utc": _ts(b["t"][-1]) if len(b["t"]) else None}
@@ -179,6 +179,56 @@ def download_year(sym: str, year: int, out_dir: str, workers: int = 8, until: da
     with open(os.path.join(out_dir, f"{sym}_{year}.json"), "w") as fh:
         json.dump(stats, fh, indent=1)
     return stats
+
+
+def repair(sym: str, year: int, bars_dir: str, out_dir: str, workers: int = 3, until: date | None = None) -> dict:
+    """Vuelve a pedir los días hábiles que faltan en el archivo de un par-año (fallas por saturación del servidor)
+    y fusiona. Los festivos devuelven archivo vacío y simplemente siguen faltando."""
+    path = os.path.join(bars_dir, f"{sym}_{year}.npz.xz")
+    have = decode(open(path, "rb").read()) if os.path.exists(path) else concat([])
+    present = _dates(have["t"])
+    want = [d for d in days(year, until) if d.weekday() < 5 and d not in present and (d.month, d.day) not in
+            ((12, 25), (1, 1))]
+    fails, parts = [], [have]
+    with _client() as cl, ThreadPoolExecutor(workers) as ex:
+        futs = {ex.submit(fetch_day, cl, sym, d): d for d in want}
+        for f, d in futs.items():
+            try:
+                parts.append(f.result())
+            except Exception as e:
+                fails.append(f"{d}: {e}")
+    b = concat(parts)
+    os.makedirs(out_dir, exist_ok=True)
+    blob = encode(b)
+    with open(os.path.join(out_dir, f"{sym}_{year}.npz.xz"), "wb") as fh:
+        fh.write(blob)
+    stats = {"sym": sym, "year": year, "repaired_days": len(want) - len(fails), "days_requested": len(want),
+             "days_failed": len(fails), "fails": fails[:400], "minutes": int(len(b["t"])), "scale": check_scale(sym, b),
+             "first_utc": _ts(b["t"][0]) if len(b["t"]) else None, "last_utc": _ts(b["t"][-1]) if len(b["t"]) else None,
+             "bytes": len(blob)}
+    with open(os.path.join(out_dir, f"{sym}_{year}.json"), "w") as fh:
+        json.dump(stats, fh, indent=1)
+    return stats
+
+
+def _dates(t) -> set:
+    e = date(1970, 1, 1)
+    return {e + timedelta(days=int(k)) for k in np.unique(np.asarray(t, dtype=np.int64) // 1440)}
+
+
+def coverage(bars_dir: str) -> list[dict]:
+    """Días hábiles con datos por par-año (para el manifiesto y para decidir si hace falta reparar)."""
+    out = []
+    for f in sorted(os.listdir(bars_dir)):
+        if not f.endswith(".npz.xz"):
+            continue
+        sym, y = f[:-7].split("_")
+        b = decode(open(os.path.join(bars_dir, f), "rb").read())
+        ds = _dates(b["t"])
+        wk = [d for d in days(int(y), date.today() - timedelta(days=1)) if d.weekday() < 5]
+        out.append({"sym": sym, "year": int(y), "weekdays": len(wk), "with_data": sum(d in ds for d in wk),
+                    "minutes": int(len(b["t"]))})
+    return out
 
 
 def _ts(m) -> str:
@@ -233,4 +283,14 @@ if __name__ == "__main__":
         st = download_year(sym, year, out, until=until)
         print(json.dumps(st))
         sys.exit(0 if st["scale"]["ok"] and st["days_failed"] <= max(3, st["days_requested"] // 50) else 1)
+    if cmd == "repair":
+        sym, year, src, out = sys.argv[2], int(sys.argv[3]), sys.argv[4], sys.argv[5]
+        st = repair(sym, year, src, out, until=date.today() - timedelta(days=1))
+        print(json.dumps({k: v for k, v in st.items() if k != "fails"}))
+        sys.exit(0)
+    if cmd == "coverage":
+        rows = coverage(sys.argv[2])
+        for r in rows:
+            print(f"{r['sym']} {r['year']}: {r['with_data']}/{r['weekdays']} días hábiles, {r['minutes']} min")
+        sys.exit(0)
     raise SystemExit(f"comando desconocido: {cmd}")

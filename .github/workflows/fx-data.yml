@@ -12,6 +12,7 @@ on:
     branches: [fx-agente]
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: fx-data
   cancel-in-progress: false
@@ -59,29 +60,69 @@ jobs:
           retention-days: 3
           if-no-files-found: ignore
 
-  collect:
-    needs: bars
-    if: always() && needs.bars.result != 'skipped'
+  repair:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[fx-repair]')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        sym: [EURUSD, GBPUSD, USDJPY, USDCHF, USDMXN]
+        year: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - name: Bajar lo que ya hay en fx-data
+        run: |
+          mkdir -p src
+          git fetch -q --depth 1 origin fx-data && \
+            git show FETCH_HEAD:bars/${{ matrix.sym }}_${{ matrix.year }}.npz.xz > src/${{ matrix.sym }}_${{ matrix.year }}.npz.xz || rm -f src/*
+      - run: python -m fx.data_dukascopy repair ${{ matrix.sym }} ${{ matrix.year }} src out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bars-${{ matrix.sym }}-${{ matrix.year }}
+          path: out/
+          retention-days: 3
+
+  collect:
+    needs: [bars, repair]
+    if: always() && (needs.bars.result != 'skipped' || needs.repair.result != 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q numpy httpx
+      - name: Partir de lo publicado
+        run: |
+          mkdir -p out/bars
+          if git fetch -q --depth 1 origin fx-data; then
+            git archive FETCH_HEAD bars | tar -x -C out 2>/dev/null || true
+          fi
       - uses: actions/download-artifact@v4
         with:
           pattern: bars-*
           merge-multiple: true
           path: out/bars
-      - name: Manifiesto
+      - name: Manifiesto y cobertura
         run: |
           python - <<'EOF'
-          import json, glob, os
+          import json, glob
           rows = [json.load(open(p)) for p in sorted(glob.glob("out/bars/*.json"))]
           json.dump(rows, open("out/MANIFEST.json", "w"), indent=1)
-          bad = [r for r in rows if not r["scale"]["ok"] or r["days_failed"] > max(3, r["days_requested"] // 50)]
-          print(len(rows), "archivos;", len(bad), "con problemas")
+          bad = [r for r in rows if not r["scale"]["ok"] or r["days_failed"] > 0]
+          print(len(rows), "archivos;", len(bad), "con días fallidos o escala mala")
           for r in bad: print(r["sym"], r["year"], r["scale"], r["days_failed"], r["fails"][:3])
           EOF
+          python -m fx.data_dukascopy coverage out/bars | tee out/COVERAGE.txt
       - name: Publicar en fx-data
         env: { TOKEN: "${{ github.token }}" }
         run: |
           bash .github/scripts/fx_store_push.sh out "fx-data - velas $(date -u +%FT%TZ)"
+      - name: Recalcular backtest y modelo
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh workflow run fx-backtest.yml --ref fx-agente -R "$GITHUB_REPOSITORY" || echo "no se pudo despachar"

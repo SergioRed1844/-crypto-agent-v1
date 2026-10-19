@@ -1,0 +1,73 @@
+// FX Agente (agente 3) — reacción de 15 minutos a los datos macro, en la gráfica.
+// Úsalo en gráfica de 1 minuto con el feed de OANDA (OANDA:EURUSD, OANDA:USDJPY, OANDA:GBPUSD, OANDA:USDCHF,
+// OANDA:USDMXN). Calcula lo mismo que el motor: z = ln(P[T+15]/P[T0]) / (1.4826·mediana|r| de los días previos).
+// Es la capa visual y de telemetría: la alerta manda action=SIGNAL al webhook, que SOLO la registra para comparar
+// con el motor. El motor decide con su propio reloj y el stream de OANDA (TradingView tiene timeout de 3 s y no
+// garantiza la entrega). Para apagar todo desde TradingView crea otra alerta con el mensaje
+//   {"secret":"<tu secreto>","action":"FLATTEN","id":"{{timenow}}"}
+// Diseño de investigación, no recomendación de inversión.
+//@version=6
+indicator("FX Agente — slots macro (z de 15 min)", shorttitle="FX-Agente", overlay=true, max_labels_count=300)
+
+zMin = input.float(2.0, "z mínimo para marcar", step=0.5)
+win = input.int(250, "Días para la escala del slot", minval=60, maxval=1000)
+minObs = input.int(120, "Días mínimos antes de marcar", minval=30)
+on0830 = input.bool(true, "08:30 Nueva York (NFP, IPC, ventas, PIB)")
+on1000 = input.bool(true, "10:00 Nueva York (ISM, JOLTS)")
+on1400 = input.bool(true, "14:00 Nueva York (FOMC)")
+onMX = input.bool(true, "13:00 Ciudad de México (Banxico)")
+secret = input.string("", "Secreto del webhook (FX_WEBHOOK_SECRET)")
+showBg = input.bool(true, "Sombrear ventana T0 → T+15")
+
+type Slot
+    string name
+    string tz
+    int t0
+    bool on
+    float p0
+    array<float> hist
+
+var array<Slot> slots = array.from(
+     Slot.new("US_0830", "America/New_York", 8 * 60 + 30, on0830, na, array.new<float>()),
+     Slot.new("US_1000", "America/New_York", 10 * 60, on1000, na, array.new<float>()),
+     Slot.new("US_1400", "America/New_York", 14 * 60, on1400, na, array.new<float>()),
+     Slot.new("MX_1300", "America/Mexico_City", 13 * 60, onMX, na, array.new<float>()))
+
+var label warn = na
+if barstate.islast and (not timeframe.isintraday or timeframe.multiplier != 1) and na(warn)
+    warn := label.new(bar_index, high, "FX-Agente: usa gráfica de 1 minuto", color=color.orange,
+         textcolor=color.white, style=label.style_label_down)
+
+bool inWindow = false
+for s in slots
+    if s.on
+        int mod = hour(time, s.tz) * 60 + minute(time, s.tz)
+        bool weekday = dayofweek(time, s.tz) >= dayofweek.monday and dayofweek(time, s.tz) <= dayofweek.friday
+        if weekday and mod >= s.t0 and mod < s.t0 + 15
+            inWindow := true
+        if weekday and mod == s.t0 - 1 and barstate.isconfirmed
+            s.p0 := close
+        if weekday and mod == s.t0 + 14 and barstate.isconfirmed and not na(s.p0)
+            float r = math.log(close / s.p0)
+            float sig = s.hist.size() >= minObs ? 1.4826 * s.hist.median() : na
+            s.hist.push(math.abs(r))
+            if s.hist.size() > win
+                s.hist.shift()
+            s.p0 := na
+            if not na(sig) and sig > 0
+                float z = r / sig
+                if math.abs(z) >= zMin
+                    color c = z > 0 ? color.new(color.teal, 0) : color.new(color.red, 0)
+                    label.new(bar_index, z > 0 ? high : low, s.name + "\nz=" + str.tostring(z, "#.##"),
+                         color=c, textcolor=color.white,
+                         style=z > 0 ? label.style_label_down : label.style_label_up, size=size.small)
+                    string msg = "{\"secret\":\"" + secret + "\",\"action\":\"SIGNAL\",\"id\":\"" +
+                         syminfo.ticker + "-" + s.name + "-" + str.tostring(time) + "\",\"sym\":\"" +
+                         syminfo.ticker + "\",\"slot\":\"" + s.name + "\",\"z\":" + str.tostring(z, "#.####") +
+                         ",\"ret15\":" + str.tostring(r, "#.########") + ",\"bar_close\":" +
+                         str.tostring(time_close) + "}"
+                    alert(msg, alert.freq_once_per_bar_close)
+        else if weekday and mod > s.t0 + 14 and mod < s.t0 + 20
+            s.p0 := na
+
+bgcolor(showBg and inWindow ? color.new(color.yellow, 85) : na, title="Ventana T0→T+15")
