@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-19T11:12:39Z",
+ "updated_utc": "2026-10-19T11:24:32Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -3999,6 +3999,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T03:30:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "HARDWARE_SECURITY",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
+   "source_url": "https://www.thestar.com.my/tech/tech-news/2026/10/19/the-crypto-devices-built-to-foil-hackers-came-with-spies-inside",
+   "source_title": "thestar.com.my",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-the-crypto-devices-built-to-foil-hackers-came-with-2026-10-19",
+   "date": "2026-10-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-19T05:30:00Z"
   },
   {
    "category": "MONETARY_POLICY",

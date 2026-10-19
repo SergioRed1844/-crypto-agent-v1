@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-19T11:12:39Z",
+ "generated_utc": "2026-10-19T11:24:32Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.356,
- "event_risk": 0.475,
+ "bias": -0.366,
+ "event_risk": 0.477,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.37"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.271,
+   "riesgo": 0.273,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -63,12 +63,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-the-crypto-devices-built-to-foil-hackers-came-with-2026-10-19",
+   "date": "2026-10-19",
+   "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.29,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-bitcoin-price-holds-above-81k-as-etf-outflows-rais-2026-10-17",
    "date": "2026-10-17",
    "title_es": "Bitcoin resiste sobre 81k mientras las salidas de ETF generan dudas",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -90,15 +99,6 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-cryptohack-roundup-ledger-halts-sales-amid-86m-the-2026-10-15",
-   "date": "2026-10-15",
-   "title_es": "Ledger suspende ventas tras investigación por robo de 86 millones de dólares",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.203,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-zcash-jumped-8-after-its-etfs-took-in-money-for-th-2026-10-16",
    "date": "2026-10-16",
    "title_es": "Zcash sube 8% tras entradas netas en sus ETF por primera vez desde septiembre",
@@ -108,12 +108,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-gold-silver-prices-rise-as-traders-pare-bets-on-oc-2026-10-19",
+   "id": "news-boj-chief-says-underlying-inflation-quite-close-to-2026-10-19",
    "date": "2026-10-19",
-   "title_es": "Mercado reduce apuestas de subida de tasas de la Fed para octubre",
+   "title_es": "Gobernador del Banco de Japón señala inflación subyacente cercana a meta",
    "category": "MONETARY_POLICY",
-   "stance": "pro",
-   "aporte": 0.181,
+   "stance": "anti",
+   "aporte": -0.18,
    "fuente": "noticia"
   }
  ],
