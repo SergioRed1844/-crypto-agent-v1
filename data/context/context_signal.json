@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-19T01:33:22Z",
+ "generated_utc": "2026-10-19T01:37:13Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.367,
- "event_risk": 0.41,
+ "event_risk": 0.411,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -35,7 +35,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.181,
+   "riesgo": 0.182,
    "ventana": [
     "2026-10-19T12:00:00Z",
     "2026-10-21T06:00:00Z"
@@ -113,7 +113,7 @@
    "title_es": "Perspectivas del dólar tras choque inflacionario que afecta a tecnología y petróleo",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   }
  ],
