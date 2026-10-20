@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T08:06:21Z",
+ "updated_utc": "2026-10-20T09:05:23Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4461,6 +4461,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-20T04:00:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "CFTC",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
+   "source_url": "https://www.mondaq.com:443/unitedstates/commoditiesderivativesstock-exchanges/1856716/cftc-seeks-comment-on-a-tailored-federal-framework-for-retail-crypto-trading",
+   "source_title": "mondaq.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-cftc-seeks-comment-on-a-tailored-federal-framework-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T07:45:00Z"
   }
  ]
 }
