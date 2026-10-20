@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T13:01:55Z",
+ "generated_utc": "2026-10-20T13:06:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -72,7 +72,7 @@
    "title_es": "Rendimiento del bono estadounidense a 10 años sube al 5,15 %",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.276,
+   "aporte": -0.275,
    "fuente": "noticia"
   },
   {

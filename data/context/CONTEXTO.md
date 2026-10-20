@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-20T13:01:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-20T13:06:50Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -16,7 +16,7 @@ Actualizado 2026-10-20T13:01:55Z UTC. Se recalcula cada hora; el calendario y lo
 | Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.393 |
 | CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.306 |
 | Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.278 |
-| Rendimiento del bono estadounidense a 10 años sube al 5,15 % | 2026-10-20 | anti | -0.276 |
+| Rendimiento del bono estadounidense a 10 años sube al 5,15 % | 2026-10-20 | anti | -0.275 |
 | Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persist | 2026-10-20 | anti | -0.258 |
 | Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.249 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.237 |
@@ -28,27 +28,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-20T13:01:55Z",
+ "inicio": "2026-10-20T13:06:50Z",
  "onchain": {
   "scanned": [
-   972318,
-   972325
+   972326,
+   972330
   ],
-  "calls": 96,
+  "calls": 52,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 40,
-  "eventos": 6,
-  "urgentes": 3,
+  "titulares": 0,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
-  "agregados": 1
+  "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
