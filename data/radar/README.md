@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-20T21:54:31+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-20
+Última corrida: **2026-10-20T22:53:35+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-20
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -19,9 +19,9 @@ Todavía ninguna.
 | Setup | Clase | H | Episodios | Crudo | Día cualquiera | Encogido | B (hacia 'sin ventaja') | Neto exceso |
 |---|---|---|---|---|---|---|---|---|
 | Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 61% | +0.2% |
-| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.3% |
+| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.4% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 74% | -0.0% |
-| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.2% |
+| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.3% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.5% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.4% |
 | Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
@@ -52,8 +52,8 @@ Todavía ninguna.
 | Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 66% | +0.2% |
 | Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 66% | +0.1% |
 | Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 75% | -0.2% |
-| Pánico sin daño real | crypto | 30 d | 19 | 26% | 44% | 40% | 82% | -0.8% |
-| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
+| Pánico sin daño real | crypto | 30 d | 19 | 26% | 44% | 40% | 82% | -0.9% |
+| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.5% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 35% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.1% |
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-20 | binance |
 | ^MXX | sí | 2026-10-20 | yahoo |
 | ^VIX | sí | 2026-10-20 | yahoo |
-| contexto_v42 | sí | 2026-10-20T20:57:38Z | RISK_OFF |
+| contexto_v42 | sí | 2026-10-20T21:54:14Z | RISK_OFF |
 | fear_greed | sí | 2026-10-20 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-19 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-19 | wikimedia |
