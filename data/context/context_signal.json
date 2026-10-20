@@ -1,33 +1,19 @@
 {
- "generated_utc": "2026-10-20T05:13:13Z",
+ "generated_utc": "2026-10-20T06:08:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.365,
- "event_risk": 0.482,
+ "bias": -0.372,
+ "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.37"
  ],
  "upcoming": [
-  {
-   "id": "us-genius-treasury-nprm-comments-2026-10-19",
-   "utc": "2026-10-19T12:00:00Z",
-   "title_es": "GENIUS Act: cierra el periodo de comentarios de la propuesta del Tesoro (18-ago-2026) sobre oferta/venta de stablecoins con nexo EE.UU. y emisores extranjeros",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.28,
-   "riesgo": 0.28,
-   "ventana": [
-    "2026-10-18T12:00:00Z",
-    "2026-10-20T06:00:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "us-sec-reg-crypto-assets-comments-2026-10-20",
    "utc": "2026-10-20T12:00:00Z",
@@ -50,7 +36,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.477,
+   "aporte": 0.476,
    "fuente": "noticia"
   },
   {
@@ -59,7 +45,16 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.402,
+   "aporte": -0.401,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-gold-reverses-early-gains-as-u-s-10-year-treasury-2026-10-20",
+   "date": "2026-10-20",
+   "title_es": "Rendimiento del bono estadounidense a 10 años sube al 5,15 %",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.319,
    "fuente": "noticia"
   },
   {
@@ -68,16 +63,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.287,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-10-year-treasury-yield-falls-15-basis-points-as-na-2026-10-19",
-   "date": "2026-10-19",
-   "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.286,
    "fuente": "noticia"
   },
   {
@@ -86,7 +72,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -95,7 +81,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -104,7 +90,7 @@
    "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.224,
    "fuente": "noticia"
   },
   {
