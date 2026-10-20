@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T20:57:38Z",
+ "updated_utc": "2026-10-20T21:54:14Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4747,6 +4747,27 @@
    "confidence": 0.8,
    "origin": "gemini/GDELT",
    "id": "news-shock-and-awe-from-gentiloni-approaching-the-bigge-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T16:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "TREASURY_FLOWS",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Inversores extranjeros vuelcan 1 billón en bolsa de EE.UU. pero compras de bonos del Tesoro caen 59%",
+   "source_url": "https://247wallst.com/investing/2026/10/20/foreign-investors-poured-1-trillion-into-u-s-stocks-but-a-59-drop-in-treasury-buying-could-make-your-next-home-or-car-loan-more-expensive/",
+   "source_title": "247wallst.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-foreign-investors-poured-1-trillion-into-u-s-stock-2026-10-20",
    "date": "2026-10-20",
    "status": "happened",
    "scheduled": false,
