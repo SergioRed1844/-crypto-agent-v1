@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T01:19:07Z",
+ "generated_utc": "2026-10-20T02:11:43Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -11,7 +11,7 @@
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.37"
+  "Precaución: sesgo -0.36"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.483,
+   "aporte": 0.481,
    "fuente": "noticia"
   },
   {
@@ -59,16 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.407,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-10-year-treasury-yield-falls-15-basis-points-as-na-2026-10-19",
-   "date": "2026-10-19",
-   "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.293,
+   "aporte": -0.406,
    "fuente": "noticia"
   },
   {
@@ -77,7 +68,16 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.292,
+   "aporte": -0.291,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-10-year-treasury-yield-falls-15-basis-points-as-na-2026-10-19",
+   "date": "2026-10-19",
+   "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -86,16 +86,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.267,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-btc-asian-equities-nasdaq-futures-rise-aft-2026-10-19",
-   "date": "2026-10-19",
-   "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.247,
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -108,12 +99,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-bitcoin-btc-asian-equities-nasdaq-futures-rise-aft-2026-10-19",
+   "date": "2026-10-19",
+   "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.243,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-ethereum-led-nearly-1-billion-in-crypto-liquidatio-2026-10-16",
    "date": "2026-10-16",
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.219,
+   "aporte": -0.218,
    "fuente": "noticia"
   }
  ],
