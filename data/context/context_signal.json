@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T22:53:18Z",
+ "generated_utc": "2026-10-20T23:52:22Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.5,
+   "aporte": -0.499,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.453,
+   "aporte": 0.451,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.308,
+   "aporte": 0.307,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.297,
+   "aporte": 0.296,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.274,
+   "aporte": 0.268,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.236,
    "fuente": "noticia"
   }
  ],
@@ -133,6 +133,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.06
+  "stablecoins_30d_pct": 0.07
  }
 }
