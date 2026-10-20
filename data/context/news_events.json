@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T12:06:50Z",
+ "updated_utc": "2026-10-20T13:01:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4587,6 +4587,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-20T11:45:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "IR",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Irán señala preferencia por la diplomacia ante alza continuada del crudo",
+   "source_url": "https://www.chinatechnews.com/2026/10/20/131113-irans-foreign-ministry-suggested-that-the-country-favous-diplomacy-though-crude-benchmarks-continued-to-move-higher-gbp-gains-post-jobs-data-newsquawk-us-market-open",
+   "source_title": "chinatechnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-iran-foreign-ministry-suggested-that-the-country-f-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T12:00:00Z"
   }
  ]
 }
