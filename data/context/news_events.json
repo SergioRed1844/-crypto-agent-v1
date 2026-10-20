@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T13:06:50Z",
+ "updated_utc": "2026-10-20T14:01:10Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4608,6 +4608,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-20T12:00:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
+   "source_url": "https://www.coindesk.com/business/2026/10/20/bitcoin-etfs-just-saw-their-biggest-day-in-a-month-thanks-entirely-to-blackrock",
+   "source_title": "coindesk.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-etfs-just-saw-their-biggest-day-in-a-month-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T12:00:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "DE",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Tasas hipotecarias alemanas suben al nivel más alto desde 2009 por guerra con Irán",
+   "source_url": "https://www.euronews.com/2026/10/20/german-mortgage-rates-climb-to-highest-since-2009-as-iran-war-stokes-inflation-fears",
+   "source_title": "euronews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-german-mortgage-rates-climb-to-highest-since-2009-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T12:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Se espera otra subida de tasas de la Fed antes de finales de 2026",
+   "source_url": "https://www.fool.com/investing/2026/10/20/another-rate-hike-is-expected-before-the-end-of-2026-why-it-might-have-a-much-bigger-impact-on-the-markets-this-time/",
+   "source_title": "fool.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-another-rate-hike-is-expected-before-the-end-of-20-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T13:30:00Z"
   }
  ]
 }
