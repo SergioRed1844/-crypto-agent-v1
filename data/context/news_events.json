@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T03:10:48Z",
+ "updated_utc": "2026-10-20T04:09:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4335,6 +4335,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-19T20:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Fed",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación por auge de IA plantea dilema de subidas de tasas a la Fed",
+   "source_url": "https://en.shafaqna.com/486190/ai-boom-inflation-fed-rate-hike-dilemma/",
+   "source_title": "en.shafaqna.com",
+   "confidence": 0.7,
+   "origin": "gemini/GDELT",
+   "id": "news-ai-boom-inflation-fed-faces-a-rate-hike-dilemma-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T03:45:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "Tokenization",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "La Fed advierte sobre retos de financiamiento por depósitos tokenizados",
+   "source_url": "https://www.pymnts.com/news/banking/2026/kansas-city-fed-flags-funding-challenges-from-tokenized-deposits/",
+   "source_title": "pymnts.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-pymnts-fed-flags-funding-challenges-from-tokenized-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T03:45:00Z"
   }
  ]
 }

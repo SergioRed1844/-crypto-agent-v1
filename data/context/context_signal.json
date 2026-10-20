@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-20T03:10:48Z",
+ "generated_utc": "2026-10-20T04:09:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.364,
+ "bias": -0.365,
  "event_risk": 0.482,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.37"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.48,
+   "aporte": 0.479,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.404,
+   "aporte": -0.403,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.289,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.277,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.264,
+   "aporte": -0.263,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.238,
+   "aporte": 0.233,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.218,
+   "aporte": -0.217,
    "fuente": "noticia"
   }
  ],
