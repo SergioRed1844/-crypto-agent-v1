@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T14:02:06Z",
+ "updated_utc": "2026-10-20T15:00:43Z",
  "alerts": [
   {
    "id": "P2PK_FLOOD-bloque-971472",
@@ -14,6 +14,23 @@
    "detail_es": "Bloque 971472 con más de 40 gastos P2PK: posible movimiento masivo de monedas antiguas (no se fecharon todos).",
    "url": "https://mempool.space/tx/bloque-971472",
    "action": "CAUTION"
+  },
+  {
+   "id": "DORMANT_WHALE-eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
+   "type": "DORMANT_WHALE",
+   "severity": "alta",
+   "txid": "eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
+   "block_height": 972341,
+   "block_time_utc": "2026-10-20T14:16:35Z",
+   "detected_utc": "2026-10-20T15:00:39Z",
+   "btc_moved": 500.0,
+   "max_age_years": 10.74,
+   "btc_aged_5y": 500.0,
+   "btc_aged_10y": 500.0,
+   "n_inputs": 1,
+   "detail_es": "Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años.",
+   "url": "https://mempool.space/tx/eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
+   "action": "RISK_OFF_BLOCK"
   }
  ]
 }
