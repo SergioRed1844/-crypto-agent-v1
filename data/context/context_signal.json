@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-20T17:03:55Z",
+ "generated_utc": "2026-10-20T17:29:44Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.342,
+ "bias": -0.341,
  "event_risk": 0.28,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -36,7 +36,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.461,
+   "aporte": 0.46,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.283,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.249,
    "fuente": "noticia"
   },
   {
