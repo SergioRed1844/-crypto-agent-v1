@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-20T01:15:54Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-20T01:19:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.36 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
 
@@ -15,7 +15,7 @@ Actualizado 2026-10-20T01:15:54Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.483 |
 | Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.407 |
-| Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5% | 2026-10-19 | anti | -0.294 |
+| Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5% | 2026-10-19 | anti | -0.293 |
 | Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.292 |
 | Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.267 |
 | Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.247 |
@@ -29,7 +29,7 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-20T01:15:54Z",
+ "inicio": "2026-10-20T01:19:07Z",
  "onchain": {
   "scanned": null,
   "calls": 1,
@@ -38,15 +38,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 7,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2

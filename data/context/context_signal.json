@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T01:15:54Z",
+ "generated_utc": "2026-10-20T01:19:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -68,7 +68,7 @@
    "title_es": "Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.294,
+   "aporte": -0.293,
    "fuente": "noticia"
   },
   {
