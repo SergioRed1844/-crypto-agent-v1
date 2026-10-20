@@ -43,13 +43,14 @@
   "2026-10-19T21:17:02+00:00",
   "2026-10-19T21:44:31+00:00",
   "2026-10-19T22:15:27+00:00",
-  "2026-10-19T23:14:31+00:00"
+  "2026-10-19T23:14:31+00:00",
+  "2026-10-20T00:13:33+00:00"
  ],
- "last_scan_utc": "2026-10-19T23:14:31+00:00",
+ "last_scan_utc": "2026-10-20T00:13:33+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "AC.MX": {
@@ -59,7 +60,7 @@
   },
   "ADA": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "ALSEA.MX": {
@@ -74,7 +75,7 @@
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "ASURB.MX": {
@@ -84,7 +85,7 @@
   },
   "AVAX": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "BBAJIOO.MX": {
@@ -94,7 +95,7 @@
   },
   "BCH": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "BIMBOA.MX": {
@@ -104,7 +105,7 @@
   },
   "BTC": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "CEMEXCPO.MX": {
@@ -114,22 +115,22 @@
   },
   "DIA": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "DOGE": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "DOT": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "ETH": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "FEMSAUBD.MX": {
@@ -149,7 +150,7 @@
   },
   "GLD": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "GMEXICOB.MX": {
@@ -159,7 +160,7 @@
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "GRUMAB.MX": {
@@ -169,12 +170,12 @@
   },
   "IWM": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "KIMBERA.MX": {
@@ -189,7 +190,7 @@
   },
   "LINK": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "LIVEPOLC-1.MX": {
@@ -199,17 +200,17 @@
   },
   "LTC": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "META": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "MXN=X": {
@@ -224,7 +225,7 @@
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "OMAB.MX": {
@@ -244,32 +245,32 @@
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "SOL": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "SPY": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "TRX": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "WALMEX.MX": {
@@ -279,57 +280,57 @@
   },
   "WMT": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-16",
    "nota": "yahoo"
   },
   "XRP": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "binance"
   },
   "^MXX": {
@@ -344,7 +345,7 @@
   },
   "fear_greed": {
    "ok": true,
-   "last": "2026-10-19",
+   "last": "2026-10-20",
    "nota": "alternative.me"
   },
   "wiki_en_Recession": {
@@ -434,29 +435,12 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-19T22:37:03Z",
+   "last": "2026-10-19T23:14:20Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
  "last_candidates": [
-  {
-   "sym": "AVAX",
-   "cls": "crypto",
-   "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-10-17",
-   "level": "VIGILANCIA",
-   "why": [
-    "contexto v4.2 en CAUTION: exigencia +5 pp",
-    "la ventaja no es creíble: cota baja 37% vs día cualquiera 44%",
-    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +2.1 pp < 5 pp"
-   ],
-   "p": 0.415,
-   "base": 0.394,
-   "ret": 0.008,
-   "h": 7
-  },
   {
    "sym": "QQQ",
    "cls": "us",
@@ -469,7 +453,22 @@
    ],
    "p": 0.324,
    "base": 0.286,
-   "ret": 0.0027,
+   "ret": 0.0028,
+   "h": 7
+  },
+  {
+   "sym": "NVDA",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-10-15",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+   ],
+   "p": 0.453,
+   "base": 0.411,
+   "ret": 0.0073,
    "h": 7
   },
   {
@@ -480,11 +479,11 @@
    "level": "VIGILANCIA",
    "why": [
     "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.0 pp < 5 pp"
+    "ventaja vs día cualquiera +4.1 pp < 5 pp"
    ],
-   "p": 0.407,
+   "p": 0.408,
    "base": 0.367,
-   "ret": 0.006,
+   "ret": 0.0062,
    "h": 7
   }
  ],
