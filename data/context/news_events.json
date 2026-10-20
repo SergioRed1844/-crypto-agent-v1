@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-20T16:58:27Z",
+ "updated_utc": "2026-10-20T17:03:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4631,6 +4631,27 @@
    "utc": "2026-10-20T12:00:00Z"
   },
   {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
+   "source_url": "https://www.coindesk.com/markets/2026/10/20/bitcoin-drops-to-usd81-400-as-asian-chip-stocks-tumble-options-traders-seek-downside-protection",
+   "source_title": "coindesk.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-btc-price-dips-to-81-400-as-asian-chip-sto-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T12:00:00Z"
+  },
+  {
    "category": "GEOPOLITICAL",
    "subcategory": "",
    "country": "DE",
@@ -4684,6 +4705,27 @@
    "confidence": 0.8,
    "origin": "gemini/GDELT",
    "id": "news-secretary-bessent-says-iran-conflict-will-determin-2026-10-20",
+   "date": "2026-10-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-20T16:00:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "EU",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Gentiloni advierte sobre la mayor crisis de deuda con la economía al límite",
+   "source_url": "https://www.bankingnews.gr/analyseis-ektheseis/articles/906196/shock-and-awe-from-gentiloni-approaching-the-biggest-debt-crisis-economy-on-the-brink",
+   "source_title": "bankingnews.gr",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-shock-and-awe-from-gentiloni-approaching-the-bigge-2026-10-20",
    "date": "2026-10-20",
    "status": "happened",
    "scheduled": false,

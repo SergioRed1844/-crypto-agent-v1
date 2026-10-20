@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-20T16:58:27Z",
+ "generated_utc": "2026-10-20T17:03:55Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.338,
+ "bias": -0.342,
  "event_risk": 0.28,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.316,
+   "aporte": 0.315,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,16 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.303,
+   "aporte": 0.302,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-btc-price-dips-to-81-400-as-asian-chip-sto-2026-10-20",
+   "date": "2026-10-20",
+   "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.283,
    "fuente": "noticia"
   },
   {
@@ -73,15 +82,6 @@
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
    "aporte": -0.274,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-gold-reverses-early-gains-as-u-s-10-year-treasury-2026-10-20",
-   "date": "2026-10-20",
-   "title_es": "Rendimiento del bono estadounidense a 10 años sube al 5,15 %",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
