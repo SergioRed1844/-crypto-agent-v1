@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-20T01:12:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-20T01:15:54Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.36 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
 
@@ -18,7 +18,7 @@ Actualizado 2026-10-20T01:12:27Z UTC. Se recalcula cada hora; el calendario y lo
 | Rendimiento del Tesoro a 10 años cae 15 pb mientras Nasdaq-100 retrocede 5,5% | 2026-10-19 | anti | -0.294 |
 | Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.292 |
 | Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.267 |
-| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.248 |
+| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.247 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.245 |
 | Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.219 |
 
@@ -29,27 +29,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-20T01:12:27Z",
+ "inicio": "2026-10-20T01:15:54Z",
  "onchain": {
-  "scanned": [
-   972233,
-   972235
-  ],
-  "calls": 36,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 49,
-  "eventos": 14,
-  "urgentes": 2,
+  "titulares": 7,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
   "model": "gemini-3.8-flash",
-  "ok": 2,
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2

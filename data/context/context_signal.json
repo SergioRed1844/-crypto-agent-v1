@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T01:12:27Z",
+ "generated_utc": "2026-10-20T01:15:54Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -95,7 +95,7 @@
    "title_es": "Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.248,
+   "aporte": 0.247,
    "fuente": "noticia"
   },
   {
@@ -129,6 +129,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.35
+  "stablecoins_30d_pct": 0.07
  }
 }
