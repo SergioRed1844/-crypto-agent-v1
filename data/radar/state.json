@@ -48,9 +48,10 @@
   "2026-10-20T01:12:38+00:00",
   "2026-10-20T01:13:26+00:00",
   "2026-10-20T01:14:03+00:00",
-  "2026-10-20T02:11:55+00:00"
+  "2026-10-20T02:11:55+00:00",
+  "2026-10-20T03:10:59+00:00"
  ],
- "last_scan_utc": "2026-10-20T02:11:55+00:00",
+ "last_scan_utc": "2026-10-20T03:10:59+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -354,7 +355,7 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
@@ -364,82 +365,82 @@
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-10-18",
+   "last": "2026-10-19",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-20T01:19:07Z",
+   "last": "2026-10-20T02:11:43Z",
    "nota": "CAUTION"
   }
  },
