@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-20T17:57:44Z",
+ "generated_utc": "2026-10-20T18:56:49Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.341,
+ "bias": -0.34,
  "event_risk": 0.28,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -36,7 +36,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.459,
+   "aporte": 0.458,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.387,
+   "aporte": -0.386,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.314,
+   "aporte": 0.313,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.302,
+   "aporte": 0.301,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.278,
+   "aporte": -0.272,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.273,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.248,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.24,
    "fuente": "noticia"
   }
  ],
