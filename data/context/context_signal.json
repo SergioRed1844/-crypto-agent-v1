@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-20T10:04:39Z",
+ "generated_utc": "2026-10-20T11:03:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.47,
+   "aporte": 0.469,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.396,
+   "aporte": -0.395,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.309,
+   "aporte": 0.308,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Rendimiento del bono estadounidense a 10 años sube al 5,15 %",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.293,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.253,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.239,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -115,6 +115,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.07
+  "stablecoins_30d_pct": 0.06
  }
 }
