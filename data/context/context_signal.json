@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-20T11:03:46Z",
+ "generated_utc": "2026-10-20T12:02:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.356,
+ "bias": -0.362,
  "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -36,7 +36,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.469,
+   "aporte": 0.468,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Caen acciones tecnológicas por temores de deuda en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.395,
+   "aporte": -0.394,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.308,
+   "aporte": 0.307,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Rendimiento del bono estadounidense a 10 años sube al 5,15 %",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.287,
+   "aporte": -0.282,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,16 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-fed-minutes-show-another-rate-hike-is-likely-this-2026-10-20",
+   "date": "2026-10-20",
+   "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -81,7 +90,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.252,
+   "aporte": -0.251,
    "fuente": "noticia"
   },
   {
@@ -91,15 +100,6 @@
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
    "aporte": -0.238,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-ethereum-led-nearly-1-billion-in-crypto-liquidatio-2026-10-16",
-   "date": "2026-10-16",
-   "title_es": "Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.213,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 55
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.06
+  "stablecoins_30d_pct": 0.07
  }
 }
