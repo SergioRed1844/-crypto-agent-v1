@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-20T06:33:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-20T07:07:20Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.37 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -12,14 +12,14 @@ Actualizado 2026-10-20T06:33:07Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.475 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.474 |
 | Caen acciones tecnológicas por temores de deuda en IA | 2026-10-16 | anti | -0.400 |
-| Rendimiento del bono estadounidense a 10 años sube al 5,15 % | 2026-10-20 | anti | -0.316 |
-| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.286 |
-| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.259 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.242 |
-| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.222 |
-| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.216 |
+| Rendimiento del bono estadounidense a 10 años sube al 5,15 % | 2026-10-20 | anti | -0.312 |
+| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.285 |
+| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.258 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.241 |
+| Bitcoin y bolsas asiáticas suben tras PIB de China superior a lo previsto | 2026-10-19 | pro | +0.219 |
+| Ethereum lidera casi mil millones de dólares en liquidaciones de criptomonedas | 2026-10-16 | anti | -0.215 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,20 +28,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-20T06:33:07Z",
+ "inicio": "2026-10-20T07:07:20Z",
  "onchain": {
   "scanned": [
-   972274,
-   972277
+   972278,
+   972279
   ],
-  "calls": 35,
+  "calls": 39,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 5,
-  "eventos": 0,
+  "titulares": 8,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
