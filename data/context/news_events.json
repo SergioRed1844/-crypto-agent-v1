@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T20:38:17Z",
+ "updated_utc": "2026-10-21T21:33:12Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5072,6 +5072,27 @@
    "utc": "2026-10-21T14:00:00Z"
   },
   {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "AU",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Banco de Australia anticipa subida de tipos tras repunte de inflación",
+   "source_url": "https://www.investmentwatchblog.com/reserve-bank-of-australia-signals-rate-hike-today-after-inflation-tracking-exceeds-central-bank-targets/",
+   "source_title": "investmentwatchblog.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-reserve-bank-of-australia-signals-rate-hike-today-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T17:15:00Z"
+  },
+  {
    "category": "GEOPOLITICAL",
    "subcategory": "",
    "country": "US",
@@ -5091,6 +5112,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T18:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Petróleo y expectativas de tipos de la Fed presionan mercados",
+   "source_url": "http://www.kitco.com/news/article/2026-10-21/gold-gains-silver-slips-oil-prices-rise-fed-rate-hike-expectations-persist",
+   "source_title": "kitco.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-gains-silver-slips-as-oil-prices-rise-fed-rat-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T18:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "CPI",
+   "country": "GB",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
+   "source_url": "https://www.ksat.com/business/2026/10/21/uk-inflation-rises-to-highest-in-almost-a-year-as-iran-war-drives-fuel-prices-higher/",
+   "source_title": "ksat.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-uk-inflation-rises-to-highest-in-almost-a-year-as-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T20:30:00Z"
   }
  ]
 }
