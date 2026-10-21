@@ -2,14 +2,14 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 21-Oct 11:37 · **Día 5.0** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 21-Oct 12:34 · **Día 5.0** · **Estado:** corriendo
 
-Última vela 4H revisada: 21-Oct 10:00 · señales técnicas desde el inicio: 45 · corridas: 173. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 21-Oct 10:00 · señales técnicas desde el inicio: 45 · corridas: 174. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
-| A · reglas v4.1 | 0 | — | — | — | — | +0.00 | +6.48 | 0 | 2 |
-| B · v4.2 completo | 0 | — | — | — | — | +0.00 | +2.05 | 0 | 1 |
+| A · reglas v4.1 | 0 | — | — | — | — | +0.00 | +6.89 | 0 | 2 |
+| B · v4.2 completo | 0 | — | — | — | — | +0.00 | +2.20 | 0 | 1 |
 
 **Gate de papel (portafolio B):** ⬜ ≥30 trades · ⬜ ≥14 días · ⬜ ganadas >50% · ⬜ R:R promedio ≥2.0 · ✅ drawdown <10%
 
