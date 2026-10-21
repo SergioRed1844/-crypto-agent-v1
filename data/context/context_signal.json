@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-21T06:46:17Z",
+ "generated_utc": "2026-10-21T07:45:20Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.342,
+ "bias": -0.341,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.488,
+   "aporte": -0.487,
    "fuente": "noticia"
   },
   {
@@ -30,7 +30,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.442,
+   "aporte": 0.441,
    "fuente": "noticia"
   },
   {
@@ -39,7 +39,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.298,
+   "aporte": 0.297,
    "fuente": "noticia"
   },
   {
@@ -57,7 +57,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.258,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -66,7 +66,7 @@
    "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.232,
+   "aporte": 0.228,
    "fuente": "noticia"
   },
   {
@@ -75,7 +75,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.225,
+   "aporte": -0.224,
    "fuente": "noticia"
   },
   {
@@ -84,7 +84,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   }
  ],
