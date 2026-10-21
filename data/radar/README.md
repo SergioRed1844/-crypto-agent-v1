@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-21T18:35:56+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
+Última corrida: **2026-10-21T19:33:50+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -41,7 +41,7 @@ Todavía ninguna.
 | Reversión tras choque político/comercial | crypto | 90 d | 4 | 33% | 45% | 44% | 96% | +0.0% |
 | Reversión tras choque político/comercial | us | 7 d | 10 | 28% | 29% | 29% | 89% | -0.4% |
 | Reversión tras choque político/comercial | us | 30 d | 8 | 50% | 36% | 38% | 89% | +0.8% |
-| Reversión tras choque político/comercial | us | 90 d | 8 | 64% | 44% | 46% | 90% | +0.9% |
+| Reversión tras choque político/comercial | us | 90 d | 8 | 64% | 44% | 46% | 90% | +0.8% |
 | Miedo de hogares (FEARS) alto | bmv | 7 d | 3 | 38% | 16% | 16% | 98% | +0.0% |
 | Miedo de hogares (FEARS) alto | bmv | 30 d | 3 | 38% | 26% | 26% | 98% | +0.1% |
 | Miedo de hogares (FEARS) alto | bmv | 90 d | 3 | 62% | 34% | 34% | 98% | +0.3% |
@@ -63,9 +63,9 @@ Todavía ninguna.
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 79 | 45% | 41% | 43% | 53% | +0.5% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 42% | 43% | 43% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
-| Retroceso dentro de tendencia alcista | us | 7 d | 423 | 38% | 33% | 37% | 18% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 201 | 42% | 39% | 41% | 31% | +0.4% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 199 | 49% | 45% | 48% | 31% | +0.9% |
+| Retroceso dentro de tendencia alcista | us | 7 d | 422 | 38% | 33% | 37% | 18% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 31% | +0.4% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 48% | 31% | +0.9% |
 
 ## Salud de fuentes
 
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-21 | binance |
 | ^MXX | sí | 2026-10-21 | yahoo |
 | ^VIX | sí | 2026-10-21 | yahoo |
-| contexto_v42 | sí | 2026-10-21T17:36:39Z | RISK_OFF |
+| contexto_v42 | sí | 2026-10-21T18:35:44Z | RISK_OFF |
 | fear_greed | sí | 2026-10-21 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-20 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-20 | wikimedia |
