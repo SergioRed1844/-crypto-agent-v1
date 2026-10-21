@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T13:40:10Z",
+ "updated_utc": "2026-10-21T14:39:12Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5007,6 +5007,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T10:00:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "money_laundering",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
+   "source_url": "https://cointelegraph.com/news/drift-exploiter-moves-109m-eth-tornado-cash-2-days",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-drift-exploiter-sends-109m-in-eth-to-tornado-cash-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T13:30:00Z"
   }
  ]
 }
