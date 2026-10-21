@@ -1,17 +1,14 @@
-# 📡 Radar EB — resumen 2026-10-20
+# 📡 Radar EB — resumen 2026-10-21
 
-**Sigo vivo:** 36 corridas en 24 h · última 2026-10-20T14:01:42+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 36 corridas en 24 h · última 2026-10-21T14:39:22+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
-|---|---|---|---|---|---|---|---|---|
-| VIGILANCIA | QQQ | Retroceso dentro de tendencia alcista | 2026-10-16 | 7 d | 32% | 29% | +0.3% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp); ventaja vs día cualquiera +3.8 pp < 5 pp |
-| VIGILANCIA | META | Retroceso dentro de tendencia alcista | 2026-10-16 | 7 d | 41% | 37% | +0.6% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp); ventaja vs día cualquiera +4.0 pp < 5 pp |
+Ningún setup disparó en las últimas 24 h. Eso también es información: no hay pánico ni capitulación medibles.
 
 ## Clima de mercado
 
-BTC 81,938 (caída desde máximo de 1 año -28%; Fear&Greed 59) · S&P (SPY) -1.6% vs máximo de 1 año; VIX 18.4 · miedo de hogares (Wikipedia, EUA) z=-0.6 · peso 5 días +1.4% (USD/MXN); IPC vs máximo 1 año -3.6% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.35)
+BTC 83,028 (caída desde máximo de 1 año -28%; Fear&Greed 55) · S&P (SPY) -1.3% vs máximo de 1 año; VIX 17.3 · miedo de hogares (Wikipedia, EUA) z=+0.7 · peso 5 días +0.1% (USD/MXN); IPC vs máximo 1 año -3.3% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años.)
 
 ## Mejor día de compra (día de la semana, encogido)
 
