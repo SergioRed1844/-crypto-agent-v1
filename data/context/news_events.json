@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T19:34:50Z",
+ "updated_utc": "2026-10-21T19:38:57Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5049,6 +5049,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T13:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Conflicto en Irán dispara el combustible y lleva la inflación británica a máximos anuales",
+   "source_url": "https://www.wsls.com/business/2026/10/21/uk-inflation-rise-to-highest-in-almost-a-year-as-iran-war-drives-fuel-prices-higher/",
+   "source_title": "wsls.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-uk-inflation-rise-to-highest-in-almost-a-year-as-i-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T14:00:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Oro avanza por tensión con Irán y próxima decisión de tasas de la Fed",
+   "source_url": "https://www.finanzen.ch/nachrichten/aktien/gold-ticks-higher-amid-uncertain-u-s-iran-deal-upcoming-fed-interest-rate-decision-1036650459",
+   "source_title": "finanzen.ch",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-ticks-higher-amid-uncertain-u-s-iran-deal-upc-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T18:00:00Z"
   }
  ]
 }

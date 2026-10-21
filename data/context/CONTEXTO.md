@@ -1,8 +1,8 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-21T19:34:50Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-21T19:38:57Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: RISK_OFF** · sesgo -0.34 · riesgo de evento 0.00 · tamaño ×0.0 · VETO a compras
+**Estado: RISK_OFF** · sesgo -0.35 · riesgo de evento 0.00 · tamaño ×0.0 · VETO a compras
 
 - Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años.
 
@@ -24,27 +24,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-21T19:34:50Z",
+ "inicio": "2026-10-21T19:38:57Z",
  "onchain": {
-  "scanned": [
-   972518,
-   972520
-  ],
-  "calls": 86,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 40,
+  "eventos": 9,
+  "urgentes": 2,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 2
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
