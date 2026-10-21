@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-21T19:33:50+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
+Última corrida: **2026-10-21T19:35:06+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -71,65 +71,65 @@ Todavía ninguna.
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-10-21 | yahoo |
-| AC.MX | sí | 2026-10-21 | yahoo |
-| ADA | sí | 2026-10-21 | binance |
-| ALSEA.MX | sí | 2026-10-21 | yahoo |
-| AMXB.MX | sí | 2026-10-21 | yahoo |
-| AMZN | sí | 2026-10-21 | yahoo |
-| ASURB.MX | sí | 2026-10-21 | yahoo |
-| AVAX | sí | 2026-10-21 | binance |
-| BBAJIOO.MX | sí | 2026-10-21 | yahoo |
-| BCH | sí | 2026-10-21 | binance |
-| BIMBOA.MX | sí | 2026-10-21 | yahoo |
-| BTC | sí | 2026-10-21 | binance |
-| CEMEXCPO.MX | sí | 2026-10-21 | yahoo |
-| DIA | sí | 2026-10-21 | yahoo |
-| DOGE | sí | 2026-10-21 | binance |
-| DOT | sí | 2026-10-21 | binance |
-| ETH | sí | 2026-10-21 | binance |
-| FEMSAUBD.MX | sí | 2026-10-21 | yahoo |
-| GAPB.MX | sí | 2026-10-21 | yahoo |
-| GFNORTEO.MX | sí | 2026-10-21 | yahoo |
-| GLD | sí | 2026-10-21 | yahoo |
-| GMEXICOB.MX | sí | 2026-10-21 | yahoo |
-| GOOGL | sí | 2026-10-21 | yahoo |
-| GRUMAB.MX | sí | 2026-10-21 | yahoo |
-| IWM | sí | 2026-10-21 | yahoo |
-| JPM | sí | 2026-10-21 | yahoo |
-| KIMBERA.MX | sí | 2026-10-21 | yahoo |
-| KOFUBL.MX | sí | 2026-10-21 | yahoo |
-| LINK | sí | 2026-10-21 | binance |
-| LIVEPOLC-1.MX | sí | 2026-10-21 | yahoo |
-| LTC | sí | 2026-10-21 | binance |
-| META | sí | 2026-10-21 | yahoo |
-| MSFT | sí | 2026-10-21 | yahoo |
-| MXN=X | sí | 2026-10-21 | yahoo |
-| NAFTRACISHRS.MX | sí | 2026-10-21 | yahoo |
-| NVDA | sí | 2026-10-21 | yahoo |
-| OMAB.MX | sí | 2026-10-21 | yahoo |
-| ORBIA.MX | sí | 2026-10-21 | yahoo |
-| PINFRA.MX | sí | 2026-10-21 | yahoo |
-| QQQ | sí | 2026-10-21 | yahoo |
-| SMH | sí | 2026-10-21 | yahoo |
-| SOL | sí | 2026-10-21 | binance |
-| SPY | sí | 2026-10-21 | yahoo |
-| TRX | sí | 2026-10-21 | binance |
-| TSLA | sí | 2026-10-21 | yahoo |
-| WALMEX.MX | sí | 2026-10-21 | yahoo |
-| WMT | sí | 2026-10-21 | yahoo |
-| XLE | sí | 2026-10-21 | yahoo |
-| XLF | sí | 2026-10-21 | yahoo |
-| XLI | sí | 2026-10-21 | yahoo |
-| XLK | sí | 2026-10-21 | yahoo |
-| XLP | sí | 2026-10-21 | yahoo |
-| XLU | sí | 2026-10-21 | yahoo |
-| XLV | sí | 2026-10-21 | yahoo |
-| XLY | sí | 2026-10-21 | yahoo |
-| XOM | sí | 2026-10-21 | yahoo |
-| XRP | sí | 2026-10-21 | binance |
-| ^MXX | sí | 2026-10-21 | yahoo |
-| ^VIX | sí | 2026-10-21 | yahoo |
+| AAPL | sí | 2026-10-21 | caché yahoo |
+| AC.MX | sí | 2026-10-21 | caché yahoo |
+| ADA | sí | 2026-10-21 | caché binance |
+| ALSEA.MX | sí | 2026-10-21 | caché yahoo |
+| AMXB.MX | sí | 2026-10-21 | caché yahoo |
+| AMZN | sí | 2026-10-21 | caché yahoo |
+| ASURB.MX | sí | 2026-10-21 | caché yahoo |
+| AVAX | sí | 2026-10-21 | caché binance |
+| BBAJIOO.MX | sí | 2026-10-21 | caché yahoo |
+| BCH | sí | 2026-10-21 | caché binance |
+| BIMBOA.MX | sí | 2026-10-21 | caché yahoo |
+| BTC | sí | 2026-10-21 | caché binance |
+| CEMEXCPO.MX | sí | 2026-10-21 | caché yahoo |
+| DIA | sí | 2026-10-21 | caché yahoo |
+| DOGE | sí | 2026-10-21 | caché binance |
+| DOT | sí | 2026-10-21 | caché binance |
+| ETH | sí | 2026-10-21 | caché binance |
+| FEMSAUBD.MX | sí | 2026-10-21 | caché yahoo |
+| GAPB.MX | sí | 2026-10-21 | caché yahoo |
+| GFNORTEO.MX | sí | 2026-10-21 | caché yahoo |
+| GLD | sí | 2026-10-21 | caché yahoo |
+| GMEXICOB.MX | sí | 2026-10-21 | caché yahoo |
+| GOOGL | sí | 2026-10-21 | caché yahoo |
+| GRUMAB.MX | sí | 2026-10-21 | caché yahoo |
+| IWM | sí | 2026-10-21 | caché yahoo |
+| JPM | sí | 2026-10-21 | caché yahoo |
+| KIMBERA.MX | sí | 2026-10-21 | caché yahoo |
+| KOFUBL.MX | sí | 2026-10-21 | caché yahoo |
+| LINK | sí | 2026-10-21 | caché binance |
+| LIVEPOLC-1.MX | sí | 2026-10-21 | caché yahoo |
+| LTC | sí | 2026-10-21 | caché binance |
+| META | sí | 2026-10-21 | caché yahoo |
+| MSFT | sí | 2026-10-21 | caché yahoo |
+| MXN=X | sí | 2026-10-21 | caché yahoo |
+| NAFTRACISHRS.MX | sí | 2026-10-21 | caché yahoo |
+| NVDA | sí | 2026-10-21 | caché yahoo |
+| OMAB.MX | sí | 2026-10-21 | caché yahoo |
+| ORBIA.MX | sí | 2026-10-21 | caché yahoo |
+| PINFRA.MX | sí | 2026-10-21 | caché yahoo |
+| QQQ | sí | 2026-10-21 | caché yahoo |
+| SMH | sí | 2026-10-21 | caché yahoo |
+| SOL | sí | 2026-10-21 | caché binance |
+| SPY | sí | 2026-10-21 | caché yahoo |
+| TRX | sí | 2026-10-21 | caché binance |
+| TSLA | sí | 2026-10-21 | caché yahoo |
+| WALMEX.MX | sí | 2026-10-21 | caché yahoo |
+| WMT | sí | 2026-10-21 | caché yahoo |
+| XLE | sí | 2026-10-21 | caché yahoo |
+| XLF | sí | 2026-10-21 | caché yahoo |
+| XLI | sí | 2026-10-21 | caché yahoo |
+| XLK | sí | 2026-10-21 | caché yahoo |
+| XLP | sí | 2026-10-21 | caché yahoo |
+| XLU | sí | 2026-10-21 | caché yahoo |
+| XLV | sí | 2026-10-21 | caché yahoo |
+| XLY | sí | 2026-10-21 | caché yahoo |
+| XOM | sí | 2026-10-21 | caché yahoo |
+| XRP | sí | 2026-10-21 | caché binance |
+| ^MXX | sí | 2026-10-21 | caché yahoo |
+| ^VIX | sí | 2026-10-21 | caché yahoo |
 | contexto_v42 | sí | 2026-10-21T18:35:44Z | RISK_OFF |
 | fear_greed | sí | 2026-10-21 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-20 | wikimedia |
