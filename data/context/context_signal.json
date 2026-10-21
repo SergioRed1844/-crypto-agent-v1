@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-21T10:33:16Z",
+ "generated_utc": "2026-10-21T10:42:43Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.34,
+ "bias": -0.334,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -84,7 +84,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.216,
+   "aporte": -0.215,
    "fuente": "noticia"
   }
  ],

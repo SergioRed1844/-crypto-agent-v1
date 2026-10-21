@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T10:33:16Z",
+ "updated_utc": "2026-10-21T10:42:43Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4965,6 +4965,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T07:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "Geopolitical De-escalation",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Bitcoin repunta ante expectativas positivas de un acuerdo entre EE. UU. e Irán",
+   "source_url": "https://investinglive.com/cryptocurrency/bitcoin-rallies-on-us-iran-deal-hopes-amid-increasingly-positive-reports-what-s-next/",
+   "source_title": "investinglive.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-rallies-on-us-iran-deal-hopes-amid-increas-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T10:00:00Z"
   }
  ]
 }
