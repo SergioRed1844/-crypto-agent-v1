@@ -1,15 +1,15 @@
 {
- "generated_utc": "2026-10-21T15:35:23Z",
+ "generated_utc": "2026-10-21T15:39:42Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.364,
+ "bias": -0.343,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 64,
+ "confidence": 63,
  "reasons": [
   "Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años."
  ],
@@ -79,12 +79,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-banks-could-slow-stablecoin-growth-by-paying-saver-2026-10-17",
-   "date": "2026-10-17",
-   "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.219,
+   "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.246,
    "fuente": "noticia"
   }
  ],

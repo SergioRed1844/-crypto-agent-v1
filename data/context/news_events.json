@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T15:35:23Z",
+ "updated_utc": "2026-10-21T15:39:42Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5007,6 +5007,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T10:00:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
+   "source_url": "https://www.finanznachrichten.de/nachrichten-2026-10/69894385-global-ai-rebound-lifts-crypto-market-sentiment-020.htm",
+   "source_title": "finanznachrichten.de",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T11:00:00Z"
   },
   {
    "category": "HACK_SECURITY",

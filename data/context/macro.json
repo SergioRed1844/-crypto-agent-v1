@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T15:39:25Z",
+ "generated_utc": "2026-10-21T15:42:59Z",
  "fear_greed": {
   "value": 63,
   "label": "Greed",
@@ -18,8 +18,8 @@
   "br-presidential-runoff-2026": {
    "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "outcomes": {
-    "Yes": 0.215,
-    "No": 0.785
+    "Yes": 0.225,
+    "No": 0.775
    },
    "volume": 27937747.328541,
    "slug": "brazil-presidential-election"
