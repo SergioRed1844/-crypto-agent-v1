@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T04:51:15Z",
+ "generated_utc": "2026-10-21T05:15:45Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.445,
+   "aporte": 0.444,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.242,
+   "aporte": 0.24,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.227,
+   "aporte": -0.226,
    "fuente": "noticia"
   },
   {
