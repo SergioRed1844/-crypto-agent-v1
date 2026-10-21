@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-21T22:44:51Z",
+ "generated_utc": "2026-10-21T23:31:17Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.364,
+ "bias": -0.363,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -21,7 +21,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.466,
+   "aporte": -0.465,
    "fuente": "noticia"
   },
   {
@@ -30,7 +30,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.422,
+   "aporte": 0.421,
    "fuente": "noticia"
   },
   {
@@ -39,7 +39,7 @@
    "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.318,
+   "aporte": -0.313,
    "fuente": "noticia"
   },
   {
@@ -48,7 +48,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.301,
+   "aporte": -0.3,
    "fuente": "noticia"
   },
   {
@@ -57,7 +57,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.279,
+   "aporte": 0.278,
    "fuente": "noticia"
   },
   {
@@ -66,7 +66,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.277,
+   "aporte": 0.276,
    "fuente": "noticia"
   },
   {
@@ -84,7 +84,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.241,
    "fuente": "noticia"
   }
  ],
@@ -118,6 +118,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.07
+  "stablecoins_30d_pct": -0.06
  }
 }
