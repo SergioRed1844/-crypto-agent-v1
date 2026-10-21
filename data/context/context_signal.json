@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T08:44:26Z",
+ "generated_utc": "2026-10-21T08:48:30Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.486,
+   "aporte": -0.485,
    "fuente": "noticia"
   },
   {
@@ -39,7 +39,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.296,
+   "aporte": 0.295,
    "fuente": "noticia"
   },
   {
@@ -66,7 +66,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
