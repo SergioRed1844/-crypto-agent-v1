@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-21T00:06:41Z",
+ "generated_utc": "2026-10-21T00:51:29Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.34,
+ "bias": -0.339,
  "event_risk": 0.28,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.498,
+   "aporte": -0.497,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.451,
+   "aporte": 0.45,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.306,
+   "aporte": 0.305,
    "fuente": "noticia"
   },
   {
@@ -67,21 +67,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-pending-home-sales-hit-record-low-2026-10-20",
-   "date": "2026-10-20",
-   "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.267,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-ether-etfs-have-given-back-62-of-this-year-inflows-2026-10-19",
    "date": "2026-10-19",
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.266,
+   "aporte": -0.265,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-pending-home-sales-hit-record-low-2026-10-20",
+   "date": "2026-10-20",
+   "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.235,
+   "aporte": -0.234,
    "fuente": "noticia"
   }
  ],
