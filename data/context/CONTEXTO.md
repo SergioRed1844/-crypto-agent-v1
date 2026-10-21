@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-21T12:40:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-21T12:44:41Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.35 · riesgo de evento 0.00 · tamaño ×0.0 · VETO a compras
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-21T12:40:56Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.480 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.435 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.434 |
 | ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.291 |
 | CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.285 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.262 |
@@ -24,20 +24,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-21T12:40:56Z",
+ "inicio": "2026-10-21T12:44:41Z",
  "onchain": {
   "scanned": [
-   972464,
-   972471
+   972472,
+   972478
   ],
-  "calls": 67,
+  "calls": 83,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 49,
-  "eventos": 4,
+  "titulares": 9,
+  "eventos": 1,
   "urgentes": 1,
   "metodo": "gemini",
   "agregados": 0
