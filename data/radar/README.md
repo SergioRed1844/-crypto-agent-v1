@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-21T20:34:13+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
+Última corrida: **2026-10-21T21:33:26+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-10-21
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -64,7 +64,7 @@ Todavía ninguna.
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 42% | 43% | 43% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
 | Retroceso dentro de tendencia alcista | us | 7 d | 422 | 38% | 33% | 37% | 18% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 31% | +0.4% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 32% | +0.4% |
 | Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 48% | 31% | +0.9% |
 
 ## Salud de fuentes
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-21 | binance |
 | ^MXX | sí | 2026-10-21 | yahoo |
 | ^VIX | sí | 2026-10-21 | yahoo |
-| contexto_v42 | sí | 2026-10-21T19:38:57Z | RISK_OFF |
+| contexto_v42 | sí | 2026-10-21T20:38:17Z | RISK_OFF |
 | fear_greed | sí | 2026-10-21 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-20 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-20 | wikimedia |
