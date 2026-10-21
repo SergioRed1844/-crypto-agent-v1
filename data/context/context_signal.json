@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T00:54:45Z",
+ "generated_utc": "2026-10-21T01:50:41Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.497,
+   "aporte": -0.496,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.45,
+   "aporte": 0.449,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.305,
+   "aporte": 0.304,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.265,
+   "aporte": -0.264,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.263,
+   "aporte": 0.258,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.234,
+   "aporte": -0.232,
    "fuente": "noticia"
   }
  ],
@@ -133,6 +133,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": 0.07
+  "stablecoins_30d_pct": -0.07
  }
 }
