@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T18:35:44Z",
+ "generated_utc": "2026-10-21T19:34:50Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.472,
+   "aporte": -0.47,
    "fuente": "noticia"
   },
   {
@@ -30,7 +30,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.427,
+   "aporte": 0.426,
    "fuente": "noticia"
   },
   {
@@ -39,7 +39,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.309,
+   "aporte": -0.307,
    "fuente": "noticia"
   },
   {
@@ -48,7 +48,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.284,
+   "aporte": 0.282,
    "fuente": "noticia"
   },
   {
@@ -57,7 +57,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.28,
+   "aporte": 0.279,
    "fuente": "noticia"
   },
   {
@@ -66,7 +66,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.258,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -75,7 +75,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -84,7 +84,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.244,
+   "aporte": 0.243,
    "fuente": "noticia"
   }
  ],
