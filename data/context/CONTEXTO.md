@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-21T01:50:41Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-21T02:49:46Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.34 · riesgo de evento 0.28 · tamaño ×0.0 · VETO a compras
 
@@ -12,14 +12,14 @@ Actualizado 2026-10-21T01:50:41Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.496 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.449 |
-| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.304 |
-| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.295 |
-| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.264 |
-| Las ventas de viviendas pendientes caen a un mínimo histórico | 2026-10-20 | pro | +0.258 |
-| Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia | 2026-10-20 | anti | -0.236 |
-| Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persist | 2026-10-20 | anti | -0.232 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.494 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.447 |
+| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.303 |
+| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.294 |
+| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.263 |
+| Las ventas de viviendas pendientes caen a un mínimo histórico | 2026-10-20 | pro | +0.252 |
+| Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia | 2026-10-20 | anti | -0.231 |
+| Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persist | 2026-10-20 | anti | -0.230 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,11 +28,11 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-21T01:50:41Z",
+ "inicio": "2026-10-21T02:49:46Z",
  "onchain": {
   "scanned": [
-   972399,
-   972401
+   972402,
+   972405
   ],
   "calls": 30,
   "stopped": null,
@@ -40,15 +40,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 9,
-  "eventos": 0,
+  "titulares": 49,
+  "eventos": 10,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
   "model": "gemini-3.8-flash",
-  "ok": 1,
+  "ok": 2,
   "errors": []
  },
  "macro_fuentes_ok": 2
