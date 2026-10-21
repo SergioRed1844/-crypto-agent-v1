@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T10:42:43Z",
+ "updated_utc": "2026-10-21T11:41:47Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4965,6 +4965,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T07:30:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
+   "source_url": "https://cointelegraph.com/markets/ether-etf-outflows-near-1-1-billion-october",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "08:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T08:45:00Z"
   },
   {
    "category": "GEOPOLITICAL",
