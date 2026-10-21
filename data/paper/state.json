@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-20 20:00:00+00:00",
-  "ETHUSDT": "2026-10-20 20:00:00+00:00",
-  "SOLUSDT": "2026-10-20 20:00:00+00:00"
+  "BTCUSDT": "2026-10-21 00:00:00+00:00",
+  "ETHUSDT": "2026-10-21 00:00:00+00:00",
+  "SOLUSDT": "2026-10-21 00:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 5.092183934069994,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-20T21:00:00Z"
+     "last_checked": "2026-10-20T23:00:00Z"
     },
     "BTCUSDT": {
      "pair": "BTCUSDT",
@@ -36,7 +36,7 @@
      "unit": 2313.351557687151,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-20T21:00:00Z"
+     "last_checked": "2026-10-20T23:00:00Z"
     }
    },
    "trades": [],
@@ -54,7 +54,7 @@
      "unit": 2206.5526565023843,
      "risk_frac": 0.0025,
      "cs": 8,
-     "last_checked": "2026-10-20T21:00:00Z",
+     "last_checked": "2026-10-20T23:00:00Z",
      "ctx_state": "CAUTION"
     }
    },
@@ -567,10 +567,38 @@
    "neta": 0.0867,
    "rr_neto": 2.24,
    "B": "contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c"
+  },
+  {
+   "t": "2026-10-21T00:00:00Z",
+   "pair": "ETHUSDT",
+   "cs": 6,
+   "precio": 2449.2,
+   "A": "máx 2 posiciones",
+   "ctx": "RISK_OFF",
+   "fg": 63,
+   "funding": 0.0001,
+   "funding_src": "okx",
+   "neta": 0.0754,
+   "rr_neto": 2.21,
+   "B": "contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c"
+  },
+  {
+   "t": "2026-10-21T00:00:00Z",
+   "pair": "SOLUSDT",
+   "cs": 6,
+   "precio": 106.54,
+   "A": "ya hay posición en el par",
+   "ctx": "RISK_OFF",
+   "fg": 63,
+   "funding": 7.34187330043e-05,
+   "funding_src": "okx",
+   "neta": 0.0842,
+   "rr_neto": 2.24,
+   "B": "contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c"
   }
  ],
  "notified": [],
- "runs": 147,
- "updated_utc": "2026-10-20T22:53:46Z",
- "n_signals": 36
+ "runs": 148,
+ "updated_utc": "2026-10-21T00:52:04Z",
+ "n_signals": 38
 }
