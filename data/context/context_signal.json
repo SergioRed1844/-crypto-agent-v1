@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T05:15:45Z",
+ "generated_utc": "2026-10-21T05:47:11Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.491,
+   "aporte": -0.49,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.3,
+   "aporte": 0.299,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.292,
+   "aporte": 0.291,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.24,
+   "aporte": 0.237,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.226,
+   "aporte": -0.225,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.226,
+   "aporte": -0.225,
    "fuente": "noticia"
   }
  ],
