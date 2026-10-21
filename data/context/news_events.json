@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T05:47:11Z",
+ "updated_utc": "2026-10-21T06:46:17Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4923,6 +4923,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-20T18:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "rate_expectations",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Encuesta de Reuters: 100 economistas prevén subida de tasas de la Fed en diciembre",
+   "source_url": "https://econotimes.com/Reuters-Poll-Finds-All-100-Economists-Expect-December-Fed-Rate-Increase-1758586",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-reuters-poll-finds-all-100-economists-expect-decem-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T05:30:00Z"
   }
  ]
 }
