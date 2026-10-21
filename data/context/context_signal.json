@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T09:43:40Z",
+ "generated_utc": "2026-10-21T10:33:16Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -21,7 +21,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.484,
+   "aporte": -0.483,
    "fuente": "noticia"
   },
   {
@@ -30,7 +30,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.438,
+   "aporte": 0.437,
    "fuente": "noticia"
   },
   {
@@ -39,7 +39,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.294,
+   "aporte": 0.293,
    "fuente": "noticia"
   },
   {
@@ -48,7 +48,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.288,
+   "aporte": 0.287,
    "fuente": "noticia"
   },
   {
@@ -57,7 +57,7 @@
    "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
@@ -66,7 +66,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.222,
    "fuente": "noticia"
   },
   {
@@ -75,16 +75,16 @@
    "title_es": "Dispositivos criptográficos diseñados contra hackers contenían herramientas de espionaje integradas",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.22,
+   "aporte": -0.219,
    "fuente": "noticia"
   },
   {
-   "id": "news-pending-home-sales-hit-record-low-2026-10-20",
+   "id": "news-fed-minutes-show-another-rate-hike-is-likely-this-2026-10-20",
    "date": "2026-10-20",
-   "title_es": "Las ventas de viviendas pendientes caen a un mínimo histórico",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.219,
+   "title_es": "Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persistente",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.216,
    "fuente": "noticia"
   }
  ],
@@ -118,6 +118,6 @@
    "fear_greed": 63
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.09
+  "stablecoins_30d_pct": -0.1
  }
 }

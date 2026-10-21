@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-21T09:43:40Z",
+ "updated_utc": "2026-10-21T10:33:16Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -4944,6 +4944,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T05:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "FED_FUNDS_FUTURES",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Mercados de predicción de Kalshi descuentan pausa de la Fed en octubre y alzas en diciembre",
+   "source_url": "https://econotimes.com/Kalshi-prices-favor-Fed-hold-in-October-higher-range-in-December-1758626",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-kalshi-prices-favor-fed-hold-in-october-higher-ran-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T07:30:00Z"
   }
  ]
 }

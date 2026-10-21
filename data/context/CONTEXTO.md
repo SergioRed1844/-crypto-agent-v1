@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-21T09:43:40Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-21T10:33:16Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.34 · riesgo de evento 0.00 · tamaño ×0.0 · VETO a compras
 
@@ -8,14 +8,14 @@ Actualizado 2026-10-21T09:43:40Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.484 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.438 |
-| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.294 |
-| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.288 |
-| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.255 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.223 |
-| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.220 |
-| Las ventas de viviendas pendientes caen a un mínimo histórico | 2026-10-20 | pro | +0.219 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.483 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.437 |
+| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.293 |
+| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.287 |
+| Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.254 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.222 |
+| Dispositivos criptográficos diseñados contra hackers contenían herramientas de e | 2026-10-19 | anti | -0.219 |
+| Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persist | 2026-10-20 | anti | -0.216 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -24,27 +24,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-21T09:43:40Z",
+ "inicio": "2026-10-21T10:33:16Z",
  "onchain": {
   "scanned": [
-   972444,
-   972451
+   972452,
+   972455
   ],
-  "calls": 112,
+  "calls": 70,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 40,
+  "eventos": 18,
+  "urgentes": 4,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 1
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
