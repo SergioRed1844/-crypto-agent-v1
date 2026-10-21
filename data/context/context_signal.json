@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T00:51:29Z",
+ "generated_utc": "2026-10-21T00:54:45Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -63,7 +63,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.296,
+   "aporte": 0.295,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {

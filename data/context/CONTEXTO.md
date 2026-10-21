@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-21T00:51:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-21T00:54:45Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.34 · riesgo de evento 0.28 · tamaño ×0.0 · VETO a compras
 
@@ -15,10 +15,10 @@ Actualizado 2026-10-21T00:51:29Z UTC. Se recalcula cada hora; el calendario y lo
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.497 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.450 |
 | ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.305 |
-| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.296 |
+| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.295 |
 | Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año | 2026-10-19 | anti | -0.265 |
 | Las ventas de viviendas pendientes caen a un mínimo histórico | 2026-10-20 | pro | +0.263 |
-| Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia | 2026-10-20 | anti | -0.241 |
+| Bitcoin cae a 81.400 dólares ante caída de acciones de semiconductores en Asia | 2026-10-20 | anti | -0.240 |
 | Minutas de la Fed apuntan a otra subida de tasas este año ante inflación persist | 2026-10-20 | anti | -0.234 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -28,27 +28,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-21T00:51:29Z",
+ "inicio": "2026-10-21T00:54:45Z",
  "onchain": {
-  "scanned": [
-   972396,
-   972398
-  ],
-  "calls": 40,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 7,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
