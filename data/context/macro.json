@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T16:41:27Z",
+ "generated_utc": "2026-10-21T16:45:07Z",
  "fear_greed": {
   "value": 63,
   "label": "Greed",
@@ -21,7 +21,7 @@
     "Yes": 0.225,
     "No": 0.775
    },
-   "volume": 27975546.441985995,
+   "volume": 27976219.687282994,
    "slug": "brazil-presidential-election"
   },
   "us-midterms-2026": {
@@ -30,7 +30,7 @@
     "Yes": 0.075,
     "No": 0.925
    },
-   "volume": 8624768.995421,
+   "volume": 8627127.995421,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -66,7 +66,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54889005.72873299,
+   "volume": 54889005.728733,
    "slug": "presidential-election-winner-2028"
   }
  },

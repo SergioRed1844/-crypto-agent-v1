@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-21T16:37:23Z",
+ "generated_utc": "2026-10-21T16:41:42Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.343,
+ "bias": -0.342,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
