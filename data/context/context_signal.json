@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-21T22:32:13Z",
+ "generated_utc": "2026-10-21T22:44:51Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -39,7 +39,7 @@
    "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.319,
+   "aporte": -0.318,
    "fuente": "noticia"
   },
   {
@@ -75,7 +75,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
