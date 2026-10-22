@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T00:30:23Z",
+ "updated_utc": "2026-10-22T00:34:35Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5154,6 +5154,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T20:30:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "CFTC rule proposals",
+   "country": "US",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "CFTC anuncia consulta previa de normas para transacciones minoristas de commodities digitales",
+   "source_url": "https://www.mondaq.com:443/unitedstates/commoditiesderivativesstock-exchanges/1857950/cftc-announces-anprm-for-regulation-ctx-and-regulation-cam-retail-commodity-transactions-for-digital-assets",
+   "source_title": "mondaq.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-cftc-announces-anprm-for-regulation-ctx-and-regula-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T23:15:00Z"
   }
  ]
 }
