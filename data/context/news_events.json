@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T16:16:19Z",
+ "updated_utc": "2026-10-22T16:20:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5259,6 +5259,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T11:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "employment",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Peticiones por desempleo en EE. UU. se mantienen cerca de mínimos de 57 años",
+   "source_url": "https://www.rte.ie/news/business/2026/1022/1596470-us-jobless-claims/",
+   "source_title": "rte.ie",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-weekly-jobless-claims-near-57-year-lows-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T14:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "employment",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Solicitudes semanales de desempleo en EE. UU. cerca de mínimos históricos de 57 años",
+   "source_url": "https://kelo.com/2026/10/22/us-weekly-jobless-claims-near-57-year-lows/",
+   "source_title": "kelo.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-weekly-jobless-claims-near-57-year-lows-amid-lo-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "15:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T15:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "employment",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Peticiones semanales de subsidio por desempleo en EE. UU. cerca de mínimos de 57 años",
+   "source_url": "https://www.theepochtimes.com/business/us-weekly-unemployment-claims-near-57-year-low-6107522",
+   "source_title": "theepochtimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-weekly-unemployment-claims-near-57-year-low-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T16:00:00Z"
   }
  ]
 }

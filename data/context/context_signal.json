@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-22T16:16:19Z",
+ "generated_utc": "2026-10-22T16:20:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.363,
+ "bias": -0.366,
  "event_risk": 0.083,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.37"
  ],
  "upcoming": [
   {
@@ -49,12 +49,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-the-latest-inflation-data-spells-bad-news-for-fed-2026-10-22",
+   "id": "news-us-weekly-unemployment-claims-near-57-year-low-2026-10-22",
    "date": "2026-10-22",
-   "title_es": "Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados",
+   "title_es": "Peticiones semanales de subsidio por desempleo en EE. UU. cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.275,
+   "aporte": -0.331,
    "fuente": "noticia"
   },
   {
