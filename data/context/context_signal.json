@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-22T18:46:09Z",
+ "generated_utc": "2026-10-22T19:13:49Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.355,
- "event_risk": 0.092,
+ "event_risk": 0.094,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.36"
+  "Precaución: sesgo -0.35"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.092,
+   "riesgo": 0.094,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.439,
+   "aporte": -0.438,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.324,
+   "aporte": -0.321,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.318,
+   "aporte": 0.317,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.239,
    "fuente": "noticia"
   },
   {
