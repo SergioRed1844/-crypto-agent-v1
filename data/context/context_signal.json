@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-22T01:29:35Z",
+ "generated_utc": "2026-10-22T01:48:07Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -54,7 +54,7 @@
    "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.3,
+   "aporte": -0.298,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.276,
+   "aporte": 0.275,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.275,
+   "aporte": 0.274,
    "fuente": "noticia"
   },
   {

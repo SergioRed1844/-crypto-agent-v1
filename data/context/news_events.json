@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T01:29:35Z",
+ "updated_utc": "2026-10-22T01:48:07Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5156,6 +5156,27 @@
    "utc": "2026-10-21T20:30:00Z"
   },
   {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Secretaría del Tesoro de EE. UU. prevé caída de precios de energía si concluye conflicto con Irán",
+   "source_url": "https://www.foxcarolina.com/2026/10/21/us-treasury-secretary-says-energy-prices-will-drop-once-iran-war-ends/",
+   "source_title": "foxcarolina.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-treasury-secretary-says-energy-prices-will-dro-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T23:00:00Z"
+  },
+  {
    "category": "CRYPTO_REGULATION",
    "subcategory": "CFTC rule proposals",
    "country": "US",
@@ -5167,6 +5188,27 @@
    "confidence": 0.9,
    "origin": "gemini/GDELT",
    "id": "news-cftc-announces-anprm-for-regulation-ctx-and-regula-2026-10-21",
+   "date": "2026-10-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-21T23:15:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Bancos rechazan reglas definitivas de la OCC sobre rendimientos de stablecoins",
+   "source_url": "https://cointelegraph.com/news/american-bankers-association-occ-genius-rules-stablecoins",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-banking-groups-push-back-on-occ-finalized-genius-r-2026-10-21",
    "date": "2026-10-21",
    "status": "happened",
    "scheduled": false,
