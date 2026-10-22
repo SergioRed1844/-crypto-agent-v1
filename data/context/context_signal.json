@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-22T08:23:16Z",
+ "generated_utc": "2026-10-22T08:27:45Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.453,
+   "aporte": -0.452,
    "fuente": "noticia"
   },
   {
@@ -133,6 +133,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.51
+  "stablecoins_30d_pct": -0.52
  }
 }
