@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T19:13:49Z",
+ "generated_utc": "2026-10-22T20:12:53Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.355,
- "event_risk": 0.094,
+ "bias": -0.354,
+ "event_risk": 0.098,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.094,
+   "riesgo": 0.098,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.438,
+   "aporte": -0.437,
    "fuente": "noticia"
   },
   {
@@ -45,16 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.397,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-us-weekly-jobless-claims-near-57-year-lows-undersc-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.321,
+   "aporte": 0.396,
    "fuente": "noticia"
   },
   {
@@ -63,7 +54,16 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.317,
+   "aporte": 0.316,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-weekly-jobless-claims-near-57-year-lows-undersc-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.315,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.261,
+   "aporte": 0.26,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.227,
+   "aporte": 0.226,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.54
+  "stablecoins_30d_pct": -0.55
  }
 }
