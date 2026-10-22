@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T17:15:41Z",
+ "updated_utc": "2026-10-22T18:14:42Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5303,6 +5303,27 @@
    "utc": "2026-10-22T15:30:00Z"
   },
   {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "tokenization",
+   "country": "SV",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "source_url": "http://www.asiabulletin.com/news/279392212/cmcc-global-partners-with-tether-and-bitfinex-securities-to-launch-the-first-tokenised-fund-of-funds-under-el-salvador-digital-asset-framework",
+   "source_title": "asiabulletin.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "15:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T15:30:00Z"
+  },
+  {
    "category": "MACRO_DATA",
    "subcategory": "employment",
    "country": "US",
@@ -5322,6 +5343,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T16:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "currency_fx",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El yen repunta mientras el dólar tambalea previo a la reunión de la Fed",
+   "source_url": "https://www.mvariety.com/business/business_news/yen-rallies-as-dollar-wobbles-toward-fed-meeting/article_aa1bed05-4a7b-40fa-8b8c-16ee9bc0df4b.html",
+   "source_title": "mvariety.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-yen-rallies-as-dollar-wobbles-toward-fed-meeting-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T17:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "jobless_claims",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
+   "source_url": "https://lufkindailynews.com/news_reuters/business/us-weekly-jobless-claims-near-57-year-lows-underscore-labor-market-stability/article_88ff0c22-7f5f-595c-b8f7-bdd8c7bb0eac.html",
+   "source_title": "lufkindailynews.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-weekly-jobless-claims-near-57-year-lows-undersc-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T17:30:00Z"
   }
  ]
 }

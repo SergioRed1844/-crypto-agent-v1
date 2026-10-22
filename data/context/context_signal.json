@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-22T17:15:41Z",
+ "generated_utc": "2026-10-22T18:14:42Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.365,
- "event_risk": 0.086,
+ "bias": -0.356,
+ "event_risk": 0.09,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.37"
+  "Precaución: sesgo -0.36"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.086,
+   "riesgo": 0.09,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.441,
+   "aporte": -0.439,
    "fuente": "noticia"
   },
   {
@@ -45,16 +45,25 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.399,
+   "aporte": 0.398,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-weekly-unemployment-claims-near-57-year-low-2026-10-22",
+   "id": "news-us-weekly-jobless-claims-near-57-year-lows-undersc-2026-10-22",
    "date": "2026-10-22",
-   "title_es": "Peticiones semanales de subsidio por desempleo en EE. UU. cerca de mínimos de 57 años",
+   "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.324,
+   "aporte": -0.328,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.319,
    "fuente": "noticia"
   },
   {
@@ -63,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.27,
+   "aporte": -0.268,
    "fuente": "noticia"
   },
   {
@@ -72,16 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.262,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-etfs-just-saw-their-biggest-day-in-a-month-2026-10-20",
-   "date": "2026-10-20",
-   "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.258,
+   "aporte": 0.261,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.227,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.53
+  "stablecoins_30d_pct": -0.54
  }
 }
