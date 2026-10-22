@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-22T21:12:45+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-22
+Última corrida: **2026-10-22T22:11:51+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-22
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -27,7 +27,7 @@ Todavía ninguna.
 | Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 41% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 43% | 43% | 88% | -0.1% |
-| Capitulación con miedo extremo | us | 7 d | 73 | 54% | 30% | 39% | 59% | +1.1% |
+| Capitulación con miedo extremo | us | 7 d | 73 | 54% | 30% | 39% | 60% | +1.1% |
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.7% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 73% | +0.3% |
 | Choque del peso con BMV castigada | bmv | 7 d | 99 | 33% | 28% | 31% | 48% | +0.0% |
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-22 | binance |
 | ^MXX | sí | 2026-10-22 | yahoo |
 | ^VIX | sí | 2026-10-22 | yahoo |
-| contexto_v42 | sí | 2026-10-22T20:17:35Z | CAUTION |
+| contexto_v42 | sí | 2026-10-22T21:12:33Z | CAUTION |
 | fear_greed | sí | 2026-10-22 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-21 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-21 | wikimedia |
