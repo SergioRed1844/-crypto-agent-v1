@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T15:17:18Z",
+ "generated_utc": "2026-10-22T16:16:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.363,
- "event_risk": 0.079,
+ "event_risk": 0.083,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.079,
+   "riesgo": 0.083,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.443,
+   "aporte": -0.442,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.401,
+   "aporte": 0.4,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.275,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.273,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.264,
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.26,
+   "aporte": 0.259,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
