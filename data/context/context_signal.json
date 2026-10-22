@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-22T14:18:09Z",
- "state": "RISK_OFF",
- "veto_entries": true,
+ "generated_utc": "2026-10-22T15:17:18Z",
+ "state": "CAUTION",
+ "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.0,
- "bias": -0.364,
- "event_risk": 0.076,
- "extra_confluence": 0,
+ "size_mult": 0.5,
+ "bias": -0.363,
+ "event_risk": 0.079,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años."
+  "Precaución: sesgo -0.36"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.076,
+   "riesgo": 0.079,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.445,
+   "aporte": -0.443,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.403,
+   "aporte": 0.401,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.286,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.261,
+   "aporte": 0.26,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -99,30 +99,12 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.23,
+   "aporte": 0.229,
    "fuente": "noticia"
   }
  ],
- "alerts": [
-  {
-   "id": "DORMANT_WHALE-eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
-   "type": "DORMANT_WHALE",
-   "severity": "alta",
-   "txid": "eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
-   "block_height": 972341,
-   "block_time_utc": "2026-10-20T14:16:35Z",
-   "detected_utc": "2026-10-20T15:00:39Z",
-   "btc_moved": 500.0,
-   "max_age_years": 10.74,
-   "btc_aged_5y": 500.0,
-   "btc_aged_10y": 500.0,
-   "n_inputs": 1,
-   "detail_es": "Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años.",
-   "url": "https://mempool.space/tx/eb0bde50049e924590a1812af2d2699c13d513415d3f03bbe3d10f316b3d6756",
-   "action": "RISK_OFF_BLOCK"
-  }
- ],
- "cause": "onchain",
+ "alerts": [],
+ "cause": "bias",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
@@ -133,6 +115,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.52
+  "stablecoins_30d_pct": -0.53
  }
 }
