@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-22T20:12:53Z",
+ "generated_utc": "2026-10-22T20:17:35Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -63,7 +63,7 @@
    "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.315,
+   "aporte": -0.314,
    "fuente": "noticia"
   },
   {
@@ -115,6 +115,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.55
+  "stablecoins_30d_pct": -0.54
  }
 }

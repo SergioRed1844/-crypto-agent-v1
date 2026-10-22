@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T20:12:53Z",
+ "updated_utc": "2026-10-22T20:17:35Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5385,6 +5385,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T17:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "equities",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Acciones tecnológicas arrastran a la baja los mercados globales mientras sube el crudo",
+   "source_url": "https://econotimes.com/Technology-Shares-Drag-Global-Markets-Lower-as-Brent-Reaches-Five-Month-High-1760475",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-technology-shares-drag-global-markets-lower-as-bre-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T19:00:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "conflict",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El petróleo sube por temores de suministro ante posibles ataques entre EE.UU. e Irán",
+   "source_url": "https://www.finanzen.ch/nachrichten/aktien/crude-oil-soars-amid-rising-supply-disruption-concerns-due-to-possible-fresh-u-s-iran-attacks-1036656452",
+   "source_title": "finanzen.ch",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-crude-oil-soars-amid-rising-supply-disruption-conc-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T20:00:00Z"
   }
  ]
 }
