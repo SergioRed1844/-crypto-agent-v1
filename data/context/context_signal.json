@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T05:26:02Z",
+ "generated_utc": "2026-10-22T06:25:10Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.359,
- "event_risk": 0.053,
+ "event_risk": 0.055,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.053,
+   "riesgo": 0.055,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.457,
+   "aporte": -0.455,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.413,
+   "aporte": 0.412,
    "fuente": "noticia"
   },
   {
@@ -54,25 +54,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.289,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-uk-inflation-rises-to-highest-in-almost-a-year-as-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.276,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-etfs-just-saw-their-biggest-day-in-a-month-2026-10-20",
-   "date": "2026-10-20",
-   "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.271,
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -82,6 +64,24 @@
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
    "aporte": 0.271,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-uk-inflation-rises-to-highest-in-almost-a-year-as-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.271,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-etfs-just-saw-their-biggest-day-in-a-month-2026-10-20",
+   "date": "2026-10-20",
+   "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.27,
    "fuente": "noticia"
   },
   {
