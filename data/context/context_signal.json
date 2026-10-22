@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T18:14:42Z",
+ "generated_utc": "2026-10-22T18:46:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.356,
- "event_risk": 0.09,
+ "bias": -0.355,
+ "event_risk": 0.092,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.09,
+   "riesgo": 0.092,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.398,
+   "aporte": 0.397,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.328,
+   "aporte": -0.324,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.319,
+   "aporte": 0.318,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.268,
+   "aporte": -0.267,
    "fuente": "noticia"
   },
   {
