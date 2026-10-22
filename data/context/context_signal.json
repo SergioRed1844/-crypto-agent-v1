@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T01:48:07Z",
+ "generated_utc": "2026-10-22T02:28:40Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.362,
- "event_risk": 0.045,
+ "bias": -0.361,
+ "event_risk": 0.047,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.462,
+   "aporte": -0.461,
    "fuente": "noticia"
   },
   {
@@ -45,16 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.418,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-uk-inflation-rises-to-highest-in-almost-a-year-as-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.298,
+   "aporte": 0.417,
    "fuente": "noticia"
   },
   {
@@ -63,7 +54,16 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.296,
+   "aporte": -0.294,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-uk-inflation-rises-to-highest-in-almost-a-year-as-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.275,
+   "aporte": 0.274,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.239,
+   "aporte": 0.238,
    "fuente": "noticia"
   }
  ],
@@ -133,6 +133,6 @@
    "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.51
+  "stablecoins_30d_pct": -0.52
  }
 }
