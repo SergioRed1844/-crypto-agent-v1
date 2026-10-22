@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T10:21:39Z",
+ "updated_utc": "2026-10-22T11:20:44Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5217,6 +5217,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-21T23:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "inflation",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados",
+   "source_url": "https://www.fool.com/investing/2026/10/22/inflation-data-bad-news-kevin-warsh-stock-market/",
+   "source_title": "fool.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-the-latest-inflation-data-spells-bad-news-for-fed-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T09:45:00Z"
   }
  ]
 }
