@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T16:20:55Z",
+ "generated_utc": "2026-10-22T17:15:41Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.366,
- "event_risk": 0.083,
+ "bias": -0.365,
+ "event_risk": 0.086,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.083,
+   "riesgo": 0.086,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.442,
+   "aporte": -0.441,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.4,
+   "aporte": 0.399,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Peticiones semanales de subsidio por desempleo en EE. UU. cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.331,
+   "aporte": -0.324,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.263,
+   "aporte": 0.262,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.259,
+   "aporte": 0.258,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.229,
+   "aporte": 0.228,
    "fuente": "noticia"
   }
  ],
