@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-22T14:04:26Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-22T14:18:09Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.36 · riesgo de evento 0.08 · tamaño ×0.0 · VETO a compras
 
@@ -14,10 +14,10 @@ Actualizado 2026-10-22T14:04:26Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.445 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.403 |
-| Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados | 2026-10-22 | anti | -0.287 |
-| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.275 |
-| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.265 |
-| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.262 |
+| Nuevos datos de inflación en EE. UU. complican panorama para la Fed y mercados | 2026-10-22 | anti | -0.286 |
+| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.274 |
+| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.264 |
+| ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock | 2026-10-20 | pro | +0.261 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.243 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.230 |
 
@@ -28,19 +28,19 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-22T14:04:26Z",
+ "inicio": "2026-10-22T14:18:09Z",
  "onchain": {
   "scanned": [
-   972618,
-   972619
+   972620,
+   972620
   ],
-  "calls": 89,
+  "calls": 38,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 7,
+  "titulares": 8,
   "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
