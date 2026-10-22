@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T22:11:40Z",
+ "updated_utc": "2026-10-22T22:43:36Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5398,6 +5398,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-technology-shares-drag-global-markets-lower-as-bre-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T19:00:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "real_estate_crisis",
+   "country": "CN",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "Liquidadores de China Evergrande recuperan solo el 1% de 46.000 millones en deudas",
+   "source_url": "https://www.theepochtimes.com/china/china-evergrande-liquidators-recover-just-1-percent-of-46-billion-in-debt-claims-6107619",
+   "source_title": "theepochtimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-china-evergrande-liquidators-recover-just-1-percen-2026-10-22",
    "date": "2026-10-22",
    "status": "happened",
    "scheduled": false,

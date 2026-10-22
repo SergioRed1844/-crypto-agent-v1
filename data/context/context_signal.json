@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-22T22:11:40Z",
+ "generated_utc": "2026-10-22T22:43:36Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.352,
- "event_risk": 0.106,
+ "event_risk": 0.108,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.106,
+   "riesgo": 0.108,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -63,7 +63,7 @@
    "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.302,
+   "aporte": -0.299,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.261,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.225,
+   "aporte": 0.224,
    "fuente": "noticia"
   }
  ],
