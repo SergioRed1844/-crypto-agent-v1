@@ -1,19 +1,34 @@
 {
- "generated_utc": "2026-10-21T23:31:17Z",
+ "generated_utc": "2026-10-22T00:30:23Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.363,
- "event_risk": 0.0,
+ "event_risk": 0.043,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años."
  ],
- "upcoming": [],
+ "upcoming": [
+  {
+   "id": "br-presidential-runoff-2026",
+   "utc": "2026-10-25T12:00:00Z",
+   "title_es": "Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula",
+   "category": "ELECTION",
+   "status": "confirmed",
+   "magnitud": 0.31,
+   "riesgo": 0.043,
+   "ventana": [
+    "2026-10-24T00:00:00Z",
+    "2026-10-26T12:00:00Z"
+   ],
+   "en_ventana": false
+  }
+ ],
  "recent": [
   {
    "id": "news-futures-slip-as-korean-data-center-ipo-faceplant-r-2026-10-20",
@@ -21,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.465,
+   "aporte": -0.463,
    "fuente": "noticia"
   },
   {
@@ -30,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.421,
+   "aporte": 0.419,
    "fuente": "noticia"
   },
   {
@@ -39,7 +54,7 @@
    "title_es": "Inflación de Reino Unido repunta a máximos por conflicto con Irán",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.313,
+   "aporte": -0.306,
    "fuente": "noticia"
   },
   {
@@ -48,7 +63,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.3,
+   "aporte": -0.298,
    "fuente": "noticia"
   },
   {
@@ -57,7 +72,7 @@
    "title_es": "ETF de Bitcoin registran su mayor entrada mensual impulsados por BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.278,
+   "aporte": 0.277,
    "fuente": "noticia"
   },
   {
@@ -66,7 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.276,
+   "aporte": 0.275,
    "fuente": "noticia"
   },
   {
@@ -75,16 +90,16 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
-   "id": "news-ether-etfs-have-given-back-62-of-this-year-inflows-2026-10-19",
-   "date": "2026-10-19",
-   "title_es": "Los ETF de Ethereum pierden el 62% de los flujos de entrada de este año",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.241,
+   "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.24,
    "fuente": "noticia"
   }
  ],
@@ -115,7 +130,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 63
+   "fear_greed": 68
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -0.06
