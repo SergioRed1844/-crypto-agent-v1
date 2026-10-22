@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-22T12:23:28Z",
+ "updated_utc": "2026-10-22T13:19:05Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5238,6 +5238,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T09:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "central_banks",
+   "country": "GLOBAL",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "El dólar se estabiliza a la espera de decisiones sobre tasas de cinco bancos centrales",
+   "source_url": "https://econotimes.com/Dollar-Pauses-as-Five-Central-Banks-Prepare-Rate-Decisions-1760116",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-dollar-pauses-as-five-central-banks-prepare-rate-d-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T11:15:00Z"
   }
  ]
 }
