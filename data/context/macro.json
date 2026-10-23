@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-23T22:39:27Z",
+ "generated_utc": "2026-10-23T22:51:48Z",
  "fear_greed": {
   "value": 50,
   "label": "Neutral",
@@ -18,8 +18,8 @@
   "br-presidential-runoff-2026": {
    "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "outcomes": {
-    "Yes": 0.235,
-    "No": 0.765
+    "Yes": 0.225,
+    "No": 0.775
    },
    "volume": 29115999.016752,
    "slug": "brazil-presidential-election"
@@ -27,8 +27,8 @@
   "us-midterms-2026": {
    "question": "2026 Balance of Power: R Senate, R House",
    "outcomes": {
-    "Yes": 0.075,
-    "No": 0.925
+    "Yes": 0.085,
+    "No": 0.915
    },
    "volume": 11196279.266008005,
    "slug": "balance-of-power-2026-midterms"

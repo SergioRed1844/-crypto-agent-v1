@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T22:36:07Z",
+ "generated_utc": "2026-10-23T22:49:31Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.854,
+ "size_mult": 0.852,
  "bias": -0.16,
- "event_risk": 0.293,
+ "event_risk": 0.296,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.16, riesgo de evento 0.29"
+  "Contexto neutral: sesgo -0.16, riesgo de evento 0.30"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.293,
+   "riesgo": 0.296,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.366,
+   "aporte": 0.365,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.283,
+   "aporte": -0.282,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.281,
+   "aporte": 0.28,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.221,
+   "aporte": -0.22,
    "fuente": "noticia"
   }
  ],
