@@ -19,7 +19,6 @@
   }
  },
  "runs": [
-  "2026-10-21T10:33:21+00:00",
   "2026-10-21T10:42:55+00:00",
   "2026-10-21T11:41:58+00:00",
   "2026-10-21T12:41:04+00:00",
@@ -78,9 +77,10 @@
   "2026-10-23T00:10:47+00:00",
   "2026-10-23T01:09:18+00:00",
   "2026-10-23T01:53:11+00:00",
-  "2026-10-23T02:08:25+00:00"
+  "2026-10-23T02:08:25+00:00",
+  "2026-10-23T03:07:22+00:00"
  ],
- "last_scan_utc": "2026-10-23T02:08:25+00:00",
+ "last_scan_utc": "2026-10-23T03:07:22+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -389,17 +389,17 @@
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
@@ -409,7 +409,7 @@
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
@@ -419,22 +419,22 @@
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
@@ -449,12 +449,12 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
@@ -469,7 +469,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-23T01:53:27Z",
+   "last": "2026-10-23T02:08:05Z",
    "nota": "CAUTION"
   }
  },
