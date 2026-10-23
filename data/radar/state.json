@@ -19,7 +19,6 @@
   }
  },
  "runs": [
-  "2026-10-21T10:42:55+00:00",
   "2026-10-21T11:41:58+00:00",
   "2026-10-21T12:41:04+00:00",
   "2026-10-21T12:41:47+00:00",
@@ -78,9 +77,10 @@
   "2026-10-23T01:09:18+00:00",
   "2026-10-23T01:53:11+00:00",
   "2026-10-23T02:08:25+00:00",
-  "2026-10-23T03:07:22+00:00"
+  "2026-10-23T03:07:22+00:00",
+  "2026-10-23T04:06:27+00:00"
  ],
- "last_scan_utc": "2026-10-23T03:07:22+00:00",
+ "last_scan_utc": "2026-10-23T04:06:27+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -384,7 +384,7 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
@@ -404,7 +404,7 @@
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
@@ -414,7 +414,7 @@
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
@@ -439,12 +439,12 @@
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Solana__blockchain_platform_": {
@@ -459,17 +459,17 @@
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-10-21",
+   "last": "2026-10-22",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-23T02:08:05Z",
+   "last": "2026-10-23T03:07:11Z",
    "nota": "CAUTION"
   }
  },
