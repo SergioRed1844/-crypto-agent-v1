@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-23T08:02:39Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-23T08:06:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.32 · riesgo de evento 0.16 · tamaño ×0.5 · compras permitidas
 
@@ -14,7 +14,7 @@ Actualizado 2026-10-23T08:02:39Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.422 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.382 |
-| La inflación de Japón se acelera y prepara el terreno para alzas de tasas | 2026-10-23 | anti | -0.313 |
+| La inflación de Japón se acelera y prepara el terreno para alzas de tasas | 2026-10-23 | anti | -0.312 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.301 |
 | CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.251 |
 | Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.247 |
@@ -28,20 +28,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-23T08:02:39Z",
+ "inicio": "2026-10-23T08:06:34Z",
  "onchain": {
   "scanned": [
-   972736,
-   972736
+   972737,
+   972738
   ],
-  "calls": 11,
+  "calls": 7,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 11,
-  "eventos": 0,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0

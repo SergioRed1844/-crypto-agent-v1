@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-23T08:02:39Z",
+ "generated_utc": "2026-10-23T08:06:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -54,7 +54,7 @@
    "title_es": "La inflación de Japón se acelera y prepara el terreno para alzas de tasas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.313,
+   "aporte": -0.312,
    "fuente": "noticia"
   },
   {
@@ -115,6 +115,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.64
+  "stablecoins_30d_pct": -0.63
  }
 }
