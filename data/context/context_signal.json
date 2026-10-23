@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T12:58:23Z",
+ "generated_utc": "2026-10-23T13:47:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.291,
- "event_risk": 0.196,
+ "bias": -0.289,
+ "event_risk": 0.203,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 61,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.196,
+   "riesgo": 0.203,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.416,
+   "aporte": -0.415,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.376,
+   "aporte": 0.375,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.346,
+   "aporte": -0.34,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.306,
+   "aporte": 0.305,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.295,
+   "aporte": 0.294,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.239,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.237,
+   "aporte": 0.236,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.227,
+   "aporte": -0.226,
    "fuente": "noticia"
   }
  ],
