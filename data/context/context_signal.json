@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T11:00:06Z",
+ "generated_utc": "2026-10-23T11:59:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.295,
- "event_risk": 0.181,
+ "bias": -0.293,
+ "event_risk": 0.188,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 61,
  "reasons": [
-  "Precaución: sesgo -0.30"
+  "Precaución: sesgo -0.29"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.181,
+   "riesgo": 0.188,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.418,
+   "aporte": -0.417,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.379,
+   "aporte": 0.377,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.361,
+   "aporte": -0.353,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.297,
+   "aporte": 0.296,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.241,
+   "aporte": 0.239,
    "fuente": "noticia"
   },
   {
