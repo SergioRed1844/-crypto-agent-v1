@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T00:09:48Z",
+ "updated_utc": "2026-10-23T00:13:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5448,6 +5448,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T20:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "Equities sell-off",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Nasdaq cae 694 puntos arrastrado por desplome de Meta",
+   "source_url": "https://www.kiplinger.com/investing/stocks/nasdaq-sinks-694-points-as-meta-stock-slumps-stock-market-today",
+   "source_title": "kiplinger.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-nasdaq-sinks-694-points-as-meta-stock-slumps-stock-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "21:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T21:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "Labor Market",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Peticiones de desempleo en EE. UU. se sitúan en mínimos históricos desde los 60",
+   "source_url": "https://www.aol.com/articles/unemployment-lines-shorter-time-since-210618000.html",
+   "source_title": "aol.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-unemployment-lines-are-shorter-than-any-time-since-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "22:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T22:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "Equities sell-off",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "S&P 500 y Nasdaq caen con fuerza por dudas sobre IA y liquidación tecnológica",
+   "source_url": "https://www.businesstimes.com.sg/companies-markets/capital-markets-currencies/sp-500-nasdaq-end-sharply-lower-revived-ai-doubts-ignite-tech-sell",
+   "source_title": "businesstimes.com.sg",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-s-p-500-nasdaq-end-sharply-lower-as-revived-ai-dou-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T23:45:00Z"
   }
  ]
 }

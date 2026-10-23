@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-23T00:09:48Z",
+ "generated_utc": "2026-10-23T00:13:53Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.351,
+ "bias": -0.355,
  "event_risk": 0.115,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -49,21 +49,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-s-p-500-nasdaq-end-sharply-lower-as-revived-ai-dou-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "S&P 500 y Nasdaq caen con fuerza por dudas sobre IA y liquidación tecnológica",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.33,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
    "date": "2026-10-22",
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.311,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-us-weekly-jobless-claims-near-57-year-lows-undersc-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "Peticiones semanales de desempleo en EE.UU. se sitúan cerca de mínimos de 57 años",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.29,
    "fuente": "noticia"
   },
   {
