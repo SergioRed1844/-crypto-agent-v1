@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T17:53:57Z",
+ "generated_utc": "2026-10-23T18:41:16Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.88,
- "bias": -0.166,
- "event_risk": 0.241,
+ "size_mult": 0.876,
+ "bias": -0.165,
+ "event_risk": 0.249,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.17, riesgo de evento 0.24"
+  "Contexto neutral: sesgo -0.16, riesgo de evento 0.25"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.241,
+   "riesgo": 0.249,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.41,
+   "aporte": -0.409,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.371,
+   "aporte": 0.37,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.312,
+   "aporte": -0.307,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.31,
+   "aporte": 0.305,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.289,
+   "aporte": 0.288,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.233,
+   "aporte": -0.232,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.226,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.63
+  "stablecoins_30d_pct": -0.62
  }
 }
