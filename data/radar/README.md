@@ -1,12 +1,16 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-23T20:51:41+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-23
+Última corrida: **2026-10-23T21:41:12+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-23
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-Ninguno.
+| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
+|---|---|---|---|---|---|---|---|
+| VIGILANCIA | GMEXICOB.MX | Choque del peso con BMV castigada | 2026-10-23 | 30 d | 48% | 44% | +2.4% |
+| VIGILANCIA | GMEXICOB.MX | Retroceso dentro de tendencia alcista | 2026-10-23 | 7 d | 45% | 38% | +0.4% |
+| VIGILANCIA | KIMBERA.MX | Choque del peso con BMV castigada | 2026-10-23 | 30 d | 36% | 32% | +1.4% |
 
 ## Alertas enviadas (últimas 15)
 
@@ -130,7 +134,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-23 | binance |
 | ^MXX | sí | 2026-10-23 | yahoo |
 | ^VIX | sí | 2026-10-23 | yahoo |
-| contexto_v42 | sí | 2026-10-23T19:56:59Z | NEUTRAL |
+| contexto_v42 | sí | 2026-10-23T20:51:22Z | NEUTRAL |
 | fear_greed | sí | 2026-10-23 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-22 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-22 | wikimedia |
