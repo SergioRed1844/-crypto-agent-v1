@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T11:59:09Z",
+ "generated_utc": "2026-10-23T12:04:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.293,
- "event_risk": 0.188,
+ "event_risk": 0.189,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 61,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.188,
+   "riesgo": 0.189,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
