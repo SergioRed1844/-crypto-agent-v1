@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T07:54:32Z",
+ "generated_utc": "2026-10-23T08:02:39Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.321,
- "event_risk": 0.159,
+ "event_risk": 0.16,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 62,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.159,
+   "riesgo": 0.16,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -76,21 +76,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-america-is-borrowing-3-billion-a-day-just-to-pay-i-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
-   "category": "FISCAL",
-   "stance": "pro",
-   "aporte": 0.248,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-drift-exploiter-sends-109m-in-eth-to-tornado-cash-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.247,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-america-is-borrowing-3-billion-a-day-just-to-pay-i-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
+   "category": "FISCAL",
+   "stance": "pro",
+   "aporte": 0.247,
    "fuente": "noticia"
   },
   {
