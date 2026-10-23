@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T13:57:31Z",
+ "generated_utc": "2026-10-23T14:56:31Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.288,
- "event_risk": 0.204,
+ "bias": -0.286,
+ "event_risk": 0.213,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 61,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.204,
+   "riesgo": 0.213,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.414,
+   "aporte": -0.413,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.375,
+   "aporte": 0.374,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.339,
+   "aporte": -0.332,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.305,
+   "aporte": 0.304,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.293,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.235,
+   "aporte": 0.233,
    "fuente": "noticia"
   },
   {
