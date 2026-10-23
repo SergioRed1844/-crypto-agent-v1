@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T15:55:38Z",
+ "generated_utc": "2026-10-23T16:00:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.283,
- "event_risk": 0.222,
+ "event_risk": 0.223,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 61,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.222,
+   "riesgo": 0.223,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -90,7 +90,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.232,
+   "aporte": 0.231,
    "fuente": "noticia"
   },
   {
