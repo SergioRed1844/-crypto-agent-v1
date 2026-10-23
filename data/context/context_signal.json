@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T01:09:05Z",
+ "generated_utc": "2026-10-23T01:53:27Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.337,
- "event_risk": 0.12,
+ "bias": -0.354,
+ "event_risk": 0.124,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 63,
+ "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.34"
+  "Precaución: sesgo -0.35"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.12,
+   "riesgo": 0.124,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.431,
+   "aporte": -0.43,
    "fuente": "noticia"
   },
   {
@@ -45,16 +45,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.39,
+   "aporte": 0.389,
    "fuente": "noticia"
   },
   {
-   "id": "news-s-p-500-nasdaq-end-sharply-lower-as-revived-ai-dou-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "S&P 500 y Nasdaq caen con fuerza por dudas sobre IA y liquidación tecnológica",
+   "id": "news-s-p-500-nasdaq-end-sharply-lower-as-revived-ai-dou-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "S&P 500 y Nasdaq caen con fuerza ante dudas sobre la IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.323,
+   "aporte": -0.322,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.256,
+   "aporte": 0.255,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.222,
    "fuente": "noticia"
   }
  ],
@@ -115,6 +115,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.55
+  "stablecoins_30d_pct": -0.64
  }
 }

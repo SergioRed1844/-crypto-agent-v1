@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T01:09:05Z",
+ "updated_utc": "2026-10-23T01:53:27Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5574,6 +5574,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_SELLOFF",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Nasdaq se desploma 2.6% por temores sobre gasto en IA",
+   "source_url": "https://www.staradvertiser.com/2026/10/22/breaking-news/nasdaq-plunges-2-6-as-ai-spending-fears-spark-tech-selloff/",
+   "source_title": "staradvertiser.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-nasdaq-plunges-2-6-as-ai-spending-fears-spark-tech-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_SELLOFF",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "S&P 500 y Nasdaq caen con fuerza ante dudas sobre la IA",
+   "source_url": "https://www.freemalaysiatoday.com/category/business/2026/10/23/s-p-500-nasdaq-end-sharply-lower-as-revived-ai-doubts-ignite-tech-selloff",
+   "source_title": "freemalaysiatoday.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-s-p-500-nasdaq-end-sharply-lower-as-revived-ai-dou-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T00:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "CENTRAL_BANK",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación subyacente de Japón supera meta del BOJ y afianza alza de tasas",
+   "source_url": "https://english.kontan.co.id/news/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance",
+   "source_title": "english.kontan.co.id",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-japan-core-inflation-exceeds-boj-target-cements-ne-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T01:15:00Z"
   }
  ]
 }
