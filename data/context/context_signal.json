@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T19:56:59Z",
+ "generated_utc": "2026-10-23T20:51:22Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.869,
- "bias": -0.163,
- "event_risk": 0.262,
+ "size_mult": 0.864,
+ "bias": -0.162,
+ "event_risk": 0.272,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.16, riesgo de evento 0.26"
+  "Contexto neutral: sesgo -0.16, riesgo de evento 0.27"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.262,
+   "riesgo": 0.272,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.407,
+   "aporte": -0.406,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.369,
+   "aporte": 0.368,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.299,
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.297,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.286,
+   "aporte": 0.285,
    "fuente": "noticia"
   },
   {
@@ -90,16 +90,16 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.23,
+   "aporte": -0.229,
    "fuente": "noticia"
   },
   {
-   "id": "news-america-is-borrowing-3-billion-a-day-just-to-pay-i-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
-   "category": "FISCAL",
-   "stance": "pro",
-   "aporte": 0.224,
+   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.222,
    "fuente": "noticia"
   }
  ],
