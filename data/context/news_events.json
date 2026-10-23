@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T16:54:53Z",
+ "updated_utc": "2026-10-23T17:53:57Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5889,6 +5889,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T09:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "Consumer Sentiment",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
+   "source_url": "https://investinglive.com/news/umich-final-october-final-consumer-sentiment-48-0-vs-46-3-expected/",
+   "source_title": "investinglive.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-umich-final-october-final-consumer-sentiment-48-0-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T14:30:00Z"
   }
  ]
 }
