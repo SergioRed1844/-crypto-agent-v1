@@ -1,6 +1,6 @@
-# 📡 Radar EB — resumen 2026-10-22
+# 📡 Radar EB — resumen 2026-10-23
 
-**Sigo vivo:** 35 corridas en 24 h · última 2026-10-22T14:04:27+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 35 corridas en 24 h · última 2026-10-23T15:55:57+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
@@ -8,7 +8,7 @@ Ningún setup disparó en las últimas 24 h. Eso también es información: no ha
 
 ## Clima de mercado
 
-BTC 84,093 (caída desde máximo de 1 año -27%; Fear&Greed 63) · S&P (SPY) -0.8% vs máximo de 1 año; VIX 16.7 · miedo de hogares (Wikipedia, EUA) z=-0.2 · peso 5 días +0.8% (USD/MXN); IPC vs máximo 1 año -1.9% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 con ≥10); el input más viejo tenía 10.7 años.)
+BTC 81,416 (caída desde máximo de 1 año -29%; Fear&Greed 68) · S&P (SPY) -1.9% vs máximo de 1 año; VIX 19.0 · miedo de hogares (Wikipedia, EUA) z=+0.8 · peso 5 días +0.3% (USD/MXN); IPC vs máximo 1 año -2.4% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.29)
 
 ## Mejor día de compra (día de la semana, encogido)
 
