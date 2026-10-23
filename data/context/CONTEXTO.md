@@ -1,23 +1,23 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-23T18:41:16Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-23T18:53:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.17 · riesgo de evento 0.25 · tamaño ×0.876 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.17 · riesgo de evento 0.25 · tamaño ×0.875 · compras permitidas
 
 - Contexto neutral: sesgo -0.16, riesgo de evento 0.25
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.249 |
+| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.251 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.409 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.408 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.370 |
-| Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street | 2026-10-23 | anti | -0.307 |
-| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.305 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.301 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.288 |
+| Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street | 2026-10-23 | anti | -0.306 |
+| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.304 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.300 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.287 |
 | Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.232 |
 | EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses | 2026-10-23 | pro | +0.226 |
 
@@ -28,20 +28,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-23T18:41:16Z",
+ "inicio": "2026-10-23T18:53:04Z",
  "onchain": {
   "scanned": [
-   972810,
-   972817
+   972818,
+   972818
   ],
-  "calls": 95,
+  "calls": 13,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 10,
-  "eventos": 1,
+  "titulares": 3,
+  "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
