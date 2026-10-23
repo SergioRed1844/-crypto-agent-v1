@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T09:01:56Z",
+ "updated_utc": "2026-10-23T10:00:59Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5847,6 +5847,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T05:00:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "CHARTER_APPLICATION",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
+   "source_url": "https://www.forexcrunch.com/blog/2026/10/23/ramp-occ-trust-charter-digital-asset-custody/",
+   "source_title": "forexcrunch.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T07:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "INFLATION",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 4,
+   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
+   "source_url": "https://www.aol.com/articles/federal-reserves-latest-october-inflation-082602000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T09:15:00Z"
   }
  ]
 }

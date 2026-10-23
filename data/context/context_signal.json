@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T09:01:56Z",
+ "generated_utc": "2026-10-23T10:00:59Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.319,
- "event_risk": 0.166,
+ "bias": -0.298,
+ "event_risk": 0.173,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 62,
+ "confidence": 61,
  "reasons": [
-  "Precaución: sesgo -0.32"
+  "Precaución: sesgo -0.30"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.166,
+   "riesgo": 0.173,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.421,
+   "aporte": -0.419,
    "fuente": "noticia"
   },
   {
@@ -45,16 +45,25 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.381,
+   "aporte": 0.38,
    "fuente": "noticia"
   },
   {
-   "id": "news-japan-inflation-accelerates-paving-way-for-interes-2026-10-23",
+   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
    "date": "2026-10-23",
-   "title_es": "La inflación de Japón se acelera y prepara el terreno para alzas de tasas",
+   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.306,
+   "aporte": -0.368,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
+   "category": "CRYPTO_REGULATION",
+   "stance": "pro",
+   "aporte": 0.308,
    "fuente": "noticia"
   },
   {
@@ -63,16 +72,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.3,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-cftc-seeks-comment-on-a-tailored-federal-framework-2026-10-20",
-   "date": "2026-10-20",
-   "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
-   "category": "CRYPTO_REGULATION",
-   "stance": "pro",
-   "aporte": 0.25,
+   "aporte": 0.298,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "EE.UU. toma prestados 3.000 millones de dólares diarios para pagar intereses",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.245,
+   "aporte": 0.243,
    "fuente": "noticia"
   },
   {
@@ -99,7 +99,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.23,
+   "aporte": -0.229,
    "fuente": "noticia"
   }
  ],
