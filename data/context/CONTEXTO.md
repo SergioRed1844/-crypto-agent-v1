@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-23T23:48:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-23T23:52:01Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.16 · riesgo de evento 0.31 · tamaño ×0.846 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-23T23:48:34Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.308 |
+| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.309 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -28,20 +28,17 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-23T23:48:34Z",
+ "inicio": "2026-10-23T23:52:01Z",
  "onchain": {
-  "scanned": [
-   972845,
-   972848
-  ],
-  "calls": 49,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 1,
-  "eventos": 0,
+  "titulares": 17,
+  "eventos": 3,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
