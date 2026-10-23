@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-23 00:00:00+00:00",
-  "ETHUSDT": "2026-10-23 00:00:00+00:00",
-  "SOLUSDT": "2026-10-23 00:00:00+00:00"
+  "BTCUSDT": "2026-10-23 04:00:00+00:00",
+  "ETHUSDT": "2026-10-23 04:00:00+00:00",
+  "SOLUSDT": "2026-10-23 04:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 5.092183934069994,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-23T02:00:00Z"
+     "last_checked": "2026-10-23T03:00:00Z"
     },
     "BTCUSDT": {
      "pair": "BTCUSDT",
@@ -36,7 +36,7 @@
      "unit": 2313.351557687151,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-23T02:00:00Z"
+     "last_checked": "2026-10-23T03:00:00Z"
     }
    },
    "trades": [],
@@ -54,7 +54,7 @@
      "unit": 2206.5526565023843,
      "risk_frac": 0.0025,
      "cs": 8,
-     "last_checked": "2026-10-23T02:00:00Z",
+     "last_checked": "2026-10-23T03:00:00Z",
      "ctx_state": "CAUTION"
     }
    },
@@ -721,10 +721,38 @@
    "neta": 0.0715,
    "rr_neto": 2.19,
    "B": "contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c"
+  },
+  {
+   "t": "2026-10-23T04:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 81889.32,
+   "A": "ya hay posición en el par",
+   "ctx": "CAUTION",
+   "fg": 50,
+   "funding": 7.82965490071e-05,
+   "funding_src": "okx",
+   "neta": 0.0327,
+   "rr_neto": 1.92,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-10-23T04:00:00Z",
+   "pair": "ETHUSDT",
+   "cs": 6,
+   "precio": 2410.73,
+   "A": "máx 2 posiciones",
+   "ctx": "CAUTION",
+   "fg": 50,
+   "funding": 7.37274386928e-05,
+   "funding_src": "okx",
+   "neta": 0.059,
+   "rr_neto": 2.14,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
   }
  ],
  "notified": [],
- "runs": 219,
- "updated_utc": "2026-10-23T03:07:45Z",
- "n_signals": 47
+ "runs": 220,
+ "updated_utc": "2026-10-23T04:06:50Z",
+ "n_signals": 49
 }
