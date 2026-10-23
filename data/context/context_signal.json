@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T21:50:26Z",
+ "generated_utc": "2026-10-23T22:36:07Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.858,
- "bias": -0.161,
- "event_risk": 0.284,
+ "size_mult": 0.854,
+ "bias": -0.16,
+ "event_risk": 0.293,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.16, riesgo de evento 0.28"
+  "Contexto neutral: sesgo -0.16, riesgo de evento 0.29"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.284,
+   "riesgo": 0.293,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.405,
+   "aporte": -0.404,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.367,
+   "aporte": 0.366,
    "fuente": "noticia"
   },
   {
@@ -54,25 +54,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.298,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.288,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-umich-final-october-final-consumer-sentiment-48-0-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.286,
+   "aporte": 0.297,
    "fuente": "noticia"
   },
   {
@@ -81,7 +63,25 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.284,
+   "aporte": 0.283,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.283,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-umich-final-october-final-consumer-sentiment-48-0-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.281,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.228,
+   "aporte": -0.226,
    "fuente": "noticia"
   },
   {
