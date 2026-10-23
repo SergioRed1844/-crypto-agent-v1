@@ -2,9 +2,9 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 23-Oct 12:16 · **Día 7.0** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 23-Oct 12:53 · **Día 7.0** · **Estado:** corriendo
 
-Última vela 4H revisada: 23-Oct 10:00 · señales técnicas desde el inicio: 52 · corridas: 241. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 23-Oct 10:00 · señales técnicas desde el inicio: 52 · corridas: 242. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
