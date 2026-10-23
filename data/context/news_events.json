@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T03:07:11Z",
+ "updated_utc": "2026-10-23T04:06:13Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5534,6 +5534,27 @@
    "utc": "2026-10-22T23:45:00Z"
   },
   {
+   "category": "MACRO_DATA",
+   "subcategory": "Inflation / Import Prices",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Precios de importación en EE. UU. registran mayor aumento en años antes de midterms",
+   "source_url": "https://www.ibtimes.com/voters-face-higher-cost-living-midterms-loom-import-prices-saw-highest-jump-years-3808818",
+   "source_title": "ibtimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-voters-face-higher-cost-of-living-as-midterms-loom-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T23:45:00Z"
+  },
+  {
    "category": "MONETARY_POLICY",
    "subcategory": "",
    "country": "US",
@@ -5637,6 +5658,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T01:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Fed Rate Expectation",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Previa de la Fed: pausa en octubre pero se proyectan más subidas de tasas",
+   "source_url": "https://www.actionforex.com/contributors/fundamental-analysis/658415-fed-preview-on-hold-in-october-hiking-resumes-later/",
+   "source_title": "actionforex.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-preview-on-hold-in-october-hiking-resumes-late-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T03:15:00Z"
   }
  ]
 }
