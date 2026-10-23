@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-23T19:52:08Z",
+ "generated_utc": "2026-10-23T19:56:59Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.869,
  "bias": -0.163,
- "event_risk": 0.261,
+ "event_risk": 0.262,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.261,
+   "riesgo": 0.262,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -49,15 +49,6 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.3,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
    "date": "2026-10-23",
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
@@ -67,12 +58,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-the-federal-reserve-latest-october-inflation-forec-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.299,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-umich-final-october-final-consumer-sentiment-48-0-2026-10-23",
    "date": "2026-10-23",
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.298,
+   "aporte": 0.297,
    "fuente": "noticia"
   },
   {
