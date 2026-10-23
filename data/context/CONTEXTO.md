@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-23T04:09:59Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-23T05:05:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.14 · tamaño ×0.5 · compras permitidas
 
@@ -8,18 +8,18 @@ Actualizado 2026-10-23T04:09:59Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.136 |
+| Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.141 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.427 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.386 |
-| S&P 500 y Nasdaq caen con fuerza ante dudas sobre la IA | 2026-10-23 | anti | -0.307 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.306 |
-| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.254 |
-| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.253 |
-| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.233 |
-| Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.221 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.426 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.385 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.304 |
+| S&P 500 y Nasdaq caen con fuerza ante dudas sobre la IA | 2026-10-23 | anti | -0.301 |
+| CFTC solicita comentarios para crear un marco federal de trading minorista cript | 2026-10-20 | pro | +0.253 |
+| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.251 |
+| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.232 |
+| Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.220 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -28,13 +28,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-23T04:09:59Z",
+ "inicio": "2026-10-23T05:05:27Z",
  "onchain": {
   "scanned": [
-   972707,
-   972711
+   972712,
+   972714
   ],
-  "calls": 66,
+  "calls": 36,
   "stopped": null,
   "nuevas": 0
  },
