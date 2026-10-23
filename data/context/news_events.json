@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-23T00:13:53Z",
+ "updated_utc": "2026-10-23T01:09:05Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5429,6 +5429,27 @@
    "utc": "2026-10-22T19:00:00Z"
   },
   {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Traders reducen apuestas de más subidas de tasas de la Fed",
+   "source_url": "https://www.aol.com/articles/bond-traders-backing-off-fed-180507000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bond-traders-are-backing-off-fed-rate-hike-bets-he-2026-10-22",
+   "date": "2026-10-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-22T19:15:00Z"
+  },
+  {
    "category": "GEOPOLITICAL",
    "subcategory": "conflict",
    "country": "GLOBAL",
@@ -5511,6 +5532,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-22T23:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "El dólar cae al moderarse las apuestas de alzas de la Fed",
+   "source_url": "https://www.rttnews.com/3702049/u-s-dollar-slips-as-bets-on-federal-reserve-rate-hike-decline.aspx",
+   "source_title": "rttnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-dollar-slips-as-bets-on-federal-reserve-rate-h-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Rendimiento del bono del Tesoro a 10 años cae bajo el 5%",
+   "source_url": "https://econotimes.com/U-S-10-Year-Treasury-Yield-Falls-Below-5-as-Tech-Stocks-Slide-1760720",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-10-year-treasury-yield-falls-below-5-as-tech-s-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T00:00:00Z"
   }
  ]
 }

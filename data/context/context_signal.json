@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-23T00:13:53Z",
+ "generated_utc": "2026-10-23T01:09:05Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.355,
- "event_risk": 0.115,
+ "bias": -0.337,
+ "event_risk": 0.12,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 64,
+ "confidence": 63,
  "reasons": [
-  "Precaución: sesgo -0.35"
+  "Precaución: sesgo -0.34"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.31,
-   "riesgo": 0.115,
+   "riesgo": 0.12,
    "ventana": [
     "2026-10-24T00:00:00Z",
     "2026-10-26T12:00:00Z"
@@ -36,7 +36,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.432,
+   "aporte": -0.431,
    "fuente": "noticia"
   },
   {
@@ -45,7 +45,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.391,
+   "aporte": 0.39,
    "fuente": "noticia"
   },
   {
@@ -54,7 +54,7 @@
    "title_es": "S&P 500 y Nasdaq caen con fuerza por dudas sobre IA y liquidación tecnológica",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.33,
+   "aporte": -0.323,
    "fuente": "noticia"
   },
   {
@@ -63,7 +63,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.311,
+   "aporte": 0.309,
    "fuente": "noticia"
   },
   {
@@ -72,7 +72,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.259,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -81,7 +81,7 @@
    "title_es": "CFTC solicita comentarios para crear un marco federal de trading minorista cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.257,
+   "aporte": 0.256,
    "fuente": "noticia"
   },
   {
@@ -90,7 +90,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.235,
    "fuente": "noticia"
   },
   {
