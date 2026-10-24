@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-24T20:30:06Z",
+ "generated_utc": "2026-10-24T21:09:44Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.832,
+ "size_mult": 0.831,
  "bias": -0.195,
- "event_risk": 0.336,
+ "event_risk": 0.337,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.20, riesgo de evento 0.34"
+  "Contexto neutral: sesgo -0.19, riesgo de evento 0.34"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.037,
+   "riesgo": 0.038,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.343,
+   "aporte": 0.342,
    "fuente": "noticia"
   },
   {
@@ -68,16 +68,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.299,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-inflation-is-running-hotter-than-expected-that-cou-2026-10-24",
-   "date": "2026-10-24",
-   "title_es": "Inflación supera expectativas y podría beneficiar a Bitcoin",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.281,
+   "aporte": -0.298,
    "fuente": "noticia"
   },
   {
@@ -90,12 +81,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
+   "id": "news-inflation-is-running-hotter-than-expected-that-cou-2026-10-24",
    "date": "2026-10-24",
-   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
+   "title_es": "Inflación supera expectativas y podría beneficiar a Bitcoin",
    "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.262,
+   "stance": "pro",
+   "aporte": 0.277,
    "fuente": "noticia"
   },
   {
@@ -108,12 +99,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
+   "date": "2026-10-24",
+   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.258,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.207,
+   "aporte": -0.206,
    "fuente": "noticia"
   }
  ],
