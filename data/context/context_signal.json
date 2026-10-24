@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T07:41:28Z",
+ "generated_utc": "2026-10-24T07:45:27Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -77,7 +77,7 @@
    "title_es": "El índice de semiconductores cae 6,7% arrastrando al Nasdaq",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.278,
+   "aporte": -0.277,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.273,
+   "aporte": 0.272,
    "fuente": "noticia"
   },
   {
@@ -95,16 +95,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.233,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-drift-exploiter-sends-109m-in-eth-to-tornado-cash-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.215,
+   "aporte": 0.232,
    "fuente": "noticia"
   },
   {
@@ -114,6 +105,15 @@
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
    "aporte": -0.215,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-drift-exploiter-sends-109m-in-eth-to-tornado-cash-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.214,
    "fuente": "noticia"
   }
  ],
