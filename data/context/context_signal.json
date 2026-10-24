@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T18:20:41Z",
+ "generated_utc": "2026-10-24T18:31:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -68,7 +68,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.302,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Inflación supera expectativas y podría beneficiar a Bitcoin",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.294,
+   "aporte": 0.293,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.261,
+   "aporte": 0.26,
    "fuente": "noticia"
   },
   {
