@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T09:39:48Z",
+ "updated_utc": "2026-10-24T10:38:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5952,6 +5952,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T23:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "commodities_energy",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El crudo Brent supera los 116 dólares, máximo desde finales de abril",
+   "source_url": "http://www.thejakartapost.com/business/2026/10/24/oil-tops-116-with-stocks-mixed-on-earnings-ai",
+   "source_title": "thejakartapost.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-brent-oil-tops-116-highest-since-late-april-market-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "08:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T08:30:00Z"
   }
  ]
 }

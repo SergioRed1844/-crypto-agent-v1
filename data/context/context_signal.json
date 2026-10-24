@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-24T09:39:48Z",
- "state": "NEUTRAL",
+ "generated_utc": "2026-10-24T10:38:52Z",
+ "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.837,
- "bias": -0.17,
- "event_risk": 0.327,
- "extra_confluence": 0,
+ "size_mult": 0.5,
+ "bias": -0.231,
+ "event_risk": 0.328,
+ "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 56,
+ "confidence": 59,
  "reasons": [
-  "Contexto neutral: sesgo -0.17, riesgo de evento 0.33"
+  "Precaución: sesgo -0.23"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.391,
+   "aporte": -0.39,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.354,
+   "aporte": 0.353,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-brent-oil-tops-116-highest-since-late-april-market-2026-10-24",
+   "date": "2026-10-24",
+   "title_es": "El crudo Brent supera los 116 dólares, máximo desde finales de abril",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.318,
    "fuente": "noticia"
   },
   {
@@ -77,16 +86,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.27,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-semiconductor-index-drops-6-7-as-nasdaq-slides-on-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "El índice de semiconductores cae 6,7% arrastrando al Nasdaq",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.267,
+   "aporte": 0.269,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.219,
    "fuente": "noticia"
   },
   {
@@ -113,12 +113,12 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.212,
+   "aporte": -0.211,
    "fuente": "noticia"
   }
  ],
  "alerts": [],
- "cause": "none",
+ "cause": "bias",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
@@ -129,6 +129,6 @@
    "fear_greed": 51
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.54
+  "stablecoins_30d_pct": -0.55
  }
 }

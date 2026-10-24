@@ -1,26 +1,26 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-24T09:39:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-24T10:38:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.17 · riesgo de evento 0.33 · tamaño ×0.837 · compras permitidas
+**Estado: CAUTION** · sesgo -0.23 · riesgo de evento 0.33 · tamaño ×0.5 · compras permitidas
 
-- Contexto neutral: sesgo -0.17, riesgo de evento 0.33
+- Precaución: sesgo -0.23
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.024 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.025 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.391 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.354 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.390 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.353 |
+| El crudo Brent supera los 116 dólares, máximo desde finales de abril | 2026-10-24 | anti | -0.318 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.287 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.270 |
-| El índice de semiconductores cae 6,7% arrastrando al Nasdaq | 2026-10-23 | anti | -0.267 |
-| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.223 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.269 |
+| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.219 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.213 |
-| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.212 |
+| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.211 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,27 +29,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-24T09:39:48Z",
+ "inicio": "2026-10-24T10:38:52Z",
  "onchain": {
   "scanned": [
-   972905,
-   972906
+   972907,
+   972911
   ],
-  "calls": 40,
+  "calls": 82,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 29,
+  "eventos": 6,
+  "urgentes": 1,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 1
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
