@@ -25,7 +25,7 @@
      "unit": 5.092183934069994,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-24T07:00:00Z"
+     "last_checked": "2026-10-24T08:00:00Z"
     },
     "BTCUSDT": {
      "pair": "BTCUSDT",
@@ -36,7 +36,7 @@
      "unit": 2313.351557687151,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-24T07:00:00Z"
+     "last_checked": "2026-10-24T08:00:00Z"
     }
    },
    "trades": [],
@@ -797,7 +797,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 262,
- "updated_utc": "2026-10-24T08:41:27Z",
+ "runs": 263,
+ "updated_utc": "2026-10-24T09:40:38Z",
  "n_signals": 52
 }
