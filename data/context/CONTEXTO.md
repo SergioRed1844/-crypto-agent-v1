@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-24T11:34:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-24T11:37:57Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.23 · riesgo de evento 0.33 · tamaño ×0.5 · compras permitidas
 
@@ -18,7 +18,7 @@ Actualizado 2026-10-24T11:34:05Z UTC. Se recalcula cada hora; el calendario y lo
 | El crudo Brent supera los 116 dólares, máximo desde finales de abril | 2026-10-24 | anti | -0.312 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.286 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.268 |
-| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.215 |
+| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.214 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.212 |
 | Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.210 |
 
@@ -29,27 +29,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-24T11:34:05Z",
+ "inicio": "2026-10-24T11:37:57Z",
  "onchain": {
-  "scanned": [
-   972912,
-   972916
-  ],
-  "calls": 66,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 9,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2

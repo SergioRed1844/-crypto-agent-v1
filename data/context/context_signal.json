@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T11:34:05Z",
+ "generated_utc": "2026-10-24T11:37:57Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -95,7 +95,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.215,
+   "aporte": 0.214,
    "fuente": "noticia"
   },
   {
