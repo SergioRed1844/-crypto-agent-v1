@@ -1,16 +1,12 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-24T05:43:31+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-23
+Última corrida: **2026-10-24T06:42:36+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-23
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
-|---|---|---|---|---|---|---|---|
-| VIGILANCIA | GMEXICOB.MX | Choque del peso con BMV castigada | 2026-10-23 | 30 d | 48% | 44% | +2.4% |
-| VIGILANCIA | GMEXICOB.MX | Retroceso dentro de tendencia alcista | 2026-10-23 | 7 d | 45% | 38% | +0.4% |
-| VIGILANCIA | KIMBERA.MX | Choque del peso con BMV castigada | 2026-10-23 | 30 d | 36% | 32% | +1.4% |
+Ninguno.
 
 ## Alertas enviadas (últimas 15)
 
@@ -33,7 +29,7 @@ Todavía ninguna.
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 43% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 73 | 54% | 30% | 39% | 60% | +1.1% |
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.7% |
-| Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 48% | 73% | +0.3% |
+| Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 73% | +0.3% |
 | Choque del peso con BMV castigada | bmv | 7 d | 99 | 33% | 28% | 31% | 48% | +0.0% |
 | Choque del peso con BMV castigada | bmv | 30 d | 74 | 45% | 36% | 40% | 52% | +0.9% |
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.8% |
@@ -54,14 +50,14 @@ Todavía ninguna.
 | Miedo de hogares (FEARS) alto | us | 90 d | 11 | 48% | 39% | 40% | 93% | +0.3% |
 | Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 61% | +0.5% |
 | Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 66% | +0.2% |
-| Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 67% | +0.1% |
+| Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 66% | +0.1% |
 | Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 76% | -0.2% |
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 44% | 40% | 83% | -0.9% |
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.5% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 35% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.1% |
-| Retroceso dentro de tendencia alcista | bmv | 7 d | 495 | 36% | 29% | 35% | 17% | +0.6% |
+| Retroceso dentro de tendencia alcista | bmv | 7 d | 495 | 36% | 29% | 35% | 16% | +0.6% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 220 | 46% | 45% | 46% | 29% | +0.8% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
@@ -76,51 +72,51 @@ Todavía ninguna.
 | Serie | OK | Último | Nota |
 |---|---|---|---|
 | AAPL | sí | 2026-10-23 | yahoo |
-| AC.MX | sí | 2026-10-23 | yahoo |
+| AC.MX | sí | 2026-10-22 | yahoo |
 | ADA | sí | 2026-10-24 | binance |
-| ALSEA.MX | sí | 2026-10-23 | yahoo |
-| AMXB.MX | sí | 2026-10-23 | yahoo |
+| ALSEA.MX | sí | 2026-10-22 | yahoo |
+| AMXB.MX | sí | 2026-10-22 | yahoo |
 | AMZN | sí | 2026-10-23 | yahoo |
-| ASURB.MX | sí | 2026-10-23 | yahoo |
+| ASURB.MX | sí | 2026-10-22 | yahoo |
 | AVAX | sí | 2026-10-24 | binance |
-| BBAJIOO.MX | sí | 2026-10-23 | yahoo |
+| BBAJIOO.MX | sí | 2026-10-22 | yahoo |
 | BCH | sí | 2026-10-24 | binance |
-| BIMBOA.MX | sí | 2026-10-23 | yahoo |
+| BIMBOA.MX | sí | 2026-10-22 | yahoo |
 | BTC | sí | 2026-10-24 | binance |
-| CEMEXCPO.MX | sí | 2026-10-23 | yahoo |
+| CEMEXCPO.MX | sí | 2026-10-22 | yahoo |
 | DIA | sí | 2026-10-23 | yahoo |
 | DOGE | sí | 2026-10-24 | binance |
 | DOT | sí | 2026-10-24 | binance |
 | ETH | sí | 2026-10-24 | binance |
-| FEMSAUBD.MX | sí | 2026-10-23 | yahoo |
-| GAPB.MX | sí | 2026-10-23 | yahoo |
-| GFNORTEO.MX | sí | 2026-10-23 | yahoo |
+| FEMSAUBD.MX | sí | 2026-10-22 | yahoo |
+| GAPB.MX | sí | 2026-10-22 | yahoo |
+| GFNORTEO.MX | sí | 2026-10-22 | yahoo |
 | GLD | sí | 2026-10-23 | yahoo |
-| GMEXICOB.MX | sí | 2026-10-23 | yahoo |
+| GMEXICOB.MX | sí | 2026-10-22 | yahoo |
 | GOOGL | sí | 2026-10-23 | yahoo |
-| GRUMAB.MX | sí | 2026-10-23 | yahoo |
+| GRUMAB.MX | sí | 2026-10-22 | yahoo |
 | IWM | sí | 2026-10-23 | yahoo |
 | JPM | sí | 2026-10-23 | yahoo |
-| KIMBERA.MX | sí | 2026-10-23 | yahoo |
-| KOFUBL.MX | sí | 2026-10-23 | yahoo |
+| KIMBERA.MX | sí | 2026-10-22 | yahoo |
+| KOFUBL.MX | sí | 2026-10-22 | yahoo |
 | LINK | sí | 2026-10-24 | binance |
-| LIVEPOLC-1.MX | sí | 2026-10-23 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-10-22 | yahoo |
 | LTC | sí | 2026-10-24 | binance |
 | META | sí | 2026-10-23 | yahoo |
 | MSFT | sí | 2026-10-23 | yahoo |
 | MXN=X | sí | 2026-10-23 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-10-23 | yahoo |
 | NVDA | sí | 2026-10-23 | yahoo |
-| OMAB.MX | sí | 2026-10-23 | yahoo |
-| ORBIA.MX | sí | 2026-10-23 | yahoo |
-| PINFRA.MX | sí | 2026-10-23 | yahoo |
+| OMAB.MX | sí | 2026-10-22 | yahoo |
+| ORBIA.MX | sí | 2026-10-22 | yahoo |
+| PINFRA.MX | sí | 2026-10-22 | yahoo |
 | QQQ | sí | 2026-10-23 | yahoo |
 | SMH | sí | 2026-10-23 | yahoo |
 | SOL | sí | 2026-10-24 | binance |
 | SPY | sí | 2026-10-23 | yahoo |
 | TRX | sí | 2026-10-24 | binance |
 | TSLA | sí | 2026-10-23 | yahoo |
-| WALMEX.MX | sí | 2026-10-23 | yahoo |
+| WALMEX.MX | sí | 2026-10-22 | yahoo |
 | WMT | sí | 2026-10-23 | yahoo |
 | XLE | sí | 2026-10-23 | yahoo |
 | XLF | sí | 2026-10-23 | yahoo |
@@ -134,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-24 | binance |
 | ^MXX | sí | 2026-10-23 | yahoo |
 | ^VIX | sí | 2026-10-23 | yahoo |
-| contexto_v42 | sí | 2026-10-24T04:44:16Z | NEUTRAL |
+| contexto_v42 | sí | 2026-10-24T06:25:09Z | NEUTRAL |
 | fear_greed | sí | 2026-10-24 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-23 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-23 | wikimedia |
