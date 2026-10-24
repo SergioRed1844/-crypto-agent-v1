@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T11:37:57Z",
+ "updated_utc": "2026-10-24T11:41:44Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5952,6 +5952,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T23:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "La confianza del consumidor en EE. UU. se acerca a mínimos históricos",
+   "source_url": "https://timesofindia.indiatimes.com/business/international-business/from-fuel-price-hikes-to-cost-of-living-concerns-us-consumer-sentiment-nears-record-low/articleshow/135164123.cms",
+   "source_title": "timesofindia.indiatimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-us-consumer-sentiment-from-fuel-price-hikes-to-cos-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T07:15:00Z"
   },
   {
    "category": "MACRO_DATA",

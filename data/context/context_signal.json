@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T11:37:57Z",
+ "generated_utc": "2026-10-24T11:41:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -50,7 +50,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.389,
+   "aporte": -0.388,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.209,
    "fuente": "noticia"
   }
  ],
