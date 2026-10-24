@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T01:46:56Z",
+ "updated_utc": "2026-10-24T02:45:56Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5931,6 +5931,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-23T23:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Mercado cierra la semana a la baja por petróleo; se avecina reunión de la Fed y resultados",
+   "source_url": "https://www.investors.com/market-trend/the-big-picture/stock-market-ends-week-lower-as-oil-soars-fed-meeting-earnings-tsunami-loom/",
+   "source_title": "investors.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-stock-market-ends-week-lower-as-oil-soars-fed-meet-2026-10-23",
+   "date": "2026-10-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-23T23:30:00Z"
   }
  ]
 }
