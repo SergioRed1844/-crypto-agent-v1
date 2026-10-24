@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T12:37:12Z",
+ "updated_utc": "2026-10-24T13:36:15Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -5994,6 +5994,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-24T08:30:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "FR",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El euro cae por la deuda francesa y el yen sube tras la corrección tecnológica",
+   "source_url": "https://www.asiaone.com/money/euro-sinks-french-debt-worries-yen-gains-week-ai-rout",
+   "source_title": "asiaone.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-euro-sinks-on-french-debt-worries-yen-gains-for-we-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "08:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T08:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
+   "source_url": "https://econotimes.com/Bitcoin-Tracks-Falling-Equities-as-CoreWeave-Bond-Yield-Reaches-15-1762227",
+   "source_title": "econotimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T09:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Trump arremete contra el presidente de la Fed Kevin Warsh generando tensión en Wall Street",
+   "source_url": "https://www.fool.com/investing/2026/10/24/donald-trump-just-threw-fed-chair-kevin-warsh-under-bus-things-get-ugly-for-wall-street/",
+   "source_title": "fool.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-president-donald-trump-just-threw-fed-chair-kevin-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T12:30:00Z"
   }
  ]
 }
