@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T22:28:12Z",
+ "updated_utc": "2026-10-24T23:27:15Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6099,6 +6099,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-24T18:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "fed_rates",
+   "country": "US",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "Kalshi prevé 92% de probabilidad de que la Fed mantenga tasas en octubre",
+   "source_url": "https://econotimes.com/Kalshi-prices-92-chance-Fed-holds-rates-at-October-meeting-1762736",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-kalshi-prices-92-chance-fed-holds-rates-at-october-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "21:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T21:00:00Z"
   }
  ]
 }
