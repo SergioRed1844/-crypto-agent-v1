@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-24T00:47:50Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-24T01:03:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.16 · riesgo de evento 0.32 · tamaño ×0.839 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-24T00:47:50Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.016 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.017 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -17,9 +17,9 @@ Actualizado 2026-10-24T00:47:50Z UTC. Se recalcula cada hora; el calendario y lo
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.363 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.295 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.280 |
-| Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street | 2026-10-23 | anti | -0.271 |
-| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.269 |
-| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.224 |
+| Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street | 2026-10-23 | anti | -0.269 |
+| Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previst | 2026-10-23 | pro | +0.267 |
+| Atacante de Drift envía 109 millones en ETH a Tornado Cash | 2026-10-21 | anti | -0.223 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.219 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-24T00:47:50Z",
+ "inicio": "2026-10-24T01:03:58Z",
  "onchain": {
   "scanned": [
-   972849,
-   972852
+   972853,
+   972854
   ],
-  "calls": 73,
+  "calls": 20,
   "stopped": null,
   "nuevas": 0
  },

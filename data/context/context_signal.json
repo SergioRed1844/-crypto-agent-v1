@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T00:47:50Z",
+ "generated_utc": "2026-10-24T01:03:58Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.016,
+   "riesgo": 0.017,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -86,7 +86,7 @@
    "title_es": "Pronóstico de inflación de octubre de la Fed resulta negativo para Wall Street",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.269,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.269,
+   "aporte": 0.267,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
