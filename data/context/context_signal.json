@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-24T14:35:18Z",
+ "generated_utc": "2026-10-24T14:51:33Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.224,
+ "bias": -0.223,
  "event_risk": 0.331,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.349,
+   "aporte": 0.348,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.296,
+   "aporte": -0.295,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.202,
+   "aporte": 0.2,
    "fuente": "noticia"
   }
  ],
