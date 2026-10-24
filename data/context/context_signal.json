@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-24T15:37:21Z",
+ "generated_utc": "2026-10-24T16:33:38Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.222,
+ "bias": -0.22,
  "event_risk": 0.332,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.031,
+   "riesgo": 0.032,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -50,7 +50,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.384,
+   "aporte": -0.383,
    "fuente": "noticia"
   },
   {
@@ -59,7 +59,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.348,
+   "aporte": 0.347,
    "fuente": "noticia"
   },
   {
@@ -68,7 +68,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.284,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.264,
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.209,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Atacante de Drift envía 109 millones en ETH a Tornado Cash",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.205,
+   "aporte": -0.204,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.199,
+   "aporte": 0.198,
    "fuente": "noticia"
   }
  ],
