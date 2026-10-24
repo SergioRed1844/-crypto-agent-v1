@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T15:34:22Z",
+ "generated_utc": "2026-10-24T15:37:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"

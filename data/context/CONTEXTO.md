@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-24T15:34:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-24T15:37:21Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.22 · riesgo de evento 0.33 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-24T15:34:22Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.03 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.031 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -29,20 +29,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-24T15:34:22Z",
+ "inicio": "2026-10-24T15:37:21Z",
  "onchain": {
   "scanned": [
-   972935,
-   972940
+   972941,
+   972941
   ],
-  "calls": 50,
+  "calls": 28,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 54,
-  "eventos": 7,
+  "titulares": 55,
+  "eventos": 4,
   "urgentes": 1,
   "metodo": "gemini",
   "agregados": 0
