@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T17:32:49Z",
+ "updated_utc": "2026-10-24T18:20:41Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6078,6 +6078,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-24T16:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "CPI",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Inflación supera expectativas y podría beneficiar a Bitcoin",
+   "source_url": "https://www.fool.com/investing/2026/10/24/inflation-is-running-hotter-than-expected-that-cou/?source=iedfolrf0000001",
+   "source_title": "fool.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-inflation-is-running-hotter-than-expected-that-cou-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T18:00:00Z"
   }
  ]
 }
