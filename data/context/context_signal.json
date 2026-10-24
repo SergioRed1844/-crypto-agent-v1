@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T23:31:14Z",
+ "generated_utc": "2026-10-24T23:40:14Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.042,
+   "riesgo": 0.043,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -59,7 +59,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.34,
+   "aporte": 0.339,
    "fuente": "noticia"
   },
   {
@@ -86,7 +86,7 @@
    "title_es": "Inflación supera expectativas y podría beneficiar a Bitcoin",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.264,
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -104,7 +104,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
