@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-24T03:45:02Z",
+ "generated_utc": "2026-10-24T03:48:54Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -68,7 +68,7 @@
    "title_es": "El índice de semiconductores cae 6,7% arrastrando al Nasdaq",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.302,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -77,7 +77,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.293,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -95,7 +95,7 @@
    "title_es": "Confianza del consumidor de UMich final de octubre en 48,0 frente a 46,3 previsto",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.253,
+   "aporte": 0.252,
    "fuente": "noticia"
   },
   {
