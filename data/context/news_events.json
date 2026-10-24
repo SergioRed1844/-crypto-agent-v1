@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-24T16:33:38Z",
+ "updated_utc": "2026-10-24T17:32:49Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6057,6 +6057,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-24T12:30:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "ETF_FLOWS",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
+   "source_url": "https://www.aol.com/articles/bitcoin-etfs-just-had-biggest-153742000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-etfs-just-had-their-biggest-outflow-day-si-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T16:15:00Z"
   }
  ]
 }
