@@ -2,9 +2,9 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 25-Oct 09:14 · **Día 8.9** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 25-Oct 10:06 · **Día 8.9** · **Estado:** corriendo
 
-Última vela 4H revisada: 25-Oct 06:00 · señales técnicas desde el inicio: 58 · corridas: 304. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 25-Oct 10:00 · señales técnicas desde el inicio: 60 · corridas: 305. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
@@ -32,6 +32,8 @@
 
 | Vela 4H (MTY) | Par | Conf. | A | B | Contexto | F&G |
 |---|---|---|---|---|---|---|
+| 25-Oct 10:00 | SOL | 6 | máx 2 posiciones | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 54 |
+| 25-Oct 10:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 54 |
 | 24-Oct 22:00 | SOL | 6 | máx 2 posiciones | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 54 |
 | 24-Oct 22:00 | ETH | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 54 |
 | 24-Oct 22:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 54 |
@@ -45,7 +47,5 @@
 | 22-Oct 22:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 50 |
 | 21-Oct 22:00 | BTC | 5 | ya hay posición en el par | contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c | RISK_OFF | 68 |
 | 21-Oct 18:00 | BTC | 5 | ya hay posición en el par | contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c | RISK_OFF | 68 |
-| 21-Oct 10:00 | BTC | 5 | ya hay posición en el par | contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c | RISK_OFF | 63 |
-| 21-Oct 06:00 | SOL | 6 | ya hay posición en el par | contexto RISK_OFF: Alerta on-chain alta: Ballena dormida movió 500 BTC con ≥5 años (500 c | RISK_OFF | 63 |
 
 Gate completo (CLAUDE.md): ≥30 trades, ≥2 semanas, ganadas >50%, R:R promedio ≥2.0, drawdown <10%. Pasarlo NO activa dinero real: esa decisión es tuya y manual.
