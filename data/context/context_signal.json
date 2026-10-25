@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-25T17:50:19Z",
+ "generated_utc": "2026-10-25T18:10:29Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.81,
+ "size_mult": 0.802,
  "bias": -0.12,
- "event_risk": 0.38,
+ "event_risk": 0.396,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Contexto neutral: sesgo -0.12, riesgo de evento 0.38"
+  "Contexto neutral: sesgo -0.12, riesgo de evento 0.40"
  ],
  "upcoming": [
   {
@@ -35,10 +35,24 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.091,
+   "riesgo": 0.092,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "fomc-2026-10-28",
+   "utc": "2026-10-28T18:00:00Z",
+   "title_es": "Decisión FOMC (27-28 oct); conferencia de Warsh 14:30",
+   "category": "MONETARY_POLICY",
+   "status": "confirmed",
+   "magnitud": 0.365,
+   "riesgo": 0.024,
+   "ventana": [
+    "2026-10-28T12:00:00Z",
+    "2026-10-28T20:00:00Z"
    ],
    "en_ventana": false
   },
@@ -73,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.322,
+   "aporte": 0.321,
    "fuente": "noticia"
   },
   {
@@ -82,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -109,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.233,
+   "aporte": 0.232,
    "fuente": "noticia"
   },
   {
