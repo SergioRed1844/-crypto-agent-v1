@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T12:15:47Z",
+ "generated_utc": "2026-10-25T13:14:53Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.817,
- "bias": -0.115,
- "event_risk": 0.366,
+ "size_mult": 0.816,
+ "bias": -0.116,
+ "event_risk": 0.368,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.072,
+   "riesgo": 0.075,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -64,7 +64,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.361,
+   "aporte": -0.36,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.327,
+   "aporte": 0.326,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.266,
+   "aporte": 0.265,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.262,
+   "aporte": 0.257,
    "fuente": "noticia"
   },
   {
@@ -109,7 +109,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.242,
+   "aporte": 0.241,
    "fuente": "noticia"
   },
   {
@@ -122,12 +122,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
-   "date": "2026-10-24",
-   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.189,
+   "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.186,
    "fuente": "noticia"
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-25T12:15:47Z",
+ "updated_utc": "2026-10-25T13:14:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6288,6 +6288,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-25T11:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Política de la Fed, resultados corporativos y crudo serán claves del mercado",
+   "source_url": "https://morungexpress.com/fed-policy-q2-earnings-crude-oil-prices-among-key-market-triggers-next-week",
+   "source_title": "morungexpress.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-policy-q2-earnings-crude-oil-prices-among-key-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T12:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "¿Podría Ormuz convertirse en el Suez de Estados Unidos?",
+   "source_url": "https://www.middleeastmonitor.com/20261025-could-hormuz-become-americas-suez/",
+   "source_title": "middleeastmonitor.com",
+   "confidence": 0.6,
+   "origin": "gemini/GDELT",
+   "id": "news-could-hormuz-become-america-suez-middle-east-monit-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T12:45:00Z"
   }
  ]
 }
