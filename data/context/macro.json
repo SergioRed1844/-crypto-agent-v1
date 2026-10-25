@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-25T14:18:02Z",
+ "generated_utc": "2026-10-25T14:36:47Z",
  "fear_greed": {
   "value": 54,
   "label": "Neutral",
@@ -21,7 +21,7 @@
     "Yes": 0.075,
     "No": 0.925
    },
-   "volume": 12064552.230282003,
+   "volume": 12065184.730282003,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {

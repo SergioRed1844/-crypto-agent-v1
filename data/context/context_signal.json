@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-25T14:13:55Z",
+ "generated_utc": "2026-10-25T14:33:03Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.815,
- "bias": -0.117,
+ "size_mult": 0.814,
+ "bias": -0.118,
  "event_risk": 0.371,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.078,
+   "riesgo": 0.079,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -82,7 +82,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.278,
+   "aporte": -0.277,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.251,
+   "aporte": 0.25,
    "fuente": "noticia"
   },
   {
