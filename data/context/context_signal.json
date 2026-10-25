@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-25T11:20:51Z",
+ "generated_utc": "2026-10-25T12:15:47Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.818,
- "bias": -0.114,
- "event_risk": 0.364,
+ "size_mult": 0.817,
+ "bias": -0.115,
+ "event_risk": 0.366,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Contexto neutral: sesgo -0.11, riesgo de evento 0.36"
+  "Contexto neutral: sesgo -0.12, riesgo de evento 0.37"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.07,
+   "riesgo": 0.072,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.008,
+   "riesgo": 0.009,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -64,7 +64,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.362,
+   "aporte": -0.361,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.328,
+   "aporte": 0.327,
    "fuente": "noticia"
   },
   {
@@ -82,16 +82,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.281,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-gold-prices-break-4-000-as-investors-brace-for-cru-2026-10-25",
-   "date": "2026-10-25",
-   "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.267,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -104,12 +95,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-gold-prices-break-4-000-as-investors-brace-for-cru-2026-10-25",
+   "date": "2026-10-25",
+   "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.262,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
    "date": "2026-10-22",
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.243,
+   "aporte": 0.242,
    "fuente": "noticia"
   },
   {
@@ -118,7 +118,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.198,
+   "aporte": -0.197,
    "fuente": "noticia"
   },
   {
@@ -127,7 +127,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.192,
+   "aporte": -0.189,
    "fuente": "noticia"
   }
  ],

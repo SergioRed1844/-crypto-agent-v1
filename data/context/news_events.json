@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-25T11:20:51Z",
+ "updated_utc": "2026-10-25T12:15:47Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6206,6 +6206,27 @@
    "utc": "2026-10-25T09:30:00Z"
   },
   {
+   "category": "GEOPOLITICAL",
+   "subcategory": "russia_ukraine",
+   "country": "RU",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Estrategia de Putin en posibles conversaciones de paz sobre Ucrania",
+   "source_url": "https://www.gatestoneinstitute.org/22939/putin-peace-talks",
+   "source_title": "gatestoneinstitute.org",
+   "confidence": 0.7,
+   "origin": "gemini/GDELT",
+   "id": "news-putin-peace-talks-half-a-country-now-the-rest-late-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T09:45:00Z"
+  },
+  {
    "category": "MONETARY_POLICY",
    "subcategory": "Central Bank",
    "country": "US",
@@ -6238,6 +6259,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-china-fifth-plenum-jio-listing-on-indian-bourses-b-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T11:00:00Z"
+  },
+  {
+   "category": "ELECTION",
+   "subcategory": "presidential_election",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Cercanía electoral y apuesta de Trump por IA generan incertidumbre económica",
+   "source_url": "https://www.latimes.com/politics/story/2026-10-25/as-vote-nears-trumps-ai-gamble-fuels-economic-uncertainty",
+   "source_title": "latimes.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-as-vote-nears-trump-ai-gamble-fuels-economic-uncer-2026-10-25",
    "date": "2026-10-25",
    "status": "happened",
    "scheduled": false,
