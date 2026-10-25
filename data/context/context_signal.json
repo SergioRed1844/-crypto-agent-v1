@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T19:13:38Z",
+ "generated_utc": "2026-10-25T20:08:47Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.8,
+ "size_mult": 0.799,
  "bias": -0.121,
- "event_risk": 0.399,
+ "event_risk": 0.403,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.097,
+   "riesgo": 0.1,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.354,
+   "aporte": -0.353,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.32,
+   "aporte": 0.319,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.272,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.26,
+   "aporte": 0.259,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.235,
+   "aporte": 0.234,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.227,
+   "aporte": 0.222,
    "fuente": "noticia"
   },
   {
@@ -157,6 +157,6 @@
    "fear_greed": 54
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -1.05
+  "stablecoins_30d_pct": -1.04
  }
 }
