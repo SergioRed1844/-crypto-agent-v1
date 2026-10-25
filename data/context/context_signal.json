@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T09:18:23Z",
+ "generated_utc": "2026-10-25T10:06:27Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.82,
+ "size_mult": 0.819,
  "bias": -0.113,
- "event_risk": 0.36,
+ "event_risk": 0.361,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.064,
+   "riesgo": 0.066,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -64,7 +64,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.364,
+   "aporte": -0.363,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.33,
+   "aporte": 0.329,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.283,
+   "aporte": -0.282,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.279,
+   "aporte": 0.274,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.268,
+   "aporte": 0.267,
    "fuente": "noticia"
   },
   {
@@ -109,16 +109,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.245,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
-   "date": "2026-10-24",
-   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.201,
+   "aporte": 0.244,
    "fuente": "noticia"
   },
   {
@@ -127,7 +118,16 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.199,
+   "aporte": -0.198,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-tracks-falling-equities-as-coreweave-bond-2026-10-24",
+   "date": "2026-10-24",
+   "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.197,
    "fuente": "noticia"
   }
  ],
