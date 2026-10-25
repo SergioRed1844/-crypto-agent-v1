@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-25T10:06:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-25T10:17:26Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.11 · riesgo de evento 0.36 · tamaño ×0.819 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-25T10:06:27Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.066 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.067 |
 | Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.008 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -17,7 +17,7 @@ Actualizado 2026-10-25T10:06:27Z UTC. Se recalcula cada hora; el calendario y lo
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.363 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.329 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.282 |
-| El oro supera los 4.000 dólares mientras los inversores anticipan una prueba cru | 2026-10-25 | pro | +0.274 |
+| El oro supera los 4.000 dólares mientras los inversores anticipan una prueba cru | 2026-10-25 | pro | +0.273 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.267 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.244 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.198 |
@@ -30,13 +30,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-25T10:06:27Z",
+ "inicio": "2026-10-25T10:17:26Z",
  "onchain": {
-  "scanned": [
-   973050,
-   973056
-  ],
-  "calls": 62,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
