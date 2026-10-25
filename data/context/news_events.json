@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-25T10:17:26Z",
+ "updated_utc": "2026-10-25T11:16:31Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6183,6 +6183,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-25T03:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "Middle East",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Trump insinúa ataque o acuerdo con Irán y su impacto en mercados",
+   "source_url": "https://www.livemint.com/market/stock-market-news/trump-hints-at-an-iran-attack-or-deal-impact-on-india-stock-market-sensex-nifty-gold-decoded-top-10-stocks-to-watch-11792906667676.html",
+   "source_title": "livemint.com",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-trump-hints-at-an-iran-attack-or-deal-impact-on-in-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T09:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Central Bank",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Decisión de la Fed, resultados y petróleo marcarán los mercados esta semana",
+   "source_url": "https://www.business-standard.com/markets/news/q2-results-us-fed-decision-crude-oil-may-drive-stock-markets-this-week-126102500192_1.html",
+   "source_title": "business-standard.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-q2-results-us-fed-decision-crude-oil-may-drive-sto-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T10:30:00Z"
   }
  ]
 }

@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T10:17:26Z",
+ "generated_utc": "2026-10-25T11:16:31Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.819,
+ "size_mult": 0.818,
  "bias": -0.114,
- "event_risk": 0.362,
+ "event_risk": 0.364,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.067,
+   "riesgo": 0.069,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -64,7 +64,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.363,
+   "aporte": -0.362,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.329,
+   "aporte": 0.328,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.281,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.273,
+   "aporte": 0.267,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.267,
+   "aporte": 0.266,
    "fuente": "noticia"
   },
   {
@@ -109,7 +109,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.244,
+   "aporte": 0.243,
    "fuente": "noticia"
   },
   {
@@ -127,7 +127,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.193,
    "fuente": "noticia"
   }
  ],
@@ -143,6 +143,6 @@
    "fear_greed": 54
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -1.05
+  "stablecoins_30d_pct": -1.04
  }
 }
