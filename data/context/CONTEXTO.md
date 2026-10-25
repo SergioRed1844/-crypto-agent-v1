@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-25T19:09:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-25T19:13:38Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.40 · tamaño ×0.8 · compras permitidas
 
@@ -9,8 +9,8 @@ Actualizado 2026-10-25T19:09:33Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.096 |
-| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.024 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.097 |
+| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.025 |
 | Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.012 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -31,27 +31,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-25T19:09:33Z",
+ "inicio": "2026-10-25T19:13:38Z",
  "onchain": {
   "scanned": [
-   973105,
-   973111
+   973112,
+   973114
   ],
-  "calls": 67,
+  "calls": 18,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
+  "titulares": 2,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
