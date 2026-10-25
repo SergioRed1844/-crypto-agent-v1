@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-25T11:16:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-25T11:20:51Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.11 · riesgo de evento 0.36 · tamaño ×0.818 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-25T11:16:31Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.069 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.07 |
 | Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.008 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -21,7 +21,7 @@ Actualizado 2026-10-25T11:16:31Z UTC. Se recalcula cada hora; el calendario y lo
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.266 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.243 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.198 |
-| Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreW | 2026-10-24 | anti | -0.193 |
+| Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreW | 2026-10-24 | anti | -0.192 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,23 +30,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-25T11:16:31Z",
+ "inicio": "2026-10-25T11:20:51Z",
  "onchain": {
   "scanned": [
-   973057,
-   973064
+   973065,
+   973066
   ],
-  "calls": 61,
+  "calls": 12,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 18,
-  "eventos": 4,
-  "urgentes": 2,
+  "titulares": 22,
+  "eventos": 6,
+  "urgentes": 3,
   "metodo": "gemini",
-  "agregados": 2
+  "agregados": 1
  },
  "gemini": {
   "model": "gemini-3.8-flash",

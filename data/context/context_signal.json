@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-25T11:16:31Z",
+ "generated_utc": "2026-10-25T11:20:51Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.069,
+   "riesgo": 0.07,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -127,7 +127,7 @@
    "title_es": "Bitcoin sigue las caídas de las bolsas mientras el rendimiento de bonos de CoreWeave alcanza el 15%",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.193,
+   "aporte": -0.192,
    "fuente": "noticia"
   }
  ],

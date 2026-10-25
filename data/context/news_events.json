@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-25T11:16:31Z",
+ "updated_utc": "2026-10-25T11:20:51Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6225,6 +6225,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-25T10:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Central Banks",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Quinto pleno de China y reunión del Banco de Japón en la mira del mercado",
+   "source_url": "https://asia.nikkei.com/spotlight/your-week-in-asia/china-s-fifth-plenum-jio-listing-on-indian-bourses-boj-meeting",
+   "source_title": "asia.nikkei.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-china-fifth-plenum-jio-listing-on-indian-bourses-b-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T11:00:00Z"
   }
  ]
 }
