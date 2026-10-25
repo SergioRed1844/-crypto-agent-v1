@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-25T21:07:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-25T21:12:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.41 · tamaño ×0.797 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-25T21:07:53Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula | 2026-10-25T12:00:00Z | Elección | 0.31 | 0.31 |
-| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.104 |
+| Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.105 |
 | Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.027 |
 | Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.013 |
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-25T21:07:53Z",
+ "inicio": "2026-10-25T21:12:05Z",
  "onchain": {
   "scanned": [
-   973121,
-   973127
+   973128,
+   973128
   ],
-  "calls": 56,
+  "calls": 11,
   "stopped": null,
   "nuevas": 0
  },
