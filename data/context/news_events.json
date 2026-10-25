@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-25T03:27:46Z",
+ "updated_utc": "2026-10-25T04:22:54Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6120,6 +6120,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-24T21:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "consumer_sentiment",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "La confianza del consumidor en EE. UU. cerca de mínimos históricos antes de las elecciones",
+   "source_url": "https://www.willmarradio.com/business/business_news/consumer-sentiment-nears-all-time-low-ahead-of-midterms/collection_0b02a4d4-ed28-5d0c-a5fd-c52847d7ad5f.html",
+   "source_title": "willmarradio.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-consumer-sentiment-nears-all-time-low-ahead-of-mid-2026-10-24",
+   "date": "2026-10-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-24T23:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "central_bank_rates",
+   "country": "US",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "Se espera que la Fed mantenga las tasas estables previo a las elecciones intermedias de EE. UU.",
+   "source_url": "https://www.bnnbloomberg.ca/business/economics/2026/10/25/fed-expected-to-hold-rates-steady-days-ahead-of-us-midterms/",
+   "source_title": "bnnbloomberg.ca",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-expected-to-hold-rates-steady-days-ahead-of-u-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T03:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "commodities",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
+   "source_url": "https://www.aol.com/articles/gold-prices-break-4-000-231700000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-prices-break-4-000-as-investors-brace-for-cru-2026-10-25",
+   "date": "2026-10-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-25T03:30:00Z"
   }
  ]
 }
