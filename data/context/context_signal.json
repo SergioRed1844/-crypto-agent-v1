@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T17:11:23Z",
+ "generated_utc": "2026-10-25T17:50:19Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.811,
- "bias": -0.119,
- "event_risk": 0.378,
+ "size_mult": 0.81,
+ "bias": -0.12,
+ "event_risk": 0.38,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.089,
+   "riesgo": 0.091,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
@@ -64,7 +64,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.356,
+   "aporte": -0.355,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.262,
+   "aporte": 0.261,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.237,
+   "aporte": 0.236,
    "fuente": "noticia"
   },
   {
@@ -109,7 +109,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.236,
+   "aporte": 0.233,
    "fuente": "noticia"
   },
   {
@@ -143,6 +143,6 @@
    "fear_greed": 54
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -1.04
+  "stablecoins_30d_pct": -1.05
  }
 }
