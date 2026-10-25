@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-25T15:13:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-25T15:16:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.37 · tamaño ×0.813 · compras permitidas
 
@@ -16,7 +16,7 @@ Actualizado 2026-10-25T15:13:00Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.358 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.324 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.277 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.276 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.263 |
 | El oro supera los 4.000 dólares mientras los inversores anticipan una prueba cru | 2026-10-25 | pro | +0.246 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.239 |
@@ -30,21 +30,18 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-25T15:13:00Z",
+ "inicio": "2026-10-25T15:16:56Z",
  "onchain": {
-  "scanned": [
-   973081,
-   973087
-  ],
-  "calls": 72,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 5,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 40,
+  "eventos": 3,
+  "urgentes": 3,
   "metodo": "gemini",
   "agregados": 0
  },
