@@ -1,0 +1,67 @@
+# Análisis copy-trade de las operaciones públicas de Donald J. Trump (OGE 278-T + anual).
+# [ct-fetch]  = PDF de OGE + índice + listas de tickers → rama copytrade-data (filings/)
+# [ct-prices] = precios diarios ajustados de data/copytrade/tickers.txt → copytrade-data (prices/)
+# [ct-run]    = simulación completa con lo publicado → copytrade-data (results/) — también a mano.
+name: copytrade
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "fetch | prices | run"
+        default: run
+  push:
+    branches: [copytrade]
+permissions:
+  contents: write
+concurrency:
+  group: copytrade
+  cancel-in-progress: false
+jobs:
+  fetch:
+    if: (github.event_name == 'push' && contains(github.event.head_commit.message, '[ct-fetch]')) || inputs.job == 'fetch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y poppler-utils >/dev/null
+          pip install -q httpx
+      - run: python -m copytrade.fetch out/filings || echo "con fallas"
+      - name: Publicar
+        env: { TOKEN: "${{ github.token }}" }
+        run: bash .github/scripts/ct_store_push.sh out "copytrade-data - filings $(date -u +%FT%TZ)"
+
+  prices:
+    if: (github.event_name == 'push' && contains(github.event.head_commit.message, '[ct-prices]')) || inputs.job == 'prices'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q "yfinance>=0.2.54" pandas
+      - run: python -m copytrade.prices data/copytrade/tickers.txt out
+      - name: Publicar
+        env: { TOKEN: "${{ github.token }}" }
+        run: bash .github/scripts/ct_store_push.sh out "copytrade-data - precios $(date -u +%FT%TZ)"
+
+  run:
+    if: (github.event_name == 'push' && contains(github.event.head_commit.message, '[ct-run]')) || inputs.job == 'run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas numpy
+      - name: Traer datos publicados
+        run: |
+          mkdir -p store
+          git fetch -q --depth 1 origin copytrade-data && git archive FETCH_HEAD prices | tar -x -C store
+          git fetch -q --depth 1 origin fx-data && git archive FETCH_HEAD carry/rates.csv | tar -x -C store || true
+      - run: python -m copytrade run --prices store/prices --rates store/carry/rates.csv --out out/results
+      - name: Publicar
+        env: { TOKEN: "${{ github.token }}" }
+        run: bash .github/scripts/ct_store_push.sh out "copytrade-data - resultados $(date -u +%FT%TZ)"
