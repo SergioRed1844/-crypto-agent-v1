@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-26T09:56:20Z",
+ "generated_utc": "2026-10-26T10:55:23Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.784,
+ "size_mult": 0.783,
  "bias": -0.128,
- "event_risk": 0.432,
+ "event_risk": 0.434,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.022,
+   "riesgo": 0.023,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.339,
+   "aporte": -0.338,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.307,
+   "aporte": 0.306,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.249,
+   "aporte": 0.248,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.221,
+   "aporte": 0.22,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -132,7 +132,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.183,
+   "aporte": -0.182,
    "fuente": "noticia"
   },
   {
@@ -141,7 +141,7 @@
    "title_es": "Yuan toca máximo de cuatro años mientras el dólar se debilita",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.18,
+   "aporte": 0.178,
    "fuente": "noticia"
   }
  ],
