@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-26T20:44:05Z",
+ "generated_utc": "2026-10-26T20:47:28Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -124,7 +124,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.245,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -169,7 +169,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.167,
    "fuente": "noticia"
   }
  ],

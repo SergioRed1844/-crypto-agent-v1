@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-26T20:44:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-26T20:47:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.25 · tamaño ×0.874 · compras permitidas
 
@@ -19,12 +19,12 @@ Actualizado 2026-10-26T20:44:05Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.328 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.297 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.245 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.244 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.241 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.211 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.179 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.170 |
-| Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la | 2026-10-26 | anti | -0.168 |
+| Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la | 2026-10-26 | anti | -0.167 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -33,13 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-26T20:44:05Z",
+ "inicio": "2026-10-26T20:47:28Z",
  "onchain": {
   "scanned": [
-   973282,
-   973286
+   973287,
+   973288
   ],
-  "calls": 99,
+  "calls": 16,
   "stopped": null,
   "nuevas": 0
  },
