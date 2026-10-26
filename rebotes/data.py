@@ -2,12 +2,14 @@
 
     python -m rebotes.data universe OUT_DIR
     python -m rebotes.data prices OUT_DIR          # usa OUT_DIR/universe.txt; guarda OUT_DIR/panel.npz
+    REB_START=YYYY-MM-DD acorta la historia (la alerta de lunes/miércoles baja solo 2 años)
 """
 from __future__ import annotations
 
 import csv
 import io
 import json
+import os
 import re
 import sys
 import time
@@ -93,7 +95,8 @@ def _dl(tks: list[str]) -> pd.DataFrame:
     import yfinance as yf
     for i in range(4):
         try:
-            df = yf.download(tks, start=C.START, auto_adjust=False, actions=True, progress=False, threads=True,
+            df = yf.download(tks, start=os.getenv("REB_START") or C.START, auto_adjust=False, actions=True,
+                             progress=False, threads=True,
                              group_by="ticker")
             if df is not None and not df.empty:
                 return df

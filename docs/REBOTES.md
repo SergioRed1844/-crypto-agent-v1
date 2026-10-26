@@ -105,3 +105,11 @@ Si ningún setup pasa, se reporta tal cual y no se automatiza. 3 setups × 1 reg
   tasa es la misma;
 - el placebo de cartera muestrea con reemplazo, con el número de disparos del setup por mes;
 - el SPY está en el universo operable.
+
+## Alerta de lunes y miércoles (papel, desde 26-oct-2026)
+Sergio pidió las señales por correo y en su hoja. `rebotes/alerta.py` corre en `rebotes-alerta.yml` (rama main, lunes
+6:47 y miércoles 16:17 de Monterrey). Calcula los mismos setups al último cierre y lleva una bitácora en papel con la
+misma regla (`alertas/ledger.csv` en rebotes-data). Manda el correo por Gmail SMTP (sin SMTP, un issue) y escribe en
+la hoja vía `sheets/rebotes_sheet.gs`. Son **señales del estudio, no recomendación de compra**. El dictamen solo dice
+"pasó la compuerta" si el setup la pasó aquí; hoy ninguno. La bitácora es la prueba en vivo: si con el tiempo da
+distinto que el backtest, se reporta; los parámetros no se tocan.
