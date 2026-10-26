@@ -1,33 +1,19 @@
 {
- "generated_utc": "2026-10-26T11:54:43Z",
+ "generated_utc": "2026-10-26T12:54:06Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.782,
+ "size_mult": 0.896,
  "bias": -0.128,
- "event_risk": 0.435,
+ "event_risk": 0.208,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
  "reasons": [
-  "Contexto neutral: sesgo -0.13, riesgo de evento 0.44"
+  "Contexto neutral: sesgo -0.13, riesgo de evento 0.21"
  ],
  "upcoming": [
-  {
-   "id": "br-presidential-runoff-2026",
-   "utc": "2026-10-25T12:00:00Z",
-   "title_es": "Brasil: segunda vuelta presidencial Flávio Bolsonaro vs Lula",
-   "category": "ELECTION",
-   "status": "confirmed",
-   "magnitud": 0.31,
-   "riesgo": 0.31,
-   "ventana": [
-    "2026-10-24T00:00:00Z",
-    "2026-10-26T12:00:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "prop-israel-elecciones-generales-a-la-knesset-2026-10-27",
    "utc": "2026-10-27T12:00:00Z",
@@ -49,7 +35,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.049,
+   "riesgo": 0.051,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,10 +49,38 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "gdp-2026-10-29",
+   "utc": "2026-10-29T12:30:00Z",
+   "title_es": "PIB EE.UU. 3T-2026 (estimación avance)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.279,
+   "riesgo": 0.015,
+   "ventana": [
+    "2026-10-29T10:30:00Z",
+    "2026-10-29T13:30:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "pce-2026-10-29",
+   "utc": "2026-10-29T12:30:00Z",
+   "title_es": "Ingreso y gasto personal / PCE EE.UU. (sep-2026)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.279,
+   "riesgo": 0.015,
+   "ventana": [
+    "2026-10-29T10:30:00Z",
+    "2026-10-29T13:30:00Z"
    ],
    "en_ventana": false
   }
@@ -78,7 +92,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.337,
+   "aporte": -0.336,
    "fuente": "noticia"
   },
   {
@@ -87,7 +101,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.305,
+   "aporte": 0.304,
    "fuente": "noticia"
   },
   {
@@ -96,7 +110,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -105,7 +119,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.248,
+   "aporte": 0.247,
    "fuente": "noticia"
   },
   {
@@ -114,7 +128,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.219,
+   "aporte": 0.218,
    "fuente": "noticia"
   },
   {
@@ -123,7 +137,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -132,7 +146,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.18,
+   "aporte": -0.179,
    "fuente": "noticia"
   },
   {
@@ -141,7 +155,7 @@
    "title_es": "Yuan toca máximo de cuatro años mientras el dólar se debilita",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.177,
+   "aporte": 0.175,
    "fuente": "noticia"
   }
  ],
@@ -157,6 +171,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.89
+  "stablecoins_30d_pct": -0.88
  }
 }
