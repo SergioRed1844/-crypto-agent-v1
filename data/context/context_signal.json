@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-26T03:02:28Z",
+ "generated_utc": "2026-10-26T03:05:32Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -123,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.193,
+   "aporte": 0.192,
    "fuente": "noticia"
   },
   {

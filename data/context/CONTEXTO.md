@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-26T03:02:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-26T03:05:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.42 · tamaño ×0.789 · compras permitidas
 
@@ -20,7 +20,7 @@ Actualizado 2026-10-26T03:02:28Z UTC. Se recalcula cada hora; el calendario y lo
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.263 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.254 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.227 |
-| El oro supera los 4.000 dólares mientras los inversores anticipan una prueba cru | 2026-10-25 | pro | +0.193 |
+| El oro supera los 4.000 dólares mientras los inversores anticipan una prueba cru | 2026-10-25 | pro | +0.192 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.189 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.179 |
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-26T03:02:28Z",
+ "inicio": "2026-10-26T03:05:32Z",
  "onchain": {
   "scanned": [
-   973162,
-   973169
+   973170,
+   973172
   ],
-  "calls": 71,
+  "calls": 20,
   "stopped": null,
   "nuevas": 0
  },
