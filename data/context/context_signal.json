@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-26T06:58:53Z",
+ "generated_utc": "2026-10-26T07:02:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.342,
+   "aporte": -0.341,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.187,
+   "aporte": -0.186,
    "fuente": "noticia"
   },
   {
