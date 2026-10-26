@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-26T10:58:58Z",
+ "generated_utc": "2026-10-26T11:54:43Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.783,
+ "size_mult": 0.782,
  "bias": -0.128,
- "event_risk": 0.434,
+ "event_risk": 0.435,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
  "reasons": [
-  "Contexto neutral: sesgo -0.13, riesgo de evento 0.43"
+  "Contexto neutral: sesgo -0.13, riesgo de evento 0.44"
  ],
  "upcoming": [
   {
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.047,
+   "riesgo": 0.049,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.023,
+   "riesgo": 0.024,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.306,
+   "aporte": 0.305,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.22,
+   "aporte": 0.219,
    "fuente": "noticia"
   },
   {
@@ -132,7 +132,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.182,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -141,7 +141,7 @@
    "title_es": "Yuan toca máximo de cuatro años mientras el dólar se debilita",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.178,
+   "aporte": 0.177,
    "fuente": "noticia"
   }
  ],
@@ -157,6 +157,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.88
+  "stablecoins_30d_pct": -0.89
  }
 }
