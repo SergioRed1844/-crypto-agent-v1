@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-26T07:02:48Z",
+ "updated_utc": "2026-10-26T07:58:08Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6330,6 +6330,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-25T12:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "fed_meeting",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Bitcoin cotiza bajo los 80.000 dólares antes de la reunión de la Fed",
+   "source_url": "https://econotimes.com/Bitcoin-Trades-Below-80-000-Ahead-of-Fed-s-Oct-27-28-Meeting-1763376",
+   "source_title": "econotimes.com",
+   "confidence": 0.95,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-trades-below-80-000-ahead-of-fed-oct-27-28-2026-10-26",
+   "date": "2026-10-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-26T07:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "central_banks",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
+   "source_url": "https://econotimes.com/Japan-s-Benchmark-Bond-Yields-Rise-Ahead-of-BOJ-and-Fed-Decisions-1763379",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-japan-benchmark-bond-yields-rise-ahead-of-boj-and-2026-10-26",
+   "date": "2026-10-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-26T07:15:00Z"
   }
  ]
 }
