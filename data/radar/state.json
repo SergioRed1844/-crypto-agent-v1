@@ -31,7 +31,6 @@
   }
  },
  "runs": [
-  "2026-10-24T10:39:10+00:00",
   "2026-10-24T11:38:53+00:00",
   "2026-10-24T12:37:23+00:00",
   "2026-10-24T13:36:35+00:00",
@@ -90,9 +89,10 @@
   "2026-10-26T00:05:25+00:00",
   "2026-10-26T01:04:34+00:00",
   "2026-10-26T01:38:31+00:00",
-  "2026-10-26T02:03:37+00:00"
+  "2026-10-26T02:03:37+00:00",
+  "2026-10-26T03:02:40+00:00"
  ],
- "last_scan_utc": "2026-10-26T02:03:37+00:00",
+ "last_scan_utc": "2026-10-26T03:02:40+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -406,37 +406,37 @@
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
@@ -446,12 +446,12 @@
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
@@ -461,7 +461,7 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
@@ -471,17 +471,17 @@
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-10-24",
+   "last": "2026-10-25",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-26T01:39:12Z",
+   "last": "2026-10-26T02:03:26Z",
    "nota": "NEUTRAL"
   }
  },
@@ -494,7 +494,7 @@
    "date": "2026-10-23",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 43% vs día cualquiera 44%",
+    "la ventaja no es creíble: cota baja 44% vs día cualquiera 44%",
     "neto esperado solo +0.9 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.4 pp < 5 pp"
    ],
@@ -526,11 +526,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 32% vs día cualquiera 32%",
     "neto esperado solo +0.9 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.9 pp < 5 pp"
+    "ventaja vs día cualquiera +4.0 pp < 5 pp"
    ],
    "p": 0.362,
    "base": 0.322,
-   "ret": 0.0137,
+   "ret": 0.0136,
    "h": 30
   }
  ],
