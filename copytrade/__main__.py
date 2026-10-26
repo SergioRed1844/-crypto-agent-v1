@@ -36,6 +36,7 @@ def main(argv: list[str]) -> int:
     else:
         rows, meta = build(Path(a.filings) if a.filings else None)
         trades = pd.DataFrame(rows)
+        trades.to_csv(out / "trades.csv", index=False)
         json.dump(meta, open(out / "trades.meta.json", "w"), indent=1, default=str)
     trades["ticker"] = trades["ticker"].fillna("")
     raw = sim.load_prices(str(Path(a.prices) / "close_adj.csv.gz"))

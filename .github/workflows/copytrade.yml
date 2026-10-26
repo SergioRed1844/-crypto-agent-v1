@@ -59,9 +59,9 @@ jobs:
       - name: Traer datos publicados
         run: |
           mkdir -p store
-          git fetch -q --depth 1 origin copytrade-data && git archive FETCH_HEAD prices | tar -x -C store
+          git fetch -q --depth 1 origin copytrade-data && git archive FETCH_HEAD prices filings/MANIFEST.json filings/text | tar -x -C store
           git fetch -q --depth 1 origin fx-data && git archive FETCH_HEAD carry/rates.csv | tar -x -C store || true
-      - run: python -m copytrade run --prices store/prices --rates store/carry/rates.csv --out out/results
+      - run: python -m copytrade run --prices store/prices --rates store/carry/rates.csv --filings store/filings --out out/results
       - name: Publicar
         env: { TOKEN: "${{ github.token }}" }
         run: bash .github/scripts/ct_store_push.sh out "copytrade-data - resultados $(date -u +%FT%TZ)"
