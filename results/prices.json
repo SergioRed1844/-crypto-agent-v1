@@ -1,9 +1,27 @@
 {
  "requested": 5288,
  "got": 5230,
- "days": 5488,
+ "days": 5487,
  "first": "2005-01-03",
- "last": "2026-10-26",
+ "last": "2026-10-23",
+ "split_check": {
+  "SPCE 2023-06-01": {
+   "ajustado": 75.0,
+   "operado": 3.75
+  },
+  "SPCE 2025-06-02": {
+   "ajustado": 3.12,
+   "operado": 3.12
+  },
+  "META 2022-11-03": {
+   "ajustado": 88.07,
+   "operado": 88.91
+  },
+  "AAPL 2019-06-03": {
+   "ajustado": 41.42,
+   "operado": 173.3
+  }
+ },
  "missing": [
   "ACCV",
   "ADBT",
