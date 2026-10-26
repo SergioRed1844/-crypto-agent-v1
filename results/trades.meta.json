@@ -1,0 +1,147 @@
+{
+ "dropped": {
+  "antes del mandato": 83
+ },
+ "publication": {
+  "2025-08-12a": {
+   "pub": "2025-08-19",
+   "open_cabinet": "2025-08-12",
+   "last_modified": "2025-08-19",
+   "oge_received": "2025-08-19",
+   "ultima_firma": "2025-08-19"
+  },
+  "2025-08-12b": {
+   "pub": "2026-01-15",
+   "open_cabinet": "2025-08-12",
+   "last_modified": "2026-01-15",
+   "ultima_firma": "2026-01-15"
+  },
+  "2025-08-12c": {
+   "pub": "2025-08-19",
+   "open_cabinet": "2025-08-12",
+   "last_modified": "2025-08-19",
+   "oge_received": "2025-08-19",
+   "ultima_firma": "2025-08-19"
+  },
+  "2025-09-03": {
+   "pub": "2025-09-06",
+   "open_cabinet": "2025-09-03",
+   "last_modified": "2025-09-06",
+   "oge_received": "2025-08-19",
+   "ultima_firma": "2025-09-05"
+  },
+  "2025-10-17": {
+   "pub": "2025-11-15",
+   "open_cabinet": "2025-10-17",
+   "last_modified": "2025-11-15",
+   "oge_received": "2025-10-28",
+   "ultima_firma": "2025-11-14"
+  },
+  "2025-10-20a": {
+   "pub": "2025-11-15",
+   "open_cabinet": "2025-10-20",
+   "last_modified": "2025-11-15",
+   "oge_received": "2025-10-28",
+   "ultima_firma": "2025-11-14"
+  },
+  "2025-10-20b": {
+   "pub": "2025-11-15",
+   "open_cabinet": "2025-10-20",
+   "last_modified": "2025-11-15",
+   "oge_received": "2025-10-28",
+   "ultima_firma": "2025-11-14"
+  },
+  "2025-11-14": {
+   "pub": "2025-11-22",
+   "open_cabinet": "2025-11-14",
+   "last_modified": "2025-11-22",
+   "oge_received": "2025-11-17",
+   "ultima_firma": "2025-11-21"
+  },
+  "2025-12-18": {
+   "pub": "2025-12-20",
+   "open_cabinet": "2025-12-18",
+   "last_modified": "2025-12-20",
+   "oge_received": "2025-12-19",
+   "ultima_firma": "2025-12-19"
+  },
+  "2026-01-14": {
+   "pub": "2026-01-16",
+   "open_cabinet": "2026-01-14",
+   "last_modified": "2026-01-16",
+   "oge_received": "2026-01-14",
+   "ultima_firma": "2026-01-15"
+  },
+  "2026-02-26a": {
+   "pub": "2026-03-04",
+   "open_cabinet": "2026-02-26",
+   "last_modified": "2026-03-04",
+   "oge_received": "2026-02-27",
+   "ultima_firma": "2026-03-03"
+  },
+  "2026-02-26b": {
+   "pub": "2026-03-04",
+   "open_cabinet": "2026-02-26",
+   "last_modified": "2026-03-04",
+   "oge_received": "2026-02-27",
+   "ultima_firma": "2026-03-03"
+  },
+  "2026-04-20": {
+   "pub": "2026-04-25",
+   "open_cabinet": "2026-04-25",
+   "last_modified": "2026-04-25",
+   "oge_received": "2026-04-23",
+   "ultima_firma": "2026-04-24"
+  },
+  "2026-05-08a": {
+   "pub": "2026-05-14",
+   "open_cabinet": "2026-05-14",
+   "last_modified": "2026-05-14",
+   "oge_received": "2026-05-12",
+   "ultima_firma": "2026-05-13"
+  },
+  "2026-05-08b": {
+   "pub": "2026-05-14",
+   "open_cabinet": "2026-05-14",
+   "last_modified": "2026-05-14",
+   "ultima_firma": "2026-05-13"
+  },
+  "2026-06-25a": {
+   "pub": "2026-07-01",
+   "open_cabinet": "2026-07-01",
+   "last_modified": "2026-07-01",
+   "oge_received": "2026-06-29"
+  },
+  "2026-06-25b": {
+   "pub": "2026-07-01",
+   "open_cabinet": "2026-07-01",
+   "last_modified": "2026-07-01",
+   "oge_received": "2026-06-29"
+  },
+  "2026-annual": {
+   "pub": "2026-07-01",
+   "open_cabinet": "2026-07-01",
+   "last_modified": "2026-07-01",
+   "oge_received": "2026-06-29"
+  },
+  "2026-08-12": {
+   "pub": "2026-08-22",
+   "open_cabinet": "2026-08-22",
+   "last_modified": "2026-08-22",
+   "ultima_firma": "2026-08-20"
+  },
+  "2026-09-08": {
+   "pub": "2026-09-22",
+   "open_cabinet": "2026-09-22",
+   "last_modified": "2026-09-22",
+   "oge_received": "2026-09-14",
+   "ultima_firma": "2026-09-18"
+  },
+  "2026-09-17": {
+   "pub": "2026-10-08",
+   "last_modified": "2026-10-08",
+   "oge_received": "2026-09-25",
+   "ultima_firma": "2026-10-06"
+  }
+ }
+}
