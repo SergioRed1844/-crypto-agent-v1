@@ -85,6 +85,8 @@ def build(fdir: Path | None) -> tuple[list[dict], dict]:
             continue
         res = resolve(r["description"], d, r)
         pub = pubs.get(r["filing_key"], {}).get("pub")
+        if pub is None:
+            raise SystemExit(f"sin fecha de publicación para {r['filing_key']}: pasa la carpeta filings/ (MANIFEST + texto)")
         out.append({"id": r["recordId"], "filing": r["filing_key"], "kind": r["source_kind"],
                     "status": r["periodic_status"], "date": str(d), "pub": str(pub) if pub else "",
                     "type": r["type"], "lower": lower, "mid": mid(lower), "description": r["description"],

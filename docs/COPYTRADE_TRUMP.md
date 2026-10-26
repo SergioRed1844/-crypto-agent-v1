@@ -80,4 +80,24 @@ Si no, se reporta tal cual y no se automatiza. Con ~21 meses de datos el poder e
 La variante principal es una sola; las demás (36 combinaciones) son sensibilidad, no se elige la mejor.
 
 ## Cambios posteriores
-(ninguno)
+Todos el 25-oct-2026. Los motiva la revisión independiente del código (un agente aparte que no vio los resultados
+del estudio por operación) o los datos; ninguno se eligió por mejorar el resultado. Se reportan las dos versiones
+donde aplica.
+1. **Fecha de publicación** = la más tardía entre la de Open Cabinet, el sello "OGE Received", la última firma
+   digital de OGE y el `Last-Modified` del PDF (antes: Open Cabinet con piso en el sello). Es más conservadora:
+   en 2025 la fecha del nombre del archivo era la de firma del Presidente, no la de publicación (p. ej. los 278-T
+   de 17/20-oct-2025 se certificaron hasta el 14-nov-2025). El 278-T (2) de ago-2025 solo existe en su versión
+   enmendada (15-ene-2026); se usa esa fecha.
+2. **Criterio 3 de la compuerta**: el IC por bootstrap agrupado por fecha tiene solo 6 grupos desde la
+   publicación (79% del dinero en el lote del 2-jul-2026) y en simulación con exceso real cero excluyó el cero 24%
+   de las veces (no 5%). Se usa una **cartera en tiempo calendario** (cada día, las compras publicadas en los 63
+   días hábiles previos, ponderadas por monto, menos SPY; t de Newey-West ≥ 1.96). El bootstrap se sigue
+   reportando. Ponderación del criterio: por monto (el pre-registro no lo fijaba).
+3. **Alfa**: además del alfa CAPM con una beta, se reporta el alfa con una beta por trimestre, porque la beta del
+   copiador replicable pasa de ~0 (efectivo y municipales) a ~0.9 cuando entra el anual; con una sola beta el alfa
+   absorbe parte del mercado. El criterio 2 sigue siendo el original; el otro es diagnóstico.
+4. **Correcciones de código**: huecos de precio > 5 días perdían el movimiento al reanudar (ahora se cobra); el filtro
+   de renta variable tiraba ETF de "Communication Services" por la palabra "muni"; acciones como SCHW/STT/FIS se
+   marcaban como fondo por el nombre; tickers con punto (BRK.A) y el cambio SPLG→SPYM; tipos "municipal" de Open
+   Cabinet en acciones; Franklin Resources (BEN); la variante "solo renta variable" no filtraba (error de pandas).
+   Los comparativos ahora pagan el mismo costo de compra (0.29%) que el copiador.

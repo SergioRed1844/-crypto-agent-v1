@@ -24,8 +24,8 @@ from .data import mid as range_mid
 START = pd.Timestamp("2025-01-21")          # primer día hábil del mandato (20-ene-2025 fue feriado)
 CAPITAL = 50_000.0
 BACKFILL_DAYS = 5
-NON_EQUITY_FUND = re.compile(r"bond|treasury|treas|corp|muni|income|gold|silver|commodit|short[- ]term|aggregate|"
-                             r"tips|high yield|money|floating|mortgage|credit|duration|bitcoin|ether", re.I)
+NON_EQUITY_FUND = re.compile(r"bond|treasury|treas|\bcorp|\bmuni\b|municipal|income|gold|silver|commodit|short[- ]term|aggregate|"
+                             r"tips|high yield|money|floating|mortgage|credit|duration|bitcoin|\bether", re.I)
 CASH = "BIL"
 
 
@@ -48,7 +48,7 @@ def extend(px: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         if fv is None:
             continue
         s = s.copy()
-        s.loc[fv:lv] = s.loc[fv:lv].ffill(limit=5)
+        s.loc[fv:lv] = s.loc[fv:lv].ffill()      # huecos internos: el movimiento se cobra al reanudar
         if lv < px.index[-1]:
             s.loc[lv:] = s.loc[lv] * bil.loc[lv:] / bil.loc[lv]
         i0 = px.index.get_loc(fv)
@@ -79,7 +79,8 @@ class Spec:
         return f"{m}·{self.sleeve}·{self.amount}·{self.cost*100:.2f}%" + (f"·top{self.top}" if self.top else "")
 
 
-def prepare(trades: pd.DataFrame, px: pd.DataFrame, info: dict) -> pd.DataFrame:
+def prepare(trades: pd.DataFrame, px: pd.DataFrame, info: dict, raw: pd.DataFrame | None = None) -> pd.DataFrame:
+    """`price_ok` = hay cierre real a ≤ 5 días hábiles (con `raw`); `px` extendido solo para valuar."""
     t = trades[trades.ticker.fillna("") != ""].copy()
     t["date"] = pd.to_datetime(t["date"])
     t["pub"] = pd.to_datetime(t["pub"])
@@ -87,8 +88,12 @@ def prepare(trades: pd.DataFrame, px: pd.DataFrame, info: dict) -> pd.DataFrame:
     t["xE"] = [exec_day(cal, d, False) for d in t["date"]]
     t["xR"] = [exec_day(cal, p, True) for p in t["pub"]]
     ok = t.ticker.isin(px.columns)
+    chk = px
+    if raw is not None:
+        chk = raw.reindex(px.index).ffill(limit=BACKFILL_DAYS).bfill(limit=BACKFILL_DAYS)
+        chk = chk.reindex(columns=px.columns)
     t["price_ok"] = False
-    t.loc[ok, "price_ok"] = [not math.isnan(px.at[x, k]) if x is not None else False
+    t.loc[ok, "price_ok"] = [x is not None and not math.isnan(chk.at[x, k]) and not math.isnan(px.at[x, k])
                              for x, k in zip(t.loc[ok, "xE"], t.loc[ok, "ticker"])]
     return t
 
@@ -189,20 +194,24 @@ def run(t: pd.DataFrame, px: pd.DataFrame, spec: Spec, start: pd.Timestamp = STA
 
 
 # ------------------------------------------------------------------------------------------------- comparativos
-def benchmark(px: pd.DataFrame, weights: dict[str, float], start: pd.Timestamp = START, monthly: bool = True
-              ) -> pd.Series:
+def benchmark(px: pd.DataFrame, weights: dict[str, float], start: pd.Timestamp = START, monthly: bool = True,
+              cost: float = 0.0) -> pd.Series:
+    """Comprar y mantener (o rebalanceo mensual) con el mismo costo por peso operado que el copiador; la compra
+    inicial también paga (el copiador paga al salir de BIL)."""
     cal = px.index[px.index >= start]
     r = px.loc[cal, list(weights)].pct_change(fill_method=None).fillna(0.0)
     w0 = pd.Series(weights, dtype=float)
-    nav = [CAPITAL]
+    nav = [CAPITAL * (1 - cost * (1.0 if weights != {CASH: 1.0} else 0.0))]
     w = w0.copy()
     for i in range(1, len(cal)):
         g = float((w * r.iloc[i]).sum())
-        nav.append(nav[-1] * (1 + g))
+        v = nav[-1] * (1 + g)
         w = w * (1 + r.iloc[i])
         w = w / w.sum()
         if monthly and cal[i].month != cal[i - 1].month:
+            v -= float((w0 - w).abs().sum()) * cost * v
             w = w0.copy()
+        nav.append(v)
     return pd.Series(nav, index=cal)
 
 
@@ -233,6 +242,30 @@ def newey_west(y: np.ndarray, x: np.ndarray, lags: int = 10) -> tuple[np.ndarray
     return beta, np.sqrt(np.diag(V))
 
 
+def alpha_by_segment(nav: pd.Series, spy: pd.Series, bil: pd.Series, lags: int = 10) -> tuple[float, float]:
+    """Alfa CAPM con una beta por trimestre calendario (la beta del copiador cambia de ~0 a ~0.9 cuando entra el
+    anual): alfa común, Newey-West."""
+    nav = nav.dropna()
+    r = nav.pct_change().dropna()
+    rb = bil.reindex(nav.index).pct_change().dropna().reindex(r.index).fillna(0)
+    rs = spy.reindex(nav.index).pct_change().dropna().reindex(r.index)
+    y = (r - rb).values
+    xs = (rs - rb).values
+    q = pd.PeriodIndex(r.index, freq="Q")
+    cols = [np.ones_like(xs)] + [np.where(q == k, xs, 0.0) for k in q.unique()]
+    X = np.column_stack(cols)
+    beta = np.linalg.lstsq(X, y, rcond=None)[0]
+    e = y - X @ beta
+    xe = X * e[:, None]
+    S = xe.T @ xe
+    for L in range(1, lags + 1):
+        G = xe[L:].T @ xe[:-L]
+        S += (1 - L / (lags + 1)) * (G + G.T)
+    Xi = np.linalg.pinv(X.T @ X)
+    se = np.sqrt(np.diag(Xi @ S @ Xi))
+    return float(beta[0] * 252), float(beta[0] / se[0]) if se[0] > 0 else 0.0
+
+
 def metrics(nav: pd.Series, spy: pd.Series, bil: pd.Series) -> dict:
     nav = nav.dropna()
     r = nav.pct_change().dropna()
@@ -250,4 +283,5 @@ def metrics(nav: pd.Series, spy: pd.Series, bil: pd.Series) -> dict:
             "maxdd": float(dd.min()), "beta": float(beta[1]), "alpha_ann": float(beta[0] * 252),
             "alpha_t": float(beta[0] / se[0]) if se[0] > 0 else 0.0, "te": float(te),
             "ir": float((r - rs.reindex(r.index)).mean() * 252 / te) if te > 0 else 0.0,
+            **dict(zip(("alpha_seg_ann", "alpha_seg_t"), alpha_by_segment(nav, spy, bil))),
             "start": str(nav.index[0].date()), "end": str(nav.index[-1].date())}

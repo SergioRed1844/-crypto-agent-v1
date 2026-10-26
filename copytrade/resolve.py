@@ -157,8 +157,6 @@ def asset_class(desc: str, oc_type: str = "") -> str:
         return "pref"
     if BOND.search(d) and (maturity(d) or re.search(r"\d\s?%", d)) and not re.search(r"\bETF\b|ISHARES|VANGUARD", d):
         return "muni" if MUNI.search(d) or oc_type == "municipal_bond" else "corp"
-    if oc_type == "municipal_bond":
-        return "muni"
     if oc_type in ("etf", "mutual_fund") or FUND.search(d):
         return "fund"
     if oc_type == "option" or re.search(r"\b(CALL|PUT)\b.*\d", d):
@@ -255,6 +253,7 @@ def resolve(desc: str, trade: dt.date, row: dict | None = None) -> dict:
     if cls == "fund" and t is None and MM.search(desc):
         return {"cls": "mm", "ticker": "BIL", "how": "proxy mm", "proxy": True}
     _, _, etfs = listings()
-    if t and t in etfs:
-        cls = "fund"
+    if t:   # con ticker, la clase la decide la lista (ETF o no), no la palabra "FIDELITY"/"SCHWAB" del nombre
+        cls = "fund" if (t in etfs or re.search(r"\b(ETF|ETN|FUND|FD|FDS|FDS TR|PORTFOLIO|GOLD TRUST)\b", desc.upper())) \
+            else "equity"
     return {"cls": cls, "ticker": t, "how": how, "proxy": False}

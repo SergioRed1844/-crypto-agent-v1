@@ -63,3 +63,66 @@ def study(t: pd.DataFrame, px: pd.DataFrame) -> pd.DataFrame:
                                 "exceso": est, "ic_lo": lo, "ic_hi": hi,
                                 "acierto": float((d.ex > 0).mean()) if len(d) else float("nan")})
     return pd.DataFrame(out)
+
+
+def calendar_time(t: pd.DataFrame, px: pd.DataFrame, base_col: str, h: int, side: str = "Purchase",
+                  lags: int = 10) -> dict:
+    """Prueba en tiempo calendario (cambio declarado 25-oct-2026 tras la revisión independiente): cada día, la
+    cartera de las operaciones cuya fecha base cayó en los h días hábiles previos, ponderada por monto y con
+    deriva de precio (comprar y mantener h días), menos SPY. Media diaria anualizada y t de Newey-West. Las
+    ventas entran con signo invertido. Evita tratar como independientes cientos de operaciones del mismo lote."""
+    t = t[t.cls.isin(["equity", "fund"]) & t.price_ok & (t.type == side)]
+    cal = px.index
+    pos = {d: i for i, d in enumerate(cal)}
+    rets = px.pct_change(fill_method=None)
+    spy = rets["SPY"]
+    n = len(cal)
+    num = np.zeros(n)
+    den = np.zeros(n)
+    arr = {c: px[c].values for c in set(t.ticker)}
+    for r in t.itertuples():
+        b = getattr(r, base_col)
+        if b is None or pd.isna(b) or b not in pos:
+            continue
+        i0 = pos[b]
+        i1 = min(n - 1, i0 + h)
+        if i1 <= i0:
+            continue
+        p = arr[r.ticker]
+        base = p[i0]
+        if not base > 0:
+            continue
+        seg = slice(i0 + 1, i1 + 1)
+        wprev = r.mid * p[i0:i1] / base                    # valor al cierre previo de cada día
+        rr = p[i0 + 1:i1 + 1] / p[i0:i1] - 1
+        ok = np.isfinite(wprev) & np.isfinite(rr)
+        num[seg] += np.where(ok, wprev * rr, 0.0)
+        den[seg] += np.where(ok, wprev, 0.0)
+    act = den > 0
+    if act.sum() < 20:
+        return {"days": int(act.sum()), "ann": float("nan"), "t": float("nan"), "per_h": float("nan")}
+    port = num[act] / den[act]
+    ex = port - spy.values[act]
+    ex = np.nan_to_num(ex)
+    if side == "Sale":
+        ex = -ex
+    m = ex.mean()
+    # t de Newey-West para la media (regresión sobre constante)
+    e = ex - m
+    S = (e * e).sum()
+    for L in range(1, lags + 1):
+        S += 2 * (1 - L / (lags + 1)) * (e[L:] * e[:-L]).sum()
+    se_m = np.sqrt(S) / len(ex)
+    return {"days": int(act.sum()), "ann": float(m * 252), "t": float(m / se_m) if se_m > 0 else 0.0,
+            "per_h": float(m * h), "lo_h": float((m - 1.96 * se_m) * h), "hi_h": float((m + 1.96 * se_m) * h),
+            "first": str(cal[np.argmax(act)].date())}
+
+
+def calendar_study(t: pd.DataFrame, px: pd.DataFrame) -> pd.DataFrame:
+    out = []
+    for base_col, label in (("xE", "desde la operación"), ("xR", "desde la publicación")):
+        for h in H:
+            for side in ("Purchase", "Sale"):
+                d = calendar_time(t, px, base_col, h, side)
+                out.append({"base": label, "h": h, "side": "compras" if side == "Purchase" else "ventas", **d})
+    return pd.DataFrame(out)

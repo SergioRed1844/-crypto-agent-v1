@@ -121,6 +121,32 @@ def test_sim() -> None:
     check("top-1 tiene una sola posición", all(len(w) == 1 for w in top["weights"].values()))
 
 
+def test_review_fixes() -> None:
+    cal = pd.bdate_range("2025-01-21", periods=40)
+    gap = np.r_[np.full(10, 100.0), np.full(8, np.nan), np.full(22, 150.0)]
+    raw = pd.DataFrame({"SPY": np.linspace(100, 101, 40), "BIL": np.linspace(100, 100.2, 40), "GAP": gap}, index=cal)
+    px, info = sim.extend(raw)
+    tr = _trades([(str(cal[0].date()), str(cal[0].date()), "Purchase", 1001, "GAP", "equity")])
+    t = sim.prepare(tr, px, info, raw)
+    r = sim.run(t, px, sim.Spec(mode="E", cost=0.0), start=cal[0])
+    check("hueco de 8 días: el +50% se cobra al reanudar", abs(r["nav"].iloc[-1] / r["nav"].iloc[0] - 1.5) < 1e-9)
+    check("filtro de renta variable no tira Communication Services",
+          not sim.NON_EQUITY_FUND.search("State Street Communication Services Select Sector SPDR ETF"))
+    check("filtro sí tira bonos municipales", bool(sim.NON_EQUITY_FUND.search("iShares National Muni Bond ETF")))
+    from copytrade.resolve import resolve
+    rs = resolve("SCHWAB CHARLES CORP", dt.date(2026, 1, 5), {"resolved_ticker": "SCHW"})
+    check("SCHW es acción aunque diga SCHWAB", rs["cls"] == "equity" and rs["ticker"] == "SCHW")
+    # cartera en tiempo calendario: activo que le gana al SPY 0.1% diario → exceso positivo
+    up = 100 * np.cumprod(np.r_[1, np.full(39, 1.002)])
+    spy = 100 * np.cumprod(np.r_[1, np.full(39, 1.001)])
+    raw2 = pd.DataFrame({"SPY": spy, "BIL": np.linspace(100, 100.2, 40), "UP": up}, index=cal)
+    px2, info2 = sim.extend(raw2)
+    tr2 = _trades([(str(cal[0].date()), str(cal[1].date()), "Purchase", 1001, "UP", "equity")])
+    t2 = sim.prepare(tr2, px2, info2, raw2)
+    ct = events.calendar_time(t2, px2, "xR", 21)
+    check("tiempo calendario: exceso ≈ 0.1% diario × 21", ct["days"] == 21 and abs(ct["per_h"] - 0.021) < 0.002)
+
+
 def test_events() -> None:
     raw = _px()
     px, info = sim.extend(raw)
@@ -140,7 +166,7 @@ def test_events() -> None:
 
 
 def main() -> int:
-    for f in (test_parse, test_amounts, test_resolve, test_sim, test_events):
+    for f in (test_parse, test_amounts, test_resolve, test_sim, test_review_fixes, test_events):
         f()
     print(f"{'OK' if not FAILS else 'FALLAS: ' + str(len(FAILS))} copytrade")
     return 1 if FAILS else 0
