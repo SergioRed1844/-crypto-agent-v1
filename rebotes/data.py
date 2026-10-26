@@ -23,7 +23,9 @@ IWV = ("https://www.ishares.com/us/products/239714/ishares-russell-3000-etf/1467
 LISTS = {"nasdaqlisted": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
          "otherlisted": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"}
 UA = {"User-Agent": "Mozilla/5.0 (rebotes research; github-actions)"}
-FIELDS = ("Open", "High", "Low", "Close", "Volume")
+FIELDS = ("Open", "High", "Low", "Close", "Volume", "RawClose", "Dollar")   # lo que guarda el panel
+RAW = ("Open", "High", "Low", "Close", "Adj Close", "Volume")                # lo que trae Yahoo sin ajustar
+MIN_GOT = 0.90                                                               # fracción mínima de tickers con datos
 
 
 def _get(url: str) -> str | None:
@@ -91,7 +93,7 @@ def _dl(tks: list[str]) -> pd.DataFrame:
     import yfinance as yf
     for i in range(4):
         try:
-            df = yf.download(tks, start=C.START, auto_adjust=True, actions=False, progress=False, threads=True,
+            df = yf.download(tks, start=C.START, auto_adjust=False, actions=True, progress=False, threads=True,
                              group_by="ticker")
             if df is not None and not df.empty:
                 return df
@@ -101,6 +103,33 @@ def _dl(tks: list[str]) -> pd.DataFrame:
     return pd.DataFrame()
 
 
+def adjust(sub: pd.DataFrame) -> pd.DataFrame:
+    """Velas de Yahoo sin auto_adjust → OHLC ajustados por dividendos y splits (para retornos), el cierre tal como se
+    operó ese día (para el filtro de US$3: Yahoo ya aplica los splits posteriores al 'Close', aquí se deshacen) y el
+    dinero operado real (Close×Volume con el mismo ajuste de split se cancela)."""
+    sub = sub.copy()
+    c = sub["Close"].where(sub["Close"] > 0)
+    fac = (sub["Adj Close"].where(sub["Adj Close"] > 0) / c).where(lambda x: np.isfinite(x) & (x > 0), 1.0)
+    out = pd.DataFrame(index=sub.index)
+    for f in ("Open", "High", "Low", "Close"):
+        out[f] = sub[f].where(sub[f] > 0) * fac
+    out["Volume"] = sub["Volume"]
+    sp = sub["Stock Splits"] if "Stock Splits" in sub.columns else pd.Series(0.0, index=sub.index)
+    g = sp.fillna(0.0).where(lambda x: x > 0, 1.0)
+    after = g[::-1].cumprod()[::-1].shift(-1).fillna(1.0)      # producto de los splits estrictamente posteriores a t
+    out["RawClose"] = c * after
+    out["Dollar"] = c * sub["Volume"]
+    return out
+
+
+def drop_open_bar(df: pd.DataFrame) -> pd.DataFrame:
+    """Quita la vela de hoy si el mercado de NY no ha cerrado (la corrida puede ser en horario de mercado)."""
+    now = pd.Timestamp.now(tz="America/New_York")
+    if len(df) and df.index[-1].date() == now.date() and (now.hour, now.minute) < (16, 15):
+        return df.iloc[:-1]
+    return df
+
+
 def prices(out: str, chunk: int = 100) -> int:
     o = Path(out)
     tks = [x.strip() for x in open(o / "universe.txt") if x.strip()]
@@ -108,18 +137,39 @@ def prices(out: str, chunk: int = 100) -> int:
     for k in range(0, len(tks), chunk):
         part = tks[k:k + chunk]
         df = _dl(part)
+        got = 0
         for t in part:
             try:
                 sub = df[t] if isinstance(df.columns, pd.MultiIndex) else df
             except KeyError:
                 continue
-            sub = sub[[f for f in FIELDS if f in sub.columns]].dropna(how="all")
-            if len(sub) >= 50 and set(FIELDS) <= set(sub.columns):
-                frames[t] = sub
+            if not set(RAW) <= set(sub.columns):
+                continue
+            sub = sub.dropna(how="all", subset=list(RAW))
+            if len(sub) >= 50:
+                frames[t] = adjust(sub)
+                got += 1
+        if got < 0.5 * len(part):                              # bloque casi vacío: probable límite de Yahoo
+            time.sleep(30)
+            df = _dl(part)
+            for t in part:
+                if t in frames:
+                    continue
+                try:
+                    sub = df[t] if isinstance(df.columns, pd.MultiIndex) else df
+                except KeyError:
+                    continue
+                if set(RAW) <= set(sub.columns):
+                    sub = sub.dropna(how="all", subset=list(RAW))
+                    if len(sub) >= 50:
+                        frames[t] = adjust(sub)
         print(f"{min(k + chunk, len(tks))}/{len(tks)} con datos: {len(frames)}", flush=True)
         time.sleep(1)
-    cal = frames["SPY"].index if "SPY" in frames else sorted(set().union(*[f.index for f in frames.values()]))
-    cal = pd.DatetimeIndex(cal)
+    if "SPY" not in frames:
+        raise SystemExit("sin SPY: no hay calendario ni referencia")
+    if len(frames) < MIN_GOT * len(tks):
+        raise SystemExit(f"solo {len(frames)}/{len(tks)} tickers con datos (< {MIN_GOT:.0%}): Yahoo limitó la descarga")
+    cal = pd.DatetimeIndex(drop_open_bar(frames["SPY"]).index)
     names = sorted(frames)
     arr = np.full((len(FIELDS), len(cal), len(names)), np.nan, dtype=np.float32)
     for j, t in enumerate(names):
@@ -129,15 +179,22 @@ def prices(out: str, chunk: int = 100) -> int:
     np.savez_compressed(o / "panel.npz", data=arr, dates=np.array(cal.strftime("%Y-%m-%d"), dtype="U10"),
                         tickers=np.array(names), fields=np.array(FIELDS))
     missing = [t for t in tks if t not in frames]
+    chk = {}
+    for t, d in (("SPCE", "2023-06-01"), ("SPCE", "2025-06-02"), ("META", "2022-11-03"), ("AAPL", "2019-06-03")):
+        if t in frames and pd.Timestamp(d) in frames[t].index:
+            r = frames[t].loc[pd.Timestamp(d)]
+            chk[f"{t} {d}"] = {"ajustado": round(float(r["Close"]), 2), "operado": round(float(r["RawClose"]), 2)}
     json.dump({"requested": len(tks), "got": len(names), "days": len(cal), "first": str(cal[0].date()),
-               "last": str(cal[-1].date()), "missing": missing[:500]}, open(o / "prices.json", "w"), indent=1)
-    print("panel", arr.shape, "faltan", len(missing))
+               "last": str(cal[-1].date()), "split_check": chk, "missing": missing[:500]},
+              open(o / "prices.json", "w"), indent=1)
+    print("panel", arr.shape, "faltan", len(missing), chk)
     return 0
 
 
 def load_panel(path: str) -> dict:
     z = np.load(path, allow_pickle=False)
-    d = {f: z["data"][i] for i, f in enumerate(z["fields"])}
+    data = z["data"]                                     # descomprime una sola vez
+    d = {str(f): data[i] for i, f in enumerate(z["fields"])}
     d["dates"] = pd.DatetimeIndex(z["dates"])
     d["tickers"] = list(z["tickers"])
     return d

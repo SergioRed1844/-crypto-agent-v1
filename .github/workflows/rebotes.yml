@@ -27,7 +27,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: store
-          key: rb-panel-${{ steps.wk.outputs.week }}
+          key: rb-panel-v2-${{ steps.wk.outputs.week }}
       - name: Universo y precios (si no hay caché de esta semana)
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
@@ -38,7 +38,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: store
-          key: rb-panel-${{ steps.wk.outputs.week }}
+          key: rb-panel-v2-${{ steps.wk.outputs.week }}
       - run: cat store/universe.json store/prices.json | head -c 2000
       - run: python -m rebotes.backtest store/panel.npz out/results
       - name: Publicar

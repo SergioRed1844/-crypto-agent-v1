@@ -2,7 +2,7 @@
 
 Cada operación ya trae su vela de entrada/salida y su retorno neto (signals.outcomes). La cartera solo decide cuáles
 caben: entra por fecha; en empate, la de mayor caída desde su máximo; no repite una acción abierta; 1/MAX_POS del
-valor al entrar. El valor diario se marca con el cierre.
+valor al entrar. El valor diario se marca con el cierre menos el costo de vender.
 """
 from __future__ import annotations
 
@@ -53,11 +53,14 @@ def simulate(trades: pd.DataFrame, close: np.ndarray, dates: pd.DatetimeIndex, s
 
 
 def _mtm(p: dict, close: np.ndarray, t: int) -> float:
-    """Valor relativo de la posición al cierre de t (sin costos de salida; la salida real usa `net`)."""
+    """Valor relativo de la posición si se vendiera al cierre de t, ya con el costo de salida (la de entrada ya está
+    en `net`). Si ese día no hay cierre, vale el último cierre conocido."""
     if t < p["entry_i"]:
         return 1.0
-    c = close[t, p["j"]]
-    return float(c / p["entry"]) if np.isfinite(c) and p["entry"] > 0 else 1.0
+    col = close[p["entry_i"]:t + 1, p["j"]]
+    fin = np.flatnonzero(np.isfinite(col) & (col > 0))
+    c = float(col[fin[-1]]) if len(fin) else p["entry"]
+    return c / p["entry"] * (1 - C.COST_SIDE) / (1 + C.COST_SIDE)
 
 
 def monthly(nav: pd.Series) -> pd.Series:
