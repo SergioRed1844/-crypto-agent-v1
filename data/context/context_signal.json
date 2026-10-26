@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-26T05:00:44Z",
+ "generated_utc": "2026-10-26T05:59:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.788,
- "bias": -0.125,
- "event_risk": 0.424,
+ "size_mult": 0.787,
+ "bias": -0.126,
+ "event_risk": 0.426,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
  "reasons": [
-  "Contexto neutral: sesgo -0.13, riesgo de evento 0.42"
+  "Contexto neutral: sesgo -0.13, riesgo de evento 0.43"
  ],
  "upcoming": [
   {
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.037,
+   "riesgo": 0.038,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.344,
+   "aporte": -0.343,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.311,
+   "aporte": 0.31,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.253,
+   "aporte": 0.252,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.226,
+   "aporte": 0.225,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -132,7 +132,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.185,
+   "aporte": 0.181,
    "fuente": "noticia"
   },
   {
@@ -141,7 +141,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.178,
+   "aporte": 0.177,
    "fuente": "noticia"
   }
  ],
@@ -157,6 +157,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.9
+  "stablecoins_30d_pct": -0.88
  }
 }
