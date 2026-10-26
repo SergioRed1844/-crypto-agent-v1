@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-26T05:59:48Z",
+ "generated_utc": "2026-10-26T06:58:53Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.787,
+ "size_mult": 0.786,
  "bias": -0.126,
- "event_risk": 0.426,
+ "event_risk": 0.427,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.038,
+   "riesgo": 0.04,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.343,
+   "aporte": -0.342,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.31,
+   "aporte": 0.309,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.252,
+   "aporte": 0.251,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.225,
+   "aporte": 0.224,
    "fuente": "noticia"
   },
   {
@@ -127,19 +127,19 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-gold-prices-break-4-000-as-investors-brace-for-cru-2026-10-25",
-   "date": "2026-10-25",
-   "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.181,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.177,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-gold-prices-break-4-000-as-investors-brace-for-cru-2026-10-25",
+   "date": "2026-10-25",
+   "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
+   "category": "MACRO_DATA",
    "stance": "pro",
    "aporte": 0.177,
    "fuente": "noticia"
