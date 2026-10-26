@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-26T01:04:19Z",
+ "generated_utc": "2026-10-26T01:39:12Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.031,
+   "riesgo": 0.032,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.348,
+   "aporte": -0.347,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.315,
+   "aporte": 0.314,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.256,
+   "aporte": 0.255,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.201,
+   "aporte": 0.198,
    "fuente": "noticia"
   },
   {
@@ -157,6 +157,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -1.05
+  "stablecoins_30d_pct": -0.9
  }
 }
