@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-26T02:03:26Z",
+ "generated_utc": "2026-10-26T03:02:28Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.79,
- "bias": -0.124,
- "event_risk": 0.421,
+ "size_mult": 0.789,
+ "bias": -0.125,
+ "event_risk": 0.422,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.033,
+   "riesgo": 0.034,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -78,7 +78,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.347,
+   "aporte": -0.346,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.314,
+   "aporte": 0.313,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.264,
+   "aporte": -0.263,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.255,
+   "aporte": 0.254,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.227,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.197,
+   "aporte": 0.193,
    "fuente": "noticia"
   },
   {
