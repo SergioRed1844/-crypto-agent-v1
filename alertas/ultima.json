@@ -1,0 +1,28 @@
+{
+ "corrida": "2026-10-26 10:16",
+ "ultimo_cierre": "2026-10-23",
+ "senales_nuevas": 6,
+ "por_setup": {
+  "CAPITULACION": 4,
+  "CAIDA_GIRO": 1,
+  "CATALIZADOR": 1
+ },
+ "cerradas_hoy": 0,
+ "estudio_pasan": 0,
+ "estudio_total": 3,
+ "papel_cerradas": 0,
+ "papel_abiertas": 0,
+ "papel_pendientes": 6,
+ "papel_gana": null,
+ "papel_neto_medio": null,
+ "canales": {
+  "correo": false,
+  "issue": true,
+  "hoja": false
+ },
+ "log": [
+  "correo: sin credenciales SMTP",
+  "issue #8 creado (sin SMTP: el correo llega por la notificación de GitHub)",
+  "hoja: sin REB_SHEET_URL"
+ ]
+}
