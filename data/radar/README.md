@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-26T06:59:03+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-25
+Última corrida: **2026-10-26T06:59:32+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-25
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
