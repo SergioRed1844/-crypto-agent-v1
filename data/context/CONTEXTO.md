@@ -1,10 +1,10 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-26T14:51:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-26T14:56:03Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.23 · tamaño ×0.888 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.23 · tamaño ×0.887 · compras permitidas
 
-- Contexto neutral: sesgo -0.13, riesgo de evento 0.22
+- Contexto neutral: sesgo -0.13, riesgo de evento 0.23
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -21,7 +21,7 @@ Actualizado 2026-10-26T14:51:58Z UTC. Se recalcula cada hora; el calendario y lo
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.302 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.251 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.245 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.217 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.216 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.182 |
 | Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la | 2026-10-26 | anti | -0.176 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.173 |
@@ -33,13 +33,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-26T14:51:58Z",
+ "inicio": "2026-10-26T14:56:03Z",
  "onchain": {
-  "scanned": [
-   973246,
-   973250
-  ],
-  "calls": 160,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
