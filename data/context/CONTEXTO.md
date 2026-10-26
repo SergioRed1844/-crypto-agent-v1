@@ -1,8 +1,8 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-26T18:48:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-26T18:53:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.24 · tamaño ×0.879 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.24 · tamaño ×0.878 · compras permitidas
 
 - Contexto neutral: sesgo -0.13, riesgo de evento 0.24
 
@@ -18,7 +18,7 @@ Actualizado 2026-10-26T18:48:28Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.330 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.299 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.298 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.246 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.242 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.213 |
@@ -33,13 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-26T18:48:28Z",
+ "inicio": "2026-10-26T18:53:04Z",
  "onchain": {
   "scanned": [
-   973263,
-   973270
+   973271,
+   973273
   ],
-  "calls": 160,
+  "calls": 37,
   "stopped": null,
   "nuevas": 0
  },
