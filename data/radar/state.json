@@ -31,7 +31,6 @@
   }
  },
  "runs": [
-  "2026-10-24T19:44:46+00:00",
   "2026-10-24T20:30:19+00:00",
   "2026-10-24T22:28:22+00:00",
   "2026-10-24T22:42:59+00:00",
@@ -90,18 +89,19 @@
   "2026-10-26T09:56:41+00:00",
   "2026-10-26T10:55:40+00:00",
   "2026-10-26T10:56:26+00:00",
-  "2026-10-26T12:54:01+00:00"
+  "2026-10-26T12:54:01+00:00",
+  "2026-10-26T13:53:04+00:00"
  ],
- "last_scan_utc": "2026-10-26T12:54:01+00:00",
+ "last_scan_utc": "2026-10-26T13:53:04+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "ADA": {
@@ -116,17 +116,17 @@
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -136,7 +136,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "BCH": {
@@ -146,7 +146,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "BTC": {
@@ -156,12 +156,12 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "DIA": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "DOGE": {
@@ -181,57 +181,57 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GLD": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "IWM": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "LINK": {
@@ -251,12 +251,12 @@
   },
   "META": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "MXN=X": {
@@ -266,37 +266,37 @@
   },
   "NAFTRACISHRS.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "SOL": {
@@ -306,7 +306,7 @@
   },
   "SPY": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "TRX": {
@@ -316,62 +316,62 @@
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "WMT": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "XRP": {
@@ -381,7 +381,7 @@
   },
   "^MXX": {
    "ok": true,
-   "last": "2026-10-23",
+   "last": "2026-10-26",
    "nota": "yahoo"
   },
   "^VIX": {
@@ -481,7 +481,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-26T11:54:43Z",
+   "last": "2026-10-26T12:54:06Z",
    "nota": "NEUTRAL"
   }
  },
