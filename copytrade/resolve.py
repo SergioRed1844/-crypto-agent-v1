@@ -228,7 +228,7 @@ def _ticker(desc: str, resolved_ticker: str, oc_rt: str, oc_rule: str, oc_cands:
         if row.get(f):
             return row[f].replace(".", "-"), "open cabinet " + (row.get("oc_rule") or f)
     if row.get("oc_cands"):
-        c = _same_company(row["oc_cands"].split("|"))
+        c = _same_company([x.replace(".", "-") for x in row["oc_cands"].split("|")])
         if c:
             return c, "open cabinet candidatos"
     if k in by:

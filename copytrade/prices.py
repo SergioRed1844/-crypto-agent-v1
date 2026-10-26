@@ -34,17 +34,28 @@ def _dl(tks: list[str], adjust: bool) -> pd.DataFrame:
 
 
 def main(lst: str, out: str) -> int:
+    """Si OUT/prices ya trae precios publicados (incremental), solo baja los tickers que faltan."""
     tickers = sorted({t.strip() for t in open(lst) if t.strip() and not t.startswith("#")})
     o = Path(out) / "prices"
     o.mkdir(parents=True, exist_ok=True)
     frames = {True: [], False: []}
-    for k in range(0, len(tickers), CHUNK):
-        part = tickers[k:k + CHUNK]
+    if (o / "close_adj.csv.gz").exists() and len(sys.argv) > 3 and sys.argv[3] == "--incremental":
+        old_a = pd.read_csv(o / "close_adj.csv.gz", index_col=0, parse_dates=True)
+        old_r = pd.read_csv(o / "close_raw.csv.gz", index_col=0, parse_dates=True)
+        frames[True].append(old_a)
+        frames[False].append(old_r)
+        have = set(old_a.columns)
+        print("incremental: ya hay", len(have))
+        todo = [t for t in tickers if t not in have]
+    else:
+        todo = tickers
+    for k in range(0, len(todo), CHUNK):
+        part = todo[k:k + CHUNK]
         for adj in (True, False):
             c = _dl(part, adj)
             if not c.empty:
                 frames[adj].append(c)
-        print(f"{k + len(part)}/{len(tickers)}")
+        print(f"{k + len(part)}/{len(todo)}")
         time.sleep(2)
     adj = pd.concat(frames[True], axis=1) if frames[True] else pd.DataFrame()
     raw = pd.concat(frames[False], axis=1) if frames[False] else pd.DataFrame()
