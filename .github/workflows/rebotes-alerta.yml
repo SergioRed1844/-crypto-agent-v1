@@ -4,9 +4,13 @@
 # del Radar; sin ellos, un issue) y escribe en tu Google Sheet si existe REB_SHEET_URL (sheets/rebotes_sheet.gs).
 # Horario fijo de Monterrey (UTC−6): lunes 6:47 (señales del viernes, antes de abrir) y miércoles 16:17 (después del
 # cierre). Bitácora y último correo en la rama rebotes-data, carpeta alertas/.
+# Copia idéntica en la rama rebotes: ahí solo corre a mano, con un push que lleve [alerta-run] en el mensaje
+# (el horario solo dispara desde main).
 name: rebotes-alerta
 on:
   workflow_dispatch:
+  push:
+    branches: [rebotes]
   schedule:
     - cron: "47 12 * * 1"
     - cron: "17 22 * * 3"
@@ -18,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   run:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[alerta-run]')
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
