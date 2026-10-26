@@ -1,0 +1,80 @@
+# Rebotes — alerta de lunes y miércoles (señales del estudio, no recomendación de compra; solo papel).
+# Corre el código de la rama `rebotes`: baja 2 años de velas del universo, calcula los setups del estudio al último
+# cierre, sigue la bitácora en papel con la misma regla (docs/REBOTES.md), manda el correo (Gmail SMTP con los secretos
+# del Radar; sin ellos, un issue) y escribe en tu Google Sheet si existe REB_SHEET_URL (sheets/rebotes_sheet.gs).
+# Horario fijo de Monterrey (UTC−6): lunes 6:47 (señales del viernes, antes de abrir) y miércoles 16:17 (después del
+# cierre). Bitácora y último correo en la rama rebotes-data, carpeta alertas/.
+# Copia idéntica en la rama rebotes: ahí solo corre a mano, con un push que lleve [alerta-run] en el mensaje
+# (el horario solo dispara desde main).
+name: rebotes-alerta
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+  schedule:
+    - cron: "47 12 * * 1"
+    - cron: "17 22 * * 3"
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: rebotes-alerta
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, '[alerta-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rebotes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "yfinance>=0.2.54" pandas numpy httpx
+      - name: Canales (solo sí/no, nunca valores)
+        env:
+          U: ${{ secrets.RADAR_SMTP_USER }}
+          P: ${{ secrets.RADAR_SMTP_PASS }}
+          T1: ${{ secrets.REB_EMAIL_TO }}
+          T2: ${{ secrets.RADAR_EMAIL_TO }}
+          SU: ${{ secrets.REB_SHEET_URL }}
+          ST: ${{ secrets.REB_SHEET_TOKEN }}
+        run: |
+          yn() { if [ -n "$1" ]; then echo sí; else echo no; fi; }
+          echo "correo SMTP (RADAR_SMTP_USER + RADAR_SMTP_PASS): $( [ -n "$U" ] && [ -n "$P" ] && echo sí || echo no )"
+          echo "destinatario REB_EMAIL_TO: $(yn "$T1") · RADAR_EMAIL_TO: $(yn "$T2")"
+          echo "hoja REB_SHEET_URL: $(yn "$SU") · REB_SHEET_TOKEN: $(yn "$ST")"
+      - name: Estudio y bitácora previos (rama rebotes-data)
+        run: |
+          mkdir -p prev
+          if git fetch -q --depth 1 origin rebotes-data; then
+            git show FETCH_HEAD:results/results.json > prev/results.json 2>/dev/null || rm -f prev/results.json
+            git show FETCH_HEAD:alertas/ledger.csv > prev/ledger.csv 2>/dev/null || rm -f prev/ledger.csv
+          fi
+          ls -la prev
+      - name: Universo y 2 años de velas
+        run: |
+          mkdir -p store
+          python -m rebotes.data universe store
+          REB_START="$(date -u -d '2 years ago' +%F)" python -m rebotes.data prices store
+      - name: Señales, bitácora, correo y hoja
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RADAR_SMTP_USER: ${{ secrets.RADAR_SMTP_USER }}
+          RADAR_SMTP_PASS: ${{ secrets.RADAR_SMTP_PASS }}
+          RADAR_EMAIL_TO: ${{ secrets.RADAR_EMAIL_TO }}
+          REB_EMAIL_TO: ${{ secrets.REB_EMAIL_TO }}
+          REB_SHEET_URL: ${{ secrets.REB_SHEET_URL }}
+          REB_SHEET_TOKEN: ${{ secrets.REB_SHEET_TOKEN }}
+        run: |
+          args=(store out)
+          [ -f prev/results.json ] && args+=(--results prev/results.json)
+          [ -f prev/ledger.csv ] && args+=(--ledger prev/ledger.csv)
+          python -m rebotes.alerta "${args[@]}"
+      - name: Publicar bitácora en rebotes-data/alertas
+        if: always()
+        run: |
+          [ -d out/alertas ] || { echo "sin salida"; exit 0; }
+          bash .github/scripts/rb_store_push.sh out "rebotes-data - alertas $(date -u +%FT%TZ)"
