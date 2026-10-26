@@ -47,6 +47,14 @@ Pruebas: `python -m tests.test_radar`. El Radar nunca toca `app/` (salvo leer `a
 ni llaves de exchange; sus vetos solo restan. Secrets opcionales: `RADAR_SMTP_USER`/`RADAR_SMTP_PASS`/`RADAR_EMAIL_TO`,
 `CALLMEBOT_PHONE`/`CALLMEBOT_APIKEY`, `FINNHUB_API_KEY` (calendario de resultados); `GEMINI_API_KEY` ya existe.
 
+## Copy-trade de reportes públicos (rama `copytrade`, solo análisis)
+Replica con 50k las operaciones que Donald J. Trump reporta a OGE (278-T + anual 278e) desde el 20-ene-2025:
+filas de Open Cabinet (MIT) verificadas contra los PDF + agosto-2026 transcrito, mapeo a tickers/proxies, cartera
+sombra en modo **espejo** (fecha de operación, techo teórico) y **replicable** (día hábil siguiente a la publicación),
+comparativos (SPY, 60/40, MUB, BIL, CETES) y estudio por operación. Pre-registro: `docs/COPYTRADE_TRUMP.md`; skill:
+`copytrade-disclosures`; datos/PDF/precios en la rama `copytrade-data` (workflow `copytrade.yml`). Pruebas:
+`python -m tests.test_copytrade`. No opera ni manda alertas.
+
 ## Non-negotiable safety rules
 - **`PAPER_TRADING=true` always** during all development (in v4.x: `TRADING_MODE=paper`). Flipping to live is a manual
   human decision made only after the paper gate (≥30 trades, ≥2 weeks, win rate >50%, avg R:R ≥2.0, drawdown <10%).
