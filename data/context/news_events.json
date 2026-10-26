@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-26T08:57:14Z",
+ "updated_utc": "2026-10-26T09:56:20Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6330,6 +6330,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-25T12:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "FOREX",
+   "country": "CN",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Yuan toca máximo de cuatro años mientras el dólar se debilita",
+   "source_url": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-chinas-yuan-hits-four-year-high-as-dollar-weakens-ahead-of-policy-meetings/articleshow/135202635.cms",
+   "source_title": "economictimes.indiatimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-global-market-china-yuan-hits-four-year-high-as-do-2026-10-26",
+   "date": "2026-10-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-26T05:00:00Z"
   },
   {
    "category": "MONETARY_POLICY",
