@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-26T14:56:03Z",
+ "generated_utc": "2026-10-26T15:26:58Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.887,
- "bias": -0.128,
- "event_risk": 0.225,
+ "size_mult": 0.886,
+ "bias": -0.129,
+ "event_risk": 0.227,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 55,
@@ -35,7 +35,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.056,
+   "riesgo": 0.057,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -91,7 +91,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.011,
+   "riesgo": 0.012,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -106,7 +106,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.334,
+   "aporte": -0.333,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
@@ -160,7 +160,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
@@ -169,7 +169,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.173,
+   "aporte": 0.172,
    "fuente": "noticia"
   }
  ],
@@ -185,6 +185,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.87
+  "stablecoins_30d_pct": -0.88
  }
 }
