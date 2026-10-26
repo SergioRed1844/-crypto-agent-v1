@@ -283,7 +283,8 @@ def recipient() -> str:
 
 
 def email_send(subject: str, text: str, body_html: str) -> bool:
-    user, pwd, to = os.getenv("RADAR_SMTP_USER", ""), os.getenv("RADAR_SMTP_PASS", ""), recipient()
+    user, pwd, to = os.getenv("RADAR_SMTP_USER", "").strip(), os.getenv("RADAR_SMTP_PASS", ""), recipient().strip()
+    pwd = pwd.replace(" ", "").strip()          # Google muestra la contraseña de aplicación en bloques con espacios
     if not (user and pwd and to):
         _log("correo: sin credenciales SMTP")
         return False
