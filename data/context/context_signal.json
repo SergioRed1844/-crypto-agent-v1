@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-26T08:05:23Z",
+ "generated_utc": "2026-10-26T08:57:14Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.786,
+ "size_mult": 0.785,
  "bias": -0.182,
- "event_risk": 0.429,
+ "event_risk": 0.43,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.042,
+   "riesgo": 0.044,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.02,
+   "riesgo": 0.021,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -87,7 +87,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.308,
+   "aporte": 0.307,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.258,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.222,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -132,7 +132,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -157,6 +157,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.87
+  "stablecoins_30d_pct": -0.89
  }
 }
