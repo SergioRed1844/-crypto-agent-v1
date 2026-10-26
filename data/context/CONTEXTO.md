@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-26T10:55:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-26T10:58:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.13 · riesgo de evento 0.43 · tamaño ×0.783 · compras permitidas
 
@@ -15,7 +15,7 @@ Actualizado 2026-10-26T10:55:23Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.338 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.337 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.306 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.255 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.248 |
@@ -31,21 +31,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-26T10:55:23Z",
+ "inicio": "2026-10-26T10:58:58Z",
  "onchain": {
   "scanned": [
-   973224,
-   973226
+   973227,
+   973227
   ],
-  "calls": 99,
+  "calls": 17,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 13,
-  "eventos": 4,
-  "urgentes": 4,
+  "titulares": 1,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
