@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-25T23:31:01Z",
+ "generated_utc": "2026-10-26T00:05:16Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.792,
+ "size_mult": 0.791,
  "bias": -0.123,
- "event_risk": 0.416,
+ "event_risk": 0.418,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,12 +35,12 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.115,
+   "riesgo": 0.118,
    "ventana": [
     "2026-10-26T00:00:00Z",
     "2026-10-28T12:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   },
   {
    "id": "fomc-2026-10-28",
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -96,7 +96,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.257,
+   "aporte": 0.256,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.231,
+   "aporte": 0.23,
    "fuente": "noticia"
   },
   {
@@ -123,7 +123,7 @@
    "title_es": "El oro supera los 4.000 dólares mientras los inversores anticipan una prueba crucial",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.207,
+   "aporte": 0.205,
    "fuente": "noticia"
   },
   {
@@ -132,7 +132,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -141,7 +141,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.18,
    "fuente": "noticia"
   }
  ],
@@ -154,7 +154,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 54
+   "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -1.05
