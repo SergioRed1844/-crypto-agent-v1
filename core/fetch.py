@@ -23,6 +23,7 @@ PILARES = {
     "base": ["SPY", "VT", "QQQ", "ACWI"],
     "plan_b_ene26": ["CRM", "AMZN", "GOOGL", "NBIS"],
     "tesis_gpt_oct26": ["AXON", "PWR", "VRT", "PLTR", "OKTA"],
+    "espacio": ["SPCE", "SPCX", "RKLB", "ASTS", "UFO"],
 }
 # Tesis recuperadas por el GPT de Sergio (registros de enero 2026): se miden desde su fecha, sin elegir nada después.
 TESIS = {
