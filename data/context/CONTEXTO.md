@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-27T13:31:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-27T13:34:54Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.42 · tamaño ×0.79 · compras permitidas
 
@@ -10,7 +10,7 @@ Actualizado 2026-10-27T13:31:52Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|---|
 | Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.143 |
 | Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.118 |
-| Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.068 |
+| Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.069 |
 | PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.043 |
 | Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.043 |
 | Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.04 |
@@ -35,13 +35,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-27T13:31:52Z",
+ "inicio": "2026-10-27T13:34:54Z",
  "onchain": {
   "scanned": [
-   973396,
-   973402
+   973403,
+   973403
   ],
-  "calls": 117,
+  "calls": 15,
   "stopped": null,
   "nuevas": 0
  },
@@ -58,7 +58,7 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
   "ok": 0,
   "errors": []
  },
- "macro_fuentes_ok": 1
+ "macro_fuentes_ok": 2
 }
 ```
 </details>
