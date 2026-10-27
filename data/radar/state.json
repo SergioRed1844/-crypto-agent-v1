@@ -31,7 +31,6 @@
   }
  },
  "runs": [
-  "2026-10-25T12:16:07+00:00",
   "2026-10-25T12:44:53+00:00",
   "2026-10-25T13:15:03+00:00",
   "2026-10-25T14:14:09+00:00",
@@ -90,9 +89,10 @@
   "2026-10-27T02:41:43+00:00",
   "2026-10-27T02:42:28+00:00",
   "2026-10-27T03:40:59+00:00",
-  "2026-10-27T04:40:02+00:00"
+  "2026-10-27T04:40:02+00:00",
+  "2026-10-27T05:32:21+00:00"
  ],
- "last_scan_utc": "2026-10-27T04:40:02+00:00",
+ "last_scan_utc": "2026-10-27T05:32:21+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -401,22 +401,22 @@
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
@@ -426,7 +426,7 @@
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
@@ -441,17 +441,17 @@
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
@@ -466,7 +466,7 @@
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
@@ -476,12 +476,12 @@
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-10-25",
+   "last": "2026-10-26",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-10-27T03:40:47Z",
+   "last": "2026-10-27T04:39:53Z",
    "nota": "NEUTRAL"
   }
  },
