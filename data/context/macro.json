@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-27T07:41:11Z",
+ "generated_utc": "2026-10-27T08:40:14Z",
  "fear_greed": {
   "value": 48,
   "label": "Neutral",
@@ -7,7 +7,7 @@
   "avg_30d": 62.3
  },
  "stablecoins": {
-  "total_usd": 301537903231,
+  "total_usd": 301536578106,
   "chg_7d_pct": -0.72,
   "chg_30d_pct": -1.2
  },
@@ -21,25 +21,25 @@
     "Yes": 0.075,
     "No": 0.925
    },
-   "volume": 12284460.988950001,
+   "volume": 12325940.955295002,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0015,
-    "No": 0.9985
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6971236.661871001,
+   "volume": 6972761.402871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0015,
-    "No": 0.9985
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6971236.661871001,
+   "volume": 6972761.402871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
