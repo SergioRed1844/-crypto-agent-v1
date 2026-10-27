@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-27T22:30:23Z",
+ "generated_utc": "2026-10-27T23:10:25Z",
  "fear_greed": {
   "value": 48,
   "label": "Neutral",
@@ -7,7 +7,7 @@
   "avg_30d": 62.3
  },
  "stablecoins": {
-  "total_usd": 301550754211,
+  "total_usd": 301552819283,
   "chg_7d_pct": -0.72,
   "chg_30d_pct": -1.2
  },
@@ -21,7 +21,7 @@
     "Yes": 0.075,
     "No": 0.925
    },
-   "volume": 12470810.941589,
+   "volume": 12471068.356589003,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -30,7 +30,7 @@
     "Yes": 0.001,
     "No": 0.999
    },
-   "volume": 6972761.4028710015,
+   "volume": 6972761.402871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -39,7 +39,7 @@
     "Yes": 0.001,
     "No": 0.999
    },
-   "volume": 6972761.4028710015,
+   "volume": 6972761.402871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
