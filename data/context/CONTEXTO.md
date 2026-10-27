@@ -1,32 +1,32 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-27T03:40:47Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-27T04:39:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.33 · tamaño ×0.837 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.12 · riesgo de evento 0.33 · tamaño ×0.833 · compras permitidas
 
 - Contexto neutral: sesgo -0.12, riesgo de evento 0.33
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.118 |
-| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.095 |
-| Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.045 |
-| PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.028 |
-| Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.028 |
-| Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.027 |
-| Decisión de política monetaria del BCE | 2026-10-29T13:15:00Z | Política monetaria | 0.165 | 0.019 |
-| Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report | 2026-10-30T12:00:00Z | Política monetaria | 0.24 | 0.018 |
+| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.099 |
+| Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.047 |
+| PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.03 |
+| Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.03 |
+| Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.028 |
+| Decisión de política monetaria del BCE | 2026-10-29T13:15:00Z | Política monetaria | 0.165 | 0.02 |
+| Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report | 2026-10-30T12:00:00Z | Política monetaria | 0.24 | 0.019 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.321 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.291 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.238 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.236 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.205 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.320 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.290 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.237 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.235 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.204 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.175 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.166 |
-| Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la | 2026-10-26 | anti | -0.158 |
+| Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la | 2026-10-26 | anti | -0.157 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -35,13 +35,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-27T03:40:47Z",
+ "inicio": "2026-10-27T04:39:53Z",
  "onchain": {
   "scanned": [
-   973328,
-   973335
+   973336,
+   973343
   ],
-  "calls": 76,
+  "calls": 62,
   "stopped": null,
   "nuevas": 0
  },
