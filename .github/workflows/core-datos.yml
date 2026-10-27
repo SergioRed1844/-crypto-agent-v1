@@ -1,0 +1,24 @@
+# Foto de candidatos CORE + desempeño de las tesis de enero 2026. Corre con [core-run] en el mensaje del commit.
+name: core-datos
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-datos
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[core-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q "yfinance>=0.2.54" pandas numpy
+      - run: python -m core.fetch out/core
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "core - foto de candidatos $(date -u +%FT%TZ)"
