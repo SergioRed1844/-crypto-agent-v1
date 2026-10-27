@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-27T00:46:40Z",
+ "generated_utc": "2026-10-27T01:42:30Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.848,
+ "size_mult": 0.845,
  "bias": -0.118,
- "event_risk": 0.304,
+ "event_risk": 0.311,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Contexto neutral: sesgo -0.12, riesgo de evento 0.30"
+  "Contexto neutral: sesgo -0.12, riesgo de evento 0.31"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.084,
+   "riesgo": 0.087,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -49,7 +49,7 @@
    "category": "MONETARY_POLICY",
    "status": "proposed",
    "magnitud": 0.165,
-   "riesgo": 0.04,
+   "riesgo": 0.042,
    "ventana": [
     "2026-10-27T18:00:00Z",
     "2026-10-29T02:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -77,7 +77,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -91,7 +91,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
@@ -105,7 +105,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.017,
+   "riesgo": 0.018,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -134,7 +134,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.324,
+   "aporte": -0.323,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.293,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.208,
+   "aporte": 0.207,
    "fuente": "noticia"
   },
   {
@@ -179,7 +179,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.177,
+   "aporte": -0.176,
    "fuente": "noticia"
   },
   {
@@ -188,7 +188,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.168,
+   "aporte": 0.167,
    "fuente": "noticia"
   },
   {
@@ -197,7 +197,7 @@
    "title_es": "Rendimientos de bonos de Japón suben antes de decisiones del Banco de Japón y la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   }
  ],
@@ -213,6 +213,6 @@
    "fear_greed": 48
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -0.93
+  "stablecoins_30d_pct": -1.2
  }
 }
