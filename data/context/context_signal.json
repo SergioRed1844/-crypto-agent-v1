@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-27T02:41:36Z",
+ "generated_utc": "2026-10-27T02:44:57Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
@@ -105,7 +105,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -152,7 +152,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.239,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
