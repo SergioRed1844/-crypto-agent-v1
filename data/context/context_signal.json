@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-27T20:25:53Z",
- "state": "NEUTRAL",
+ "generated_utc": "2026-10-27T21:24:58Z",
+ "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.752,
- "bias": -0.119,
- "event_risk": 0.496,
- "extra_confluence": 0,
+ "size_mult": 0.5,
+ "bias": -0.118,
+ "event_risk": 0.506,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Contexto neutral: sesgo -0.12, riesgo de evento 0.50"
+  "Precaución: riesgo de evento 0.51 en 72 h"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.191,
+   "riesgo": 0.199,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.057,
+   "riesgo": 0.06,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -77,7 +77,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.057,
+   "riesgo": 0.06,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -91,7 +91,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.054,
+   "riesgo": 0.056,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
@@ -105,7 +105,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.039,
+   "riesgo": 0.04,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -119,7 +119,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.24,
-   "riesgo": 0.036,
+   "riesgo": 0.037,
    "ventana": [
     "2026-10-29T18:00:00Z",
     "2026-10-31T02:00:00Z"
@@ -134,7 +134,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.306,
+   "aporte": -0.305,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.277,
+   "aporte": 0.276,
    "fuente": "noticia"
   },
   {
@@ -152,7 +152,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.225,
+   "aporte": 0.224,
    "fuente": "noticia"
   },
   {
@@ -161,7 +161,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.222,
+   "aporte": -0.221,
    "fuente": "noticia"
   },
   {
@@ -179,7 +179,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.167,
+   "aporte": -0.166,
    "fuente": "noticia"
   },
   {
@@ -197,12 +197,12 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.141,
+   "aporte": -0.14,
    "fuente": "noticia"
   }
  ],
  "alerts": [],
- "cause": "none",
+ "cause": "event_risk",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
@@ -213,6 +213,6 @@
    "fear_greed": 48
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -1.18
+  "stablecoins_30d_pct": -1.2
  }
 }
