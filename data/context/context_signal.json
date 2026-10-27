@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-27T06:42:20Z",
+ "generated_utc": "2026-10-27T06:47:55Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.825,
+ "size_mult": 0.824,
  "bias": -0.118,
- "event_risk": 0.35,
+ "event_risk": 0.351,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 54,
@@ -91,7 +91,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
@@ -147,21 +147,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-bitcoin-etfs-just-had-their-biggest-outflow-day-si-2026-10-24",
-   "date": "2026-10-24",
-   "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.235,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
    "date": "2026-10-23",
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
    "aporte": 0.234,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-etfs-just-had-their-biggest-outflow-day-si-2026-10-24",
+   "date": "2026-10-24",
+   "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "anti",
+   "aporte": -0.234,
    "fuente": "noticia"
   },
   {
