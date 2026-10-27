@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-27T10:35:35+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-26
+Última corrida: **2026-10-27T10:55:23+00:00 UTC** · 56 activos · contexto v4.2: **NEUTRAL** · último resumen: 2026-10-26
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -134,7 +134,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-27 | caché binance |
 | ^MXX | sí | 2026-10-26 | caché yahoo |
 | ^VIX | sí | 2026-10-27 | caché yahoo |
-| contexto_v42 | sí | 2026-10-27T09:35:23Z | NEUTRAL |
+| contexto_v42 | sí | 2026-10-27T10:38:45Z | NEUTRAL |
 | fear_greed | sí | 2026-10-27 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-26 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-26 | wikimedia |
