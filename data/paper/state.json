@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-27 12:00:00+00:00",
-  "ETHUSDT": "2026-10-27 12:00:00+00:00",
-  "SOLUSDT": "2026-10-27 12:00:00+00:00"
+  "BTCUSDT": "2026-10-27 16:00:00+00:00",
+  "ETHUSDT": "2026-10-27 16:00:00+00:00",
+  "SOLUSDT": "2026-10-27 16:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 2024.5304849753763,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-27T14:00:00Z"
+     "last_checked": "2026-10-27T15:00:00Z"
     },
     "ETHUSDT": {
      "pair": "ETHUSDT",
@@ -36,7 +36,7 @@
      "unit": 89.93429783138997,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-27T14:00:00Z"
+     "last_checked": "2026-10-27T15:00:00Z"
     }
    },
    "trades": [
@@ -1057,12 +1057,54 @@
    "neta": 0.0517,
    "rr_neto": 2.1,
    "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-10-27T16:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 80562.27,
+   "A": "ya hay posición en el par",
+   "ctx": "CAUTION",
+   "fg": 48,
+   "funding": 0.0001,
+   "funding_src": "okx",
+   "neta": 0.0448,
+   "rr_neto": 2.05,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-10-27T16:00:00Z",
+   "pair": "ETHUSDT",
+   "cs": 6,
+   "precio": 2347.18,
+   "A": "ya hay posición en el par",
+   "ctx": "CAUTION",
+   "fg": 48,
+   "funding": 8.49176385852e-05,
+   "funding_src": "okx",
+   "neta": 0.075,
+   "rr_neto": 2.21,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-10-27T16:00:00Z",
+   "pair": "SOLUSDT",
+   "cs": 6,
+   "precio": 100.96,
+   "A": "máx 2 posiciones",
+   "ctx": "CAUTION",
+   "fg": 48,
+   "funding": 8.532896926e-06,
+   "funding_src": "okx",
+   "neta": 0.0645,
+   "rr_neto": 2.17,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 372,
- "updated_utc": "2026-10-27T15:30:57Z",
- "n_signals": 69
+ "runs": 373,
+ "updated_utc": "2026-10-27T16:30:02Z",
+ "n_signals": 72
 }
