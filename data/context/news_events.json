@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-10-27T04:39:53Z",
+ "updated_utc": "2026-10-27T05:38:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6393,6 +6393,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-26T07:15:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "BR",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Bolsa de Brasil se desploma 13,9% al comenzar la semana de la Fed",
+   "source_url": "https://www.riotimesonline.com/global-economy-briefing-october-27-2026/",
+   "source_title": "riotimesonline.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-brazil-stocks-plunge-13-9-as-fed-week-begins-globa-2026-10-27",
+   "date": "2026-10-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-10-27T05:15:00Z"
   }
  ]
 }
