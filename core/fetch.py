@@ -22,6 +22,7 @@ PILARES = {
     "china": ["MCHI", "KWEB", "0981.HK", "0763.HK", "002415.SZ", "300024.SZ", "601985.SS"],
     "base": ["SPY", "VT", "QQQ", "ACWI"],
     "plan_b_ene26": ["CRM", "AMZN", "GOOGL", "NBIS"],
+    "tesis_gpt_oct26": ["AXON", "PWR", "VRT", "PLTR", "OKTA"],
 }
 # Tesis recuperadas por el GPT de Sergio (registros de enero 2026): se miden desde su fecha, sin elegir nada después.
 TESIS = {
