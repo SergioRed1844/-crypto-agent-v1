@@ -1,33 +1,19 @@
 {
- "generated_utc": "2026-10-28T19:05:48Z",
+ "generated_utc": "2026-10-28T20:05:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.116,
- "event_risk": 0.735,
+ "event_risk": 0.597,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Precaución: riesgo de evento 0.73 en 72 h"
+  "Precaución: riesgo de evento 0.60 en 72 h"
  ],
  "upcoming": [
-  {
-   "id": "fomc-2026-10-28",
-   "utc": "2026-10-28T18:00:00Z",
-   "title_es": "Decisión FOMC (27-28 oct); conferencia de Warsh 14:30",
-   "category": "MONETARY_POLICY",
-   "status": "confirmed",
-   "magnitud": 0.365,
-   "riesgo": 0.365,
-   "ventana": [
-    "2026-10-28T12:00:00Z",
-    "2026-10-28T20:00:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "gdp-2026-10-29",
    "utc": "2026-10-29T12:30:00Z",
@@ -35,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.147,
+   "riesgo": 0.153,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -49,7 +35,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.147,
+   "riesgo": 0.153,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -63,7 +49,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.138,
+   "riesgo": 0.144,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
@@ -77,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.099,
+   "riesgo": 0.104,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -91,10 +77,24 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.24,
-   "riesgo": 0.092,
+   "riesgo": 0.096,
    "ventana": [
     "2026-10-29T18:00:00Z",
     "2026-10-31T02:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "mtgox-repayment-deadline-2026-10-31",
+   "utc": "2026-10-31T12:00:00Z",
+   "title_es": "Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)",
+   "category": "CRYPTO_SUPPLY",
+   "status": "confirmed",
+   "magnitud": 0.455,
+   "riesgo": 0.086,
+   "ventana": [
+    "2026-10-30T12:00:00Z",
+    "2026-11-01T12:00:00Z"
    ],
    "en_ventana": false
   },
@@ -113,16 +113,16 @@
    "en_ventana": true
   },
   {
-   "id": "mtgox-repayment-deadline-2026-10-31",
-   "utc": "2026-10-31T12:00:00Z",
-   "title_es": "Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)",
-   "category": "CRYPTO_SUPPLY",
+   "id": "deribit-expiry-2026-10-30",
+   "utc": "2026-10-30T08:00:00Z",
+   "title_es": "Vencimiento mensual de opciones BTC/ETH (Deribit)",
+   "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
-   "magnitud": 0.455,
-   "riesgo": 0.083,
+   "magnitud": 0.1,
+   "riesgo": 0.024,
    "ventana": [
-    "2026-10-30T12:00:00Z",
-    "2026-11-01T12:00:00Z"
+    "2026-10-30T06:00:00Z",
+    "2026-10-30T09:00:00Z"
    ],
    "en_ventana": false
   }
@@ -134,7 +134,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.286,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.259,
+   "aporte": 0.258,
    "fuente": "noticia"
   },
   {
@@ -152,7 +152,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.21,
+   "aporte": 0.209,
    "fuente": "noticia"
   },
   {
@@ -161,7 +161,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.202,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.174,
+   "aporte": 0.173,
    "fuente": "noticia"
   },
   {
@@ -188,7 +188,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.148,
+   "aporte": 0.147,
    "fuente": "noticia"
   },
   {
