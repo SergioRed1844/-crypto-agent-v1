@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-28T10:13:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-28T10:15:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.12 · riesgo de evento 0.69 · tamaño ×0.5 · compras permitidas
 
@@ -8,7 +8,7 @@ Actualizado 2026-10-28T10:13:29Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.339 |
+| Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.34 |
 | Israel: elecciones generales a la Knesset | 2026-10-27T12:00:00Z | Elección | 0.235 | 0.118 |
 | PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.102 |
 | Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.102 |
@@ -35,13 +35,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-28T10:13:29Z",
+ "inicio": "2026-10-28T10:15:55Z",
  "onchain": {
-  "scanned": [
-   973530,
-   973533
-  ],
-  "calls": 104,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
