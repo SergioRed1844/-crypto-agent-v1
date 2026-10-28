@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-28T06:21:17Z",
+ "generated_utc": "2026-10-28T07:16:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.117,
- "event_risk": 0.633,
+ "event_risk": 0.645,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Precaución: riesgo de evento 0.63 en 72 h"
+  "Precaución: riesgo de evento 0.65 en 72 h"
  ],
  "upcoming": [
   {
@@ -21,7 +21,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.365,
-   "riesgo": 0.288,
+   "riesgo": 0.3,
    "ventana": [
     "2026-10-28T12:00:00Z",
     "2026-10-28T20:00:00Z"
@@ -49,7 +49,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.087,
+   "riesgo": 0.09,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -63,10 +63,24 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.087,
+   "riesgo": 0.09,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "br-vasp-authorization-deadline-2026-10-30",
+   "utc": "2026-10-30T12:00:00Z",
+   "title_es": "Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes soliciten autorización; desde aquí se prohíbe operar con proveedores no autorizados",
+   "category": "CRYPTO_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.28,
+   "riesgo": 0.085,
+   "ventana": [
+    "2026-10-29T12:00:00Z",
+    "2026-10-31T06:00:00Z"
    ],
    "en_ventana": false
   },
@@ -85,27 +99,13 @@
    "en_ventana": true
   },
   {
-   "id": "br-vasp-authorization-deadline-2026-10-30",
-   "utc": "2026-10-30T12:00:00Z",
-   "title_es": "Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes soliciten autorización; desde aquí se prohíbe operar con proveedores no autorizados",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.28,
-   "riesgo": 0.081,
-   "ventana": [
-    "2026-10-29T12:00:00Z",
-    "2026-10-31T06:00:00Z"
-   ],
-   "en_ventana": false
-  },
-  {
    "id": "ecb-2026-10-29",
    "utc": "2026-10-29T13:15:00Z",
    "title_es": "Decisión de política monetaria del BCE",
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.058,
+   "riesgo": 0.061,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -119,7 +119,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.24,
-   "riesgo": 0.054,
+   "riesgo": 0.056,
    "ventana": [
     "2026-10-29T18:00:00Z",
     "2026-10-31T02:00:00Z"
@@ -134,7 +134,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.297,
+   "aporte": -0.296,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.269,
+   "aporte": 0.268,
    "fuente": "noticia"
   },
   {
@@ -161,7 +161,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.213,
+   "aporte": -0.212,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.184,
+   "aporte": 0.183,
    "fuente": "noticia"
   },
   {
@@ -197,7 +197,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.137,
+   "aporte": -0.136,
    "fuente": "noticia"
   }
  ],
