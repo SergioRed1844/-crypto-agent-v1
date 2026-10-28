@@ -24,6 +24,7 @@ PILARES = {
     "plan_b_ene26": ["CRM", "AMZN", "GOOGL", "NBIS"],
     "tesis_gpt_oct26": ["AXON", "PWR", "VRT", "PLTR", "OKTA"],
     "espacio": ["SPCE", "SPCX", "RKLB", "ASTS", "UFO"],
+    "mercado": ["^GSPC", "^IXIC", "^DJI", "^RUT", "^VIX", "^TNX", "DX-Y.NYB", "MXN=X", "SOXX", "XLK", "XLV", "XLE", "XLF", "MSFT", "GOOGL", "AMZN", "META", "AAPL"],
 }
 # Tesis recuperadas por el GPT de Sergio (registros de enero 2026): se miden desde su fecha, sin elegir nada después.
 TESIS = {
