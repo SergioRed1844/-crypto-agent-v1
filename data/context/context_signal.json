@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-28T06:16:59Z",
+ "generated_utc": "2026-10-28T06:21:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.117,
- "event_risk": 0.632,
+ "event_risk": 0.633,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -49,7 +49,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.086,
+   "riesgo": 0.087,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -63,7 +63,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.086,
+   "riesgo": 0.087,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -188,7 +188,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.154,
+   "aporte": 0.153,
    "fuente": "noticia"
   },
   {
