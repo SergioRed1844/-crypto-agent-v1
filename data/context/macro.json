@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-28T21:08:33Z",
+ "generated_utc": "2026-10-28T21:21:57Z",
  "fear_greed": {
   "value": 51,
   "label": "Neutral",
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891306.098732986,
+   "volume": 54891306.09873299,
    "slug": "presidential-election-winner-2028"
   }
  },
