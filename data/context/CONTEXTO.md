@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-28T16:08:20Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-28T16:15:17Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.12 · riesgo de evento 0.71 · tamaño ×0.5 · compras permitidas
 
@@ -9,9 +9,9 @@ Actualizado 2026-10-28T16:08:20Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Decisión FOMC (27-28 oct); conferencia de Warsh 14:30 | 2026-10-28T18:00:00Z | Política monetaria | 0.365 | 0.365 |
-| PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.13 |
-| Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.13 |
-| Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.122 |
+| PIB EE.UU. 3T-2026 (estimación avance) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.131 |
+| Ingreso y gasto personal / PCE EE.UU. (sep-2026) | 2026-10-29T12:30:00Z | Dato macro | 0.279 | 0.131 |
+| Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.123 |
 | Decisión de política monetaria del BCE | 2026-10-29T13:15:00Z | Política monetaria | 0.165 | 0.088 |
 | Decisión de tipos de interés del Banco de Canadá (BoC) + Monetary Policy Report | 2026-10-28T12:00:00Z | Política monetaria | 0.165 | 0.083 |
 | Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report | 2026-10-30T12:00:00Z | Política monetaria | 0.24 | 0.082 |
@@ -35,13 +35,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-28T16:08:20Z",
+ "inicio": "2026-10-28T16:15:17Z",
  "onchain": {
-  "scanned": [
-   973571,
-   973574
-  ],
-  "calls": 138,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },

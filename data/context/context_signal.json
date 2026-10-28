@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-28T16:08:20Z",
+ "generated_utc": "2026-10-28T16:15:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.116,
- "event_risk": 0.708,
+ "event_risk": 0.709,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.13,
+   "riesgo": 0.131,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -49,7 +49,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.13,
+   "riesgo": 0.131,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -63,7 +63,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.122,
+   "riesgo": 0.123,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
