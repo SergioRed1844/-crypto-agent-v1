@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-29T21:42:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-29T21:46:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.12 · riesgo de evento 0.63 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-10-29T21:42:02Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.28 |
-| Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026,  | 2026-10-31T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.455 | 0.25 |
+| Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026,  | 2026-10-31T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.455 | 0.251 |
 | Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report | 2026-10-30T12:00:00Z | Política monetaria | 0.24 | 0.24 |
 | Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-10-30T08:00:00Z | Vencimiento de derivados | 0.1 | 0.071 |
 | Vencimiento mensual de futuros de BTC en CME | 2026-10-30T16:00:00Z | Vencimiento de derivados | 0.05 | 0.025 |
@@ -32,13 +32,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-29T21:42:02Z",
+ "inicio": "2026-10-29T21:46:32Z",
  "onchain": {
-  "scanned": [
-   973739,
-   973746
-  ],
-  "calls": 131,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
