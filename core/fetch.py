@@ -44,7 +44,8 @@ INFO = ["shortName", "currency", "marketCap", "trailingPE", "forwardPE", "priceT
         "totalRevenue", "pegRatio", "trailingPegRatio", "beta", "recommendationMean", "targetMeanPrice",
         "numberOfAnalystOpinions", "fiftyTwoWeekHigh", "fiftyTwoWeekLow",
         "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent",
-        "postMarketPrice", "postMarketChangePercent", "preMarketPrice", "preMarketChangePercent"]
+        "postMarketPrice", "postMarketChangePercent", "preMarketPrice", "preMarketChangePercent",
+        "earningsTimestamp", "earningsTimestampStart", "earningsTimestampEnd", "isEarningsDateEstimate"]
 
 
 def history(tks: list[str]) -> pd.DataFrame:
