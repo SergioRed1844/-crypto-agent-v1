@@ -25,7 +25,7 @@
      "unit": 2024.5304849753763,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-29T07:00:00Z"
+     "last_checked": "2026-10-29T08:00:00Z"
     },
     "ETHUSDT": {
      "pair": "ETHUSDT",
@@ -36,7 +36,7 @@
      "unit": 89.93429783138997,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-29T07:00:00Z"
+     "last_checked": "2026-10-29T08:00:00Z"
     }
    },
    "trades": [
@@ -1314,7 +1314,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 428,
- "updated_utc": "2026-10-29T08:54:10Z",
+ "runs": 429,
+ "updated_utc": "2026-10-29T09:54:02Z",
  "n_signals": 87
 }
