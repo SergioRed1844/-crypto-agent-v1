@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T13:49:00Z",
+ "generated_utc": "2026-10-29T13:52:43Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.12,
- "event_risk": 0.633,
+ "event_risk": 0.634,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -49,7 +49,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.18,
+   "riesgo": 0.181,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -151,7 +151,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.148,
+   "aporte": -0.147,
    "fuente": "noticia"
   },
   {
