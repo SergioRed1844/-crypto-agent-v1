@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-10-29 04:00:00+00:00",
-  "ETHUSDT": "2026-10-29 04:00:00+00:00",
-  "SOLUSDT": "2026-10-29 04:00:00+00:00"
+  "BTCUSDT": "2026-10-29 08:00:00+00:00",
+  "ETHUSDT": "2026-10-29 08:00:00+00:00",
+  "SOLUSDT": "2026-10-29 08:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 2024.5304849753763,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-29T06:00:00Z"
+     "last_checked": "2026-10-29T07:00:00Z"
     },
     "ETHUSDT": {
      "pair": "ETHUSDT",
@@ -36,7 +36,7 @@
      "unit": 89.93429783138997,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-10-29T06:00:00Z"
+     "last_checked": "2026-10-29T07:00:00Z"
     }
    },
    "trades": [
@@ -1314,7 +1314,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 427,
- "updated_utc": "2026-10-29T07:54:57Z",
+ "runs": 428,
+ "updated_utc": "2026-10-29T08:54:10Z",
  "n_signals": 87
 }
