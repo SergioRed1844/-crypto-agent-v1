@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-29T01:00:41+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-28
+Última corrida: **2026-10-29T01:59:44+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-28
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -71,12 +71,12 @@ Todavía ninguna.
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-10-27 | yahoo |
+| AAPL | sí | 2026-10-28 | yahoo |
 | AC.MX | sí | 2026-10-28 | yahoo |
 | ADA | sí | 2026-10-29 | binance |
 | ALSEA.MX | sí | 2026-10-28 | yahoo |
 | AMXB.MX | sí | 2026-10-28 | yahoo |
-| AMZN | sí | 2026-10-27 | yahoo |
+| AMZN | sí | 2026-10-28 | yahoo |
 | ASURB.MX | sí | 2026-10-28 | yahoo |
 | AVAX | sí | 2026-10-29 | binance |
 | BBAJIOO.MX | sí | 2026-10-28 | yahoo |
@@ -84,53 +84,53 @@ Todavía ninguna.
 | BIMBOA.MX | sí | 2026-10-28 | yahoo |
 | BTC | sí | 2026-10-29 | binance |
 | CEMEXCPO.MX | sí | 2026-10-28 | yahoo |
-| DIA | sí | 2026-10-27 | yahoo |
+| DIA | sí | 2026-10-28 | yahoo |
 | DOGE | sí | 2026-10-29 | binance |
 | DOT | sí | 2026-10-29 | binance |
 | ETH | sí | 2026-10-29 | binance |
 | FEMSAUBD.MX | sí | 2026-10-28 | yahoo |
 | GAPB.MX | sí | 2026-10-28 | yahoo |
 | GFNORTEO.MX | sí | 2026-10-28 | yahoo |
-| GLD | sí | 2026-10-27 | yahoo |
+| GLD | sí | 2026-10-28 | yahoo |
 | GMEXICOB.MX | sí | 2026-10-28 | yahoo |
-| GOOGL | sí | 2026-10-27 | yahoo |
+| GOOGL | sí | 2026-10-28 | yahoo |
 | GRUMAB.MX | sí | 2026-10-28 | yahoo |
-| IWM | sí | 2026-10-27 | yahoo |
-| JPM | sí | 2026-10-27 | yahoo |
+| IWM | sí | 2026-10-28 | yahoo |
+| JPM | sí | 2026-10-28 | yahoo |
 | KIMBERA.MX | sí | 2026-10-28 | yahoo |
 | KOFUBL.MX | sí | 2026-10-28 | yahoo |
 | LINK | sí | 2026-10-29 | binance |
 | LIVEPOLC-1.MX | sí | 2026-10-28 | yahoo |
 | LTC | sí | 2026-10-29 | binance |
-| META | sí | 2026-10-27 | yahoo |
-| MSFT | sí | 2026-10-27 | yahoo |
+| META | sí | 2026-10-28 | yahoo |
+| MSFT | sí | 2026-10-28 | yahoo |
 | MXN=X | sí | 2026-10-29 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-10-28 | yahoo |
-| NVDA | sí | 2026-10-27 | yahoo |
+| NVDA | sí | 2026-10-28 | yahoo |
 | OMAB.MX | sí | 2026-10-28 | yahoo |
 | ORBIA.MX | sí | 2026-10-28 | yahoo |
 | PINFRA.MX | sí | 2026-10-28 | yahoo |
-| QQQ | sí | 2026-10-27 | yahoo |
-| SMH | sí | 2026-10-27 | yahoo |
+| QQQ | sí | 2026-10-28 | yahoo |
+| SMH | sí | 2026-10-28 | yahoo |
 | SOL | sí | 2026-10-29 | binance |
-| SPY | sí | 2026-10-27 | yahoo |
+| SPY | sí | 2026-10-28 | yahoo |
 | TRX | sí | 2026-10-29 | binance |
-| TSLA | sí | 2026-10-27 | yahoo |
+| TSLA | sí | 2026-10-28 | yahoo |
 | WALMEX.MX | sí | 2026-10-28 | yahoo |
-| WMT | sí | 2026-10-27 | yahoo |
-| XLE | sí | 2026-10-27 | yahoo |
-| XLF | sí | 2026-10-27 | yahoo |
-| XLI | sí | 2026-10-27 | yahoo |
-| XLK | sí | 2026-10-27 | yahoo |
-| XLP | sí | 2026-10-27 | yahoo |
-| XLU | sí | 2026-10-27 | yahoo |
-| XLV | sí | 2026-10-27 | yahoo |
-| XLY | sí | 2026-10-27 | yahoo |
-| XOM | sí | 2026-10-27 | yahoo |
+| WMT | sí | 2026-10-28 | yahoo |
+| XLE | sí | 2026-10-28 | yahoo |
+| XLF | sí | 2026-10-28 | yahoo |
+| XLI | sí | 2026-10-28 | yahoo |
+| XLK | sí | 2026-10-28 | yahoo |
+| XLP | sí | 2026-10-28 | yahoo |
+| XLU | sí | 2026-10-28 | yahoo |
+| XLV | sí | 2026-10-28 | yahoo |
+| XLY | sí | 2026-10-28 | yahoo |
+| XOM | sí | 2026-10-28 | yahoo |
 | XRP | sí | 2026-10-29 | binance |
 | ^MXX | sí | 2026-10-28 | yahoo |
 | ^VIX | sí | 2026-10-28 | yahoo |
-| contexto_v42 | sí | 2026-10-29T00:01:23Z | CAUTION |
+| contexto_v42 | sí | 2026-10-29T01:12:25Z | CAUTION |
 | fear_greed | sí | 2026-10-29 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-27 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-27 | wikimedia |
