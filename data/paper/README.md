@@ -2,28 +2,23 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 29-Oct 14:43 · **Día 13.1** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 29-Oct 15:42 · **Día 13.1** · **Estado:** corriendo
 
-Última vela 4H revisada: 29-Oct 14:00 · señales técnicas desde el inicio: 90 · corridas: 443. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 29-Oct 14:00 · señales técnicas desde el inicio: 90 · corridas: 444. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
-| A · reglas v4.1 | 2 | 0.0 | -1.014 | — | — | -7.60 | -1.61 | -7.6 | 2 |
+| A · reglas v4.1 | 4 | 0.0 | -1.015 | — | — | -15.22 | +0.00 | -15.22 | 0 |
 | B · v4.2 completo | 1 | 0.0 | -1.018 | — | — | -2.55 | +0.00 | -2.55 | 0 |
 
 **Gate de papel (portafolio B):** ⬜ ≥30 trades · ⬜ ≥14 días · ⬜ ganadas >50% · ⬜ R:R promedio ≥2.0 · ✅ drawdown <10%
-
-### Posiciones abiertas A
-
-| Par | Entrada (MTY) | Precio | Stop | Objetivo | Contexto |
-|---|---|---|---|---|---|
-| BTC | 24-Oct 18:00 | 80928.6 | 79064.1 | 85589.9 | — |
-| ETH | 24-Oct 18:00 | 2360 | 2274.7 | 2573.25 | — |
 
 ### Últimas operaciones cerradas
 
 | Port. | Par | Entrada | Salida | Motivo | R | USDT |
 |---|---|---|---|---|---|---|
+| A | BTC | 24-Oct 18:00 | 29-Oct 15:00 | SL | -1.02 | -3.82 |
+| A | ETH | 24-Oct 18:00 | 29-Oct 15:00 | SL | -1.01 | -3.80 |
 | A | BTC | 17-Oct 02:00 | 24-Oct 10:00 | SL | -1.02 | -3.81 |
 | A | SOL | 16-Oct 22:00 | 24-Oct 09:00 | SL | -1.01 | -3.79 |
 | B | BTC | 18-Oct 22:00 | 23-Oct 18:00 | SL | -1.02 | -2.55 |
