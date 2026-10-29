@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-29T01:03:35Z",
+ "generated_utc": "2026-10-29T01:15:25Z",
  "fear_greed": {
   "value": 51,
   "label": "Neutral",
@@ -21,7 +21,7 @@
     "Yes": 0.065,
     "No": 0.935
    },
-   "volume": 12991413.573473,
+   "volume": 12991418.573473003,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54448323.045758,
+   "volume": 54448323.04575802,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54891306.09873299,
+   "volume": 54891306.098733,
    "slug": "presidential-election-winner-2028"
   }
  },
