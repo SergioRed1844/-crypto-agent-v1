@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T05:56:02Z",
+ "generated_utc": "2026-10-29T05:59:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.121,
- "event_risk": 0.724,
+ "event_risk": 0.725,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -21,7 +21,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.231,
+   "riesgo": 0.232,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -35,7 +35,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.231,
+   "riesgo": 0.232,
    "ventana": [
     "2026-10-29T10:30:00Z",
     "2026-10-29T13:30:00Z"
@@ -49,7 +49,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.28,
-   "riesgo": 0.217,
+   "riesgo": 0.218,
    "ventana": [
     "2026-10-29T12:00:00Z",
     "2026-10-31T06:00:00Z"
@@ -63,7 +63,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.165,
-   "riesgo": 0.156,
+   "riesgo": 0.157,
    "ventana": [
     "2026-10-29T07:15:00Z",
     "2026-10-29T15:15:00Z"
@@ -134,7 +134,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.276,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.167,
+   "aporte": 0.166,
    "fuente": "noticia"
   },
   {
