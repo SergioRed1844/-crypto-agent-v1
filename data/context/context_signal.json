@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T15:30:43Z",
+ "generated_utc": "2026-10-29T15:47:23Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.122,
- "event_risk": 0.578,
+ "event_risk": 0.581,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -35,7 +35,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.24,
-   "riesgo": 0.216,
+   "riesgo": 0.219,
    "ventana": [
     "2026-10-29T18:00:00Z",
     "2026-10-31T02:00:00Z"
@@ -49,7 +49,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.194,
+   "riesgo": 0.196,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -110,7 +110,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.198,
+   "aporte": 0.197,
    "fuente": "noticia"
   },
   {
