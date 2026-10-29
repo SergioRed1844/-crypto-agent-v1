@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-29T17:45:34Z",
+ "generated_utc": "2026-10-29T17:50:00Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.121,
- "event_risk": 0.602,
+ "event_risk": 0.603,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
@@ -128,7 +128,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
