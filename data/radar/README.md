@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-29T20:43:12+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-29
+Última corrida: **2026-10-29T21:42:16+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-10-29
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -18,7 +18,7 @@ Todavía ninguna.
 
 | Setup | Clase | H | Episodios | Crudo | Día cualquiera | Encogido | B (hacia 'sin ventaja') | Neto exceso |
 |---|---|---|---|---|---|---|---|---|
-| Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 61% | +0.2% |
+| Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 62% | +0.2% |
 | Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.3% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 74% | -0.0% |
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.2% |
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-29 | binance |
 | ^MXX | sí | 2026-10-29 | yahoo |
 | ^VIX | sí | 2026-10-29 | yahoo |
-| contexto_v42 | sí | 2026-10-29T20:32:09Z | CAUTION |
+| contexto_v42 | sí | 2026-10-29T20:42:56Z | CAUTION |
 | fear_greed | sí | 2026-10-29 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-28 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-28 | wikimedia |
