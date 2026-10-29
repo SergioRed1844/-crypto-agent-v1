@@ -24,6 +24,7 @@ PILARES = {
     "plan_b_ene26": ["CRM", "AMZN", "GOOGL", "NBIS"],
     "tesis_gpt_oct26": ["AXON", "PWR", "VRT", "PLTR", "OKTA"],
     "espacio": ["SPCE", "SPCX", "RKLB", "ASTS", "UFO"],
+    "caidas_29oct": ["GOOGL", "NOW", "FTNT", "CAT", "MRVL", "SFM", "HLN", "CRWD", "OKTA", "PANW", "LITE"],
     "cartera": ["SPCE", "LLY", "ETH-USD", "DOGE-USD", "BTC-USD"],
     "mercado": ["^GSPC", "^IXIC", "^DJI", "^RUT", "^VIX", "^TNX", "DX-Y.NYB", "MXN=X", "SOXX", "XLK", "XLV", "XLE", "XLF", "MSFT", "GOOGL", "AMZN", "META", "AAPL"],
 }
