@@ -24,6 +24,7 @@ PILARES = {
     "plan_b_ene26": ["CRM", "AMZN", "GOOGL", "NBIS"],
     "tesis_gpt_oct26": ["AXON", "PWR", "VRT", "PLTR", "OKTA"],
     "espacio": ["SPCE", "SPCX", "RKLB", "ASTS", "UFO"],
+    "cartera": ["SPCE", "LLY", "ETH-USD", "DOGE-USD", "BTC-USD"],
     "mercado": ["^GSPC", "^IXIC", "^DJI", "^RUT", "^VIX", "^TNX", "DX-Y.NYB", "MXN=X", "SOXX", "XLK", "XLV", "XLE", "XLF", "MSFT", "GOOGL", "AMZN", "META", "AAPL"],
 }
 # Tesis recuperadas por el GPT de Sergio (registros de enero 2026): se miden desde su fecha, sin elegir nada después.
@@ -41,7 +42,9 @@ TESIS = {
 INFO = ["shortName", "currency", "marketCap", "trailingPE", "forwardPE", "priceToSalesTrailing12Months",
         "revenueGrowth", "earningsGrowth", "grossMargins", "operatingMargins", "profitMargins", "freeCashflow",
         "totalRevenue", "pegRatio", "trailingPegRatio", "beta", "recommendationMean", "targetMeanPrice",
-        "numberOfAnalystOpinions", "fiftyTwoWeekHigh", "fiftyTwoWeekLow"]
+        "numberOfAnalystOpinions", "fiftyTwoWeekHigh", "fiftyTwoWeekLow",
+        "regularMarketPrice", "regularMarketPreviousClose", "regularMarketChangePercent",
+        "postMarketPrice", "postMarketChangePercent", "preMarketPrice", "preMarketChangePercent"]
 
 
 def history(tks: list[str]) -> pd.DataFrame:
@@ -81,7 +84,9 @@ def stats(s: pd.Series) -> dict:
     y3 = s[s.index >= d - pd.Timedelta(days=3 * 365)]
     dd3 = float((y3 / y3.cummax() - 1).min()) if len(y3) else None
     yrs = (y3.index[-1] - y3.index[0]).days / 365.25 if len(y3) > 1 else None
-    return {"fecha": str(d.date()), "precio": last, "ytd": ret_since(f"{d.year}-01-01"), "r_1a": ret_since(d - pd.Timedelta(days=365)),
+    def ret_n(n):
+        return float(last / s.iloc[-1 - n] - 1) if len(s) > n else None
+    return {"fecha": str(d.date()), "precio": last, "r_1d": ret_n(1), "r_5d": ret_n(5), "r_21d": ret_n(21), "ytd": ret_since(f"{d.year}-01-01"), "r_1a": ret_since(d - pd.Timedelta(days=365)),
             "r_desde_16ene26": ret_since("2026-01-16"), "cagr_3a": float((y3.iloc[-1] / y3.iloc[0]) ** (1 / yrs) - 1) if yrs else None,
             "max_52s": float(y1.max()), "caida_vs_max52s": float(last / y1.max() - 1), "caida_max_3a": dd3,
             "vol_anual_1a": float(np.log(y1).diff().std() * np.sqrt(252))}
