@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-10-29T13:52:43Z",
+ "generated_utc": "2026-10-29T14:48:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.12,
- "event_risk": 0.634,
+ "bias": -0.122,
+ "event_risk": 0.642,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 54,
  "reasons": [
-  "Precaución: riesgo de evento 0.63 en 72 h"
+  "Precaución: riesgo de evento 0.64 en 72 h"
  ],
  "upcoming": [
   {
@@ -35,7 +35,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.24,
-   "riesgo": 0.202,
+   "riesgo": 0.21,
    "ventana": [
     "2026-10-29T18:00:00Z",
     "2026-10-31T02:00:00Z"
@@ -49,7 +49,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.181,
+   "riesgo": 0.188,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -77,7 +77,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.051,
+   "riesgo": 0.053,
    "ventana": [
     "2026-10-30T06:00:00Z",
     "2026-10-30T09:00:00Z"
@@ -91,7 +91,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -106,7 +106,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.27,
+   "aporte": -0.269,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.245,
+   "aporte": 0.244,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.199,
+   "aporte": 0.198,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.161,
+   "aporte": 0.16,
    "fuente": "noticia"
   },
   {
@@ -160,7 +160,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.14,
+   "aporte": 0.139,
    "fuente": "noticia"
   },
   {

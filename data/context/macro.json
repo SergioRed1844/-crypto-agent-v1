@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-29T13:55:26Z",
+ "generated_utc": "2026-10-29T14:52:03Z",
  "fear_greed": {
   "value": 51,
   "label": "Neutral",
@@ -7,7 +7,7 @@
   "avg_30d": 60.8
  },
  "stablecoins": {
-  "total_usd": 300296496008,
+  "total_usd": 300296104109,
   "chg_7d_pct": -1.12,
   "chg_30d_pct": -1.98
  },
@@ -18,10 +18,10 @@
   "us-midterms-2026": {
    "question": "2026 Balance of Power: R Senate, R House",
    "outcomes": {
-    "Yes": 0.055,
-    "No": 0.945
+    "Yes": 0.065,
+    "No": 0.935
    },
-   "volume": 13164624.391192,
+   "volume": 13595671.924998002,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
