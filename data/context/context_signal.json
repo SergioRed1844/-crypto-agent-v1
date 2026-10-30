@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30T13:32:25Z",
+ "generated_utc": "2026-10-30T15:26:17Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.17% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.18% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -64,12 +64,12 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.049,
+   "riesgo": 0.05,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   }
  ],
  "recent": [
@@ -79,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.252,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.228,
+   "aporte": 0.227,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.185,
+   "aporte": 0.184,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.169,
+   "aporte": -0.168,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.146,
+   "aporte": 0.145,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.116,
+   "aporte": -0.115,
    "fuente": "noticia"
   }
  ],
@@ -158,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.17
+  "stablecoins_30d_pct": -2.18
  }
 }
