@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T11:29:45Z",
- "state": "CAUTION",
- "veto_entries": false,
+ "generated_utc": "2026-10-30T12:28:46Z",
+ "state": "BLACKOUT",
+ "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
+ "size_mult": 0.0,
  "bias": -0.203,
- "event_risk": 0.71,
- "extra_confluence": 2,
+ "event_risk": 0.716,
+ "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.20, riesgo de evento 0.71 en 72 h",
-  "Stablecoins -2.15% en 30 días (liquidez saliendo)"
+  "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
+  "Stablecoins -2.16% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,12 +22,12 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.445,
+   "riesgo": 0.455,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   },
   {
    "id": "br-vasp-authorization-deadline-2026-10-30",
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.253,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {
@@ -142,12 +142,12 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.117,
+   "aporte": -0.116,
    "fuente": "noticia"
   }
  ],
  "alerts": [],
- "cause": "bias",
+ "cause": "blackout",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
@@ -158,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.15
+  "stablecoins_30d_pct": -2.16
  }
 }
