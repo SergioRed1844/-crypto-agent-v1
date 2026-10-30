@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30T21:25:21Z",
+ "generated_utc": "2026-10-30T22:20:16Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.18% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.17% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.222,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.18,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.18
+  "stablecoins_30d_pct": -2.17
  }
 }
