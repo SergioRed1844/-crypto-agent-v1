@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30T20:21:53Z",
+ "generated_utc": "2026-10-30T21:20:59Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.247,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.142,
+   "aporte": 0.141,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.135,
+   "aporte": -0.134,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.128,
+   "aporte": 0.127,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.114,
+   "aporte": -0.113,
    "fuente": "noticia"
   }
  ],

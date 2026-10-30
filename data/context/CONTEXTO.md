@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-30T20:21:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-30T21:20:59Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.21 · riesgo de evento 0.70 · tamaño ×0.0 · VETO a compras
 
@@ -15,14 +15,14 @@ Actualizado 2026-10-30T20:21:53Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.247 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.246 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.223 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.181 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.164 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.142 |
-| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.135 |
-| Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.128 |
-| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.114 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.163 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.141 |
+| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.134 |
+| Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.127 |
+| Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.113 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-30T20:21:53Z",
+ "inicio": "2026-10-30T21:20:59Z",
  "onchain": {
   "scanned": [
-   973867,
-   973870
+   973871,
+   973878
   ],
-  "calls": 66,
+  "calls": 246,
   "stopped": null,
   "nuevas": 0
  },
