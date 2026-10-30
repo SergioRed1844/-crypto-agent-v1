@@ -1,6 +1,6 @@
-# 📡 Radar EB — resumen 2026-10-29
+# 📡 Radar EB — resumen 2026-10-30
 
-**Sigo vivo:** 33 corridas en 24 h · última 2026-10-29T14:48:30+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 32 corridas en 24 h · última 2026-10-30T15:26:26+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
@@ -8,7 +8,7 @@ Ningún setup disparó en las últimas 24 h. Eso también es información: no ha
 
 ## Clima de mercado
 
-BTC 81,344 (caída desde máximo de 1 año -26%; Fear&Greed 51) · S&P (SPY) -0.9% vs máximo de 1 año; VIX 16.9 · miedo de hogares (Wikipedia, EUA) z=-0.3 · peso 5 días +0.8% (USD/MXN); IPC vs máximo 1 año -3.4% · contexto v4.2: **CAUTION** (Precaución: riesgo de evento 0.63 en 72 h)
+BTC 77,992 (caída desde máximo de 1 año -29%; Fear&Greed 51) · S&P (SPY) -1.2% vs máximo de 1 año; VIX 17.2 · miedo de hogares (Wikipedia, EUA) z=+0.4 · peso 5 días +1.4% (USD/MXN); IPC vs máximo 1 año -2.5% · contexto v4.2: **BLACKOUT** (Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z); Stablecoins -2.17% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
