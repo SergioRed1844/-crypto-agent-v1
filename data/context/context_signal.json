@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-30T21:20:59Z",
+ "generated_utc": "2026-10-30T21:25:21Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.207,
+ "bias": -0.206,
  "event_risk": 0.702,
  "extra_confluence": 0,
  "vote": "FLAT",
