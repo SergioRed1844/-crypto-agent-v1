@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T01:43:11Z",
+ "generated_utc": "2026-10-30T02:37:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.214,
- "event_risk": 0.658,
+ "event_risk": 0.665,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Precaución: sesgo -0.21, riesgo de evento 0.66 en 72 h",
-  "Stablecoins -2.22% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.24% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.296,
+   "riesgo": 0.308,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.084,
+   "riesgo": 0.087,
    "ventana": [
     "2026-10-30T06:00:00Z",
     "2026-10-30T09:00:00Z"
@@ -78,7 +78,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.236,
+   "aporte": 0.235,
    "fuente": "noticia"
   },
   {
@@ -111,7 +111,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.192,
+   "aporte": 0.191,
    "fuente": "noticia"
   },
   {
@@ -172,6 +172,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.22
+  "stablecoins_30d_pct": -2.24
  }
 }
