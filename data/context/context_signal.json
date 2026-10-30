@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-30T00:17:13Z",
+ "generated_utc": "2026-10-30T00:39:30Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.215,
- "event_risk": 0.647,
+ "event_risk": 0.65,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -15,6 +15,20 @@
   "Stablecoins -2.04% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
+  {
+   "id": "mtgox-repayment-deadline-2026-10-31",
+   "utc": "2026-10-31T12:00:00Z",
+   "title_es": "Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)",
+   "category": "CRYPTO_SUPPLY",
+   "status": "confirmed",
+   "magnitud": 0.455,
+   "riesgo": 0.283,
+   "ventana": [
+    "2026-10-30T12:00:00Z",
+    "2026-11-01T12:00:00Z"
+   ],
+   "en_ventana": false
+  },
   {
    "id": "br-vasp-authorization-deadline-2026-10-30",
    "utc": "2026-10-30T12:00:00Z",
@@ -28,20 +42,6 @@
     "2026-10-31T06:00:00Z"
    ],
    "en_ventana": true
-  },
-  {
-   "id": "mtgox-repayment-deadline-2026-10-31",
-   "utc": "2026-10-31T12:00:00Z",
-   "title_es": "Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)",
-   "category": "CRYPTO_SUPPLY",
-   "status": "confirmed",
-   "magnitud": 0.455,
-   "riesgo": 0.279,
-   "ventana": [
-    "2026-10-30T12:00:00Z",
-    "2026-11-01T12:00:00Z"
-   ],
-   "en_ventana": false
   },
   {
    "id": "boj-2026-10-30",
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.079,
+   "riesgo": 0.08,
    "ventana": [
     "2026-10-30T06:00:00Z",
     "2026-10-30T09:00:00Z"
@@ -78,7 +78,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -111,7 +111,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.193,
+   "aporte": 0.192,
    "fuente": "noticia"
   },
   {
@@ -156,7 +156,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.121,
+   "aporte": -0.12,
    "fuente": "noticia"
   }
  ],
