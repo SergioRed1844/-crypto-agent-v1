@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-30T06:23:44Z",
+ "generated_utc": "2026-10-30T06:34:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.213,
- "event_risk": 0.696,
+ "event_risk": 0.698,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.36,
+   "riesgo": 0.362,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -78,7 +78,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.036,
+   "riesgo": 0.037,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
