@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-10-30T17:27:42Z",
+ "generated_utc": "2026-10-30T18:23:42Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.203,
+ "bias": -0.207,
  "event_risk": 0.702,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.249,
+   "aporte": -0.248,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.183,
+   "aporte": 0.182,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.144,
+   "aporte": 0.143,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.136,
+   "aporte": -0.135,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.129,
+   "aporte": 0.128,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.115,
+   "aporte": -0.114,
    "fuente": "noticia"
   }
  ],
