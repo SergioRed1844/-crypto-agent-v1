@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30T15:26:17Z",
+ "generated_utc": "2026-10-30T16:25:22Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.18% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.16% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -88,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.227,
+   "aporte": 0.226,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.167,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.145,
+   "aporte": 0.144,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.137,
+   "aporte": -0.136,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.13,
+   "aporte": 0.129,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.18
+  "stablecoins_30d_pct": -2.16
  }
 }
