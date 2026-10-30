@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T16:25:22Z",
+ "generated_utc": "2026-10-30T17:24:25Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.203,
- "event_risk": 0.716,
+ "event_risk": 0.702,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.16% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.15% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -56,20 +56,6 @@
     "2026-10-31T02:00:00Z"
    ],
    "en_ventana": true
-  },
-  {
-   "id": "cme-btc-expiry-2026-10-30",
-   "utc": "2026-10-30T16:00:00Z",
-   "title_es": "Vencimiento mensual de futuros de BTC en CME",
-   "category": "DERIVATIVES_EXPIRY",
-   "status": "confirmed",
-   "magnitud": 0.05,
-   "riesgo": 0.05,
-   "ventana": [
-    "2026-10-30T14:00:00Z",
-    "2026-10-30T17:00:00Z"
-   ],
-   "en_ventana": true
   }
  ],
  "recent": [
@@ -79,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.249,
    "fuente": "noticia"
   },
   {
@@ -88,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.226,
+   "aporte": 0.225,
    "fuente": "noticia"
   },
   {
@@ -97,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.184,
+   "aporte": 0.183,
    "fuente": "noticia"
   },
   {
@@ -106,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.167,
+   "aporte": -0.166,
    "fuente": "noticia"
   },
   {
@@ -158,6 +144,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.16
+  "stablecoins_30d_pct": -2.15
  }
 }
