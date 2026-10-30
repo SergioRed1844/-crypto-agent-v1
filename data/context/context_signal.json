@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-29T23:40:22Z",
+ "generated_utc": "2026-10-30T00:17:13Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.215,
- "event_risk": 0.642,
+ "event_risk": 0.647,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.21, riesgo de evento 0.64 en 72 h",
-  "Stablecoins -2.03% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.21, riesgo de evento 0.65 en 72 h",
+  "Stablecoins -2.04% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.272,
+   "riesgo": 0.279,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.077,
+   "riesgo": 0.079,
    "ventana": [
     "2026-10-30T06:00:00Z",
     "2026-10-30T09:00:00Z"
@@ -120,7 +120,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.179,
+   "aporte": -0.178,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.155,
+   "aporte": 0.154,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.136,
+   "aporte": 0.135,
    "fuente": "noticia"
   },
   {
@@ -169,9 +169,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 51
+   "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.03
+  "stablecoins_30d_pct": -2.04
  }
 }
