@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T08:32:19Z",
+ "generated_utc": "2026-10-30T09:31:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.213,
- "event_risk": 0.713,
+ "bias": -0.203,
+ "event_risk": 0.691,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.21, riesgo de evento 0.71 en 72 h",
-  "Stablecoins -2.2% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.20, riesgo de evento 0.69 en 72 h",
+  "Stablecoins -2.19% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.393,
+   "riesgo": 0.41,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -58,27 +58,13 @@
    "en_ventana": true
   },
   {
-   "id": "deribit-expiry-2026-10-30",
-   "utc": "2026-10-30T08:00:00Z",
-   "title_es": "Vencimiento mensual de opciones BTC/ETH (Deribit)",
-   "category": "DERIVATIVES_EXPIRY",
-   "status": "confirmed",
-   "magnitud": 0.1,
-   "riesgo": 0.1,
-   "ventana": [
-    "2026-10-30T06:00:00Z",
-    "2026-10-30T09:00:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
    "id": "cme-btc-expiry-2026-10-30",
    "utc": "2026-10-30T16:00:00Z",
    "title_es": "Vencimiento mensual de futuros de BTC en CME",
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.04,
+   "riesgo": 0.041,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -111,7 +97,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.188,
+   "aporte": 0.187,
    "fuente": "noticia"
   },
   {
@@ -129,7 +115,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.149,
+   "aporte": 0.148,
    "fuente": "noticia"
   },
   {
@@ -138,7 +124,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.14,
+   "aporte": -0.139,
    "fuente": "noticia"
   },
   {
@@ -156,7 +142,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.118,
+   "aporte": -0.117,
    "fuente": "noticia"
   }
  ],
@@ -172,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.2
+  "stablecoins_30d_pct": -2.19
  }
 }
