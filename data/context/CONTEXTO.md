@@ -1,28 +1,28 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-30T03:36:49Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-30T04:35:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.21 · riesgo de evento 0.67 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.21 · riesgo de evento 0.68 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.21, riesgo de evento 0.67 en 72 h
-- Stablecoins -2.23% en 30 días (liquidez saliendo)
+- Precaución: sesgo -0.21, riesgo de evento 0.68 en 72 h
+- Stablecoins -2.24% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026,  | 2026-10-31T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.455 | 0.32 |
+| Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026,  | 2026-10-31T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.455 | 0.334 |
 | Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes solici | 2026-10-30T12:00:00Z | Regulación cripto | 0.28 | 0.28 |
 | Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report | 2026-10-30T12:00:00Z | Política monetaria | 0.24 | 0.24 |
-| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-10-30T08:00:00Z | Vencimiento de derivados | 0.1 | 0.091 |
-| Vencimiento mensual de futuros de BTC en CME | 2026-10-30T16:00:00Z | Vencimiento de derivados | 0.05 | 0.032 |
+| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-10-30T08:00:00Z | Vencimiento de derivados | 0.1 | 0.094 |
+| Vencimiento mensual de futuros de BTC en CME | 2026-10-30T16:00:00Z | Vencimiento de derivados | 0.05 | 0.034 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.259 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.235 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.191 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.176 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.258 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.234 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.190 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.175 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.152 |
-| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.142 |
+| Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.141 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.134 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.119 |
 
@@ -33,13 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-30T03:36:49Z",
+ "inicio": "2026-10-30T04:35:53Z",
  "onchain": {
   "scanned": [
-   973764,
-   973767
+   973768,
+   973772
   ],
-  "calls": 120,
+  "calls": 144,
   "stopped": null,
   "nuevas": 0
  },
