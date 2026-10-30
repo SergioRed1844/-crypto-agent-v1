@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T07:33:15Z",
+ "generated_utc": "2026-10-30T08:32:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.213,
- "event_risk": 0.705,
+ "event_risk": 0.713,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Precaución: sesgo -0.21, riesgo de evento 0.71 en 72 h",
-  "Stablecoins -2.21% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.2% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.378,
+   "riesgo": 0.393,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -78,7 +78,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.038,
+   "riesgo": 0.04,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.232,
+   "aporte": 0.231,
    "fuente": "noticia"
   },
   {
@@ -120,7 +120,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.172,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.15,
+   "aporte": 0.149,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.133,
+   "aporte": 0.132,
    "fuente": "noticia"
   },
   {
@@ -172,6 +172,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.21
+  "stablecoins_30d_pct": -2.2
  }
 }
