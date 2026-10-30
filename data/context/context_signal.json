@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T10:30:40Z",
+ "generated_utc": "2026-10-30T11:29:45Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.203,
- "event_risk": 0.7,
+ "event_risk": 0.71,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.20, riesgo de evento 0.70 en 72 h",
-  "Stablecoins -2.17% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.20, riesgo de evento 0.71 en 72 h",
+  "Stablecoins -2.15% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.427,
+   "riesgo": 0.445,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.043,
+   "riesgo": 0.045,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.23,
+   "aporte": 0.229,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.187,
+   "aporte": 0.186,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.171,
+   "aporte": -0.17,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.148,
+   "aporte": 0.147,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.139,
+   "aporte": -0.138,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.17
+  "stablecoins_30d_pct": -2.15
  }
 }
