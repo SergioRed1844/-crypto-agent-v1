@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-30T02:37:44Z",
+ "generated_utc": "2026-10-30T03:36:49Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.214,
- "event_risk": 0.665,
+ "event_risk": 0.673,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Precaución: sesgo -0.21, riesgo de evento 0.66 en 72 h",
-  "Stablecoins -2.24% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.21, riesgo de evento 0.67 en 72 h",
+  "Stablecoins -2.23% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "confirmed",
    "magnitud": 0.455,
-   "riesgo": 0.308,
+   "riesgo": 0.32,
    "ventana": [
     "2026-10-30T12:00:00Z",
     "2026-11-01T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.087,
+   "riesgo": 0.091,
    "ventana": [
     "2026-10-30T06:00:00Z",
     "2026-10-30T09:00:00Z"
@@ -78,7 +78,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.031,
+   "riesgo": 0.032,
    "ventana": [
     "2026-10-30T14:00:00Z",
     "2026-10-30T17:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -120,7 +120,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.177,
+   "aporte": -0.176,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.153,
+   "aporte": 0.152,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.135,
+   "aporte": 0.134,
    "fuente": "noticia"
   },
   {
@@ -156,7 +156,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.12,
+   "aporte": -0.119,
    "fuente": "noticia"
   }
  ],
@@ -172,6 +172,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.24
+  "stablecoins_30d_pct": -2.23
  }
 }
