@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T21:00:07Z",
+ "generated_utc": "2026-10-31T21:04:33Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.207,
- "event_risk": 0.564,
+ "event_risk": 0.565,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.141,
+   "riesgo": 0.142,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.208,
+   "aporte": 0.207,
    "fuente": "noticia"
   },
   {
