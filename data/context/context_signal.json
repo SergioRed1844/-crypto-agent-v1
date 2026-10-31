@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T00:18:23Z",
+ "generated_utc": "2026-10-31T01:17:28Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.204,
- "event_risk": 0.728,
+ "event_risk": 0.729,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -64,7 +64,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.06,
+   "riesgo": 0.062,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.221,
+   "aporte": 0.22,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.14,
+   "aporte": 0.139,
    "fuente": "noticia"
   },
   {
