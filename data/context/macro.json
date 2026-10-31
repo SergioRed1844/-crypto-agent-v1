@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-31T08:14:54Z",
+ "generated_utc": "2026-10-31T09:12:35Z",
  "fear_greed": {
   "value": 30,
   "label": "Fear",
@@ -18,10 +18,10 @@
   "us-midterms-2026": {
    "question": "2026 Balance of Power: R Senate, R House",
    "outcomes": {
-    "Yes": 0.045,
-    "No": 0.955
+    "Yes": 0.055,
+    "No": 0.945
    },
-   "volume": 14850192.957867002,
+   "volume": 14913269.164535997,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -30,7 +30,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6972761.402871,
+   "volume": 6972768.802871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6972761.402871,
+   "volume": 6972768.802871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54895306.09873299,
+   "volume": 54895306.098732986,
    "slug": "presidential-election-winner-2028"
   }
  },
