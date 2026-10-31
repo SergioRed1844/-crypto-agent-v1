@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T05:17:12Z",
+ "generated_utc": "2026-10-31T06:13:16Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.213,
- "event_risk": 0.649,
+ "bias": -0.212,
+ "event_risk": 0.515,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -30,27 +30,13 @@
    "en_ventana": true
   },
   {
-   "id": "br-vasp-authorization-deadline-2026-10-30",
-   "utc": "2026-10-30T12:00:00Z",
-   "title_es": "Brasil (BCB, Res. 519/520/521): fecha límite para que los VASP existentes soliciten autorización; desde aquí se prohíbe operar con proveedores no autorizados",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.28,
-   "riesgo": 0.28,
-   "ventana": [
-    "2026-10-29T12:00:00Z",
-    "2026-10-31T06:00:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
    "id": "us-midterms-2026",
    "utc": "2026-11-03T12:00:00Z",
    "title_es": "EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas)",
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.073,
+   "riesgo": 0.076,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -64,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.036,
+   "riesgo": 0.038,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -79,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.239,
    "fuente": "noticia"
   },
   {
@@ -97,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.177,
+   "aporte": 0.176,
    "fuente": "noticia"
   },
   {
@@ -115,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.137,
+   "aporte": 0.136,
    "fuente": "noticia"
   },
   {
@@ -142,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.111,
+   "aporte": -0.11,
    "fuente": "noticia"
   }
  ],
