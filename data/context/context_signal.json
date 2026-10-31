@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-10-31T02:41:24Z",
+ "generated_utc": "2026-10-31T03:15:46Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.204,
- "event_risk": 0.645,
+ "event_risk": 0.646,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.28% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.27% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.066,
+   "riesgo": 0.068,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -158,6 +158,6 @@
    "fear_greed": 30
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.28
+  "stablecoins_30d_pct": -2.27
  }
 }
