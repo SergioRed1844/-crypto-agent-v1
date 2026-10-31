@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-31T07:16:26Z",
+ "generated_utc": "2026-10-31T08:14:54Z",
  "fear_greed": {
   "value": 30,
   "label": "Fear",
@@ -7,9 +7,9 @@
   "avg_30d": 57.9
  },
  "stablecoins": {
-  "total_usd": 298900708298,
-  "chg_7d_pct": -1.29,
-  "chg_30d_pct": -2.26
+  "total_usd": 298875201774,
+  "chg_7d_pct": -1.3,
+  "chg_30d_pct": -2.27
  },
  "fred": {
   "status": "sin FRED_API_KEY"
@@ -21,7 +21,7 @@
     "Yes": 0.045,
     "No": 0.955
    },
-   "volume": 14821370.012042,
+   "volume": 14850192.957867002,
    "slug": "balance-of-power-2026-midterms"
   },
   "fr-presidential-r1-2027": {
@@ -57,7 +57,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54895306.098732986,
+   "volume": 54895306.09873299,
    "slug": "presidential-election-winner-2028"
   }
  },
