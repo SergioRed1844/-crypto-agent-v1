@@ -1,11 +1,11 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-10-31T01:17:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-10-31T01:21:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.20 · riesgo de evento 0.73 · tamaño ×0.0 · VETO a compras
 
 - Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)
-- Stablecoins -2.16% en 30 días (liquidez saliendo)
+- Stablecoins -2.28% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -33,13 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-10-31T01:17:28Z",
+ "inicio": "2026-10-31T01:21:55Z",
  "onchain": {
   "scanned": [
-   973898,
-   973901
+   973902,
+   973902
   ],
-  "calls": 110,
+  "calls": 23,
   "stopped": null,
   "nuevas": 0
  },
