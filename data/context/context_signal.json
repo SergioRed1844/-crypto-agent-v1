@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T04:14:49Z",
+ "generated_utc": "2026-10-31T05:13:54Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.213,
- "event_risk": 0.648,
+ "event_risk": 0.649,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -50,7 +50,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.07,
+   "riesgo": 0.073,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.035,
+   "riesgo": 0.036,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.218,
+   "aporte": 0.217,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.159,
+   "aporte": -0.158,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.132,
+   "aporte": -0.131,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.125,
+   "aporte": 0.124,
    "fuente": "noticia"
   },
   {
