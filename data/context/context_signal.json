@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T10:09:51Z",
+ "generated_utc": "2026-10-31T11:08:53Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.211,
- "event_risk": 0.526,
+ "event_risk": 0.529,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.09,
+   "riesgo": 0.094,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.045,
+   "riesgo": 0.046,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.155,
+   "aporte": -0.154,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.134,
+   "aporte": 0.133,
    "fuente": "noticia"
   },
   {
