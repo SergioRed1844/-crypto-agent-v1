@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T14:06:19Z",
+ "generated_utc": "2026-10-31T15:05:22Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.21,
- "event_risk": 0.538,
+ "bias": -0.206,
+ "event_risk": 0.541,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.106,
+   "riesgo": 0.111,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.052,
+   "riesgo": 0.055,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.234,
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.212,
+   "aporte": 0.211,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.132,
+   "aporte": 0.131,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.128,
+   "aporte": -0.127,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.108,
+   "aporte": -0.107,
    "fuente": "noticia"
   }
  ],
