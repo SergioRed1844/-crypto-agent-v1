@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T01:21:55Z",
+ "generated_utc": "2026-10-31T02:16:42Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.204,
- "event_risk": 0.729,
+ "event_risk": 0.644,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -44,27 +44,13 @@
    "en_ventana": true
   },
   {
-   "id": "boj-2026-10-30",
-   "utc": "2026-10-30T12:00:00Z",
-   "title_es": "Reunión de política monetaria del BoJ (29-30 oct) + Outlook Report",
-   "category": "MONETARY_POLICY",
-   "status": "confirmed",
-   "magnitud": 0.24,
-   "riesgo": 0.24,
-   "ventana": [
-    "2026-10-29T18:00:00Z",
-    "2026-10-31T02:00:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
    "id": "us-midterms-2026",
    "utc": "2026-11-03T12:00:00Z",
    "title_es": "EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas)",
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.062,
+   "riesgo": 0.065,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -78,7 +64,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.031,
+   "riesgo": 0.032,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -93,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -102,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.22,
+   "aporte": 0.219,
    "fuente": "noticia"
   },
   {
@@ -111,7 +97,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.179,
+   "aporte": 0.178,
    "fuente": "noticia"
   },
   {
@@ -120,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.161,
+   "aporte": -0.16,
    "fuente": "noticia"
   },
   {
@@ -129,7 +115,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.139,
+   "aporte": 0.138,
    "fuente": "noticia"
   },
   {
@@ -138,7 +124,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.133,
+   "aporte": -0.132,
    "fuente": "noticia"
   },
   {
@@ -147,7 +133,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.126,
+   "aporte": 0.125,
    "fuente": "noticia"
   },
   {
