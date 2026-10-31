@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-10-31T02:16:58+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-10-30
+Última corrida: **2026-10-31T03:15:54+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-10-30
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -130,7 +130,7 @@ Todavía ninguna.
 | XRP | sí | 2026-10-31 | binance |
 | ^MXX | sí | 2026-10-30 | yahoo |
 | ^VIX | sí | 2026-10-30 | yahoo |
-| contexto_v42 | sí | 2026-10-31T01:21:55Z | BLACKOUT |
+| contexto_v42 | sí | 2026-10-31T02:41:24Z | BLACKOUT |
 | fear_greed | sí | 2026-10-31 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-10-29 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-10-29 | wikimedia |
@@ -146,7 +146,7 @@ Todavía ninguna.
 | wiki_en_Unemployment | sí | 2026-10-29 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-10-29 | wikimedia |
 | wiki_es_Desempleo | sí | 2026-10-29 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-10-29 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-10-30 | wikimedia |
 | wiki_es_Inflación | sí | 2026-10-29 | wikimedia |
 | wiki_es_Recesión | sí | 2026-10-29 | wikimedia |
 
