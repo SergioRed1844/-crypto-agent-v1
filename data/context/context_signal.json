@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-10-31T20:01:03Z",
+ "generated_utc": "2026-10-31T20:16:07Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.208,
- "event_risk": 0.56,
+ "event_risk": 0.561,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.136,
+   "riesgo": 0.137,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.067,
+   "riesgo": 0.068,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.129,
+   "aporte": 0.128,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.126,
+   "aporte": -0.125,
    "fuente": "noticia"
   },
   {
