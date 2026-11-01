@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-01T19:39:46Z",
+ "generated_utc": "2026-11-01T20:38:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.199,
- "event_risk": 0.508,
+ "event_risk": 0.526,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Precaución: riesgo de evento 0.51 en 72 h",
+  "Precaución: riesgo de evento 0.53 en 72 h",
   "Stablecoins -2.7% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.364,
+   "riesgo": 0.379,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.18,
+   "riesgo": 0.188,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.058,
+   "riesgo": 0.06,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.194,
+   "aporte": 0.193,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.158,
+   "aporte": 0.157,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.135,
+   "aporte": -0.134,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.099,
+   "aporte": -0.098,
    "fuente": "noticia"
   }
  ],
