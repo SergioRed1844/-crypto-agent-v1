@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-01T17:56:26Z",
+ "generated_utc": "2026-11-01T18:40:44Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.761,
- "bias": -0.2,
- "event_risk": 0.479,
+ "size_mult": 0.754,
+ "bias": -0.199,
+ "event_risk": 0.491,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.20, riesgo de evento 0.48",
-  "Stablecoins -2.68% en 30 días (liquidez saliendo)"
+  "Contexto neutral: sesgo -0.20, riesgo de evento 0.49",
+  "Stablecoins -2.69% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.338,
+   "riesgo": 0.349,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.168,
+   "riesgo": 0.173,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.054,
+   "riesgo": 0.056,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -92,16 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.136,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.118,
+   "aporte": -0.135,
    "fuente": "noticia"
   },
   {
@@ -111,6 +102,15 @@
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.117,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.117,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.68
+  "stablecoins_30d_pct": -2.69
  }
 }
