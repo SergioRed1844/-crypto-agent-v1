@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-01 08:00:00+00:00",
-  "ETHUSDT": "2026-11-01 08:00:00+00:00",
-  "SOLUSDT": "2026-11-01 08:00:00+00:00"
+  "BTCUSDT": "2026-11-01 12:00:00+00:00",
+  "ETHUSDT": "2026-11-01 12:00:00+00:00",
+  "SOLUSDT": "2026-11-01 12:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 1831.2623478263665,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-11-01T10:00:00Z"
+     "last_checked": "2026-11-01T11:00:00Z"
     }
    },
    "trades": [
@@ -1394,12 +1394,26 @@
    "neta": 0.057,
    "rr_neto": 2.13,
    "B": "contexto BLACKOUT: Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/"
+  },
+  {
+   "t": "2026-11-01T12:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 77962.62,
+   "A": "ya hay posición en el par",
+   "ctx": "CAUTION",
+   "fg": 34,
+   "funding": 9.63042707398e-05,
+   "funding_src": "okx",
+   "neta": 0.0559,
+   "rr_neto": 2.12,
+   "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 533,
- "updated_utc": "2026-11-01T11:47:31Z",
- "n_signals": 92
+ "runs": 534,
+ "updated_utc": "2026-11-01T12:46:20Z",
+ "n_signals": 93
 }
