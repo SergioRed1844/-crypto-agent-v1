@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-01T00:56:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-01T00:59:46Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.21 · riesgo de evento 0.58 · tamaño ×0.0 · VETO a compras
 
@@ -11,11 +11,11 @@ Actualizado 2026-11-01T00:56:33Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|---|
 | Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026,  | 2026-10-31T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.455 | 0.455 |
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.167 |
-| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.355 | 0.082 |
+| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.355 | 0.083 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.227 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.226 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.205 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.167 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.146 |
@@ -31,13 +31,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-01T00:56:33Z",
+ "inicio": "2026-11-01T00:59:46Z",
  "onchain": {
-  "scanned": [
-   974042,
-   974049
-  ],
-  "calls": 88,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
