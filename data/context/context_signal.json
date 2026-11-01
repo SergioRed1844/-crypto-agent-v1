@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-01T14:44:12Z",
+ "generated_utc": "2026-11-01T15:43:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.202,
- "event_risk": 0.427,
+ "bias": -0.201,
+ "event_risk": 0.443,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Precaución: sesgo -0.20",
-  "Stablecoins -2.66% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.67% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.296,
+   "riesgo": 0.308,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.146,
+   "riesgo": 0.153,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.047,
+   "riesgo": 0.049,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.197,
+   "aporte": 0.196,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.16,
+   "aporte": 0.159,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.137,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.119,
+   "aporte": 0.118,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.119,
+   "aporte": -0.118,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.113,
+   "aporte": 0.112,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.66
+  "stablecoins_30d_pct": -2.67
  }
 }
