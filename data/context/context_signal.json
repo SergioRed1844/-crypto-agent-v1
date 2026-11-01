@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-01T13:45:07Z",
+ "generated_utc": "2026-11-01T14:29:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.202,
- "event_risk": 0.413,
+ "event_risk": 0.424,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.284,
+   "riesgo": 0.293,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.14,
+   "riesgo": 0.145,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
