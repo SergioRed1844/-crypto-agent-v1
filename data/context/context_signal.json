@@ -1,34 +1,20 @@
 {
- "generated_utc": "2026-11-01T11:46:49Z",
- "state": "BLACKOUT",
- "veto_entries": true,
+ "generated_utc": "2026-11-01T12:45:54Z",
+ "state": "CAUTION",
+ "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.0,
+ "size_mult": 0.5,
  "bias": -0.203,
- "event_risk": 0.649,
- "extra_confluence": 0,
+ "event_risk": 0.371,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
-  "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
+  "Precaución: sesgo -0.20",
   "Stablecoins -2.66% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
-  {
-   "id": "mtgox-repayment-deadline-2026-10-31",
-   "utc": "2026-10-31T12:00:00Z",
-   "title_es": "Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026)",
-   "category": "CRYPTO_SUPPLY",
-   "status": "confirmed",
-   "magnitud": 0.455,
-   "riesgo": 0.455,
-   "ventana": [
-    "2026-10-30T12:00:00Z",
-    "2026-11-01T12:00:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "us-midterms-2026",
    "utc": "2026-11-03T12:00:00Z",
@@ -36,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.262,
+   "riesgo": 0.273,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.129,
+   "riesgo": 0.135,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -74,7 +60,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.199,
+   "aporte": 0.198,
    "fuente": "noticia"
   },
   {
@@ -110,7 +96,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.12,
+   "aporte": -0.119,
    "fuente": "noticia"
   },
   {
@@ -119,7 +105,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.114,
+   "aporte": 0.113,
    "fuente": "noticia"
   },
   {
@@ -133,7 +119,7 @@
   }
  ],
  "alerts": [],
- "cause": "blackout",
+ "cause": "bias",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
