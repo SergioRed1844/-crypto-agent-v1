@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-01T02:54:50Z",
+ "generated_utc": "2026-11-01T03:53:54Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.206,
- "event_risk": 0.593,
+ "bias": -0.205,
+ "event_risk": 0.599,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
  "reasons": [
   "Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/Early Lump-Sum/Intermediate (31-oct-2026, hora de Japón); el trustee aún tiene ~34,388 BTC (Arkham, 30-sep-2026) (2026-10-31T12:00:00Z)",
-  "Stablecoins -2.66% en 30 días (liquidez saliendo)"
+  "Stablecoins -2.64% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.181,
+   "riesgo": 0.188,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.089,
+   "riesgo": 0.093,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.204,
+   "aporte": 0.203,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.166,
+   "aporte": 0.165,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.145,
+   "aporte": -0.144,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.125,
+   "aporte": 0.124,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.117,
+   "aporte": 0.116,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.104,
+   "aporte": -0.103,
    "fuente": "noticia"
   }
  ],
@@ -144,6 +144,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.66
+  "stablecoins_30d_pct": -2.64
  }
 }
