@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-01T20:41:52Z",
+ "generated_utc": "2026-11-01T21:38:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.199,
- "event_risk": 0.527,
+ "bias": -0.198,
+ "event_risk": 0.544,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Precaución: riesgo de evento 0.53 en 72 h",
-  "Stablecoins -2.7% en 30 días (liquidez saliendo)"
+  "Precaución: riesgo de evento 0.54 en 72 h",
+  "Stablecoins -2.69% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.38,
+   "riesgo": 0.395,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.188,
+   "riesgo": 0.195,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.06,
+   "riesgo": 0.063,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.214,
+   "aporte": -0.213,
    "fuente": "noticia"
   },
   {
@@ -96,15 +96,6 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.117,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
    "date": "2026-10-22",
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
@@ -114,12 +105,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
+   "date": "2026-10-21",
+   "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.116,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.111,
+   "aporte": 0.11,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.7
+  "stablecoins_30d_pct": -2.69
  }
 }
