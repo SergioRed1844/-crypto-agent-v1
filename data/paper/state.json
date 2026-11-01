@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-01 04:00:00+00:00",
-  "ETHUSDT": "2026-11-01 04:00:00+00:00",
-  "SOLUSDT": "2026-11-01 04:00:00+00:00"
+  "BTCUSDT": "2026-11-01 08:00:00+00:00",
+  "ETHUSDT": "2026-11-01 08:00:00+00:00",
+  "SOLUSDT": "2026-11-01 08:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 1831.2623478263665,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-11-01T06:00:00Z"
+     "last_checked": "2026-11-01T07:00:00Z"
     }
    },
    "trades": [
@@ -1380,12 +1380,26 @@
    "neta": 0.0513,
    "rr_neto": 2.09,
    "B": "contexto BLACKOUT: Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/"
+  },
+  {
+   "t": "2026-11-01T08:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 77991.28,
+   "A": "ya hay posición en el par",
+   "ctx": "BLACKOUT",
+   "fg": 34,
+   "funding": 6.55819513756e-05,
+   "funding_src": "okx",
+   "neta": 0.057,
+   "rr_neto": 2.13,
+   "B": "contexto BLACKOUT: Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 528,
- "updated_utc": "2026-11-01T07:51:04Z",
- "n_signals": 91
+ "runs": 529,
+ "updated_utc": "2026-11-01T08:50:03Z",
+ "n_signals": 92
 }
