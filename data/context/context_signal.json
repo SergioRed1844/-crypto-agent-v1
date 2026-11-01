@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-01T16:45:06Z",
+ "generated_utc": "2026-11-01T17:41:40Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.201,
- "event_risk": 0.459,
+ "event_risk": 0.475,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.322,
+   "riesgo": 0.335,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.159,
+   "riesgo": 0.166,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.051,
+   "riesgo": 0.053,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.196,
+   "aporte": 0.195,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
@@ -96,21 +96,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.118,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
    "aporte": -0.118,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.117,
    "fuente": "noticia"
   },
   {
