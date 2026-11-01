@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-01T14:29:06Z",
+ "generated_utc": "2026-11-01T14:44:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.202,
- "event_risk": 0.424,
+ "event_risk": 0.427,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.293,
+   "riesgo": 0.296,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.145,
+   "riesgo": 0.146,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.218,
+   "aporte": -0.217,
    "fuente": "noticia"
   },
   {
