@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-01T03:53:54Z",
+ "generated_utc": "2026-11-01T04:53:01Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.205,
- "event_risk": 0.599,
+ "event_risk": 0.604,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.188,
+   "riesgo": 0.196,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.355,
-   "riesgo": 0.093,
+   "riesgo": 0.097,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.225,
+   "aporte": -0.224,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.144,
+   "aporte": -0.143,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.123,
+   "aporte": -0.122,
    "fuente": "noticia"
   },
   {
