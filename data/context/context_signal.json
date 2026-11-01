@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-01T18:40:44Z",
+ "generated_utc": "2026-11-01T19:10:00Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.754,
+ "size_mult": 0.75,
  "bias": -0.199,
- "event_risk": 0.491,
+ "event_risk": 0.5,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.20, riesgo de evento 0.49",
-  "Stablecoins -2.69% en 30 días (liquidez saliendo)"
+  "Contexto neutral: sesgo -0.20, riesgo de evento 0.50",
+  "Stablecoins -2.7% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.349,
+   "riesgo": 0.356,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.173,
+   "riesgo": 0.176,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.056,
+   "riesgo": 0.057,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -74,7 +74,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.195,
+   "aporte": 0.194,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -2.69
+  "stablecoins_30d_pct": -2.7
  }
 }
