@@ -2,16 +2,22 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 31-Oct 20:55 · **Día 15.4** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 31-Oct 22:53 · **Día 15.4** · **Estado:** corriendo
 
-Última vela 4H revisada: 31-Oct 18:00 · señales técnicas desde el inicio: 90 · corridas: 522. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 31-Oct 22:00 · señales técnicas desde el inicio: 91 · corridas: 523. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
-| A · reglas v4.1 | 4 | 0.0 | -1.015 | — | — | -15.22 | +0.00 | -15.22 | 0 |
+| A · reglas v4.1 | 4 | 0.0 | -1.015 | — | — | -15.22 | -0.40 | -15.22 | 1 |
 | B · v4.2 completo | 1 | 0.0 | -1.018 | — | — | -2.55 | +0.00 | -2.55 | 0 |
 
 **Gate de papel (portafolio B):** ⬜ ≥30 trades · ✅ ≥14 días · ⬜ ganadas >50% · ⬜ R:R promedio ≥2.0 · ✅ drawdown <10%
+
+### Posiciones abiertas A
+
+| Par | Entrada (MTY) | Precio | Stop | Objetivo | Contexto |
+|---|---|---|---|---|---|
+| BTC | 31-Oct 22:00 | 77840.9 | 76163.6 | 82034 | — |
 
 ### Últimas operaciones cerradas
 
@@ -27,6 +33,7 @@
 
 | Vela 4H (MTY) | Par | Conf. | A | B | Contexto | F&G |
 |---|---|---|---|---|---|---|
+| 31-Oct 22:00 | BTC | 6 | entra | contexto BLACKOUT: Blackout por evento programado: Mt. Gox: vence el plazo de pagos Base/ | BLACKOUT | 34 |
 | 29-Oct 14:00 | ETH | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 29-Oct 14:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 29-Oct 10:00 | SOL | 6 | máx 2 posiciones | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
@@ -41,6 +48,5 @@
 | 28-Oct 02:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 27-Oct 18:00 | SOL | 6 | máx 2 posiciones | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 27-Oct 18:00 | ETH | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
-| 27-Oct 18:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 
 Gate completo (CLAUDE.md): ≥30 trades, ≥2 semanas, ganadas >50%, R:R promedio ≥2.0, drawdown <10%. Pasarlo NO activa dinero real: esa decisión es tuya y manual.
