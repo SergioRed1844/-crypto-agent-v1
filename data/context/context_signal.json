@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-01T19:10:00Z",
- "state": "NEUTRAL",
+ "generated_utc": "2026-11-01T19:39:46Z",
+ "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.75,
+ "size_mult": 0.5,
  "bias": -0.199,
- "event_risk": 0.5,
- "extra_confluence": 0,
+ "event_risk": 0.508,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.20, riesgo de evento 0.50",
+  "Precaución: riesgo de evento 0.51 en 72 h",
   "Stablecoins -2.7% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.435,
-   "riesgo": 0.356,
+   "riesgo": 0.364,
    "ventana": [
     "2026-11-02T00:00:00Z",
     "2026-11-04T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.176,
+   "riesgo": 0.18,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.057,
+   "riesgo": 0.058,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.215,
+   "aporte": -0.214,
    "fuente": "noticia"
   },
   {
@@ -96,21 +96,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.117,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-ether-etf-october-outflows-near-1-1b-as-eth-price-2026-10-21",
    "date": "2026-10-21",
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
    "aporte": -0.117,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.116,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
   }
  ],
  "alerts": [],
- "cause": "none",
+ "cause": "event_risk",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",

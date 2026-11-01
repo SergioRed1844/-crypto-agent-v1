@@ -1,26 +1,26 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-01T19:10:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-01T19:39:46Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.20 · riesgo de evento 0.50 · tamaño ×0.75 · compras permitidas
+**Estado: CAUTION** · sesgo -0.20 · riesgo de evento 0.51 · tamaño ×0.5 · compras permitidas
 
-- Contexto neutral: sesgo -0.20, riesgo de evento 0.50
+- Precaución: riesgo de evento 0.51 en 72 h
 - Stablecoins -2.7% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.356 |
-| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.176 |
-| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.057 |
+| EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.364 |
+| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.18 |
+| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.058 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.215 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.214 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.194 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.158 |
 | Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.135 |
-| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.117 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.117 |
+| CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.116 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.111 |
 | Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BP | 2026-10-17 | anti | -0.099 |
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-01T19:10:00Z",
+ "inicio": "2026-11-01T19:39:46Z",
  "onchain": {
   "scanned": [
-   974163,
-   974165
+   974166,
+   974167
   ],
-  "calls": 42,
+  "calls": 38,
   "stopped": null,
   "nuevas": 0
  },
