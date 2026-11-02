@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-02T20:19:10+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-11-02
+Última corrida: **2026-11-02T21:17:42+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-11-02
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -19,9 +19,9 @@ Todavía ninguna.
 | Setup | Clase | H | Episodios | Crudo | Día cualquiera | Encogido | B (hacia 'sin ventaja') | Neto exceso |
 |---|---|---|---|---|---|---|---|---|
 | Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 61% | +0.2% |
-| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.4% |
+| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.3% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 45% | 43% | 74% | -0.0% |
-| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.3% |
+| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.2% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.5% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.4% |
 | Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
@@ -51,9 +51,9 @@ Todavía ninguna.
 | Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 61% | +0.5% |
 | Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 66% | +0.2% |
 | Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 66% | +0.1% |
-| Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 75% | -0.2% |
+| Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 76% | -0.2% |
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 44% | 40% | 83% | -0.8% |
-| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.5% |
+| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 35% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.1% |
@@ -71,66 +71,66 @@ Todavía ninguna.
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-11-02 | caché yahoo |
-| AC.MX | sí | 2026-10-30 | caché yahoo |
-| ADA | sí | 2026-11-02 | caché binance |
-| ALSEA.MX | sí | 2026-10-30 | caché yahoo |
-| AMXB.MX | sí | 2026-10-30 | caché yahoo |
-| AMZN | sí | 2026-11-02 | caché yahoo |
-| ASURB.MX | sí | 2026-10-30 | caché yahoo |
-| AVAX | sí | 2026-11-02 | caché binance |
-| BBAJIOO.MX | sí | 2026-10-30 | caché yahoo |
-| BCH | sí | 2026-11-02 | caché binance |
-| BIMBOA.MX | sí | 2026-10-30 | caché yahoo |
-| BTC | sí | 2026-11-02 | caché binance |
-| CEMEXCPO.MX | sí | 2026-10-30 | caché yahoo |
-| DIA | sí | 2026-11-02 | caché yahoo |
-| DOGE | sí | 2026-11-02 | caché binance |
-| DOT | sí | 2026-11-02 | caché binance |
-| ETH | sí | 2026-11-02 | caché binance |
-| FEMSAUBD.MX | sí | 2026-10-30 | caché yahoo |
-| GAPB.MX | sí | 2026-10-30 | caché yahoo |
-| GFNORTEO.MX | sí | 2026-10-30 | caché yahoo |
-| GLD | sí | 2026-11-02 | caché yahoo |
-| GMEXICOB.MX | sí | 2026-10-30 | caché yahoo |
-| GOOGL | sí | 2026-11-02 | caché yahoo |
-| GRUMAB.MX | sí | 2026-10-30 | caché yahoo |
-| IWM | sí | 2026-11-02 | caché yahoo |
-| JPM | sí | 2026-11-02 | caché yahoo |
-| KIMBERA.MX | sí | 2026-10-30 | caché yahoo |
-| KOFUBL.MX | sí | 2026-10-30 | caché yahoo |
-| LINK | sí | 2026-11-02 | caché binance |
-| LIVEPOLC-1.MX | sí | 2026-10-30 | caché yahoo |
-| LTC | sí | 2026-11-02 | caché binance |
-| META | sí | 2026-11-02 | caché yahoo |
-| MSFT | sí | 2026-11-02 | caché yahoo |
-| MXN=X | sí | 2026-11-02 | caché yahoo |
-| NAFTRACISHRS.MX | sí | 2026-10-30 | caché yahoo |
-| NVDA | sí | 2026-11-02 | caché yahoo |
-| OMAB.MX | sí | 2026-10-30 | caché yahoo |
-| ORBIA.MX | sí | 2026-10-30 | caché yahoo |
-| PINFRA.MX | sí | 2026-10-30 | caché yahoo |
-| QQQ | sí | 2026-11-02 | caché yahoo |
-| SMH | sí | 2026-11-02 | caché yahoo |
-| SOL | sí | 2026-11-02 | caché binance |
-| SPY | sí | 2026-11-02 | caché yahoo |
-| TRX | sí | 2026-11-02 | caché binance |
-| TSLA | sí | 2026-11-02 | caché yahoo |
-| WALMEX.MX | sí | 2026-10-30 | caché yahoo |
-| WMT | sí | 2026-11-02 | caché yahoo |
-| XLE | sí | 2026-11-02 | caché yahoo |
-| XLF | sí | 2026-11-02 | caché yahoo |
-| XLI | sí | 2026-11-02 | caché yahoo |
-| XLK | sí | 2026-11-02 | caché yahoo |
-| XLP | sí | 2026-11-02 | caché yahoo |
-| XLU | sí | 2026-11-02 | caché yahoo |
-| XLV | sí | 2026-11-02 | caché yahoo |
-| XLY | sí | 2026-11-02 | caché yahoo |
-| XOM | sí | 2026-11-02 | caché yahoo |
-| XRP | sí | 2026-11-02 | caché binance |
-| ^MXX | sí | 2026-10-30 | caché yahoo |
-| ^VIX | sí | 2026-11-02 | caché yahoo |
-| contexto_v42 | sí | 2026-11-02T19:18:57Z | BLACKOUT |
+| AAPL | sí | 2026-11-02 | yahoo |
+| AC.MX | sí | 2026-10-30 | yahoo |
+| ADA | sí | 2026-11-02 | binance |
+| ALSEA.MX | sí | 2026-10-30 | yahoo |
+| AMXB.MX | sí | 2026-10-30 | yahoo |
+| AMZN | sí | 2026-11-02 | yahoo |
+| ASURB.MX | sí | 2026-10-30 | yahoo |
+| AVAX | sí | 2026-11-02 | binance |
+| BBAJIOO.MX | sí | 2026-10-30 | yahoo |
+| BCH | sí | 2026-11-02 | binance |
+| BIMBOA.MX | sí | 2026-10-30 | yahoo |
+| BTC | sí | 2026-11-02 | binance |
+| CEMEXCPO.MX | sí | 2026-10-30 | yahoo |
+| DIA | sí | 2026-11-02 | yahoo |
+| DOGE | sí | 2026-11-02 | binance |
+| DOT | sí | 2026-11-02 | binance |
+| ETH | sí | 2026-11-02 | binance |
+| FEMSAUBD.MX | sí | 2026-10-30 | yahoo |
+| GAPB.MX | sí | 2026-10-30 | yahoo |
+| GFNORTEO.MX | sí | 2026-10-30 | yahoo |
+| GLD | sí | 2026-11-02 | yahoo |
+| GMEXICOB.MX | sí | 2026-10-30 | yahoo |
+| GOOGL | sí | 2026-11-02 | yahoo |
+| GRUMAB.MX | sí | 2026-10-30 | yahoo |
+| IWM | sí | 2026-11-02 | yahoo |
+| JPM | sí | 2026-11-02 | yahoo |
+| KIMBERA.MX | sí | 2026-10-30 | yahoo |
+| KOFUBL.MX | sí | 2026-10-30 | yahoo |
+| LINK | sí | 2026-11-02 | binance |
+| LIVEPOLC-1.MX | sí | 2026-10-30 | yahoo |
+| LTC | sí | 2026-11-02 | binance |
+| META | sí | 2026-11-02 | yahoo |
+| MSFT | sí | 2026-11-02 | yahoo |
+| MXN=X | sí | 2026-11-02 | yahoo |
+| NAFTRACISHRS.MX | sí | 2026-10-30 | yahoo |
+| NVDA | sí | 2026-11-02 | yahoo |
+| OMAB.MX | sí | 2026-10-30 | yahoo |
+| ORBIA.MX | sí | 2026-10-30 | yahoo |
+| PINFRA.MX | sí | 2026-10-30 | yahoo |
+| QQQ | sí | 2026-11-02 | yahoo |
+| SMH | sí | 2026-11-02 | yahoo |
+| SOL | sí | 2026-11-02 | binance |
+| SPY | sí | 2026-11-02 | yahoo |
+| TRX | sí | 2026-11-02 | binance |
+| TSLA | sí | 2026-11-02 | yahoo |
+| WALMEX.MX | sí | 2026-10-30 | yahoo |
+| WMT | sí | 2026-11-02 | yahoo |
+| XLE | sí | 2026-11-02 | yahoo |
+| XLF | sí | 2026-11-02 | yahoo |
+| XLI | sí | 2026-11-02 | yahoo |
+| XLK | sí | 2026-11-02 | yahoo |
+| XLP | sí | 2026-11-02 | yahoo |
+| XLU | sí | 2026-11-02 | yahoo |
+| XLV | sí | 2026-11-02 | yahoo |
+| XLY | sí | 2026-11-02 | yahoo |
+| XOM | sí | 2026-11-02 | yahoo |
+| XRP | sí | 2026-11-02 | binance |
+| ^MXX | sí | 2026-10-30 | yahoo |
+| ^VIX | sí | 2026-11-02 | yahoo |
+| contexto_v42 | sí | 2026-11-02T20:22:13Z | BLACKOUT |
 | fear_greed | sí | 2026-11-02 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-01 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-01 | wikimedia |
