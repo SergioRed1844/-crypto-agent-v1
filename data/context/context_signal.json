@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-02T19:18:57Z",
+ "generated_utc": "2026-11-02T20:18:02Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.19,
- "event_risk": 0.699,
+ "event_risk": 0.702,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.155,
+   "riesgo": 0.161,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.014,
+   "riesgo": 0.015,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.007,
+   "riesgo": 0.008,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.2,
+   "aporte": -0.199,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.18,
    "fuente": "noticia"
   },
   {
@@ -111,7 +111,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.147,
+   "aporte": 0.146,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.106,
+   "aporte": 0.105,
    "fuente": "noticia"
   },
   {
