@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-01 20:00:00+00:00",
-  "ETHUSDT": "2026-11-01 20:00:00+00:00",
-  "SOLUSDT": "2026-11-01 20:00:00+00:00"
+  "BTCUSDT": "2026-11-02 00:00:00+00:00",
+  "ETHUSDT": "2026-11-02 00:00:00+00:00",
+  "SOLUSDT": "2026-11-02 00:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 1831.2623478263665,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-11-01T22:00:00Z"
+     "last_checked": "2026-11-01T23:00:00Z"
     }
    },
    "trades": [
@@ -1422,12 +1422,26 @@
    "neta": 0.0564,
    "rr_neto": 2.12,
    "B": "contexto CAUTION pide confluencia 7 (tiene 6)"
+  },
+  {
+   "t": "2026-11-02T00:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 78354.0,
+   "A": "ya hay posición en el par",
+   "ctx": "BLACKOUT",
+   "fg": 37,
+   "funding": 0.0001,
+   "funding_src": "okx",
+   "neta": 0.0429,
+   "rr_neto": 2.03,
+   "B": "contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 551,
- "updated_utc": "2026-11-01T23:36:49Z",
- "n_signals": 94
+ "runs": 552,
+ "updated_utc": "2026-11-02T00:36:08Z",
+ "n_signals": 95
 }
