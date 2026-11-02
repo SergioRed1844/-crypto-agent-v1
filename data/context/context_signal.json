@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-02T18:20:00Z",
+ "generated_utc": "2026-11-02T19:18:57Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.191,
- "event_risk": 0.695,
+ "bias": -0.19,
+ "event_risk": 0.699,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.02% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.03% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.149,
+   "riesgo": 0.155,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -68,6 +68,20 @@
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "banxico-2026-11-05",
+   "utc": "2026-11-05T19:00:00Z",
+   "title_es": "Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026)",
+   "category": "MONETARY_POLICY",
+   "status": "confirmed",
+   "magnitud": 0.116,
+   "riesgo": 0.007,
+   "ventana": [
+    "2026-11-05T13:00:00Z",
+    "2026-11-05T21:00:00Z"
    ],
    "en_ventana": false
   }
@@ -106,7 +120,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.123,
+   "aporte": -0.122,
    "fuente": "noticia"
   },
   {
@@ -133,7 +147,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.104,
+   "aporte": 0.103,
    "fuente": "noticia"
   },
   {
@@ -176,6 +190,6 @@
    "fear_greed": 37
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.02
+  "stablecoins_30d_pct": -3.03
  }
 }
