@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-02T15:22:26Z",
+ "generated_utc": "2026-11-02T16:21:25Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.192,
- "event_risk": 0.688,
+ "bias": -0.191,
+ "event_risk": 0.69,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.131,
+   "riesgo": 0.137,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.012,
+   "riesgo": 0.013,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.202,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.183,
+   "aporte": 0.182,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.149,
+   "aporte": 0.148,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.105,
+   "aporte": 0.104,
    "fuente": "noticia"
   },
   {
