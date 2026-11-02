@@ -1,23 +1,17 @@
 {
  "sym": "USDCHF",
  "year": 2026,
- "repaired_days": 7,
- "days_requested": 12,
- "days_failed": 5,
- "fails": [
-  "2026-01-21: USDCHF/2026/00/21/ASK_candles_min_1.bi5: HTTP 503",
-  "2026-01-28: USDCHF/2026/00/28/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-29: USDCHF/2026/00/29/BID_candles_min_1.bi5: HTTP 503",
-  "2026-04-22: USDCHF/2026/03/22/BID_candles_min_1.bi5: HTTP 503",
-  "2026-04-27: USDCHF/2026/03/27/BID_candles_min_1.bi5: HTTP 503"
- ],
- "minutes": 287443,
+ "repaired_days": 8,
+ "days_requested": 8,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 309137,
  "scale": {
   "ok": true,
-  "median_mid": 0.79788,
+  "median_mid": 0.7985,
   "median_spread_pips": 0.8
  },
- "first_utc": "2026-01-02T00:00Z",
- "last_utc": "2026-10-18T23:59Z",
- "bytes": 2355784
+ "first_utc": "2026-01-01T22:04Z",
+ "last_utc": "2026-11-01T23:59Z",
+ "bytes": 2542640
 }

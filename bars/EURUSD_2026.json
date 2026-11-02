@@ -1,23 +1,17 @@
 {
  "sym": "EURUSD",
  "year": 2026,
- "repaired_days": 12,
- "days_requested": 17,
- "days_failed": 5,
- "fails": [
-  "2026-01-06: EURUSD/2026/00/06/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-13: EURUSD/2026/00/13/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-16: EURUSD/2026/00/16/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-21: EURUSD/2026/00/21/BID_candles_min_1.bi5: HTTP 503",
-  "2026-01-22: EURUSD/2026/00/22/ASK_candles_min_1.bi5: ConnectError"
- ],
- "minutes": 288019,
+ "repaired_days": 16,
+ "days_requested": 16,
+ "days_failed": 0,
+ "fails": [],
+ "minutes": 309513,
  "scale": {
   "ok": true,
-  "median_mid": 1.15994,
+  "median_mid": 1.15946,
   "median_spread_pips": 0.3
  },
  "first_utc": "2026-01-01T22:04Z",
- "last_utc": "2026-10-18T23:59Z",
- "bytes": 2382944
+ "last_utc": "2026-11-01T23:59Z",
+ "bytes": 2566760
 }

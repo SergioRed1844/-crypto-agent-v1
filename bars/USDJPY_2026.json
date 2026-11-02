@@ -1,17 +1,22 @@
 {
  "sym": "USDJPY",
  "year": 2026,
- "repaired_days": 0,
- "days_requested": 0,
- "days_failed": 0,
- "fails": [],
- "minutes": 295618,
+ "repaired_days": 10,
+ "days_requested": 14,
+ "days_failed": 4,
+ "fails": [
+  "2026-01-02: USDJPY/2026/00/02/ASK_candles_min_1.bi5: HTTP 503",
+  "2026-01-07: USDJPY/2026/00/07/BID_candles_min_1.bi5: HTTP 503",
+  "2026-01-09: USDJPY/2026/00/09/BID_candles_min_1.bi5: HTTP 503",
+  "2026-01-12: USDJPY/2026/00/12/BID_candles_min_1.bi5: ReadTimeout"
+ ],
+ "minutes": 303959,
  "scale": {
   "ok": true,
-  "median_mid": 158.772,
-  "median_spread_pips": 0.5
+  "median_mid": 158.6885,
+  "median_spread_pips": 0.4
  },
- "first_utc": "2026-01-01T22:04Z",
- "last_utc": "2026-10-18T23:59Z",
- "bytes": 2735716
+ "first_utc": "2026-01-04T22:00Z",
+ "last_utc": "2026-11-01T23:59Z",
+ "bytes": 2733828
 }
