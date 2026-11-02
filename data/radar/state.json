@@ -31,7 +31,6 @@
   }
  },
  "runs": [
-  "2026-10-31T10:10:02+00:00",
   "2026-10-31T11:09:05+00:00",
   "2026-10-31T12:08:13+00:00",
   "2026-10-31T13:07:18+00:00",
@@ -90,9 +89,10 @@
   "2026-11-02T01:00:18+00:00",
   "2026-11-02T01:35:03+00:00",
   "2026-11-02T02:33:57+00:00",
-  "2026-11-02T03:33:04+00:00"
+  "2026-11-02T03:33:04+00:00",
+  "2026-11-02T04:32:07+00:00"
  ],
- "last_scan_utc": "2026-11-02T03:33:04+00:00",
+ "last_scan_utc": "2026-11-02T04:32:07+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -411,7 +411,7 @@
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
@@ -421,7 +421,7 @@
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
@@ -436,7 +436,7 @@
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
@@ -446,7 +446,7 @@
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
@@ -456,7 +456,7 @@
   },
   "wiki_en_Ethereum": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Solana__blockchain_platform_": {
@@ -466,7 +466,7 @@
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
@@ -481,7 +481,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-02T02:43:08Z",
+   "last": "2026-11-02T03:32:49Z",
    "nota": "BLACKOUT"
   }
  },
