@@ -1,8 +1,8 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-02T06:30:16Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-02T07:29:19Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: BLACKOUT** · sesgo -0.20 · riesgo de evento 0.63 · tamaño ×0.0 · VETO a compras
+**Estado: BLACKOUT** · sesgo -0.20 · riesgo de evento 0.64 · tamaño ×0.0 · VETO a compras
 
 - Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)
 - Stablecoins -3.01% en 30 días (liquidez saliendo)
@@ -10,15 +10,15 @@ Actualizado 2026-11-02T06:30:16Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.435 |
-| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.283 |
-| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.091 |
+| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.295 |
+| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.095 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.207 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.188 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.153 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.129 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.187 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.152 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.128 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.113 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.111 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.107 |
@@ -31,15 +31,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-02T06:30:16Z",
+ "inicio": "2026-11-02T07:29:19Z",
  "onchain": {
   "scanned": [
-   974216,
-   974222
+   974223,
+   974228
   ],
-  "calls": 102,
+  "calls": 95,
   "stopped": null,
-  "nuevas": 0
+  "nuevas": 1
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
