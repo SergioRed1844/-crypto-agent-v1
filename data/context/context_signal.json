@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-02T21:17:20Z",
+ "generated_utc": "2026-11-02T21:54:31Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.19,
- "event_risk": 0.705,
+ "bias": -0.189,
+ "event_risk": 0.706,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.168,
+   "riesgo": 0.173,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.199,
+   "aporte": -0.198,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.18,
+   "aporte": 0.179,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.105,
+   "aporte": 0.104,
    "fuente": "noticia"
   },
   {
