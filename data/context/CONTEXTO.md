@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-02T22:16:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-02T23:15:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.19 · riesgo de evento 0.71 · tamaño ×0.0 · VETO a compras
 
@@ -11,16 +11,16 @@ Actualizado 2026-11-02T22:16:22Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|---|
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.435 |
 | Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.356 |
-| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.175 |
-| Decisión del MPC del Banco de Inglaterra + Monetary Policy Report | 2026-11-05T12:00:00Z | Política monetaria | 0.166 | 0.016 |
-| Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026) | 2026-11-05T19:00:00Z | Política monetaria | 0.116 | 0.008 |
+| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.183 |
+| Decisión del MPC del Banco de Inglaterra + Monetary Policy Report | 2026-11-05T12:00:00Z | Política monetaria | 0.166 | 0.017 |
+| Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026) | 2026-11-05T19:00:00Z | Política monetaria | 0.116 | 0.009 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.198 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.197 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.179 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.146 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.121 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.145 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.120 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.108 |
 | CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador | 2026-10-22 | pro | +0.104 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.102 |
@@ -33,13 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-02T22:16:22Z",
+ "inicio": "2026-11-02T23:15:27Z",
  "onchain": {
   "scanned": [
-   974307,
-   974308
+   974309,
+   974312
   ],
-  "calls": 71,
+  "calls": 116,
   "stopped": null,
   "nuevas": 0
  },
