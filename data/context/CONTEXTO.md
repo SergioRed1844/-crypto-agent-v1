@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-02T08:28:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-02T08:32:12Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.19 · riesgo de evento 0.65 · tamaño ×0.0 · VETO a compras
 
@@ -10,7 +10,7 @@ Actualizado 2026-11-02T08:28:22Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.435 |
-| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.307 |
+| Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.308 |
 | Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.099 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -31,13 +31,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-02T08:28:22Z",
+ "inicio": "2026-11-02T08:32:12Z",
  "onchain": {
-  "scanned": [
-   974229,
-   974233
-  ],
-  "calls": 101,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },

@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-02T08:28:22Z",
+ "generated_utc": "2026-11-02T08:32:12Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.194,
- "event_risk": 0.647,
+ "event_risk": 0.648,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.356,
-   "riesgo": 0.307,
+   "riesgo": 0.308,
    "ventana": [
     "2026-11-02T12:00:00Z",
     "2026-11-04T06:00:00Z"
