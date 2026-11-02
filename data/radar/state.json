@@ -31,7 +31,6 @@
   }
  },
  "runs": [
-  "2026-10-31T09:11:35+00:00",
   "2026-10-31T10:10:02+00:00",
   "2026-10-31T11:09:05+00:00",
   "2026-10-31T12:08:13+00:00",
@@ -90,9 +89,10 @@
   "2026-11-02T00:36:45+00:00",
   "2026-11-02T01:00:18+00:00",
   "2026-11-02T01:35:03+00:00",
-  "2026-11-02T02:33:57+00:00"
+  "2026-11-02T02:33:57+00:00",
+  "2026-11-02T03:33:04+00:00"
  ],
- "last_scan_utc": "2026-11-02T02:33:57+00:00",
+ "last_scan_utc": "2026-11-02T03:33:04+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -396,12 +396,12 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
@@ -416,7 +416,7 @@
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
@@ -426,12 +426,12 @@
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
@@ -441,7 +441,7 @@
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
@@ -451,7 +451,7 @@
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
@@ -461,7 +461,7 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
@@ -471,17 +471,17 @@
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-10-31",
+   "last": "2026-11-01",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-02T01:34:45Z",
+   "last": "2026-11-02T02:43:08Z",
    "nota": "BLACKOUT"
   }
  },
