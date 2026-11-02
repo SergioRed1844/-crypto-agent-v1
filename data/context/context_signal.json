@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-02T16:25:13Z",
+ "generated_utc": "2026-11-02T17:20:45Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.191,
- "event_risk": 0.69,
+ "event_risk": 0.692,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.04% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.02% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.137,
+   "riesgo": 0.143,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -106,7 +106,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.124,
+   "aporte": -0.123,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.107,
+   "aporte": 0.106,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.093,
+   "aporte": -0.092,
    "fuente": "noticia"
   }
  ],
@@ -176,6 +176,6 @@
    "fear_greed": 37
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.04
+  "stablecoins_30d_pct": -3.02
  }
 }
