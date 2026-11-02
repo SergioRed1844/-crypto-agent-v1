@@ -1,10 +1,10 @@
 {
- "generated_utc": "2026-11-01T18:10:37Z",
+ "generated_utc": "2026-11-02T11:46:04Z",
  "n_events": 258,
  "n_history": 261,
  "price_range": [
   "2010-07-18",
-  "2026-10-31"
+  "2026-11-01"
  ],
  "baseline": {
   "mean_abs_z3_random": 0.75,

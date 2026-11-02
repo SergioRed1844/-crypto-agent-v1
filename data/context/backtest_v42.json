@@ -1,12 +1,12 @@
 {
- "generado_utc": "2026-10-12T04:30:21Z",
- "periodo": "2021-01-01 → 2026-10-12",
+ "generado_utc": "2026-11-02T11:51:38Z",
+ "periodo": "2021-01-01 → 2026-11-02",
  "pares": [
   "BTCUSDT",
   "ETHUSDT",
   "SOLUSDT"
  ],
- "fuera_de_muestra_desde": "2024-06-20",
+ "fuera_de_muestra_desde": "2024-07-02",
  "comision": 0.001,
  "slippage": 0.0005,
  "limites": {
@@ -19,75 +19,75 @@
  },
  "variantes": {
   "A · v4.1 reglas actuales": {
-   "señales": 9059,
+   "señales": 9194,
    "total": {
-    "trades": 407,
-    "win_rate": 0.349,
-    "expectancy_R": 0.148,
-    "profit_factor": 1.22,
-    "total_R": 60.05,
+    "trades": 414,
+    "win_rate": 0.343,
+    "expectancy_R": 0.128,
+    "profit_factor": 1.19,
+    "total_R": 52.95,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 15.66,
+    "retorno_portafolio_%": 12.99,
     "expectancy_IC95_R": [
-     -0.007,
-     0.306
+     -0.025,
+     0.287
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 227,
+    "trades": 230,
     "win_rate": 0.361,
-    "expectancy_R": 0.194,
+    "expectancy_R": 0.193,
     "profit_factor": 1.3,
-    "total_R": 44.02,
+    "total_R": 44.36,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.72,
+    "retorno_portafolio_%": 11.85,
     "expectancy_IC95_R": [
-     -0.015,
-     0.416
+     -0.012,
+     0.396
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 180,
-    "win_rate": 0.333,
-    "expectancy_R": 0.089,
-    "profit_factor": 1.13,
-    "total_R": 16.04,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 3.94,
+    "trades": 184,
+    "win_rate": 0.321,
+    "expectancy_R": 0.047,
+    "profit_factor": 1.07,
+    "total_R": 8.58,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 1.14,
     "expectancy_IC95_R": [
-     -0.135,
-     0.331
+     -0.169,
+     0.28
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 173,
-     "win_rate": 0.318,
-     "expectancy_R": 0.033,
-     "profit_factor": 1.05,
-     "total_R": 5.66,
-     "max_drawdown_R": -11.39,
-     "retorno_portafolio_%": -0.16,
+     "trades": 176,
+     "win_rate": 0.312,
+     "expectancy_R": 0.015,
+     "profit_factor": 1.02,
+     "total_R": 2.61,
+     "max_drawdown_R": -11.71,
+     "retorno_portafolio_%": -1.3,
      "expectancy_IC95_R": [
-      -0.193,
-      0.268
+      -0.212,
+      0.243
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 156,
-     "win_rate": 0.34,
-     "expectancy_R": 0.123,
-     "profit_factor": 1.18,
-     "total_R": 19.2,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 5.46,
+     "trades": 160,
+     "win_rate": 0.331,
+     "expectancy_R": 0.095,
+     "profit_factor": 1.14,
+     "total_R": 15.14,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 3.94,
      "expectancy_IC95_R": [
-      -0.128,
-      0.379
+      -0.137,
+      0.346
      ],
      "worst_streak": 8
     },
@@ -108,75 +108,75 @@
    }
   },
   "B · + ganancia neta": {
-   "señales": 8947,
+   "señales": 9082,
    "total": {
-    "trades": 407,
-    "win_rate": 0.349,
-    "expectancy_R": 0.148,
-    "profit_factor": 1.22,
-    "total_R": 60.07,
+    "trades": 414,
+    "win_rate": 0.343,
+    "expectancy_R": 0.128,
+    "profit_factor": 1.19,
+    "total_R": 52.97,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 15.66,
+    "retorno_portafolio_%": 13.0,
     "expectancy_IC95_R": [
-     -0.007,
-     0.306
+     -0.025,
+     0.287
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 227,
+    "trades": 230,
     "win_rate": 0.361,
-    "expectancy_R": 0.194,
+    "expectancy_R": 0.193,
     "profit_factor": 1.3,
-    "total_R": 44.02,
+    "total_R": 44.36,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.72,
+    "retorno_portafolio_%": 11.85,
     "expectancy_IC95_R": [
-     -0.015,
-     0.416
+     -0.012,
+     0.396
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 180,
-    "win_rate": 0.333,
-    "expectancy_R": 0.089,
-    "profit_factor": 1.13,
-    "total_R": 16.06,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 3.94,
+    "trades": 184,
+    "win_rate": 0.321,
+    "expectancy_R": 0.047,
+    "profit_factor": 1.07,
+    "total_R": 8.6,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 1.15,
     "expectancy_IC95_R": [
-     -0.135,
-     0.332
+     -0.169,
+     0.281
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 173,
-     "win_rate": 0.318,
-     "expectancy_R": 0.033,
-     "profit_factor": 1.05,
-     "total_R": 5.66,
-     "max_drawdown_R": -11.39,
-     "retorno_portafolio_%": -0.16,
+     "trades": 176,
+     "win_rate": 0.312,
+     "expectancy_R": 0.015,
+     "profit_factor": 1.02,
+     "total_R": 2.61,
+     "max_drawdown_R": -11.71,
+     "retorno_portafolio_%": -1.3,
      "expectancy_IC95_R": [
-      -0.193,
-      0.268
+      -0.212,
+      0.243
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 155,
-     "win_rate": 0.342,
-     "expectancy_R": 0.131,
-     "profit_factor": 1.2,
-     "total_R": 20.24,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 5.72,
+     "trades": 159,
+     "win_rate": 0.333,
+     "expectancy_R": 0.102,
+     "profit_factor": 1.15,
+     "total_R": 16.18,
+     "max_drawdown_R": -11.93,
+     "retorno_portafolio_%": 4.2,
      "expectancy_IC95_R": [
-      -0.123,
-      0.39
+      -0.15,
+      0.355
      ],
      "worst_streak": 8
     },
@@ -197,164 +197,164 @@
    }
   },
   "C · + derivados (veto funding)": {
-   "señales": 8933,
+   "señales": 8171,
    "total": {
-    "trades": 404,
-    "win_rate": 0.349,
-    "expectancy_R": 0.148,
-    "profit_factor": 1.22,
-    "total_R": 59.74,
-    "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 15.45,
-    "expectancy_IC95_R": [
-     -0.007,
-     0.297
-    ],
-    "worst_streak": 15
-   },
-   "en_muestra": {
-    "trades": 224,
-    "win_rate": 0.362,
-    "expectancy_R": 0.195,
-    "profit_factor": 1.3,
-    "total_R": 43.71,
-    "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.52,
-    "expectancy_IC95_R": [
-     -0.016,
-     0.405
-    ],
-    "worst_streak": 10
-   },
-   "fuera_de_muestra": {
-    "trades": 180,
-    "win_rate": 0.333,
-    "expectancy_R": 0.089,
-    "profit_factor": 1.13,
-    "total_R": 16.04,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 3.94,
-    "expectancy_IC95_R": [
-     -0.135,
-     0.331
-    ],
-    "worst_streak": 15
-   },
-   "por_par": {
-    "BTCUSDT": {
-     "trades": 170,
-     "win_rate": 0.318,
-     "expectancy_R": 0.031,
-     "profit_factor": 1.05,
-     "total_R": 5.35,
-     "max_drawdown_R": -10.75,
-     "retorno_portafolio_%": -0.24,
-     "expectancy_IC95_R": [
-      -0.2,
-      0.253
-     ],
-     "worst_streak": 9
-    },
-    "ETHUSDT": {
-     "trades": 156,
-     "win_rate": 0.34,
-     "expectancy_R": 0.123,
-     "profit_factor": 1.18,
-     "total_R": 19.2,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 5.46,
-     "expectancy_IC95_R": [
-      -0.128,
-      0.379
-     ],
-     "worst_streak": 8
-    },
-    "SOLUSDT": {
-     "trades": 78,
-     "win_rate": 0.436,
-     "expectancy_R": 0.451,
-     "profit_factor": 1.79,
-     "total_R": 35.2,
-     "max_drawdown_R": -6.04,
-     "retorno_portafolio_%": 10.24,
-     "expectancy_IC95_R": [
-      0.097,
-      0.838
-     ],
-     "worst_streak": 6
-    }
-   }
-  },
-  "C2 · + derivados estricto (F&G/funding)": {
-   "señales": 8036,
-   "total": {
-    "trades": 385,
-    "win_rate": 0.351,
-    "expectancy_R": 0.152,
-    "profit_factor": 1.23,
-    "total_R": 58.66,
+    "trades": 392,
+    "win_rate": 0.344,
+    "expectancy_R": 0.132,
+    "profit_factor": 1.2,
+    "total_R": 51.55,
     "max_drawdown_R": -21.08,
-    "retorno_portafolio_%": 14.68,
+    "retorno_portafolio_%": 12.01,
     "expectancy_IC95_R": [
-     -0.012,
-     0.307
+     -0.023,
+     0.292
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 217,
+    "trades": 220,
     "win_rate": 0.355,
-    "expectancy_R": 0.171,
+    "expectancy_R": 0.17,
     "profit_factor": 1.26,
-    "total_R": 37.01,
+    "total_R": 37.36,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 9.38,
+    "retorno_portafolio_%": 9.51,
     "expectancy_IC95_R": [
-     -0.032,
-     0.39
+     -0.038,
+     0.378
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 168,
-    "win_rate": 0.345,
-    "expectancy_R": 0.129,
-    "profit_factor": 1.19,
-    "total_R": 21.65,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 5.3,
+    "trades": 172,
+    "win_rate": 0.331,
+    "expectancy_R": 0.083,
+    "profit_factor": 1.12,
+    "total_R": 14.2,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 2.51,
     "expectancy_IC95_R": [
-     -0.11,
-     0.366
+     -0.15,
+     0.308
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 165,
-     "win_rate": 0.309,
-     "expectancy_R": 0.001,
-     "profit_factor": 1.0,
-     "total_R": 0.13,
-     "max_drawdown_R": -14.8,
-     "retorno_portafolio_%": -1.75,
+     "trades": 168,
+     "win_rate": 0.304,
+     "expectancy_R": -0.017,
+     "profit_factor": 0.98,
+     "total_R": -2.92,
+     "max_drawdown_R": -14.96,
+     "retorno_portafolio_%": -2.89,
      "expectancy_IC95_R": [
-      -0.225,
-      0.239
+      -0.248,
+      0.22
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 146,
-     "win_rate": 0.342,
-     "expectancy_R": 0.132,
-     "profit_factor": 1.2,
-     "total_R": 19.3,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 4.81,
+     "trades": 150,
+     "win_rate": 0.333,
+     "expectancy_R": 0.102,
+     "profit_factor": 1.15,
+     "total_R": 15.24,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 3.28,
      "expectancy_IC95_R": [
-      -0.119,
-      0.388
+      -0.142,
+      0.351
+     ],
+     "worst_streak": 8
+    },
+    "SOLUSDT": {
+     "trades": 74,
+     "win_rate": 0.459,
+     "expectancy_R": 0.53,
+     "profit_factor": 1.97,
+     "total_R": 39.22,
+     "max_drawdown_R": -4.05,
+     "retorno_portafolio_%": 11.62,
+     "expectancy_IC95_R": [
+      0.166,
+      0.894
+     ],
+     "worst_streak": 4
+    }
+   }
+  },
+  "C2 · + derivados estricto (F&G/funding)": {
+   "señales": 8171,
+   "total": {
+    "trades": 392,
+    "win_rate": 0.344,
+    "expectancy_R": 0.132,
+    "profit_factor": 1.2,
+    "total_R": 51.55,
+    "max_drawdown_R": -21.08,
+    "retorno_portafolio_%": 12.01,
+    "expectancy_IC95_R": [
+     -0.023,
+     0.292
+    ],
+    "worst_streak": 15
+   },
+   "en_muestra": {
+    "trades": 220,
+    "win_rate": 0.355,
+    "expectancy_R": 0.17,
+    "profit_factor": 1.26,
+    "total_R": 37.36,
+    "max_drawdown_R": -20.45,
+    "retorno_portafolio_%": 9.51,
+    "expectancy_IC95_R": [
+     -0.038,
+     0.378
+    ],
+    "worst_streak": 10
+   },
+   "fuera_de_muestra": {
+    "trades": 172,
+    "win_rate": 0.331,
+    "expectancy_R": 0.083,
+    "profit_factor": 1.12,
+    "total_R": 14.2,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 2.51,
+    "expectancy_IC95_R": [
+     -0.15,
+     0.308
+    ],
+    "worst_streak": 15
+   },
+   "por_par": {
+    "BTCUSDT": {
+     "trades": 168,
+     "win_rate": 0.304,
+     "expectancy_R": -0.017,
+     "profit_factor": 0.98,
+     "total_R": -2.92,
+     "max_drawdown_R": -14.96,
+     "retorno_portafolio_%": -2.89,
+     "expectancy_IC95_R": [
+      -0.248,
+      0.22
+     ],
+     "worst_streak": 11
+    },
+    "ETHUSDT": {
+     "trades": 150,
+     "win_rate": 0.333,
+     "expectancy_R": 0.102,
+     "profit_factor": 1.15,
+     "total_R": 15.24,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 3.28,
+     "expectancy_IC95_R": [
+      -0.142,
+      0.351
      ],
      "worst_streak": 8
     },
@@ -375,75 +375,75 @@
    }
   },
   "D · + contexto (calendario y eventos)": {
-   "señales": 8973,
+   "señales": 9119,
    "total": {
-    "trades": 400,
-    "win_rate": 0.343,
-    "expectancy_R": 0.127,
-    "profit_factor": 1.19,
-    "total_R": 50.8,
+    "trades": 407,
+    "win_rate": 0.337,
+    "expectancy_R": 0.107,
+    "profit_factor": 1.16,
+    "total_R": 43.7,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.67,
+    "retorno_portafolio_%": 9.0,
     "expectancy_IC95_R": [
-     -0.031,
-     0.276
+     -0.053,
+     0.267
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 225,
+    "trades": 228,
     "win_rate": 0.36,
-    "expectancy_R": 0.19,
+    "expectancy_R": 0.189,
     "profit_factor": 1.29,
-    "total_R": 42.7,
+    "total_R": 43.05,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.35,
+    "retorno_portafolio_%": 11.48,
     "expectancy_IC95_R": [
-     -0.006,
-     0.404
+     -0.013,
+     0.397
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 175,
-    "win_rate": 0.32,
-    "expectancy_R": 0.046,
-    "profit_factor": 1.07,
-    "total_R": 8.11,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 0.32,
+    "trades": 179,
+    "win_rate": 0.307,
+    "expectancy_R": 0.004,
+    "profit_factor": 1.01,
+    "total_R": 0.66,
+    "max_drawdown_R": -18.97,
+    "retorno_portafolio_%": -2.48,
     "expectancy_IC95_R": [
-     -0.183,
-     0.296
+     -0.219,
+     0.226
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 172,
-     "win_rate": 0.308,
-     "expectancy_R": 0.001,
-     "profit_factor": 1.0,
-     "total_R": 0.12,
-     "max_drawdown_R": -14.09,
-     "retorno_portafolio_%": -2.2,
+     "trades": 175,
+     "win_rate": 0.303,
+     "expectancy_R": -0.017,
+     "profit_factor": 0.98,
+     "total_R": -2.93,
+     "max_drawdown_R": -17.14,
+     "retorno_portafolio_%": -3.34,
      "expectancy_IC95_R": [
-      -0.232,
-      0.233
+      -0.242,
+      0.207
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 150,
-     "win_rate": 0.333,
-     "expectancy_R": 0.103,
-     "profit_factor": 1.15,
-     "total_R": 15.51,
-     "max_drawdown_R": -11.74,
-     "retorno_portafolio_%": 4.22,
+     "trades": 154,
+     "win_rate": 0.325,
+     "expectancy_R": 0.074,
+     "profit_factor": 1.11,
+     "total_R": 11.45,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 2.7,
      "expectancy_IC95_R": [
-      -0.142,
-      0.351
+      -0.165,
+      0.317
      ],
      "worst_streak": 8
     },
@@ -464,75 +464,75 @@
    }
   },
   "D1 · + solo blackout de eventos programados": {
-   "señales": 9008,
+   "señales": 9143,
    "total": {
-    "trades": 400,
-    "win_rate": 0.343,
-    "expectancy_R": 0.127,
-    "profit_factor": 1.19,
-    "total_R": 50.71,
+    "trades": 407,
+    "win_rate": 0.337,
+    "expectancy_R": 0.107,
+    "profit_factor": 1.16,
+    "total_R": 43.61,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.74,
+    "retorno_portafolio_%": 9.08,
     "expectancy_IC95_R": [
-     -0.031,
-     0.276
+     -0.053,
+     0.266
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 225,
+    "trades": 228,
     "win_rate": 0.36,
-    "expectancy_R": 0.19,
+    "expectancy_R": 0.189,
     "profit_factor": 1.29,
-    "total_R": 42.7,
+    "total_R": 43.05,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.1,
+    "retorno_portafolio_%": 11.23,
     "expectancy_IC95_R": [
-     -0.006,
-     0.404
+     -0.013,
+     0.397
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 175,
-    "win_rate": 0.32,
-    "expectancy_R": 0.046,
-    "profit_factor": 1.07,
-    "total_R": 8.01,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 0.65,
+    "trades": 179,
+    "win_rate": 0.307,
+    "expectancy_R": 0.003,
+    "profit_factor": 1.0,
+    "total_R": 0.56,
+    "max_drawdown_R": -19.07,
+    "retorno_portafolio_%": -2.15,
     "expectancy_IC95_R": [
-     -0.183,
-     0.295
+     -0.219,
+     0.225
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 173,
-     "win_rate": 0.312,
-     "expectancy_R": 0.013,
-     "profit_factor": 1.02,
-     "total_R": 2.33,
-     "max_drawdown_R": -13.15,
-     "retorno_portafolio_%": -1.69,
+     "trades": 176,
+     "win_rate": 0.307,
+     "expectancy_R": -0.004,
+     "profit_factor": 0.99,
+     "total_R": -0.72,
+     "max_drawdown_R": -14.92,
+     "retorno_portafolio_%": -2.83,
      "expectancy_IC95_R": [
-      -0.199,
-      0.243
+      -0.229,
+      0.236
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 150,
-     "win_rate": 0.333,
-     "expectancy_R": 0.103,
-     "profit_factor": 1.15,
-     "total_R": 15.51,
-     "max_drawdown_R": -11.74,
-     "retorno_portafolio_%": 3.95,
+     "trades": 154,
+     "win_rate": 0.325,
+     "expectancy_R": 0.074,
+     "profit_factor": 1.11,
+     "total_R": 11.45,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 2.43,
      "expectancy_IC95_R": [
-      -0.142,
-      0.351
+      -0.165,
+      0.317
      ],
      "worst_streak": 8
     },
@@ -553,75 +553,75 @@
    }
   },
   "D2 · + solo sesgo por eventos recientes": {
-   "señales": 9024,
+   "señales": 9170,
    "total": {
-    "trades": 407,
-    "win_rate": 0.349,
-    "expectancy_R": 0.148,
-    "profit_factor": 1.22,
-    "total_R": 60.05,
+    "trades": 414,
+    "win_rate": 0.343,
+    "expectancy_R": 0.128,
+    "profit_factor": 1.19,
+    "total_R": 52.95,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 15.66,
+    "retorno_portafolio_%": 12.99,
     "expectancy_IC95_R": [
-     -0.007,
-     0.306
+     -0.025,
+     0.287
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 227,
+    "trades": 230,
     "win_rate": 0.361,
-    "expectancy_R": 0.194,
+    "expectancy_R": 0.193,
     "profit_factor": 1.3,
-    "total_R": 44.01,
+    "total_R": 44.36,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 11.72,
+    "retorno_portafolio_%": 11.85,
     "expectancy_IC95_R": [
-     -0.015,
-     0.416
+     -0.012,
+     0.396
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 180,
-    "win_rate": 0.333,
-    "expectancy_R": 0.089,
-    "profit_factor": 1.13,
-    "total_R": 16.04,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 3.94,
+    "trades": 184,
+    "win_rate": 0.321,
+    "expectancy_R": 0.047,
+    "profit_factor": 1.07,
+    "total_R": 8.58,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 1.14,
     "expectancy_IC95_R": [
-     -0.135,
-     0.331
+     -0.169,
+     0.28
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 173,
-     "win_rate": 0.318,
-     "expectancy_R": 0.033,
-     "profit_factor": 1.05,
-     "total_R": 5.66,
-     "max_drawdown_R": -11.39,
-     "retorno_portafolio_%": -0.16,
+     "trades": 176,
+     "win_rate": 0.312,
+     "expectancy_R": 0.015,
+     "profit_factor": 1.02,
+     "total_R": 2.61,
+     "max_drawdown_R": -11.71,
+     "retorno_portafolio_%": -1.3,
      "expectancy_IC95_R": [
-      -0.193,
-      0.268
+      -0.212,
+      0.243
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 156,
-     "win_rate": 0.34,
-     "expectancy_R": 0.123,
-     "profit_factor": 1.18,
-     "total_R": 19.2,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 5.46,
+     "trades": 160,
+     "win_rate": 0.331,
+     "expectancy_R": 0.095,
+     "profit_factor": 1.14,
+     "total_R": 15.14,
+     "max_drawdown_R": -12.97,
+     "retorno_portafolio_%": 3.94,
      "expectancy_IC95_R": [
-      -0.128,
-      0.379
+      -0.137,
+      0.346
      ],
      "worst_streak": 8
     },
@@ -642,75 +642,75 @@
    }
   },
   "E · + racha (pausa tras 5 pérdidas)": {
-   "señales": 9059,
+   "señales": 9194,
    "total": {
-    "trades": 385,
-    "win_rate": 0.325,
-    "expectancy_R": 0.066,
-    "profit_factor": 1.1,
-    "total_R": 25.55,
+    "trades": 392,
+    "win_rate": 0.319,
+    "expectancy_R": 0.047,
+    "profit_factor": 1.07,
+    "total_R": 18.42,
     "max_drawdown_R": -38.91,
-    "retorno_portafolio_%": 4.15,
+    "retorno_portafolio_%": 1.48,
     "expectancy_IC95_R": [
-     -0.09,
-     0.226
+     -0.1,
+     0.198
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 219,
-    "win_rate": 0.333,
-    "expectancy_R": 0.101,
-    "profit_factor": 1.15,
-    "total_R": 22.1,
+    "trades": 224,
+    "win_rate": 0.33,
+    "expectancy_R": 0.091,
+    "profit_factor": 1.13,
+    "total_R": 20.41,
     "max_drawdown_R": -38.91,
-    "retorno_portafolio_%": 4.53,
+    "retorno_portafolio_%": 3.89,
     "expectancy_IC95_R": [
-     -0.102,
-     0.317
+     -0.105,
+     0.304
     ],
     "worst_streak": 15
    },
    "fuera_de_muestra": {
-    "trades": 166,
-    "win_rate": 0.313,
-    "expectancy_R": 0.021,
-    "profit_factor": 1.03,
-    "total_R": 3.45,
-    "max_drawdown_R": -14.94,
-    "retorno_portafolio_%": -0.37,
+    "trades": 168,
+    "win_rate": 0.304,
+    "expectancy_R": -0.012,
+    "profit_factor": 0.98,
+    "total_R": -2.0,
+    "max_drawdown_R": -15.07,
+    "retorno_portafolio_%": -2.42,
     "expectancy_IC95_R": [
-     -0.198,
-     0.254
+     -0.231,
+     0.244
     ],
     "worst_streak": 12
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 172,
-     "win_rate": 0.297,
-     "expectancy_R": -0.04,
-     "profit_factor": 0.94,
-     "total_R": -6.87,
-     "max_drawdown_R": -17.82,
-     "retorno_portafolio_%": -4.47,
+     "trades": 175,
+     "win_rate": 0.291,
+     "expectancy_R": -0.057,
+     "profit_factor": 0.92,
+     "total_R": -9.94,
+     "max_drawdown_R": -19.56,
+     "retorno_portafolio_%": -5.62,
      "expectancy_IC95_R": [
-      -0.256,
-      0.191
+      -0.279,
+      0.169
      ],
      "worst_streak": 8
     },
     "ETHUSDT": {
-     "trades": 149,
-     "win_rate": 0.329,
-     "expectancy_R": 0.087,
-     "profit_factor": 1.13,
-     "total_R": 12.97,
+     "trades": 153,
+     "win_rate": 0.32,
+     "expectancy_R": 0.058,
+     "profit_factor": 1.08,
+     "total_R": 8.9,
      "max_drawdown_R": -19.24,
-     "retorno_portafolio_%": 3.0,
+     "retorno_portafolio_%": 1.47,
      "expectancy_IC95_R": [
-      -0.164,
-      0.349
+      -0.182,
+      0.32
      ],
      "worst_streak": 9
     },
@@ -731,164 +731,164 @@
    }
   },
   "F · v4.2 completo (B+C+D+E)": {
-   "señales": 8735,
+   "señales": 7994,
    "total": {
-    "trades": 386,
-    "win_rate": 0.321,
-    "expectancy_R": 0.055,
-    "profit_factor": 1.08,
-    "total_R": 21.22,
+    "trades": 383,
+    "win_rate": 0.305,
+    "expectancy_R": 0.001,
+    "profit_factor": 1.0,
+    "total_R": 0.35,
     "max_drawdown_R": -38.91,
-    "retorno_portafolio_%": 1.98,
+    "retorno_portafolio_%": -5.42,
     "expectancy_IC95_R": [
-     -0.091,
-     0.208
+     -0.15,
+     0.159
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 218,
-    "win_rate": 0.33,
-    "expectancy_R": 0.09,
-    "profit_factor": 1.13,
-    "total_R": 19.72,
+    "trades": 222,
+    "win_rate": 0.311,
+    "expectancy_R": 0.023,
+    "profit_factor": 1.03,
+    "total_R": 5.19,
     "max_drawdown_R": -38.91,
-    "retorno_portafolio_%": 3.66,
+    "retorno_portafolio_%": -1.39,
     "expectancy_IC95_R": [
-     -0.111,
-     0.305
+     -0.173,
+     0.231
     ],
     "worst_streak": 15
    },
    "fuera_de_muestra": {
-    "trades": 168,
-    "win_rate": 0.31,
-    "expectancy_R": 0.009,
-    "profit_factor": 1.01,
-    "total_R": 1.5,
-    "max_drawdown_R": -14.89,
-    "retorno_portafolio_%": -1.67,
+    "trades": 161,
+    "win_rate": 0.298,
+    "expectancy_R": -0.03,
+    "profit_factor": 0.96,
+    "total_R": -4.84,
+    "max_drawdown_R": -14.94,
+    "retorno_portafolio_%": -4.03,
     "expectancy_IC95_R": [
-     -0.209,
-     0.244
+     -0.257,
+     0.216
     ],
     "worst_streak": 12
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 172,
-     "win_rate": 0.291,
-     "expectancy_R": -0.059,
-     "profit_factor": 0.92,
-     "total_R": -10.21,
-     "max_drawdown_R": -18.78,
-     "retorno_portafolio_%": -5.81,
+     "trades": 176,
+     "win_rate": 0.267,
+     "expectancy_R": -0.14,
+     "profit_factor": 0.81,
+     "total_R": -24.63,
+     "max_drawdown_R": -27.71,
+     "retorno_portafolio_%": -10.87,
      "expectancy_IC95_R": [
-      -0.269,
-      0.169
+      -0.348,
+      0.082
      ],
-     "worst_streak": 8
+     "worst_streak": 9
     },
     "ETHUSDT": {
-     "trades": 149,
-     "win_rate": 0.322,
-     "expectancy_R": 0.065,
-     "profit_factor": 1.09,
-     "total_R": 9.66,
-     "max_drawdown_R": -19.24,
-     "retorno_portafolio_%": 1.93,
+     "trades": 145,
+     "win_rate": 0.31,
+     "expectancy_R": 0.025,
+     "profit_factor": 1.04,
+     "total_R": 3.58,
+     "max_drawdown_R": -19.44,
+     "retorno_portafolio_%": -0.52,
      "expectancy_IC95_R": [
-      -0.181,
-      0.315
+      -0.226,
+      0.263
      ],
      "worst_streak": 9
     },
     "SOLUSDT": {
-     "trades": 65,
-     "win_rate": 0.4,
-     "expectancy_R": 0.335,
-     "profit_factor": 1.55,
-     "total_R": 21.77,
-     "max_drawdown_R": -7.71,
-     "retorno_portafolio_%": 5.86,
+     "trades": 62,
+     "win_rate": 0.403,
+     "expectancy_R": 0.345,
+     "profit_factor": 1.57,
+     "total_R": 21.4,
+     "max_drawdown_R": -8.07,
+     "retorno_portafolio_%": 5.97,
      "expectancy_IC95_R": [
-      -0.078,
-      0.746
+      -0.041,
+      0.732
      ],
-     "worst_streak": 5
+     "worst_streak": 8
     }
    }
   },
   "G · ganancia neta + derivados estricto (sin contexto ni pausa)": {
-   "señales": 7926,
+   "señales": 8061,
    "total": {
-    "trades": 385,
-    "win_rate": 0.351,
-    "expectancy_R": 0.152,
-    "profit_factor": 1.23,
-    "total_R": 58.68,
+    "trades": 392,
+    "win_rate": 0.344,
+    "expectancy_R": 0.132,
+    "profit_factor": 1.2,
+    "total_R": 51.57,
     "max_drawdown_R": -21.08,
-    "retorno_portafolio_%": 14.68,
+    "retorno_portafolio_%": 12.02,
     "expectancy_IC95_R": [
-     -0.011,
-     0.307
+     -0.023,
+     0.292
     ],
     "worst_streak": 15
    },
    "en_muestra": {
-    "trades": 217,
+    "trades": 220,
     "win_rate": 0.355,
-    "expectancy_R": 0.171,
+    "expectancy_R": 0.17,
     "profit_factor": 1.26,
-    "total_R": 37.01,
+    "total_R": 37.36,
     "max_drawdown_R": -20.45,
-    "retorno_portafolio_%": 9.38,
+    "retorno_portafolio_%": 9.51,
     "expectancy_IC95_R": [
-     -0.032,
-     0.39
+     -0.038,
+     0.378
     ],
     "worst_streak": 10
    },
    "fuera_de_muestra": {
-    "trades": 168,
-    "win_rate": 0.345,
-    "expectancy_R": 0.129,
-    "profit_factor": 1.19,
-    "total_R": 21.67,
-    "max_drawdown_R": -15.82,
-    "retorno_portafolio_%": 5.31,
+    "trades": 172,
+    "win_rate": 0.331,
+    "expectancy_R": 0.083,
+    "profit_factor": 1.12,
+    "total_R": 14.22,
+    "max_drawdown_R": -19.1,
+    "retorno_portafolio_%": 2.51,
     "expectancy_IC95_R": [
-     -0.11,
-     0.366
+     -0.15,
+     0.308
     ],
     "worst_streak": 15
    },
    "por_par": {
     "BTCUSDT": {
-     "trades": 165,
-     "win_rate": 0.309,
-     "expectancy_R": 0.001,
-     "profit_factor": 1.0,
-     "total_R": 0.13,
-     "max_drawdown_R": -14.8,
-     "retorno_portafolio_%": -1.75,
+     "trades": 168,
+     "win_rate": 0.304,
+     "expectancy_R": -0.017,
+     "profit_factor": 0.98,
+     "total_R": -2.92,
+     "max_drawdown_R": -14.96,
+     "retorno_portafolio_%": -2.89,
      "expectancy_IC95_R": [
-      -0.225,
-      0.239
+      -0.248,
+      0.22
      ],
      "worst_streak": 11
     },
     "ETHUSDT": {
-     "trades": 145,
-     "win_rate": 0.345,
-     "expectancy_R": 0.14,
-     "profit_factor": 1.21,
-     "total_R": 20.34,
-     "max_drawdown_R": -10.64,
-     "retorno_portafolio_%": 5.07,
+     "trades": 149,
+     "win_rate": 0.336,
+     "expectancy_R": 0.109,
+     "profit_factor": 1.16,
+     "total_R": 16.28,
+     "max_drawdown_R": -11.93,
+     "retorno_portafolio_%": 3.54,
      "expectancy_IC95_R": [
-      -0.116,
-      0.395
+      -0.137,
+      0.358
      ],
      "worst_streak": 8
     },
@@ -911,88 +911,88 @@
  },
  "rejilla_ganancia_neta": {
   "neta≥0.0% y R:R neto≥0.0": {
-   "trades": 407,
-   "win_rate": 0.349,
-   "expectancy_R": 0.148,
-   "profit_factor": 1.22,
-   "total_R": 60.05,
+   "trades": 414,
+   "win_rate": 0.343,
+   "expectancy_R": 0.128,
+   "profit_factor": 1.19,
+   "total_R": 52.95,
    "max_drawdown_R": -20.45,
-   "retorno_portafolio_%": 15.66,
+   "retorno_portafolio_%": 12.99,
    "expectancy_IC95_R": [
-    -0.007,
-    0.306
+    -0.025,
+    0.287
    ],
    "worst_streak": 15
   },
   "neta≥1.0% y R:R neto≥1.5": {
-   "trades": 407,
-   "win_rate": 0.349,
-   "expectancy_R": 0.148,
-   "profit_factor": 1.22,
-   "total_R": 60.05,
+   "trades": 414,
+   "win_rate": 0.343,
+   "expectancy_R": 0.128,
+   "profit_factor": 1.19,
+   "total_R": 52.95,
    "max_drawdown_R": -20.45,
-   "retorno_portafolio_%": 15.66,
+   "retorno_portafolio_%": 12.99,
    "expectancy_IC95_R": [
-    -0.007,
-    0.306
+    -0.025,
+    0.287
    ],
    "worst_streak": 15
   },
   "neta≥1.5% y R:R neto≥1.8": {
-   "trades": 407,
-   "win_rate": 0.349,
-   "expectancy_R": 0.148,
-   "profit_factor": 1.22,
-   "total_R": 60.07,
+   "trades": 414,
+   "win_rate": 0.343,
+   "expectancy_R": 0.128,
+   "profit_factor": 1.19,
+   "total_R": 52.97,
    "max_drawdown_R": -20.45,
-   "retorno_portafolio_%": 15.66,
+   "retorno_portafolio_%": 13.0,
    "expectancy_IC95_R": [
-    -0.007,
-    0.306
+    -0.025,
+    0.287
    ],
    "worst_streak": 15
   },
   "neta≥2.5% y R:R neto≥2.0": {
-   "trades": 397,
-   "win_rate": 0.348,
-   "expectancy_R": 0.145,
-   "profit_factor": 1.22,
-   "total_R": 57.75,
+   "trades": 404,
+   "win_rate": 0.342,
+   "expectancy_R": 0.125,
+   "profit_factor": 1.19,
+   "total_R": 50.64,
    "max_drawdown_R": -20.64,
-   "retorno_portafolio_%": 14.28,
+   "retorno_portafolio_%": 11.61,
    "expectancy_IC95_R": [
-    -0.008,
-    0.302
+    -0.024,
+    0.28
    ],
    "worst_streak": 15
   },
   "neta≥4.0% y R:R neto≥2.0": {
-   "trades": 397,
-   "win_rate": 0.348,
-   "expectancy_R": 0.145,
-   "profit_factor": 1.22,
-   "total_R": 57.75,
+   "trades": 404,
+   "win_rate": 0.342,
+   "expectancy_R": 0.125,
+   "profit_factor": 1.19,
+   "total_R": 50.64,
    "max_drawdown_R": -20.64,
-   "retorno_portafolio_%": 14.28,
+   "retorno_portafolio_%": 11.61,
    "expectancy_IC95_R": [
-    -0.008,
-    0.302
+    -0.024,
+    0.28
    ],
    "worst_streak": 15
   }
  },
  "estados_contexto_en_señales": {
-  "NEUTRAL": 8738,
-  "CAUTION": 41,
+  "NEUTRAL": 8953,
   "BLACKOUT": 51,
-  "RISK_ON": 229
+  "RISK_ON": 160,
+  "CAUTION": 30
  },
  "cobertura": {
-  "fear_greed_dias": 3172,
+  "fear_greed_dias": 3193,
   "funding": {
-   "BTCUSDT": 7215,
-   "ETHUSDT": 7215,
-   "SOLUSDT": 6700
+   "BTCUSDT": 7308,
+   "ETHUSDT": 7308,
+   "SOLUSDT": 6793
   }
  },
  "criterio": "Una capa SUMA si mejora la expectativa FUERA de muestra sin dejar < 30 trades, y el límite inferior del IC95 sube. Si solo mejora en muestra, es sobreajuste."
