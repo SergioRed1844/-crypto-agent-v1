@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-03T04:11:03Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-03T04:14:19Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.19 · riesgo de evento 0.73 · tamaño ×0.0 · VETO a compras
 
@@ -11,7 +11,7 @@ Actualizado 2026-11-03T04:11:03Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|---|
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.435 |
 | Elecciones intermedias de EE.UU.: definen la composición del Congreso que retoma | 2026-11-03T12:00:00Z | Regulación cripto | 0.356 | 0.356 |
-| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.224 |
+| Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.225 |
 | Decisión del MPC del Banco de Inglaterra + Monetary Policy Report | 2026-11-05T12:00:00Z | Política monetaria | 0.166 | 0.021 |
 | Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asi | 2026-11-06T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.255 | 0.017 |
 | Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026) | 2026-11-05T19:00:00Z | Política monetaria | 0.116 | 0.011 |
@@ -34,27 +34,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-03T04:11:03Z",
+ "inicio": "2026-11-03T04:14:19Z",
  "onchain": {
-  "scanned": [
-   974338,
-   974342
-  ],
-  "calls": 64,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 3,
-  "eventos": 2,
+  "titulares": 0,
+  "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
