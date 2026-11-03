@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-02T23:15:27Z",
+ "generated_utc": "2026-11-03T00:14:34Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.189,
- "event_risk": 0.71,
+ "event_risk": 0.717,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.04% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.05% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.183,
+   "riesgo": 0.19,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,10 +64,24 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.017,
+   "riesgo": 0.018,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "hype-core-contributor-unlock-2026-11-06",
+   "utc": "2026-11-06T12:00:00Z",
+   "title_es": "Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asignación total); monto exacto no publicado en la fuente, por lo que el umbral de 2% no está verificado",
+   "category": "CRYPTO_SUPPLY",
+   "status": "expected",
+   "magnitud": 0.255,
+   "riesgo": 0.015,
+   "ventana": [
+    "2026-11-05T12:00:00Z",
+    "2026-11-07T12:00:00Z"
    ],
    "en_ventana": false
   },
@@ -102,7 +116,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.179,
+   "aporte": 0.178,
    "fuente": "noticia"
   },
   {
@@ -129,7 +143,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.108,
+   "aporte": -0.107,
    "fuente": "noticia"
   },
   {
@@ -138,7 +152,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.104,
+   "aporte": 0.103,
    "fuente": "noticia"
   },
   {
@@ -187,9 +201,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 37
+   "fear_greed": 26
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.04
+  "stablecoins_30d_pct": -3.05
  }
 }
