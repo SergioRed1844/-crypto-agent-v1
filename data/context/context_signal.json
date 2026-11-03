@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-03T16:00:41Z",
+ "generated_utc": "2026-11-03T16:06:01Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.321,
+ "bias": -0.32,
  "event_risk": 0.793,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -36,7 +36,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.367,
+   "riesgo": 0.368,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
