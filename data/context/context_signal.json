@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-03T22:54:40Z",
+ "generated_utc": "2026-11-03T23:53:44Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.314,
- "event_risk": 0.839,
+ "bias": -0.313,
+ "event_risk": 0.846,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 62,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.61% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.6% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.489,
+   "riesgo": 0.51,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.038,
+   "riesgo": 0.04,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.032,
+   "riesgo": 0.034,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -106,7 +106,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -121,7 +121,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -130,7 +130,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -139,7 +139,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.167,
+   "aporte": 0.166,
    "fuente": "noticia"
   },
   {
@@ -157,7 +157,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.109,
+   "aporte": -0.108,
    "fuente": "noticia"
   },
   {
@@ -200,6 +200,6 @@
    "fear_greed": 26
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.61
+  "stablecoins_30d_pct": -3.6
  }
 }
