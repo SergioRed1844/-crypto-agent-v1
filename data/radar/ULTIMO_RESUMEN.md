@@ -1,6 +1,6 @@
-# 📡 Radar EB — resumen 2026-11-02
+# 📡 Radar EB — resumen 2026-11-03
 
-**Sigo vivo:** 35 corridas en 24 h · última 2026-11-02T14:23:31+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 33 corridas en 24 h · última 2026-11-03T14:02:43+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
@@ -8,7 +8,7 @@ Ningún setup disparó en las últimas 24 h. Eso también es información: no ha
 
 ## Clima de mercado
 
-BTC 78,354 (caída desde máximo de 1 año -29%; Fear&Greed 34) · S&P (SPY) -3.0% vs máximo de 1 año; VIX 19.4 · miedo de hogares (Wikipedia, EUA) z=-0.3 · peso 5 días -0.3% (USD/MXN); IPC vs máximo 1 año -2.5% · contexto v4.2: **BLACKOUT** (Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z); Stablecoins -3.01% en 30 días (liquidez saliendo))
+BTC 76,816 (caída desde máximo de 1 año -28%; Fear&Greed 37) · S&P (SPY) -3.5% vs máximo de 1 año; VIX 21.1 · miedo de hogares (Wikipedia, EUA) z=-2.3 · peso 5 días -0.3% (USD/MXN); IPC vs máximo 1 año -2.5% · contexto v4.2: **BLACKOUT** (Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z); Stablecoins -3.65% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
