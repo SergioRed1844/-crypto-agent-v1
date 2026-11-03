@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-03T11:08:28Z",
+ "generated_utc": "2026-11-03T12:07:59Z",
  "fear_greed": {
   "value": 26,
   "label": "Fear",
@@ -7,30 +7,21 @@
   "avg_30d": 54.4
  },
  "stablecoins": {
-  "total_usd": 295873757441,
-  "chg_7d_pct": -1.89,
+  "total_usd": 295881618906,
+  "chg_7d_pct": -1.88,
   "chg_30d_pct": -3.65
  },
  "fred": {
   "status": "sin FRED_API_KEY"
  },
  "polymarket": {
-  "us-midterms-2026": {
-   "question": "2026 Balance of Power: R Senate, R House",
-   "outcomes": {
-    "Yes": 0.055,
-    "No": 0.945
-   },
-   "volume": 21688561.492949,
-   "slug": "balance-of-power-2026-midterms"
-  },
   "fr-presidential-r1-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6972773.702871,
+   "volume": 6972773.702871001,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -39,7 +30,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 6972773.702871,
+   "volume": 6972773.702871001,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -48,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54618534.12575801,
+   "volume": 54618534.125758,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {

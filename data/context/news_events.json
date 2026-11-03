@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T11:05:00Z",
+ "updated_utc": "2026-11-03T12:04:15Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6708,6 +6708,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-10-27T05:15:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "EXCHANGE_HACK",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
+   "source_url": "https://www.insurancebusinessmag.com/au/news/cyber/the-binance-heist-took-30-minutes--the-groundwork-took-days-595917.aspx",
+   "source_title": "insurancebusinessmag.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-the-binance-heist-took-30-minutes-the-groundwork-t-2026-11-03",
+   "date": "2026-11-03",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-03T11:15:00Z"
   }
  ]
 }

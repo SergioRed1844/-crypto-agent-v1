@@ -1,15 +1,15 @@
 {
- "generated_utc": "2026-11-03T11:05:00Z",
+ "generated_utc": "2026-11-03T12:04:15Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.185,
- "event_risk": 0.761,
+ "bias": -0.324,
+ "event_risk": 0.766,
  "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 57,
+ "confidence": 62,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
   "Stablecoins -3.65% en 30 días (liquidez saliendo)"
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.299,
+   "riesgo": 0.311,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.023,
+   "riesgo": 0.024,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.014,
+   "riesgo": 0.015,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -102,12 +102,21 @@
  ],
  "recent": [
   {
+   "id": "news-the-binance-heist-took-30-minutes-the-groundwork-t-2026-11-03",
+   "date": "2026-11-03",
+   "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.299,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-futures-slip-as-korean-data-center-ipo-faceplant-r-2026-10-20",
    "date": "2026-10-20",
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -116,7 +125,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.173,
+   "aporte": 0.172,
    "fuente": "noticia"
   },
   {
@@ -152,7 +161,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.099,
+   "aporte": 0.098,
    "fuente": "noticia"
   },
   {
@@ -161,16 +170,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.099,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-banks-could-slow-stablecoin-growth-by-paying-saver-2026-10-17",
-   "date": "2026-10-17",
-   "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.088,
+   "aporte": 0.098,
    "fuente": "noticia"
   }
  ],
