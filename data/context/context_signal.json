@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T12:04:15Z",
+ "generated_utc": "2026-11-03T12:08:11Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.324,
- "event_risk": 0.766,
+ "event_risk": 0.767,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 62,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.311,
+   "riesgo": 0.312,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
