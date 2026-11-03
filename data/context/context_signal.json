@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-03T03:12:00Z",
+ "generated_utc": "2026-11-03T03:41:20Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.188,
- "event_risk": 0.728,
+ "event_risk": 0.73,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.42% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.65% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.215,
+   "riesgo": 0.22,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -92,7 +92,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.01,
+   "riesgo": 0.011,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -116,7 +116,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.177,
+   "aporte": 0.176,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.107,
+   "aporte": -0.106,
    "fuente": "noticia"
   },
   {
@@ -204,6 +204,6 @@
    "fear_greed": 26
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.42
+  "stablecoins_30d_pct": -3.65
  }
 }
