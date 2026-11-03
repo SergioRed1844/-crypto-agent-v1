@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-03T08:07:30Z",
+ "generated_utc": "2026-11-03T08:11:35Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.186,
- "event_risk": 0.747,
+ "event_risk": 0.748,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.64% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.65% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.264,
+   "riesgo": 0.265,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -186,6 +186,6 @@
    "fear_greed": 26
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.64
+  "stablecoins_30d_pct": -3.65
  }
 }
