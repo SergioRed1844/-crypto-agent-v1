@@ -25,7 +25,7 @@
      "unit": 1831.2623478263665,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-11-03T13:00:00Z"
+     "last_checked": "2026-11-03T14:00:00Z"
     }
    },
    "trades": [
@@ -1455,7 +1455,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 605,
- "updated_utc": "2026-11-03T14:03:14Z",
+ "runs": 606,
+ "updated_utc": "2026-11-03T15:02:17Z",
  "n_signals": 96
 }
