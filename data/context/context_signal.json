@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T06:09:28Z",
+ "generated_utc": "2026-11-03T07:08:35Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.187,
- "event_risk": 0.739,
+ "event_risk": 0.743,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.243,
+   "riesgo": 0.254,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -134,7 +134,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.117,
+   "aporte": -0.116,
    "fuente": "noticia"
   },
   {
@@ -143,16 +143,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.106,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.101,
+   "aporte": -0.105,
    "fuente": "noticia"
   },
   {
@@ -160,6 +151,15 @@
    "date": "2026-10-21",
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.1,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.1,
    "fuente": "noticia"
