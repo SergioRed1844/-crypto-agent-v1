@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T20:56:42Z",
+ "generated_utc": "2026-11-03T21:55:35Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.316,
- "event_risk": 0.825,
+ "bias": -0.315,
+ "event_risk": 0.832,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 62,
@@ -22,7 +22,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.451,
+   "riesgo": 0.47,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.042,
+   "riesgo": 0.043,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.035,
+   "riesgo": 0.036,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -106,7 +106,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.022,
+   "riesgo": 0.023,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -121,7 +121,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.284,
+   "aporte": -0.282,
    "fuente": "noticia"
   },
   {
@@ -130,7 +130,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -139,7 +139,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.168,
+   "aporte": 0.167,
    "fuente": "noticia"
   },
   {
@@ -157,7 +157,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.11,
+   "aporte": -0.109,
    "fuente": "noticia"
   },
   {
@@ -175,7 +175,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.096,
+   "aporte": 0.095,
    "fuente": "noticia"
   },
   {
@@ -184,7 +184,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.095,
+   "aporte": 0.094,
    "fuente": "noticia"
   }
  ],
