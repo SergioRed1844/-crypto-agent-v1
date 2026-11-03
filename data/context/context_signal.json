@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T09:06:47Z",
+ "generated_utc": "2026-11-03T10:05:56Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.186,
- "event_risk": 0.752,
+ "event_risk": 0.756,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.275,
+   "riesgo": 0.287,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.026,
+   "riesgo": 0.027,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.021,
+   "riesgo": 0.022,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.013,
+   "riesgo": 0.014,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.192,
+   "aporte": -0.191,
    "fuente": "noticia"
   },
   {
@@ -116,7 +116,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.174,
+   "aporte": 0.173,
    "fuente": "noticia"
   },
   {
@@ -143,16 +143,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.105,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.1,
+   "aporte": -0.104,
    "fuente": "noticia"
   },
   {
@@ -160,6 +151,15 @@
    "date": "2026-10-21",
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
+   "stance": "pro",
+   "aporte": 0.099,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
+   "date": "2026-10-22",
+   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
+   "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.099,
    "fuente": "noticia"
