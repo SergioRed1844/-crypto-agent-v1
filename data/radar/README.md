@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-03T02:13:06+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-11-02
+Última corrida: **2026-11-03T03:12:12+00:00 UTC** · 56 activos · contexto v4.2: **BLACKOUT** · último resumen: 2026-11-02
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -71,12 +71,12 @@ Todavía ninguna.
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-10-30 | yahoo |
+| AAPL | sí | 2026-11-02 | yahoo |
 | AC.MX | sí | 2026-10-30 | yahoo |
 | ADA | sí | 2026-11-03 | binance |
 | ALSEA.MX | sí | 2026-10-30 | yahoo |
 | AMXB.MX | sí | 2026-10-30 | yahoo |
-| AMZN | sí | 2026-10-30 | yahoo |
+| AMZN | sí | 2026-11-02 | yahoo |
 | ASURB.MX | sí | 2026-10-30 | yahoo |
 | AVAX | sí | 2026-11-03 | binance |
 | BBAJIOO.MX | sí | 2026-10-30 | yahoo |
@@ -84,65 +84,65 @@ Todavía ninguna.
 | BIMBOA.MX | sí | 2026-10-30 | yahoo |
 | BTC | sí | 2026-11-03 | binance |
 | CEMEXCPO.MX | sí | 2026-10-30 | yahoo |
-| DIA | sí | 2026-10-30 | yahoo |
+| DIA | sí | 2026-11-02 | yahoo |
 | DOGE | sí | 2026-11-03 | binance |
 | DOT | sí | 2026-11-03 | binance |
 | ETH | sí | 2026-11-03 | binance |
 | FEMSAUBD.MX | sí | 2026-10-30 | yahoo |
 | GAPB.MX | sí | 2026-10-30 | yahoo |
 | GFNORTEO.MX | sí | 2026-10-30 | yahoo |
-| GLD | sí | 2026-10-30 | yahoo |
+| GLD | sí | 2026-11-02 | yahoo |
 | GMEXICOB.MX | sí | 2026-10-30 | yahoo |
-| GOOGL | sí | 2026-10-30 | yahoo |
+| GOOGL | sí | 2026-11-02 | yahoo |
 | GRUMAB.MX | sí | 2026-10-30 | yahoo |
-| IWM | sí | 2026-10-30 | yahoo |
-| JPM | sí | 2026-10-30 | yahoo |
+| IWM | sí | 2026-11-02 | yahoo |
+| JPM | sí | 2026-11-02 | yahoo |
 | KIMBERA.MX | sí | 2026-10-30 | yahoo |
 | KOFUBL.MX | sí | 2026-10-30 | yahoo |
 | LINK | sí | 2026-11-03 | binance |
 | LIVEPOLC-1.MX | sí | 2026-10-30 | yahoo |
 | LTC | sí | 2026-11-03 | binance |
-| META | sí | 2026-10-30 | yahoo |
-| MSFT | sí | 2026-10-30 | yahoo |
+| META | sí | 2026-11-02 | yahoo |
+| MSFT | sí | 2026-11-02 | yahoo |
 | MXN=X | sí | 2026-11-03 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-10-30 | yahoo |
-| NVDA | sí | 2026-10-30 | yahoo |
+| NVDA | sí | 2026-11-02 | yahoo |
 | OMAB.MX | sí | 2026-10-30 | yahoo |
 | ORBIA.MX | sí | 2026-10-30 | yahoo |
 | PINFRA.MX | sí | 2026-10-30 | yahoo |
-| QQQ | sí | 2026-10-30 | yahoo |
-| SMH | sí | 2026-10-30 | yahoo |
+| QQQ | sí | 2026-11-02 | yahoo |
+| SMH | sí | 2026-11-02 | yahoo |
 | SOL | sí | 2026-11-03 | binance |
-| SPY | sí | 2026-10-30 | yahoo |
+| SPY | sí | 2026-11-02 | yahoo |
 | TRX | sí | 2026-11-03 | binance |
-| TSLA | sí | 2026-10-30 | yahoo |
+| TSLA | sí | 2026-11-02 | yahoo |
 | WALMEX.MX | sí | 2026-10-30 | yahoo |
-| WMT | sí | 2026-10-30 | yahoo |
-| XLE | sí | 2026-10-30 | yahoo |
-| XLF | sí | 2026-10-30 | yahoo |
-| XLI | sí | 2026-10-30 | yahoo |
-| XLK | sí | 2026-10-30 | yahoo |
-| XLP | sí | 2026-10-30 | yahoo |
-| XLU | sí | 2026-10-30 | yahoo |
-| XLV | sí | 2026-10-30 | yahoo |
-| XLY | sí | 2026-10-30 | yahoo |
-| XOM | sí | 2026-10-30 | yahoo |
+| WMT | sí | 2026-11-02 | yahoo |
+| XLE | sí | 2026-11-02 | yahoo |
+| XLF | sí | 2026-11-02 | yahoo |
+| XLI | sí | 2026-11-02 | yahoo |
+| XLK | sí | 2026-11-02 | yahoo |
+| XLP | sí | 2026-11-02 | yahoo |
+| XLU | sí | 2026-11-02 | yahoo |
+| XLV | sí | 2026-11-02 | yahoo |
+| XLY | sí | 2026-11-02 | yahoo |
+| XOM | sí | 2026-11-02 | yahoo |
 | XRP | sí | 2026-11-03 | binance |
 | ^MXX | sí | 2026-10-30 | yahoo |
 | ^VIX | sí | 2026-11-02 | yahoo |
-| contexto_v42 | sí | 2026-11-03T01:13:52Z | BLACKOUT |
+| contexto_v42 | sí | 2026-11-03T02:12:54Z | BLACKOUT |
 | fear_greed | sí | 2026-11-03 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-01 | wikimedia |
-| wiki_en_Bitcoin | sí | 2026-11-01 | wikimedia |
+| wiki_en_Bitcoin | sí | 2026-11-02 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-01 | wikimedia |
 | wiki_en_Dogecoin | sí | 2026-11-01 | wikimedia |
 | wiki_en_Ethereum | sí | 2026-11-01 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-11-01 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-02 | wikimedia |
 | wiki_en_Inflation | sí | 2026-11-01 | wikimedia |
 | wiki_en_Recession | sí | 2026-11-01 | wikimedia |
 | wiki_en_Ripple_Labs | sí | 2026-11-01 | wikimedia |
 | wiki_en_Solana__blockchain_platform_ | sí | 2026-11-01 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-11-01 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-02 | wikimedia |
 | wiki_en_Unemployment | sí | 2026-11-01 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-01 | wikimedia |
 | wiki_es_Desempleo | sí | 2026-11-01 | wikimedia |
