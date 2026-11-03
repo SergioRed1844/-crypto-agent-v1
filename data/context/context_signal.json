@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-03T16:06:01Z",
+ "generated_utc": "2026-11-03T17:00:00Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.32,
- "event_risk": 0.793,
+ "event_risk": 0.799,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 62,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z)",
-  "Stablecoins -3.65% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.63% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.368,
+   "riesgo": 0.382,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.034,
+   "riesgo": 0.035,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -121,7 +121,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.292,
+   "aporte": -0.29,
    "fuente": "noticia"
   },
   {
@@ -130,7 +130,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -139,7 +139,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.17,
+   "aporte": 0.169,
    "fuente": "noticia"
   },
   {
@@ -166,7 +166,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.103,
+   "aporte": -0.102,
    "fuente": "noticia"
   },
   {
@@ -184,7 +184,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.097,
+   "aporte": 0.096,
    "fuente": "noticia"
   }
  ],
@@ -200,6 +200,6 @@
    "fear_greed": 26
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.65
+  "stablecoins_30d_pct": -3.63
  }
 }
