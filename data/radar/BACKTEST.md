@@ -8,15 +8,15 @@ Entrenamiento: disparos **antes de 2022-01-01** · Prueba: **desde 2022-01-01**.
 
 | Clase | Horizonte | Filas | Episodios | Acierto real | Brier EB | Brier tasa base | Brier crudo activo | Brier crudo setup | Skill vs base | Día cualquiera (prueba) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| bmv | 7 d | 489 | 113 | 30.3% | 0.2112 | 0.2099 | 0.2151 | 0.2163 | -0.6% | 26.7% |
-| bmv | 30 d | 484 | 45 | 41.3% | 0.2487 | 0.2501 | 0.2501 | 0.2399 | +0.6% | 32.3% |
-| bmv | 90 d | 477 | 43 | 41.3% | 0.2450 | 0.2451 | 0.2568 | 0.2471 | +0.0% | 37.9% |
-| crypto | 7 d | 291 | 70 | 28.9% | 0.2385 | 0.2374 | 0.2828 | 0.2706 | -0.5% | 38.3% |
-| crypto | 30 d | 290 | 32 | 25.2% | 0.2519 | 0.2550 | 0.2765 | 0.2377 | +1.2% | 39.4% |
-| crypto | 90 d | 289 | 31 | 33.2% | 0.3048 | 0.3084 | 0.3096 | 0.2676 | +1.2% | 39.5% |
-| us | 7 d | 541 | 103 | 38.3% | 0.2366 | 0.2405 | 0.2421 | 0.2382 | +1.6% | 30.8% |
-| us | 30 d | 540 | 44 | 45.0% | 0.2612 | 0.2639 | 0.2563 | 0.2474 | +1.0% | 37.8% |
-| us | 90 d | 529 | 42 | 52.7% | 0.2595 | 0.2612 | 0.2593 | 0.2453 | +0.7% | 44.7% |
+| bmv | 7 d | 492 | 114 | 30.1% | 0.2108 | 0.2094 | 0.2149 | 0.2158 | -0.7% | 26.9% |
+| bmv | 30 d | 488 | 45 | 41.8% | 0.2496 | 0.2513 | 0.2502 | 0.2403 | +0.6% | 32.7% |
+| bmv | 90 d | 479 | 43 | 41.3% | 0.2450 | 0.2451 | 0.2571 | 0.2471 | +0.0% | 37.9% |
+| crypto | 7 d | 294 | 71 | 28.6% | 0.2385 | 0.2374 | 0.2841 | 0.2702 | -0.5% | 38.0% |
+| crypto | 30 d | 290 | 32 | 25.2% | 0.2519 | 0.2550 | 0.2765 | 0.2377 | +1.2% | 39.1% |
+| crypto | 90 d | 289 | 31 | 33.2% | 0.3048 | 0.3084 | 0.3096 | 0.2676 | +1.2% | 39.9% |
+| us | 7 d | 546 | 104 | 37.9% | 0.2358 | 0.2394 | 0.2415 | 0.2375 | +1.5% | 30.8% |
+| us | 30 d | 541 | 44 | 45.1% | 0.2614 | 0.2641 | 0.2565 | 0.2476 | +1.0% | 37.8% |
+| us | 90 d | 530 | 42 | 52.8% | 0.2593 | 0.2610 | 0.2591 | 0.2453 | +0.7% | 44.6% |
 
 Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB < crudo, el encogimiento sirvió (la promesa de James-Stein).
 
@@ -24,64 +24,64 @@ Skill > 0: el modelo le gana a 'la tasa base del activo' fuera de muestra. Si EB
 
 | Tramo predicho | n | Predicho | Real |
 |---|---|---|---|
-| 0%–40% | 1800 | 32.6% | 38.7% |
-| 40%–50% | 1356 | 44.5% | 41.4% |
-| 50%–60% | 660 | 54.2% | 34.2% |
-| 60%–70% | 59 | 65.2% | 32.2% |
+| 0%–40% | 1806 | 32.6% | 38.7% |
+| 40%–50% | 1366 | 44.5% | 41.4% |
+| 50%–60% | 662 | 54.2% | 34.1% |
+| 60%–70% | 60 | 65.1% | 33.3% |
 | 70%–100% | 55 | 81.0% | 43.6% |
 
 ## 3. Setups fuera de muestra vs comprar un día cualquiera
 
 | Setup | Clase | Horizonte | Disparos | Episodios | Acierto | Base local (predicción) | Día cualquiera real (prueba) | Predicho EB | Neto medio | Neto día cualquiera (prueba) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| PANICO_SIN_DANO | bmv | 7 d | 15 | 4 | 40.0% | 26.6% | 26.6% | 28.6% | 1.4% | -0.4% |
-| PANICO_SIN_DANO | bmv | 30 d | 15 | 3 | 73.3% | 34.1% | 31.7% | 35.8% | 7.5% | 0.4% |
-| PANICO_SIN_DANO | bmv | 90 d | 15 | 3 | 40.0% | 43.1% | 37.6% | 43.3% | 4.6% | 2.4% |
-| PANICO_SIN_DANO | crypto | 7 d | 75 | 11 | 21.3% | 46.9% | 38.3% | 47.5% | -7.8% | 0.0% |
-| PANICO_SIN_DANO | crypto | 30 d | 75 | 9 | 24.0% | 50.8% | 39.9% | 49.5% | -7.3% | 1.7% |
-| PANICO_SIN_DANO | crypto | 90 d | 75 | 9 | 40.0% | 60.7% | 40.7% | 60.0% | -1.7% | 5.8% |
-| PANICO_SIN_DANO | us | 7 d | 102 | 16 | 44.1% | 28.0% | 29.8% | 32.9% | 1.2% | 0.1% |
-| PANICO_SIN_DANO | us | 30 d | 102 | 14 | 50.0% | 35.6% | 37.1% | 40.1% | 2.6% | 1.2% |
-| PANICO_SIN_DANO | us | 90 d | 102 | 14 | 53.9% | 43.1% | 44.4% | 45.7% | 7.6% | 4.3% |
-| CAPITULACION | bmv | 7 d | 14 | 10 | 28.6% | 25.3% | 27.8% | 27.4% | -0.1% | -0.5% |
-| CAPITULACION | bmv | 30 d | 14 | 7 | 28.6% | 33.5% | 33.5% | 35.2% | -1.7% | -0.3% |
-| CAPITULACION | bmv | 90 d | 14 | 7 | 35.7% | 43.2% | 36.3% | 45.5% | 2.2% | 0.5% |
-| CAPITULACION | crypto | 7 d | 58 | 12 | 20.7% | 47.4% | 38.2% | 47.7% | -6.2% | -0.0% |
-| CAPITULACION | crypto | 30 d | 58 | 10 | 13.8% | 50.8% | 38.7% | 50.6% | -10.8% | 1.5% |
-| CAPITULACION | crypto | 90 d | 58 | 10 | 27.6% | 62.4% | 37.9% | 62.2% | -6.2% | 5.1% |
-| CAPITULACION | us | 7 d | 38 | 14 | 44.7% | 31.2% | 33.0% | 35.7% | 2.0% | 0.1% |
-| CAPITULACION | us | 30 d | 38 | 8 | 55.3% | 37.7% | 39.6% | 40.4% | 4.3% | 1.5% |
-| CAPITULACION | us | 90 d | 38 | 8 | 73.7% | 45.8% | 46.1% | 47.1% | 13.7% | 5.4% |
-| CHOQUE_POLITICO | bmv | 7 d | 33 | 4 | 33.3% | 25.9% | 25.8% | 26.1% | 0.3% | -0.4% |
-| CHOQUE_POLITICO | bmv | 30 d | 33 | 4 | 57.6% | 34.4% | 31.3% | 35.2% | 5.2% | 0.3% |
+| PANICO_SIN_DANO | bmv | 7 d | 15 | 4 | 40.0% | 26.6% | 26.8% | 28.6% | 1.4% | -0.4% |
+| PANICO_SIN_DANO | bmv | 30 d | 15 | 3 | 73.3% | 34.1% | 32.1% | 35.8% | 7.5% | 0.4% |
+| PANICO_SIN_DANO | bmv | 90 d | 15 | 3 | 40.0% | 43.1% | 37.7% | 43.3% | 4.6% | 2.4% |
+| PANICO_SIN_DANO | crypto | 7 d | 75 | 11 | 21.3% | 46.9% | 38.1% | 47.5% | -7.8% | 0.0% |
+| PANICO_SIN_DANO | crypto | 30 d | 75 | 9 | 24.0% | 50.8% | 39.6% | 49.5% | -7.3% | 1.6% |
+| PANICO_SIN_DANO | crypto | 90 d | 75 | 9 | 40.0% | 60.7% | 41.1% | 60.0% | -1.7% | 5.9% |
+| PANICO_SIN_DANO | us | 7 d | 102 | 16 | 44.1% | 28.0% | 29.7% | 32.9% | 1.2% | 0.1% |
+| PANICO_SIN_DANO | us | 30 d | 102 | 14 | 50.0% | 35.6% | 37.0% | 40.1% | 2.6% | 1.2% |
+| PANICO_SIN_DANO | us | 90 d | 102 | 14 | 53.9% | 43.1% | 44.3% | 45.7% | 7.6% | 4.3% |
+| CAPITULACION | bmv | 7 d | 14 | 10 | 28.6% | 25.3% | 27.9% | 27.4% | -0.1% | -0.5% |
+| CAPITULACION | bmv | 30 d | 14 | 7 | 28.6% | 33.5% | 33.9% | 35.2% | -1.7% | -0.2% |
+| CAPITULACION | bmv | 90 d | 14 | 7 | 35.7% | 43.2% | 36.2% | 45.5% | 2.2% | 0.5% |
+| CAPITULACION | crypto | 7 d | 58 | 12 | 20.7% | 47.4% | 37.9% | 47.7% | -6.2% | -0.1% |
+| CAPITULACION | crypto | 30 d | 58 | 10 | 13.8% | 50.8% | 38.4% | 50.6% | -10.8% | 1.3% |
+| CAPITULACION | crypto | 90 d | 58 | 10 | 27.6% | 62.4% | 38.4% | 62.2% | -6.2% | 5.3% |
+| CAPITULACION | us | 7 d | 38 | 14 | 44.7% | 31.2% | 32.9% | 35.7% | 2.0% | 0.1% |
+| CAPITULACION | us | 30 d | 38 | 8 | 55.3% | 37.7% | 39.5% | 40.4% | 4.3% | 1.5% |
+| CAPITULACION | us | 90 d | 38 | 8 | 73.7% | 45.8% | 46.0% | 47.1% | 13.7% | 5.4% |
+| CHOQUE_POLITICO | bmv | 7 d | 33 | 4 | 33.3% | 25.9% | 26.0% | 26.1% | 0.3% | -0.4% |
+| CHOQUE_POLITICO | bmv | 30 d | 33 | 4 | 57.6% | 34.4% | 31.7% | 35.2% | 5.2% | 0.4% |
 | CHOQUE_POLITICO | bmv | 90 d | 33 | 4 | 51.5% | 43.3% | 37.0% | 43.6% | 7.8% | 2.1% |
-| CHOQUE_POLITICO | crypto | 7 d | 26 | 3 | 7.7% | 46.9% | 38.3% | 47.1% | -6.2% | 0.0% |
-| CHOQUE_POLITICO | crypto | 30 d | 26 | 3 | 11.5% | 51.0% | 39.6% | 51.2% | -6.7% | 1.7% |
-| CHOQUE_POLITICO | crypto | 90 d | 26 | 3 | 7.7% | 61.2% | 39.9% | 61.3% | -13.8% | 5.8% |
+| CHOQUE_POLITICO | crypto | 7 d | 26 | 3 | 7.7% | 46.9% | 38.0% | 47.1% | -6.2% | 0.0% |
+| CHOQUE_POLITICO | crypto | 30 d | 26 | 3 | 11.5% | 51.0% | 39.3% | 51.2% | -6.7% | 1.6% |
+| CHOQUE_POLITICO | crypto | 90 d | 26 | 3 | 7.7% | 61.2% | 40.4% | 61.3% | -13.8% | 5.9% |
 | CHOQUE_POLITICO | us | 7 d | 66 | 5 | 27.3% | 30.0% | 31.6% | 30.3% | 0.0% | 0.1% |
-| CHOQUE_POLITICO | us | 30 d | 66 | 4 | 63.6% | 37.3% | 38.4% | 37.5% | 5.2% | 1.4% |
-| CHOQUE_POLITICO | us | 90 d | 66 | 4 | 66.7% | 44.8% | 45.5% | 45.3% | 12.4% | 4.9% |
-| MIEDO_HOGARES | bmv | 7 d | 1 | 1 | 100.0% | 15.7% | 15.5% | 15.7% | 4.0% | -0.5% |
-| MIEDO_HOGARES | bmv | 30 d | 1 | 1 | 100.0% | 26.3% | 22.2% | 26.2% | 13.2% | 0.1% |
-| MIEDO_HOGARES | bmv | 90 d | 1 | 1 | 100.0% | 34.5% | 30.7% | 34.5% | 14.1% | 1.5% |
+| CHOQUE_POLITICO | us | 30 d | 66 | 4 | 63.6% | 37.3% | 38.3% | 37.5% | 5.2% | 1.4% |
+| CHOQUE_POLITICO | us | 90 d | 66 | 4 | 66.7% | 44.8% | 45.4% | 45.3% | 12.4% | 4.9% |
+| MIEDO_HOGARES | bmv | 7 d | 1 | 1 | 100.0% | 15.7% | 15.7% | 15.7% | 4.0% | -0.5% |
+| MIEDO_HOGARES | bmv | 30 d | 1 | 1 | 100.0% | 26.3% | 22.9% | 26.2% | 13.2% | 0.1% |
+| MIEDO_HOGARES | bmv | 90 d | 1 | 1 | 100.0% | 34.5% | 30.5% | 34.5% | 14.1% | 1.5% |
 | MIEDO_HOGARES | us | 7 d | 98 | 7 | 43.9% | 24.1% | 26.4% | 24.3% | 1.8% | 0.0% |
 | MIEDO_HOGARES | us | 30 d | 98 | 6 | 43.9% | 31.2% | 33.9% | 31.4% | 2.5% | 1.0% |
-| MIEDO_HOGARES | us | 90 d | 98 | 6 | 52.0% | 39.0% | 41.3% | 39.2% | 6.3% | 3.6% |
-| CHOQUE_PESO | bmv | 7 d | 149 | 25 | 30.9% | 27.2% | 27.6% | 29.1% | -0.4% | -0.4% |
-| CHOQUE_PESO | bmv | 30 d | 144 | 19 | 45.1% | 35.7% | 32.9% | 37.8% | 2.6% | 0.3% |
+| MIEDO_HOGARES | us | 90 d | 98 | 6 | 52.0% | 39.0% | 41.2% | 39.2% | 6.3% | 3.6% |
+| CHOQUE_PESO | bmv | 7 d | 151 | 26 | 30.5% | 27.3% | 27.8% | 29.1% | -0.4% | -0.4% |
+| CHOQUE_PESO | bmv | 30 d | 148 | 20 | 46.6% | 35.8% | 33.3% | 37.8% | 3.0% | 0.3% |
 | CHOQUE_PESO | bmv | 90 d | 144 | 19 | 41.7% | 44.3% | 37.8% | 45.1% | 3.7% | 2.0% |
-| ATENCION_MOMENTUM | crypto | 7 d | 51 | 25 | 27.5% | 46.7% | 38.4% | 46.4% | -0.6% | 0.1% |
-| ATENCION_MOMENTUM | crypto | 30 d | 51 | 15 | 39.2% | 50.5% | 39.6% | 49.9% | 4.1% | 2.1% |
-| ATENCION_MOMENTUM | crypto | 90 d | 51 | 15 | 49.0% | 60.2% | 40.8% | 59.1% | 19.8% | 7.2% |
-| PULLBACK_TENDENCIA | bmv | 7 d | 277 | 104 | 28.9% | 29.1% | 28.6% | 34.4% | -0.1% | -0.4% |
-| PULLBACK_TENDENCIA | bmv | 30 d | 277 | 44 | 36.1% | 37.5% | 34.2% | 38.1% | 1.0% | 0.5% |
-| PULLBACK_TENDENCIA | bmv | 90 d | 270 | 42 | 40.0% | 46.0% | 40.1% | 45.8% | 2.9% | 2.6% |
-| PULLBACK_TENDENCIA | crypto | 7 d | 81 | 34 | 49.4% | 47.8% | 38.3% | 48.2% | 1.8% | 0.0% |
-| PULLBACK_TENDENCIA | crypto | 30 d | 80 | 20 | 30.0% | 51.3% | 38.7% | 50.5% | -1.6% | 1.8% |
-| PULLBACK_TENDENCIA | crypto | 90 d | 79 | 19 | 29.1% | 63.3% | 37.7% | 62.0% | -3.4% | 6.2% |
-| PULLBACK_TENDENCIA | us | 7 d | 237 | 99 | 35.4% | 31.8% | 33.5% | 35.6% | 0.2% | 0.2% |
-| PULLBACK_TENDENCIA | us | 30 d | 236 | 43 | 36.4% | 38.6% | 39.7% | 39.6% | 1.1% | 1.7% |
-| PULLBACK_TENDENCIA | us | 90 d | 225 | 41 | 44.9% | 44.6% | 46.8% | 46.1% | 5.7% | 5.9% |
+| ATENCION_MOMENTUM | crypto | 7 d | 51 | 25 | 27.5% | 46.7% | 38.1% | 46.4% | -0.6% | 0.1% |
+| ATENCION_MOMENTUM | crypto | 30 d | 51 | 15 | 39.2% | 50.5% | 39.3% | 49.9% | 4.1% | 2.0% |
+| ATENCION_MOMENTUM | crypto | 90 d | 51 | 15 | 49.0% | 60.2% | 41.2% | 59.1% | 19.8% | 7.3% |
+| PULLBACK_TENDENCIA | bmv | 7 d | 278 | 105 | 28.8% | 29.2% | 28.8% | 34.5% | -0.1% | -0.3% |
+| PULLBACK_TENDENCIA | bmv | 30 d | 277 | 44 | 36.1% | 37.5% | 34.5% | 38.1% | 1.0% | 0.6% |
+| PULLBACK_TENDENCIA | bmv | 90 d | 272 | 42 | 40.1% | 46.0% | 40.2% | 45.8% | 2.9% | 2.6% |
+| PULLBACK_TENDENCIA | crypto | 7 d | 84 | 35 | 47.6% | 47.8% | 37.9% | 48.2% | 1.5% | -0.0% |
+| PULLBACK_TENDENCIA | crypto | 30 d | 80 | 20 | 30.0% | 51.3% | 38.4% | 50.5% | -1.6% | 1.6% |
+| PULLBACK_TENDENCIA | crypto | 90 d | 79 | 19 | 29.1% | 63.3% | 38.2% | 62.0% | -3.4% | 6.4% |
+| PULLBACK_TENDENCIA | us | 7 d | 242 | 100 | 34.7% | 31.9% | 33.5% | 35.7% | 0.2% | 0.2% |
+| PULLBACK_TENDENCIA | us | 30 d | 237 | 43 | 36.7% | 38.6% | 39.6% | 39.6% | 1.1% | 1.7% |
+| PULLBACK_TENDENCIA | us | 90 d | 226 | 41 | 45.1% | 44.6% | 46.7% | 46.2% | 5.7% | 5.9% |
 
 ## 4. Reglas de alerta en el periodo de prueba
 
@@ -132,8 +132,8 @@ Alertas de la regla activa (relativo):
 | CAPITULACION | us | 7 d | 48% · 46% · 41% · 40% · 45% | 48% · 27% · 3% · 2% · 20% | 45% · 53% · 53% · 37% · 29% |
 | CAPITULACION | us | 30 d | 51% · 51% · 51% · 51% · 51% | 20% · 20% · 19% · 22% · 19% | 55% · 50% · 53% · 58% · 53% |
 | CAPITULACION | us | 90 d | 56% · 56% · 56% · 56% · 56% | 20% · 20% · 19% · 22% · 19% | 74% · 68% · 66% · 68% · 58% |
-| CHOQUE_PESO | bmv | 7 d | 32% · 32% · 32% · 32% · 32% | 20% · 19% · 20% · 22% · 18% | 31% · 20% · 35% · 32% · 36% |
-| CHOQUE_PESO | bmv | 30 d | 44% · 44% · 44% · 44% · 44% | 19% · 20% · 20% · 23% · 19% | 45% · 46% · 47% · 42% · 44% |
+| CHOQUE_PESO | bmv | 7 d | 32% · 32% · 32% · 32% · 32% | 20% · 19% · 20% · 22% · 18% | 30% · 20% · 35% · 32% · 36% |
+| CHOQUE_PESO | bmv | 30 d | 44% · 44% · 44% · 44% · 44% | 19% · 20% · 20% · 23% · 19% | 47% · 46% · 47% · 42% · 44% |
 | CHOQUE_PESO | bmv | 90 d | 49% · 49% · 49% · 49% · 49% | 19% · 20% · 20% · 23% · 19% | 42% · 44% · 49% · 41% · 40% |
 | PANICO_SIN_DANO | bmv | 7 d | 34% · 34% · 34% · 34% · 34% | 19% · 20% · 20% · 22% · 19% | 40% · 53% · 87% · 53% · 73% |
 | PANICO_SIN_DANO | bmv | 30 d | 40% · 40% · 40% · 40% · 40% | 20% · 20% · 19% · 22% · 19% | 73% · 67% · 73% · 53% · 67% |
@@ -147,20 +147,20 @@ Alertas de la regla activa (relativo):
 | PULLBACK_TENDENCIA | bmv | 7 d | 36% · 33% · 32% · 29% · 26% | 79% · 15% · 5% · 0% · 0% | 29% · 27% · 30% · 27% · 30% |
 | PULLBACK_TENDENCIA | bmv | 30 d | 37% · 37% · 37% · 37% · 37% | 20% · 20% · 19% · 22% · 19% | 36% · 36% · 41% · 35% · 33% |
 | PULLBACK_TENDENCIA | bmv | 90 d | 46% · 46% · 46% · 46% · 46% | 19% · 20% · 19% · 23% · 19% | 40% · 38% · 40% · 41% · 38% |
-| PULLBACK_TENDENCIA | crypto | 7 d | 43% · 43% · 43% · 43% · 43% | 20% · 19% · 19% · 23% · 19% | 49% · 42% · 40% · 39% · 31% |
+| PULLBACK_TENDENCIA | crypto | 7 d | 43% · 43% · 43% · 43% · 43% | 20% · 19% · 19% · 23% · 19% | 48% · 40% · 39% · 37% · 30% |
 | PULLBACK_TENDENCIA | crypto | 30 d | 41% · 41% · 41% · 41% · 41% | 19% · 20% · 19% · 23% · 19% | 30% · 26% · 26% · 32% · 28% |
 | PULLBACK_TENDENCIA | crypto | 90 d | 50% · 50% · 50% · 50% · 50% | 19% · 20% · 19% · 23% · 19% | 29% · 25% · 24% · 23% · 24% |
 | PULLBACK_TENDENCIA | us | 7 d | 37% · 37% · 37% · 37% · 37% | 21% · 20% · 19% · 21% · 19% | 35% · 33% · 36% · 32% · 32% |
-| PULLBACK_TENDENCIA | us | 30 d | 42% · 42% · 42% · 42% · 42% | 19% · 20% · 19% · 23% · 19% | 36% · 37% · 39% · 39% · 35% |
+| PULLBACK_TENDENCIA | us | 30 d | 42% · 42% · 42% · 42% · 42% | 19% · 20% · 19% · 23% · 19% | 37% · 38% · 39% · 39% · 35% |
 | PULLBACK_TENDENCIA | us | 90 d | 47% · 47% · 47% · 47% · 47% | 20% · 20% · 19% · 22% · 19% | 45% · 46% · 43% · 44% · 45% |
 
 ### Día de la semana (comprar un día cualquiera, 7 días)
 
 | Clase | Días | Encogido entrenamiento | P(mejor) | Crudo prueba |
 |---|---|---|---|---|
-| crypto | lunes · martes · miércoles · jueves · viernes · sábado · domingo | 44.4% · 44.4% · 44.4% · 44.4% · 44.4% · 44.4% · 44.4% | 15% · 14% · 14% · 16% · 14% · 13% · 16% | 37.6% · 38.2% · 39.3% · 38.8% · 39.5% · 37.6% · 37.0% |
-| us | lunes · martes · miércoles · jueves · viernes | 28.0% · 28.0% · 27.9% · 27.9% · 28.0% | 20% · 20% · 19% · 21% · 20% | 30.1% · 30.7% · 30.9% · 31.5% · 30.8% |
-| bmv | lunes · martes · miércoles · jueves · viernes | 26.1% · 26.1% · 26.1% · 26.1% · 26.1% | 20% · 21% · 19% · 21% · 20% | 26.4% · 27.3% · 27.2% · 26.5% · 26.2% |
+| crypto | lunes · martes · miércoles · jueves · viernes · sábado · domingo | 44.4% · 44.4% · 44.4% · 44.4% · 44.4% · 44.4% · 44.4% | 15% · 14% · 14% · 16% · 14% · 13% · 16% | 37.4% · 37.8% · 39.0% · 38.6% · 39.2% · 37.3% · 36.8% |
+| us | lunes · martes · miércoles · jueves · viernes | 28.0% · 28.0% · 27.9% · 27.9% · 28.0% | 20% · 20% · 19% · 21% · 20% | 30.1% · 30.6% · 30.8% · 31.5% · 30.8% |
+| bmv | lunes · martes · miércoles · jueves · viernes | 26.1% · 26.1% · 26.1% · 26.1% · 26.1% | 20% · 21% · 19% · 21% · 20% | 26.6% · 27.5% · 27.4% · 26.6% · 26.4% |
 
 Escepticismo de calendario: peso de evidencia 0.16 (E5 × 0.4 por publicación antigua, C08-008/C11-006) → concentración mínima del prior 2000·(1−w).
 
@@ -168,81 +168,81 @@ Escepticismo de calendario: peso de evidencia 0.16 (E5 × 0.4 por publicación a
 
 | Serie | OK | Último dato | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-10-19 | yahoo |
-| AC.MX | sí | 2026-10-19 | yahoo |
-| ADA | sí | 2026-10-19 | binance |
-| ALSEA.MX | sí | 2026-10-19 | yahoo |
-| AMXB.MX | sí | 2026-10-19 | yahoo |
-| AMZN | sí | 2026-10-19 | yahoo |
-| ASURB.MX | sí | 2026-10-19 | yahoo |
-| AVAX | sí | 2026-10-19 | binance |
-| BBAJIOO.MX | sí | 2026-10-19 | yahoo |
-| BCH | sí | 2026-10-19 | binance |
-| BIMBOA.MX | sí | 2026-10-19 | yahoo |
-| BTC | sí | 2026-10-19 | binance |
-| CEMEXCPO.MX | sí | 2026-10-19 | yahoo |
-| DIA | sí | 2026-10-19 | yahoo |
-| DOGE | sí | 2026-10-19 | binance |
-| DOT | sí | 2026-10-19 | binance |
-| ETH | sí | 2026-10-19 | binance |
-| FEMSAUBD.MX | sí | 2026-10-19 | yahoo |
-| GAPB.MX | sí | 2026-10-19 | yahoo |
-| GFNORTEO.MX | sí | 2026-10-19 | yahoo |
-| GLD | sí | 2026-10-19 | yahoo |
-| GMEXICOB.MX | sí | 2026-10-19 | yahoo |
-| GOOGL | sí | 2026-10-19 | yahoo |
-| GRUMAB.MX | sí | 2026-10-19 | yahoo |
-| IWM | sí | 2026-10-19 | yahoo |
-| JPM | sí | 2026-10-19 | yahoo |
-| KIMBERA.MX | sí | 2026-10-19 | yahoo |
-| KOFUBL.MX | sí | 2026-10-19 | yahoo |
-| LINK | sí | 2026-10-19 | binance |
-| LIVEPOLC-1.MX | sí | 2026-10-19 | yahoo |
-| LTC | sí | 2026-10-19 | binance |
-| META | sí | 2026-10-19 | yahoo |
-| MSFT | sí | 2026-10-19 | yahoo |
-| MXN=X | sí | 2026-10-19 | yahoo |
-| NAFTRACISHRS.MX | sí | 2026-10-19 | yahoo |
-| NVDA | sí | 2026-10-19 | yahoo |
-| OMAB.MX | sí | 2026-10-19 | yahoo |
-| ORBIA.MX | sí | 2026-10-19 | yahoo |
-| PINFRA.MX | sí | 2026-10-19 | yahoo |
-| QQQ | sí | 2026-10-19 | yahoo |
-| SMH | sí | 2026-10-19 | yahoo |
-| SOL | sí | 2026-10-19 | binance |
-| SPY | sí | 2026-10-19 | yahoo |
-| TRX | sí | 2026-10-19 | binance |
-| TSLA | sí | 2026-10-19 | yahoo |
-| WALMEX.MX | sí | 2026-10-19 | yahoo |
-| WMT | sí | 2026-10-19 | yahoo |
-| XLE | sí | 2026-10-19 | yahoo |
-| XLF | sí | 2026-10-19 | yahoo |
-| XLI | sí | 2026-10-19 | yahoo |
-| XLK | sí | 2026-10-19 | yahoo |
-| XLP | sí | 2026-10-19 | yahoo |
-| XLU | sí | 2026-10-19 | yahoo |
-| XLV | sí | 2026-10-19 | yahoo |
-| XLY | sí | 2026-10-19 | yahoo |
-| XOM | sí | 2026-10-19 | yahoo |
-| XRP | sí | 2026-10-19 | binance |
-| ^MXX | sí | 2026-10-19 | yahoo |
-| ^VIX | sí | 2026-10-19 | yahoo |
-| contexto_v42 | sí | 2026-10-19T18:18:45Z | CAUTION |
-| fear_greed | sí | 2026-10-19 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-10-18 | wikimedia |
-| wiki_en_Bitcoin | sí | 2026-10-18 | wikimedia |
-| wiki_en_Cryptocurrency | sí | 2026-10-18 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-10-18 | wikimedia |
-| wiki_en_Ethereum | sí | 2026-10-18 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-10-18 | wikimedia |
-| wiki_en_Inflation | sí | 2026-10-18 | wikimedia |
-| wiki_en_Recession | sí | 2026-10-18 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-10-18 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-10-18 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-10-18 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-10-18 | wikimedia |
-| wiki_es_Crisis_económica | sí | 2026-10-18 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-10-18 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-10-18 | wikimedia |
-| wiki_es_Inflación | sí | 2026-10-18 | wikimedia |
-| wiki_es_Recesión | sí | 2026-10-18 | wikimedia |
+| AAPL | sí | 2026-11-02 | caché yahoo |
+| AC.MX | sí | 2026-10-30 | caché yahoo |
+| ADA | sí | 2026-11-03 | caché binance |
+| ALSEA.MX | sí | 2026-10-30 | caché yahoo |
+| AMXB.MX | sí | 2026-10-30 | caché yahoo |
+| AMZN | sí | 2026-11-02 | caché yahoo |
+| ASURB.MX | sí | 2026-10-30 | caché yahoo |
+| AVAX | sí | 2026-11-03 | caché binance |
+| BBAJIOO.MX | sí | 2026-10-30 | caché yahoo |
+| BCH | sí | 2026-11-03 | caché binance |
+| BIMBOA.MX | sí | 2026-10-30 | caché yahoo |
+| BTC | sí | 2026-11-03 | caché binance |
+| CEMEXCPO.MX | sí | 2026-10-30 | caché yahoo |
+| DIA | sí | 2026-11-02 | caché yahoo |
+| DOGE | sí | 2026-11-03 | caché binance |
+| DOT | sí | 2026-11-03 | caché binance |
+| ETH | sí | 2026-11-03 | caché binance |
+| FEMSAUBD.MX | sí | 2026-10-30 | caché yahoo |
+| GAPB.MX | sí | 2026-10-30 | caché yahoo |
+| GFNORTEO.MX | sí | 2026-10-30 | caché yahoo |
+| GLD | sí | 2026-11-02 | caché yahoo |
+| GMEXICOB.MX | sí | 2026-10-30 | caché yahoo |
+| GOOGL | sí | 2026-11-02 | caché yahoo |
+| GRUMAB.MX | sí | 2026-10-30 | caché yahoo |
+| IWM | sí | 2026-11-02 | caché yahoo |
+| JPM | sí | 2026-11-02 | caché yahoo |
+| KIMBERA.MX | sí | 2026-10-30 | caché yahoo |
+| KOFUBL.MX | sí | 2026-10-30 | caché yahoo |
+| LINK | sí | 2026-11-03 | caché binance |
+| LIVEPOLC-1.MX | sí | 2026-10-30 | caché yahoo |
+| LTC | sí | 2026-11-03 | caché binance |
+| META | sí | 2026-11-02 | caché yahoo |
+| MSFT | sí | 2026-11-02 | caché yahoo |
+| MXN=X | sí | 2026-11-03 | caché yahoo |
+| NAFTRACISHRS.MX | sí | 2026-10-30 | caché yahoo |
+| NVDA | sí | 2026-11-02 | caché yahoo |
+| OMAB.MX | sí | 2026-10-30 | caché yahoo |
+| ORBIA.MX | sí | 2026-10-30 | caché yahoo |
+| PINFRA.MX | sí | 2026-10-30 | caché yahoo |
+| QQQ | sí | 2026-11-02 | caché yahoo |
+| SMH | sí | 2026-11-02 | caché yahoo |
+| SOL | sí | 2026-11-03 | caché binance |
+| SPY | sí | 2026-11-02 | caché yahoo |
+| TRX | sí | 2026-11-03 | caché binance |
+| TSLA | sí | 2026-11-02 | caché yahoo |
+| WALMEX.MX | sí | 2026-10-30 | caché yahoo |
+| WMT | sí | 2026-11-02 | caché yahoo |
+| XLE | sí | 2026-11-02 | caché yahoo |
+| XLF | sí | 2026-11-02 | caché yahoo |
+| XLI | sí | 2026-11-02 | caché yahoo |
+| XLK | sí | 2026-11-02 | caché yahoo |
+| XLP | sí | 2026-11-02 | caché yahoo |
+| XLU | sí | 2026-11-02 | caché yahoo |
+| XLV | sí | 2026-11-02 | caché yahoo |
+| XLY | sí | 2026-11-02 | caché yahoo |
+| XOM | sí | 2026-11-02 | caché yahoo |
+| XRP | sí | 2026-11-03 | caché binance |
+| ^MXX | sí | 2026-10-30 | caché yahoo |
+| ^VIX | sí | 2026-11-03 | caché yahoo |
+| contexto_v42 | sí | 2026-11-03T12:08:11Z | BLACKOUT |
+| fear_greed | sí | 2026-11-03 | alternative.me |
+| wiki_en_Bankruptcy | sí | 2026-11-02 | wikimedia |
+| wiki_en_Bitcoin | sí | 2026-11-02 | wikimedia |
+| wiki_en_Cryptocurrency | sí | 2026-11-02 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-02 | wikimedia |
+| wiki_en_Ethereum | sí | 2026-11-02 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-02 | wikimedia |
+| wiki_en_Inflation | sí | 2026-11-02 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-02 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-11-02 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-02 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-02 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-11-02 | wikimedia |
+| wiki_es_Crisis_económica | sí | 2026-11-02 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-11-02 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-02 | wikimedia |
+| wiki_es_Inflación | sí | 2026-11-02 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-02 | wikimedia |
