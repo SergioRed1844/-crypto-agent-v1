@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T02:12:54Z",
+ "generated_utc": "2026-11-03T03:12:00Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.188,
- "event_risk": 0.724,
+ "event_risk": 0.728,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.207,
+   "riesgo": 0.215,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.016,
+   "riesgo": 0.017,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.196,
+   "aporte": -0.195,
    "fuente": "noticia"
   },
   {
@@ -125,7 +125,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.144,
+   "aporte": 0.143,
    "fuente": "noticia"
   },
   {
@@ -134,7 +134,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.119,
+   "aporte": -0.118,
    "fuente": "noticia"
   },
   {
@@ -152,7 +152,7 @@
    "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.103,
+   "aporte": 0.102,
    "fuente": "noticia"
   },
   {
