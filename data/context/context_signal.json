@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T19:46:32Z",
+ "generated_utc": "2026-11-03T19:57:14Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.317,
- "event_risk": 0.817,
+ "event_risk": 0.818,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 62,
@@ -36,7 +36,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.429,
+   "riesgo": 0.433,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.033,
+   "riesgo": 0.034,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -121,7 +121,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.286,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -148,7 +148,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.137,
+   "aporte": 0.136,
    "fuente": "noticia"
   },
   {
