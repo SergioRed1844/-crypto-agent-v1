@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-03T00:19:19Z",
+ "generated_utc": "2026-11-03T01:13:52Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.189,
- "event_risk": 0.718,
+ "bias": -0.188,
+ "event_risk": 0.721,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
@@ -50,7 +50,7 @@
    "category": "FISCAL",
    "status": "confirmed",
    "magnitud": 0.545,
-   "riesgo": 0.191,
+   "riesgo": 0.198,
    "ventana": [
     "2026-11-04T01:30:00Z",
     "2026-11-04T19:30:00Z"
@@ -92,7 +92,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.009,
+   "riesgo": 0.01,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -125,7 +125,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.145,
+   "aporte": 0.144,
    "fuente": "noticia"
   },
   {
@@ -134,7 +134,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.12,
+   "aporte": -0.119,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "Bancos podrían frenar stablecoins pagando más a ahorristas, según estudio del BPI",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.091,
+   "aporte": -0.09,
    "fuente": "noticia"
   }
  ],
