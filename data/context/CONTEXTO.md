@@ -1,25 +1,25 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-04T09:45:13Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-04T10:44:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.40 · riesgo de evento 0.80 · tamaño ×0.0 · VETO a compras
 
 - Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z); Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro (2026-11-04T13:30:00Z)
-- Stablecoins -4.0% en 30 días (liquidez saliendo)
+- Stablecoins -3.99% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro | 2026-11-04T13:30:00Z | Fiscal / deuda | 0.545 | 0.545 |
 | EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 | 2026-11-03T12:00:00Z | Elección | 0.435 | 0.435 |
-| Decisión del MPC del Banco de Inglaterra + Monetary Policy Report | 2026-11-05T12:00:00Z | Política monetaria | 0.166 | 0.071 |
-| Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asi | 2026-11-06T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.255 | 0.06 |
-| Empleo EE.UU./NFP (oct-2026) | 2026-11-06T13:30:00Z | Dato macro | 0.404 | 0.051 |
-| Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026) | 2026-11-05T19:00:00Z | Política monetaria | 0.116 | 0.037 |
-| Nueva Zelanda: elecciones generales | 2026-11-07T12:00:00Z | Elección | 0.235 | 0.024 |
+| Decisión del MPC del Banco de Inglaterra + Monetary Policy Report | 2026-11-05T12:00:00Z | Política monetaria | 0.166 | 0.074 |
+| Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asi | 2026-11-06T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.255 | 0.062 |
+| Empleo EE.UU./NFP (oct-2026) | 2026-11-06T13:30:00Z | Dato macro | 0.404 | 0.053 |
+| Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026) | 2026-11-05T19:00:00Z | Política monetaria | 0.116 | 0.039 |
+| Nueva Zelanda: elecciones generales | 2026-11-07T12:00:00Z | Elección | 0.235 | 0.025 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.436 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.433 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.178 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.161 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.131 |
@@ -35,13 +35,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-04T09:45:13Z",
+ "inicio": "2026-11-04T10:44:33Z",
  "onchain": {
   "scanned": [
-   974509,
-   974513
+   974514,
+   974517
   ],
-  "calls": 106,
+  "calls": 116,
   "stopped": null,
   "nuevas": 0
  },
