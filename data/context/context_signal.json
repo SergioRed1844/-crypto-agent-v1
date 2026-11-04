@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-04T22:34:03Z",
+ "generated_utc": "2026-11-04T23:33:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.392,
- "event_risk": 0.353,
+ "event_risk": 0.365,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
   "Precaución: sesgo -0.39",
-  "Stablecoins -3.97% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.96% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.121,
+   "riesgo": 0.127,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.102,
+   "riesgo": 0.106,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.087,
+   "riesgo": 0.09,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.063,
+   "riesgo": 0.066,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -78,7 +78,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.041,
+   "riesgo": 0.043,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.404,
+   "aporte": -0.401,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.122,
+   "aporte": -0.121,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.099,
+   "aporte": -0.098,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.094,
+   "aporte": -0.093,
    "fuente": "noticia"
   },
   {
@@ -156,7 +156,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.089,
+   "aporte": 0.088,
    "fuente": "noticia"
   }
  ],
@@ -172,6 +172,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.97
+  "stablecoins_30d_pct": -3.96
  }
 }
