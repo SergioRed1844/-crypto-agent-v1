@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-04T19:36:40Z",
+ "generated_utc": "2026-11-04T19:40:02Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.107,
+   "riesgo": 0.108,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
