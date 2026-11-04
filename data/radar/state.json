@@ -28,10 +28,17 @@
   "KIMBERA.MX|CHOQUE_PESO|2026-10-23": {
    "level": "VIGILANCIA",
    "utc": "2026-10-23T21:41:12+00:00"
+  },
+  "XLE|PULLBACK_TENDENCIA|2026-11-04": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-04T21:35:14+00:00"
+  },
+  "XOM|PULLBACK_TENDENCIA|2026-11-04": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-04T21:35:14+00:00"
   }
  },
  "runs": [
-  "2026-11-03T00:15:25+00:00",
   "2026-11-03T01:14:00+00:00",
   "2026-11-03T01:45:45+00:00",
   "2026-11-03T02:13:06+00:00",
@@ -90,9 +97,10 @@
   "2026-11-04T18:37:42+00:00",
   "2026-11-04T18:51:05+00:00",
   "2026-11-04T19:37:37+00:00",
-  "2026-11-04T20:36:11+00:00"
+  "2026-11-04T20:36:11+00:00",
+  "2026-11-04T21:35:14+00:00"
  ],
- "last_scan_utc": "2026-11-04T20:36:11+00:00",
+ "last_scan_utc": "2026-11-04T21:35:14+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -481,12 +489,43 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-04T19:40:02Z",
+   "last": "2026-11-04T20:35:53Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
- "last_candidates": [],
+ "last_candidates": [
+  {
+   "sym": "XLE",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-04",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.3 pp < 5 pp"
+   ],
+   "p": 0.399,
+   "base": 0.355,
+   "ret": 0.0029,
+   "h": 7
+  },
+  {
+   "sym": "XOM",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-04",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+   ],
+   "p": 0.387,
+   "base": 0.345,
+   "ret": 0.003,
+   "h": 7
+  }
+ ],
  "digest_issue": {
   "2026-10": 5,
   "2026-11": 11

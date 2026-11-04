@@ -1,12 +1,15 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-04T20:36:11+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-04
+Última corrida: **2026-11-04T21:35:14+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-04
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-Ninguno.
+| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
+|---|---|---|---|---|---|---|---|
+| VIGILANCIA | XLE | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 40% | 36% | +0.3% |
+| VIGILANCIA | XOM | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 39% | 34% | +0.3% |
 
 ## Alertas enviadas (últimas 15)
 
@@ -37,7 +40,7 @@ Todavía ninguna.
 | Reversión tras choque político/comercial | bmv | 30 d | 9 | 54% | 34% | 36% | 90% | +0.9% |
 | Reversión tras choque político/comercial | bmv | 90 d | 9 | 54% | 42% | 43% | 90% | +0.7% |
 | Reversión tras choque político/comercial | crypto | 7 d | 4 | 38% | 40% | 40% | 96% | -0.2% |
-| Reversión tras choque político/comercial | crypto | 30 d | 4 | 43% | 43% | 43% | 95% | +0.0% |
+| Reversión tras choque político/comercial | crypto | 30 d | 4 | 43% | 43% | 43% | 96% | +0.0% |
 | Reversión tras choque político/comercial | crypto | 90 d | 4 | 33% | 45% | 44% | 96% | +0.0% |
 | Reversión tras choque político/comercial | us | 7 d | 10 | 28% | 29% | 29% | 89% | -0.4% |
 | Reversión tras choque político/comercial | us | 30 d | 8 | 50% | 36% | 38% | 89% | +0.8% |
@@ -49,12 +52,12 @@ Todavía ninguna.
 | Miedo de hogares (FEARS) alto | us | 30 d | 11 | 43% | 32% | 33% | 93% | +0.3% |
 | Miedo de hogares (FEARS) alto | us | 90 d | 11 | 48% | 39% | 40% | 93% | +0.2% |
 | Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 61% | +0.5% |
-| Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 66% | +0.2% |
+| Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 67% | +0.2% |
 | Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 67% | +0.1% |
 | Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 76% | -0.2% |
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 83% | -0.8% |
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
-| Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 35% | 38% | +0.3% |
+| Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 34% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.1% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 17% | +0.6% |
@@ -65,7 +68,7 @@ Todavía ninguna.
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
 | Retroceso dentro de tendencia alcista | us | 7 d | 422 | 38% | 33% | 37% | 19% | +0.3% |
 | Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 32% | +0.4% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 48% | 31% | +0.9% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 47% | 31% | +0.9% |
 
 ## Salud de fuentes
 
@@ -130,7 +133,7 @@ Todavía ninguna.
 | XRP | sí | 2026-11-04 | binance |
 | ^MXX | sí | 2026-11-04 | yahoo |
 | ^VIX | sí | 2026-11-04 | yahoo |
-| contexto_v42 | sí | 2026-11-04T19:40:02Z | CAUTION |
+| contexto_v42 | sí | 2026-11-04T20:35:53Z | CAUTION |
 | fear_greed | sí | 2026-11-04 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-03 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-03 | wikimedia |
