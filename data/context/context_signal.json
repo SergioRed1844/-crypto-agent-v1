@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-04T15:40:07Z",
+ "generated_utc": "2026-11-04T15:45:06Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.398,
- "event_risk": 0.67,
+ "event_risk": 0.671,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 65,
@@ -50,7 +50,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.076,
+   "riesgo": 0.077,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -78,7 +78,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.047,
+   "riesgo": 0.048,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.421,
+   "aporte": -0.42,
    "fuente": "noticia"
   },
   {
