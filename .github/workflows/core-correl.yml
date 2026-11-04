@@ -1,0 +1,24 @@
+# Correlaciones y choques geopolíticos de la cartera y los temas. Corre con [correl-run] en el mensaje del commit.
+name: core-correl
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-correl
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[correl-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q "yfinance>=0.2.54" pandas numpy lxml requests
+      - run: python -m core.correl out/correl
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "correl - $(date -u +%FT%TZ)"
