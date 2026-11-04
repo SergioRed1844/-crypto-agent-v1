@@ -2,16 +2,22 @@
 
 > Dinero hipotético (1,000 USDT por portafolio). Ninguna orden real. Mismas señales técnicas para los dos portafolios: **A** = reglas v4.1, **B** = v4.2 completo (derivados estricto + contexto + ganancia neta + racha).
 
-**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 04-Nov 01:48 · **Día 18.6** · **Estado:** corriendo
+**Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 04-Nov 02:46 · **Día 18.6** · **Estado:** corriendo
 
-Última vela 4H revisada: 03-Nov 22:00 · señales técnicas desde el inicio: 98 · corridas: 626. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 04-Nov 02:00 · señales técnicas desde el inicio: 99 · corridas: 627. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
-| A · reglas v4.1 | 5 | 0.0 | -1.016 | — | — | -19.05 | +0.00 | -19.05 | 0 |
+| A · reglas v4.1 | 5 | 0.0 | -1.016 | — | — | -19.05 | -0.26 | -19.05 | 1 |
 | B · v4.2 completo | 1 | 0.0 | -1.018 | — | — | -2.55 | +0.00 | -2.55 | 0 |
 
 **Gate de papel (portafolio B):** ⬜ ≥30 trades · ✅ ≥14 días · ⬜ ganadas >50% · ⬜ R:R promedio ≥2.0 · ✅ drawdown <10%
+
+### Posiciones abiertas A
+
+| Par | Entrada (MTY) | Precio | Stop | Objetivo | Contexto |
+|---|---|---|---|---|---|
+| BTC | 04-Nov 02:00 | 78179.1 | 75553.7 | 84742.4 | — |
 
 ### Últimas operaciones cerradas
 
@@ -28,6 +34,7 @@
 
 | Vela 4H (MTY) | Par | Conf. | A | B | Contexto | F&G |
 |---|---|---|---|---|---|---|
+| 04-Nov 02:00 | BTC | 6 | entra | contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4 | BLACKOUT | 34 |
 | 03-Nov 14:00 | BTC | 6 | ya hay posición en el par | contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4 | BLACKOUT | 26 |
 | 03-Nov 10:00 | BTC | 6 | ya hay posición en el par | contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4 | BLACKOUT | 26 |
 | 03-Nov 06:00 | BTC | 6 | ya hay posición en el par | contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4 | BLACKOUT | 26 |
@@ -42,6 +49,5 @@
 | 28-Oct 18:00 | SOL | 6 | máx 2 posiciones | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 28-Oct 18:00 | ETH | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 | 28-Oct 18:00 | BTC | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
-| 28-Oct 14:00 | ETH | 6 | ya hay posición en el par | contexto CAUTION pide confluencia 7 (tiene 6) | CAUTION | 51 |
 
 Gate completo (CLAUDE.md): ≥30 trades, ≥2 semanas, ganadas >50%, R:R promedio ≥2.0, drawdown <10%. Pasarlo NO activa dinero real: esa decisión es tuya y manual.

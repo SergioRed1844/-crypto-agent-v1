@@ -9,13 +9,25 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-04 04:00:00+00:00",
-  "ETHUSDT": "2026-11-04 04:00:00+00:00",
-  "SOLUSDT": "2026-11-04 04:00:00+00:00"
+  "BTCUSDT": "2026-11-04 08:00:00+00:00",
+  "ETHUSDT": "2026-11-04 08:00:00+00:00",
+  "SOLUSDT": "2026-11-04 08:00:00+00:00"
  },
  "portfolios": {
   "A": {
-   "positions": {},
+   "positions": {
+    "BTCUSDT": {
+     "pair": "BTCUSDT",
+     "entry_time": "2026-11-04T08:00:00Z",
+     "entry": 78179.06999999999,
+     "sl": 75553.72738405,
+     "tp": 84742.42653988999,
+     "unit": 2779.0754133340442,
+     "risk_frac": 0.00375,
+     "cs": 6,
+     "last_checked": "2026-11-04T07:00:00Z"
+    }
+   },
    "trades": [
     {
      "pair": "SOLUSDT",
@@ -1479,12 +1491,26 @@
    "neta": 0.0428,
    "rr_neto": 2.03,
    "B": "contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4"
+  },
+  {
+   "t": "2026-11-04T08:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 78140.0,
+   "A": "entra",
+   "ctx": "BLACKOUT",
+   "fg": 34,
+   "funding": 9.52037457664e-05,
+   "funding_src": "okx",
+   "neta": 0.0814,
+   "rr_neto": 2.23,
+   "B": "contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 626,
- "updated_utc": "2026-11-04T07:48:01Z",
- "n_signals": 98
+ "runs": 627,
+ "updated_utc": "2026-11-04T08:46:41Z",
+ "n_signals": 99
 }
