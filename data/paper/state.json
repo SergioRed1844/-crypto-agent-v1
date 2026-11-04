@@ -9,9 +9,9 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-04 08:00:00+00:00",
-  "ETHUSDT": "2026-11-04 08:00:00+00:00",
-  "SOLUSDT": "2026-11-04 08:00:00+00:00"
+  "BTCUSDT": "2026-11-04 12:00:00+00:00",
+  "ETHUSDT": "2026-11-04 12:00:00+00:00",
+  "SOLUSDT": "2026-11-04 12:00:00+00:00"
  },
  "portfolios": {
   "A": {
@@ -25,7 +25,7 @@
      "unit": 2779.0754133340442,
      "risk_frac": 0.00375,
      "cs": 6,
-     "last_checked": "2026-11-04T10:00:00Z"
+     "last_checked": "2026-11-04T11:00:00Z"
     }
    },
    "trades": [
@@ -1505,12 +1505,26 @@
    "neta": 0.0814,
    "rr_neto": 2.23,
    "B": "contexto BLACKOUT: Blackout por evento programado: EE.UU.: elecciones de medio mandato (4"
+  },
+  {
+   "t": "2026-11-04T12:00:00Z",
+   "pair": "BTCUSDT",
+   "cs": 6,
+   "precio": 78477.25,
+   "A": "ya hay posición en el par",
+   "ctx": "BLACKOUT",
+   "fg": 34,
+   "funding": 8.30280936168e-05,
+   "funding_src": "okx",
+   "neta": 0.0525,
+   "rr_neto": 2.1,
+   "B": "contexto BLACKOUT: Blackout por evento programado: Anuncio trimestral de refinanciamiento"
   }
  ],
  "notified": [
   "trades_1"
  ],
- "runs": 629,
- "updated_utc": "2026-11-04T11:45:01Z",
- "n_signals": 99
+ "runs": 630,
+ "updated_utc": "2026-11-04T12:43:35Z",
+ "n_signals": 100
 }
