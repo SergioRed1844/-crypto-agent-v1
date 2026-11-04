@@ -15,19 +15,7 @@
  },
  "portfolios": {
   "A": {
-   "positions": {
-    "BTCUSDT": {
-     "pair": "BTCUSDT",
-     "entry_time": "2026-11-01T04:00:00Z",
-     "entry": 77840.901,
-     "sl": 76163.64319637,
-     "tp": 82034.04550907,
-     "unit": 1831.2623478263665,
-     "risk_frac": 0.00375,
-     "cs": 6,
-     "last_checked": "2026-11-04T01:00:00Z"
-    }
-   },
+   "positions": {},
    "trades": [
     {
      "pair": "SOLUSDT",
@@ -80,9 +68,22 @@
      "usdt": -3.8,
      "cs": 6,
      "ctx_state": null
+    },
+    {
+     "pair": "BTCUSDT",
+     "entry_time": "2026-11-01T04:00:00Z",
+     "exit_time": "2026-11-04T03:00:00Z",
+     "entry": 77840.901,
+     "exit": 76125.561375,
+     "why": "SL",
+     "R": -1.021,
+     "pct": -0.3828,
+     "usdt": -3.83,
+     "cs": 6,
+     "ctx_state": null
     }
    ],
-   "streak": 4,
+   "streak": 5,
    "pause_until": null
   },
   "B": {
@@ -1483,7 +1484,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 618,
- "updated_utc": "2026-11-04T02:51:50Z",
+ "runs": 619,
+ "updated_utc": "2026-11-04T03:50:42Z",
  "n_signals": 98
 }
