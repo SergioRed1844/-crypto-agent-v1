@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-04T02:51:12Z",
+ "generated_utc": "2026-11-04T03:50:18Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.311,
- "event_risk": 0.863,
+ "bias": -0.408,
+ "event_risk": 0.864,
  "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 62,
+ "confidence": 66,
  "reasons": [
   "Blackout por evento programado: EE.UU.: elecciones de medio mandato (435 escaños de la Cámara, 35 del Senado, 39 gubernaturas) (2026-11-03T12:00:00Z); Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro (2026-11-04T13:30:00Z)",
-  "Stablecoins -3.98% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.99% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.053,
+   "riesgo": 0.056,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.045,
+   "riesgo": 0.047,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -92,7 +92,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.038,
+   "riesgo": 0.04,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -106,7 +106,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -120,7 +120,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -130,12 +130,12 @@
  ],
  "recent": [
   {
-   "id": "news-the-binance-heist-took-30-minutes-the-groundwork-t-2026-11-03",
-   "date": "2026-11-03",
-   "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
+   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
+   "date": "2026-11-04",
+   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.451,
    "fuente": "noticia"
   },
   {
@@ -144,7 +144,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.182,
+   "aporte": -0.181,
    "fuente": "noticia"
   },
   {
@@ -153,7 +153,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.165,
+   "aporte": 0.164,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-the-binance-heist-took-30-minutes-the-groundwork-t-2026-11-03",
+   "date": "2026-11-03",
+   "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.136,
    "fuente": "noticia"
   },
   {
@@ -162,7 +171,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.134,
+   "aporte": 0.133,
    "fuente": "noticia"
   },
   {
@@ -191,15 +200,6 @@
    "stance": "pro",
    "aporte": 0.094,
    "fuente": "noticia"
-  },
-  {
-   "id": "news-cmcc-global-partners-with-tether-and-bitfinex-secu-2026-10-22",
-   "date": "2026-10-22",
-   "title_es": "CMCC Global, Tether y Bitfinex lanzan fondo tokenizado en El Salvador",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.093,
-   "fuente": "noticia"
   }
  ],
  "alerts": [],
@@ -214,6 +214,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.98
+  "stablecoins_30d_pct": -3.99
  }
 }

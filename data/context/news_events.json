@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-04T02:51:12Z",
+ "updated_utc": "2026-11-04T03:50:18Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6729,6 +6729,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-03T11:15:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 5,
+   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
+   "source_url": "https://www.insurancebusinessmag.com/au/news/cyber/binances-us6-3bn-hack-began-with-a-fake-job-offer-and-it-had-no-cyber-cover-596041.aspx",
+   "source_title": "insurancebusinessmag.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
+   "date": "2026-11-04",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-04T01:30:00Z"
   }
  ]
 }
