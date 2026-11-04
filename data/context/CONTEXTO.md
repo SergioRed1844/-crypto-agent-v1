@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-04T07:49:40Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-04T07:58:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: BLACKOUT** · sesgo -0.41 · riesgo de evento 0.80 · tamaño ×0.0 · VETO a compras
 
@@ -19,7 +19,7 @@ Actualizado 2026-11-04T07:49:40Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.441 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.440 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.179 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.162 |
 | El robo a Binance tomó 30 minutos; la preparación previa llevó días | 2026-11-03 | anti | -0.133 |
@@ -35,10 +35,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-04T07:49:40Z",
+ "inicio": "2026-11-04T07:58:07Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   974502,
+   974503
+  ],
+  "calls": 54,
   "stopped": null,
   "nuevas": 0
  },
