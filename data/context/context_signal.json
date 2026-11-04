@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-04T16:32:20Z",
+ "generated_utc": "2026-11-04T16:39:24Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.398,
- "event_risk": 0.674,
+ "bias": -0.397,
+ "event_risk": 0.675,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 65,
@@ -36,7 +36,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.094,
+   "riesgo": 0.095,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.079,
+   "riesgo": 0.08,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.419,
+   "aporte": -0.418,
    "fuente": "noticia"
   },
   {
@@ -116,7 +116,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.175,
+   "aporte": -0.174,
    "fuente": "noticia"
   },
   {
