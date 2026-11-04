@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-04T14:41:00Z",
+ "generated_utc": "2026-11-04T15:40:07Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.399,
- "event_risk": 0.666,
+ "bias": -0.398,
+ "event_risk": 0.67,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 65,
@@ -36,7 +36,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.087,
+   "riesgo": 0.091,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.073,
+   "riesgo": 0.076,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.063,
+   "riesgo": 0.065,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -78,7 +78,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.046,
+   "riesgo": 0.047,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -92,7 +92,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.029,
+   "riesgo": 0.031,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.423,
+   "aporte": -0.421,
    "fuente": "noticia"
   },
   {
@@ -116,7 +116,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
@@ -125,7 +125,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.128,
+   "aporte": -0.127,
    "fuente": "noticia"
   },
   {
