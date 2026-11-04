@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-04T15:45:06Z",
+ "generated_utc": "2026-11-04T16:32:20Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.398,
- "event_risk": 0.671,
+ "event_risk": 0.674,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
   "Blackout por evento programado: Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro (2026-11-04T13:30:00Z)",
-  "Stablecoins -3.98% en 30 días (liquidez saliendo)"
+  "Stablecoins -3.96% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.091,
+   "riesgo": 0.094,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.077,
+   "riesgo": 0.079,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.065,
+   "riesgo": 0.068,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -78,7 +78,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.048,
+   "riesgo": 0.049,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -92,7 +92,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.031,
+   "riesgo": 0.032,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -107,7 +107,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.42,
+   "aporte": -0.419,
    "fuente": "noticia"
   },
   {
@@ -134,7 +134,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.129,
+   "aporte": 0.128,
    "fuente": "noticia"
   },
   {
@@ -143,7 +143,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.127,
+   "aporte": -0.126,
    "fuente": "noticia"
   },
   {
@@ -152,7 +152,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.102,
+   "aporte": -0.101,
    "fuente": "noticia"
   },
   {
@@ -161,7 +161,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.096,
+   "aporte": -0.095,
    "fuente": "noticia"
   },
   {
@@ -170,7 +170,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.091,
+   "aporte": 0.09,
    "fuente": "noticia"
   }
  ],
@@ -186,6 +186,6 @@
    "fear_greed": 34
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -3.98
+  "stablecoins_30d_pct": -3.96
  }
 }
