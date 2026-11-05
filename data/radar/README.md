@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-05T10:23:43+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-04
+Última corrida: **2026-11-05T11:22:57+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-04
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -33,7 +33,7 @@ Todavía ninguna.
 | Capitulación con miedo extremo | us | 7 d | 73 | 54% | 30% | 39% | 60% | +1.1% |
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.7% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 48% | 73% | +0.3% |
-| Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 48% | +0.0% |
+| Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 48% | -0.0% |
 | Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.9% |
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.8% |
 | Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 91% | -0.2% |
@@ -66,9 +66,9 @@ Todavía ninguna.
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 42% | 43% | 42% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
-| Retroceso dentro de tendencia alcista | us | 7 d | 422 | 38% | 33% | 37% | 19% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 32% | +0.4% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 47% | 31% | +0.9% |
+| Retroceso dentro de tendencia alcista | us | 7 d | 423 | 38% | 33% | 37% | 19% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 201 | 42% | 39% | 41% | 32% | +0.4% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 199 | 49% | 45% | 48% | 31% | +0.9% |
 
 ## Salud de fuentes
 
@@ -133,7 +133,7 @@ Todavía ninguna.
 | XRP | sí | 2026-11-05 | binance |
 | ^MXX | sí | 2026-11-04 | yahoo |
 | ^VIX | sí | 2026-11-05 | yahoo |
-| contexto_v42 | sí | 2026-11-05T09:24:27Z | CAUTION |
+| contexto_v42 | sí | 2026-11-05T10:23:32Z | CAUTION |
 | fear_greed | sí | 2026-11-05 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-04 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-04 | wikimedia |
