@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-05T18:16:44Z",
+ "generated_utc": "2026-11-05T18:56:35Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.374,
- "event_risk": 0.471,
+ "bias": -0.373,
+ "event_risk": 0.476,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.197,
+   "riesgo": 0.203,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.093,
+   "riesgo": 0.095,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.359,
+   "aporte": -0.358,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.084,
+   "aporte": 0.083,
    "fuente": "noticia"
   }
  ],
