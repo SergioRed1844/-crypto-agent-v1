@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-05T22:13:18Z",
+ "generated_utc": "2026-11-05T23:12:24Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.37,
- "event_risk": 0.438,
+ "bias": -0.439,
+ "event_risk": 0.448,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 64,
+ "confidence": 67,
  "reasons": [
-  "Precaución: sesgo -0.37",
-  "Stablecoins -4.3% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.44",
+  "Stablecoins -4.29% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.233,
+   "riesgo": 0.242,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.109,
+   "riesgo": 0.114,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -65,7 +65,16 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.351,
+   "aporte": -0.349,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-markets-live-wall-street-closes-sharply-lower-as-a-2026-11-05",
+   "date": "2026-11-05",
+   "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.325,
    "fuente": "noticia"
   },
   {
@@ -74,7 +83,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.16,
+   "aporte": -0.159,
    "fuente": "noticia"
   },
   {
@@ -83,7 +92,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.145,
+   "aporte": 0.144,
    "fuente": "noticia"
   },
   {
@@ -92,7 +101,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.118,
+   "aporte": 0.117,
    "fuente": "noticia"
   },
   {
@@ -101,7 +110,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.106,
+   "aporte": -0.105,
    "fuente": "noticia"
   },
   {
@@ -121,15 +130,6 @@
    "stance": "anti",
    "aporte": -0.087,
    "fuente": "noticia"
-  },
-  {
-   "id": "news-global-ai-rebound-lifts-crypto-market-sentiment-2026-10-21",
-   "date": "2026-10-21",
-   "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "pro",
-   "aporte": 0.083,
-   "fuente": "noticia"
   }
  ],
  "alerts": [],
@@ -144,6 +144,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.3
+  "stablecoins_30d_pct": -4.29
  }
 }
