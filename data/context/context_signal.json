@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-05T13:21:12Z",
+ "generated_utc": "2026-11-05T14:20:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.379,
- "event_risk": 0.529,
+ "bias": -0.378,
+ "event_risk": 0.442,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
-  "Precaución: sesgo -0.38, riesgo de evento 0.53 en 72 h",
+  "Precaución: sesgo -0.38",
   "Stablecoins -4.26% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -30,27 +30,13 @@
    "en_ventana": true
   },
   {
-   "id": "boe-2026-11-05",
-   "utc": "2026-11-05T12:00:00Z",
-   "title_es": "Decisión del MPC del Banco de Inglaterra + Monetary Policy Report",
-   "category": "MONETARY_POLICY",
-   "status": "confirmed",
-   "magnitud": 0.166,
-   "riesgo": 0.166,
-   "ventana": [
-    "2026-11-05T06:00:00Z",
-    "2026-11-05T14:00:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
    "id": "nfp-2026-11-06",
    "utc": "2026-11-06T13:30:00Z",
    "title_es": "Empleo EE.UU./NFP (oct-2026)",
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.161,
+   "riesgo": 0.167,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -78,7 +64,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.076,
+   "riesgo": 0.079,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -93,7 +79,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.37,
+   "aporte": -0.368,
    "fuente": "noticia"
   },
   {
@@ -111,7 +97,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.149,
+   "aporte": 0.148,
    "fuente": "noticia"
   },
   {
@@ -120,7 +106,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.121,
+   "aporte": 0.12,
    "fuente": "noticia"
   },
   {
@@ -138,7 +124,7 @@
    "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.093,
+   "aporte": -0.092,
    "fuente": "noticia"
   },
   {
@@ -147,7 +133,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.09,
+   "aporte": -0.089,
    "fuente": "noticia"
   },
   {
