@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-05T17:17:38Z",
+ "generated_utc": "2026-11-05T18:16:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.376,
- "event_risk": 0.463,
+ "bias": -0.374,
+ "event_risk": 0.471,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 65,
+ "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.38",
-  "Stablecoins -4.28% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.37",
+  "Stablecoins -4.27% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.189,
+   "riesgo": 0.197,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.089,
+   "riesgo": 0.093,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.361,
+   "aporte": -0.359,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.147,
+   "aporte": 0.146,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.109,
+   "aporte": -0.108,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.089,
+   "aporte": -0.088,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.28
+  "stablecoins_30d_pct": -4.27
  }
 }
