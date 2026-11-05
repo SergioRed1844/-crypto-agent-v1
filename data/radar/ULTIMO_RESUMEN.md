@@ -1,14 +1,17 @@
-# 📡 Radar EB — resumen 2026-11-04
+# 📡 Radar EB — resumen 2026-11-05
 
-**Sigo vivo:** 33 corridas en 24 h · última 2026-11-04T14:41:15+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 32 corridas en 24 h · última 2026-11-05T14:20:35+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
-Ningún setup disparó en las últimas 24 h. Eso también es información: no hay pánico ni capitulación medibles.
+| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
+|---|---|---|---|---|---|---|---|---|
+| VIGILANCIA | XLE | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 40% | 36% | +0.3% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp); ventaja vs día cualquiera +4.2 pp < 5 pp |
+| VIGILANCIA | XOM | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 39% | 34% | +0.3% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp); ventaja vs día cualquiera +4.2 pp < 5 pp |
 
 ## Clima de mercado
 
-BTC 77,454 (caída desde máximo de 1 año -27%; Fear&Greed 26) · S&P (SPY) -3.2% vs máximo de 1 año; VIX 20.8 · miedo de hogares (Wikipedia, EUA) z=+0.6 · peso 5 días +0.4% (USD/MXN); IPC vs máximo 1 año -2.0% · contexto v4.2: **BLACKOUT** (Blackout por evento programado: Anuncio trimestral de refinanciamiento (Quarterly Refunding) del Tesoro (2026-11-04T13:30:00Z); Stablecoins -3.98% en 30 días (liquidez saliendo))
+BTC 80,504 (caída desde máximo de 1 año -24%; Fear&Greed 34) · S&P (SPY) -1.6% vs máximo de 1 año; VIX 16.6 · miedo de hogares (Wikipedia, EUA) z=+1.4 · peso 5 días +0.1% (USD/MXN); IPC vs máximo 1 año -1.1% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.38, riesgo de evento 0.53 en 72 h; Stablecoins -4.26% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
