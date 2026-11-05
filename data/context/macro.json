@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-05T00:36:04Z",
+ "generated_utc": "2026-11-05T01:35:12Z",
  "fear_greed": {
   "value": 50,
   "label": "Neutral",
@@ -7,9 +7,9 @@
   "avg_30d": 52.4
  },
  "stablecoins": {
-  "total_usd": 295128465219,
-  "chg_7d_pct": -2.15,
-  "chg_30d_pct": -3.96
+  "total_usd": 294657796192,
+  "chg_7d_pct": -1.81,
+  "chg_30d_pct": -4.26
  },
  "fred": {
   "status": "sin FRED_API_KEY"
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 55184811.098733,
+   "volume": 55184811.098732986,
    "slug": "presidential-election-winner-2028"
   }
  },
