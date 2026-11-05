@@ -1,20 +1,34 @@
 {
- "generated_utc": "2026-11-05T09:24:27Z",
+ "generated_utc": "2026-11-05T10:23:32Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.383,
- "event_risk": 0.49,
+ "bias": -0.382,
+ "event_risk": 0.501,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
-  "Precaución: sesgo -0.38",
+  "Precaución: sesgo -0.38, riesgo de evento 0.50 en 72 h",
   "Stablecoins -4.26% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
+  {
+   "id": "hype-core-contributor-unlock-2026-11-06",
+   "utc": "2026-11-06T12:00:00Z",
+   "title_es": "Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asignación total); monto exacto no publicado en la fuente, por lo que el umbral de 2% no está verificado",
+   "category": "CRYPTO_SUPPLY",
+   "status": "expected",
+   "magnitud": 0.255,
+   "riesgo": 0.167,
+   "ventana": [
+    "2026-11-05T12:00:00Z",
+    "2026-11-07T12:00:00Z"
+   ],
+   "en_ventana": false
+  },
   {
    "id": "boe-2026-11-05",
    "utc": "2026-11-05T12:00:00Z",
@@ -30,27 +44,13 @@
    "en_ventana": true
   },
   {
-   "id": "hype-core-contributor-unlock-2026-11-06",
-   "utc": "2026-11-06T12:00:00Z",
-   "title_es": "Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asignación total); monto exacto no publicado en la fuente, por lo que el umbral de 2% no está verificado",
-   "category": "CRYPTO_SUPPLY",
-   "status": "expected",
-   "magnitud": 0.255,
-   "riesgo": 0.16,
-   "ventana": [
-    "2026-11-05T12:00:00Z",
-    "2026-11-07T12:00:00Z"
-   ],
-   "en_ventana": false
-  },
-  {
    "id": "nfp-2026-11-06",
    "utc": "2026-11-06T13:30:00Z",
    "title_es": "Empleo EE.UU./NFP (oct-2026)",
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.136,
+   "riesgo": 0.142,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.099,
+   "riesgo": 0.104,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -78,7 +78,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.064,
+   "riesgo": 0.067,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.379,
+   "aporte": -0.376,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.114,
+   "aporte": -0.113,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.091,
+   "aporte": -0.09,
    "fuente": "noticia"
   },
   {
