@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-05T19:15:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-05T19:19:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.37 · riesgo de evento 0.48 · tamaño ×0.5 · compras permitidas
 
@@ -21,7 +21,7 @@ Actualizado 2026-11-05T19:15:48Z UTC. Se recalcula cada hora; el calendario y lo
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.146 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.119 |
 | El robo a Binance tomó 30 minutos; la preparación previa llevó días | 2026-11-03 | anti | -0.108 |
-| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.091 |
+| Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio | 2026-10-24 | anti | -0.090 |
 | Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre | 2026-10-21 | anti | -0.088 |
 | Rebote global del sector de inteligencia artificial impulsa el sentimiento cript | 2026-10-21 | pro | +0.083 |
 
@@ -32,13 +32,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-05T19:15:48Z",
+ "inicio": "2026-11-05T19:19:28Z",
  "onchain": {
-  "scanned": [
-   974696,
-   974696
-  ],
-  "calls": 38,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
