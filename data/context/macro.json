@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-05T14:22:27Z",
+ "generated_utc": "2026-11-05T15:22:48Z",
  "fear_greed": {
   "value": 50,
   "label": "Neutral",
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54618630.07575801,
+   "volume": 54618630.075758,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
