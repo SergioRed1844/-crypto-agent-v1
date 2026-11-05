@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-05T11:28:50Z",
+ "generated_utc": "2026-11-05T12:21:57Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.381,
- "event_risk": 0.514,
+ "bias": -0.38,
+ "event_risk": 0.523,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
-  "Precaución: sesgo -0.38, riesgo de evento 0.51 en 72 h",
+  "Precaución: sesgo -0.38, riesgo de evento 0.52 en 72 h",
   "Stablecoins -4.26% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,12 +22,12 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.174,
+   "riesgo": 0.178,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   },
   {
    "id": "boe-2026-11-05",
@@ -50,7 +50,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.149,
+   "riesgo": 0.154,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.108,
+   "riesgo": 0.112,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -78,7 +78,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.07,
+   "riesgo": 0.073,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.374,
+   "aporte": -0.372,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.113,
+   "aporte": -0.112,
    "fuente": "noticia"
   },
   {
