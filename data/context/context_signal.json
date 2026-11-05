@@ -1,20 +1,34 @@
 {
- "generated_utc": "2026-11-05T15:23:05Z",
+ "generated_utc": "2026-11-05T16:18:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.378,
- "event_risk": 0.45,
+ "bias": -0.377,
+ "event_risk": 0.456,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
  "reasons": [
   "Precaución: sesgo -0.38",
-  "Stablecoins -4.26% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.27% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
+  {
+   "id": "nfp-2026-11-06",
+   "utc": "2026-11-06T13:30:00Z",
+   "title_es": "Empleo EE.UU./NFP (oct-2026)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.404,
+   "riesgo": 0.182,
+   "ventana": [
+    "2026-11-06T11:30:00Z",
+    "2026-11-06T14:30:00Z"
+   ],
+   "en_ventana": false
+  },
   {
    "id": "hype-core-contributor-unlock-2026-11-06",
    "utc": "2026-11-06T12:00:00Z",
@@ -28,20 +42,6 @@
     "2026-11-07T12:00:00Z"
    ],
    "en_ventana": true
-  },
-  {
-   "id": "nfp-2026-11-06",
-   "utc": "2026-11-06T13:30:00Z",
-   "title_es": "Empleo EE.UU./NFP (oct-2026)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.404,
-   "riesgo": 0.175,
-   "ventana": [
-    "2026-11-06T11:30:00Z",
-    "2026-11-06T14:30:00Z"
-   ],
-   "en_ventana": false
   },
   {
    "id": "banxico-2026-11-05",
@@ -64,7 +64,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.082,
+   "riesgo": 0.085,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.365,
+   "aporte": -0.363,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.148,
+   "aporte": 0.147,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.26
+  "stablecoins_30d_pct": -4.27
  }
 }
