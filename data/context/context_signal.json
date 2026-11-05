@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-05T19:19:28Z",
+ "generated_utc": "2026-11-05T20:15:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.373,
- "event_risk": 0.479,
+ "bias": -0.372,
+ "event_risk": 0.486,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.206,
+   "riesgo": 0.214,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.097,
+   "riesgo": 0.101,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.357,
+   "aporte": -0.355,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.119,
+   "aporte": 0.118,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.108,
+   "aporte": -0.107,
    "fuente": "noticia"
   },
   {
