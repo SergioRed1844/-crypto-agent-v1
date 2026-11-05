@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-05T20:15:08Z",
+ "generated_utc": "2026-11-05T21:14:15Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.372,
- "event_risk": 0.486,
+ "bias": -0.371,
+ "event_risk": 0.429,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Precaución: sesgo -0.37",
-  "Stablecoins -4.28% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.29% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.214,
+   "riesgo": 0.223,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -44,27 +44,13 @@
    "en_ventana": true
   },
   {
-   "id": "banxico-2026-11-05",
-   "utc": "2026-11-05T19:00:00Z",
-   "title_es": "Anuncio de política monetaria de Banxico (tasa objetivo 6.50% tras sep-2026)",
-   "category": "MONETARY_POLICY",
-   "status": "confirmed",
-   "magnitud": 0.116,
-   "riesgo": 0.116,
-   "ventana": [
-    "2026-11-05T13:00:00Z",
-    "2026-11-05T21:00:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
    "id": "prop-nueva-zelanda-elecciones-generales-2026-11-07",
    "utc": "2026-11-07T12:00:00Z",
    "title_es": "Nueva Zelanda: elecciones generales",
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.101,
+   "riesgo": 0.105,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -79,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.355,
+   "aporte": -0.353,
    "fuente": "noticia"
   },
   {
@@ -88,7 +74,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.161,
+   "aporte": -0.16,
    "fuente": "noticia"
   },
   {
@@ -97,7 +83,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.146,
+   "aporte": 0.145,
    "fuente": "noticia"
   },
   {
@@ -115,7 +101,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.107,
+   "aporte": -0.106,
    "fuente": "noticia"
   },
   {
@@ -158,6 +144,6 @@
    "fear_greed": 50
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.28
+  "stablecoins_30d_pct": -4.29
  }
 }
