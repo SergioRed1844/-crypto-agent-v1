@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-05T15:19:16Z",
+ "generated_utc": "2026-11-05T15:23:05Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.378,
- "event_risk": 0.449,
+ "event_risk": 0.45,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.174,
+   "riesgo": 0.175,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
