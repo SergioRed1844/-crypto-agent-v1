@@ -4,7 +4,7 @@
 
 **Inicio:** 16-Oct 12:25 (Monterrey) · **Actualizado:** 04-Nov 21:30 · **Día 19.4** · **Estado:** corriendo
 
-Última vela 4H revisada: 04-Nov 18:00 · señales técnicas desde el inicio: 100 · corridas: 650. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
+Última vela 4H revisada: 04-Nov 18:00 · señales técnicas desde el inicio: 100 · corridas: 651. Sin señal = las reglas no vieron setup (p.ej. BTC sin tendencia diaria alcista); es normal pasar días sin operar en swing.
 
 | Portafolio | Trades | Ganadas | Expectativa R | PF | R:R promedio | Cerrado USDT | Flotante USDT | Máx DD USDT | Abiertas |
 |---|---|---|---|---|---|---|---|---|---|
