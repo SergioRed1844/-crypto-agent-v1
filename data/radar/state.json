@@ -39,7 +39,6 @@
   }
  },
  "runs": [
-  "2026-11-03T05:10:31+00:00",
   "2026-11-03T06:09:36+00:00",
   "2026-11-03T07:08:42+00:00",
   "2026-11-03T08:07:41+00:00",
@@ -98,13 +97,14 @@
   "2026-11-04T23:34:05+00:00",
   "2026-11-05T00:31:06+00:00",
   "2026-11-05T00:32:41+00:00",
-  "2026-11-05T01:31:40+00:00"
+  "2026-11-05T01:31:40+00:00",
+  "2026-11-05T02:30:47+00:00"
  ],
- "last_scan_utc": "2026-11-05T01:31:40+00:00",
+ "last_scan_utc": "2026-11-05T02:30:47+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "AC.MX": {
@@ -129,7 +129,7 @@
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "ASURB.MX": {
@@ -169,7 +169,7 @@
   },
   "DIA": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "DOGE": {
@@ -204,7 +204,7 @@
   },
   "GLD": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "GMEXICOB.MX": {
@@ -214,7 +214,7 @@
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "GRUMAB.MX": {
@@ -224,12 +224,12 @@
   },
   "IWM": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "KIMBERA.MX": {
@@ -259,12 +259,12 @@
   },
   "META": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "MXN=X": {
@@ -279,7 +279,7 @@
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "OMAB.MX": {
@@ -299,12 +299,12 @@
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "SOL": {
@@ -314,7 +314,7 @@
   },
   "SPY": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "TRX": {
@@ -324,7 +324,7 @@
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "WALMEX.MX": {
@@ -334,52 +334,52 @@
   },
   "WMT": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-11-03",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XRP": {
@@ -489,12 +489,43 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-05T00:32:26Z",
+   "last": "2026-11-05T01:31:30Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
- "last_candidates": [],
+ "last_candidates": [
+  {
+   "sym": "XLE",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-04",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.3 pp < 5 pp"
+   ],
+   "p": 0.399,
+   "base": 0.355,
+   "ret": 0.0029,
+   "h": 7
+  },
+  {
+   "sym": "XOM",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-04",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+   ],
+   "p": 0.387,
+   "base": 0.345,
+   "ret": 0.003,
+   "h": 7
+  }
+ ],
  "digest_issue": {
   "2026-10": 5,
   "2026-11": 11
