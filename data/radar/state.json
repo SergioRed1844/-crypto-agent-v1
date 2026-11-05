@@ -1,5 +1,57 @@
 {
- "alerts": [],
+ "alerts": [
+  {
+   "sym": "DIA",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "h": 30,
+   "p": 0.3573,
+   "q10": 0.1665,
+   "base": 0.2571,
+   "ret": 0.0165,
+   "price": 514.27001953125,
+   "sent_utc": "2026-11-05T22:13:29+00:00",
+   "sent": {
+    "issue": 15
+   },
+   "outcome": null
+  },
+  {
+   "sym": "XLI",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "h": 30,
+   "p": 0.4095,
+   "q10": 0.2182,
+   "base": 0.3185,
+   "ret": 0.017,
+   "price": 162.47000122070312,
+   "sent_utc": "2026-11-05T22:13:29+00:00",
+   "sent": {
+    "issue": 16
+   },
+   "outcome": null
+  },
+  {
+   "sym": "NVDA",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "h": 30,
+   "p": 0.5599,
+   "q10": 0.3611,
+   "base": 0.4746,
+   "ret": 0.0402,
+   "price": 181.60000610351562,
+   "sent_utc": "2026-11-05T22:13:29+00:00",
+   "sent": {
+    "issue": 17
+   },
+   "outcome": null
+  }
+ ],
  "seen": {
   "AVAX|PULLBACK_TENDENCIA|2026-10-17": {
    "level": "VIGILANCIA",
@@ -36,10 +88,61 @@
   "XOM|PULLBACK_TENDENCIA|2026-11-04": {
    "level": "VIGILANCIA",
    "utc": "2026-11-04T21:35:14+00:00"
+  },
+  "DIA|PANICO_SIN_DANO|2026-11-05": {
+   "level": "ALERTA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "XLI|PANICO_SIN_DANO|2026-11-05": {
+   "level": "ALERTA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "NVDA|PANICO_SIN_DANO|2026-11-05": {
+   "level": "ALERTA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "SPY|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "QQQ|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "IWM|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "XLK|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "XLF|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "XLY|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "SMH|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "SMH|CAPITULACION|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "TSLA|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
+  },
+  "JPM|PANICO_SIN_DANO|2026-11-05": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-05T22:13:29+00:00"
   }
  },
  "runs": [
-  "2026-11-04T00:53:12+00:00",
   "2026-11-04T01:52:20+00:00",
   "2026-11-04T02:51:35+00:00",
   "2026-11-04T03:13:16+00:00",
@@ -98,9 +201,10 @@
   "2026-11-05T19:15:58+00:00",
   "2026-11-05T19:16:42+00:00",
   "2026-11-05T20:15:25+00:00",
-  "2026-11-05T21:14:27+00:00"
+  "2026-11-05T21:14:27+00:00",
+  "2026-11-05T22:13:29+00:00"
  ],
- "last_scan_utc": "2026-11-05T21:14:27+00:00",
+ "last_scan_utc": "2026-11-05T22:13:29+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -489,12 +593,94 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-05T20:15:08Z",
+   "last": "2026-11-05T21:14:15Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
  "last_candidates": [
+  {
+   "sym": "SPY",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.34,
+   "base": 0.273,
+   "ret": 0.0166,
+   "h": 30
+  },
+  {
+   "sym": "QQQ",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.451,
+   "base": 0.37,
+   "ret": 0.0183,
+   "h": 30
+  },
+  {
+   "sym": "IWM",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.431,
+   "base": 0.349,
+   "ret": 0.0174,
+   "h": 30
+  },
+  {
+   "sym": "DIA",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "ALERTA",
+   "why": [],
+   "p": 0.357,
+   "base": 0.257,
+   "ret": 0.0165,
+   "h": 30
+  },
+  {
+   "sym": "XLK",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.444,
+   "base": 0.359,
+   "ret": 0.0185,
+   "h": 30
+  },
+  {
+   "sym": "XLF",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.405,
+   "base": 0.321,
+   "ret": 0.0153,
+   "h": 30
+  },
   {
    "sym": "XLE",
    "cls": "us",
@@ -511,6 +697,100 @@
    "h": 7
   },
   {
+   "sym": "XLY",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.389,
+   "base": 0.315,
+   "ret": 0.0184,
+   "h": 30
+  },
+  {
+   "sym": "XLI",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "ALERTA",
+   "why": [],
+   "p": 0.409,
+   "base": 0.318,
+   "ret": 0.017,
+   "h": 30
+  },
+  {
+   "sym": "SMH",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "tope de 3 alertas por semana alcanzado"
+   ],
+   "p": 0.499,
+   "base": 0.419,
+   "ret": 0.0227,
+   "h": 30
+  },
+  {
+   "sym": "SMH",
+   "cls": "us",
+   "sid": "CAPITULACION",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "la búsqueda de noticias sugiere causa fundamental propia del activo"
+   ],
+   "p": 0.474,
+   "base": 0.377,
+   "ret": 0.0121,
+   "h": 7
+  },
+  {
+   "sym": "NVDA",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "ALERTA",
+   "why": [],
+   "p": 0.56,
+   "base": 0.475,
+   "ret": 0.0402,
+   "h": 30
+  },
+  {
+   "sym": "TSLA",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)"
+   ],
+   "p": 0.516,
+   "base": 0.417,
+   "ret": 0.0079,
+   "h": 7
+  },
+  {
+   "sym": "JPM",
+   "cls": "us",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-05",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)"
+   ],
+   "p": 0.397,
+   "base": 0.305,
+   "ret": 0.0038,
+   "h": 7
+  },
+  {
    "sym": "XOM",
    "cls": "us",
    "sid": "PULLBACK_TENDENCIA",
@@ -522,7 +802,7 @@
    ],
    "p": 0.386,
    "base": 0.345,
-   "ret": 0.003,
+   "ret": 0.0029,
    "h": 7
   }
  ],
@@ -531,5 +811,9 @@
   "2026-11": 11
  },
  "last_digest_date": "2026-11-05",
- "notify_log": []
+ "notify_log": [
+  "issue #15 creado",
+  "issue #16 creado",
+  "issue #17 creado"
+ ]
 }
