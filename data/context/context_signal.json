@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-05T02:44:22Z",
+ "generated_utc": "2026-11-05T03:29:39Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.389,
- "event_risk": 0.407,
+ "bias": -0.388,
+ "event_risk": 0.417,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 65,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.144,
+   "riesgo": 0.149,
    "ventana": [
     "2026-11-05T06:00:00Z",
     "2026-11-05T14:00:00Z"
@@ -36,7 +36,7 @@
    "category": "CRYPTO_SUPPLY",
    "status": "expected",
    "magnitud": 0.255,
-   "riesgo": 0.121,
+   "riesgo": 0.125,
    "ventana": [
     "2026-11-05T12:00:00Z",
     "2026-11-07T12:00:00Z"
@@ -50,7 +50,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.103,
+   "riesgo": 0.107,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.116,
-   "riesgo": 0.075,
+   "riesgo": 0.078,
    "ventana": [
     "2026-11-05T13:00:00Z",
     "2026-11-05T21:00:00Z"
@@ -78,7 +78,7 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.049,
+   "riesgo": 0.05,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.394,
+   "aporte": -0.392,
    "fuente": "noticia"
   },
   {
@@ -120,7 +120,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.125,
+   "aporte": 0.124,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.119,
+   "aporte": -0.118,
    "fuente": "noticia"
   },
   {
@@ -156,7 +156,7 @@
    "title_es": "Rebote global del sector de inteligencia artificial impulsa el sentimiento cripto",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "pro",
-   "aporte": 0.088,
+   "aporte": 0.087,
    "fuente": "noticia"
   }
  ],
