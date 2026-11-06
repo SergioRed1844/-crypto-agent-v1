@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T07:10:04Z",
+ "generated_utc": "2026-11-06T07:20:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.47,
- "event_risk": 0.52,
+ "bias": -0.474,
+ "event_risk": 0.522,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.338,
+   "riesgo": 0.34,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.333,
+   "aporte": -0.332,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.302,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -87,12 +87,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-hammack-favors-smaller-fed-moves-as-inflation-stay-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Hammack de la Fed apoya alzas menores ante persistencia inflacionaria",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.191,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-futures-slip-as-korean-data-center-ipo-faceplant-r-2026-10-20",
    "date": "2026-10-20",
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.156,
+   "aporte": -0.155,
    "fuente": "noticia"
   },
   {
@@ -110,7 +119,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.137,
    "fuente": "noticia"
   },
   {
@@ -120,15 +129,6 @@
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
    "aporte": 0.114,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-nasdaq-posts-biggest-daily-drop-in-19-months-on-fe-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores a regulación de IA",
-   "category": "TECH_AI_REGULATION",
-   "stance": "anti",
-   "aporte": -0.114,
    "fuente": "noticia"
   }
  ],
