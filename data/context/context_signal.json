@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T01:10:46Z",
+ "generated_utc": "2026-11-06T02:09:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.437,
- "event_risk": 0.466,
+ "bias": -0.436,
+ "event_risk": 0.474,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.263,
+   "riesgo": 0.274,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.345,
+   "aporte": -0.343,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.312,
+   "aporte": -0.305,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.104,
+   "aporte": -0.103,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Salidas de ETF de Ether rondan 1.100 millones de dólares en octubre",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.087,
+   "aporte": -0.086,
    "fuente": "noticia"
   }
  ],
