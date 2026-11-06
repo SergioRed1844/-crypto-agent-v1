@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-06T11:07:05Z",
- "state": "CAUTION",
- "veto_entries": false,
+ "generated_utc": "2026-11-06T12:01:09Z",
+ "state": "BLACKOUT",
+ "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
- "bias": -0.474,
- "event_risk": 0.564,
- "extra_confluence": 2,
+ "size_mult": 0.0,
+ "bias": -0.477,
+ "event_risk": 0.568,
+ "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 68,
+ "confidence": 69,
  "reasons": [
-  "Precaución: sesgo -0.47, riesgo de evento 0.56 en 72 h",
+  "Blackout por evento programado: Empleo EE.UU./NFP (oct-2026) (2026-11-06T13:30:00Z)",
   "Stablecoins -4.61% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,12 +22,12 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.398,
+   "riesgo": 0.404,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   },
   {
    "id": "hype-core-contributor-unlock-2026-11-06",
@@ -60,12 +60,12 @@
  ],
  "recent": [
   {
-   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
-   "date": "2026-11-04",
-   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
+   "id": "news-binance-6-3-billion-heist-to-prompt-closer-scrutin-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.325,
+   "aporte": -0.456,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.285,
+   "aporte": -0.284,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.278,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,16 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.196,
+   "aporte": -0.194,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
+   "date": "2026-11-04",
+   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.162,
    "fuente": "noticia"
   },
   {
@@ -101,7 +110,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.154,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -119,21 +128,12 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.127,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
-   "category": "CRYPTO_REGULATION",
-   "stance": "pro",
-   "aporte": 0.113,
+   "aporte": -0.124,
    "fuente": "noticia"
   }
  ],
  "alerts": [],
- "cause": "bias",
+ "cause": "blackout",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
