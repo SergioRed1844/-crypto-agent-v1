@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T13:00:16Z",
+ "updated_utc": "2026-11-06T13:59:17Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7191,6 +7191,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-06T11:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 4,
+   "title_es": "Kevin Warsh planea cambio histórico en la política monetaria de la Reserva Federal",
+   "source_url": "https://www.fool.com/investing/2026/11/06/fed-chair-kevin-warsh-planning-fed-policy-change/",
+   "source_title": "fool.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-chair-kevin-warsh-is-planning-to-break-45-year-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T11:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Mercados atentos a datos de inflación de EE. UU. tras caída tecnológica",
+   "source_url": "https://www.aol.com/articles/tech-swoon-roils-market-us-110622000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-as-tech-swoon-roils-market-us-inflation-data-on-ta-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "12:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T12:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Expectativa ante el informe de empleo en EE. UU. tras las elecciones",
+   "source_url": "https://abcnews.com/Business/jobs-report-provide-latest-snapshot-hiring-days-after/story?id=137874249",
+   "source_title": "abcnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-jobs-report-to-provide-latest-snapshot-of-hiring-d-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T13:00:00Z"
   }
  ]
 }
