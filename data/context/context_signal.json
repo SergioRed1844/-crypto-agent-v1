@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T15:57:42Z",
+ "generated_utc": "2026-11-06T16:56:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -51,7 +51,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.446,
+   "aporte": -0.443,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.252,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.158,
+   "aporte": -0.157,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.152,
+   "aporte": -0.151,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.115,
+   "aporte": -0.112,
    "fuente": "noticia"
   }
  ],
