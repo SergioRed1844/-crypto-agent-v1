@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T02:09:55Z",
+ "updated_utc": "2026-11-06T03:08:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6834,6 +6834,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-05T22:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Wall Street sufre fuerte castigo con caída del Dow Jones superior a 1.800 puntos",
+   "source_url": "https://woai.iheart.com/featured/san-antonios-first-news/content/2026-11-05-wall-street-takes-a-beating-as-dow-plunges-more-than-1800-points/",
+   "source_title": "woai.iheart.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-wall-street-takes-a-beating-as-dow-plunges-more-th-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T00:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El S&P 500 cae un 4,4% por desplome de acciones de IA tras victoria demócrata",
+   "source_url": "https://www.hngn.com/articles/273719/20261105/sp-500-drops-44-ai-stocks-sink-after-democratic-sweep.htm",
+   "source_title": "hngn.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-s-p-500-drops-4-4-as-ai-stocks-sink-after-democrat-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T02:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
+   "source_url": "https://www.businesstimes.com.sg/international/global/us-stocks-nasdaq-posts-biggest-drop-19-months-democrats-midterm-win-fuels-ai-regulation-fears",
+   "source_title": "businesstimes.com.sg",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-stocks-nasdaq-posts-biggest-drop-in-19-months-a-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T02:30:00Z"
   }
  ]
 }
