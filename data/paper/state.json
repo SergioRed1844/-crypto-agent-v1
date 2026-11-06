@@ -9,25 +9,13 @@
  "min_days": 14,
  "status": "corriendo",
  "last_bar": {
-  "BTCUSDT": "2026-11-05 20:00:00+00:00",
-  "ETHUSDT": "2026-11-05 20:00:00+00:00",
-  "SOLUSDT": "2026-11-05 20:00:00+00:00"
+  "BTCUSDT": "2026-11-06 00:00:00+00:00",
+  "ETHUSDT": "2026-11-06 00:00:00+00:00",
+  "SOLUSDT": "2026-11-06 00:00:00+00:00"
  },
  "portfolios": {
   "A": {
-   "positions": {
-    "BTCUSDT": {
-     "pair": "BTCUSDT",
-     "entry_time": "2026-11-04T08:00:00Z",
-     "entry": 78179.06999999999,
-     "sl": 75553.72738405,
-     "tp": 84742.42653988999,
-     "unit": 2779.0754133340442,
-     "risk_frac": 0.00375,
-     "cs": 6,
-     "last_checked": "2026-11-05T22:00:00Z"
-    }
-   },
+   "positions": {},
    "trades": [
     {
      "pair": "SOLUSDT",
@@ -93,9 +81,22 @@
      "usdt": -3.83,
      "cs": 6,
      "ctx_state": null
+    },
+    {
+     "pair": "BTCUSDT",
+     "entry_time": "2026-11-04T08:00:00Z",
+     "exit_time": "2026-11-06T00:00:00Z",
+     "entry": 78179.07,
+     "exit": 75515.95052,
+     "why": "SL",
+     "R": -1.014,
+     "pct": -0.3801,
+     "usdt": -3.8,
+     "cs": 6,
+     "ctx_state": null
     }
    ],
-   "streak": 5,
+   "streak": 6,
    "pause_until": null
   },
   "B": {
@@ -1524,7 +1525,7 @@
  "notified": [
   "trades_1"
  ],
- "runs": 677,
- "updated_utc": "2026-11-05T23:13:49Z",
+ "runs": 678,
+ "updated_utc": "2026-11-06T00:09:33Z",
  "n_signals": 100
 }
