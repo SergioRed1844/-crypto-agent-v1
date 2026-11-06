@@ -1,34 +1,20 @@
 {
- "generated_utc": "2026-11-06T13:59:17Z",
- "state": "BLACKOUT",
- "veto_entries": true,
+ "generated_utc": "2026-11-06T14:58:25Z",
+ "state": "CAUTION",
+ "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.0,
- "bias": -0.477,
- "event_risk": 0.568,
- "extra_confluence": 0,
+ "size_mult": 0.5,
+ "bias": -0.476,
+ "event_risk": 0.275,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
-  "Blackout por evento programado: Empleo EE.UU./NFP (oct-2026) (2026-11-06T13:30:00Z)",
-  "Stablecoins -4.61% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.48",
+  "Stablecoins -4.6% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
-  {
-   "id": "nfp-2026-11-06",
-   "utc": "2026-11-06T13:30:00Z",
-   "title_es": "Empleo EE.UU./NFP (oct-2026)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.404,
-   "riesgo": 0.404,
-   "ventana": [
-    "2026-11-06T11:30:00Z",
-    "2026-11-06T14:30:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "hype-core-contributor-unlock-2026-11-06",
    "utc": "2026-11-06T12:00:00Z",
@@ -65,7 +51,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.451,
+   "aporte": -0.448,
    "fuente": "noticia"
   },
   {
@@ -74,7 +60,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.281,
    "fuente": "noticia"
   },
   {
@@ -83,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -92,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -101,7 +87,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.16,
+   "aporte": -0.159,
    "fuente": "noticia"
   },
   {
@@ -128,12 +114,12 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.119,
+   "aporte": -0.117,
    "fuente": "noticia"
   }
  ],
  "alerts": [],
- "cause": "blackout",
+ "cause": "bias",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",
@@ -144,6 +130,6 @@
    "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.61
+  "stablecoins_30d_pct": -4.6
  }
 }
