@@ -143,7 +143,6 @@
   }
  },
  "runs": [
-  "2026-11-04T04:49:46+00:00",
   "2026-11-04T05:48:52+00:00",
   "2026-11-04T06:47:57+00:00",
   "2026-11-04T07:47:00+00:00",
@@ -202,13 +201,14 @@
   "2026-11-05T22:15:36+00:00",
   "2026-11-05T23:12:35+00:00",
   "2026-11-05T23:13:22+00:00",
-  "2026-11-06T00:11:56+00:00"
+  "2026-11-06T00:11:56+00:00",
+  "2026-11-06T01:10:54+00:00"
  ],
- "last_scan_utc": "2026-11-06T00:11:56+00:00",
+ "last_scan_utc": "2026-11-06T01:10:54+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "AC.MX": {
@@ -233,7 +233,7 @@
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "ASURB.MX": {
@@ -273,7 +273,7 @@
   },
   "DIA": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "DOGE": {
@@ -308,7 +308,7 @@
   },
   "GLD": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "GMEXICOB.MX": {
@@ -318,7 +318,7 @@
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "GRUMAB.MX": {
@@ -328,12 +328,12 @@
   },
   "IWM": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "KIMBERA.MX": {
@@ -363,12 +363,12 @@
   },
   "META": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "MXN=X": {
@@ -383,7 +383,7 @@
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "OMAB.MX": {
@@ -403,12 +403,12 @@
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "SOL": {
@@ -418,7 +418,7 @@
   },
   "SPY": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "TRX": {
@@ -428,7 +428,7 @@
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "WALMEX.MX": {
@@ -438,52 +438,52 @@
   },
   "WMT": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-11-05",
+   "last": "2026-11-04",
    "nota": "yahoo"
   },
   "XRP": {
@@ -593,84 +593,12 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-05T23:15:32Z",
+   "last": "2026-11-06T00:32:04Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
  "last_candidates": [
-  {
-   "sym": "SPY",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.34,
-   "base": 0.273,
-   "ret": 0.0166,
-   "h": 30
-  },
-  {
-   "sym": "QQQ",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.451,
-   "base": 0.37,
-   "ret": 0.0183,
-   "h": 30
-  },
-  {
-   "sym": "IWM",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.431,
-   "base": 0.349,
-   "ret": 0.0174,
-   "h": 30
-  },
-  {
-   "sym": "DIA",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.357,
-   "base": 0.257,
-   "ret": 0.0165,
-   "h": 30
-  },
-  {
-   "sym": "XLK",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.444,
-   "base": 0.359,
-   "ret": 0.0185,
-   "h": 30
-  },
-  {
-   "sym": "XLF",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.405,
-   "base": 0.321,
-   "ret": 0.0153,
-   "h": 30
-  },
   {
    "sym": "XLE",
    "cls": "us",
@@ -687,94 +615,6 @@
    "h": 7
   },
   {
-   "sym": "XLY",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.389,
-   "base": 0.315,
-   "ret": 0.0184,
-   "h": 30
-  },
-  {
-   "sym": "XLI",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.409,
-   "base": 0.318,
-   "ret": 0.017,
-   "h": 30
-  },
-  {
-   "sym": "SMH",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.499,
-   "base": 0.419,
-   "ret": 0.0227,
-   "h": 30
-  },
-  {
-   "sym": "SMH",
-   "cls": "us",
-   "sid": "CAPITULACION",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.474,
-   "base": 0.377,
-   "ret": 0.0121,
-   "h": 7
-  },
-  {
-   "sym": "NVDA",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.56,
-   "base": 0.475,
-   "ret": 0.0402,
-   "h": 30
-  },
-  {
-   "sym": "TSLA",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "VIGILANCIA",
-   "why": [
-    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)"
-   ],
-   "p": 0.516,
-   "base": 0.417,
-   "ret": 0.0079,
-   "h": 7
-  },
-  {
-   "sym": "JPM",
-   "cls": "us",
-   "sid": "PANICO_SIN_DANO",
-   "date": "2026-11-05",
-   "level": "VIGILANCIA",
-   "why": [
-    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)"
-   ],
-   "p": 0.397,
-   "base": 0.305,
-   "ret": 0.0038,
-   "h": 7
-  },
-  {
    "sym": "XOM",
    "cls": "us",
    "sid": "PULLBACK_TENDENCIA",
@@ -786,7 +626,7 @@
    ],
    "p": 0.386,
    "base": 0.345,
-   "ret": 0.0029,
+   "ret": 0.003,
    "h": 7
   }
  ],
