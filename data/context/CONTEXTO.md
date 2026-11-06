@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-06T11:01:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-06T11:07:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.56 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-11-06T11:01:53Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Empleo EE.UU./NFP (oct-2026) | 2026-11-06T13:30:00Z | Dato macro | 0.404 | 0.397 |
+| Empleo EE.UU./NFP (oct-2026) | 2026-11-06T13:30:00Z | Dato macro | 0.404 | 0.398 |
 | Hyperliquid (HYPE): siguiente desbloqueo para Core Contributors (23.8% de la asi | 2026-11-06T12:00:00Z | Oferta cripto (Mt. Gox, gobiernos, unlocks) | 0.255 | 0.178 |
 | Nueva Zelanda: elecciones generales | 2026-11-07T12:00:00Z | Elección | 0.235 | 0.118 |
 
@@ -17,7 +17,7 @@ Actualizado 2026-11-06T11:01:53Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.325 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.285 |
-| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.279 |
+| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.278 |
 | El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.196 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.154 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.139 |
@@ -31,27 +31,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-06T11:01:53Z",
+ "inicio": "2026-11-06T11:07:05Z",
  "onchain": {
-  "scanned": [
-   974795,
-   974802
-  ],
-  "calls": 167,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 40,
-  "eventos": 5,
-  "urgentes": 2,
+  "titulares": 0,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
-  "agregados": 1
+  "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
