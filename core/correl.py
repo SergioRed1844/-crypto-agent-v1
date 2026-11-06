@@ -13,13 +13,14 @@ import numpy as np
 import pandas as pd
 
 GRUPOS = {
-    "cartera": ["LLY", "SPCE", "HWM", "UBER", "GOOG", "ETH-USD", "DOGE-USD"],
+    "cartera": ["LLY", "SPCE", "HWM", "UBER", "GOOG", "VRT", "NVDA", "ETH-USD", "DOGE-USD"],
     "mercado": ["SPY", "QQQ", "VT", "^VIX", "TLT", "GLD", "MXN=X"],
     "petroleo_guerra": ["BZ=F", "CL=F", "XLE", "ITA", "LMT", "NOC", "RTX"],
     "centros_datos": ["SOXX", "NVDA", "AVGO", "VRT", "GEV", "PWR", "CEG"],
     "robots_humanoides": ["BOTZ", "APH", "TEL", "TSLA", "6324.T", "6268.T"],
     "solar_salud": ["ICLN", "FSLR", "XLV", "UNH"],
     "cripto": ["BTC-USD"],
+    "coberturas": ["CF", "NTR", "MOS", "XOM", "CVX", "COP", "OXY", "XOP", "BNO"],
 }
 # Choques geopolíticos con fecha conocida (día 0 = primer día hábil de EUA después del hecho).
 EVENTOS = {
@@ -30,6 +31,12 @@ EVENTOS = {
     "Israel ataca Irán (13-jun-2025)": "2025-06-13",
     "EUA bombardea sitios nucleares de Irán (22-jun-2025)": "2025-06-23",
     "EUA e Israel atacan Irán; inicia crisis de Ormuz (28-feb-2026)": "2026-03-02",
+}
+# Días de alivio (tregua o apertura de Ormuz), para medir cuánto pierde una cobertura si hay acuerdo.
+ALIVIOS = {
+    "Tregua Israel–Irán (anuncio 23-jun-2025 por la noche)": "2025-06-24",
+    "Tregua de 2 semanas y paso por Ormuz (7-abr-2026, 18:32 ET)": "2026-04-08",
+    "Irán ofrece reabrir Ormuz en 2 días (1 y 2-nov-2026)": "2026-11-02",
 }
 
 
@@ -93,11 +100,11 @@ def condicional(r: pd.DataFrame, px: pd.DataFrame, mask: pd.Series, horizontes=(
     return out
 
 
-def eventos(px: pd.DataFrame) -> dict:
+def eventos(px: pd.DataFrame, lista: dict | None = None) -> dict:
     us = px["SPY"].dropna().index
     p = px.reindex(us).ffill(limit=3)
     out = {}
-    for nombre, f in EVENTOS.items():
+    for nombre, f in (lista or EVENTOS).items():
         d = p.index[p.index >= pd.Timestamp(f)]
         if not len(d):
             continue
@@ -138,7 +145,9 @@ def main(out: str) -> int:
     vix = r["^VIX"]
     res["choque_petroleo"] = condicional(r, px, (brent >= 0.04).fillna(False))
     res["choque_vix"] = condicional(r, px, (vix >= 0.20).fillna(False))
+    res["alivio_petroleo"] = condicional(r, px, (brent <= -0.04).fillna(False))
     res["eventos"] = eventos(px)
+    res["alivios"] = eventos(px, ALIVIOS)
     # desempeño desde el inicio de la crisis de Ormuz y en el último mes
     us = px["SPY"].dropna().index
     p = px.reindex(us).ffill(limit=3)
@@ -149,6 +158,7 @@ def main(out: str) -> int:
     res["ultimo_mes"] = ret(str((hoy - pd.Timedelta(days=31)).date()))
     json.dump(res, open(o / "correl.json", "w"), indent=1, default=str)
     c1.round(3).to_csv(o / "corr_1a.csv")
+    r.loc["2024-01-01":].round(5).to_csv(o / "rets_diarios.csv")
     print(json.dumps({k: res[k] for k in ("desde_27feb26",)}, indent=1)[:3000])
     return 0
 
