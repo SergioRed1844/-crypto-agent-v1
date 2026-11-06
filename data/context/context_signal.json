@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T03:13:39Z",
+ "generated_utc": "2026-11-06T04:08:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.468,
- "event_risk": 0.483,
+ "bias": -0.467,
+ "event_risk": 0.491,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.287,
+   "riesgo": 0.298,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.34,
+   "aporte": -0.339,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.328,
+   "aporte": -0.322,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.149,
+   "aporte": -0.147,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.143,
+   "aporte": 0.142,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.116,
+   "aporte": 0.115,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.103,
+   "aporte": -0.102,
    "fuente": "noticia"
   }
  ],
