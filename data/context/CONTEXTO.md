@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-06T18:58:12Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-06T19:54:14Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -14,11 +14,11 @@ Actualizado 2026-11-06T18:58:12Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.438 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.278 |
-| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.236 |
-| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.183 |
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.155 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.435 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.277 |
+| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.232 |
+| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.182 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.154 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.150 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.136 |
 | Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.110 |
@@ -30,27 +30,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-06T18:58:12Z",
+ "inicio": "2026-11-06T19:54:14Z",
  "onchain": {
   "scanned": [
-   974840,
-   974841
+   974842,
+   974848
   ],
-  "calls": 39,
+  "calls": 144,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 1,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
