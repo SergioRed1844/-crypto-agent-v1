@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T22:51:29Z",
+ "generated_utc": "2026-11-06T22:55:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -78,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.178,
+   "aporte": -0.177,
    "fuente": "noticia"
   },
   {
