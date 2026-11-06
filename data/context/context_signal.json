@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T14:58:25Z",
+ "generated_utc": "2026-11-06T15:03:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.19,
+   "aporte": -0.189,
    "fuente": "noticia"
   },
   {
