@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T03:08:53Z",
+ "updated_utc": "2026-11-06T03:13:39Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6847,6 +6847,27 @@
    "confidence": 0.9,
    "origin": "gemini/GDELT",
    "id": "news-wall-street-takes-a-beating-as-dow-plunges-more-th-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T00:30:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
+   "source_url": "https://www.zerohedge.com/crypto/house-democrats-eye-their-own-crypto-market-structure-bill-bigger-sec-role-after-sweep",
+   "source_title": "zerohedge.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-house-democrats-eye-their-own-crypto-market-struct-2026-11-06",
    "date": "2026-11-06",
    "status": "happened",
    "scheduled": false,

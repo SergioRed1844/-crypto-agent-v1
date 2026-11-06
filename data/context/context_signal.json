@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-06T03:08:53Z",
+ "generated_utc": "2026-11-06T03:13:39Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.454,
- "event_risk": 0.482,
+ "bias": -0.468,
+ "event_risk": 0.483,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.45",
+  "Precaución: sesgo -0.47",
   "Stablecoins -4.62% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.286,
+   "riesgo": 0.287,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.341,
+   "aporte": -0.34,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,16 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.329,
+   "aporte": -0.328,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-house-democrats-eye-their-own-crypto-market-struct-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.291,
    "fuente": "noticia"
   },
   {
@@ -92,7 +101,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.15,
+   "aporte": -0.149,
    "fuente": "noticia"
   },
   {
@@ -120,15 +129,6 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.103,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-etfs-just-had-their-biggest-outflow-day-si-2026-10-24",
-   "date": "2026-10-24",
-   "title_es": "Los ETF de Bitcoin sufren su mayor día de salidas de capital desde junio",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.088,
    "fuente": "noticia"
   }
  ],
