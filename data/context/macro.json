@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T10:07:04Z",
+ "generated_utc": "2026-11-06T11:06:50Z",
  "fear_greed": {
   "value": 28,
   "label": "Fear",
@@ -7,9 +7,9 @@
   "avg_30d": 51.0
  },
  "stablecoins": {
-  "total_usd": 293673776278,
-  "chg_7d_pct": -2.01,
-  "chg_30d_pct": -4.62
+  "total_usd": 293706075908,
+  "chg_7d_pct": -2.0,
+  "chg_30d_pct": -4.61
  },
  "fred": {
   "status": "sin FRED_API_KEY"
@@ -18,19 +18,19 @@
   "fr-presidential-r1-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0005,
-    "No": 0.9995
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6985793.992871,
+   "volume": 6988632.972871,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
    "question": "Will Ségolène Royal win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.0005,
-    "No": 0.9995
+    "Yes": 0.001,
+    "No": 0.999
    },
-   "volume": 6985793.992871,
+   "volume": 6988632.972871,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54618630.07575801,
+   "volume": 54629630.075758,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {

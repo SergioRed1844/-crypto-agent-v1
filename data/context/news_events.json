@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T10:02:50Z",
+ "updated_utc": "2026-11-06T11:01:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7023,6 +7023,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-06T05:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "CENTRAL_BANK_RATES",
+   "country": "GB",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
+   "source_url": "https://www.journalgazette.net/ap/business/boe-hikes-rate-for-first-time-in-3-years-retreating-oil-prices-may-allow-for/article_aaeed8cb-4cd1-56d9-a660-7310666e9da4.html",
+   "source_title": "journalgazette.net",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-boe-hikes-rate-for-first-time-in-3-years-retreatin-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "09:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T09:30:00Z"
   }
  ]
 }
