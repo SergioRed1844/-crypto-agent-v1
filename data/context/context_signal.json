@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-05T23:15:32Z",
+ "generated_utc": "2026-11-06T00:11:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.439,
- "event_risk": 0.449,
+ "bias": -0.438,
+ "event_risk": 0.458,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
  "reasons": [
   "Precaución: sesgo -0.44",
-  "Stablecoins -4.29% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.3% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.243,
+   "riesgo": 0.253,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -50,12 +50,12 @@
    "category": "ELECTION",
    "status": "proposed",
    "magnitud": 0.235,
-   "riesgo": 0.114,
+   "riesgo": 0.118,
    "ventana": [
     "2026-11-06T00:00:00Z",
     "2026-11-08T12:00:00Z"
    ],
-   "en_ventana": false
+   "en_ventana": true
   }
  ],
  "recent": [
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.349,
+   "aporte": -0.347,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.324,
+   "aporte": -0.318,
    "fuente": "noticia"
   },
   {
@@ -141,9 +141,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 50
+   "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.29
+  "stablecoins_30d_pct": -4.3
  }
 }
