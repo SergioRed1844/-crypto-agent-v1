@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T12:01:09Z",
+ "generated_utc": "2026-11-06T13:00:16Z",
  "state": "BLACKOUT",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.456,
+   "aporte": -0.454,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.284,
+   "aporte": -0.283,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.273,
+   "aporte": -0.268,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.194,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.139,
+   "aporte": 0.138,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.124,
+   "aporte": -0.122,
    "fuente": "noticia"
   }
  ],
