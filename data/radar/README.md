@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-06T20:53:28+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
+Última corrida: **2026-11-06T21:52:34+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -12,9 +12,8 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | ALERTA | QQQ | Pánico sin daño real | 2026-11-05 | 30 d | 45% | 37% | +1.8% |
 | ALERTA | IWM | Pánico sin daño real | 2026-11-05 | 30 d | 43% | 35% | +1.7% |
 | ALERTA | DIA | Pánico sin daño real | 2026-11-05 | 30 d | 36% | 26% | +1.7% |
-| ALERTA | XLK | Pánico sin daño real | 2026-11-05 | 30 d | 44% | 36% | +1.9% |
+| ALERTA | XLK | Pánico sin daño real | 2026-11-05 | 30 d | 44% | 36% | +1.8% |
 | ALERTA | XLF | Pánico sin daño real | 2026-11-05 | 30 d | 40% | 32% | +1.5% |
-| VIGILANCIA | XLE | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 40% | 36% | +0.3% |
 | ALERTA | XLY | Pánico sin daño real | 2026-11-05 | 30 d | 39% | 32% | +1.8% |
 | ALERTA | XLI | Pánico sin daño real | 2026-11-05 | 30 d | 41% | 32% | +1.7% |
 | ALERTA | SMH | Pánico sin daño real | 2026-11-05 | 30 d | 50% | 42% | +2.3% |
@@ -22,7 +21,6 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | ALERTA | NVDA | Pánico sin daño real | 2026-11-05 | 30 d | 56% | 48% | +4.0% |
 | VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-05 | 7 d | 52% | 42% | +0.8% |
 | VIGILANCIA | JPM | Pánico sin daño real | 2026-11-05 | 7 d | 40% | 30% | +0.4% |
-| VIGILANCIA | XOM | Retroceso dentro de tendencia alcista | 2026-11-04 | 7 d | 39% | 34% | +0.3% |
 
 ## Alertas enviadas (últimas 15)
 
@@ -150,7 +148,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-06 | binance |
 | ^MXX | sí | 2026-11-06 | yahoo |
 | ^VIX | sí | 2026-11-06 | yahoo |
-| contexto_v42 | sí | 2026-11-06T19:54:14Z | CAUTION |
+| contexto_v42 | sí | 2026-11-06T21:01:59Z | CAUTION |
 | fear_greed | sí | 2026-11-06 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-05 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-05 | wikimedia |
