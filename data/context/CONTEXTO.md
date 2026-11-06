@@ -1,11 +1,11 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-06T21:52:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-06T22:51:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.48
-- Stablecoins -4.61% en 30 días (liquidez saliendo)
+- Precaución: sesgo -0.47
+- Stablecoins -4.6% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -14,14 +14,14 @@ Actualizado 2026-11-06T21:52:23Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.430 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.276 |
-| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.222 |
-| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.179 |
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.152 |
-| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.149 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.135 |
-| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.110 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.428 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.275 |
+| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.218 |
+| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.178 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.151 |
+| Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.148 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.134 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.109 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-06T21:52:23Z",
+ "inicio": "2026-11-06T22:51:29Z",
  "onchain": {
   "scanned": [
-   974858,
-   974862
+   974863,
+   974866
   ],
-  "calls": 130,
+  "calls": 140,
   "stopped": null,
   "nuevas": 0
  },

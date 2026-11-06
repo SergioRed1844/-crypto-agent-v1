@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T21:52:23Z",
+ "generated_utc": "2026-11-06T22:51:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -9,10 +9,10 @@
  "event_risk": 0.275,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 69,
+ "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.48",
-  "Stablecoins -4.61% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.47",
+  "Stablecoins -4.6% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -51,7 +51,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.43,
+   "aporte": -0.428,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.276,
+   "aporte": -0.275,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.222,
+   "aporte": -0.218,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.179,
+   "aporte": -0.178,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.152,
+   "aporte": -0.151,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.149,
+   "aporte": -0.148,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.135,
+   "aporte": 0.134,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
    "category": "CRYPTO_REGULATION",
    "stance": "pro",
-   "aporte": 0.11,
+   "aporte": 0.109,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.61
+  "stablecoins_30d_pct": -4.6
  }
 }
