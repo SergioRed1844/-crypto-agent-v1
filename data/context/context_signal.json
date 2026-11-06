@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-06T05:07:13Z",
+ "generated_utc": "2026-11-06T06:06:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.467,
- "event_risk": 0.5,
+ "bias": -0.471,
+ "event_risk": 0.509,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.47",
+  "Precaución: sesgo -0.47, riesgo de evento 0.51 en 72 h",
   "Stablecoins -4.61% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.31,
+   "riesgo": 0.323,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.337,
+   "aporte": -0.335,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.315,
+   "aporte": -0.309,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.289,
    "fuente": "noticia"
   },
   {
@@ -92,16 +92,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.157,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-markets-live-wall-street-closes-sharply-lower-as-a-2026-11-05",
-   "date": "2026-11-05",
-   "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.144,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -110,7 +101,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.142,
+   "aporte": 0.141,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-markets-live-wall-street-closes-sharply-lower-as-a-2026-11-05",
+   "date": "2026-11-05",
+   "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.141,
    "fuente": "noticia"
   },
   {
@@ -123,12 +123,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-the-binance-heist-took-30-minutes-the-groundwork-t-2026-11-03",
-   "date": "2026-11-03",
-   "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
-   "category": "HACK_SECURITY",
+   "id": "news-nasdaq-posts-biggest-daily-drop-in-19-months-on-fe-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores a regulación de IA",
+   "category": "TECH_AI_REGULATION",
    "stance": "anti",
-   "aporte": -0.102,
+   "aporte": -0.115,
    "fuente": "noticia"
   }
  ],

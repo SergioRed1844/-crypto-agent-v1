@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T05:07:13Z",
+ "updated_utc": "2026-11-06T06:06:19Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -6918,6 +6918,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-06T02:30:00Z"
+  },
+  {
+   "category": "TECH_AI_REGULATION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores a regulación de IA",
+   "source_url": "https://www.parkrapidsenterprise.com/news/national/nasdaq-posts-biggest-daily-drop-in-19-months-on-fears-of-ai-regulations",
+   "source_title": "parkrapidsenterprise.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-nasdaq-posts-biggest-daily-drop-in-19-months-on-fe-2026-11-06",
+   "date": "2026-11-06",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-06T05:30:00Z"
   }
  ]
 }
