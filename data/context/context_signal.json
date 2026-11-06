@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T16:56:47Z",
+ "generated_utc": "2026-11-06T17:55:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -51,7 +51,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.443,
+   "aporte": -0.441,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.187,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.157,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -105,16 +105,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.137,
+   "aporte": 0.136,
    "fuente": "noticia"
   },
   {
-   "id": "news-markets-live-wall-street-closes-sharply-lower-as-a-2026-11-05",
-   "date": "2026-11-05",
-   "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.112,
+   "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
+   "date": "2026-10-23",
+   "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
+   "category": "CRYPTO_REGULATION",
+   "stance": "pro",
+   "aporte": 0.111,
    "fuente": "noticia"
   }
  ],

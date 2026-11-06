@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-06T16:56:47Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-06T17:55:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -14,14 +14,14 @@ Actualizado 2026-11-06T16:56:47Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.443 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.280 |
-| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.246 |
-| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.187 |
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.157 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.441 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.279 |
+| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.241 |
+| El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.185 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.156 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.151 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.137 |
-| Wall Street cierra con fuertes caídas por venta masiva en el sector de IA | 2026-11-05 | anti | -0.112 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.136 |
+| Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cript | 2026-10-23 | pro | +0.111 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,21 +30,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-06T16:56:47Z",
+ "inicio": "2026-11-06T17:55:55Z",
  "onchain": {
   "scanned": [
-   974825,
-   974829
+   974830,
+   974833
   ],
-  "calls": 149,
+  "calls": 116,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 32,
-  "eventos": 3,
-  "urgentes": 3,
+  "titulares": 20,
+  "eventos": 2,
+  "urgentes": 2,
   "metodo": "gemini",
   "agregados": 0
  },
