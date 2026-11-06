@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-06T00:11:50Z",
+ "generated_utc": "2026-11-06T00:32:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.438,
- "event_risk": 0.458,
+ "event_risk": 0.461,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.253,
+   "riesgo": 0.256,
    "ventana": [
     "2026-11-06T11:30:00Z",
     "2026-11-06T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.347,
+   "aporte": -0.346,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.318,
+   "aporte": -0.316,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "El robo a Binance tomó 30 minutos; la preparación previa llevó días",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.105,
+   "aporte": -0.104,
    "fuente": "noticia"
   },
   {
