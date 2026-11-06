@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-06T15:03:29Z",
+ "generated_utc": "2026-11-06T15:21:39Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -51,7 +51,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.448,
+   "aporte": -0.447,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.159,
+   "aporte": -0.158,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.138,
+   "aporte": 0.137,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Wall Street cierra con fuertes caídas por venta masiva en el sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.117,
+   "aporte": -0.116,
    "fuente": "noticia"
   }
  ],
