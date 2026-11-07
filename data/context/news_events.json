@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T06:48:26Z",
+ "updated_utc": "2026-11-07T07:43:42Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7380,6 +7380,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T05:00:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Petróleo sube ante temores de nuevos ataques de EE.UU. en Irán",
+   "source_url": "https://arynews.tv/crude-gains-on-worries-about-renewed-us-attacks-on-iran",
+   "source_title": "arynews.tv",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-crude-gains-on-worries-about-renewed-us-attacks-on-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "06:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T06:30:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
+   "source_url": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-street-grapples-with-5-7-trillion-rout-as-ai-bets-unwind/articleshow/135628032.cms",
+   "source_title": "economictimes.indiatimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-wall-street-grapples-with-5-7-trillion-rout-as-ai-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "06:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T06:30:00Z"
   }
  ]
 }
