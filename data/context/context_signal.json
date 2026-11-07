@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T03:47:08Z",
+ "generated_utc": "2026-11-07T04:46:15Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.477,
- "event_risk": 0.3,
+ "event_risk": 0.301,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -50,7 +50,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.02,
+   "riesgo": 0.021,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.415,
+   "aporte": -0.413,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.261,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -115,16 +115,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.17,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
-   "date": "2026-11-04",
-   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.147,
+   "aporte": -0.169,
    "fuente": "noticia"
   },
   {
@@ -132,6 +123,15 @@
    "date": "2026-10-20",
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
+   "stance": "anti",
+   "aporte": -0.146,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
+   "date": "2026-11-04",
+   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
+   "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.146,
    "fuente": "noticia"
