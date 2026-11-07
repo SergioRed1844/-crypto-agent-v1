@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T09:41:43Z",
+ "generated_utc": "2026-11-07T10:40:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.479,
- "event_risk": 0.307,
+ "bias": -0.48,
+ "event_risk": 0.309,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -50,7 +50,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.026,
+   "riesgo": 0.027,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -64,7 +64,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.568,
+   "aporte": -0.567,
    "fuente": "noticia"
   },
   {
@@ -88,16 +88,16 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.401,
+   "aporte": -0.399,
    "fuente": "noticia"
   },
   {
-   "id": "news-dollar-jumps-after-strong-us-payrolls-report-2026-11-07",
+   "id": "news-us-adds-165-000-jobs-in-october-the-arkansas-democ-2026-11-07",
    "date": "2026-11-07",
-   "title_es": "El dólar sube tras sólido informe de nóminas en EE. UU.",
+   "title_es": "EE. UU. añade 165.000 empleos en octubre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.285,
+   "aporte": -0.328,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.266,
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.258,
+   "aporte": -0.257,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.142,
+   "aporte": -0.141,
    "fuente": "noticia"
   },
   {

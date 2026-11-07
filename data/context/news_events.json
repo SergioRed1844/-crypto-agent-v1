@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T09:41:43Z",
+ "updated_utc": "2026-11-07T10:40:47Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7422,6 +7422,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T06:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "employment",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "EE. UU. añade 165.000 empleos en octubre",
+   "source_url": "https://www.arkansasonline.com/news/2026/nov/07/us-adds-165000-jobs-in-october/",
+   "source_title": "arkansasonline.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-adds-165-000-jobs-in-october-the-arkansas-democ-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T10:00:00Z"
   }
  ]
 }
