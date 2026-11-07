@@ -1,18 +1,17 @@
 {
- "generated_utc": "2026-11-07T15:36:29Z",
+ "generated_utc": "2026-11-07T16:35:33Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.479,
- "event_risk": 0.188,
+ "bias": -0.379,
+ "event_risk": 0.191,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 69,
+ "confidence": 65,
  "reasons": [
-  "Precaución: sesgo -0.48",
-  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.38"
  ],
  "upcoming": [
   {
@@ -36,7 +35,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.033,
+   "riesgo": 0.035,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,7 +49,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -64,7 +63,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -79,7 +78,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.558,
+   "aporte": -0.557,
    "fuente": "noticia"
   },
   {
@@ -88,7 +87,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.387,
+   "aporte": -0.385,
    "fuente": "noticia"
   },
   {
@@ -97,7 +96,7 @@
    "title_es": "EE. UU. añade 165.000 empleos en octubre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.296,
+   "aporte": -0.29,
    "fuente": "noticia"
   },
   {
@@ -115,7 +114,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.253,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {
@@ -124,7 +123,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.154,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -133,7 +132,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.137,
+   "aporte": -0.136,
    "fuente": "noticia"
   },
   {
@@ -158,6 +157,6 @@
    "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.9
+  "stablecoins_30d_pct": null
  }
 }
