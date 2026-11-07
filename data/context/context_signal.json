@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-07T22:59:33Z",
+ "generated_utc": "2026-11-07T23:29:23Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.212,
+ "event_risk": 0.214,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.045,
+   "riesgo": 0.046,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.033,
+   "riesgo": 0.034,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.546,
+   "aporte": -0.545,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.371,
+   "aporte": -0.369,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.31,
+   "aporte": -0.307,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.248,
+   "aporte": -0.247,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.169,
+   "aporte": -0.168,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.9
+  "stablecoins_30d_pct": -4.89
  }
 }
