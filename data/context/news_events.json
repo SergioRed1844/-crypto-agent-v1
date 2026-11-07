@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T10:43:18Z",
+ "updated_utc": "2026-11-07T11:40:01Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7443,6 +7443,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T10:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "NFP / Labor Market",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El crecimiento del empleo en EE. UU. supera previsiones en octubre pero persisten dudas",
+   "source_url": "http://www.iranherald.com/news/279418268/us-job-growth-beats-expectations-in-october-but-labor-market-concerns-persist",
+   "source_title": "iranherald.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-job-growth-beats-expectations-in-october-but-l-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T11:30:00Z"
   }
  ]
 }
