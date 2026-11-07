@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T15:05:24Z",
+ "generated_utc": "2026-11-07T15:36:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.186,
+ "event_risk": 0.188,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.023,
+   "riesgo": 0.024,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.559,
+   "aporte": -0.558,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.388,
+   "aporte": -0.387,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "EE. UU. añade 165.000 empleos en octubre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.299,
+   "aporte": -0.296,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.261,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.155,
+   "aporte": -0.154,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.137,
    "fuente": "noticia"
   },
   {
