@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T05:45:22Z",
+ "generated_utc": "2026-11-07T06:44:20Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.478,
- "event_risk": 0.302,
+ "event_risk": 0.304,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -50,7 +50,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.022,
+   "riesgo": 0.023,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -64,7 +64,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.016,
+   "riesgo": 0.017,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.411,
+   "aporte": -0.408,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El dólar sube tras sólido informe de nóminas en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.31,
+   "aporte": -0.303,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.269,
+   "aporte": -0.268,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.166,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.132,
+   "aporte": 0.131,
    "fuente": "noticia"
   }
  ],

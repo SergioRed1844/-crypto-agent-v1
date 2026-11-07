@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-07T05:48:45Z",
+ "generated_utc": "2026-11-07T06:48:13Z",
  "fear_greed": {
   "value": 25,
   "label": "Extreme Fear",
@@ -7,8 +7,8 @@
   "avg_30d": 49.7
  },
  "stablecoins": {
-  "total_usd": 292281528172,
-  "chg_7d_pct": -2.23,
+  "total_usd": 292262494719,
+  "chg_7d_pct": -2.24,
   "chg_30d_pct": -4.9
  },
  "fred": {
@@ -39,7 +39,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 54629630.075757995,
+   "volume": 54629630.07575802,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 55186259.99873299,
+   "volume": 55186259.998732984,
    "slug": "presidential-election-winner-2028"
   }
  },
