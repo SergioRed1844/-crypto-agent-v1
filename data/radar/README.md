@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-06T23:50:56+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
+Última corrida: **2026-11-07T00:50:04+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -65,7 +65,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Miedo de hogares (FEARS) alto | bmv | 90 d | 3 | 62% | 34% | 34% | 98% | +0.3% |
 | Miedo de hogares (FEARS) alto | us | 7 d | 13 | 39% | 24% | 25% | 92% | +0.1% |
 | Miedo de hogares (FEARS) alto | us | 30 d | 11 | 43% | 32% | 33% | 93% | +0.3% |
-| Miedo de hogares (FEARS) alto | us | 90 d | 11 | 48% | 39% | 40% | 93% | +0.3% |
+| Miedo de hogares (FEARS) alto | us | 90 d | 11 | 48% | 39% | 40% | 93% | +0.2% |
 | Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 61% | +0.5% |
 | Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 67% | +0.2% |
 | Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 67% | +0.1% |
@@ -73,7 +73,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 83% | -0.8% |
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 34% | 38% | +0.3% |
-| Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
+| Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 46% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 46% | +1.1% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 17% | +0.6% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.5% |
@@ -91,21 +91,21 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 |---|---|---|---|
 | AAPL | sí | 2026-11-06 | yahoo |
 | AC.MX | sí | 2026-11-06 | yahoo |
-| ADA | sí | 2026-11-06 | binance |
+| ADA | sí | 2026-11-07 | binance |
 | ALSEA.MX | sí | 2026-11-06 | yahoo |
 | AMXB.MX | sí | 2026-11-06 | yahoo |
 | AMZN | sí | 2026-11-06 | yahoo |
 | ASURB.MX | sí | 2026-11-06 | yahoo |
-| AVAX | sí | 2026-11-06 | binance |
+| AVAX | sí | 2026-11-07 | binance |
 | BBAJIOO.MX | sí | 2026-11-06 | yahoo |
-| BCH | sí | 2026-11-06 | binance |
+| BCH | sí | 2026-11-07 | binance |
 | BIMBOA.MX | sí | 2026-11-06 | yahoo |
-| BTC | sí | 2026-11-06 | binance |
+| BTC | sí | 2026-11-07 | binance |
 | CEMEXCPO.MX | sí | 2026-11-06 | yahoo |
 | DIA | sí | 2026-11-06 | yahoo |
-| DOGE | sí | 2026-11-06 | binance |
-| DOT | sí | 2026-11-06 | binance |
-| ETH | sí | 2026-11-06 | binance |
+| DOGE | sí | 2026-11-07 | binance |
+| DOT | sí | 2026-11-07 | binance |
+| ETH | sí | 2026-11-07 | binance |
 | FEMSAUBD.MX | sí | 2026-11-06 | yahoo |
 | GAPB.MX | sí | 2026-11-06 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-06 | yahoo |
@@ -117,9 +117,9 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | JPM | sí | 2026-11-06 | yahoo |
 | KIMBERA.MX | sí | 2026-11-06 | yahoo |
 | KOFUBL.MX | sí | 2026-11-06 | yahoo |
-| LINK | sí | 2026-11-06 | binance |
+| LINK | sí | 2026-11-07 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-06 | yahoo |
-| LTC | sí | 2026-11-06 | binance |
+| LTC | sí | 2026-11-07 | binance |
 | META | sí | 2026-11-06 | yahoo |
 | MSFT | sí | 2026-11-06 | yahoo |
 | MXN=X | sí | 2026-11-06 | yahoo |
@@ -130,9 +130,9 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | PINFRA.MX | sí | 2026-11-06 | yahoo |
 | QQQ | sí | 2026-11-06 | yahoo |
 | SMH | sí | 2026-11-06 | yahoo |
-| SOL | sí | 2026-11-06 | binance |
+| SOL | sí | 2026-11-07 | binance |
 | SPY | sí | 2026-11-06 | yahoo |
-| TRX | sí | 2026-11-06 | binance |
+| TRX | sí | 2026-11-07 | binance |
 | TSLA | sí | 2026-11-06 | yahoo |
 | WALMEX.MX | sí | 2026-11-06 | yahoo |
 | WMT | sí | 2026-11-06 | yahoo |
@@ -145,11 +145,11 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XLV | sí | 2026-11-06 | yahoo |
 | XLY | sí | 2026-11-06 | yahoo |
 | XOM | sí | 2026-11-06 | yahoo |
-| XRP | sí | 2026-11-06 | binance |
+| XRP | sí | 2026-11-07 | binance |
 | ^MXX | sí | 2026-11-06 | yahoo |
 | ^VIX | sí | 2026-11-06 | yahoo |
-| contexto_v42 | sí | 2026-11-06T22:55:08Z | CAUTION |
-| fear_greed | sí | 2026-11-06 | alternative.me |
+| contexto_v42 | sí | 2026-11-06T23:50:44Z | CAUTION |
+| fear_greed | sí | 2026-11-07 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-05 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-05 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-05 | wikimedia |
