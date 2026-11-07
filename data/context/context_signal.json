@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-07T18:33:40Z",
+ "generated_utc": "2026-11-07T18:37:57Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.479,
+ "bias": -0.48,
  "event_risk": 0.197,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.554,
+   "aporte": -0.553,
    "fuente": "noticia"
   },
   {
@@ -119,12 +119,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-boe-hikes-rate-for-first-time-in-3-years-retreatin-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
+   "id": "news-strong-us-jobs-report-raises-expectations-of-decem-2026-11-07",
+   "date": "2026-11-07",
+   "title_es": "Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.151,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
