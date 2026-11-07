@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-06T23:50:44Z",
+ "generated_utc": "2026-11-07T00:49:48Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.475,
- "event_risk": 0.275,
+ "event_risk": 0.297,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -4.61% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.6% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -42,6 +42,34 @@
     "2026-11-08T12:00:00Z"
    ],
    "en_ventana": true
+  },
+  {
+   "id": "us-china-truce-expiry-2026-11-10",
+   "utc": "2026-11-10T12:00:00Z",
+   "title_es": "Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025)",
+   "category": "TRADE",
+   "status": "expected",
+   "magnitud": 0.303,
+   "riesgo": 0.018,
+   "ventana": [
+    "2026-11-09T12:00:00Z",
+    "2026-11-11T06:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "us-global-us-china-truce-expiry-2026-11-10",
+   "utc": "2026-11-10T12:00:00Z",
+   "title_es": "Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recíprocos elevados, exclusiones Sección 301 y (implícito) de la regla BIS de 'afiliadas' sobre controles de exportación",
+   "category": "TECH_AI_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.254,
+   "riesgo": 0.013,
+   "ventana": [
+    "2026-11-10T00:00:00Z",
+    "2026-11-11T00:00:00Z"
+   ],
+   "en_ventana": false
   }
  ],
  "recent": [
@@ -51,7 +79,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.425,
+   "aporte": -0.423,
    "fuente": "noticia"
   },
   {
@@ -60,7 +88,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.274,
+   "aporte": -0.273,
    "fuente": "noticia"
   },
   {
@@ -69,7 +97,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.213,
+   "aporte": -0.209,
    "fuente": "noticia"
   },
   {
@@ -78,7 +106,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
@@ -87,7 +115,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.151,
+   "aporte": -0.15,
    "fuente": "noticia"
   },
   {
@@ -127,9 +155,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 28
+   "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.61
+  "stablecoins_30d_pct": -4.6
  }
 }
