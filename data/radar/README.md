@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-07T00:50:04+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
+Última corrida: **2026-11-07T01:49:03+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-06
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -120,7 +120,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | LINK | sí | 2026-11-07 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-06 | yahoo |
 | LTC | sí | 2026-11-07 | binance |
-| META | sí | 2026-11-06 | yahoo |
+| META | sí | 2026-11-05 | yahoo |
 | MSFT | sí | 2026-11-06 | yahoo |
 | MXN=X | sí | 2026-11-06 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-06 | yahoo |
@@ -148,7 +148,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-07 | binance |
 | ^MXX | sí | 2026-11-06 | yahoo |
 | ^VIX | sí | 2026-11-06 | yahoo |
-| contexto_v42 | sí | 2026-11-06T23:50:44Z | CAUTION |
+| contexto_v42 | sí | 2026-11-07T01:09:52Z | CAUTION |
 | fear_greed | sí | 2026-11-07 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-05 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-05 | wikimedia |
