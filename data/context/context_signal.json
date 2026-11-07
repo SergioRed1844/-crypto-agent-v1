@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-07T01:48:52Z",
+ "generated_utc": "2026-11-07T02:47:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.474,
- "event_risk": 0.298,
+ "event_risk": 0.299,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.91% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -50,7 +50,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.42,
+   "aporte": -0.418,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.205,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.172,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.149,
+   "aporte": -0.148,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.9
+  "stablecoins_30d_pct": -4.91
  }
 }
