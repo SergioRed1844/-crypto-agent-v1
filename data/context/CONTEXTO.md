@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-07T02:47:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-07T02:51:25Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.30 · tamaño ×0.5 · compras permitidas
 
@@ -18,7 +18,7 @@ Actualizado 2026-11-07T02:47:55Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.418 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.272 |
-| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.201 |
+| El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras eleccio | 2026-11-06 | anti | -0.200 |
 | El Banco de Inglaterra sube los tipos por primera vez en 3 años | 2026-11-06 | anti | -0.172 |
 | Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.148 |
 | Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferencia | 2026-10-20 | anti | -0.147 |
@@ -32,13 +32,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-07T02:47:55Z",
+ "inicio": "2026-11-07T02:51:25Z",
  "onchain": {
-  "scanned": [
-   974875,
-   974881
-  ],
-  "calls": 84,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },

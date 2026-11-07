@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-07T02:47:55Z",
+ "generated_utc": "2026-11-07T02:51:25Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -97,7 +97,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
