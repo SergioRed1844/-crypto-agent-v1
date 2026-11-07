@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-07T02:51:25Z",
+ "generated_utc": "2026-11-07T03:47:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.474,
- "event_risk": 0.299,
+ "bias": -0.477,
+ "event_risk": 0.3,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 68,
+ "confidence": 69,
  "reasons": [
-  "Precaución: sesgo -0.47",
-  "Stablecoins -4.91% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.48",
+  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -64,7 +64,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.014,
+   "riesgo": 0.015,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.418,
+   "aporte": -0.415,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,16 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.272,
+   "aporte": -0.271,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
+   "date": "2026-11-07",
+   "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.262,
    "fuente": "noticia"
   },
   {
@@ -97,7 +106,7 @@
    "title_es": "El Nasdaq sufre su mayor caída en 19 meses por temores regulatorios tras elecciones",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.2,
+   "aporte": -0.197,
    "fuente": "noticia"
   },
   {
@@ -106,7 +115,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.172,
+   "aporte": -0.17,
    "fuente": "noticia"
   },
   {
@@ -115,7 +124,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.148,
+   "aporte": -0.147,
    "fuente": "noticia"
   },
   {
@@ -124,7 +133,7 @@
    "title_es": "Futuros caen por desplome de OPV tecnológica en Corea y ampliación de diferenciales franceses",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.147,
+   "aporte": -0.146,
    "fuente": "noticia"
   },
   {
@@ -133,16 +142,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.133,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-ramp-seeks-occ-trust-charter-for-digital-asset-cus-2026-10-23",
-   "date": "2026-10-23",
-   "title_es": "Ramp solicita licencia de fideicomiso fiduciario ante la OCC para custodia cripto",
-   "category": "CRYPTO_REGULATION",
-   "stance": "pro",
-   "aporte": 0.108,
+   "aporte": 0.132,
    "fuente": "noticia"
   }
  ],
@@ -158,6 +158,6 @@
    "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.91
+  "stablecoins_30d_pct": -4.9
  }
 }

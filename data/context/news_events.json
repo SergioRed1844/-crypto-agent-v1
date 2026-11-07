@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T02:51:25Z",
+ "updated_utc": "2026-11-07T03:47:08Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7275,6 +7275,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T00:00:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "infrastructure",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
+   "source_url": "https://www.pymnts.com/cryptocurrency/2026/nubank-mercado-pago-pause-crypto-operations-following-provider-issues/",
+   "source_title": "pymnts.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T00:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "employment",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "La contratación repunta: la economía estadounidense sumó 165.000 empleos el mes pasado",
+   "source_url": "https://www.ideastream.org/npr-news/2026-11-06/hiring-jumps-the-economy-added-165-000-jobs-last-month",
+   "source_title": "ideastream.org",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-hiring-jumps-the-economy-added-165-000-jobs-last-m-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T02:00:00Z"
   }
  ]
 }
