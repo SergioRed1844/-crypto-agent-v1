@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T01:09:52Z",
+ "updated_utc": "2026-11-07T01:48:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7254,6 +7254,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-06T13:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_VOLATILITY",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Nasdaq rebota tras una venta de 2,5 billones de dólares ante señales de volatilidad",
+   "source_url": "https://finchannel.com/did-the-stock-market-crash-today-editorial-scenario-probabilities-for-next-week/140827/featured/2026/11/",
+   "source_title": "finchannel.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-did-the-stock-market-crash-today-nasdaq-rebounds-a-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T00:00:00Z"
   }
  ]
 }
