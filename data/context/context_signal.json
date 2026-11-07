@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-07T06:44:20Z",
+ "generated_utc": "2026-11-07T06:48:26Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -133,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.145,
+   "aporte": -0.144,
    "fuente": "noticia"
   },
   {
