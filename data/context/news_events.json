@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T16:35:33Z",
+ "updated_utc": "2026-11-07T17:34:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7464,6 +7464,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T11:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "NFP",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
+   "source_url": "http://www.cincinnatisun.com/news/279416454/us-adds-165-000-jobs-in-october-beating-forecasts",
+   "source_title": "cincinnatisun.com",
+   "confidence": 0.95,
+   "origin": "gemini/GDELT",
+   "id": "news-us-adds-165-000-jobs-in-october-beating-forecasts-2026-11-07",
+   "date": "2026-11-07",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-07T17:00:00Z"
   }
  ]
 }

@@ -1,17 +1,18 @@
 {
- "generated_utc": "2026-11-07T16:35:33Z",
+ "generated_utc": "2026-11-07T17:34:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.379,
- "event_risk": 0.191,
+ "bias": -0.479,
+ "event_risk": 0.194,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 65,
+ "confidence": 69,
  "reasons": [
-  "Precaución: sesgo -0.38"
+  "Precaución: sesgo -0.48",
+  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -35,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.035,
+   "riesgo": 0.036,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -49,7 +50,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -63,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -78,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.557,
+   "aporte": -0.555,
    "fuente": "noticia"
   },
   {
@@ -87,16 +88,16 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.385,
+   "aporte": -0.383,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-adds-165-000-jobs-in-october-the-arkansas-democ-2026-11-07",
+   "id": "news-us-adds-165-000-jobs-in-october-beating-forecasts-2026-11-07",
    "date": "2026-11-07",
-   "title_es": "EE. UU. añade 165.000 empleos en octubre",
+   "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.347,
    "fuente": "noticia"
   },
   {
@@ -105,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -123,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.153,
+   "aporte": -0.152,
    "fuente": "noticia"
   },
   {
@@ -132,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.136,
+   "aporte": -0.135,
    "fuente": "noticia"
   },
   {
@@ -141,7 +142,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.128,
+   "aporte": 0.127,
    "fuente": "noticia"
   }
  ],
@@ -157,6 +158,6 @@
    "fear_greed": 25
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": null
+  "stablecoins_30d_pct": -4.9
  }
 }
