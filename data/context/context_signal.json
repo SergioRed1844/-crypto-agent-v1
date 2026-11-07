@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T12:39:06Z",
+ "generated_utc": "2026-11-07T13:38:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.162,
+ "event_risk": 0.182,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.03,
+   "riesgo": 0.031,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,10 +50,24 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.021,
+   "riesgo": 0.022,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "cpi-2026-11-10",
+   "utc": "2026-11-10T13:30:00Z",
+   "title_es": "IPC/CPI EE.UU. (oct-2026)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.404,
+   "riesgo": 0.022,
+   "ventana": [
+    "2026-11-10T11:30:00Z",
+    "2026-11-10T14:30:00Z"
    ],
    "en_ventana": false
   }
@@ -65,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.563,
+   "aporte": -0.562,
    "fuente": "noticia"
   },
   {
@@ -74,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.394,
+   "aporte": -0.392,
    "fuente": "noticia"
   },
   {
@@ -83,7 +97,7 @@
    "title_es": "EE. UU. añade 165.000 empleos en octubre",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.315,
+   "aporte": -0.309,
    "fuente": "noticia"
   },
   {
@@ -92,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.264,
+   "aporte": -0.263,
    "fuente": "noticia"
   },
   {
@@ -110,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.158,
+   "aporte": -0.157,
    "fuente": "noticia"
   },
   {
@@ -119,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.14,
+   "aporte": -0.139,
    "fuente": "noticia"
   },
   {
