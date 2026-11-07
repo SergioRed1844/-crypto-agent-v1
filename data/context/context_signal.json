@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-07T08:42:38Z",
+ "generated_utc": "2026-11-07T09:41:43Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.48,
- "event_risk": 0.306,
+ "bias": -0.479,
+ "event_risk": 0.307,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -50,7 +50,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -64,7 +64,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.57,
+   "aporte": -0.568,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.403,
+   "aporte": -0.401,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "El dólar sube tras sólido informe de nóminas en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.291,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube los tipos por primera vez en 3 años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.162,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.143,
+   "aporte": -0.142,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.131,
+   "aporte": 0.13,
    "fuente": "noticia"
   }
  ],
