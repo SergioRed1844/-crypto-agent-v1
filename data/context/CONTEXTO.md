@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-08T06:27:06Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-08T07:22:18Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.27 · tamaño ×0.5 · compras permitidas
 
@@ -10,19 +10,19 @@ Actualizado 2026-11-08T06:27:06Z UTC. Se recalcula cada hora; el calendario y lo
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Nueva Zelanda: elecciones generales | 2026-11-07T12:00:00Z | Elección | 0.235 | 0.118 |
-| Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.062 |
-| Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.045 |
-| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.044 |
-| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.03 |
+| Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.064 |
+| Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.047 |
+| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.046 |
+| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.031 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.534 |
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.354 |
-| EE. UU. suma 165.000 empleos en octubre y supera las expectativas | 2026-11-07 | anti | -0.266 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.250 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.533 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.353 |
+| EE. UU. suma 165.000 empleos en octubre y supera las expectativas | 2026-11-07 | anti | -0.261 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.249 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.242 |
-| Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fe | 2026-11-07 | anti | -0.158 |
+| Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fe | 2026-11-07 | anti | -0.157 |
 | Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.125 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.122 |
 
@@ -33,10 +33,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-08T06:27:06Z",
+ "inicio": "2026-11-08T07:22:18Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   975031,
+   975038
+  ],
+  "calls": 57,
   "stopped": null,
   "nuevas": 0
  },
