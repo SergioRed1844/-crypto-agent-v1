@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-08T14:16:02Z",
+ "generated_utc": "2026-11-08T14:19:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.229,
+ "event_risk": 0.23,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -50,7 +50,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.061,
+   "riesgo": 0.062,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -115,7 +115,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.226,
+   "aporte": -0.225,
    "fuente": "noticia"
   },
   {
