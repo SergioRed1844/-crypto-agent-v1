@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-08T02:26:37Z",
+ "generated_utc": "2026-11-08T02:29:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.052,
+   "riesgo": 0.053,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -111,7 +111,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.289,
+   "aporte": -0.288,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.129,
+   "aporte": -0.128,
    "fuente": "noticia"
   },
   {
