@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-08T00:28:40+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-07
+Última corrida: **2026-11-08T01:27:44+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-07
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -39,7 +39,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 62% | +0.2% |
 | Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.3% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 45% | 43% | 74% | -0.0% |
-| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.2% |
+| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 63% | +0.3% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.5% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 72% | +0.4% |
 | Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
@@ -53,7 +53,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.8% |
 | Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 91% | -0.2% |
 | Reversión tras choque político/comercial | bmv | 30 d | 9 | 54% | 34% | 36% | 90% | +0.9% |
-| Reversión tras choque político/comercial | bmv | 90 d | 9 | 54% | 42% | 43% | 90% | +0.6% |
+| Reversión tras choque político/comercial | bmv | 90 d | 9 | 54% | 42% | 43% | 90% | +0.7% |
 | Reversión tras choque político/comercial | crypto | 7 d | 4 | 38% | 40% | 40% | 96% | -0.2% |
 | Reversión tras choque político/comercial | crypto | 30 d | 4 | 43% | 43% | 43% | 96% | +0.0% |
 | Reversión tras choque político/comercial | crypto | 90 d | 4 | 33% | 45% | 44% | 96% | +0.0% |
@@ -74,16 +74,16 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 34% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
-| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
+| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 46% | +1.1% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 17% | +0.6% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 45% | 29% | +0.7% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 41% | 43% | 42% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
-| Retroceso dentro de tendencia alcista | us | 7 d | 422 | 38% | 33% | 37% | 19% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 200 | 42% | 39% | 41% | 32% | +0.4% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 198 | 48% | 45% | 47% | 31% | +0.9% |
+| Retroceso dentro de tendencia alcista | us | 7 d | 423 | 38% | 33% | 37% | 19% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 201 | 42% | 39% | 41% | 32% | +0.4% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 199 | 49% | 45% | 48% | 31% | +0.9% |
 
 ## Salud de fuentes
 
@@ -148,7 +148,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-08 | binance |
 | ^MXX | sí | 2026-11-06 | yahoo |
 | ^VIX | sí | 2026-11-06 | yahoo |
-| contexto_v42 | sí | 2026-11-07T23:29:23Z | CAUTION |
+| contexto_v42 | sí | 2026-11-08T00:28:30Z | CAUTION |
 | fear_greed | sí | 2026-11-08 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-06 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-06 | wikimedia |
