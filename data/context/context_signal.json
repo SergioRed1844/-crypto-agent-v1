@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-08T10:19:34Z",
+ "generated_utc": "2026-11-08T10:24:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -78,7 +78,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.035,
+   "riesgo": 0.036,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
