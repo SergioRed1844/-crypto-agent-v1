@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-08T06:23:03Z",
+ "generated_utc": "2026-11-08T06:27:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.267,
+ "event_risk": 0.268,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -102,7 +102,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.355,
+   "aporte": -0.354,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.126,
+   "aporte": -0.125,
    "fuente": "noticia"
   },
   {
