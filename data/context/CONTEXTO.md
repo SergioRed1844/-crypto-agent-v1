@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-08T02:29:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-08T02:40:44Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.25 · tamaño ×0.5 · compras permitidas
 
@@ -17,12 +17,12 @@ Actualizado 2026-11-08T02:29:34Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.541 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.540 |
 | Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.363 |
-| EE. UU. suma 165.000 empleos en octubre y supera las expectativas | 2026-11-07 | anti | -0.288 |
+| EE. UU. suma 165.000 empleos en octubre y supera las expectativas | 2026-11-07 | anti | -0.287 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.253 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.245 |
-| Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fe | 2026-11-07 | anti | -0.164 |
+| Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fe | 2026-11-07 | anti | -0.163 |
 | Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.128 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.124 |
 
@@ -33,7 +33,7 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-08T02:29:34Z",
+ "inicio": "2026-11-08T02:40:44Z",
  "onchain": {
   "scanned": null,
   "calls": 1,
@@ -42,7 +42,7 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 2,
+  "titulares": 4,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",

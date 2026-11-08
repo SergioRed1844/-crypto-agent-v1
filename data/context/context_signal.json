@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-08T02:29:34Z",
+ "generated_utc": "2026-11-08T02:40:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.246,
+ "event_risk": 0.247,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -93,7 +93,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.541,
+   "aporte": -0.54,
    "fuente": "noticia"
   },
   {
@@ -111,7 +111,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.288,
+   "aporte": -0.287,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   },
   {
