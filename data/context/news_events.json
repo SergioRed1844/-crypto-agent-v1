@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-08T12:17:48Z",
+ "updated_utc": "2026-11-08T13:16:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7506,6 +7506,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-07T17:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "INTEREST_RATES",
+   "country": "GB",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Banco de Inglaterra sube los tipos al 4 % ante el aumento de la inflación",
+   "source_url": "http://www.northkoreatimes.com/news/279414658/bank-of-england-hikes-rates-to-4-as-inflation-fears-mount",
+   "source_title": "northkoreatimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-bank-of-england-hikes-rates-to-4-as-inflation-fear-2026-11-08",
+   "date": "2026-11-08",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-08T13:00:00Z"
   }
  ]
 }
