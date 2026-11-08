@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-08T10:24:07Z",
+ "generated_utc": "2026-11-08T10:44:10Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.292,
+ "event_risk": 0.294,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.073,
+   "riesgo": 0.074,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.053,
+   "riesgo": 0.054,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.052,
+   "riesgo": 0.053,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -120,7 +120,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.245,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.123,
+   "aporte": -0.122,
    "fuente": "noticia"
   },
   {
