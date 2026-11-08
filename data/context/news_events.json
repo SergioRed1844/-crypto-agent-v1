@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-08T13:16:53Z",
+ "updated_utc": "2026-11-08T14:16:02Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7527,6 +7527,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-08T13:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "rate_hike",
+   "country": "GB",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Banco de Inglaterra sube las tasas por primera vez en más de tres años",
+   "source_url": "http://www.laosnews.net/news/279414658/uk-central-bank-raises-rates-for-first-time-in-over-three-years",
+   "source_title": "laosnews.net",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-uk-central-bank-raises-rates-for-first-time-in-ove-2026-11-08",
+   "date": "2026-11-08",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-08T13:30:00Z"
   }
  ]
 }
