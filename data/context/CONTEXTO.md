@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-08T18:12:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-08T18:16:35Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.27 · tamaño ×0.5 · compras permitidas
 
@@ -9,16 +9,16 @@ Actualizado 2026-11-08T18:12:28Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.101 |
-| Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.073 |
-| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.072 |
+| Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.102 |
+| Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.074 |
+| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.073 |
 | SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.049 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.516 |
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.331 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.242 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.330 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.241 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.234 |
 | EE. UU. suma 165.000 empleos en octubre y supera las expectativas | 2026-11-07 | anti | -0.208 |
 | El Banco de Inglaterra sube las tasas por primera vez en más de tres años | 2026-11-08 | anti | -0.191 |
@@ -32,20 +32,17 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-08T18:12:28Z",
+ "inicio": "2026-11-08T18:16:35Z",
  "onchain": {
-  "scanned": [
-   975082,
-   975085
-  ],
-  "calls": 67,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 7,
-  "eventos": 0,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
