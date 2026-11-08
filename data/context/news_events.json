@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-08T21:09:52Z",
+ "updated_utc": "2026-11-08T21:21:06Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7569,6 +7569,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-08T13:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "EE. UU. genera empleo pero la inflación reduce el poder adquisitivo",
+   "source_url": "https://abc13.com/story/us-continues-generate-jobs-inflation-is-eroding-spending-power-millions-americans/20024536/",
+   "source_title": "abc13.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-us-continues-to-generate-jobs-yet-inflation-is-ero-2026-11-08",
+   "date": "2026-11-08",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-08T20:30:00Z"
   }
  ]
 }
