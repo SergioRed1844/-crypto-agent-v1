@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-08T07:22:18Z",
+ "generated_utc": "2026-11-08T08:21:23Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.273,
+ "event_risk": 0.279,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -4.65% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.66% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.064,
+   "riesgo": 0.067,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.047,
+   "riesgo": 0.049,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.046,
+   "riesgo": 0.048,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.031,
+   "riesgo": 0.033,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.533,
+   "aporte": -0.531,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.353,
+   "aporte": -0.35,
    "fuente": "noticia"
   },
   {
@@ -111,7 +111,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.255,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.157,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -147,7 +147,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.125,
+   "aporte": -0.124,
    "fuente": "noticia"
   },
   {
@@ -172,6 +172,6 @@
    "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.65
+  "stablecoins_30d_pct": -4.66
  }
 }
