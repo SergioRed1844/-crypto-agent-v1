@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-08T05:24:01Z",
+ "generated_utc": "2026-11-08T06:23:03Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.261,
+ "event_risk": 0.267,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -36,7 +36,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.059,
+   "riesgo": 0.062,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -50,7 +50,7 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.043,
+   "riesgo": 0.045,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
@@ -64,7 +64,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.042,
+   "riesgo": 0.044,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -78,7 +78,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -93,7 +93,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.536,
+   "aporte": -0.534,
    "fuente": "noticia"
   },
   {
@@ -102,7 +102,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.357,
+   "aporte": -0.355,
    "fuente": "noticia"
   },
   {
@@ -111,7 +111,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -120,7 +120,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
@@ -129,7 +129,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -138,7 +138,7 @@
    "title_es": "Sólido informe laboral en EE. UU. eleva expectativas de subida de tipos de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.16,
+   "aporte": -0.158,
    "fuente": "noticia"
   },
   {
@@ -156,7 +156,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.123,
+   "aporte": 0.122,
    "fuente": "noticia"
   }
  ],
