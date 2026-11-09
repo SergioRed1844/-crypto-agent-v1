@@ -1,20 +1,20 @@
 {
- "corrida": "2026-11-04 20:32",
- "ultimo_cierre": "2026-11-04",
- "senales_nuevas": 17,
+ "corrida": "2026-11-09 16:49",
+ "ultimo_cierre": "2026-11-09",
+ "senales_nuevas": 15,
  "por_setup": {
-  "CAPITULACION": 9,
-  "CAIDA_GIRO": 6,
+  "CAIDA_GIRO": 10,
+  "CAPITULACION": 3,
   "CATALIZADOR": 2
  },
- "cerradas_hoy": 1,
+ "cerradas_hoy": 6,
  "estudio_pasan": 0,
  "estudio_total": 3,
- "papel_cerradas": 3,
- "papel_abiertas": 19,
- "papel_pendientes": 17,
- "papel_gana": 0.0,
- "papel_neto_medio": -0.16146808115018096,
+ "papel_cerradas": 9,
+ "papel_abiertas": 30,
+ "papel_pendientes": 15,
+ "papel_gana": 0.1111111111111111,
+ "papel_neto_medio": -0.10861353609810628,
  "canales": {
   "correo": false,
   "issue": true,
@@ -22,7 +22,7 @@
  },
  "log": [
   "correo: sin credenciales SMTP",
-  "issue #14 creado (sin SMTP: el correo llega por la notificación de GitHub)",
+  "issue #20 creado (sin SMTP: el correo llega por la notificación de GitHub)",
   "hoja: sin REB_SHEET_URL"
  ]
 }
