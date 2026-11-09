@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-09T13:00:34Z",
+ "generated_utc": "2026-11-09T13:58:04Z",
  "fear_greed": {
   "value": 29,
   "label": "Fear",
@@ -7,7 +7,7 @@
   "avg_30d": 47.5
  },
  "stablecoins": {
-  "total_usd": 292970854840,
+  "total_usd": 292969203743,
   "chg_7d_pct": -1.57,
   "chg_30d_pct": -4.26
  },
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 55186767.72873299,
+   "volume": 55186767.728732996,
    "slug": "presidential-election-winner-2028"
   }
  },
