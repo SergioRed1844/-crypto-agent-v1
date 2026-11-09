@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-09T20:01:29Z",
+ "generated_utc": "2026-11-09T20:49:00Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.473,
- "event_risk": 0.583,
+ "event_risk": 0.593,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
-  "Stablecoins -4.25% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.26% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,10 +22,24 @@
    "category": "TECH_AI_REGULATION",
    "status": "confirmed",
    "magnitud": 0.254,
-   "riesgo": 0.215,
+   "riesgo": 0.222,
    "ventana": [
     "2026-11-10T00:00:00Z",
     "2026-11-11T00:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "cpi-2026-11-10",
+   "utc": "2026-11-10T13:30:00Z",
+   "title_es": "IPC/CPI EE.UU. (oct-2026)",
+   "category": "MACRO_DATA",
+   "status": "confirmed",
+   "magnitud": 0.404,
+   "riesgo": 0.219,
+   "ventana": [
+    "2026-11-10T11:30:00Z",
+    "2026-11-10T14:30:00Z"
    ],
    "en_ventana": false
   },
@@ -44,27 +58,13 @@
    "en_ventana": true
   },
   {
-   "id": "cpi-2026-11-10",
-   "utc": "2026-11-10T13:30:00Z",
-   "title_es": "IPC/CPI EE.UU. (oct-2026)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.404,
-   "riesgo": 0.212,
-   "ventana": [
-    "2026-11-10T11:30:00Z",
-    "2026-11-10T14:30:00Z"
-   ],
-   "en_ventana": false
-  },
-  {
    "id": "us-sec-ise-crypto-etf-options-2026-11-11",
    "utc": "2026-11-11T12:00:00Z",
    "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.144,
+   "riesgo": 0.149,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.478,
+   "aporte": -0.477,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.283,
+   "aporte": -0.282,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.255,
+   "aporte": 0.254,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.216,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube las tasas por primera vez en más de tres años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.154,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.121,
+   "aporte": -0.119,
    "fuente": "noticia"
   },
   {
@@ -174,6 +174,6 @@
    "fear_greed": 29
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.25
+  "stablecoins_30d_pct": -4.26
  }
 }
