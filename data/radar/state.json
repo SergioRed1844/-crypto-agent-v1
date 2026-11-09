@@ -143,7 +143,6 @@
   }
  },
  "runs": [
-  "2026-11-07T17:34:48+00:00",
   "2026-11-07T18:33:48+00:00",
   "2026-11-07T18:34:26+00:00",
   "2026-11-07T19:33:06+00:00",
@@ -202,9 +201,10 @@
   "2026-11-09T10:57:54+00:00",
   "2026-11-09T11:57:04+00:00",
   "2026-11-09T12:03:50+00:00",
-  "2026-11-09T12:56:05+00:00"
+  "2026-11-09T12:56:05+00:00",
+  "2026-11-09T13:55:09+00:00"
  ],
- "last_scan_utc": "2026-11-09T12:56:05+00:00",
+ "last_scan_utc": "2026-11-09T13:55:09+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -508,92 +508,92 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-11-06",
+   "last": "2026-11-07",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-09T11:56:50Z",
+   "last": "2026-11-09T12:55:52Z",
    "nota": "RISK_OFF"
   }
  },
