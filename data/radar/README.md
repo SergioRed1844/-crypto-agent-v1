@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-09T14:54:26+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
+Última corrida: **2026-11-09T15:53:36+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -118,7 +118,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | KIMBERA.MX | sí | 2026-11-09 | yahoo |
 | KOFUBL.MX | sí | 2026-11-09 | yahoo |
 | LINK | sí | 2026-11-09 | binance |
-| LIVEPOLC-1.MX | sí | 2026-11-06 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-11-09 | yahoo |
 | LTC | sí | 2026-11-09 | binance |
 | META | sí | 2026-11-09 | yahoo |
 | MSFT | sí | 2026-11-09 | yahoo |
@@ -127,7 +127,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | NVDA | sí | 2026-11-09 | yahoo |
 | OMAB.MX | sí | 2026-11-09 | yahoo |
 | ORBIA.MX | sí | 2026-11-09 | yahoo |
-| PINFRA.MX | sí | 2026-11-06 | yahoo |
+| PINFRA.MX | sí | 2026-11-09 | yahoo |
 | QQQ | sí | 2026-11-09 | yahoo |
 | SMH | sí | 2026-11-09 | yahoo |
 | SOL | sí | 2026-11-09 | binance |
@@ -148,24 +148,24 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-09 | binance |
 | ^MXX | sí | 2026-11-09 | yahoo |
 | ^VIX | sí | 2026-11-09 | yahoo |
-| contexto_v42 | sí | 2026-11-09T13:58:18Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-09T14:54:14Z | RISK_OFF |
 | fear_greed | sí | 2026-11-09 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-08 | wikimedia |
-| wiki_en_Bitcoin | sí | 2026-11-07 | wikimedia |
+| wiki_en_Bitcoin | sí | 2026-11-08 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-08 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-11-07 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-08 | wikimedia |
 | wiki_en_Ethereum | sí | 2026-11-08 | wikimedia |
 | wiki_en_Financial_crisis | sí | 2026-11-08 | wikimedia |
 | wiki_en_Inflation | sí | 2026-11-08 | wikimedia |
-| wiki_en_Recession | sí | 2026-11-07 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-11-07 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-08 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-11-08 | wikimedia |
 | wiki_en_Solana__blockchain_platform_ | sí | 2026-11-08 | wikimedia |
 | wiki_en_Stock_market_crash | sí | 2026-11-08 | wikimedia |
 | wiki_en_Unemployment | sí | 2026-11-08 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-08 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-11-07 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-07 | wikimedia |
-| wiki_es_Inflación | sí | 2026-11-07 | wikimedia |
-| wiki_es_Recesión | sí | 2026-11-07 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-11-08 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-08 | wikimedia |
+| wiki_es_Inflación | sí | 2026-11-08 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-08 | wikimedia |
 
 _Señal estadística para que TÚ la revises. No es asesoría financiera ni una orden; el Radar no opera y no tiene llaves de ningún exchange. Probabilidades históricas encogidas, no garantías._
