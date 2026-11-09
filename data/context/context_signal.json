@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-09T09:58:27Z",
+ "generated_utc": "2026-11-09T10:02:39Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.475,
- "event_risk": 0.462,
+ "event_risk": 0.463,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 69,
@@ -22,7 +22,7 @@
    "category": "TRADE",
    "status": "expected",
    "magnitud": 0.303,
-   "riesgo": 0.195,
+   "riesgo": 0.196,
    "ventana": [
     "2026-11-09T12:00:00Z",
     "2026-11-11T06:00:00Z"
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.278,
+   "aporte": 0.277,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.15,
+   "aporte": -0.149,
    "fuente": "noticia"
   },
   {
