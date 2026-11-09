@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-09T04:03:47Z",
+ "updated_utc": "2026-11-09T05:02:52Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7611,6 +7611,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-08T20:30:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "ethereum",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Vitalik propone giro de ETH a reserva de valor tras volatilidad electoral",
+   "source_url": "https://cointelegraph.com/magazine/vitaliks-pivots-to-eth-as-a-store-of-value-us-election-weighs-on-crypto-hodlers-digest",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-vitalik-pivot-eth-to-store-of-value-crypto-suffers-2026-11-09",
+   "date": "2026-11-09",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-09T01:00:00Z"
   }
  ]
 }
