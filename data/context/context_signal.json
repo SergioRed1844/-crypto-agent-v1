@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-09T13:54:59Z",
+ "generated_utc": "2026-11-09T13:58:18Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.474,
- "event_risk": 0.513,
+ "event_risk": 0.514,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.487,
+   "aporte": -0.486,
    "fuente": "noticia"
   },
   {
