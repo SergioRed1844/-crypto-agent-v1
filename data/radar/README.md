@@ -1,26 +1,12 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-09T20:49:19+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
+Última corrida: **2026-11-09T21:48:17+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
-|---|---|---|---|---|---|---|---|
-| ALERTA | SPY | Pánico sin daño real | 2026-11-05 | 30 d | 34% | 27% | +1.7% |
-| ALERTA | QQQ | Pánico sin daño real | 2026-11-05 | 30 d | 45% | 37% | +1.8% |
-| ALERTA | IWM | Pánico sin daño real | 2026-11-05 | 30 d | 43% | 35% | +1.7% |
-| ALERTA | DIA | Pánico sin daño real | 2026-11-05 | 30 d | 36% | 26% | +1.6% |
-| ALERTA | XLK | Pánico sin daño real | 2026-11-05 | 30 d | 44% | 36% | +1.8% |
-| ALERTA | XLF | Pánico sin daño real | 2026-11-05 | 30 d | 40% | 32% | +1.5% |
-| ALERTA | XLY | Pánico sin daño real | 2026-11-05 | 30 d | 39% | 32% | +1.8% |
-| ALERTA | XLI | Pánico sin daño real | 2026-11-05 | 30 d | 41% | 32% | +1.7% |
-| ALERTA | SMH | Pánico sin daño real | 2026-11-05 | 30 d | 50% | 42% | +2.3% |
-| ALERTA | SMH | Capitulación con miedo extremo | 2026-11-05 | 7 d | 47% | 38% | +1.2% |
-| ALERTA | NVDA | Pánico sin daño real | 2026-11-05 | 30 d | 56% | 48% | +4.0% |
-| VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-05 | 7 d | 52% | 42% | +0.8% |
-| VIGILANCIA | JPM | Pánico sin daño real | 2026-11-05 | 7 d | 40% | 30% | +0.4% |
+Ninguno.
 
 ## Alertas enviadas (últimas 15)
 
@@ -74,7 +60,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
 | Pánico sin daño real | us | 7 d | 85 | 40% | 26% | 34% | 38% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
-| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
+| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 46% | +1.0% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 17% | +0.6% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 45% | 29% | +0.7% |
@@ -148,7 +134,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-09 | binance |
 | ^MXX | sí | 2026-11-09 | yahoo |
 | ^VIX | sí | 2026-11-09 | yahoo |
-| contexto_v42 | sí | 2026-11-09T20:01:29Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-09T20:49:00Z | RISK_OFF |
 | fear_greed | sí | 2026-11-09 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-08 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-08 | wikimedia |
