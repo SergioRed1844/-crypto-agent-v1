@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-09T00:07:17Z",
+ "updated_utc": "2026-11-09T01:06:19Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7582,6 +7582,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-us-continues-to-generate-jobs-yet-inflation-is-ero-2026-11-08",
+   "date": "2026-11-08",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-08T20:30:00Z"
+  },
+  {
+   "category": "ELECTION",
+   "subcategory": "MIDTERMS",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Trump promete regreso tras derrotas republicanas en elecciones de medio mandato",
+   "source_url": "https://www.theepochtimes.com/us/trump-vows-comeback-after-midterm-republican-losses-6122164",
+   "source_title": "theepochtimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-trump-vows-comeback-after-midterm-republican-losse-2026-11-08",
    "date": "2026-11-08",
    "status": "happened",
    "scheduled": false,
