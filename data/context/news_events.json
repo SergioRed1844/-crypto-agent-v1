@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-09T05:02:52Z",
+ "updated_utc": "2026-11-09T06:01:58Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7632,6 +7632,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-09T01:00:00Z"
+  },
+  {
+   "category": "TRADE",
+   "subcategory": "",
+   "country": "CN",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "source_url": "https://www.globaltimes.cn/page/202611/1373924.shtml",
+   "source_title": "globaltimes.cn",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-09T05:00:00Z"
   }
  ]
 }

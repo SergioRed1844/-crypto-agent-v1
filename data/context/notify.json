@@ -1,8 +1,0 @@
-{
- "title": "[CryptoAgent contexto] RISK_OFF — 2026-11-09T05:02:52Z",
- "body": "Alerta on-chain ALTA: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450). https://mempool.space/tx/b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03\n\nContexto cambió a RISK_OFF: Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).\n\nModo PAPEL: ninguna orden real.",
- "messages": [
-  "Alerta on-chain ALTA: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450). https://mempool.space/tx/b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03",
-  "Contexto cambió a RISK_OFF: Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450)."
- ]
-}
