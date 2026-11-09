@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-09T21:48:08Z",
+ "generated_utc": "2026-11-09T21:51:19Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -64,7 +64,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.155,
+   "riesgo": 0.156,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.252,
+   "aporte": 0.251,
    "fuente": "noticia"
   },
   {
