@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T21:27:22Z",
+ "generated_utc": "2026-11-10T21:31:57Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -92,7 +92,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.207,
+   "aporte": 0.206,
    "fuente": "noticia"
   },
   {
