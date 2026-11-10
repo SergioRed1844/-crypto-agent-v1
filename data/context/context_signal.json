@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T04:42:03Z",
+ "generated_utc": "2026-11-10T05:41:08Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.472,
- "event_risk": 0.676,
+ "event_risk": 0.685,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.305,
+   "riesgo": 0.317,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -44,6 +44,20 @@
    "en_ventana": true
   },
   {
+   "id": "us-sec-ise-crypto-etf-options-2026-11-11",
+   "utc": "2026-11-11T12:00:00Z",
+   "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
+   "category": "CRYPTO_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.281,
+   "riesgo": 0.216,
+   "ventana": [
+    "2026-11-10T12:00:00Z",
+    "2026-11-12T06:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
    "id": "us-china-truce-expiry-2026-11-10",
    "utc": "2026-11-10T12:00:00Z",
    "title_es": "Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025)",
@@ -56,20 +70,6 @@
     "2026-11-11T06:00:00Z"
    ],
    "en_ventana": true
-  },
-  {
-   "id": "us-sec-ise-crypto-etf-options-2026-11-11",
-   "utc": "2026-11-11T12:00:00Z",
-   "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.281,
-   "riesgo": 0.207,
-   "ventana": [
-    "2026-11-10T12:00:00Z",
-    "2026-11-12T06:00:00Z"
-   ],
-   "en_ventana": false
   }
  ],
  "recent": [
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.466,
+   "aporte": -0.464,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.269,
+   "aporte": -0.268,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.237,
+   "aporte": 0.236,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.218,
+   "aporte": -0.217,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.211,
+   "aporte": -0.21,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube las tasas por primera vez en más de tres años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.143,
+   "aporte": -0.142,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.107,
+   "aporte": 0.106,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.101,
+   "aporte": -0.099,
    "fuente": "noticia"
   }
  ],
