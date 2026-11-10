@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T19:58:53Z",
+ "generated_utc": "2026-11-10T20:28:18Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.445,
+   "aporte": -0.444,
    "fuente": "noticia"
   },
   {
@@ -74,16 +74,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.246,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.209,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -96,12 +87,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.208,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
    "date": "2026-11-07",
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.202,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.175,
+   "aporte": -0.174,
    "fuente": "noticia"
   },
   {
