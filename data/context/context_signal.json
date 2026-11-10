@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T19:29:11Z",
+ "generated_utc": "2026-11-10T19:58:53Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.446,
+   "aporte": -0.445,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.21,
+   "aporte": 0.209,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.209,
+   "aporte": -0.208,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
