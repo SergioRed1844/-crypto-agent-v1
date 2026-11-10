@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-09T23:46:31Z",
+ "generated_utc": "2026-11-10T00:45:33Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.473,
- "event_risk": 0.632,
+ "bias": -0.472,
+ "event_risk": 0.641,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -16,32 +16,32 @@
  ],
  "upcoming": [
   {
-   "id": "us-global-us-china-truce-expiry-2026-11-10",
-   "utc": "2026-11-10T12:00:00Z",
-   "title_es": "Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recíprocos elevados, exclusiones Sección 301 y (implícito) de la regla BIS de 'afiliadas' sobre controles de exportación",
-   "category": "TECH_AI_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.254,
-   "riesgo": 0.252,
-   "ventana": [
-    "2026-11-10T00:00:00Z",
-    "2026-11-11T00:00:00Z"
-   ],
-   "en_ventana": false
-  },
-  {
    "id": "cpi-2026-11-10",
    "utc": "2026-11-10T13:30:00Z",
    "title_es": "IPC/CPI EE.UU. (oct-2026)",
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.248,
+   "riesgo": 0.259,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
    ],
    "en_ventana": false
+  },
+  {
+   "id": "us-global-us-china-truce-expiry-2026-11-10",
+   "utc": "2026-11-10T12:00:00Z",
+   "title_es": "Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recíprocos elevados, exclusiones Sección 301 y (implícito) de la regla BIS de 'afiliadas' sobre controles de exportación",
+   "category": "TECH_AI_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.254,
+   "riesgo": 0.254,
+   "ventana": [
+    "2026-11-10T00:00:00Z",
+    "2026-11-11T00:00:00Z"
+   ],
+   "en_ventana": true
   },
   {
    "id": "us-china-truce-expiry-2026-11-10",
@@ -64,7 +64,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.169,
+   "riesgo": 0.176,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.472,
+   "aporte": -0.471,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.276,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.247,
+   "aporte": 0.245,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube las tasas por primera vez en más de tres años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.149,
+   "aporte": -0.148,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.112,
+   "aporte": -0.11,
    "fuente": "noticia"
   },
   {
@@ -171,7 +171,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 29
+   "fear_greed": 32
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -4.26
