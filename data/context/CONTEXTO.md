@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-10T01:44:36Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-10T01:49:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.47 · riesgo de evento 0.65 · tamaño ×0.0 · VETO a compras
 
@@ -9,10 +9,10 @@ Actualizado 2026-11-10T01:44:36Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.269 |
+| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.27 |
 | Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.254 |
 | Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.212 |
-| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.183 |
+| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.184 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -32,20 +32,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-10T01:44:36Z",
+ "inicio": "2026-11-10T01:49:27Z",
  "onchain": {
   "scanned": [
-   975230,
-   975237
+   975238,
+   975238
   ],
-  "calls": 123,
+  "calls": 32,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 40,
-  "eventos": 0,
+  "titulares": 13,
+  "eventos": 2,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
