@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T16:31:40Z",
+ "generated_utc": "2026-11-10T17:30:45Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.449,
+   "aporte": -0.448,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.249,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.215,
+   "aporte": 0.213,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.204,
+   "aporte": -0.203,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.18,
+   "aporte": -0.179,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.089,
+   "aporte": -0.088,
    "fuente": "noticia"
   }
  ],
