@@ -1,11 +1,11 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-10T15:32:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-10T16:31:40Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.47 · riesgo de evento 0.58 · tamaño ×0.0 · VETO a compras
 
 - Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).
-- Stablecoins -4.61% en 30 días (liquidez saliendo)
+- Stablecoins -4.6% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -15,12 +15,12 @@ Actualizado 2026-11-10T15:32:33Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.451 |
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.252 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.217 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.211 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.449 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.251 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.215 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.210 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.204 |
-| Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos | 2026-11-10 | anti | -0.182 |
+| Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos | 2026-11-10 | anti | -0.180 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.103 |
 | Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.089 |
 
@@ -31,15 +31,15 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-10T15:32:33Z",
+ "inicio": "2026-11-10T16:31:40Z",
  "onchain": {
   "scanned": [
-   975306,
-   975313
+   975314,
+   975321
   ],
-  "calls": 160,
+  "calls": 200,
   "stopped": null,
-  "nuevas": 0
+  "nuevas": 1
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
