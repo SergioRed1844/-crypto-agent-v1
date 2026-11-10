@@ -1,28 +1,14 @@
-# 📡 Radar EB — resumen 2026-11-09
+# 📡 Radar EB — resumen 2026-11-10
 
-**Sigo vivo:** 34 corridas en 24 h · última 2026-11-09T14:54:26+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 34 corridas en 24 h · última 2026-11-10T14:33:36+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
-|---|---|---|---|---|---|---|---|---|
-| ALERTA | SPY | Pánico sin daño real | 2026-11-05 | 30 d | 34% | 27% | +1.6% | — |
-| ALERTA | QQQ | Pánico sin daño real | 2026-11-05 | 30 d | 45% | 37% | +1.8% | — |
-| ALERTA | IWM | Pánico sin daño real | 2026-11-05 | 30 d | 43% | 35% | +1.7% | — |
-| ALERTA | DIA | Pánico sin daño real | 2026-11-05 | 30 d | 36% | 26% | +1.6% | — |
-| ALERTA | XLK | Pánico sin daño real | 2026-11-05 | 30 d | 44% | 36% | +1.8% | — |
-| ALERTA | XLF | Pánico sin daño real | 2026-11-05 | 30 d | 40% | 32% | +1.5% | — |
-| ALERTA | XLY | Pánico sin daño real | 2026-11-05 | 30 d | 39% | 32% | +1.8% | — |
-| ALERTA | XLI | Pánico sin daño real | 2026-11-05 | 30 d | 41% | 32% | +1.7% | — |
-| ALERTA | SMH | Pánico sin daño real | 2026-11-05 | 30 d | 50% | 42% | +2.3% | — |
-| ALERTA | SMH | Capitulación con miedo extremo | 2026-11-05 | 7 d | 47% | 38% | +1.2% | — |
-| ALERTA | NVDA | Pánico sin daño real | 2026-11-05 | 30 d | 56% | 47% | +4.0% | — |
-| VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-05 | 7 d | 52% | 42% | +0.8% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | JPM | Pánico sin daño real | 2026-11-05 | 7 d | 40% | 31% | +0.4% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp) |
+Ningún setup disparó en las últimas 24 h. Eso también es información: no hay pánico ni capitulación medibles.
 
 ## Clima de mercado
 
-BTC 74,851 (caída desde máximo de 1 año -29%; Fear&Greed 28) · S&P (SPY) -5.6% vs máximo de 1 año; VIX 25.6 · miedo de hogares (Wikipedia, EUA) z=+2.2 · peso 5 días -0.1% (USD/MXN); IPC vs máximo 1 año -0.3% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).; Stablecoins -4.26% en 30 días (liquidez saliendo))
+BTC 75,368 (caída desde máximo de 1 año -29%; Fear&Greed 29) · S&P (SPY) -3.4% vs máximo de 1 año; VIX 19.9 · miedo de hogares (Wikipedia, EUA) z=-2.1 · peso 5 días -0.4% (USD/MXN); IPC vs máximo 1 año 0.0% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).; Stablecoins -4.62% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
