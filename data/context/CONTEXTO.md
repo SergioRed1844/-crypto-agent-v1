@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-10T09:37:39Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-10T09:41:37Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.47 · riesgo de evento 0.73 · tamaño ×0.0 · VETO a compras
 
@@ -9,9 +9,9 @@ Actualizado 2026-11-10T09:37:39Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.374 |
+| IPC/CPI EE.UU. (oct-2026) | 2026-11-10T13:30:00Z | Dato macro | 0.404 | 0.375 |
+| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.255 |
 | Vence la tregua comercial EE.UU.-China: fin de la suspensión de aranceles recípr | 2026-11-10T12:00:00Z | Regulación tecnología / IA | 0.254 | 0.254 |
-| SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios un | 2026-11-11T12:00:00Z | Regulación cripto | 0.281 | 0.254 |
 | Vencen suspensiones a 1 año del acuerdo comercial EE.UU.-China (nov-2025) | 2026-11-10T12:00:00Z | Comercio / aranceles | 0.303 | 0.212 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
@@ -23,7 +23,7 @@ Actualizado 2026-11-10T09:37:39Z UTC. Se recalcula cada hora; el calendario y lo
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.208 |
 | Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos | 2026-11-10 | anti | -0.191 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.105 |
-| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.093 |
+| Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de | 2026-11-04 | anti | -0.092 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -32,13 +32,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-10T09:37:39Z",
+ "inicio": "2026-11-10T09:41:37Z",
  "onchain": {
   "scanned": [
-   975279,
-   975280
+   975281,
+   975281
   ],
-  "calls": 54,
+  "calls": 33,
   "stopped": null,
   "nuevas": 0
  },

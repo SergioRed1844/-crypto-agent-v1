@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T09:37:39Z",
+ "generated_utc": "2026-11-10T09:41:37Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,10 +22,24 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.374,
+   "riesgo": 0.375,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "us-sec-ise-crypto-etf-options-2026-11-11",
+   "utc": "2026-11-11T12:00:00Z",
+   "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
+   "category": "CRYPTO_REGULATION",
+   "status": "confirmed",
+   "magnitud": 0.281,
+   "riesgo": 0.255,
+   "ventana": [
+    "2026-11-10T12:00:00Z",
+    "2026-11-12T06:00:00Z"
    ],
    "en_ventana": false
   },
@@ -42,20 +56,6 @@
     "2026-11-11T00:00:00Z"
    ],
    "en_ventana": true
-  },
-  {
-   "id": "us-sec-ise-crypto-etf-options-2026-11-11",
-   "utc": "2026-11-11T12:00:00Z",
-   "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.281,
-   "riesgo": 0.254,
-   "ventana": [
-    "2026-11-10T12:00:00Z",
-    "2026-11-12T06:00:00Z"
-   ],
-   "en_ventana": false
   },
   {
    "id": "us-china-truce-expiry-2026-11-10",
@@ -142,7 +142,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.093,
+   "aporte": -0.092,
    "fuente": "noticia"
   }
  ],
