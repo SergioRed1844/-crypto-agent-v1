@@ -1,34 +1,20 @@
 {
- "generated_utc": "2026-11-10T13:37:57Z",
+ "generated_utc": "2026-11-10T14:33:28Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.472,
- "event_risk": 0.748,
+ "event_risk": 0.577,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
-  "Stablecoins -4.62% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.61% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
-  {
-   "id": "cpi-2026-11-10",
-   "utc": "2026-11-10T13:30:00Z",
-   "title_es": "IPC/CPI EE.UU. (oct-2026)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.404,
-   "riesgo": 0.404,
-   "ventana": [
-    "2026-11-10T11:30:00Z",
-    "2026-11-10T14:30:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "us-sec-ise-crypto-etf-options-2026-11-11",
    "utc": "2026-11-11T12:00:00Z",
@@ -79,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.453,
+   "aporte": -0.452,
    "fuente": "noticia"
   },
   {
@@ -88,7 +74,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
@@ -97,7 +83,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.22,
+   "aporte": 0.219,
    "fuente": "noticia"
   },
   {
@@ -115,7 +101,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.206,
+   "aporte": -0.205,
    "fuente": "noticia"
   },
   {
@@ -124,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -161,6 +147,23 @@
    "detail_es": "Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
    "url": "https://mempool.space/tx/b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03",
    "action": "RISK_OFF_BLOCK"
+  },
+  {
+   "id": "DORMANT_WHALE-db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
+   "type": "DORMANT_WHALE",
+   "severity": "media",
+   "txid": "db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
+   "block_height": 975305,
+   "block_time_utc": "2026-11-10T14:22:48Z",
+   "detected_utc": "2026-11-10T14:33:46Z",
+   "btc_moved": 1514.583,
+   "max_age_years": 6.23,
+   "btc_aged_5y": 1514.583,
+   "btc_aged_10y": 0.0,
+   "n_inputs": 3,
+   "detail_es": "Ballena dormida movió 1,515 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 6.2 años.",
+   "url": "https://mempool.space/tx/db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
+   "action": "CAUTION"
   }
  ],
  "cause": "onchain",
@@ -174,6 +177,6 @@
    "fear_greed": 32
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.62
+  "stablecoins_30d_pct": -4.61
  }
 }
