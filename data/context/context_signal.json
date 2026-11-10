@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T07:39:27Z",
+ "generated_utc": "2026-11-10T08:38:33Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.473,
- "event_risk": 0.705,
+ "event_risk": 0.715,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.345,
+   "riesgo": 0.359,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.234,
+   "riesgo": 0.244,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.461,
+   "aporte": -0.46,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.264,
+   "aporte": -0.263,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.232,
+   "aporte": 0.23,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.216,
+   "aporte": -0.215,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.194,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -133,16 +133,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.106,
+   "aporte": 0.105,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-adds-165-000-jobs-in-october-beating-forecasts-2026-11-07",
-   "date": "2026-11-07",
-   "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
-   "category": "MACRO_DATA",
+   "id": "news-binance-us-6-3bn-hack-began-with-a-fake-job-offer-2026-11-04",
+   "date": "2026-11-04",
+   "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
+   "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.095,
+   "aporte": -0.093,
    "fuente": "noticia"
   }
  ],
