@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T20:28:18Z",
+ "generated_utc": "2026-11-10T21:27:22Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -65,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.444,
+   "aporte": -0.443,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.245,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.208,
+   "aporte": -0.207,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.208,
+   "aporte": 0.207,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.174,
+   "aporte": -0.173,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.102,
+   "aporte": 0.101,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "Hackeo de 6.300 millones de dólares a Binance se originó con una falsa oferta de trabajo y sin ciberseguro",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.087,
+   "aporte": -0.086,
    "fuente": "noticia"
   }
  ],
