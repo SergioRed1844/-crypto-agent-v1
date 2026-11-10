@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-10T21:31:57Z",
+ "generated_utc": "2026-11-10T22:26:39Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.471,
+ "bias": -0.47,
  "event_risk": 0.577,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
-  "Stablecoins -4.6% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.61% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -65,7 +65,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.443,
+   "aporte": -0.442,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.206,
+   "aporte": 0.205,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.172,
    "fuente": "noticia"
   },
   {
@@ -194,6 +194,6 @@
    "fear_greed": 32
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.6
+  "stablecoins_30d_pct": -4.61
  }
 }
