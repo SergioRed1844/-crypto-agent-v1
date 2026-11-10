@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T05:41:08Z",
+ "generated_utc": "2026-11-10T05:44:51Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.472,
- "event_risk": 0.685,
+ "event_risk": 0.686,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.317,
+   "riesgo": 0.318,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -88,7 +88,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.268,
+   "aporte": -0.267,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.236,
+   "aporte": 0.235,
    "fuente": "noticia"
   },
   {
