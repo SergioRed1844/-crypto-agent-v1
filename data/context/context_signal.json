@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-10T11:36:00Z",
+ "generated_utc": "2026-11-10T11:42:29Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -36,7 +36,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.276,
+   "riesgo": 0.277,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -106,7 +106,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.214,
+   "aporte": -0.213,
    "fuente": "noticia"
   },
   {
