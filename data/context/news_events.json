@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-10T05:44:51Z",
+ "updated_utc": "2026-11-10T06:40:23Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7653,6 +7653,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-09T05:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Central Bank Minutes",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Resumen del Banco de Japón muestra apoyo a mayores subidas de tipos",
+   "source_url": "https://www.morningstar.com/news/dow-jones/2026110914427/boj-opinion-summary-shows-board-remains-in-favor-of-more-tightening",
+   "source_title": "morningstar.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-boj-opinion-summary-shows-board-remains-in-favor-o-2026-11-10",
+   "date": "2026-11-10",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-10T05:00:00Z"
   }
  ]
 }
