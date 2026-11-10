@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-10T02:44:06+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
+Última corrida: **2026-11-10T03:43:06+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-09
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -134,24 +134,24 @@ Ninguno.
 | XRP | sí | 2026-11-10 | binance |
 | ^MXX | sí | 2026-11-09 | yahoo |
 | ^VIX | sí | 2026-11-09 | yahoo |
-| contexto_v42 | sí | 2026-11-10T01:49:27Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-10T02:53:51Z | RISK_OFF |
 | fear_greed | sí | 2026-11-10 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-11-08 | wikimedia |
+| wiki_en_Bankruptcy | sí | 2026-11-09 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-08 | wikimedia |
-| wiki_en_Cryptocurrency | sí | 2026-11-08 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-11-08 | wikimedia |
-| wiki_en_Ethereum | sí | 2026-11-08 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-11-08 | wikimedia |
-| wiki_en_Inflation | sí | 2026-11-08 | wikimedia |
-| wiki_en_Recession | sí | 2026-11-08 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-11-08 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-08 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-11-08 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-11-08 | wikimedia |
+| wiki_en_Cryptocurrency | sí | 2026-11-09 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-09 | wikimedia |
+| wiki_en_Ethereum | sí | 2026-11-09 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-09 | wikimedia |
+| wiki_en_Inflation | sí | 2026-11-09 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-09 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-11-09 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-09 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-09 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-11-09 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-08 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-11-08 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-08 | wikimedia |
-| wiki_es_Inflación | sí | 2026-11-08 | wikimedia |
-| wiki_es_Recesión | sí | 2026-11-08 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-11-09 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-09 | wikimedia |
+| wiki_es_Inflación | sí | 2026-11-09 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-09 | wikimedia |
 
 _Señal estadística para que TÚ la revises. No es asesoría financiera ni una orden; el Radar no opera y no tiene llaves de ningún exchange. Probabilidades históricas encogidas, no garantías._
