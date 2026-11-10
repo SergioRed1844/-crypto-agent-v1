@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-10T02:43:54Z",
+ "generated_utc": "2026-11-10T02:53:51Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
  "bias": -0.472,
- "event_risk": 0.658,
+ "event_risk": 0.659,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.404,
-   "riesgo": 0.281,
+   "riesgo": 0.283,
    "ventana": [
     "2026-11-10T11:30:00Z",
     "2026-11-10T14:30:00Z"
@@ -64,7 +64,7 @@
    "category": "CRYPTO_REGULATION",
    "status": "confirmed",
    "magnitud": 0.281,
-   "riesgo": 0.191,
+   "riesgo": 0.192,
    "ventana": [
     "2026-11-10T12:00:00Z",
     "2026-11-12T06:00:00Z"
@@ -124,7 +124,7 @@
    "title_es": "El Banco de Inglaterra sube las tasas por primera vez en más de tres años",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.146,
+   "aporte": -0.145,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "EE. UU. suma 165.000 empleos en octubre y supera las expectativas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.106,
+   "aporte": -0.105,
    "fuente": "noticia"
   }
  ],
