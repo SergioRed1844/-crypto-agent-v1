@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-11T08:17:51Z",
+ "updated_utc": "2026-11-11T08:22:49Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7991,6 +7991,27 @@
    "utc": "2026-11-11T02:30:00Z"
   },
   {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bowman advierte que el IPC de octubre retrasa la moderación inflacionaria",
+   "source_url": "https://econotimes.com/Bowman-Says-October-CPI-Raises-Risk-Inflation-Will-Cool-More-Slowly-1774896",
+   "source_title": "econotimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bowman-says-october-cpi-raises-risk-inflation-will-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T02:30:00Z"
+  },
+  {
    "category": "MACRO_DATA",
    "subcategory": "CPI",
    "country": "US",
@@ -8073,6 +8094,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-11T05:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bolsas de EE.UU. caen tras dato de inflación mayor a lo previsto",
+   "source_url": "https://www.manilatimes.net/2026/11/11/business/foreign-business/us-stocks-fall-on-hot-inflation-report-as-nvidia-tumbles-again/2467219",
+   "source_title": "manilatimes.net",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-us-stocks-fall-on-hot-inflation-report-as-nvidia-t-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T05:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Rendimientos de bonos de EE.UU. se disparan ante apuestas de alzas de tasas",
+   "source_url": "https://www.thehindubusinessline.com/markets/bond-yields-spike-most-since-tariff-meltdown-on-rate-hike-bets/article71688251.ece",
+   "source_title": "thehindubusinessline.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bond-yields-spike-most-since-tariff-meltdown-on-ra-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "06:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T06:30:00Z"
   }
  ]
 }
