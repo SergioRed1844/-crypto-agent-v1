@@ -1,6 +1,6 @@
-# 📡 Radar EB — resumen 2026-11-10
+# 📡 Radar EB — resumen 2026-11-11
 
-**Sigo vivo:** 34 corridas en 24 h · última 2026-11-10T14:33:36+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 34 corridas en 24 h · última 2026-11-11T14:12:56+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
@@ -8,7 +8,7 @@ Ningún setup disparó en las últimas 24 h. Eso también es información: no ha
 
 ## Clima de mercado
 
-BTC 75,368 (caída desde máximo de 1 año -29%; Fear&Greed 29) · S&P (SPY) -3.4% vs máximo de 1 año; VIX 19.9 · miedo de hogares (Wikipedia, EUA) z=-2.1 · peso 5 días -0.4% (USD/MXN); IPC vs máximo 1 año 0.0% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).; Stablecoins -4.62% en 30 días (liquidez saliendo))
+BTC 73,796 (caída desde máximo de 1 año -28%; Fear&Greed 32) · S&P (SPY) -3.7% vs máximo de 1 año; VIX 19.5 · miedo de hogares (Wikipedia, EUA) z=+0.5 · peso 5 días -0.8% (USD/MXN); IPC vs máximo 1 año 0.0% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.48, alerta on-chain media; Stablecoins -4.91% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
