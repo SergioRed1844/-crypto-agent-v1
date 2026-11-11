@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T09:21:42Z",
+ "generated_utc": "2026-11-11T10:16:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.428,
+   "aporte": -0.426,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.347,
+   "aporte": -0.34,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.287,
+   "aporte": -0.285,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.245,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.194,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.187,
+   "aporte": 0.186,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Wall Street cede tras conocerse datos desalentadores sobre la inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.124,
+   "aporte": -0.122,
    "fuente": "noticia"
   }
  ],
