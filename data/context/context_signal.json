@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T21:06:44Z",
+ "generated_utc": "2026-11-11T21:10:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.272,
+   "aporte": -0.271,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.17,
+   "aporte": 0.169,
    "fuente": "noticia"
   },
   {
