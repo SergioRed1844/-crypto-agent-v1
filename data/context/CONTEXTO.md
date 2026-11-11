@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-11T05:20:24Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-11T05:24:47Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.43 · tamaño ×0.5 · compras permitidas
 
@@ -18,7 +18,7 @@ Actualizado 2026-11-11T05:20:24Z UTC. Se recalcula cada hora; el calendario y lo
 | Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.377 |
 | Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.294 |
 | Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.253 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.203 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.202 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.196 |
 | China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.193 |
 | Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.135 |
@@ -30,23 +30,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-11T05:20:24Z",
+ "inicio": "2026-11-11T05:24:47Z",
  "onchain": {
   "scanned": [
-   975389,
-   975391
+   975392,
+   975392
   ],
-  "calls": 78,
+  "calls": 11,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 48,
-  "eventos": 13,
-  "urgentes": 12,
+  "eventos": 14,
+  "urgentes": 13,
   "metodo": "gemini",
-  "agregados": 2
+  "agregados": 0
  },
  "gemini": {
   "model": "gemini-3.8-flash",
