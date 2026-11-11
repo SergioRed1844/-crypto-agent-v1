@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T14:12:49Z",
+ "generated_utc": "2026-11-11T15:11:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.421,
+   "aporte": -0.42,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.313,
+   "aporte": -0.307,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.279,
+   "aporte": -0.277,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.235,
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -91,37 +91,20 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.18,
+   "aporte": 0.178,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-stocks-slip-following-a-discouraging-update-on-2026-11-10",
-   "date": "2026-11-10",
-   "title_es": "Wall Street cede tras conocerse datos desalentadores sobre la inflación",
-   "category": "MACRO_DATA",
+   "id": "news-binance-6-3-billion-heist-to-prompt-closer-scrutin-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
+   "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.112,
+   "aporte": -0.11,
    "fuente": "noticia"
   }
  ],
  "alerts": [
-  {
-   "id": "DORMANT_WHALE-db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
-   "type": "DORMANT_WHALE",
-   "severity": "media",
-   "txid": "db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
-   "block_height": 975305,
-   "block_time_utc": "2026-11-10T14:22:48Z",
-   "detected_utc": "2026-11-10T14:33:46Z",
-   "btc_moved": 1514.583,
-   "max_age_years": 6.23,
-   "btc_aged_5y": 1514.583,
-   "btc_aged_10y": 0.0,
-   "n_inputs": 3,
-   "detail_es": "Ballena dormida movió 1,515 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 6.2 años.",
-   "url": "https://mempool.space/tx/db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
-   "action": "CAUTION"
-  },
   {
    "id": "DORMANT_WHALE-a802080781885d83a1b21aa928bfbd524b840ad911c1fa3a0eb0957abd0b458d",
    "type": "DORMANT_WHALE",
