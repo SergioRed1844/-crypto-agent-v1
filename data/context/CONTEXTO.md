@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-11T12:14:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-11T13:13:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -13,14 +13,14 @@ Actualizado 2026-11-11T12:14:22Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.424 |
-| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.327 |
-| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.282 |
-| Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.239 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.423 |
+| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.320 |
+| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.280 |
+| Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.237 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.198 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.192 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.183 |
-| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.117 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.181 |
+| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.115 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-11T12:14:22Z",
+ "inicio": "2026-11-11T13:13:30Z",
  "onchain": {
   "scanned": [
-   975430,
-   975433
+   975434,
+   975436
   ],
-  "calls": 61,
+  "calls": 83,
   "stopped": null,
   "nuevas": 0
  },
