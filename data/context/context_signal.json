@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T13:17:53Z",
+ "generated_utc": "2026-11-11T14:12:49Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48, alerta on-chain media",
-  "Stablecoins -4.91% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.92% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.423,
+   "aporte": -0.421,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.32,
+   "aporte": -0.313,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.28,
+   "aporte": -0.279,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.235,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.198,
+   "aporte": -0.197,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.192,
+   "aporte": -0.191,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.18,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Wall Street cede tras conocerse datos desalentadores sobre la inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.114,
+   "aporte": -0.112,
    "fuente": "noticia"
   }
  ],
@@ -151,6 +151,6 @@
    "fear_greed": 29
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.91
+  "stablecoins_30d_pct": -4.92
  }
 }
