@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-11T09:16:55Z",
+ "updated_utc": "2026-11-11T09:21:42Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8073,6 +8073,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-11T03:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Creación de 400.000 empleos en EE. UU. convive con desaceleración salarial",
+   "source_url": "https://www.aol.com/articles/bessent-cheers-400-000-jobs-001700000.html",
+   "source_title": "aol.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-bessent-cheers-400-000-new-jobs-but-paychecks-are-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T04:00:00Z"
   },
   {
    "category": "MONETARY_POLICY",
