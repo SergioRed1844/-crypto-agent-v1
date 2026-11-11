@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-11T20:07:35Z",
+ "generated_utc": "2026-11-11T21:06:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.478,
+ "bias": -0.477,
  "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.414,
+   "aporte": -0.413,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.272,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.269,
+   "aporte": -0.267,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.222,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.194,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.171,
+   "aporte": 0.17,
    "fuente": "noticia"
   },
   {
