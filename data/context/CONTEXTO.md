@@ -1,11 +1,11 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-11T06:19:40Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-11T07:18:44Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.48, alerta on-chain media
-- Stablecoins -4.94% en 30 días (liquidez saliendo)
+- Stablecoins -4.79% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -13,14 +13,14 @@ Actualizado 2026-11-11T06:19:40Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.431 |
-| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.369 |
-| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.292 |
-| Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.251 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.202 |
-| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.196 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.192 |
-| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.132 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.430 |
+| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.362 |
+| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.290 |
+| Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.249 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.201 |
+| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.195 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.190 |
+| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.130 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,27 +29,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-11T06:19:40Z",
+ "inicio": "2026-11-11T07:18:44Z",
  "onchain": {
   "scanned": [
-   975393,
-   975395
+   975396,
+   975403
   ],
-  "calls": 73,
+  "calls": 126,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
+  "titulares": 10,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
