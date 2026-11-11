@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T15:11:52Z",
+ "generated_utc": "2026-11-11T16:11:00Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.42,
+   "aporte": -0.419,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.307,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.277,
+   "aporte": -0.275,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.233,
+   "aporte": -0.231,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.178,
+   "aporte": 0.177,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.11,
+   "aporte": -0.109,
    "fuente": "noticia"
   }
  ],
