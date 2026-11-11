@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-11T02:23:08Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-11T03:22:14Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.48 · riesgo de evento 0.43 · tamaño ×0.0 · VETO a compras
 
@@ -14,14 +14,14 @@ Actualizado 2026-11-11T02:23:08Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.436 |
-| Las bolsas caen ante alta inflación y temor a subidas de tasas de interés | 2026-11-11 | anti | -0.299 |
-| Aumenta la probabilidad de más subidas de tasas tras dato elevado de IPC de octu | 2026-11-11 | anti | -0.242 |
-| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.237 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.435 |
+| Las bolsas caen ante alta inflación y temor a subidas de tasas de interés | 2026-11-11 | anti | -0.293 |
+| Aumenta la probabilidad de más subidas de tasas tras dato elevado de IPC de octu | 2026-11-11 | anti | -0.240 |
+| Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.235 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.204 |
-| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.198 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.198 |
-| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.144 |
+| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.197 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.197 |
+| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.141 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-11T02:23:08Z",
+ "inicio": "2026-11-11T03:22:14Z",
  "onchain": {
   "scanned": [
-   975368,
-   975375
+   975376,
+   975381
   ],
-  "calls": 330,
+  "calls": 105,
   "stopped": null,
   "nuevas": 0
  },
