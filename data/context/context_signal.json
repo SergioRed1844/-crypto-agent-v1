@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-11T04:21:19Z",
- "state": "RISK_OFF",
- "veto_entries": true,
+ "generated_utc": "2026-11-11T05:20:24Z",
+ "state": "CAUTION",
+ "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.0,
- "bias": -0.478,
+ "size_mult": 0.5,
+ "bias": -0.479,
  "event_risk": 0.433,
- "extra_confluence": 0,
+ "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
-  "Alerta on-chain alta: Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
+  "Precaución: sesgo -0.48, alerta on-chain media",
   "Stablecoins -4.94% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -51,7 +51,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.434,
+   "aporte": -0.433,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,16 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.385,
+   "aporte": -0.377,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-ios-sandbox-escape-puts-crypto-wallet-data-at-risk-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -69,16 +78,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.255,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-binance-6-3-billion-heist-to-prompt-closer-scrutin-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.234,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.195,
+   "aporte": 0.193,
    "fuente": "noticia"
   },
   {
@@ -114,26 +114,11 @@
    "title_es": "Wall Street cede tras conocerse datos desalentadores sobre la inflación",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.135,
    "fuente": "noticia"
   }
  ],
  "alerts": [
-  {
-   "id": "EARLY_MINER-b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03",
-   "type": "EARLY_MINER",
-   "severity": "alta",
-   "txid": "b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03",
-   "block_height": 975128,
-   "block_time_utc": "2026-11-09T04:08:49Z",
-   "detected_utc": "2026-11-09T05:02:56Z",
-   "btc_moved": 50.02,
-   "oldest_input_height": 120450,
-   "n_inputs": 1,
-   "detail_es": "Minero temprano gastó 50.02 BTC P2PK (input más viejo: bloque 120450).",
-   "url": "https://mempool.space/tx/b4234d5231065682e62fa96af4e6ab477bdf75ed8ffa923b9b80b8fdf7930e03",
-   "action": "RISK_OFF_BLOCK"
-  },
   {
    "id": "DORMANT_WHALE-db366b5194867d48f0707a9cabd1ee130cc0fefe1acd144452905232b131b6f7",
    "type": "DORMANT_WHALE",

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-11T04:21:19Z",
+ "updated_utc": "2026-11-11T05:20:24Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -7844,6 +7844,27 @@
    "utc": "2026-11-11T01:30:00Z"
   },
   {
+   "category": "HACK_SECURITY",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
+   "source_url": "https://www.govinfosecurity.com/ios-sandbox-escape-puts-crypto-wallet-data-at-risk-a-33350",
+   "source_title": "govinfosecurity.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-ios-sandbox-escape-puts-crypto-wallet-data-at-risk-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T01:30:00Z"
+  },
+  {
    "category": "MONETARY_POLICY",
    "subcategory": "central_bank_rhetoric",
    "country": "US",
@@ -8031,6 +8052,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-11T03:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "La Reserva Federal perfila alza de tasas de 25 pb o más desafiando a Trump",
+   "source_url": "https://www.watoday.com.au/business/the-economy/trump-s-fed-nightmare-rates-won-t-be-slashed-they-could-surge-now-20261111-p61d55.html",
+   "source_title": "watoday.com.au",
+   "confidence": 0.75,
+   "origin": "gemini/GDELT",
+   "id": "news-us-interest-rates-the-federal-reserve-set-to-anger-2026-11-11",
+   "date": "2026-11-11",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-11T05:00:00Z"
   }
  ]
 }
