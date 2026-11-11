@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-11T00:24:49Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-11T00:52:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.48 · riesgo de evento 0.43 · tamaño ×0.0 · VETO a compras
 
@@ -14,14 +14,14 @@ Actualizado 2026-11-11T00:24:49Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.439 |
-| Las bolsas caen ante alta inflación y temor a subidas de tasas de interés | 2026-11-11 | anti | -0.312 |
-| Aumenta la probabilidad de más subidas de tasas tras dato elevado de IPC de octu | 2026-11-11 | anti | -0.246 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.438 |
+| Las bolsas caen ante alta inflación y temor a subidas de tasas de interés | 2026-11-11 | anti | -0.309 |
+| Aumenta la probabilidad de más subidas de tasas tras dato elevado de IPC de octu | 2026-11-11 | anti | -0.245 |
 | Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras | 2026-11-06 | anti | -0.239 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.206 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.202 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.205 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.201 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.199 |
-| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.150 |
+| Wall Street cede tras conocerse datos desalentadores sobre la inflación | 2026-11-10 | anti | -0.148 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,27 +30,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-11T00:24:49Z",
+ "inicio": "2026-11-11T00:52:32Z",
  "onchain": {
   "scanned": [
-   975358,
-   975360
+   975361,
+   975364
   ],
-  "calls": 62,
+  "calls": 59,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 16,
-  "eventos": 4,
-  "urgentes": 4,
+  "titulares": 0,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
-  "agregados": 4
+  "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
