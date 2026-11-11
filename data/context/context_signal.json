@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T17:10:03Z",
+ "generated_utc": "2026-11-11T17:17:02Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -46,7 +46,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.295,
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.196,
+   "aporte": -0.195,
    "fuente": "noticia"
   },
   {
