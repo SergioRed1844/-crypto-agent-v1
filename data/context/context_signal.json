@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-11T21:10:34Z",
+ "generated_utc": "2026-11-11T22:06:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,16 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.413,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-consumer-prices-increased-0-4-in-october-higher-th-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.412,
    "fuente": "noticia"
   },
   {
@@ -55,7 +46,16 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.266,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-consumer-prices-increased-0-4-in-october-higher-th-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.266,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.222,
+   "aporte": -0.22,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.169,
+   "aporte": 0.168,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.106,
+   "aporte": -0.105,
    "fuente": "noticia"
   }
  ],
