@@ -29,6 +29,7 @@ PILARES = {
                   "ZC=F", "ZW=F", "ZS=F", "KC=F", "CC=F", "SB=F", "LE=F"],
     "metales": ["FCX", "SCCO", "NEM", "AEM", "WPM", "RIO", "BHP", "VALE", "AA", "MP", "GMEXICOB.MX", "PE&OLES.MX",
                 "GLD", "SLV", "GDX", "COPX", "GC=F", "SI=F", "HG=F", "PL=F"],
+    "foco_12nov": ["NBIS", "SOXL", "SOXX", "CRWV", "IREN", "NVDA", "AMD", "MU"],
     "coberturas": ["XLE", "CF", "XOM", "CVX", "COP", "OXY", "NTR", "MOS", "XOP", "BNO", "ITA"],
     "auditadas_30oct": ["HWM", "GOOGL", "UBER", "VRT", "NVDA"],
     "caidas_29oct": ["GOOGL", "NOW", "FTNT", "CAT", "MRVL", "SFM", "HLN", "CRWD", "OKTA", "PANW", "LITE"],
