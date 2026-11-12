@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T21:04:01Z",
+ "generated_utc": "2026-11-12T21:45:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.309,
+   "aporte": -0.308,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.263,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.208,
+   "aporte": -0.207,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.139,
+   "aporte": 0.138,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.116,
+   "aporte": -0.115,
    "fuente": "noticia"
   }
  ],
