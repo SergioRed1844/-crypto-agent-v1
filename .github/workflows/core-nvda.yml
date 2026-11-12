@@ -1,0 +1,24 @@
+# Estudio de NVDA: caídas, reportes, opciones, ETF apalancados y salidas de CEO. Corre con [nvda-run].
+name: core-nvda
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-nvda
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[nvda-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q "yfinance>=0.2.54" pandas numpy lxml requests
+      - run: python -m core.nvda out/nvda
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "nvda - $(date -u +%FT%TZ)"
