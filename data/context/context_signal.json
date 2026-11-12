@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T20:51:32Z",
+ "generated_utc": "2026-11-12T21:04:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.385,
+   "aporte": -0.384,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.265,
+   "aporte": -0.263,
    "fuente": "noticia"
   },
   {
