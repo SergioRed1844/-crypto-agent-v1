@@ -213,6 +213,10 @@ def main(out: str) -> int:
                                       for y in range(2015, hoy.year + 1)}}
     res["caidas_2d"] = caidas_nvda(nv)
     res["desde_maximo_20_35"] = desde_maximo(nv)
+    res["soxl_desde_max_70_85"] = desde_maximo(px["SOXL"].dropna(), -0.85, -0.70)
+    sx = px["SOXL"].dropna()
+    res["soxl_dd_2022"] = {"max": float(sx.loc["2021-06":"2022-12"].max()), "min": float(sx.loc["2021-06":"2022-12"].min()),
+                           "caida": float(sx.loc["2021-06":"2022-12"].min() / sx.loc["2021-06":"2022-12"].max() - 1)}
     res["reportes"] = reportes(nv)
     res["opciones"] = opciones(float(nv.iloc[-1]))
     # Salidas de CEO
