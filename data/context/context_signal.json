@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-12T04:09:08Z",
+ "generated_utc": "2026-11-12T04:59:41Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.477,
+ "bias": -0.479,
  "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -37,16 +37,25 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.404,
+   "aporte": -0.403,
    "fuente": "noticia"
   },
   {
-   "id": "news-ios-sandbox-escape-puts-crypto-wallet-data-at-risk-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
+   "id": "news-dow-jones-industrial-average-djia-and-s-p-500-slid-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.368,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-crypto-holders-face-private-key-theft-risk-from-ne-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "Vulnerabilidad en iPhone pone en riesgo de robo claves privadas de criptousuarios",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.294,
    "fuente": "noticia"
   },
   {
@@ -55,16 +64,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.24,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-consumer-prices-increased-0-4-in-october-higher-th-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.234,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -91,16 +91,16 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.16,
+   "aporte": 0.159,
    "fuente": "noticia"
   },
   {
-   "id": "news-hawkish-waller-and-hot-cpi-ignite-fed-50bps-rate-h-2026-11-11",
+   "id": "news-ios-sandbox-escape-puts-crypto-wallet-data-at-risk-2026-11-11",
    "date": "2026-11-11",
-   "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
-   "category": "MONETARY_POLICY",
+   "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
+   "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.105,
+   "aporte": -0.128,
    "fuente": "noticia"
   }
  ],
