@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-12T00:04:08Z",
+ "generated_utc": "2026-11-12T01:03:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.477,
+ "bias": -0.478,
  "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -4.77% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.409,
+   "aporte": -0.408,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.263,
+   "aporte": -0.261,
    "fuente": "noticia"
   },
   {
@@ -55,16 +55,16 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.255,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
-   "id": "news-hawkish-waller-and-hot-cpi-ignite-fed-50bps-rate-h-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
+   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.192,
+   "aporte": -0.191,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -91,16 +91,16 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.165,
+   "aporte": 0.164,
    "fuente": "noticia"
   },
   {
-   "id": "news-binance-6-3-billion-heist-to-prompt-closer-scrutin-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "Robo de 6.300 millones a Binance provocará mayor escrutinio de aseguradoras",
-   "category": "HACK_SECURITY",
+   "id": "news-hawkish-waller-and-hot-cpi-ignite-fed-50bps-rate-h-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed",
+   "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.104,
+   "aporte": -0.107,
    "fuente": "noticia"
   }
  ],
@@ -116,6 +116,6 @@
    "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.77
+  "stablecoins_30d_pct": -4.89
  }
 }

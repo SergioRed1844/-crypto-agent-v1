@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-12T00:04:08Z",
+ "updated_utc": "2026-11-12T01:03:14Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8157,6 +8157,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-11T06:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "FED_RATES",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 4,
+   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
+   "source_url": "https://www.timescall.com/2026/11/11/higher-prices-fed-rate-hikes/",
+   "source_title": "timescall.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
+   "date": "2026-11-12",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-12T00:30:00Z"
   }
  ]
 }
