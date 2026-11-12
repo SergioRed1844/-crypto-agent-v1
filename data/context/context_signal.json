@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T05:03:40Z",
+ "generated_utc": "2026-11-12T05:59:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.403,
+   "aporte": -0.402,
    "fuente": "noticia"
   },
   {
@@ -46,16 +46,16 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.368,
+   "aporte": -0.361,
    "fuente": "noticia"
   },
   {
-   "id": "news-crypto-holders-face-private-key-theft-risk-from-ne-2026-11-12",
+   "id": "news-binance-hack-reveals-crypto-uphill-battle-against-2026-11-12",
    "date": "2026-11-12",
-   "title_es": "Vulnerabilidad en iPhone pone en riesgo de robo claves privadas de criptousuarios",
+   "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.294,
+   "aporte": -0.338,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.189,
+   "aporte": -0.188,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.183,
+   "aporte": -0.182,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.128,
+   "aporte": -0.127,
    "fuente": "noticia"
   }
  ],

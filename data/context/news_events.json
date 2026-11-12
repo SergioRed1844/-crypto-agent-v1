@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-12T05:03:40Z",
+ "updated_utc": "2026-11-12T05:59:01Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8243,6 +8243,27 @@
    "utc": "2026-11-12T01:30:00Z"
   },
   {
+   "category": "MONETARY_POLICY",
+   "subcategory": "usd_rate_hike",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Dólar sube por crecientes apuestas de alzas de tasas de la Fed",
+   "source_url": "https://www.rttnews.com/3713277/u-s-dollar-climbs-amid-rising-expectations-of-fed-rate-hike.aspx",
+   "source_title": "rttnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-dollar-climbs-amid-rising-expectations-of-fed-2026-11-12",
+   "date": "2026-11-12",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-12T01:30:00Z"
+  },
+  {
    "category": "MACRO_DATA",
    "subcategory": "",
    "country": "US",
@@ -8262,6 +8283,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-12T03:00:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "exchange_hack",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 4,
+   "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
+   "source_url": "https://www.thehindu.com/sci-tech/technology/binance-hack-reveals-cryptos-uphill-battle-against-hackers/article71692230.ece",
+   "source_title": "thehindu.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-binance-hack-reveals-crypto-uphill-battle-against-2026-11-12",
+   "date": "2026-11-12",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-12T05:30:00Z"
   }
  ]
 }
