@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-12T16:49:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-12T16:54:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -11,8 +11,8 @@ Actualizado 2026-11-12T16:49:23Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.389 |
 | Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.317 |
-| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.288 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.216 |
+| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.287 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.215 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.182 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.176 |
 | China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.144 |
@@ -25,13 +25,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-12T16:49:23Z",
+ "inicio": "2026-11-12T16:54:27Z",
  "onchain": {
-  "scanned": [
-   975571,
-   975573
-  ],
-  "calls": 119,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
