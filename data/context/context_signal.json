@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T12:57:05Z",
+ "generated_utc": "2026-11-12T13:12:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -4.89% en 30 días (liquidez saliendo)"
+  "Stablecoins -4.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -40,7 +40,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.312,
+   "aporte": -0.31,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.222,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.179,
+   "aporte": -0.178,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.149,
+   "aporte": 0.148,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.122,
+   "aporte": -0.121,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 28
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -4.89
+  "stablecoins_30d_pct": -4.9
  }
 }
