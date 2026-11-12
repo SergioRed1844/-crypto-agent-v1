@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-12T01:08:10Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-12T02:02:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.28 · tamaño ×0.5 · compras permitidas
 
@@ -13,13 +13,13 @@ Actualizado 2026-11-12T01:08:10Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.408 |
-| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.261 |
-| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.250 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.246 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.191 |
-| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.185 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.164 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.407 |
+| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.260 |
+| Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo e | 2026-11-11 | anti | -0.245 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.244 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.190 |
+| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.184 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.163 |
 | Waller hawkish y alto IPC disparan apuestas de subida de 50 pb de la Fed | 2026-11-11 | anti | -0.107 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -29,10 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-12T01:08:10Z",
+ "inicio": "2026-11-12T02:02:30Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   975502,
+   975507
+  ],
+  "calls": 48,
   "stopped": null,
   "nuevas": 0
  },

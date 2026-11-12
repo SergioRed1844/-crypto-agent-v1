@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-12T01:08:10Z",
+ "generated_utc": "2026-11-12T02:02:30Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.408,
+   "aporte": -0.407,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.261,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Los precios al consumidor en EE.UU. suben un 0,4% en octubre, por encima de lo esperado",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.164,
+   "aporte": 0.163,
    "fuente": "noticia"
   },
   {
