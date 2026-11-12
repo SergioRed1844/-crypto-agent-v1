@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-12T05:59:01Z",
+ "generated_utc": "2026-11-12T06:58:03Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.479,
- "event_risk": 0.28,
+ "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
@@ -14,22 +14,7 @@
   "Precaución: sesgo -0.48",
   "Stablecoins -4.9% en 30 días (liquidez saliendo)"
  ],
- "upcoming": [
-  {
-   "id": "us-sec-ise-crypto-etf-options-2026-11-11",
-   "utc": "2026-11-11T12:00:00Z",
-   "title_es": "SEC: plazo de decisión (prorrogado el 24-sep) sobre SR-ISE-2026-42, criterios universales para listar opciones sobre ETFs spot cripto en Nasdaq ISE",
-   "category": "CRYPTO_REGULATION",
-   "status": "confirmed",
-   "magnitud": 0.281,
-   "riesgo": 0.281,
-   "ventana": [
-    "2026-11-10T12:00:00Z",
-    "2026-11-12T06:00:00Z"
-   ],
-   "en_ventana": true
-  }
- ],
+ "upcoming": [],
  "recent": [
   {
    "id": "news-wall-street-grapples-with-5-7-trillion-rout-as-ai-2026-11-07",
@@ -37,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.402,
+   "aporte": -0.401,
    "fuente": "noticia"
   },
   {
@@ -46,7 +31,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.361,
+   "aporte": -0.353,
    "fuente": "noticia"
   },
   {
@@ -55,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.338,
+   "aporte": -0.336,
    "fuente": "noticia"
   },
   {
@@ -64,7 +49,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.234,
    "fuente": "noticia"
   },
   {
@@ -91,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.158,
+   "aporte": 0.156,
    "fuente": "noticia"
   },
   {
@@ -100,7 +85,7 @@
    "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.127,
+   "aporte": -0.126,
    "fuente": "noticia"
   }
  ],
