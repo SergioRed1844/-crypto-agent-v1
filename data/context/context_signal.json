@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T09:34:38Z",
+ "generated_utc": "2026-11-13T09:56:13Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -40,7 +40,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.195,
+   "aporte": -0.194,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   },
   {
