@@ -1,19 +1,19 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-13T00:46:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-13T01:41:37Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.47
-- Stablecoins -4.9% en 30 días (liquidez saliendo)
+- Stablecoins -5.35% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.304 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.242 |
-| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.195 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.162 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.161 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.303 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.240 |
+| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.191 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.160 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.160 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.142 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.138 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.104 |
@@ -25,27 +25,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-13T00:46:56Z",
+ "inicio": "2026-11-13T01:41:37Z",
  "onchain": {
   "scanned": [
-   975616,
-   975616
+   975617,
+   975617
   ],
-  "calls": 26,
+  "calls": 33,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 5,
+  "eventos": 3,
+  "urgentes": 1,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 1
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2

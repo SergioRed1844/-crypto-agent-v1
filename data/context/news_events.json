@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-13T00:46:56Z",
+ "updated_utc": "2026-11-13T01:41:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8304,6 +8304,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-12T05:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "conflict",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Nasdaq amplía pérdidas por la dimisión del CEO de Nvidia y hostilidades en Oriente Medio",
+   "source_url": "http://www.australiannews.net/news/279429293/nasdaq-extends-losses-on-nvidia-ceo-s-resignation-mideast-hostilities",
+   "source_title": "australiannews.net",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-nasdaq-extends-losses-on-nvidia-ceo-resignation-mi-2026-11-13",
+   "date": "2026-11-13",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-13T00:45:00Z"
   }
  ]
 }
