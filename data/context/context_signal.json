@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T17:27:45Z",
+ "generated_utc": "2026-11-13T18:01:25Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.219,
+   "aporte": -0.218,
    "fuente": "noticia"
   },
   {
@@ -44,15 +44,6 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.141,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
    "date": "2026-11-12",
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
@@ -62,12 +53,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.14,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-dow-jones-industrial-average-djia-and-s-p-500-slid-2026-11-12",
    "date": "2026-11-12",
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.136,
    "fuente": "noticia"
   },
   {
