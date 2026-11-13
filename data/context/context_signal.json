@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T18:01:25Z",
+ "generated_utc": "2026-11-13T18:26:50Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
-  "Stablecoins -5.33% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.32% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -40,7 +40,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.19,
+   "aporte": -0.189,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.14,
+   "aporte": -0.139,
    "fuente": "noticia"
   },
   {
@@ -58,16 +58,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.14,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-dow-jones-industrial-average-djia-and-s-p-500-slid-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.136,
+   "aporte": 0.139,
    "fuente": "noticia"
   },
   {
@@ -75,6 +66,15 @@
    "date": "2026-11-06",
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.135,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-dow-jones-industrial-average-djia-and-s-p-500-slid-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
+   "category": "MACRO_DATA",
    "stance": "anti",
    "aporte": -0.135,
    "fuente": "noticia"
@@ -132,6 +132,6 @@
    "fear_greed": 20
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.33
+  "stablecoins_30d_pct": -5.32
  }
 }
