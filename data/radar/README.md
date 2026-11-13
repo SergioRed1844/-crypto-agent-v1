@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-13T21:24:33+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-13
+Última corrida: **2026-11-13T22:23:35+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-13
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -28,7 +28,7 @@ Ninguno.
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.3% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.5% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.4% |
-| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 85% | +0.1% |
+| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
@@ -68,7 +68,7 @@ Ninguno.
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 40% | 43% | 42% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | us | 7 d | 424 | 38% | 33% | 37% | 18% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 201 | 41% | 39% | 41% | 31% | +0.4% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 202 | 41% | 39% | 41% | 31% | +0.3% |
 | Retroceso dentro de tendencia alcista | us | 90 d | 200 | 48% | 45% | 47% | 31% | +0.8% |
 
 ## Salud de fuentes
@@ -134,7 +134,7 @@ Ninguno.
 | XRP | sí | 2026-11-13 | binance |
 | ^MXX | sí | 2026-11-13 | yahoo |
 | ^VIX | sí | 2026-11-13 | yahoo |
-| contexto_v42 | sí | 2026-11-13T20:29:15Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-13T21:24:19Z | RISK_OFF |
 | fear_greed | sí | 2026-11-13 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-12 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-12 | wikimedia |
