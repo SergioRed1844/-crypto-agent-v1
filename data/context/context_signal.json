@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-13T13:31:09Z",
+ "generated_utc": "2026-11-13T14:30:15Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.469,
+ "bias": -0.468,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
-  "Stablecoins -5.34% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.33% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.293,
+   "aporte": -0.292,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.15,
+   "aporte": -0.147,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.145,
+   "aporte": -0.144,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.145,
+   "aporte": 0.144,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.101,
+   "aporte": 0.1,
    "fuente": "noticia"
   }
  ],
@@ -132,6 +132,6 @@
    "fear_greed": 20
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.34
+  "stablecoins_30d_pct": -5.33
  }
 }

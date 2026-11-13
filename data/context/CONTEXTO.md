@@ -1,22 +1,22 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-13T13:31:09Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-13T14:30:15Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.47 · riesgo de evento 0.00 · tamaño ×0.0 · VETO a compras
 
 - Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).
-- Stablecoins -5.34% en 30 días (liquidez saliendo)
+- Stablecoins -5.33% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.293 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.224 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.292 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.223 |
 | Hackers de Binance blanquean fondos y renuncia el director financiero | 2026-11-13 | anti | -0.192 |
-| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.150 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.145 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.145 |
+| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.147 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.144 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.144 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.137 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.101 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.100 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-13T13:31:09Z",
+ "inicio": "2026-11-13T14:30:15Z",
  "onchain": {
   "scanned": [
-   975672,
-   975679
+   975680,
+   975684
   ],
-  "calls": 119,
+  "calls": 76,
   "stopped": null,
   "nuevas": 0
  },
