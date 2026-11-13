@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-13T16:32:34Z",
+ "generated_utc": "2026-11-13T17:27:45Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.468,
+ "bias": -0.467,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.29,
+   "aporte": -0.289,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.22,
+   "aporte": -0.219,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.142,
+   "aporte": 0.141,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.141,
+   "aporte": -0.14,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.14,
+   "aporte": -0.138,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.136,
+   "aporte": -0.135,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.1,
+   "aporte": 0.099,
    "fuente": "noticia"
   }
  ],
