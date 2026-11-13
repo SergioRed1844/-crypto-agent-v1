@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-12T23:43:18Z",
+ "generated_utc": "2026-11-13T00:42:23Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.478,
+ "bias": -0.466,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 69,
+ "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.48",
+  "Precaución: sesgo -0.47",
   "Stablecoins -4.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.381,
+   "aporte": -0.304,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.304,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -40,34 +40,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.249,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.203,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-house-democrats-eye-their-own-crypto-market-struct-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.179,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
-   "date": "2026-11-07",
-   "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.195,
    "fuente": "noticia"
   },
   {
@@ -76,16 +49,43 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.136,
+   "aporte": 0.162,
    "fuente": "noticia"
   },
   {
-   "id": "news-ios-sandbox-escape-puts-crypto-wallet-data-at-risk-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto",
-   "category": "HACK_SECURITY",
+   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
+   "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.114,
+   "aporte": -0.161,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-house-democrats-eye-their-own-crypto-market-struct-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.142,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
+   "date": "2026-11-07",
+   "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.138,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-companies-scramble-to-meet-payroll-pay-bills-after-2026-10-18",
+   "date": "2026-10-18",
+   "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
+   "category": "FINANCIAL_CRISIS",
+   "stance": "pro",
+   "aporte": 0.105,
    "fuente": "noticia"
   }
  ],
@@ -98,7 +98,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 28
+   "fear_greed": 20
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -4.9

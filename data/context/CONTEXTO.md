@@ -1,22 +1,22 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-12T23:43:18Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-13T00:42:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
-- Precaución: sesgo -0.48
+- Precaución: sesgo -0.47
 - Stablecoins -4.9% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.381 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.304 |
-| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.249 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.203 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.179 |
-| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.173 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.136 |
-| Fallo de seguridad en iOS pone en riesgo las claves de billeteras cripto | 2026-11-11 | anti | -0.114 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.304 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.242 |
+| Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflac | 2026-11-12 | anti | -0.195 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.162 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.161 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.142 |
+| Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.138 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.105 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-12T23:43:18Z",
+ "inicio": "2026-11-13T00:42:23Z",
  "onchain": {
   "scanned": [
-   975608,
-   975612
+   975613,
+   975615
   ],
-  "calls": 64,
+  "calls": 87,
   "stopped": null,
   "nuevas": 0
  },
