@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-13T00:42:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-13T00:46:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -16,7 +16,7 @@ Actualizado 2026-11-13T00:42:23Z UTC. Se recalcula cada hora; el calendario y lo
 | La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.161 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.142 |
 | Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un prov | 2026-11-07 | anti | -0.138 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.105 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.104 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-13T00:42:23Z",
+ "inicio": "2026-11-13T00:46:56Z",
  "onchain": {
   "scanned": [
-   975613,
-   975615
+   975616,
+   975616
   ],
-  "calls": 87,
+  "calls": 26,
   "stopped": null,
   "nuevas": 0
  },
