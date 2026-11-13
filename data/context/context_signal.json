@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T04:43:19Z",
+ "generated_utc": "2026-11-13T05:38:06Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
-  "Stablecoins -5.35% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.34% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.301,
+   "aporte": -0.3,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.235,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.18,
+   "aporte": -0.176,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.156,
+   "aporte": -0.155,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.156,
+   "aporte": 0.155,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.141,
+   "aporte": -0.14,
    "fuente": "noticia"
   },
   {
@@ -132,6 +132,6 @@
    "fear_greed": 20
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.35
+  "stablecoins_30d_pct": -5.34
  }
 }
