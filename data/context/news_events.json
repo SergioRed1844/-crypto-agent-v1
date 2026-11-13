@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-13T20:25:02Z",
+ "updated_utc": "2026-11-13T20:29:15Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8367,6 +8367,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-13T00:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "PPI",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
+   "source_url": "https://790waeb.iheart.com/content/2026-11-13-wholesale-prices-rise-less-than-expected-in-october/",
+   "source_title": "790waeb.iheart.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-wholesale-prices-rise-less-than-expected-in-octobe-2026-11-13",
+   "date": "2026-11-13",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-13T18:00:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Interest Rates",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 4,
+   "title_es": "El Tesoro de EE.UU. advierte contra alzas de tasas ante el impacto energético por el conflicto con Irán",
+   "source_url": "https://www.aljazeera.com/economy/2026/11/13/us-treasury-warns-against-rate-hikes-during-us-iran-war-energy-shock",
+   "source_title": "aljazeera.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-us-treasury-warns-against-rate-hikes-during-us-ira-2026-11-13",
+   "date": "2026-11-13",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-13T18:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "PPI",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "La inflación mayorista en EE.UU. bajó en octubre aunque continúa elevada",
+   "source_url": "https://www.orlandosentinel.com/2026/11/13/wholesale-inflation-declined-october/",
+   "source_title": "orlandosentinel.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-wholesale-inflation-declined-in-october-yet-remain-2026-11-13",
+   "date": "2026-11-13",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-13T18:00:00Z"
   }
  ]
 }
