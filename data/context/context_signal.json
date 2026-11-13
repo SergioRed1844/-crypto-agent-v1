@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T12:31:50Z",
+ "generated_utc": "2026-11-13T12:36:38Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -49,16 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.153,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.147,
+   "aporte": -0.152,
    "fuente": "noticia"
   },
   {
@@ -68,6 +59,15 @@
    "category": "MONETARY_POLICY",
    "stance": "anti",
    "aporte": -0.146,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.146,
    "fuente": "noticia"
   },
   {
