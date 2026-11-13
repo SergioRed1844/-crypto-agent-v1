@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-13T23:22:34Z",
+ "updated_utc": "2026-11-13T23:50:33Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8422,6 +8422,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-wholesale-inflation-declined-in-october-yet-remain-2026-11-13",
+   "date": "2026-11-13",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "18:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-13T18:00:00Z"
+  },
+  {
+   "category": "TRADE",
+   "subcategory": "TARIFFS",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Propuesta arancelaria de Trump afronta oposición interna de republicanos",
+   "source_url": "https://www.rnz.co.nz/news/world/2585339/trump-s-tariffs-face-a-new-threat-republicans",
+   "source_title": "rnz.co.nz",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-trump-tariffs-face-a-new-threat-republicans-2026-11-13",
    "date": "2026-11-13",
    "status": "happened",
    "scheduled": false,
