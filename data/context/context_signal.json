@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T01:41:37Z",
+ "generated_utc": "2026-11-13T02:06:00Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -40,7 +40,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.137,
    "fuente": "noticia"
   },
   {
