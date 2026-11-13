@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-13T03:39:47Z",
- "state": "CAUTION",
- "veto_entries": false,
+ "generated_utc": "2026-11-13T04:38:51Z",
+ "state": "RISK_OFF",
+ "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.5,
- "bias": -0.472,
+ "size_mult": 0.0,
+ "bias": -0.471,
  "event_risk": 0.0,
- "extra_confluence": 2,
+ "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.47",
+  "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
   "Stablecoins -5.35% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.302,
+   "aporte": -0.301,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.198,
+   "aporte": -0.197,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.158,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.158,
+   "aporte": 0.156,
    "fuente": "noticia"
   },
   {
@@ -85,12 +85,43 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.104,
+   "aporte": 0.103,
    "fuente": "noticia"
   }
  ],
- "alerts": [],
- "cause": "bias",
+ "alerts": [
+  {
+   "id": "EARLY_MINER-8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "type": "EARLY_MINER",
+   "severity": "alta",
+   "txid": "8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "block_height": 975628,
+   "block_time_utc": "2026-11-13T04:08:09Z",
+   "detected_utc": "2026-11-13T04:38:56Z",
+   "btc_moved": 50.0,
+   "oldest_input_height": 80723,
+   "n_inputs": 1,
+   "detail_es": "Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
+   "url": "https://mempool.space/tx/8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "action": "RISK_OFF_BLOCK"
+  },
+  {
+   "id": "EARLY_MINER-86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "type": "EARLY_MINER",
+   "severity": "alta",
+   "txid": "86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "block_height": 975629,
+   "block_time_utc": "2026-11-13T04:10:31Z",
+   "detected_utc": "2026-11-13T04:39:32Z",
+   "btc_moved": 50.0,
+   "oldest_input_height": 78671,
+   "n_inputs": 1,
+   "detail_es": "Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 78671).",
+   "url": "https://mempool.space/tx/86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "action": "RISK_OFF_BLOCK"
+  }
+ ],
+ "cause": "onchain",
  "mode": "completo",
  "stale": false,
  "weights_source": "weights.json (estudio de eventos)",

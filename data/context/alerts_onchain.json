@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-13T03:40:55Z",
+ "updated_utc": "2026-11-13T04:40:22Z",
  "alerts": [
   {
    "id": "P2PK_FLOOD-bloque-971472",
@@ -97,6 +97,36 @@
    "detail_es": "Ballena dormida movió 2,669 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 6.2 años.",
    "url": "https://mempool.space/tx/a802080781885d83a1b21aa928bfbd524b840ad911c1fa3a0eb0957abd0b458d",
    "action": "CAUTION"
+  },
+  {
+   "id": "EARLY_MINER-8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "type": "EARLY_MINER",
+   "severity": "alta",
+   "txid": "8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "block_height": 975628,
+   "block_time_utc": "2026-11-13T04:08:09Z",
+   "detected_utc": "2026-11-13T04:38:56Z",
+   "btc_moved": 50.0,
+   "oldest_input_height": 80723,
+   "n_inputs": 1,
+   "detail_es": "Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
+   "url": "https://mempool.space/tx/8e7624765602de63f41867b08e402230d23ac9b2dda614b58b0dd9faffd188c7",
+   "action": "RISK_OFF_BLOCK"
+  },
+  {
+   "id": "EARLY_MINER-86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "type": "EARLY_MINER",
+   "severity": "alta",
+   "txid": "86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "block_height": 975629,
+   "block_time_utc": "2026-11-13T04:10:31Z",
+   "detected_utc": "2026-11-13T04:39:32Z",
+   "btc_moved": 50.0,
+   "oldest_input_height": 78671,
+   "n_inputs": 1,
+   "detail_es": "Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 78671).",
+   "url": "https://mempool.space/tx/86b1ad86ea540d5da424bbb351dce0a38406ec5b5b7f11f34058265fed1af3b2",
+   "action": "RISK_OFF_BLOCK"
   }
  ]
 }
