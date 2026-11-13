@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-13T02:40:43Z",
+ "generated_utc": "2026-11-13T03:39:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.468,
+ "bias": -0.472,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -31,7 +31,16 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.239,
+   "aporte": -0.238,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-cryptohack-roundup-binance-hackers-launder-funds-c-2026-11-13",
+   "date": "2026-11-13",
+   "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.198,
    "fuente": "noticia"
   },
   {
@@ -40,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.187,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -49,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.159,
+   "aporte": -0.158,
    "fuente": "noticia"
   },
   {
@@ -58,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
@@ -67,16 +76,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.142,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-pymnts-nubank-mercado-pago-pause-crypto-ops-after-2026-11-07",
-   "date": "2026-11-07",
-   "title_es": "Nubank y Mercado Pago pausan operaciones con criptomonedas por fallas de un proveedor",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.137,
+   "aporte": -0.141,
    "fuente": "noticia"
   },
   {
