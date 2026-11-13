@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T08:39:56Z",
+ "generated_utc": "2026-11-13T09:34:38Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.297,
+   "aporte": -0.296,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.231,
+   "aporte": -0.229,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.166,
+   "aporte": -0.162,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.151,
+   "aporte": -0.15,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.151,
+   "aporte": 0.15,
    "fuente": "noticia"
   },
   {
