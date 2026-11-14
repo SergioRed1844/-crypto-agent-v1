@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-14T03:19:11Z",
+ "generated_utc": "2026-11-14T04:18:07Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.435,
+ "bias": -0.434,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.311,
+   "aporte": 0.305,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.281,
+   "aporte": -0.28,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.206,
+   "aporte": -0.205,
    "fuente": "noticia"
   },
   {
@@ -58,16 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.132,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.13,
+   "aporte": -0.131,
    "fuente": "noticia"
   },
   {
@@ -76,7 +67,16 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.129,
+   "aporte": -0.128,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.128,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.112,
+   "aporte": -0.11,
    "fuente": "noticia"
   }
  ],
