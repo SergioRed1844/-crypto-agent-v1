@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T00:21:46Z",
+ "generated_utc": "2026-11-14T00:24:57Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.331,
+   "aporte": 0.33,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.284,
+   "aporte": -0.283,
    "fuente": "noticia"
   },
   {
