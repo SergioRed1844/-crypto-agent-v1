@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T06:16:35Z",
+ "generated_utc": "2026-11-14T06:58:23Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.292,
+   "aporte": 0.288,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.279,
+   "aporte": -0.278,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.203,
+   "aporte": -0.202,
    "fuente": "noticia"
   },
   {
@@ -62,15 +62,6 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.126,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
    "date": "2026-11-09",
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
@@ -80,12 +71,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.125,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-dow-jones-industrial-average-djia-and-s-p-500-slid-2026-11-12",
    "date": "2026-11-12",
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.106,
+   "aporte": -0.104,
    "fuente": "noticia"
   }
  ],
