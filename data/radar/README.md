@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-14T05:17:44+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-13
+Última corrida: **2026-11-14T06:16:42+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-13
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -68,7 +68,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.1% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 16% | +0.6% |
-| Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.5% |
+| Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 29% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 45% | 29% | +0.7% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 40% | 43% | 42% | 69% | +0.0% |
@@ -82,51 +82,51 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Serie | OK | Último | Nota |
 |---|---|---|---|
 | AAPL | sí | 2026-11-13 | yahoo |
-| AC.MX | sí | 2026-11-13 | yahoo |
+| AC.MX | sí | 2026-11-12 | yahoo |
 | ADA | sí | 2026-11-14 | binance |
-| ALSEA.MX | sí | 2026-11-13 | yahoo |
-| AMXB.MX | sí | 2026-11-13 | yahoo |
+| ALSEA.MX | sí | 2026-11-12 | yahoo |
+| AMXB.MX | sí | 2026-11-12 | yahoo |
 | AMZN | sí | 2026-11-13 | yahoo |
-| ASURB.MX | sí | 2026-11-13 | yahoo |
+| ASURB.MX | sí | 2026-11-12 | yahoo |
 | AVAX | sí | 2026-11-14 | binance |
-| BBAJIOO.MX | sí | 2026-11-13 | yahoo |
+| BBAJIOO.MX | sí | 2026-11-12 | yahoo |
 | BCH | sí | 2026-11-14 | binance |
-| BIMBOA.MX | sí | 2026-11-13 | yahoo |
+| BIMBOA.MX | sí | 2026-11-12 | yahoo |
 | BTC | sí | 2026-11-14 | binance |
-| CEMEXCPO.MX | sí | 2026-11-13 | yahoo |
+| CEMEXCPO.MX | sí | 2026-11-12 | yahoo |
 | DIA | sí | 2026-11-13 | yahoo |
 | DOGE | sí | 2026-11-14 | binance |
 | DOT | sí | 2026-11-14 | binance |
 | ETH | sí | 2026-11-14 | binance |
-| FEMSAUBD.MX | sí | 2026-11-13 | yahoo |
-| GAPB.MX | sí | 2026-11-13 | yahoo |
-| GFNORTEO.MX | sí | 2026-11-13 | yahoo |
+| FEMSAUBD.MX | sí | 2026-11-12 | yahoo |
+| GAPB.MX | sí | 2026-11-12 | yahoo |
+| GFNORTEO.MX | sí | 2026-11-12 | yahoo |
 | GLD | sí | 2026-11-13 | yahoo |
-| GMEXICOB.MX | sí | 2026-11-13 | yahoo |
+| GMEXICOB.MX | sí | 2026-11-12 | yahoo |
 | GOOGL | sí | 2026-11-13 | yahoo |
-| GRUMAB.MX | sí | 2026-11-13 | yahoo |
+| GRUMAB.MX | sí | 2026-11-12 | yahoo |
 | IWM | sí | 2026-11-13 | yahoo |
 | JPM | sí | 2026-11-13 | yahoo |
-| KIMBERA.MX | sí | 2026-11-13 | yahoo |
-| KOFUBL.MX | sí | 2026-11-13 | yahoo |
+| KIMBERA.MX | sí | 2026-11-12 | yahoo |
+| KOFUBL.MX | sí | 2026-11-12 | yahoo |
 | LINK | sí | 2026-11-14 | binance |
-| LIVEPOLC-1.MX | sí | 2026-11-13 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-11-12 | yahoo |
 | LTC | sí | 2026-11-14 | binance |
 | META | sí | 2026-11-13 | yahoo |
 | MSFT | sí | 2026-11-13 | yahoo |
 | MXN=X | sí | 2026-11-13 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-13 | yahoo |
 | NVDA | sí | 2026-11-13 | yahoo |
-| OMAB.MX | sí | 2026-11-13 | yahoo |
-| ORBIA.MX | sí | 2026-11-13 | yahoo |
-| PINFRA.MX | sí | 2026-11-13 | yahoo |
+| OMAB.MX | sí | 2026-11-12 | yahoo |
+| ORBIA.MX | sí | 2026-11-12 | yahoo |
+| PINFRA.MX | sí | 2026-11-12 | yahoo |
 | QQQ | sí | 2026-11-13 | yahoo |
 | SMH | sí | 2026-11-13 | yahoo |
 | SOL | sí | 2026-11-14 | binance |
 | SPY | sí | 2026-11-13 | yahoo |
 | TRX | sí | 2026-11-14 | binance |
 | TSLA | sí | 2026-11-13 | yahoo |
-| WALMEX.MX | sí | 2026-11-13 | yahoo |
+| WALMEX.MX | sí | 2026-11-12 | yahoo |
 | WMT | sí | 2026-11-13 | yahoo |
 | XLE | sí | 2026-11-13 | yahoo |
 | XLF | sí | 2026-11-13 | yahoo |
@@ -140,7 +140,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-14 | binance |
 | ^MXX | sí | 2026-11-13 | yahoo |
 | ^VIX | sí | 2026-11-13 | yahoo |
-| contexto_v42 | sí | 2026-11-14T04:21:33Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-14T05:17:19Z | RISK_OFF |
 | fear_greed | sí | 2026-11-14 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-13 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-13 | wikimedia |
