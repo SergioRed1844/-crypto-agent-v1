@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T19:04:53Z",
+ "generated_utc": "2026-11-14T19:27:11Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.224,
+   "aporte": 0.222,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -58,16 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.126,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.114,
+   "aporte": -0.125,
    "fuente": "noticia"
   },
   {
@@ -77,6 +68,15 @@
    "category": "MONETARY_POLICY",
    "stance": "anti",
    "aporte": -0.113,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
+   "date": "2026-11-09",
+   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.113,
    "fuente": "noticia"
   },
   {
