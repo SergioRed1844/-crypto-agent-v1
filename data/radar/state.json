@@ -163,7 +163,6 @@
   }
  },
  "runs": [
-  "2026-11-12T05:59:10+00:00",
   "2026-11-12T06:58:13+00:00",
   "2026-11-12T07:57:18+00:00",
   "2026-11-12T08:56:31+00:00",
@@ -222,9 +221,10 @@
   "2026-11-14T00:21:56+00:00",
   "2026-11-14T00:22:33+00:00",
   "2026-11-14T01:21:02+00:00",
-  "2026-11-14T02:20:05+00:00"
+  "2026-11-14T02:20:05+00:00",
+  "2026-11-14T03:19:13+00:00"
  ],
- "last_scan_utc": "2026-11-14T02:20:05+00:00",
+ "last_scan_utc": "2026-11-14T03:19:13+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -383,7 +383,7 @@
   },
   "META": {
    "ok": true,
-   "last": "2026-11-12",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "MSFT": {
@@ -533,7 +533,7 @@
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-11-12",
+   "last": "2026-11-13",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
@@ -558,7 +558,7 @@
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-11-12",
+   "last": "2026-11-13",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
@@ -568,7 +568,7 @@
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-11-12",
+   "last": "2026-11-13",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
@@ -593,7 +593,7 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-11-12",
+   "last": "2026-11-13",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
@@ -613,7 +613,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-14T01:20:54Z",
+   "last": "2026-11-14T02:19:57Z",
    "nota": "RISK_OFF"
   }
  },
