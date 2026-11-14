@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T15:08:24Z",
+ "generated_utc": "2026-11-14T16:07:29Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.243,
+   "aporte": 0.238,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.192,
+   "aporte": -0.191,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.117,
+   "aporte": -0.116,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.117,
+   "aporte": 0.116,
    "fuente": "noticia"
   },
   {
