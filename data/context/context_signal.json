@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T16:07:29Z",
+ "generated_utc": "2026-11-14T16:11:47Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
