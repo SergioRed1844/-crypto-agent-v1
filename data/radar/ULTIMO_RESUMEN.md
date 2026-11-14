@@ -1,14 +1,20 @@
-# 📡 Radar EB — resumen 2026-11-13
+# 📡 Radar EB — resumen 2026-11-14
 
-**Sigo vivo:** 31 corridas en 24 h · última 2026-11-13T14:30:33+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 34 corridas en 24 h · última 2026-11-14T14:09:29+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
-Ningún setup disparó en las últimas 24 h. Eso también es información: no hay pánico ni capitulación medibles.
+| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
+|---|---|---|---|---|---|---|---|---|
+| VIGILANCIA | XRP | Capitulación con miedo extremo | 2026-11-13 | 7 d | 37% | 37% | +0.7% | la ventaja no es creíble: cota baja 32% vs día cualquiera 37%; neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp) |
+| VIGILANCIA | ADA | Capitulación con miedo extremo | 2026-11-13 | 7 d | 39% | 39% | +0.9% | la ventaja no es creíble: cota baja 34% vs día cualquiera 39%; neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp) |
+| VIGILANCIA | DOGE | Capitulación con miedo extremo | 2026-11-13 | 7 d | 37% | 37% | +0.8% | la ventaja no es creíble: cota baja 33% vs día cualquiera 37%; neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp) |
+| VIGILANCIA | DOT | Capitulación con miedo extremo | 2026-11-13 | 7 d | 37% | 37% | -0.8% | la ventaja no es creíble: cota baja 32% vs día cualquiera 37%; neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp) |
+| VIGILANCIA | BCH | Capitulación con miedo extremo | 2026-11-13 | 7 d | 39% | 39% | +0.5% | la ventaja no es creíble: cota baja 35% vs día cualquiera 39%; neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp) |
 
 ## Clima de mercado
 
-BTC 71,460 (caída desde máximo de 1 año -28%; Fear&Greed 28) · S&P (SPY) -2.8% vs máximo de 1 año; VIX 18.7 · miedo de hogares (Wikipedia, EUA) z=-0.7 · peso 5 días -1.2% (USD/MXN); IPC vs máximo 1 año -0.3% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).; Stablecoins -5.34% en 30 días (liquidez saliendo))
+BTC 68,314 (caída desde máximo de 1 año -30%; Fear&Greed 20) · S&P (SPY) -3.2% vs máximo de 1 año; VIX 19.3 · miedo de hogares (Wikipedia, EUA) z=-0.2 · peso 5 días +0.1% (USD/MXN); IPC vs máximo 1 año -1.1% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).; Stablecoins -5.41% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
