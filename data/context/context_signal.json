@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-14T23:01:32Z",
+ "generated_utc": "2026-11-14T23:20:40Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.43,
+ "bias": -0.429,
  "event_risk": 0.0,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -31,7 +31,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.206,
+   "aporte": 0.205,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -62,21 +62,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.11,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
    "date": "2026-11-09",
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
    "aporte": 0.11,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.109,
    "fuente": "noticia"
   },
   {
