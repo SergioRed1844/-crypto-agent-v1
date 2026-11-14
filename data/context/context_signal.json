@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T23:50:33Z",
+ "generated_utc": "2026-11-14T00:21:46Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.334,
+   "aporte": 0.331,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.211,
+   "aporte": -0.21,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.121,
+   "aporte": -0.119,
    "fuente": "noticia"
   }
  ],
@@ -129,7 +129,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 20
+   "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -5.33
