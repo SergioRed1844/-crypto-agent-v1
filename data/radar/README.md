@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-14T22:02:27+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-14
+Última corrida: **2026-11-14T23:01:32+00:00 UTC** · 56 activos · contexto v4.2: **RISK_OFF** · último resumen: 2026-11-14
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -38,7 +38,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
-| Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.6% |
+| Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.7% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 72% | +0.3% |
 | Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 47% | -0.0% |
 | Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.9% |
@@ -73,9 +73,9 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 41 | 40% | 43% | 42% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 69% | +0.0% |
-| Retroceso dentro de tendencia alcista | us | 7 d | 423 | 38% | 33% | 37% | 18% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 201 | 41% | 39% | 41% | 31% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 199 | 48% | 45% | 47% | 31% | +0.8% |
+| Retroceso dentro de tendencia alcista | us | 7 d | 424 | 38% | 33% | 37% | 18% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 202 | 41% | 39% | 41% | 31% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 200 | 48% | 45% | 47% | 31% | +0.8% |
 
 ## Salud de fuentes
 
@@ -140,7 +140,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-14 | binance |
 | ^MXX | sí | 2026-11-13 | yahoo |
 | ^VIX | sí | 2026-11-13 | yahoo |
-| contexto_v42 | sí | 2026-11-14T21:03:13Z | RISK_OFF |
+| contexto_v42 | sí | 2026-11-14T22:02:15Z | RISK_OFF |
 | fear_greed | sí | 2026-11-14 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-13 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-13 | wikimedia |
