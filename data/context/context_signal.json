@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T05:17:19Z",
+ "generated_utc": "2026-11-14T06:16:35Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.298,
+   "aporte": 0.292,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.204,
+   "aporte": -0.203,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.131,
+   "aporte": -0.13,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.127,
+   "aporte": -0.126,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.127,
+   "aporte": 0.126,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.108,
+   "aporte": -0.106,
    "fuente": "noticia"
   }
  ],
