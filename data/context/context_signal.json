@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-14T02:19:57Z",
+ "generated_utc": "2026-11-14T03:19:11Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 67,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
-  "Stablecoins -5.4% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.41% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.317,
+   "aporte": 0.311,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.282,
+   "aporte": -0.281,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.208,
+   "aporte": -0.206,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.131,
+   "aporte": 0.13,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.13,
+   "aporte": -0.129,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Wall Street cae al alcanzar 100% probabilidad de subida de tasas por alta inflación en EE. UU.",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.115,
+   "aporte": -0.112,
    "fuente": "noticia"
   }
  ],
@@ -132,6 +132,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.4
+  "stablecoins_30d_pct": -5.41
  }
 }
