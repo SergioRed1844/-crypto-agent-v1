@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-15T17:57:41Z",
+ "generated_utc": "2026-11-15T18:43:42Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 67,
  "reasons": [
   "Precaución: sesgo -0.44",
-  "Stablecoins -5.27% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.28% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.206,
+   "aporte": -0.205,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.139,
+   "aporte": 0.137,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.094,
+   "aporte": -0.093,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.094,
+   "aporte": 0.093,
    "fuente": "noticia"
   },
   {
@@ -101,6 +101,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.27
+  "stablecoins_30d_pct": -5.28
  }
 }

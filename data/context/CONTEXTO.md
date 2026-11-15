@@ -1,21 +1,21 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-15T17:57:41Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-15T18:43:42Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.44 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.44
-- Stablecoins -5.27% en 30 días (liquidez saliendo)
+- Stablecoins -5.28% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.251 |
-| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.206 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.164 |
-| Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre | 2026-11-13 | pro | +0.139 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.250 |
+| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.205 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.163 |
+| Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre | 2026-11-13 | pro | +0.137 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.117 |
-| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.094 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.094 |
+| La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.093 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.093 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.086 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-15T17:57:41Z",
+ "inicio": "2026-11-15T18:43:42Z",
  "onchain": {
   "scanned": [
-   975997,
-   975999
+   976000,
+   976000
   ],
-  "calls": 54,
+  "calls": 32,
   "stopped": null,
   "nuevas": 0
  },
