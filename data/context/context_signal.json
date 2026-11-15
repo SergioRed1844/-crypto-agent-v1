@@ -1,20 +1,35 @@
 {
- "generated_utc": "2026-11-15T18:53:03Z",
+ "generated_utc": "2026-11-15T19:42:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.367,
- "event_risk": 0.0,
+ "event_risk": 0.011,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Precaución: sesgo -0.37",
-  "Stablecoins -5.28% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.27% en 30 días (liquidez saliendo)"
  ],
- "upcoming": [],
+ "upcoming": [
+  {
+   "id": "fomc-minutes-2026-11-18",
+   "utc": "2026-11-18T19:00:00Z",
+   "title_es": "Minutas FOMC (reunión 27-28 oct 2026)",
+   "category": "MONETARY_POLICY",
+   "status": "confirmed",
+   "magnitud": 0.166,
+   "riesgo": 0.011,
+   "ventana": [
+    "2026-11-18T13:00:00Z",
+    "2026-11-18T21:00:00Z"
+   ],
+   "en_ventana": false
+  }
+ ],
  "recent": [
   {
    "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
@@ -22,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.283,
+   "aporte": 0.282,
    "fuente": "noticia"
   },
   {
@@ -31,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.249,
    "fuente": "noticia"
   },
   {
@@ -49,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.163,
+   "aporte": -0.162,
    "fuente": "noticia"
   },
   {
@@ -58,7 +73,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.136,
+   "aporte": 0.134,
    "fuente": "noticia"
   },
   {
@@ -67,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.124,
+   "aporte": 0.123,
    "fuente": "noticia"
   },
   {
@@ -101,6 +116,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.28
+  "stablecoins_30d_pct": -5.27
  }
 }
