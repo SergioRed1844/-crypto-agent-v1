@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-15T17:44:42Z",
+ "generated_utc": "2026-11-15T17:57:41Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -49,7 +49,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.14,
+   "aporte": 0.139,
    "fuente": "noticia"
   },
   {
