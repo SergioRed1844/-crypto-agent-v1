@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-15T00:59:42Z",
+ "generated_utc": "2026-11-15T01:58:46Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 67,
  "reasons": [
   "Alerta on-chain alta: Minero temprano gastó 50.00 BTC P2PK (input más viejo: bloque 80723).",
-  "Stablecoins -5.39% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.27% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -31,7 +31,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.198,
+   "aporte": 0.194,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.181,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.172,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.108,
+   "aporte": -0.107,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.108,
+   "aporte": 0.107,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.091,
+   "aporte": 0.09,
    "fuente": "noticia"
   }
  ],
@@ -132,6 +132,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.39
+  "stablecoins_30d_pct": -5.27
  }
 }
