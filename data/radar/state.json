@@ -160,10 +160,57 @@
   "BCH|CAPITULACION|2026-11-13": {
    "level": "VIGILANCIA",
    "utc": "2026-11-14T00:21:56+00:00"
+  },
+  "BTC|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "ETH|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "SOL|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "SOL|CAPITULACION|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "XRP|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "ADA|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "DOGE|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "AVAX|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "LINK|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "DOT|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "LTC|PANICO_SIN_DANO|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "LTC|CAPITULACION|2026-11-14": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-15T00:00:39+00:00"
   }
  },
  "runs": [
-  "2026-11-13T04:39:51+00:00",
   "2026-11-13T05:38:15+00:00",
   "2026-11-13T06:37:22+00:00",
   "2026-11-13T07:36:28+00:00",
@@ -222,308 +269,309 @@
   "2026-11-14T21:03:25+00:00",
   "2026-11-14T22:02:27+00:00",
   "2026-11-14T23:01:32+00:00",
-  "2026-11-14T23:20:37+00:00"
+  "2026-11-14T23:20:37+00:00",
+  "2026-11-15T00:00:39+00:00"
  ],
- "last_scan_utc": "2026-11-14T23:20:37+00:00",
+ "last_scan_utc": "2026-11-15T00:00:39+00:00",
  "health": {
   "AAPL": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AC.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ADA": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "ALSEA.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMZN": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ASURB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AVAX": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "BBAJIOO.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BCH": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "BIMBOA.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BTC": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "CEMEXCPO.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "DIA": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "DOGE": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "DOT": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "ETH": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "FEMSAUBD.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GLD": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GMEXICOB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GOOGL": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GRUMAB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "IWM": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "KIMBERA.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LINK": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LTC": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "META": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "MXN=X": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NAFTRACISHRS.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NVDA": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "OMAB.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "QQQ": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "SOL": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "SPY": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "TRX": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "TSLA": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "WALMEX.MX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "WMT": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XRP": {
    "ok": true,
-   "last": "2026-11-14",
-   "nota": "caché binance"
+   "last": "2026-11-15",
+   "nota": "binance"
   },
   "^MXX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "^VIX": {
    "ok": true,
    "last": "2026-11-13",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "fear_greed": {
    "ok": true,
-   "last": "2026-11-14",
+   "last": "2026-11-15",
    "nota": "alternative.me"
   },
   "wiki_en_Recession": {
@@ -613,12 +661,97 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-14T23:01:32Z",
+   "last": "2026-11-14T23:20:40Z",
    "nota": "RISK_OFF"
   }
  },
  "skipped": [],
  "last_candidates": [
+  {
+   "sym": "BTC",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 34% vs día cualquiera 40%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.406,
+   "base": 0.398,
+   "ret": 0.0035,
+   "h": 7
+  },
+  {
+   "sym": "ETH",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.428,
+   "base": 0.42,
+   "ret": 0.0047,
+   "h": 7
+  },
+  {
+   "sym": "SOL",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.429,
+   "base": 0.421,
+   "ret": 0.0116,
+   "h": 7
+  },
+  {
+   "sym": "SOL",
+   "cls": "crypto",
+   "sid": "CAPITULACION",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera -0.0 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.421,
+   "base": 0.421,
+   "ret": 0.0142,
+   "h": 7
+  },
+  {
+   "sym": "XRP",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 31% vs día cualquiera 37%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.373,
+   "base": 0.366,
+   "ret": 0.0048,
+   "h": 7
+  },
   {
    "sym": "XRP",
    "cls": "crypto",
@@ -639,6 +772,23 @@
   {
    "sym": "ADA",
    "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 33% vs día cualquiera 39%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.395,
+   "base": 0.387,
+   "ret": 0.0059,
+   "h": 7
+  },
+  {
+   "sym": "ADA",
+   "cls": "crypto",
    "sid": "CAPITULACION",
    "date": "2026-11-13",
    "level": "VIGILANCIA",
@@ -649,8 +799,25 @@
     "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
    ],
    "p": 0.387,
-   "base": 0.388,
-   "ret": 0.0085,
+   "base": 0.387,
+   "ret": 0.0084,
+   "h": 7
+  },
+  {
+   "sym": "DOGE",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.378,
+   "base": 0.37,
+   "ret": 0.0055,
    "h": 7
   },
   {
@@ -667,7 +834,58 @@
    ],
    "p": 0.37,
    "base": 0.37,
-   "ret": 0.0082,
+   "ret": 0.0081,
+   "h": 7
+  },
+  {
+   "sym": "AVAX",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 33% vs día cualquiera 38%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.393,
+   "base": 0.385,
+   "ret": 0.0006,
+   "h": 7
+  },
+  {
+   "sym": "LINK",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 43%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.438,
+   "base": 0.429,
+   "ret": 0.0085,
+   "h": 7
+  },
+  {
+   "sym": "DOT",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.374,
+   "base": 0.366,
+   "ret": -0.0102,
    "h": 7
   },
   {
@@ -683,8 +901,42 @@
     "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
    ],
    "p": 0.366,
-   "base": 0.367,
-   "ret": -0.0075,
+   "base": 0.366,
+   "ret": -0.0076,
+   "h": 7
+  },
+  {
+   "sym": "LTC",
+   "cls": "crypto",
+   "sid": "PANICO_SIN_DANO",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 34% vs día cualquiera 40%",
+    "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +0.8 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.405,
+   "base": 0.397,
+   "ret": 0.0009,
+   "h": 7
+  },
+  {
+   "sym": "LTC",
+   "cls": "crypto",
+   "sid": "CAPITULACION",
+   "date": "2026-11-14",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 35% vs día cualquiera 40%",
+    "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera -0.0 pp < 5 pp",
+    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+   ],
+   "p": 0.397,
+   "base": 0.397,
+   "ret": 0.0035,
    "h": 7
   },
   {
@@ -699,9 +951,9 @@
     "ventaja vs día cualquiera -0.0 pp < 5 pp",
     "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
    ],
-   "p": 0.392,
+   "p": 0.391,
    "base": 0.392,
-   "ret": 0.0047,
+   "ret": 0.0046,
    "h": 7
   }
  ],
