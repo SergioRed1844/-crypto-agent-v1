@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-15T11:27:17Z",
+ "generated_utc": "2026-11-15T11:49:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -49,7 +49,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.159,
+   "aporte": 0.158,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.12,
+   "aporte": -0.119,
    "fuente": "noticia"
   },
   {
