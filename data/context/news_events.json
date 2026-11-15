@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-15T07:56:43Z",
+ "updated_utc": "2026-11-15T08:52:34Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -8451,6 +8451,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-13T18:00:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "liquidations",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
+   "source_url": "https://www.thehindubusinessline.com/money-and-banking/cryptocurrency/bitcoin-tumbles-to-four-month-low-as-liquidations-accelerate/article71704128.ece",
+   "source_title": "thehindubusinessline.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-tumbles-to-four-month-low-as-liquidations-2026-11-15",
+   "date": "2026-11-15",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-15T07:45:00Z"
   }
  ]
 }
