@@ -211,7 +211,6 @@
   }
  },
  "runs": [
-  "2026-11-13T10:33:54+00:00",
   "2026-11-13T11:33:02+00:00",
   "2026-11-13T12:32:11+00:00",
   "2026-11-13T12:32:56+00:00",
@@ -270,9 +269,10 @@
   "2026-11-15T02:58:02+00:00",
   "2026-11-15T03:01:58+00:00",
   "2026-11-15T03:57:49+00:00",
-  "2026-11-15T04:56:18+00:00"
+  "2026-11-15T04:56:18+00:00",
+  "2026-11-15T05:55:22+00:00"
  ],
- "last_scan_utc": "2026-11-15T04:56:18+00:00",
+ "last_scan_utc": "2026-11-15T05:55:22+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -661,8 +661,8 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-15T04:01:13Z",
-   "nota": "RISK_OFF"
+   "last": "2026-11-15T04:56:09Z",
+   "nota": "CAUTION"
   }
  },
  "skipped": [],
@@ -674,10 +674,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 34% vs día cualquiera 40%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 34% vs día cualquiera 45%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.406,
    "base": 0.398,
@@ -691,10 +691,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 47%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.428,
    "base": 0.42,
@@ -708,10 +708,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 47%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.429,
    "base": 0.421,
@@ -725,10 +725,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 37% vs día cualquiera 42%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 47%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.421,
    "base": 0.421,
@@ -742,10 +742,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 31% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 31% vs día cualquiera 42%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.373,
    "base": 0.366,
@@ -759,10 +759,10 @@
    "date": "2026-11-13",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 42%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.365,
    "base": 0.366,
@@ -776,10 +776,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 33% vs día cualquiera 39%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 33% vs día cualquiera 44%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.395,
    "base": 0.387,
@@ -793,10 +793,10 @@
    "date": "2026-11-13",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 34% vs día cualquiera 39%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 34% vs día cualquiera 44%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.387,
    "base": 0.387,
@@ -810,10 +810,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 42%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.378,
    "base": 0.37,
@@ -827,10 +827,10 @@
    "date": "2026-11-13",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 33% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 33% vs día cualquiera 42%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.37,
    "base": 0.37,
@@ -844,10 +844,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 33% vs día cualquiera 38%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 33% vs día cualquiera 43%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.393,
    "base": 0.385,
@@ -861,10 +861,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 37% vs día cualquiera 43%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 37% vs día cualquiera 48%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.438,
    "base": 0.429,
@@ -878,10 +878,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 42%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.374,
    "base": 0.366,
@@ -895,10 +895,10 @@
    "date": "2026-11-13",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 32% vs día cualquiera 37%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 32% vs día cualquiera 42%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.366,
    "base": 0.366,
@@ -912,10 +912,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 34% vs día cualquiera 40%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 34% vs día cualquiera 45%",
     "neto esperado solo -0.2 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +0.8 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera +0.8 pp < 5 pp"
    ],
    "p": 0.405,
    "base": 0.397,
@@ -929,10 +929,10 @@
    "date": "2026-11-14",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 35% vs día cualquiera 40%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 35% vs día cualquiera 45%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.397,
    "base": 0.397,
@@ -946,10 +946,10 @@
    "date": "2026-11-13",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 35% vs día cualquiera 39%",
+    "contexto v4.2 en CAUTION: exigencia +5 pp",
+    "la ventaja no es creíble: cota baja 35% vs día cualquiera 44%",
     "neto esperado solo +0.1 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera -0.0 pp < 5 pp",
-    "contexto v4.2 en RISK_OFF: confianza máxima Media (decides tú)"
+    "ventaja vs día cualquiera -0.0 pp < 5 pp"
    ],
    "p": 0.391,
    "base": 0.392,
