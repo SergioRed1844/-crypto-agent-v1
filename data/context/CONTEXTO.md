@@ -1,22 +1,22 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-15T15:50:39Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-15T16:45:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.44 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.44
-- Stablecoins -5.28% en 30 días (liquidez saliendo)
+- Stablecoins -5.27% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.252 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.251 |
 | Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.207 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.166 |
-| Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre | 2026-11-13 | pro | +0.145 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.165 |
+| Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre | 2026-11-13 | pro | +0.142 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.118 |
-| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.096 |
 | La Fed evalúa acelerar alzas de tasas ante mayor inflación | 2026-11-12 | anti | -0.095 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.087 |
+| China extiende por dos meses suspensión de aranceles del 24% a importaciones de  | 2026-11-09 | pro | +0.095 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.086 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-15T15:50:39Z",
+ "inicio": "2026-11-15T16:45:32Z",
  "onchain": {
   "scanned": [
-   975981,
-   975982
+   975983,
+   975988
   ],
-  "calls": 48,
+  "calls": 115,
   "stopped": null,
   "nuevas": 0
  },
