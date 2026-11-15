@@ -1,22 +1,5 @@
 [
  {
-  "date": "2026-11-07",
-  "category": "ELECTION",
-  "country": "NZ",
-  "title_es": "Nueva Zelanda: elecciones generales",
-  "prior_tier": 2,
-  "source_url": "https://www.idea.int/data-tools/data/elections",
-  "why_es": "Elecciones nacionales para renovar los 120 escaños del Parlamento neozelandés.",
-  "status": "proposed",
-  "date_precision": "day",
-  "id": "prop-nueva-zelanda-elecciones-generales-2026-11-07",
-  "origin": "auditoria-gemini",
-  "source_title": "Gemini + Google Search (revisar)",
-  "crypto_stance": "neutral",
-  "subcategory": "",
-  "utc": "2026-11-07T12:00:00Z"
- },
- {
   "date": "2026-12-09",
   "category": "MONETARY_POLICY",
   "country": "CA",
@@ -68,6 +51,22 @@
   "utc": "2026-12-14T12:00:00Z"
  },
  {
+  "date": "2027-01-01",
+  "category": "CRYPTO_REGULATION",
+  "country": "GLOBAL",
+  "title_es": "Entrada en vigor del marco CARF de la OCDE en segunda oleada de jurisdicciones",
+  "prior_tier": 2,
+  "source_url": "https://www.oecd.org/tax/exchange-of-tax-information/crypto-asset-reporting-framework-and-amendments-to-the-common-reporting-standard.htm",
+  "status": "proposed",
+  "date_precision": "day",
+  "id": "prop-entrada-en-vigor-del-marco-carf-de-la-ocde-en-segu-2027-01-01",
+  "origin": "auditoria-gemini",
+  "source_title": "Gemini + Google Search (revisar)",
+  "crypto_stance": "neutral",
+  "subcategory": "",
+  "utc": "2027-01-01T12:00:00Z"
+ },
+ {
   "date": "2027-01-08",
   "category": "CRYPTO_REGULATION",
   "country": "EU",
@@ -83,6 +82,24 @@
   "source_title": "Gemini + Google Search (revisar)",
   "subcategory": "",
   "utc": "2027-01-08T12:00:00Z"
+ },
+ {
+  "category": "TRADE",
+  "subcategory": "",
+  "country": "US",
+  "crypto_stance": "pro",
+  "prior_tier": 2,
+  "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+  "source_url": "https://www.prokerala.com/news/articles/a1835330.html",
+  "source_title": "prokerala.com",
+  "confidence": 0.95,
+  "origin": "gemini/GDELT",
+  "id": "prop-ee-uu-extiende-178-exclusiones-arancelarias-a-chin-2027-01-09",
+  "date": "2027-01-09",
+  "status": "proposed",
+  "date_precision": "day",
+  "why_es": "Detectado en noticia: US extends 178 China tariff exclusions to January 9",
+  "utc": "2027-01-09T12:00:00Z"
  },
  {
   "date": "2027-01-27",
@@ -112,6 +129,22 @@
   "status": "proposed",
   "date_precision": "day",
   "id": "prop-vence-el-primer-plazo-nacional-de-reporte-tributar-2027-01-31",
+  "origin": "auditoria-gemini",
+  "source_title": "Gemini + Google Search (revisar)",
+  "crypto_stance": "neutral",
+  "subcategory": "",
+  "utc": "2027-01-31T12:00:00Z"
+ },
+ {
+  "date": "2027-01-31",
+  "category": "CRYPTO_REGULATION",
+  "country": "EU",
+  "title_es": "Fecha límite inicial de reporte de transacciones de 2026 bajo la Directiva DAC8",
+  "prior_tier": 2,
+  "source_url": "https://taxation-customs.ec.europa.eu/taxation/tax-cooperation-and-control/general-overview/enhanced-administrative-cooperation-field-direct-taxation/dac8_en",
+  "status": "proposed",
+  "date_precision": "day",
+  "id": "prop-fecha-limite-inicial-de-reporte-de-transacciones-d-2027-01-31",
   "origin": "auditoria-gemini",
   "source_title": "Gemini + Google Search (revisar)",
   "crypto_stance": "neutral",

@@ -1,21 +1,30 @@
 {
- "generated_utc": "2026-11-15T18:43:42Z",
+ "generated_utc": "2026-11-15T18:53:03Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.437,
+ "bias": -0.367,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 67,
+ "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.44",
+  "Precaución: sesgo -0.37",
   "Stablecoins -5.28% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
+  {
+   "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.283,
+   "fuente": "noticia"
+  },
   {
    "id": "news-wall-street-grapples-with-5-7-trillion-rout-as-ai-2026-11-07",
    "date": "2026-11-07",
@@ -49,7 +58,16 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.137,
+   "aporte": 0.136,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.124,
    "fuente": "noticia"
   },
   {
@@ -62,30 +80,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-as-higher-prices-seep-into-broader-economy-fed-con-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "La Fed evalúa acelerar alzas de tasas ante mayor inflación",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.093,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-china-extends-suspension-of-24-additional-tariff-o-2026-11-09",
-   "date": "2026-11-09",
-   "title_es": "China extiende por dos meses suspensión de aranceles del 24% a importaciones de EE. UU.",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.093,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-companies-scramble-to-meet-payroll-pay-bills-after-2026-10-18",
-   "date": "2026-10-18",
-   "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
+   "id": "news-global-stocks-tumble-as-ai-panic-grips-markets-aft-2026-11-06",
+   "date": "2026-11-06",
+   "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
-   "stance": "pro",
-   "aporte": 0.086,
+   "stance": "anti",
+   "aporte": -0.104,
    "fuente": "noticia"
   }
  ],

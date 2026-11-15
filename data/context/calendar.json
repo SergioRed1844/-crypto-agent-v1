@@ -1,28 +1,7 @@
 {
- "generated_utc": "2026-11-01T17:56:26Z",
+ "generated_utc": "2026-11-15T18:53:03Z",
  "horizon_years": 3,
  "events": [
-  {
-   "id": "ru-duma-2026",
-   "date": "2026-09-20",
-   "time_local": null,
-   "tz": null,
-   "date_precision": "day",
-   "status": "happened",
-   "category": "ELECTION",
-   "subcategory": "LEGISLATIVE",
-   "country": "RU",
-   "gdp_share_pct": 2.103,
-   "title_es": "Elección de la Duma Estatal de Rusia (18–20 sep 2026)",
-   "why_es": "Elección sin competencia real (Yabloko excluido); impacto de mercado bajo salvo por señales sobre guerra/sanciones y uso de cripto para pagos transfronterizos.",
-   "crypto_stance": "neutral",
-   "outcome_es": "Votación celebrada 18–20 sep 2026. Resultados oficiales NO verificados en esta investigación (las fuentes accesibles no estaban actualizadas); Rusia Unida llegaba con 310 escaños y el Supremo había anulado el registro de Yabloko.",
-   "prior_tier": 1,
-   "source_url": "https://en.wikipedia.org/wiki/2026_Russian_legislative_election",
-   "source_title": "2026 Russian legislative election - Wikipedia",
-   "origin": "investigacion-2026-10-11",
-   "utc": "2026-09-20T12:00:00Z"
-  },
   {
    "id": "br-general-first-round-2026",
    "date": "2026-10-04",
@@ -393,23 +372,6 @@
    "source_title": "BLS - Schedule of Releases for the Employment Situation",
    "origin": "investigacion-2026-10-11",
    "utc": "2026-11-06T13:30:00Z"
-  },
-  {
-   "date": "2026-11-07",
-   "category": "ELECTION",
-   "country": "NZ",
-   "title_es": "Nueva Zelanda: elecciones generales",
-   "prior_tier": 2,
-   "source_url": "https://www.idea.int/data-tools/data/elections",
-   "why_es": "Elecciones nacionales para renovar los 120 escaños del Parlamento neozelandés.",
-   "status": "proposed",
-   "date_precision": "day",
-   "id": "prop-nueva-zelanda-elecciones-generales-2026-11-07",
-   "origin": "auditoria-gemini",
-   "source_title": "Gemini + Google Search (revisar)",
-   "crypto_stance": "neutral",
-   "subcategory": "",
-   "utc": "2026-11-07T12:00:00Z"
   },
   {
    "id": "us-clarity-lameduck-reconsider-2026-11",
@@ -1096,6 +1058,22 @@
    "utc": "2027-01-01T12:00:00Z"
   },
   {
+   "date": "2027-01-01",
+   "category": "CRYPTO_REGULATION",
+   "country": "GLOBAL",
+   "title_es": "Entrada en vigor del marco CARF de la OCDE en segunda oleada de jurisdicciones",
+   "prior_tier": 2,
+   "source_url": "https://www.oecd.org/tax/exchange-of-tax-information/crypto-asset-reporting-framework-and-amendments-to-the-common-reporting-standard.htm",
+   "status": "proposed",
+   "date_precision": "day",
+   "id": "prop-entrada-en-vigor-del-marco-carf-de-la-ocde-en-segu-2027-01-01",
+   "origin": "auditoria-gemini",
+   "source_title": "Gemini + Google Search (revisar)",
+   "crypto_stance": "neutral",
+   "subcategory": "",
+   "utc": "2027-01-01T12:00:00Z"
+  },
+  {
    "id": "us-ca-ccpa-admt-2027-01-01",
    "date": "2027-01-01",
    "time_local": null,
@@ -1208,6 +1186,24 @@
    "source_title": "BLS - Schedule of Releases for the Employment Situation",
    "origin": "investigacion-2026-10-11",
    "utc": "2027-01-08T13:30:00Z"
+  },
+  {
+   "category": "TRADE",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 2,
+   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+   "source_url": "https://www.prokerala.com/news/articles/a1835330.html",
+   "source_title": "prokerala.com",
+   "confidence": 0.95,
+   "origin": "gemini/GDELT",
+   "id": "prop-ee-uu-extiende-178-exclusiones-arancelarias-a-chin-2027-01-09",
+   "date": "2027-01-09",
+   "status": "proposed",
+   "date_precision": "day",
+   "why_es": "Detectado en noticia: US extends 178 China tariff exclusions to January 9",
+   "utc": "2027-01-09T12:00:00Z"
   },
   {
    "id": "cpi-2027-01-13",
@@ -6718,6 +6714,42 @@
    "source_title": "Regla CME: último viernes del mes, 16:00 Londres",
    "origin": "regla",
    "utc": "2029-10-26T15:00:00Z"
+  },
+  {
+   "id": "nfp-estimado-2029-11",
+   "date": "2029-11-02",
+   "time_local": "08:30",
+   "tz": "America/New_York",
+   "date_precision": "day",
+   "status": "scheduled_estimate",
+   "category": "MACRO_DATA",
+   "subcategory": "NFP",
+   "country": "US",
+   "title_es": "Empleo EE.UU. / NFP (estimado 2029-11-02)",
+   "why_es": "Empleo vs consenso: cambia la probabilidad de recortes/alzas de la Fed.",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "source_url": "https://www.bls.gov/schedule/news_release/empsit.htm",
+   "source_title": "Estimado: primer viernes del mes",
+   "origin": "regla",
+   "utc": "2029-11-02T12:30:00Z"
+  },
+  {
+   "id": "cpi-estimado-2029-11",
+   "date": "2029-11-12",
+   "date_precision": "month",
+   "status": "scheduled_estimate",
+   "category": "MACRO_DATA",
+   "subcategory": "CPI",
+   "country": "US",
+   "title_es": "CPI EE.UU. (fecha por confirmar, 2029-11)",
+   "why_es": "Inflación vs consenso: mueve la expectativa de tasas en minutos.",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "source_url": "https://www.bls.gov/schedule/news_release/cpi.htm",
+   "source_title": "Estimado: BLS publica a mediados de mes",
+   "origin": "regla",
+   "utc": "2029-11-12T12:00:00Z"
   }
  ]
 }

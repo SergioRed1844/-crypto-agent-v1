@@ -1,183 +1,175 @@
 {
  "modo": "refresh",
- "inicio": "2026-11-01T17:56:26Z",
+ "inicio": "2026-11-15T18:53:03Z",
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "n_cryptopanic": 0,
   "n_gdelt": 240,
-  "titulares": 210,
-  "eventos": 35,
+  "titulares": 203,
+  "eventos": 42,
   "metodo": "gemini",
-  "agregados": 12,
-  "propuestas_de_noticias": -6
+  "agregados": 26,
+  "propuestas_de_noticias": 0
  },
  "consenso_semana": [
   {
-   "title": "ISM Manufacturing PMI",
+   "title": "Fed Chairman Warsh Speaks",
    "country": "USD",
-   "date": "2026-11-02T10:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "54.7",
-   "previous": "54.5"
-  },
-  {
-   "title": "JOLTS Job Openings",
-   "country": "USD",
-   "date": "2026-11-03T10:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "7.11M",
-   "previous": "7.08M"
-  },
-  {
-   "title": "Congressional Elections",
-   "country": "USD",
-   "date": "2026-11-03T10:16:00-05:00",
+   "date": "2026-11-16T12:00:00-05:00",
    "impact": "High",
    "forecast": "",
    "previous": ""
   },
   {
-   "title": "Core CPI Flash Estimate y/y",
-   "country": "EUR",
-   "date": "2026-11-04T05:00:00-05:00",
+   "title": "Average Earnings Index 3m/y",
+   "country": "GBP",
+   "date": "2026-11-17T02:00:00-05:00",
    "impact": "Medium",
-   "forecast": "2.5%",
-   "previous": "2.5%"
+   "forecast": "3.5%",
+   "previous": "3.7%"
   },
   {
-   "title": "CPI Flash Estimate y/y",
-   "country": "EUR",
-   "date": "2026-11-04T05:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "4.0%",
-   "previous": "3.8%"
-  },
-  {
-   "title": "ISM Services PMI",
+   "title": "Core Retail Sales m/m",
    "country": "USD",
-   "date": "2026-11-04T10:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "54.9",
-   "previous": "54.9"
+   "date": "2026-11-17T08:30:00-05:00",
+   "impact": "High",
+   "forecast": "0.4%",
+   "previous": "0.9%"
   },
   {
-   "title": "BOE Monetary Policy Report",
-   "country": "GBP",
-   "date": "2026-11-05T07:00:00-05:00",
+   "title": "Retail Sales m/m",
+   "country": "USD",
+   "date": "2026-11-17T08:30:00-05:00",
    "impact": "High",
-   "forecast": "",
-   "previous": ""
+   "forecast": "0.2%",
+   "previous": "0.8%"
   },
   {
-   "title": "Monetary Policy Summary",
+   "title": "CPI y/y",
    "country": "GBP",
-   "date": "2026-11-05T07:00:00-05:00",
+   "date": "2026-11-18T02:00:00-05:00",
    "impact": "High",
-   "forecast": "",
-   "previous": ""
-  },
-  {
-   "title": "MPC Official Bank Rate Votes",
-   "country": "GBP",
-   "date": "2026-11-05T07:00:00-05:00",
-   "impact": "High",
-   "forecast": "7-0-2",
-   "previous": "3-0-6"
-  },
-  {
-   "title": "Official Bank Rate",
-   "country": "GBP",
-   "date": "2026-11-05T07:00:00-05:00",
-   "impact": "High",
-   "forecast": "4.00%",
-   "previous": "3.75%"
+   "forecast": "3.6%",
+   "previous": "3.5%"
   },
   {
    "title": "BOE Gov Bailey Speaks",
    "country": "GBP",
-   "date": "2026-11-05T07:30:00-05:00",
+   "date": "2026-11-18T02:30:00-05:00",
    "impact": "High",
    "forecast": "",
    "previous": ""
   },
   {
-   "title": "Unemployment Claims",
-   "country": "USD",
-   "date": "2026-11-05T08:30:00-05:00",
+   "title": "ECB Financial Stability Review",
+   "country": "EUR",
+   "date": "2026-11-18T04:00:00-05:00",
    "impact": "Medium",
-   "forecast": "197K",
-   "previous": "194K"
+   "forecast": "",
+   "previous": ""
   },
   {
    "title": "ECB President Lagarde Speaks",
    "country": "EUR",
-   "date": "2026-11-05T13:00:00-05:00",
+   "date": "2026-11-18T09:25:00-05:00",
    "impact": "Medium",
    "forecast": "",
    "previous": ""
   },
   {
-   "title": "Average Hourly Earnings m/m",
-   "country": "USD",
-   "date": "2026-11-06T08:30:00-05:00",
-   "impact": "High",
-   "forecast": "0.3%",
-   "previous": "0.1%"
-  },
-  {
-   "title": "Non-Farm Employment Change",
-   "country": "USD",
-   "date": "2026-11-06T08:30:00-05:00",
-   "impact": "High",
-   "forecast": "63K",
-   "previous": "29K"
-  },
-  {
-   "title": "Unemployment Rate",
-   "country": "USD",
-   "date": "2026-11-06T08:30:00-05:00",
-   "impact": "High",
-   "forecast": "4.2%",
-   "previous": "4.2%"
-  },
-  {
-   "title": "Prelim UoM Consumer Sentiment",
-   "country": "USD",
-   "date": "2026-11-06T10:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "47.8",
-   "previous": "46.3"
-  },
-  {
-   "title": "Prelim UoM Inflation Expectations",
-   "country": "USD",
-   "date": "2026-11-06T10:00:00-05:00",
-   "impact": "Medium",
-   "forecast": "",
-   "previous": "4.7%"
-  },
-  {
-   "title": "BOJ Gov Ueda Speaks",
-   "country": "JPY",
-   "date": "2026-11-06T11:00:00-05:00",
+   "title": "BOE Gov Bailey Speaks",
+   "country": "GBP",
+   "date": "2026-11-18T10:00:00-05:00",
    "impact": "High",
    "forecast": "",
    "previous": ""
+  },
+  {
+   "title": "FOMC Meeting Minutes",
+   "country": "USD",
+   "date": "2026-11-18T14:00:00-05:00",
+   "impact": "High",
+   "forecast": "",
+   "previous": ""
+  },
+  {
+   "title": "ECB President Lagarde Speaks",
+   "country": "EUR",
+   "date": "2026-11-19T08:30:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": ""
+  },
+  {
+   "title": "Philly Fed Manufacturing Index",
+   "country": "USD",
+   "date": "2026-11-19T08:30:00-05:00",
+   "impact": "Medium",
+   "forecast": "19.2",
+   "previous": "20.9"
+  },
+  {
+   "title": "Unemployment Claims",
+   "country": "USD",
+   "date": "2026-11-19T08:30:00-05:00",
+   "impact": "Medium",
+   "forecast": "199K",
+   "previous": "200K"
+  },
+  {
+   "title": "Retail Sales m/m",
+   "country": "GBP",
+   "date": "2026-11-20T02:00:00-05:00",
+   "impact": "Medium",
+   "forecast": "0.0%",
+   "previous": "-0.4%"
+  },
+  {
+   "title": "ECB President Lagarde Speaks",
+   "country": "EUR",
+   "date": "2026-11-20T03:15:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": ""
+  },
+  {
+   "title": "FOMC Member Waller Speaks",
+   "country": "USD",
+   "date": "2026-11-20T08:25:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": ""
+  },
+  {
+   "title": "Revised UoM Consumer Sentiment",
+   "country": "USD",
+   "date": "2026-11-20T10:00:00-05:00",
+   "impact": "Medium",
+   "forecast": "52.1",
+   "previous": "51.0"
+  },
+  {
+   "title": "Revised UoM Inflation Expectations",
+   "country": "USD",
+   "date": "2026-11-20T10:00:00-05:00",
+   "impact": "Medium",
+   "forecast": "",
+   "previous": "4.3%"
   }
  ],
  "auditoria": {
-  "status": "12 propuestas",
-  "agregadas": 3
+  "status": "13 propuestas",
+  "agregadas": 2
  },
  "calendario": {
-  "events": 355,
-  "eventos_a_futuro": 342,
+  "events": 357,
+  "eventos_a_futuro": 328,
   "por_status": {
-   "confirmed": 212,
-   "expected": 43,
-   "proposed": 7,
-   "speculative": 8,
-   "scheduled_estimate": 72
+   "confirmed": 203,
+   "proposed": 8,
+   "speculative": 6,
+   "expected": 37,
+   "scheduled_estimate": 74
   },
   "huecos": []
  },
@@ -190,8 +182,11 @@
   }
  },
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   976001,
+   976004
+  ],
+  "calls": 62,
   "stopped": null,
   "nuevas": 0
  },
@@ -201,8 +196,6 @@
  "gemini": {
   "model": "gemini-3.8-flash",
   "ok": 8,
-  "errors": [
-   "ReadTimeout"
-  ]
+  "errors": []
  }
 }
