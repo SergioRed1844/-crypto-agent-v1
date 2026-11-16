@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-16T22:19:32Z",
+ "generated_utc": "2026-11-16T22:28:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.356,
+ "bias": -0.355,
  "event_risk": 0.033,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -82,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.099,
+   "aporte": 0.098,
    "fuente": "noticia"
   },
   {
