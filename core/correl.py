@@ -19,7 +19,7 @@ GRUPOS = {
     "centros_datos": ["SOXX", "NVDA", "AVGO", "VRT", "GEV", "PWR", "CEG"],
     "robots_humanoides": ["BOTZ", "APH", "TEL", "TSLA", "6324.T", "6268.T"],
     "solar_salud": ["ICLN", "FSLR", "XLV", "UNH"],
-    "cripto": ["BTC-USD"],
+    "cripto": ["BTC-USD", "MSTR", "COIN", "IBIT", "GDX", "DX-Y.NYB", "^TNX"],
     "coberturas": ["CF", "NTR", "MOS", "XOM", "CVX", "COP", "OXY", "XOP", "BNO"],
 }
 # Choques geopolíticos con fecha conocida (día 0 = primer día hábil de EUA después del hecho).
@@ -136,8 +136,10 @@ def main(out: str) -> int:
     hoy = r.index[-1]
     c1 = r.loc[hoy - pd.Timedelta(days=365):].corr()
     c3 = r.loc[hoy - pd.Timedelta(days=3 * 365):].corr()
+    c90 = r.loc[hoy - pd.Timedelta(days=90):].corr()
     res = {"generado": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "grupos": GRUPOS,
            "corr_1a": c1.round(3).replace({np.nan: None}).to_dict(), "corr_3a": c3.round(3).replace({np.nan: None}).to_dict(),
+           "corr_90d": c90.round(3).replace({np.nan: None}).to_dict(),
            "beta_brent_1a": betas(r, "BZ=F", str((hoy - pd.Timedelta(days=365)).date())),
            "beta_spy_1a": betas(r, "SPY", str((hoy - pd.Timedelta(days=365)).date())),
            "beta_vix_1a": betas(r, "^VIX", str((hoy - pd.Timedelta(days=365)).date()))}
