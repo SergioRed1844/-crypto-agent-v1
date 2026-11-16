@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-16T02:36:39Z",
+ "generated_utc": "2026-11-16T03:03:16Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -11,7 +11,7 @@
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
-  "Precaución: sesgo -0.37",
+  "Precaución: sesgo -0.36",
   "Stablecoins -5.16% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.156,
+   "aporte": -0.155,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.116,
+   "aporte": 0.115,
    "fuente": "noticia"
   },
   {
