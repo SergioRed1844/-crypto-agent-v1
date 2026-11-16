@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-16T04:35:00Z",
+ "generated_utc": "2026-11-16T05:34:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.272,
+   "aporte": 0.271,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.154,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.114,
+   "aporte": -0.113,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.114,
+   "aporte": 0.113,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.111,
+   "aporte": 0.109,
    "fuente": "noticia"
   },
   {
