@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-16T03:03:16Z",
+ "generated_utc": "2026-11-16T03:35:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.274,
+   "aporte": 0.273,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -73,15 +73,6 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.116,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-wholesale-prices-rise-less-than-expected-in-octobe-2026-11-13",
-   "date": "2026-11-13",
-   "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
-   "category": "MACRO_DATA",
-   "stance": "pro",
    "aporte": 0.115,
    "fuente": "noticia"
   },
@@ -95,12 +86,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-wholesale-prices-rise-less-than-expected-in-octobe-2026-11-13",
+   "date": "2026-11-13",
+   "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.114,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-global-stocks-tumble-as-ai-panic-grips-markets-aft-2026-11-06",
    "date": "2026-11-06",
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.102,
+   "aporte": -0.101,
    "fuente": "noticia"
   }
  ],
