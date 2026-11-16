@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-16T11:33:24Z",
+ "generated_utc": "2026-11-16T11:59:35Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.148,
+   "aporte": -0.147,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.108,
+   "aporte": 0.107,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.096,
+   "aporte": 0.095,
    "fuente": "noticia"
   }
  ],
