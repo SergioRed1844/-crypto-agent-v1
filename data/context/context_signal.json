@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-16T00:38:33Z",
+ "generated_utc": "2026-11-16T01:37:38Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.366,
- "event_risk": 0.013,
+ "bias": -0.365,
+ "event_risk": 0.014,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Precaución: sesgo -0.37",
-  "Stablecoins -5.27% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.15% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.013,
+   "riesgo": 0.014,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.276,
+   "aporte": 0.275,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.202,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.158,
+   "aporte": -0.157,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.121,
+   "aporte": 0.118,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.118,
+   "aporte": 0.117,
    "fuente": "noticia"
   },
   {
@@ -116,6 +116,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.27
+  "stablecoins_30d_pct": -5.15
  }
 }
