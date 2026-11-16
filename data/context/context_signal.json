@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-16T11:59:35Z",
+ "generated_utc": "2026-11-16T12:28:20Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.362,
- "event_risk": 0.021,
+ "event_risk": 0.022,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.021,
+   "riesgo": 0.022,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.264,
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.095,
+   "aporte": 0.094,
    "fuente": "noticia"
   }
  ],
