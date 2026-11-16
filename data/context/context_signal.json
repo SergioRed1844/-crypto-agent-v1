@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-16T09:30:46Z",
+ "generated_utc": "2026-11-16T10:29:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.363,
- "event_risk": 0.019,
+ "bias": -0.362,
+ "event_risk": 0.02,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.266,
+   "aporte": 0.265,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.239,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.11,
+   "aporte": 0.109,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.1,
+   "aporte": -0.099,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Los precios al por mayor en EE.UU. suben menos de lo esperado en octubre",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.1,
+   "aporte": 0.098,
    "fuente": "noticia"
   }
  ],
