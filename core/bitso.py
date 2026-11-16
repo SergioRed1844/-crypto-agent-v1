@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 UA = {"User-Agent": "Mozilla/5.0 (rebotes-bot; research)"}
-LIBROS = {"eth_mxn": "ETH-USD", "doge_mxn": "DOGE-USD", "btc_mxn": "BTC-USD"}
+LIBROS = {"eth_mxn": "ETH-USD", "doge_mxn": "DOGE-USD", "doge_usd": "DOGE-USD", "btc_mxn": "BTC-USD"}
 
 
 def main(out: str) -> int:
@@ -23,7 +23,7 @@ def main(out: str) -> int:
     for libro, tk in LIBROS.items():
         try:
             js = requests.get(f"https://api.bitso.com/v3/ticker/?book={libro}", headers=UA, timeout=20).json()["payload"]
-            ref = float(px[tk]) * res["mxn"]
+            ref = float(px[tk]) * (1.0 if libro.endswith("_usd") else res["mxn"])
             res[libro] = {k: js.get(k) for k in ("last", "bid", "ask", "high", "low", "vwap", "created_at")}
             res[libro].update({"usd": float(px[tk]), "ref_mxn": ref, "prima": float(js["last"]) / ref - 1})
         except Exception as e:  # noqa: BLE001
