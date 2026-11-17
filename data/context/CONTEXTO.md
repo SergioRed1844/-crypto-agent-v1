@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-17T07:11:42Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-17T07:14:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.05 · tamaño ×0.5 · compras permitidas
 
@@ -19,7 +19,7 @@ Actualizado 2026-11-17T07:11:42Z UTC. Se recalcula cada hora; el calendario y lo
 | Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.131 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.105 |
 | Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.093 |
-| EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero | 2026-11-11 | pro | +0.092 |
+| EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero | 2026-11-11 | pro | +0.091 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.077 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -29,13 +29,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-17T07:11:42Z",
+ "inicio": "2026-11-17T07:14:55Z",
  "onchain": {
-  "scanned": [
-   976239,
-   976242
-  ],
-  "calls": 65,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
