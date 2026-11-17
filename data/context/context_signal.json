@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T12:07:32Z",
+ "generated_utc": "2026-11-17T13:06:54Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.347,
- "event_risk": 0.059,
+ "event_risk": 0.061,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.059,
+   "riesgo": 0.061,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.238,
+   "aporte": 0.237,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.221,
+   "aporte": -0.22,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.182,
+   "aporte": -0.181,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.128,
+   "aporte": -0.127,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.088,
+   "aporte": 0.087,
    "fuente": "noticia"
   },
   {
