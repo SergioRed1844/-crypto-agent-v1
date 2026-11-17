@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-17T11:08:14Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-17T11:12:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.06 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-11-17T11:08:14Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.056 |
+| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.057 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-17T11:08:14Z",
+ "inicio": "2026-11-17T11:12:34Z",
  "onchain": {
   "scanned": [
-   976256,
-   976263
+   976264,
+   976264
   ],
-  "calls": 133,
+  "calls": 7,
   "stopped": null,
   "nuevas": 0
  },
