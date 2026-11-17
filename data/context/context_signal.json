@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-17T01:17:04Z",
+ "generated_utc": "2026-11-17T02:16:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.354,
- "event_risk": 0.037,
+ "event_risk": 0.039,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Precaución: sesgo -0.35",
-  "Stablecoins -5.31% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.32% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.037,
+   "riesgo": 0.039,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.249,
+   "aporte": 0.248,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.136,
+   "aporte": -0.135,
    "fuente": "noticia"
   },
   {
@@ -77,21 +77,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.096,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-global-stocks-tumble-as-ai-panic-grips-markets-aft-2026-11-06",
    "date": "2026-11-06",
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
    "aporte": -0.095,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.095,
    "fuente": "noticia"
   },
   {
@@ -116,6 +116,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.31
+  "stablecoins_30d_pct": -5.32
  }
 }
