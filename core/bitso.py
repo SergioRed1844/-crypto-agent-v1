@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 UA = {"User-Agent": "Mozilla/5.0 (rebotes-bot; research)"}
-LIBROS = {"eth_mxn": "ETH-USD", "doge_mxn": "DOGE-USD", "doge_usd": "DOGE-USD", "btc_mxn": "BTC-USD"}
+LIBROS = {"eth_mxn": "ETH-USD", "doge_mxn": "DOGE-USD", "doge_usd": "DOGE-USD", "pepe_usd": "PEPE24478-USD", "btc_mxn": "BTC-USD"}
 
 
 def main(out: str) -> int:
