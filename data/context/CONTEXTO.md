@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-17T22:58:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-17T23:02:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.34 · riesgo de evento 0.09 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-11-17T22:58:02Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.092 |
+| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.093 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
@@ -20,7 +20,7 @@ Actualizado 2026-11-17T22:58:02Z UTC. Se recalcula cada hora; el calendario y lo
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.100 |
 | Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.089 |
 | EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero | 2026-11-11 | pro | +0.080 |
-| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.074 |
+| Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.073 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-17T22:58:02Z",
+ "inicio": "2026-11-17T23:02:56Z",
  "onchain": {
   "scanned": [
-   976329,
-   976336
+   976337,
+   976341
   ],
-  "calls": 109,
+  "calls": 41,
   "stopped": null,
   "nuevas": 0
  },
