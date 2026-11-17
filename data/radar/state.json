@@ -208,10 +208,21 @@
   "LTC|CAPITULACION|2026-11-14": {
    "level": "VIGILANCIA",
    "utc": "2026-11-15T00:00:39+00:00"
+  },
+  "MSFT|PULLBACK_TENDENCIA|2026-11-17": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-17T21:59:01+00:00"
+  },
+  "NVDA|CAPITULACION|2026-11-17": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-17T21:59:01+00:00"
+  },
+  "GFNORTEO.MX|PULLBACK_TENDENCIA|2026-11-17": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-17T21:59:01+00:00"
   }
  },
  "runs": [
-  "2026-11-16T00:38:43+00:00",
   "2026-11-16T01:37:48+00:00",
   "2026-11-16T02:36:55+00:00",
   "2026-11-16T03:02:20+00:00",
@@ -270,9 +281,10 @@
   "2026-11-17T19:01:35+00:00",
   "2026-11-17T19:02:20+00:00",
   "2026-11-17T20:00:52+00:00",
-  "2026-11-17T20:59:55+00:00"
+  "2026-11-17T20:59:55+00:00",
+  "2026-11-17T21:59:01+00:00"
  ],
- "last_scan_utc": "2026-11-17T20:59:55+00:00",
+ "last_scan_utc": "2026-11-17T21:59:01+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -661,12 +673,56 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-17T20:00:56Z",
+   "last": "2026-11-17T20:59:45Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
- "last_candidates": [],
+ "last_candidates": [
+  {
+   "sym": "MSFT",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-17",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +3.6 pp < 5 pp"
+   ],
+   "p": 0.342,
+   "base": 0.306,
+   "ret": 0.0036,
+   "h": 7
+  },
+  {
+   "sym": "NVDA",
+   "cls": "us",
+   "sid": "CAPITULACION",
+   "date": "2026-11-17",
+   "level": "VIGILANCIA",
+   "why": [
+    "la búsqueda de noticias sugiere causa fundamental propia del activo"
+   ],
+   "p": 0.505,
+   "base": 0.402,
+   "ret": 0.0151,
+   "h": 7
+  },
+  {
+   "sym": "GFNORTEO.MX",
+   "cls": "bmv",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-17",
+   "level": "VIGILANCIA",
+   "why": [
+    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)"
+   ],
+   "p": 0.367,
+   "base": 0.308,
+   "ret": 0.0038,
+   "h": 7
+  }
+ ],
  "digest_issue": {
   "2026-10": 5,
   "2026-11": 11
