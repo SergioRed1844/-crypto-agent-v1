@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-17T23:02:56Z",
+ "generated_utc": "2026-11-17T23:07:43Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.12,
+   "aporte": -0.119,
    "fuente": "noticia"
   },
   {
