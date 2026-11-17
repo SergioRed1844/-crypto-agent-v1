@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T10:09:09Z",
+ "generated_utc": "2026-11-17T11:08:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.348,
- "event_risk": 0.054,
+ "bias": -0.347,
+ "event_risk": 0.056,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.054,
+   "riesgo": 0.056,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.24,
+   "aporte": 0.239,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.183,
+   "aporte": -0.182,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.129,
+   "aporte": -0.128,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.093,
+   "aporte": -0.092,
    "fuente": "noticia"
   },
   {
