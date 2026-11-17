@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-17T13:06:54Z",
+ "generated_utc": "2026-11-17T14:05:42Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.347,
- "event_risk": 0.061,
+ "bias": -0.346,
+ "event_risk": 0.064,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
  "reasons": [
   "Precaución: sesgo -0.35",
-  "Stablecoins -5.32% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.31% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.061,
+   "riesgo": 0.064,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.237,
+   "aporte": 0.236,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.181,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.127,
+   "aporte": -0.126,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.087,
+   "aporte": 0.086,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.076,
+   "aporte": 0.075,
    "fuente": "noticia"
   }
  ],
@@ -116,6 +116,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.32
+  "stablecoins_30d_pct": -5.31
  }
 }
