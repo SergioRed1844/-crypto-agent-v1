@@ -1,25 +1,25 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-17T11:12:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-17T12:07:32Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.35 · riesgo de evento 0.06 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.35
-- Stablecoins -5.31% en 30 días (liquidez saliendo)
+- Stablecoins -5.32% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.057 |
+| Minutas FOMC (reunión 27-28 oct 2026) | 2026-11-18T19:00:00Z | Política monetaria | 0.166 | 0.059 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.239 |
-| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.222 |
+| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.238 |
+| Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.221 |
 | Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.182 |
 | Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.128 |
-| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.104 |
+| Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.103 |
 | Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.092 |
-| EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero | 2026-11-11 | pro | +0.089 |
+| EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero | 2026-11-11 | pro | +0.088 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.076 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-17T11:12:34Z",
+ "inicio": "2026-11-17T12:07:32Z",
  "onchain": {
   "scanned": [
-   976264,
-   976264
+   976265,
+   976271
   ],
-  "calls": 7,
+  "calls": 128,
   "stopped": null,
   "nuevas": 0
  },
