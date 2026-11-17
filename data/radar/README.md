@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-17T12:07:45+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-16
+Última corrida: **2026-11-17T14:05:52+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -28,14 +28,14 @@ Ninguno.
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.2% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.4% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.3% |
-| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
+| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 85% | +0.1% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.6% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 72% | +0.3% |
 | Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 47% | -0.0% |
-| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.9% |
+| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 51% | +0.9% |
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.7% |
 | Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 91% | -0.2% |
 | Reversión tras choque político/comercial | bmv | 30 d | 9 | 54% | 34% | 36% | 90% | +0.8% |
@@ -134,7 +134,7 @@ Ninguno.
 | XRP | sí | 2026-11-17 | binance |
 | ^MXX | sí | 2026-11-13 | yahoo |
 | ^VIX | sí | 2026-11-17 | yahoo |
-| contexto_v42 | sí | 2026-11-17T11:12:34Z | CAUTION |
+| contexto_v42 | sí | 2026-11-17T13:06:54Z | CAUTION |
 | fear_greed | sí | 2026-11-17 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-16 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-16 | wikimedia |
