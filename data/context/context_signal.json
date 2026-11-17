@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T15:04:50Z",
+ "generated_utc": "2026-11-17T15:08:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.346,
- "event_risk": 0.066,
+ "event_risk": 0.067,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.066,
+   "riesgo": 0.067,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
