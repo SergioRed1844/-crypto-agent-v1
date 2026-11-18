@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-17T23:57:20+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
+Última corrida: **2026-11-18T00:56:35+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -32,7 +32,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.2% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.4% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.3% |
-| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 85% | +0.1% |
+| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.0% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
@@ -81,21 +81,21 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 |---|---|---|---|
 | AAPL | sí | 2026-11-17 | yahoo |
 | AC.MX | sí | 2026-11-17 | yahoo |
-| ADA | sí | 2026-11-17 | binance |
+| ADA | sí | 2026-11-18 | binance |
 | ALSEA.MX | sí | 2026-11-17 | yahoo |
 | AMXB.MX | sí | 2026-11-17 | yahoo |
 | AMZN | sí | 2026-11-17 | yahoo |
 | ASURB.MX | sí | 2026-11-17 | yahoo |
-| AVAX | sí | 2026-11-17 | binance |
+| AVAX | sí | 2026-11-18 | binance |
 | BBAJIOO.MX | sí | 2026-11-17 | yahoo |
-| BCH | sí | 2026-11-17 | binance |
+| BCH | sí | 2026-11-18 | binance |
 | BIMBOA.MX | sí | 2026-11-17 | yahoo |
-| BTC | sí | 2026-11-17 | binance |
+| BTC | sí | 2026-11-18 | binance |
 | CEMEXCPO.MX | sí | 2026-11-17 | yahoo |
 | DIA | sí | 2026-11-17 | yahoo |
-| DOGE | sí | 2026-11-17 | binance |
-| DOT | sí | 2026-11-17 | binance |
-| ETH | sí | 2026-11-17 | binance |
+| DOGE | sí | 2026-11-18 | binance |
+| DOT | sí | 2026-11-18 | binance |
+| ETH | sí | 2026-11-18 | binance |
 | FEMSAUBD.MX | sí | 2026-11-17 | yahoo |
 | GAPB.MX | sí | 2026-11-17 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-17 | yahoo |
@@ -107,12 +107,12 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | JPM | sí | 2026-11-17 | yahoo |
 | KIMBERA.MX | sí | 2026-11-17 | yahoo |
 | KOFUBL.MX | sí | 2026-11-17 | yahoo |
-| LINK | sí | 2026-11-17 | binance |
+| LINK | sí | 2026-11-18 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-17 | yahoo |
-| LTC | sí | 2026-11-17 | binance |
+| LTC | sí | 2026-11-18 | binance |
 | META | sí | 2026-11-17 | yahoo |
 | MSFT | sí | 2026-11-17 | yahoo |
-| MXN=X | sí | 2026-11-17 | yahoo |
+| MXN=X | sí | 2026-11-18 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-17 | yahoo |
 | NVDA | sí | 2026-11-17 | yahoo |
 | OMAB.MX | sí | 2026-11-17 | yahoo |
@@ -120,9 +120,9 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | PINFRA.MX | sí | 2026-11-17 | yahoo |
 | QQQ | sí | 2026-11-17 | yahoo |
 | SMH | sí | 2026-11-17 | yahoo |
-| SOL | sí | 2026-11-17 | binance |
+| SOL | sí | 2026-11-18 | binance |
 | SPY | sí | 2026-11-17 | yahoo |
-| TRX | sí | 2026-11-17 | binance |
+| TRX | sí | 2026-11-18 | binance |
 | TSLA | sí | 2026-11-17 | yahoo |
 | WALMEX.MX | sí | 2026-11-17 | yahoo |
 | WMT | sí | 2026-11-17 | yahoo |
@@ -135,11 +135,11 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XLV | sí | 2026-11-17 | yahoo |
 | XLY | sí | 2026-11-17 | yahoo |
 | XOM | sí | 2026-11-17 | yahoo |
-| XRP | sí | 2026-11-17 | binance |
+| XRP | sí | 2026-11-18 | binance |
 | ^MXX | sí | 2026-11-17 | yahoo |
 | ^VIX | sí | 2026-11-17 | yahoo |
-| contexto_v42 | sí | 2026-11-17T23:07:43Z | CAUTION |
-| fear_greed | sí | 2026-11-17 | alternative.me |
+| contexto_v42 | sí | 2026-11-17T23:57:13Z | CAUTION |
+| fear_greed | sí | 2026-11-18 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-16 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-16 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-16 | wikimedia |
