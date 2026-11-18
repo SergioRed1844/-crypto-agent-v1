@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-17T23:57:13Z",
+ "generated_utc": "2026-11-18T00:56:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.342,
- "event_risk": 0.096,
+ "event_risk": 0.1,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
@@ -22,7 +22,7 @@
    "category": "MONETARY_POLICY",
    "status": "confirmed",
    "magnitud": 0.166,
-   "riesgo": 0.096,
+   "riesgo": 0.1,
    "ventana": [
     "2026-11-18T13:00:00Z",
     "2026-11-18T21:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.227,
+   "aporte": 0.226,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.119,
+   "aporte": -0.118,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
    "category": "TRADE",
    "stance": "pro",
-   "aporte": 0.08,
+   "aporte": 0.079,
    "fuente": "noticia"
   },
   {
@@ -113,7 +113,7 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 12
+   "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
   "stablecoins_30d_pct": -5.31
