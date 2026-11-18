@@ -223,7 +223,6 @@
   }
  },
  "runs": [
-  "2026-11-16T07:33:08+00:00",
   "2026-11-16T08:31:48+00:00",
   "2026-11-16T09:30:55+00:00",
   "2026-11-16T10:29:56+00:00",
@@ -282,9 +281,10 @@
   "2026-11-18T01:55:28+00:00",
   "2026-11-18T02:54:39+00:00",
   "2026-11-18T02:55:29+00:00",
-  "2026-11-18T04:41:21+00:00"
+  "2026-11-18T04:41:21+00:00",
+  "2026-11-18T07:42:18+00:00"
  ],
- "last_scan_utc": "2026-11-18T04:41:21+00:00",
+ "last_scan_utc": "2026-11-18T07:42:18+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -293,7 +293,7 @@
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "ADA": {
@@ -303,12 +303,12 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "AMZN": {
@@ -318,7 +318,7 @@
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -328,7 +328,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "BCH": {
@@ -338,7 +338,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "BTC": {
@@ -348,7 +348,7 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "DIA": {
@@ -373,17 +373,17 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "GLD": {
@@ -393,7 +393,7 @@
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "GOOGL": {
@@ -403,7 +403,7 @@
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "IWM": {
@@ -418,12 +418,12 @@
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "LINK": {
@@ -433,7 +433,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "LTC": {
@@ -468,17 +468,17 @@
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "QQQ": {
@@ -513,7 +513,7 @@
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-17",
+   "last": "2026-11-13",
    "nota": "yahoo"
   },
   "WMT": {
@@ -603,22 +603,22 @@
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
@@ -633,7 +633,7 @@
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
@@ -653,7 +653,7 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
@@ -663,7 +663,7 @@
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-11-16",
+   "last": "2026-11-17",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
@@ -673,7 +673,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-18T02:57:23Z",
+   "last": "2026-11-18T04:41:36Z",
    "nota": "CAUTION"
   }
  },
@@ -704,20 +704,6 @@
    "p": 0.505,
    "base": 0.402,
    "ret": 0.015,
-   "h": 7
-  },
-  {
-   "sym": "GFNORTEO.MX",
-   "cls": "bmv",
-   "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-11-17",
-   "level": "VIGILANCIA",
-   "why": [
-    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)"
-   ],
-   "p": 0.367,
-   "base": 0.308,
-   "ret": 0.0038,
    "h": 7
   }
  ],

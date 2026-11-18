@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-18T04:41:21+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
+Última corrida: **2026-11-18T07:42:18+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -10,7 +10,6 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 |---|---|---|---|---|---|---|---|
 | VIGILANCIA | MSFT | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 34% | 31% | +0.4% |
 | ALERTA | NVDA | Capitulación con miedo extremo | 2026-11-17 | 7 d | 50% | 40% | +1.5% |
-| VIGILANCIA | GFNORTEO.MX | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 37% | 31% | +0.4% |
 
 ## Alertas enviadas (últimas 15)
 
@@ -32,7 +31,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.2% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.4% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.3% |
-| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.0% |
+| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 85% | +0.0% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
@@ -67,7 +66,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 16% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 29% | +0.4% |
-| Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 29% | +0.7% |
+| Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 45% | 29% | +0.7% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 42 | 39% | 42% | 41% | 68% | -0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 69% | +0.0% |
@@ -80,51 +79,51 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Serie | OK | Último | Nota |
 |---|---|---|---|
 | AAPL | sí | 2026-11-17 | yahoo |
-| AC.MX | sí | 2026-11-17 | yahoo |
+| AC.MX | sí | 2026-11-13 | yahoo |
 | ADA | sí | 2026-11-18 | binance |
-| ALSEA.MX | sí | 2026-11-17 | yahoo |
-| AMXB.MX | sí | 2026-11-17 | yahoo |
+| ALSEA.MX | sí | 2026-11-13 | yahoo |
+| AMXB.MX | sí | 2026-11-13 | yahoo |
 | AMZN | sí | 2026-11-17 | yahoo |
-| ASURB.MX | sí | 2026-11-17 | yahoo |
+| ASURB.MX | sí | 2026-11-13 | yahoo |
 | AVAX | sí | 2026-11-18 | binance |
-| BBAJIOO.MX | sí | 2026-11-17 | yahoo |
+| BBAJIOO.MX | sí | 2026-11-13 | yahoo |
 | BCH | sí | 2026-11-18 | binance |
-| BIMBOA.MX | sí | 2026-11-17 | yahoo |
+| BIMBOA.MX | sí | 2026-11-13 | yahoo |
 | BTC | sí | 2026-11-18 | binance |
-| CEMEXCPO.MX | sí | 2026-11-17 | yahoo |
+| CEMEXCPO.MX | sí | 2026-11-13 | yahoo |
 | DIA | sí | 2026-11-17 | yahoo |
 | DOGE | sí | 2026-11-18 | binance |
 | DOT | sí | 2026-11-18 | binance |
 | ETH | sí | 2026-11-18 | binance |
-| FEMSAUBD.MX | sí | 2026-11-17 | yahoo |
-| GAPB.MX | sí | 2026-11-17 | yahoo |
-| GFNORTEO.MX | sí | 2026-11-17 | yahoo |
+| FEMSAUBD.MX | sí | 2026-11-13 | yahoo |
+| GAPB.MX | sí | 2026-11-13 | yahoo |
+| GFNORTEO.MX | sí | 2026-11-13 | yahoo |
 | GLD | sí | 2026-11-17 | yahoo |
-| GMEXICOB.MX | sí | 2026-11-17 | yahoo |
+| GMEXICOB.MX | sí | 2026-11-13 | yahoo |
 | GOOGL | sí | 2026-11-17 | yahoo |
-| GRUMAB.MX | sí | 2026-11-17 | yahoo |
+| GRUMAB.MX | sí | 2026-11-13 | yahoo |
 | IWM | sí | 2026-11-17 | yahoo |
 | JPM | sí | 2026-11-17 | yahoo |
-| KIMBERA.MX | sí | 2026-11-17 | yahoo |
-| KOFUBL.MX | sí | 2026-11-17 | yahoo |
+| KIMBERA.MX | sí | 2026-11-13 | yahoo |
+| KOFUBL.MX | sí | 2026-11-13 | yahoo |
 | LINK | sí | 2026-11-18 | binance |
-| LIVEPOLC-1.MX | sí | 2026-11-17 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-11-13 | yahoo |
 | LTC | sí | 2026-11-18 | binance |
 | META | sí | 2026-11-17 | yahoo |
 | MSFT | sí | 2026-11-17 | yahoo |
 | MXN=X | sí | 2026-11-18 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-17 | yahoo |
 | NVDA | sí | 2026-11-17 | yahoo |
-| OMAB.MX | sí | 2026-11-17 | yahoo |
-| ORBIA.MX | sí | 2026-11-17 | yahoo |
-| PINFRA.MX | sí | 2026-11-17 | yahoo |
+| OMAB.MX | sí | 2026-11-13 | yahoo |
+| ORBIA.MX | sí | 2026-11-13 | yahoo |
+| PINFRA.MX | sí | 2026-11-13 | yahoo |
 | QQQ | sí | 2026-11-17 | yahoo |
 | SMH | sí | 2026-11-17 | yahoo |
 | SOL | sí | 2026-11-18 | binance |
 | SPY | sí | 2026-11-17 | yahoo |
 | TRX | sí | 2026-11-18 | binance |
 | TSLA | sí | 2026-11-17 | yahoo |
-| WALMEX.MX | sí | 2026-11-17 | yahoo |
+| WALMEX.MX | sí | 2026-11-13 | yahoo |
 | WMT | sí | 2026-11-17 | yahoo |
 | XLE | sí | 2026-11-17 | yahoo |
 | XLF | sí | 2026-11-17 | yahoo |
@@ -138,24 +137,24 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-18 | binance |
 | ^MXX | sí | 2026-11-17 | yahoo |
 | ^VIX | sí | 2026-11-17 | yahoo |
-| contexto_v42 | sí | 2026-11-18T02:57:23Z | CAUTION |
+| contexto_v42 | sí | 2026-11-18T04:41:36Z | CAUTION |
 | fear_greed | sí | 2026-11-18 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-11-16 | wikimedia |
+| wiki_en_Bankruptcy | sí | 2026-11-17 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-16 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-16 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-11-16 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-17 | wikimedia |
 | wiki_en_Ethereum | sí | 2026-11-17 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-11-16 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-17 | wikimedia |
 | wiki_en_Inflation | sí | 2026-11-16 | wikimedia |
 | wiki_en_Recession | sí | 2026-11-17 | wikimedia |
 | wiki_en_Ripple_Labs | sí | 2026-11-17 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-16 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-17 | wikimedia |
 | wiki_en_Stock_market_crash | sí | 2026-11-17 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-11-16 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-11-17 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-17 | wikimedia |
 | wiki_es_Desempleo | sí | 2026-11-17 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-16 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-17 | wikimedia |
 | wiki_es_Inflación | sí | 2026-11-17 | wikimedia |
-| wiki_es_Recesión | sí | 2026-11-16 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-17 | wikimedia |
 
 _Señal estadística para que TÚ la revises. No es asesoría financiera ni una orden; el Radar no opera y no tiene llaves de ningún exchange. Probabilidades históricas encogidas, no garantías._
