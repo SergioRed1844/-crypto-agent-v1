@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-18T01:55:28+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
+Última corrida: **2026-11-18T02:54:39+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-17
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -8,6 +8,8 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
 |---|---|---|---|---|---|---|---|
+| VIGILANCIA | MSFT | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 34% | 31% | +0.4% |
+| ALERTA | NVDA | Capitulación con miedo extremo | 2026-11-17 | 7 d | 50% | 40% | +1.5% |
 | VIGILANCIA | GFNORTEO.MX | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 37% | 31% | +0.4% |
 
 ## Alertas enviadas (últimas 15)
@@ -37,7 +39,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.6% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 72% | +0.3% |
 | Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 47% | -0.0% |
-| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.9% |
+| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 51% | +0.9% |
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.7% |
 | Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 91% | -0.2% |
 | Reversión tras choque político/comercial | bmv | 30 d | 9 | 54% | 34% | 36% | 90% | +0.8% |
@@ -77,12 +79,12 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-11-16 | yahoo |
+| AAPL | sí | 2026-11-17 | yahoo |
 | AC.MX | sí | 2026-11-17 | yahoo |
 | ADA | sí | 2026-11-18 | binance |
 | ALSEA.MX | sí | 2026-11-17 | yahoo |
 | AMXB.MX | sí | 2026-11-17 | yahoo |
-| AMZN | sí | 2026-11-16 | yahoo |
+| AMZN | sí | 2026-11-17 | yahoo |
 | ASURB.MX | sí | 2026-11-17 | yahoo |
 | AVAX | sí | 2026-11-18 | binance |
 | BBAJIOO.MX | sí | 2026-11-17 | yahoo |
@@ -90,53 +92,53 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | BIMBOA.MX | sí | 2026-11-17 | yahoo |
 | BTC | sí | 2026-11-18 | binance |
 | CEMEXCPO.MX | sí | 2026-11-17 | yahoo |
-| DIA | sí | 2026-11-16 | yahoo |
+| DIA | sí | 2026-11-17 | yahoo |
 | DOGE | sí | 2026-11-18 | binance |
 | DOT | sí | 2026-11-18 | binance |
 | ETH | sí | 2026-11-18 | binance |
 | FEMSAUBD.MX | sí | 2026-11-17 | yahoo |
 | GAPB.MX | sí | 2026-11-17 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-17 | yahoo |
-| GLD | sí | 2026-11-16 | yahoo |
+| GLD | sí | 2026-11-17 | yahoo |
 | GMEXICOB.MX | sí | 2026-11-17 | yahoo |
-| GOOGL | sí | 2026-11-16 | yahoo |
+| GOOGL | sí | 2026-11-17 | yahoo |
 | GRUMAB.MX | sí | 2026-11-17 | yahoo |
-| IWM | sí | 2026-11-16 | yahoo |
-| JPM | sí | 2026-11-16 | yahoo |
+| IWM | sí | 2026-11-17 | yahoo |
+| JPM | sí | 2026-11-17 | yahoo |
 | KIMBERA.MX | sí | 2026-11-17 | yahoo |
 | KOFUBL.MX | sí | 2026-11-17 | yahoo |
 | LINK | sí | 2026-11-18 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-17 | yahoo |
 | LTC | sí | 2026-11-18 | binance |
-| META | sí | 2026-11-16 | yahoo |
-| MSFT | sí | 2026-11-16 | yahoo |
+| META | sí | 2026-11-17 | yahoo |
+| MSFT | sí | 2026-11-17 | yahoo |
 | MXN=X | sí | 2026-11-18 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-17 | yahoo |
-| NVDA | sí | 2026-11-16 | yahoo |
+| NVDA | sí | 2026-11-17 | yahoo |
 | OMAB.MX | sí | 2026-11-17 | yahoo |
 | ORBIA.MX | sí | 2026-11-17 | yahoo |
 | PINFRA.MX | sí | 2026-11-17 | yahoo |
-| QQQ | sí | 2026-11-16 | yahoo |
-| SMH | sí | 2026-11-16 | yahoo |
+| QQQ | sí | 2026-11-17 | yahoo |
+| SMH | sí | 2026-11-17 | yahoo |
 | SOL | sí | 2026-11-18 | binance |
-| SPY | sí | 2026-11-16 | yahoo |
+| SPY | sí | 2026-11-17 | yahoo |
 | TRX | sí | 2026-11-18 | binance |
-| TSLA | sí | 2026-11-16 | yahoo |
+| TSLA | sí | 2026-11-17 | yahoo |
 | WALMEX.MX | sí | 2026-11-17 | yahoo |
-| WMT | sí | 2026-11-16 | yahoo |
-| XLE | sí | 2026-11-16 | yahoo |
-| XLF | sí | 2026-11-16 | yahoo |
-| XLI | sí | 2026-11-16 | yahoo |
-| XLK | sí | 2026-11-16 | yahoo |
-| XLP | sí | 2026-11-16 | yahoo |
-| XLU | sí | 2026-11-16 | yahoo |
-| XLV | sí | 2026-11-16 | yahoo |
-| XLY | sí | 2026-11-16 | yahoo |
-| XOM | sí | 2026-11-16 | yahoo |
+| WMT | sí | 2026-11-17 | yahoo |
+| XLE | sí | 2026-11-17 | yahoo |
+| XLF | sí | 2026-11-17 | yahoo |
+| XLI | sí | 2026-11-17 | yahoo |
+| XLK | sí | 2026-11-17 | yahoo |
+| XLP | sí | 2026-11-17 | yahoo |
+| XLU | sí | 2026-11-17 | yahoo |
+| XLV | sí | 2026-11-17 | yahoo |
+| XLY | sí | 2026-11-17 | yahoo |
+| XOM | sí | 2026-11-17 | yahoo |
 | XRP | sí | 2026-11-18 | binance |
 | ^MXX | sí | 2026-11-17 | yahoo |
 | ^VIX | sí | 2026-11-17 | yahoo |
-| contexto_v42 | sí | 2026-11-18T00:56:14Z | CAUTION |
+| contexto_v42 | sí | 2026-11-18T01:55:19Z | CAUTION |
 | fear_greed | sí | 2026-11-18 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-16 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-16 | wikimedia |
