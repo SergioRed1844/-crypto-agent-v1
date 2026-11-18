@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-18T21:30:11Z",
+ "generated_utc": "2026-11-18T22:18:10Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.105,
+   "aporte": -0.104,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.094,
+   "aporte": -0.093,
    "fuente": "noticia"
   },
   {
@@ -80,12 +80,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.067,
+   "id": "news-cryptohack-roundup-binance-hackers-launder-funds-c-2026-11-13",
+   "date": "2026-11-13",
+   "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.066,
    "fuente": "noticia"
   }
  ],
