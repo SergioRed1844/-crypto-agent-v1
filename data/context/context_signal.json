@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-18T14:35:50Z",
+ "generated_utc": "2026-11-18T15:34:55Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.331,
+ "bias": -0.328,
  "event_risk": 0.165,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.167,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.109,
+   "aporte": -0.108,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.096,
+   "aporte": -0.095,
    "fuente": "noticia"
   },
   {
