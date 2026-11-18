@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-18T18:32:24Z",
+ "generated_utc": "2026-11-18T19:31:32Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.327,
+ "bias": -0.326,
  "event_risk": 0.165,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -37,7 +37,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.21,
+   "aporte": 0.209,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.202,
+   "aporte": -0.201,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.166,
+   "aporte": -0.165,
    "fuente": "noticia"
   },
   {
