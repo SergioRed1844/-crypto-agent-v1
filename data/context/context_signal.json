@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-18T14:30:36Z",
+ "generated_utc": "2026-11-18T14:35:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -86,19 +86,19 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.071,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-companies-scramble-to-meet-payroll-pay-bills-after-2026-10-18",
    "date": "2026-10-18",
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
+   "stance": "pro",
+   "aporte": 0.07,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+   "category": "TRADE",
    "stance": "pro",
    "aporte": 0.07,
    "fuente": "noticia"
