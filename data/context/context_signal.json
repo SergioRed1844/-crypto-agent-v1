@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-18T22:18:10Z",
+ "generated_utc": "2026-11-18T22:29:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.2,
+   "aporte": -0.199,
    "fuente": "noticia"
   },
   {
@@ -80,12 +80,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-cryptohack-roundup-binance-hackers-launder-funds-c-2026-11-13",
-   "date": "2026-11-13",
-   "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.066,
+   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
+   "date": "2026-11-11",
+   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
+   "category": "TRADE",
+   "stance": "pro",
+   "aporte": 0.066,
    "fuente": "noticia"
   }
  ],
