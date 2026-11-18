@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-18T20:30:57Z",
+ "generated_utc": "2026-11-18T21:30:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.326,
- "event_risk": 0.165,
+ "bias": -0.325,
+ "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 63,
@@ -14,22 +14,7 @@
   "Precaución: sesgo -0.33",
   "Stablecoins -5.35% en 30 días (liquidez saliendo)"
  ],
- "upcoming": [
-  {
-   "id": "fomc-minutes-2026-11-18",
-   "utc": "2026-11-18T19:00:00Z",
-   "title_es": "Minutas FOMC (reunión 27-28 oct 2026)",
-   "category": "MONETARY_POLICY",
-   "status": "confirmed",
-   "magnitud": 0.166,
-   "riesgo": 0.166,
-   "ventana": [
-    "2026-11-18T13:00:00Z",
-    "2026-11-18T21:00:00Z"
-   ],
-   "en_ventana": true
-  }
- ],
+ "upcoming": [],
  "recent": [
   {
    "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
@@ -37,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.208,
+   "aporte": 0.207,
    "fuente": "noticia"
   },
   {
@@ -46,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -55,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.165,
+   "aporte": -0.164,
    "fuente": "noticia"
   },
   {
@@ -82,7 +67,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.084,
+   "aporte": -0.083,
    "fuente": "noticia"
   },
   {
