@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-18T22:29:07Z",
+ "generated_utc": "2026-11-18T23:28:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -9,10 +9,10 @@
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 63,
+ "confidence": 62,
  "reasons": [
-  "Precaución: sesgo -0.33",
-  "Stablecoins -5.35% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.32",
+  "Stablecoins -5.36% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.207,
+   "aporte": 0.206,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.104,
+   "aporte": -0.103,
    "fuente": "noticia"
   },
   {
@@ -76,16 +76,16 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.069,
+   "aporte": 0.068,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-extends-178-china-tariff-exclusions-to-january-2026-11-11",
-   "date": "2026-11-11",
-   "title_es": "EE.UU. extiende 178 exclusiones arancelarias a China hasta el 9 de enero",
-   "category": "TRADE",
-   "stance": "pro",
-   "aporte": 0.066,
+   "id": "news-cryptohack-roundup-binance-hackers-launder-funds-c-2026-11-13",
+   "date": "2026-11-13",
+   "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.065,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.35
+  "stablecoins_30d_pct": -5.36
  }
 }
