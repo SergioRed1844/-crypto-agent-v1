@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T00:27:28Z",
+ "generated_utc": "2026-11-19T01:26:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 62,
  "reasons": [
   "Precaución: sesgo -0.32",
-  "Stablecoins -5.36% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.41% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.205,
+   "aporte": 0.204,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.163,
+   "aporte": -0.162,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.103,
+   "aporte": -0.102,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.083,
+   "aporte": -0.082,
    "fuente": "noticia"
   },
   {
@@ -101,6 +101,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.36
+  "stablecoins_30d_pct": -5.41
  }
 }

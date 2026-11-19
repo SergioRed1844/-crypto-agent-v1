@@ -1,20 +1,20 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-19T00:27:28Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-19T01:26:34Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.32 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.32
-- Stablecoins -5.36% en 30 días (liquidez saliendo)
+- Stablecoins -5.41% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.205 |
+| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.204 |
 | Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.198 |
-| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.163 |
-| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.103 |
+| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.162 |
+| Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.102 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.093 |
-| Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.083 |
+| Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.082 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.068 |
 | Hackers de Binance blanquean fondos y renuncia el director financiero | 2026-11-13 | anti | -0.065 |
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-19T00:27:28Z",
+ "inicio": "2026-11-19T01:26:34Z",
  "onchain": {
   "scanned": [
-   976503,
-   976506
+   976507,
+   976509
   ],
-  "calls": 118,
+  "calls": 58,
   "stopped": null,
   "nuevas": 0
  },
