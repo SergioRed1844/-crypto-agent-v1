@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-19T21:09:09Z",
+ "generated_utc": "2026-11-19T22:08:16Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.324,
+ "bias": -0.323,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.188,
+   "aporte": 0.187,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.091,
+   "aporte": -0.09,
    "fuente": "noticia"
   },
   {

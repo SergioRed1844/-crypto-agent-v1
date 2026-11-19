@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-19T21:09:09Z",
+ "updated_utc": "2026-11-19T22:08:16Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9018,6 +9018,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-15T07:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "philly_fed",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "El índice Philly Fed se desploma a mínimos de seis meses en noviembre",
+   "source_url": "https://www.rttnews.com/3716461/philly-fed-index-plunges-to-six-month-low-in-november.aspx",
+   "source_title": "rttnews.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-philly-fed-index-plunges-to-six-month-low-in-novem-2026-11-19",
+   "date": "2026-11-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "17:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-19T17:15:00Z"
   }
  ]
 }
