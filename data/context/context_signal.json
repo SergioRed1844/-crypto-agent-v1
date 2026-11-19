@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T03:24:50Z",
+ "generated_utc": "2026-11-19T03:31:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.161,
    "fuente": "noticia"
   },
   {
