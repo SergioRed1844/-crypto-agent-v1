@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T12:17:01Z",
+ "generated_utc": "2026-11-19T13:16:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.195,
+   "aporte": 0.194,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.096,
+   "aporte": -0.095,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.09,
+   "aporte": -0.089,
    "fuente": "noticia"
   },
   {
