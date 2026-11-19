@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-19T15:57:31.520408+00:00",
+ "generado": "2026-11-19T16:01:01.979147+00:00",
  "resumen": {
   "todas": {
-   "n": 24,
+   "n": 23,
    "tickers": [
     "V",
     "GM",
@@ -17,7 +17,6 @@
     "SNOW",
     "DASH",
     "ABNB",
-    "KVUE",
     "ARM",
     "BIRK",
     "RDDT",
@@ -30,14 +29,14 @@
     "KLAR"
    ],
    "apertura_d1": {
-    "mediana": 0.1221,
-    "n": 24,
-    "pos_pct": 0.75
+    "mediana": 0.1375,
+    "n": 23,
+    "pos_pct": 0.78
    },
    "cierre_d1": {
-    "mediana": 0.0937,
-    "n": 24,
-    "pos_pct": 0.71
+    "mediana": 0.1,
+    "n": 23,
+    "pos_pct": 0.74
    },
    "desde_cierre_1s": {
     "mediana": -0.0114,
@@ -145,28 +144,28 @@
     "pos_pct": 0.36
    },
    "peor_caida_1a_vs_cierre_d1": {
-    "mediana": -0.3739,
-    "n": 24,
+    "mediana": -0.3965,
+    "n": 23,
     "pos_pct": 0.0
    },
    "peor_caida_1a_vs_oferta": {
-    "mediana": -0.1598,
-    "n": 24,
-    "pos_pct": 0.21
+    "mediana": -0.1883,
+    "n": 23,
+    "pos_pct": 0.22
    },
    "dias_debajo_oferta_1a_pct": {
-    "mediana": 0.421,
-    "n": 24,
-    "pos_pct": 0.79
+    "mediana": 0.298,
+    "n": 23,
+    "pos_pct": 0.78
    },
    "max_primer_mes_vs_cierre_d1": {
-    "mediana": 0.0602,
-    "n": 24,
-    "pos_pct": 0.67
+    "mediana": 0.0641,
+    "n": 23,
+    "pos_pct": 0.7
    },
    "peor_caida_desde_pico_1a": {
-    "mediana": -0.5222,
-    "n": 24,
+    "mediana": -0.5236,
+    "n": 23,
     "pos_pct": 0.0
    },
    "lockup_ventana_-10_+10": {
@@ -178,6 +177,91 @@
     "mediana": -0.0248,
     "n": 23,
     "pos_pct": 0.43
+   },
+   "u15_dia": {
+    "mediana": 11.0,
+    "n": 23,
+    "pos_pct": 0.78
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1099,
+    "n": 23,
+    "pos_pct": 0.09
+   },
+   "u15_a_fin": {
+    "mediana": -0.158,
+    "n": 23,
+    "pos_pct": 0.43
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.158,
+    "n": 23,
+    "pos_pct": 0.39
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.3451,
+    "n": 22,
+    "pos_pct": 0.27
+   },
+   "u20_dia": {
+    "mediana": 47.0,
+    "n": 23,
+    "pos_pct": 0.87
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.1477,
+    "n": 23,
+    "pos_pct": 0.04
+   },
+   "u20_a_fin": {
+    "mediana": -0.0363,
+    "n": 22,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.2515,
+    "n": 22,
+    "pos_pct": 0.36
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.2709,
+    "n": 21,
+    "pos_pct": 0.38
+   },
+   "u25_dia": {
+    "mediana": 65.5,
+    "n": 20,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.2485,
+    "n": 20,
+    "pos_pct": 0.15
+   },
+   "u25_a_fin": {
+    "mediana": -0.0685,
+    "n": 20,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.2645,
+    "n": 20,
+    "pos_pct": 0.35
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.2842,
+    "n": 19,
+    "pos_pct": 0.37
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 17,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 160.0,
+    "n": 9,
+    "pos_pct": 1.0
    },
    "entrada_dia1_a_2a": {
     "mediana": 0.0612,
@@ -208,6 +292,46 @@
     "mediana": 0.0653,
     "n": 15,
     "pos_pct": 0.53
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3622,
+    "n": 17,
+    "pos_pct": 0.12
+   },
+   "u30_a_fin": {
+    "mediana": -0.0767,
+    "n": 17,
+    "pos_pct": 0.47
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.4168,
+    "n": 17,
+    "pos_pct": 0.29
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.2545,
+    "n": 16,
+    "pos_pct": 0.38
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.4646,
+    "n": 9,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.0388,
+    "n": 9,
+    "pos_pct": 0.33
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.467,
+    "n": 9,
+    "pos_pct": 0.11
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.2346,
+    "n": 9,
+    "pos_pct": 0.33
    }
   },
   "record": {
@@ -371,6 +495,91 @@
     "n": 7,
     "pos_pct": 0.43
    },
+   "u15_dia": {
+    "mediana": 44.0,
+    "n": 7,
+    "pos_pct": 0.71
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.0947,
+    "n": 7,
+    "pos_pct": 0.14
+   },
+   "u15_a_fin": {
+    "mediana": 0.3477,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "d1_a_fin_15": {
+    "mediana": 0.2879,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "u15_exceso_fin": {
+    "mediana": 0.0488,
+    "n": 6,
+    "pos_pct": 0.67
+   },
+   "u20_dia": {
+    "mediana": 62.0,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.1448,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.3477,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "d1_a_fin_20": {
+    "mediana": 0.2879,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "u20_exceso_fin": {
+    "mediana": 0.0331,
+    "n": 6,
+    "pos_pct": 0.67
+   },
+   "u25_dia": {
+    "mediana": 63.0,
+    "n": 7,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.2184,
+    "n": 7,
+    "pos_pct": 0.14
+   },
+   "u25_a_fin": {
+    "mediana": 0.3341,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "d1_a_fin_25": {
+    "mediana": 0.2879,
+    "n": 7,
+    "pos_pct": 0.86
+   },
+   "u25_exceso_fin": {
+    "mediana": 0.0424,
+    "n": 6,
+    "pos_pct": 0.67
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 6,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 243.0,
+    "n": 1,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": 0.0796,
     "n": 7,
@@ -400,10 +609,50 @@
     "mediana": 0.1836,
     "n": 7,
     "pos_pct": 0.86
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3256,
+    "n": 6,
+    "pos_pct": 0.17
+   },
+   "u30_a_fin": {
+    "mediana": 0.5141,
+    "n": 6,
+    "pos_pct": 0.83
+   },
+   "d1_a_fin_30": {
+    "mediana": 0.2251,
+    "n": 6,
+    "pos_pct": 0.83
+   },
+   "u30_exceso_fin": {
+    "mediana": 0.0232,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.3513,
+    "n": 1,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": 1.9215,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_35": {
+    "mediana": 0.8953,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "u35_exceso_fin": {
+    "mediana": 1.2018,
+    "n": 1,
+    "pos_pct": 1.0
    }
   },
   "normal": {
-   "n": 17,
+   "n": 16,
    "tickers": [
     "P911.DE",
     "UBER",
@@ -411,7 +660,6 @@
     "SNOW",
     "DASH",
     "ABNB",
-    "KVUE",
     "ARM",
     "BIRK",
     "RDDT",
@@ -424,14 +672,14 @@
     "KLAR"
    ],
    "apertura_d1": {
-    "mediana": 0.1375,
-    "n": 17,
-    "pos_pct": 0.71
+    "mediana": 0.1752,
+    "n": 16,
+    "pos_pct": 0.75
    },
    "cierre_d1": {
-    "mediana": 0.0874,
-    "n": 17,
-    "pos_pct": 0.65
+    "mediana": 0.1672,
+    "n": 16,
+    "pos_pct": 0.69
    },
    "desde_cierre_1s": {
     "mediana": -0.0323,
@@ -539,28 +787,28 @@
     "pos_pct": 0.12
    },
    "peor_caida_1a_vs_cierre_d1": {
-    "mediana": -0.3965,
-    "n": 17,
+    "mediana": -0.4002,
+    "n": 16,
     "pos_pct": 0.0
    },
    "peor_caida_1a_vs_oferta": {
-    "mediana": -0.1223,
-    "n": 17,
-    "pos_pct": 0.29
+    "mediana": -0.1618,
+    "n": 16,
+    "pos_pct": 0.31
    },
    "dias_debajo_oferta_1a_pct": {
-    "mediana": 0.298,
-    "n": 17,
-    "pos_pct": 0.71
+    "mediana": 0.169,
+    "n": 16,
+    "pos_pct": 0.69
    },
    "max_primer_mes_vs_cierre_d1": {
-    "mediana": 0.0563,
-    "n": 17,
-    "pos_pct": 0.65
+    "mediana": 0.0602,
+    "n": 16,
+    "pos_pct": 0.69
    },
    "peor_caida_desde_pico_1a": {
-    "mediana": -0.5388,
-    "n": 17,
+    "mediana": -0.5479,
+    "n": 16,
     "pos_pct": 0.0
    },
    "lockup_ventana_-10_+10": {
@@ -572,6 +820,91 @@
     "mediana": -0.0645,
     "n": 16,
     "pos_pct": 0.44
+   },
+   "u15_dia": {
+    "mediana": 8.0,
+    "n": 16,
+    "pos_pct": 0.81
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1225,
+    "n": 16,
+    "pos_pct": 0.06
+   },
+   "u15_a_fin": {
+    "mediana": -0.2712,
+    "n": 16,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.3939,
+    "n": 16,
+    "pos_pct": 0.19
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.4595,
+    "n": 16,
+    "pos_pct": 0.12
+   },
+   "u20_dia": {
+    "mediana": 43.0,
+    "n": 16,
+    "pos_pct": 0.88
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.2081,
+    "n": 16,
+    "pos_pct": 0.06
+   },
+   "u20_a_fin": {
+    "mediana": -0.1954,
+    "n": 15,
+    "pos_pct": 0.33
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.4168,
+    "n": 15,
+    "pos_pct": 0.13
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.3526,
+    "n": 15,
+    "pos_pct": 0.27
+   },
+   "u25_dia": {
+    "mediana": 67.0,
+    "n": 13,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.3522,
+    "n": 13,
+    "pos_pct": 0.15
+   },
+   "u25_a_fin": {
+    "mediana": -0.1941,
+    "n": 13,
+    "pos_pct": 0.31
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.4306,
+    "n": 13,
+    "pos_pct": 0.08
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.5138,
+    "n": 13,
+    "pos_pct": 0.23
+   },
+   "u30_dia": {
+    "mediana": 115.0,
+    "n": 11,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 142.0,
+    "n": 8,
+    "pos_pct": 1.0
    },
    "entrada_dia1_a_2a": {
     "mediana": -0.1635,
@@ -600,6 +933,46 @@
    },
    "entrada_post_lockup_d135_a_3a": {
     "mediana": -0.2003,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3624,
+    "n": 11,
+    "pos_pct": 0.09
+   },
+   "u30_a_fin": {
+    "mediana": -0.1822,
+    "n": 11,
+    "pos_pct": 0.27
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.467,
+    "n": 11,
+    "pos_pct": 0.0
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.4899,
+    "n": 11,
+    "pos_pct": 0.27
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.4655,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.1037,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.477,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.3195,
     "n": 8,
     "pos_pct": 0.25
    }
@@ -771,6 +1144,91 @@
     "n": 13,
     "pos_pct": 0.38
    },
+   "u15_dia": {
+    "mediana": 63.0,
+    "n": 13,
+    "pos_pct": 1.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1185,
+    "n": 13,
+    "pos_pct": 0.15
+   },
+   "u15_a_fin": {
+    "mediana": -0.2501,
+    "n": 13,
+    "pos_pct": 0.38
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.3449,
+    "n": 13,
+    "pos_pct": 0.31
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.3084,
+    "n": 13,
+    "pos_pct": 0.23
+   },
+   "u20_dia": {
+    "mediana": 71.0,
+    "n": 13,
+    "pos_pct": 1.0
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.2215,
+    "n": 13,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.0854,
+    "n": 13,
+    "pos_pct": 0.54
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.3449,
+    "n": 13,
+    "pos_pct": 0.31
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.1576,
+    "n": 13,
+    "pos_pct": 0.38
+   },
+   "u25_dia": {
+    "mediana": 87.5,
+    "n": 12,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.3565,
+    "n": 12,
+    "pos_pct": 0.0
+   },
+   "u25_a_fin": {
+    "mediana": 0.1287,
+    "n": 12,
+    "pos_pct": 0.58
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.2543,
+    "n": 12,
+    "pos_pct": 0.33
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.0993,
+    "n": 12,
+    "pos_pct": 0.42
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 10,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 160.0,
+    "n": 7,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": -0.2728,
     "n": 9,
@@ -800,29 +1258,68 @@
     "mediana": 0.0653,
     "n": 9,
     "pos_pct": 0.56
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3964,
+    "n": 10,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": 0.0778,
+    "n": 10,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.419,
+    "n": 10,
+    "pos_pct": 0.3
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.0678,
+    "n": 10,
+    "pos_pct": 0.5
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.4663,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.0046,
+    "n": 7,
+    "pos_pct": 0.43
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.467,
+    "n": 7,
+    "pos_pct": 0.14
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.0954,
+    "n": 7,
+    "pos_pct": 0.43
    }
   },
   "esperado": {
-   "n": 8,
+   "n": 7,
    "tickers": [
     "9434.T",
     "2222.SR",
     "P911.DE",
-    "KVUE",
     "ARM",
     "BIRK",
     "RDDT",
     "LINE"
    ],
    "apertura_d1": {
-    "mediana": 0.028,
-    "n": 8,
-    "pos_pct": 0.62
+    "mediana": 0.0513,
+    "n": 7,
+    "pos_pct": 0.71
    },
    "cierre_d1": {
-    "mediana": 0.0178,
-    "n": 8,
-    "pos_pct": 0.5
+    "mediana": 0.0356,
+    "n": 7,
+    "pos_pct": 0.57
    },
    "desde_cierre_1s": {
     "mediana": 0.0172,
@@ -930,28 +1427,28 @@
     "pos_pct": 0.5
    },
    "peor_caida_1a_vs_cierre_d1": {
-    "mediana": -0.1526,
-    "n": 8,
+    "mediana": -0.2102,
+    "n": 7,
     "pos_pct": 0.0
    },
    "peor_caida_1a_vs_oferta": {
-    "mediana": -0.1268,
-    "n": 8,
-    "pos_pct": 0.12
+    "mediana": -0.1313,
+    "n": 7,
+    "pos_pct": 0.14
    },
    "dias_debajo_oferta_1a_pct": {
-    "mediana": 0.248,
-    "n": 8,
-    "pos_pct": 0.88
+    "mediana": 0.198,
+    "n": 7,
+    "pos_pct": 0.86
    },
    "max_primer_mes_vs_cierre_d1": {
-    "mediana": 0.088,
-    "n": 8,
-    "pos_pct": 0.75
+    "mediana": 0.0964,
+    "n": 7,
+    "pos_pct": 0.86
    },
    "peor_caida_desde_pico_1a": {
-    "mediana": -0.2891,
-    "n": 8,
+    "mediana": -0.3097,
+    "n": 7,
     "pos_pct": 0.0
    },
    "lockup_ventana_-10_+10": {
@@ -963,6 +1460,91 @@
     "mediana": 0.0149,
     "n": 7,
     "pos_pct": 0.57
+   },
+   "u15_dia": {
+    "mediana": 0.0,
+    "n": 7,
+    "pos_pct": 0.29
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": 0.0,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u15_a_fin": {
+    "mediana": 0.0691,
+    "n": 7,
+    "pos_pct": 0.57
+   },
+   "d1_a_fin_15": {
+    "mediana": 0.0691,
+    "n": 7,
+    "pos_pct": 0.57
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.2457,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "u20_dia": {
+    "mediana": 3.0,
+    "n": 7,
+    "pos_pct": 0.57
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.0501,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.2544,
+    "n": 7,
+    "pos_pct": 0.57
+   },
+   "d1_a_fin_20": {
+    "mediana": 0.0691,
+    "n": 7,
+    "pos_pct": 0.57
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.2457,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "u25_dia": {
+    "mediana": 63.5,
+    "n": 6,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.0141,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "u25_a_fin": {
+    "mediana": -0.0017,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.0445,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.5435,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 5,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 300.0,
+    "n": 2,
+    "pos_pct": 1.0
    },
    "entrada_dia1_a_2a": {
     "mediana": 0.0742,
@@ -993,6 +1575,46 @@
     "mediana": 0.1322,
     "n": 5,
     "pos_pct": 0.6
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.0046,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u30_a_fin": {
+    "mediana": -0.2204,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.158,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.5508,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.2316,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.3446,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.4804,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.4876,
+    "n": 2,
+    "pos_pct": 0.0
    }
   },
   "frio": {
@@ -1152,6 +1774,86 @@
     "n": 3,
     "pos_pct": 0.33
    },
+   "u15_dia": {
+    "mediana": 1.0,
+    "n": 3,
+    "pos_pct": 1.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1146,
+    "n": 3,
+    "pos_pct": 0.0
+   },
+   "u15_a_fin": {
+    "mediana": -0.362,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.4306,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.4989,
+    "n": 3,
+    "pos_pct": 0.0
+   },
+   "u20_dia": {
+    "mediana": 63.0,
+    "n": 3,
+    "pos_pct": 1.0
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.0366,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "u20_a_fin": {
+    "mediana": -0.2979,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.4572,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.4633,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u25_dia": {
+    "mediana": 43.0,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.2802,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u25_a_fin": {
+    "mediana": -0.2408,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.4572,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.4317,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u30_dia": {
+    "mediana": 94.0,
+    "n": 2,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": 0.1116,
     "n": 1,
@@ -1181,6 +1883,26 @@
     "mediana": -0.1555,
     "n": 1,
     "pos_pct": 0.0
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.4961,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": 0.1556,
+    "n": 2,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.4572,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.1429,
+    "n": 2,
+    "pos_pct": 0.5
    }
   },
   "record_caliente": {
@@ -1342,6 +2064,91 @@
     "n": 5,
     "pos_pct": 0.4
    },
+   "u15_dia": {
+    "mediana": 64.0,
+    "n": 5,
+    "pos_pct": 1.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.098,
+    "n": 5,
+    "pos_pct": 0.2
+   },
+   "u15_a_fin": {
+    "mediana": 0.4206,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "d1_a_fin_15": {
+    "mediana": 0.2879,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "u15_exceso_fin": {
+    "mediana": 0.053,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u20_dia": {
+    "mediana": 84.0,
+    "n": 5,
+    "pos_pct": 1.0
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.1448,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.5038,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "d1_a_fin_20": {
+    "mediana": 0.2879,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "u20_exceso_fin": {
+    "mediana": 0.0217,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u25_dia": {
+    "mediana": 130.0,
+    "n": 5,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.2492,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "u25_a_fin": {
+    "mediana": 0.7096,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "d1_a_fin_25": {
+    "mediana": 0.2879,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "u25_exceso_fin": {
+    "mediana": 0.029,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u30_dia": {
+    "mediana": 156.5,
+    "n": 4,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 243.0,
+    "n": 1,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": 0.0796,
     "n": 5,
@@ -1371,6 +2178,46 @@
     "mediana": 0.2943,
     "n": 5,
     "pos_pct": 0.8
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.386,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": 1.2026,
+    "n": 4,
+    "pos_pct": 0.75
+   },
+   "d1_a_fin_30": {
+    "mediana": 0.4989,
+    "n": 4,
+    "pos_pct": 0.75
+   },
+   "u30_exceso_fin": {
+    "mediana": 0.4898,
+    "n": 4,
+    "pos_pct": 0.75
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.3513,
+    "n": 1,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": 1.9215,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_35": {
+    "mediana": 0.8953,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "u35_exceso_fin": {
+    "mediana": 1.2018,
+    "n": 1,
+    "pos_pct": 1.0
    }
   },
   "record_esperado": {
@@ -1529,6 +2376,86 @@
     "n": 2,
     "pos_pct": 0.5
    },
+   "u15_dia": {
+    "mediana": 0.0,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": 0.0,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u15_a_fin": {
+    "mediana": 0.2084,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_15": {
+    "mediana": 0.2084,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u15_exceso_fin": {
+    "mediana": 0.0445,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "u20_dia": {
+    "mediana": 31.0,
+    "n": 2,
+    "pos_pct": 0.5
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.0738,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.3011,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_20": {
+    "mediana": 0.2084,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u20_exceso_fin": {
+    "mediana": 0.0445,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "u25_dia": {
+    "mediana": 62.5,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.0688,
+    "n": 2,
+    "pos_pct": 0.5
+   },
+   "u25_a_fin": {
+    "mediana": 0.2943,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_25": {
+    "mediana": 0.2084,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u25_exceso_fin": {
+    "mediana": 0.0558,
+    "n": 1,
+    "pos_pct": 1.0
+   },
+   "u30_dia": {
+    "mediana": 93.5,
+    "n": 2,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": 0.1325,
     "n": 2,
@@ -1558,6 +2485,659 @@
     "mediana": 0.1507,
     "n": 2,
     "pos_pct": 1.0
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.0505,
+    "n": 2,
+    "pos_pct": 0.5
+   },
+   "u30_a_fin": {
+    "mediana": 0.262,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "d1_a_fin_30": {
+    "mediana": 0.2084,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.057,
+    "n": 1,
+    "pos_pct": 0.0
+   }
+  },
+  "normal_caliente": {
+   "n": 8,
+   "tickers": [
+    "LYFT",
+    "SNOW",
+    "DASH",
+    "ABNB",
+    "CRCL",
+    "CHYM",
+    "FIG",
+    "KLAR"
+   ],
+   "apertura_d1": {
+    "mediana": 0.913,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "cierre_d1": {
+    "mediana": 0.987,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "desde_cierre_1s": {
+    "mediana": -0.0965,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "desde_oferta_1s": {
+    "mediana": 0.6805,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "exceso_1s": {
+    "mediana": -0.0868,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "desde_cierre_1m": {
+    "mediana": -0.1056,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "desde_oferta_1m": {
+    "mediana": 0.8228,
+    "n": 8,
+    "pos_pct": 0.75
+   },
+   "exceso_1m": {
+    "mediana": -0.1192,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "desde_cierre_3m": {
+    "mediana": -0.2042,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "desde_oferta_3m": {
+    "mediana": 0.4661,
+    "n": 8,
+    "pos_pct": 0.62
+   },
+   "exceso_3m": {
+    "mediana": -0.2386,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "desde_cierre_6m": {
+    "mediana": -0.2228,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "desde_oferta_6m": {
+    "mediana": 0.2647,
+    "n": 8,
+    "pos_pct": 0.62
+   },
+   "exceso_6m": {
+    "mediana": -0.3284,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "desde_cierre_1a": {
+    "mediana": -0.3274,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "desde_oferta_1a": {
+    "mediana": 0.1857,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "exceso_1a": {
+    "mediana": -0.4747,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "desde_cierre_2a": {
+    "mediana": -0.3062,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "desde_oferta_2a": {
+    "mediana": 0.1406,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "exceso_2a": {
+    "mediana": -0.4272,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "desde_cierre_3a": {
+    "mediana": -0.419,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "desde_oferta_3a": {
+    "mediana": 0.1607,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "exceso_3a": {
+    "mediana": -0.5693,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "peor_caida_1a_vs_cierre_d1": {
+    "mediana": -0.4804,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "peor_caida_1a_vs_oferta": {
+    "mediana": -0.1417,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "dias_debajo_oferta_1a_pct": {
+    "mediana": 0.272,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "max_primer_mes_vs_cierre_d1": {
+    "mediana": 0.0384,
+    "n": 8,
+    "pos_pct": 0.62
+   },
+   "peor_caida_desde_pico_1a": {
+    "mediana": -0.6436,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "lockup_ventana_-10_+10": {
+    "mediana": 0.0504,
+    "n": 8,
+    "pos_pct": 0.62
+   },
+   "lockup_-20_a_0": {
+    "mediana": -0.1802,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "u15_dia": {
+    "mediana": 38.0,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1419,
+    "n": 8,
+    "pos_pct": 0.12
+   },
+   "u15_a_fin": {
+    "mediana": -0.2712,
+    "n": 8,
+    "pos_pct": 0.12
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.419,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.4009,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u20_dia": {
+    "mediana": 67.0,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.2268,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": -0.1981,
+    "n": 8,
+    "pos_pct": 0.38
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.419,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.3117,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "u25_dia": {
+    "mediana": 74.0,
+    "n": 7,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.3732,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u25_a_fin": {
+    "mediana": -0.1659,
+    "n": 7,
+    "pos_pct": 0.43
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.467,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.2842,
+    "n": 7,
+    "pos_pct": 0.29
+   },
+   "u30_dia": {
+    "mediana": 108.5,
+    "n": 6,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 142.0,
+    "n": 6,
+    "pos_pct": 1.0
+   },
+   "entrada_dia1_a_2a": {
+    "mediana": -0.3062,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "entrada_dia1_a_3a": {
+    "mediana": -0.419,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "entrada_post_reporte_d63_a_2a": {
+    "mediana": -0.4914,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "entrada_post_reporte_d63_a_3a": {
+    "mediana": -0.3503,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "entrada_post_lockup_d135_a_2a": {
+    "mediana": -0.278,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "entrada_post_lockup_d135_a_3a": {
+    "mediana": -0.1689,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3977,
+    "n": 6,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": -0.1295,
+    "n": 6,
+    "pos_pct": 0.33
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.477,
+    "n": 6,
+    "pos_pct": 0.0
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.335,
+    "n": 6,
+    "pos_pct": 0.33
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.5101,
+    "n": 6,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.0217,
+    "n": 6,
+    "pos_pct": 0.33
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.477,
+    "n": 6,
+    "pos_pct": 0.0
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.165,
+    "n": 6,
+    "pos_pct": 0.33
+   }
+  },
+  "normal_esperado": {
+   "n": 5,
+   "tickers": [
+    "P911.DE",
+    "ARM",
+    "BIRK",
+    "RDDT",
+    "LINE"
+   ],
+   "apertura_d1": {
+    "mediana": 0.0513,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "cierre_d1": {
+    "mediana": 0.0356,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "desde_cierre_1s": {
+    "mediana": -0.0222,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_oferta_1s": {
+    "mediana": 0.1046,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "exceso_1s": {
+    "mediana": -0.0238,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_cierre_1m": {
+    "mediana": -0.0075,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_oferta_1m": {
+    "mediana": 0.1003,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "exceso_1m": {
+    "mediana": -0.0018,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_cierre_3m": {
+    "mediana": 0.136,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "desde_oferta_3m": {
+    "mediana": 0.1564,
+    "n": 5,
+    "pos_pct": 1.0
+   },
+   "exceso_3m": {
+    "mediana": -0.0045,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_cierre_6m": {
+    "mediana": 0.3119,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "desde_oferta_6m": {
+    "mediana": 0.4036,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "exceso_6m": {
+    "mediana": 0.123,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "desde_cierre_1a": {
+    "mediana": 0.2443,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "desde_oferta_1a": {
+    "mediana": 0.1273,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "exceso_1a": {
+    "mediana": -0.0758,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_cierre_2a": {
+    "mediana": 0.0612,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "desde_oferta_2a": {
+    "mediana": -0.0726,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "exceso_2a": {
+    "mediana": -0.3214,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "desde_cierre_3a": {
+    "mediana": -0.158,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "desde_oferta_3a": {
+    "mediana": -0.2641,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "exceso_3a": {
+    "mediana": -0.5358,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "peor_caida_1a_vs_cierre_d1": {
+    "mediana": -0.2234,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "peor_caida_1a_vs_oferta": {
+    "mediana": -0.0614,
+    "n": 5,
+    "pos_pct": 0.2
+   },
+   "dias_debajo_oferta_1a_pct": {
+    "mediana": 0.04,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "max_primer_mes_vs_cierre_d1": {
+    "mediana": 0.0964,
+    "n": 5,
+    "pos_pct": 0.8
+   },
+   "peor_caida_desde_pico_1a": {
+    "mediana": -0.4257,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "lockup_ventana_-10_+10": {
+    "mediana": -0.0059,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "lockup_-20_a_0": {
+    "mediana": 0.0149,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u15_dia": {
+    "mediana": 0.0,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": 0.0,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "u15_a_fin": {
+    "mediana": -0.158,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.158,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.5358,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u20_dia": {
+    "mediana": 3.0,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.0501,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": -0.158,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.158,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.5358,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "u25_dia": {
+    "mediana": 67.0,
+    "n": 4,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": 0.0252,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "u25_a_fin": {
+    "mediana": -0.3635,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.2874,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.5885,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 3,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 300.0,
+    "n": 2,
+    "pos_pct": 1.0
+   },
+   "entrada_dia1_a_2a": {
+    "mediana": 0.0612,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "entrada_dia1_a_3a": {
+    "mediana": -0.158,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "entrada_post_reporte_d63_a_2a": {
+    "mediana": -0.1027,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "entrada_post_reporte_d63_a_3a": {
+    "mediana": -0.288,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "entrada_post_lockup_d135_a_2a": {
+    "mediana": -0.0486,
+    "n": 5,
+    "pos_pct": 0.4
+   },
+   "entrada_post_lockup_d135_a_3a": {
+    "mediana": -0.2451,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.0046,
+    "n": 3,
+    "pos_pct": 0.33
+   },
+   "u30_a_fin": {
+    "mediana": -0.4195,
+    "n": 3,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.4168,
+    "n": 3,
+    "pos_pct": 0.0
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.6116,
+    "n": 3,
+    "pos_pct": 0.0
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.2316,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.3446,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.4804,
+    "n": 2,
+    "pos_pct": 0.0
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.4876,
+    "n": 2,
+    "pos_pct": 0.0
    }
   },
   "salto_d1_>25%": {
@@ -1724,6 +3304,91 @@
     "n": 10,
     "pos_pct": 0.4
    },
+   "u15_dia": {
+    "mediana": 85.0,
+    "n": 10,
+    "pos_pct": 1.0
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.1614,
+    "n": 10,
+    "pos_pct": 0.1
+   },
+   "u15_a_fin": {
+    "mediana": -0.1305,
+    "n": 10,
+    "pos_pct": 0.4
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.2413,
+    "n": 10,
+    "pos_pct": 0.3
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.2252,
+    "n": 10,
+    "pos_pct": 0.3
+   },
+   "u20_dia": {
+    "mediana": 98.5,
+    "n": 10,
+    "pos_pct": 1.0
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.2172,
+    "n": 10,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": 0.0965,
+    "n": 10,
+    "pos_pct": 0.6
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.2413,
+    "n": 10,
+    "pos_pct": 0.3
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.0219,
+    "n": 10,
+    "pos_pct": 0.5
+   },
+   "u25_dia": {
+    "mediana": 156.0,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.3565,
+    "n": 8,
+    "pos_pct": 0.0
+   },
+   "u25_a_fin": {
+    "mediana": 0.2023,
+    "n": 8,
+    "pos_pct": 0.62
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.2543,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.0189,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "u30_dia": {
+    "mediana": 178.5,
+    "n": 6,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 243.0,
+    "n": 5,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": -0.2728,
     "n": 7,
@@ -1753,6 +3418,46 @@
     "mediana": -0.1689,
     "n": 6,
     "pos_pct": 0.33
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.4561,
+    "n": 6,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": 0.0778,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.419,
+    "n": 6,
+    "pos_pct": 0.17
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.0442,
+    "n": 6,
+    "pos_pct": 0.5
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.4646,
+    "n": 5,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": 0.3317,
+    "n": 5,
+    "pos_pct": 0.6
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.3709,
+    "n": 5,
+    "pos_pct": 0.2
+   },
+   "u35_exceso_fin": {
+    "mediana": 0.1659,
+    "n": 5,
+    "pos_pct": 0.6
    }
   },
   "salto_d1_0-25%": {
@@ -1918,6 +3623,91 @@
     "n": 9,
     "pos_pct": 0.67
    },
+   "u15_dia": {
+    "mediana": 1.0,
+    "n": 9,
+    "pos_pct": 0.67
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.0655,
+    "n": 9,
+    "pos_pct": 0.11
+   },
+   "u15_a_fin": {
+    "mediana": 0.0537,
+    "n": 9,
+    "pos_pct": 0.56
+   },
+   "d1_a_fin_15": {
+    "mediana": 0.0691,
+    "n": 9,
+    "pos_pct": 0.56
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.461,
+    "n": 8,
+    "pos_pct": 0.25
+   },
+   "u20_dia": {
+    "mediana": 24.0,
+    "n": 9,
+    "pos_pct": 0.89
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.1165,
+    "n": 9,
+    "pos_pct": 0.11
+   },
+   "u20_a_fin": {
+    "mediana": -0.053,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.1739,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.6028,
+    "n": 7,
+    "pos_pct": 0.29
+   },
+   "u25_dia": {
+    "mediana": 63.0,
+    "n": 8,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.1745,
+    "n": 8,
+    "pos_pct": 0.12
+   },
+   "u25_a_fin": {
+    "mediana": 0.0313,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.1739,
+    "n": 8,
+    "pos_pct": 0.5
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.5168,
+    "n": 7,
+    "pos_pct": 0.29
+   },
+   "u30_dia": {
+    "mediana": 102.0,
+    "n": 7,
+    "pos_pct": 1.0
+   },
+   "u35_dia": {
+    "mediana": 124.0,
+    "n": 4,
+    "pos_pct": 1.0
+   },
    "entrada_dia1_a_2a": {
     "mediana": -0.1322,
     "n": 7,
@@ -1947,25 +3737,64 @@
     "mediana": 0.2132,
     "n": 6,
     "pos_pct": 0.83
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.3519,
+    "n": 7,
+    "pos_pct": 0.0
+   },
+   "u30_a_fin": {
+    "mediana": -0.1822,
+    "n": 7,
+    "pos_pct": 0.43
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.4168,
+    "n": 7,
+    "pos_pct": 0.43
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.5275,
+    "n": 6,
+    "pos_pct": 0.33
+   },
+   "u35_vs_cierre_d1": {
+    "mediana": -0.3628,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u35_a_fin": {
+    "mediana": -0.2325,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "d1_a_fin_35": {
+    "mediana": -0.5155,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u35_exceso_fin": {
+    "mediana": -0.4387,
+    "n": 4,
+    "pos_pct": 0.0
    }
   },
   "salto_d1_<0": {
-   "n": 5,
+   "n": 4,
    "tickers": [
     "9434.T",
     "UBER",
-    "KVUE",
     "BIRK",
     "VG"
    ],
    "apertura_d1": {
-    "mediana": -0.0667,
-    "n": 5,
+    "mediana": -0.0533,
+    "n": 4,
     "pos_pct": 0.0
    },
    "cierre_d1": {
-    "mediana": -0.1223,
-    "n": 5,
+    "mediana": -0.1011,
+    "n": 4,
     "pos_pct": 0.0
    },
    "desde_cierre_1s": {
@@ -2074,28 +3903,28 @@
     "pos_pct": 0.33
    },
    "peor_caida_1a_vs_cierre_d1": {
-    "mediana": -0.095,
-    "n": 5,
+    "mediana": -0.3692,
+    "n": 4,
     "pos_pct": 0.0
    },
    "peor_caida_1a_vs_oferta": {
-    "mediana": -0.2091,
-    "n": 5,
+    "mediana": -0.4399,
+    "n": 4,
     "pos_pct": 0.0
    },
    "dias_debajo_oferta_1a_pct": {
-    "mediana": 0.988,
-    "n": 5,
+    "mediana": 0.9185,
+    "n": 4,
     "pos_pct": 1.0
    },
    "max_primer_mes_vs_cierre_d1": {
-    "mediana": 0.0502,
-    "n": 5,
-    "pos_pct": 0.6
+    "mediana": 0.0664,
+    "n": 4,
+    "pos_pct": 0.75
    },
    "peor_caida_desde_pico_1a": {
-    "mediana": -0.3097,
-    "n": 5,
+    "mediana": -0.4951,
+    "n": 4,
     "pos_pct": 0.0
    },
    "lockup_ventana_-10_+10": {
@@ -2107,6 +3936,86 @@
     "mediana": -0.0645,
     "n": 4,
     "pos_pct": 0.0
+   },
+   "u15_dia": {
+    "mediana": 0.5,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "u15_vs_cierre_d1": {
+    "mediana": -0.0537,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u15_a_fin": {
+    "mediana": -0.26,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_15": {
+    "mediana": -0.2943,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u15_exceso_fin": {
+    "mediana": -0.5173,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u20_dia": {
+    "mediana": 6.5,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "u20_vs_cierre_d1": {
+    "mediana": -0.0183,
+    "n": 4,
+    "pos_pct": 0.0
+   },
+   "u20_a_fin": {
+    "mediana": -0.1724,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_20": {
+    "mediana": -0.2943,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u20_exceso_fin": {
+    "mediana": -0.4378,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u25_dia": {
+    "mediana": 65.0,
+    "n": 4,
+    "pos_pct": 1.0
+   },
+   "u25_vs_cierre_d1": {
+    "mediana": -0.0954,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "u25_a_fin": {
+    "mediana": -0.2259,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "d1_a_fin_25": {
+    "mediana": -0.2943,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u25_exceso_fin": {
+    "mediana": -0.4317,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u30_dia": {
+    "mediana": 124.0,
+    "n": 4,
+    "pos_pct": 1.0
    },
    "entrada_dia1_a_2a": {
     "mediana": 0.1116,
@@ -2137,6 +4046,26 @@
     "mediana": -0.1555,
     "n": 3,
     "pos_pct": 0.33
+   },
+   "u30_vs_cierre_d1": {
+    "mediana": -0.1359,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "u30_a_fin": {
+    "mediana": 0.0376,
+    "n": 4,
+    "pos_pct": 0.5
+   },
+   "d1_a_fin_30": {
+    "mediana": -0.2943,
+    "n": 4,
+    "pos_pct": 0.25
+   },
+   "u30_exceso_fin": {
+    "mediana": -0.2036,
+    "n": 4,
+    "pos_pct": 0.25
    }
   }
  },
@@ -2144,10 +4073,10 @@
   "SPCX": {
    "shortName": "Space Exploration Technologies ",
    "currency": "USD",
-   "marketCap": 1897682042880,
-   "trailingPE": 607.5217,
-   "forwardPE": 50.95302,
-   "priceToSalesTrailing12Months": 59.229385,
+   "marketCap": 1900398247936,
+   "trailingPE": 608.39124,
+   "forwardPE": 51.025948,
+   "priceToSalesTrailing12Months": 59.30775,
    "revenueGrowth": 1.614,
    "earningsGrowth": null,
    "grossMargins": 0.56755,
@@ -2162,13 +4091,13 @@
    "numberOfAnalystOpinions": 37,
    "fiftyTwoWeekHigh": 225.64,
    "fiftyTwoWeekLow": 104.83,
-   "regularMarketPrice": 139.73,
+   "regularMarketPrice": 139.93,
    "regularMarketOpen": 144.91,
    "regularMarketDayHigh": 147.29,
    "regularMarketDayLow": 138.89,
    "regularMarketPreviousClose": 143.5,
-   "regularMarketChangePercent": -2.6277409,
-   "regularMarketVolume": 45104653,
+   "regularMarketChangePercent": -2.48781,
+   "regularMarketVolume": 46239111,
    "earningsTimestamp": 1792526400,
    "isEarningsDateEstimate": false
   },
@@ -2206,10 +4135,10 @@
   "TSLA": {
    "shortName": "Tesla, Inc.",
    "currency": "USD",
-   "marketCap": 1505130840064,
-   "trailingPE": 418.43945,
-   "forwardPE": 176.35068,
-   "priceToSalesTrailing12Months": 14.532498,
+   "marketCap": 1506573942784,
+   "trailingPE": 418.84064,
+   "forwardPE": 176.51976,
+   "priceToSalesTrailing12Months": 14.5464325,
    "revenueGrowth": -0.002,
    "earningsGrowth": -0.436,
    "grossMargins": 0.19285999,
@@ -2224,13 +4153,13 @@
    "numberOfAnalystOpinions": 40,
    "fiftyTwoWeekHigh": 498.83,
    "fiftyTwoWeekLow": 297.38,
-   "regularMarketPrice": 380.7799,
+   "regularMarketPrice": 381.145,
    "regularMarketOpen": 389.905,
    "regularMarketDayHigh": 393.598,
    "regularMarketDayLow": 378.15,
    "regularMarketPreviousClose": 383.72,
-   "regularMarketChangePercent": -0.7662082,
-   "regularMarketVolume": 8558793,
+   "regularMarketChangePercent": -0.6710654,
+   "regularMarketVolume": 8766046,
    "earningsTimestamp": 1792612800,
    "isEarningsDateEstimate": true
   },
@@ -2239,8 +4168,8 @@
    "fecha_max": "2026-06-16",
    "min": 108.27,
    "fecha_min": "2026-08-05",
-   "ultimo": 139.75,
-   "vs_max": -0.3389,
+   "ultimo": 139.93,
+   "vs_max": -0.338,
    "vol_anual": 0.799,
    "cierres_mensuales": {
     "2026-06-30": 170.86,
@@ -2248,7 +4177,7 @@
     "2026-08-31": 143.69,
     "2026-09-30": 150.86,
     "2026-10-31": 134.72,
-    "2026-11-30": 139.75
+    "2026-11-30": 139.93
    },
    "ultimos_15": {
     "2026-10-30": 134.72,
@@ -2265,13 +4194,13 @@
     "2026-11-16": 137.36,
     "2026-11-17": 141.7,
     "2026-11-18": 143.5,
-    "2026-11-19": 139.75
+    "2026-11-19": 139.93
    }
   },
   "TSLA_SPCX": {
    "corr_diaria": 0.322,
    "beta_tsla_a_spcx": 0.21,
-   "razon_hoy": 2.7248,
+   "razon_hoy": 2.7238,
    "razon_rango": [
     1.9143,
     3.2449
@@ -2291,7 +4220,7 @@
     "2026-11-16": 2.7646,
     "2026-11-17": 2.6825,
     "2026-11-18": 2.674,
-    "2026-11-19": 2.7248
+    "2026-11-19": 2.7238
    },
    "ret_ultimos_15": {
     "2026-10-30": [
@@ -2351,16 +4280,16 @@
      0.0126
     ],
     "2026-11-19": [
-     -0.0077,
-     -0.0265
+     -0.0067,
+     -0.0252
     ]
    }
   },
   "TSLA_serie": {
-   "ultimo": 380.78,
+   "ultimo": 381.14,
    "max_2026": 451.67,
    "min_2026": 298.32,
-   "ytd": -0.1308,
+   "ytd": -0.1299,
    "vol_anual": 0.467
   },
   "solarcity_2016": {
@@ -2416,9 +4345,9 @@
    "apertura_d1": 0.3523,
    "cierre_d1": 0.2841,
    "dias": 4699,
-   "hoy_vs_oferta": 35.9423,
-   "hoy_vs_cierre_d1": 31.8502,
-   "ultimo": 406.365,
+   "hoy_vs_oferta": 35.8728,
+   "hoy_vs_cierre_d1": 31.7884,
+   "ultimo": 405.6006,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.1135,
    "desde_oferta_1s": 0.4298,
@@ -2450,6 +4379,25 @@
    "peor_caida_desde_pico_1a": -0.5207,
    "lockup_ventana_-10_+10": -0.2385,
    "lockup_-20_a_0": -0.0846,
+   "condicion_hoy": 12,
+   "temp_pts": 2,
+   "u15_dia": 140,
+   "u15_vs_cierre_d1": -0.0947,
+   "u15_a_fin": 0.4206,
+   "d1_a_fin_15": 0.2879,
+   "u15_exceso_fin": 0.053,
+   "u20_dia": 152,
+   "u20_vs_cierre_d1": -0.1448,
+   "u20_a_fin": 0.5038,
+   "d1_a_fin_20": 0.2879,
+   "u20_exceso_fin": 0.0217,
+   "u25_dia": 211,
+   "u25_vs_cierre_d1": -0.2492,
+   "u25_a_fin": 0.7096,
+   "d1_a_fin_25": 0.2879,
+   "u25_exceso_fin": 0.029,
+   "u30_dia": null,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.5906,
    "entrada_dia1_a_3a": 0.2879,
    "entrada_post_reporte_d63_a_2a": 0.0717,
@@ -2473,9 +4421,9 @@
    "apertura_d1": 0.0606,
    "cierre_d1": 0.0361,
    "dias": 4025,
-   "hoy_vs_oferta": 1.4768,
-   "hoy_vs_cierre_d1": 2.227,
-   "ultimo": 81.735,
+   "hoy_vs_oferta": 1.4752,
+   "hoy_vs_cierre_d1": 2.2249,
+   "ultimo": 81.68,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.0114,
    "desde_oferta_1s": 0.0242,
@@ -2507,6 +4455,29 @@
    "peor_caida_desde_pico_1a": -0.4938,
    "lockup_ventana_-10_+10": -0.0837,
    "lockup_-20_a_0": 0.0377,
+   "condicion_hoy": 12,
+   "temp_pts": 2,
+   "u15_dia": 64,
+   "u15_vs_cierre_d1": 0.0462,
+   "u15_a_fin": 0.0537,
+   "d1_a_fin_15": 0.1024,
+   "u15_exceso_fin": -0.265,
+   "u20_dia": 84,
+   "u20_vs_cierre_d1": -0.1009,
+   "u20_a_fin": 0.2261,
+   "d1_a_fin_20": 0.1024,
+   "u20_exceso_fin": -0.1576,
+   "u25_dia": 130,
+   "u25_vs_cierre_d1": -0.1027,
+   "u25_a_fin": 0.2285,
+   "d1_a_fin_25": 0.1024,
+   "u25_exceso_fin": -0.1317,
+   "u30_dia": 189,
+   "u30_vs_cierre_d1": -0.3519,
+   "u30_a_fin": 0.7008,
+   "d1_a_fin_30": 0.1024,
+   "u30_exceso_fin": 0.0232,
+   "u35_dia": null,
    "entrada_dia1_a_2a": -0.2805,
    "entrada_dia1_a_3a": 0.1024,
    "entrada_post_reporte_d63_a_2a": -0.3262,
@@ -2530,9 +4501,9 @@
    "apertura_d1": 0.1066,
    "cierre_d1": 0.0061,
    "dias": 3648,
-   "hoy_vs_oferta": 15.2195,
-   "hoy_vs_cierre_d1": 15.2763,
-   "ultimo": 616.34,
+   "hoy_vs_oferta": 15.2639,
+   "hoy_vs_cierre_d1": 15.3209,
+   "ultimo": 618.03,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.1653,
    "desde_oferta_1s": -0.1603,
@@ -2564,12 +4535,35 @@
    "peor_caida_desde_pico_1a": -0.5362,
    "lockup_ventana_-10_+10": 0.2942,
    "lockup_-20_a_0": 0.1455,
+   "condicion_hoy": 12,
+   "temp_pts": 2,
+   "u15_dia": 1,
+   "u15_vs_cierre_d1": -0.1099,
+   "u15_a_fin": 1.3667,
+   "d1_a_fin_15": 1.1067,
+   "u15_exceso_fin": 0.3792,
+   "u20_dia": 18,
+   "u20_vs_cierre_d1": -0.26,
+   "u20_a_fin": 1.8469,
+   "d1_a_fin_20": 1.1067,
+   "u20_exceso_fin": 0.6779,
+   "u25_dia": 63,
+   "u25_vs_cierre_d1": -0.5017,
+   "u25_a_fin": 3.2278,
+   "d1_a_fin_25": 1.1067,
+   "u25_exceso_fin": 1.668,
+   "u30_dia": 124,
+   "u30_vs_cierre_d1": -0.4201,
+   "u30_a_fin": 2.6328,
+   "d1_a_fin_30": 1.1067,
+   "u30_exceso_fin": 1.1998,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.583,
    "entrada_dia1_a_3a": 1.1067,
    "entrada_post_reporte_d63_a_2a": 2.1769,
    "entrada_post_reporte_d63_a_3a": 3.2278,
    "entrada_post_lockup_d135_a_2a": 1.2382,
-   "entrada_post_lockup_d135_a_3a": 1.9785
+   "entrada_post_lockup_d135_a_3a": 1.9786
   },
   {
    "ticker": "BABA",
@@ -2587,9 +4581,9 @@
    "apertura_d1": 0.3632,
    "cierre_d1": 0.3807,
    "dias": 3061,
-   "hoy_vs_oferta": 0.2777,
-   "hoy_vs_cierre_d1": -0.0166,
-   "ultimo": 86.885,
+   "hoy_vs_oferta": 0.2801,
+   "hoy_vs_cierre_d1": -0.0148,
+   "ultimo": 87.05,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.0365,
    "desde_oferta_1s": 0.3303,
@@ -2621,6 +4615,33 @@
    "peor_caida_desde_pico_1a": -0.4888,
    "lockup_ventana_-10_+10": -0.0366,
    "lockup_-20_a_0": -0.0248,
+   "condicion_hoy": 16,
+   "temp_pts": 5,
+   "u15_dia": 107,
+   "u15_vs_cierre_d1": -0.098,
+   "u15_a_fin": 1.1012,
+   "d1_a_fin_15": 0.8953,
+   "u15_exceso_fin": 0.6831,
+   "u20_dia": 126,
+   "u20_vs_cierre_d1": -0.1027,
+   "u20_a_fin": 1.1122,
+   "d1_a_fin_20": 0.8953,
+   "u20_exceso_fin": 0.685,
+   "u25_dia": 225,
+   "u25_vs_cierre_d1": -0.2184,
+   "u25_a_fin": 1.425,
+   "d1_a_fin_25": 0.8953,
+   "u25_exceso_fin": 0.934,
+   "u30_dia": 233,
+   "u30_vs_cierre_d1": -0.2992,
+   "u30_a_fin": 1.7044,
+   "d1_a_fin_30": 0.8953,
+   "u30_exceso_fin": 0.9563,
+   "u35_dia": 243,
+   "u35_vs_cierre_d1": -0.3513,
+   "u35_a_fin": 1.9215,
+   "d1_a_fin_35": 0.8953,
+   "u35_exceso_fin": 1.2018,
    "entrada_dia1_a_2a": 0.0796,
    "entrada_dia1_a_3a": 0.8953,
    "entrada_post_reporte_d63_a_2a": -0.0722,
@@ -2678,6 +4699,29 @@
    "peor_caida_desde_pico_1a": -0.158,
    "lockup_ventana_-10_+10": -0.0137,
    "lockup_-20_a_0": -0.0099,
+   "condicion_hoy": 20,
+   "temp_pts": 10,
+   "u15_dia": 0,
+   "u15_vs_cierre_d1": 0.0,
+   "u15_a_fin": 0.3477,
+   "d1_a_fin_15": 0.3477,
+   "u15_exceso_fin": 0.0445,
+   "u20_dia": 0,
+   "u20_vs_cierre_d1": 0.0,
+   "u20_a_fin": 0.3477,
+   "d1_a_fin_20": 0.3477,
+   "u20_exceso_fin": 0.0445,
+   "u25_dia": 63,
+   "u25_vs_cierre_d1": 0.0101,
+   "u25_a_fin": 0.3341,
+   "d1_a_fin_25": 0.3477,
+   "u25_exceso_fin": 0.0558,
+   "u30_dia": 124,
+   "u30_vs_cierre_d1": 0.0936,
+   "u30_a_fin": 0.1966,
+   "d1_a_fin_30": 0.3477,
+   "u30_exceso_fin": -0.057,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.1908,
    "entrada_dia1_a_3a": 0.3477,
    "entrada_post_reporte_d63_a_2a": 0.1789,
@@ -2735,6 +4779,29 @@
    "peor_caida_desde_pico_1a": -0.2684,
    "lockup_ventana_-10_+10": 0.0248,
    "lockup_-20_a_0": 0.0688,
+   "condicion_hoy": 27,
+   "temp_pts": 10,
+   "u15_dia": 0,
+   "u15_vs_cierre_d1": 0.0,
+   "u15_a_fin": 0.0691,
+   "d1_a_fin_15": 0.0691,
+   "u15_exceso_fin": NaN,
+   "u20_dia": 62,
+   "u20_vs_cierre_d1": -0.1477,
+   "u20_a_fin": 0.2544,
+   "d1_a_fin_20": 0.0691,
+   "u20_exceso_fin": NaN,
+   "u25_dia": 62,
+   "u25_vs_cierre_d1": -0.1477,
+   "u25_a_fin": 0.2544,
+   "d1_a_fin_25": 0.0691,
+   "u25_exceso_fin": NaN,
+   "u30_dia": 63,
+   "u30_vs_cierre_d1": -0.1946,
+   "u30_a_fin": 0.3274,
+   "d1_a_fin_30": 0.0691,
+   "u30_exceso_fin": NaN,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.0742,
    "entrada_dia1_a_3a": 0.0691,
    "entrada_post_reporte_d63_a_2a": 0.3338,
@@ -2758,9 +4825,9 @@
    "apertura_d1": 0.3686,
    "cierre_d1": 0.2914,
    "dias": 1262,
-   "hoy_vs_oferta": -0.8534,
-   "hoy_vs_cierre_d1": -0.8864,
-   "ultimo": 11.4386,
+   "hoy_vs_oferta": -0.8537,
+   "hoy_vs_cierre_d1": -0.8867,
+   "ultimo": 11.415,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.4501,
    "desde_oferta_1s": 0.8727,
@@ -2792,6 +4859,29 @@
    "peor_caida_desde_pico_1a": -0.8802,
    "lockup_ventana_-10_+10": -0.1743,
    "lockup_-20_a_0": -0.4129,
+   "condicion_hoy": 32,
+   "temp_pts": 2,
+   "u15_dia": 44,
+   "u15_vs_cierre_d1": -0.2027,
+   "u15_a_fin": -0.8502,
+   "d1_a_fin_15": -0.8806,
+   "u15_exceso_fin": -0.8881,
+   "u20_dia": 46,
+   "u20_vs_cierre_d1": -0.2737,
+   "u20_a_fin": -0.8356,
+   "d1_a_fin_20": -0.8806,
+   "u20_exceso_fin": -0.8793,
+   "u25_dia": 63,
+   "u25_vs_cierre_d1": -0.3575,
+   "u25_a_fin": -0.8141,
+   "d1_a_fin_25": -0.8806,
+   "u25_exceso_fin": -0.8657,
+   "u30_dia": 124,
+   "u30_vs_cierre_d1": -0.7738,
+   "u30_a_fin": -0.4721,
+   "d1_a_fin_30": -0.8806,
+   "u30_exceso_fin": -0.6602,
+   "u35_dia": null,
    "entrada_dia1_a_2a": -0.8393,
    "entrada_dia1_a_3a": -0.8806,
    "entrada_post_reporte_d63_a_2a": -0.7498,
@@ -2815,9 +4905,9 @@
    "apertura_d1": 0.0048,
    "cierre_d1": 0.0,
    "dias": 1054,
-   "hoy_vs_oferta": -0.4766,
-   "hoy_vs_cierre_d1": -0.4134,
-   "ultimo": 43.18,
+   "hoy_vs_oferta": -0.4764,
+   "hoy_vs_cierre_d1": -0.4132,
+   "ultimo": 43.2,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.1166,
    "desde_oferta_1s": 0.1166,
@@ -2849,6 +4939,33 @@
    "peor_caida_desde_pico_1a": -0.2296,
    "lockup_ventana_-10_+10": 0.0317,
    "lockup_-20_a_0": 0.0149,
+   "condicion_hoy": 40,
+   "temp_pts": 10,
+   "u15_dia": 0,
+   "u15_vs_cierre_d1": 0.0,
+   "u15_a_fin": -0.4168,
+   "d1_a_fin_15": -0.4168,
+   "u15_exceso_fin": -0.7016,
+   "u20_dia": 0,
+   "u20_vs_cierre_d1": 0.0,
+   "u20_a_fin": -0.4168,
+   "d1_a_fin_20": -0.4168,
+   "u20_exceso_fin": -0.7016,
+   "u25_dia": 253,
+   "u25_vs_cierre_d1": 0.0887,
+   "u25_a_fin": -0.4692,
+   "d1_a_fin_25": -0.4168,
+   "u25_exceso_fin": -0.658,
+   "u30_dia": 276,
+   "u30_vs_cierre_d1": -0.0046,
+   "u30_a_fin": -0.4195,
+   "d1_a_fin_30": -0.4168,
+   "u30_exceso_fin": -0.6399,
+   "u35_dia": 476,
+   "u35_vs_cierre_d1": -0.2039,
+   "u35_a_fin": -0.2964,
+   "d1_a_fin_35": -0.4168,
+   "u35_exceso_fin": -0.4732,
    "entrada_dia1_a_2a": -0.1322,
    "entrada_dia1_a_3a": -0.4168,
    "entrada_post_reporte_d63_a_2a": -0.2495,
@@ -2872,9 +4989,9 @@
    "apertura_d1": -0.0667,
    "cierre_d1": -0.0762,
    "dias": 1894,
-   "hoy_vs_oferta": 0.4907,
-   "hoy_vs_cierre_d1": 0.6137,
-   "ultimo": 67.0801,
+   "hoy_vs_oferta": 0.4898,
+   "hoy_vs_cierre_d1": 0.6127,
+   "ultimo": 67.0396,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.0082,
    "desde_oferta_1s": -0.0687,
@@ -2906,6 +5023,29 @@
    "peor_caida_desde_pico_1a": -0.6805,
    "lockup_ventana_-10_+10": -0.1519,
    "lockup_-20_a_0": -0.0733,
+   "condicion_hoy": 14,
+   "temp_pts": 3,
+   "u15_dia": 1,
+   "u15_vs_cierre_d1": -0.1075,
+   "u15_a_fin": -0.362,
+   "d1_a_fin_15": -0.4306,
+   "u15_exceso_fin": -0.5726,
+   "u20_dia": 63,
+   "u20_vs_cierre_d1": -0.0366,
+   "u20_a_fin": -0.409,
+   "d1_a_fin_20": -0.4306,
+   "u20_exceso_fin": -0.5869,
+   "u25_dia": 67,
+   "u25_vs_cierre_d1": -0.2009,
+   "u25_a_fin": -0.2875,
+   "d1_a_fin_25": -0.4306,
+   "u25_exceso_fin": -0.5138,
+   "u30_dia": 125,
+   "u30_vs_cierre_d1": -0.3519,
+   "u30_a_fin": -0.1214,
+   "d1_a_fin_30": -0.4306,
+   "u30_exceso_fin": -0.3503,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.1116,
    "entrada_dia1_a_3a": -0.4306,
    "entrada_post_reporte_d63_a_2a": 0.1538,
@@ -2929,9 +5069,9 @@
    "apertura_d1": 0.2129,
    "cierre_d1": 0.0874,
    "dias": 1923,
-   "hoy_vs_oferta": -0.7576,
-   "hoy_vs_cierre_d1": -0.777,
-   "ultimo": 17.455,
+   "hoy_vs_oferta": -0.7582,
+   "hoy_vs_cierre_d1": -0.7776,
+   "ultimo": 17.41,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.049,
    "desde_oferta_1s": 0.034,
@@ -2963,6 +5103,33 @@
    "peor_caida_desde_pico_1a": -0.795,
    "lockup_ventana_-10_+10": -0.179,
    "lockup_-20_a_0": -0.1578,
+   "condicion_hoy": 35,
+   "temp_pts": 5,
+   "u15_dia": 1,
+   "u15_vs_cierre_d1": -0.1185,
+   "u15_a_fin": -0.4181,
+   "d1_a_fin_15": -0.487,
+   "u15_exceso_fin": -0.6569,
+   "u20_dia": 8,
+   "u20_vs_cierre_d1": -0.2321,
+   "u20_a_fin": -0.332,
+   "d1_a_fin_20": -0.487,
+   "u20_exceso_fin": -0.6028,
+   "u25_dia": 30,
+   "u25_vs_cierre_d1": -0.385,
+   "u25_a_fin": -0.1659,
+   "d1_a_fin_25": -0.487,
+   "u25_exceso_fin": -0.5168,
+   "u30_dia": 102,
+   "u30_vs_cierre_d1": -0.3727,
+   "u30_a_fin": -0.1822,
+   "d1_a_fin_30": -0.487,
+   "u30_exceso_fin": -0.5172,
+   "u35_dia": 124,
+   "u35_vs_cierre_d1": -0.4663,
+   "u35_a_fin": -0.0388,
+   "d1_a_fin_35": -0.487,
+   "u35_exceso_fin": -0.4043,
    "entrada_dia1_a_2a": -0.1947,
    "entrada_dia1_a_3a": -0.487,
    "entrada_post_reporte_d63_a_2a": -0.0405,
@@ -2986,13 +5153,13 @@
    "apertura_d1": 1.0417,
    "cierre_d1": 1.1161,
    "dias": 1553,
-   "hoy_vs_oferta": 1.3832,
-   "hoy_vs_cierre_d1": 0.1262,
-   "ultimo": 285.9875,
+   "hoy_vs_oferta": 1.3974,
+   "hoy_vs_cierre_d1": 0.1329,
+   "ultimo": 287.6899,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.1439,
    "desde_oferta_1s": 0.8116,
-   "exceso_1s": -0.1045,
+   "exceso_1s": -0.1046,
    "desde_cierre_1m": -0.0509,
    "desde_oferta_1m": 1.0083,
    "exceso_1m": -0.0783,
@@ -3020,6 +5187,33 @@
    "peor_caida_desde_pico_1a": -0.5173,
    "lockup_ventana_-10_+10": -0.1789,
    "lockup_-20_a_0": -0.2027,
+   "condicion_hoy": 15,
+   "temp_pts": 5,
+   "u15_dia": 118,
+   "u15_vs_cierre_d1": -0.1573,
+   "u15_a_fin": -0.2535,
+   "d1_a_fin_15": -0.3709,
+   "u15_exceso_fin": -0.3818,
+   "u20_dia": 160,
+   "u20_vs_cierre_d1": -0.213,
+   "u20_a_fin": -0.2007,
+   "d1_a_fin_20": -0.3709,
+   "u20_exceso_fin": -0.2709,
+   "u25_dia": 413,
+   "u25_vs_cierre_d1": -0.3885,
+   "u25_a_fin": 0.0288,
+   "d1_a_fin_25": -0.3709,
+   "u25_exceso_fin": -0.0668,
+   "u30_dia": 425,
+   "u30_vs_cierre_d1": -0.4895,
+   "u30_a_fin": 0.2323,
+   "d1_a_fin_30": -0.3709,
+   "u30_exceso_fin": 0.0704,
+   "u35_dia": 438,
+   "u35_vs_cierre_d1": -0.5538,
+   "u35_a_fin": 0.4099,
+   "d1_a_fin_35": -0.3709,
+   "u35_exceso_fin": 0.1659,
    "entrada_dia1_a_2a": -0.2728,
    "entrada_dia1_a_3a": -0.3709,
    "entrada_post_reporte_d63_a_2a": -0.438,
@@ -3043,9 +5237,9 @@
    "apertura_d1": 0.7843,
    "cierre_d1": 0.8579,
    "dias": 1494,
-   "hoy_vs_oferta": 0.6002,
-   "hoy_vs_cierre_d1": -0.1387,
-   "ultimo": 163.22,
+   "hoy_vs_oferta": 0.5974,
+   "hoy_vs_cierre_d1": -0.1403,
+   "ultimo": 162.93,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.166,
    "desde_oferta_1s": 0.5495,
@@ -3077,6 +5271,33 @@
    "peor_caida_desde_pico_1a": -0.4749,
    "lockup_ventana_-10_+10": 0.2591,
    "lockup_-20_a_0": 0.141,
+   "condicion_hoy": 18,
+   "temp_pts": 5,
+   "u15_dia": 63,
+   "u15_vs_cierre_d1": -0.2505,
+   "u15_a_fin": -0.2889,
+   "d1_a_fin_15": -0.467,
+   "u15_exceso_fin": -0.4201,
+   "u20_dia": 71,
+   "u20_vs_cierre_d1": -0.3376,
+   "u20_a_fin": -0.1954,
+   "d1_a_fin_20": -0.467,
+   "u20_exceso_fin": -0.3526,
+   "u25_dia": 101,
+   "u25_vs_cierre_d1": -0.3522,
+   "u25_a_fin": -0.1773,
+   "d1_a_fin_25": -0.467,
+   "u25_exceso_fin": -0.2842,
+   "u30_dia": 283,
+   "u30_vs_cierre_d1": -0.4228,
+   "u30_a_fin": -0.0767,
+   "d1_a_fin_30": -0.467,
+   "u30_exceso_fin": -0.1588,
+   "u35_dia": 284,
+   "u35_vs_cierre_d1": -0.4646,
+   "u35_a_fin": -0.0046,
+   "d1_a_fin_35": -0.467,
+   "u35_exceso_fin": -0.0954,
    "entrada_dia1_a_2a": -0.7084,
    "entrada_dia1_a_3a": -0.467,
    "entrada_post_reporte_d63_a_2a": -0.6109,
@@ -3100,9 +5321,9 @@
    "apertura_d1": 1.1471,
    "cierre_d1": 1.1281,
    "dias": 1493,
-   "hoy_vs_oferta": 1.6159,
-   "hoy_vs_cierre_d1": 0.2292,
-   "ultimo": 177.88,
+   "hoy_vs_oferta": 1.6157,
+   "hoy_vs_cierre_d1": 0.2291,
+   "ultimo": 177.87,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.0162,
    "desde_oferta_1s": 1.1625,
@@ -3134,40 +5355,31 @@
    "peor_caida_desde_pico_1a": -0.3918,
    "lockup_ventana_-10_+10": 0.1013,
    "lockup_-20_a_0": 0.0019,
+   "condicion_hoy": 15,
+   "temp_pts": 5,
+   "u15_dia": 124,
+   "u15_vs_cierre_d1": 0.0097,
+   "u15_a_fin": -0.011,
+   "d1_a_fin_15": -0.0014,
+   "u15_exceso_fin": -0.142,
+   "u20_dia": 359,
+   "u20_vs_cierre_d1": -0.2092,
+   "u20_a_fin": 0.2628,
+   "d1_a_fin_20": -0.0014,
+   "u20_exceso_fin": 0.0483,
+   "u25_dia": 381,
+   "u25_vs_cierre_d1": -0.3555,
+   "u25_a_fin": 0.5495,
+   "d1_a_fin_25": -0.0014,
+   "u25_exceso_fin": 0.1789,
+   "u30_dia": null,
+   "u35_dia": null,
    "entrada_dia1_a_2a": -0.3395,
    "entrada_dia1_a_3a": -0.0014,
    "entrada_post_reporte_d63_a_2a": -0.5448,
    "entrada_post_reporte_d63_a_3a": -0.3118,
    "entrada_post_lockup_d135_a_2a": -0.3614,
    "entrada_post_lockup_d135_a_3a": -0.0345
-  },
-  {
-   "ticker": "KVUE",
-   "fecha": "2023-05-04",
-   "oferta_nominal": 22.0,
-   "levantado_mm_usd": 3.8,
-   "vs_rango": "medio",
-   "grupo_precio": "esperado",
-   "agrandada": true,
-   "tamano": "normal",
-   "benchmark": "SPY",
-   "factor_split": 1.0,
-   "oferta_ajustada": 22.0,
-   "primer_dia": "2026-10-30",
-   "apertura_d1": -0.0914,
-   "cierre_d1": -0.1223,
-   "dias": 1,
-   "hoy_vs_oferta": -0.1223,
-   "hoy_vs_cierre_d1": 0.0,
-   "ultimo": 19.31,
-   "ultima_fecha": "2026-10-30",
-   "peor_caida_1a_vs_cierre_d1": 0.0,
-   "peor_caida_1a_vs_oferta": -0.1223,
-   "dia_del_minimo_1a": 0,
-   "dias_debajo_oferta_1a_pct": 1.0,
-   "max_primer_mes_vs_cierre_d1": 0.0,
-   "dia_max_primer_mes": 0,
-   "peor_caida_desde_pico_1a": 0.0
   },
   {
    "ticker": "ARM",
@@ -3185,9 +5397,9 @@
    "apertura_d1": 0.1,
    "cierre_d1": 0.2469,
    "dias": 800,
-   "hoy_vs_oferta": 2.5661,
-   "hoy_vs_cierre_d1": 1.86,
-   "ultimo": 181.87,
+   "hoy_vs_oferta": 2.5549,
+   "hoy_vs_cierre_d1": 1.8511,
+   "ultimo": 181.3,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.1797,
    "desde_oferta_1s": 0.0227,
@@ -3219,6 +5431,25 @@
    "peor_caida_desde_pico_1a": -0.4257,
    "lockup_ventana_-10_+10": -0.0724,
    "lockup_-20_a_0": -0.1307,
+   "condicion_hoy": 20,
+   "temp_pts": 10,
+   "u15_dia": 3,
+   "u15_vs_cierre_d1": -0.1324,
+   "u15_a_fin": 4.8528,
+   "d1_a_fin_15": 4.0778,
+   "u15_exceso_fin": 2.2306,
+   "u20_dia": 3,
+   "u20_vs_cierre_d1": -0.1324,
+   "u20_a_fin": 4.8528,
+   "d1_a_fin_20": 4.0778,
+   "u20_exceso_fin": 2.2306,
+   "u25_dia": 21,
+   "u25_vs_cierre_d1": -0.2014,
+   "u25_a_fin": 5.3588,
+   "d1_a_fin_25": 4.0778,
+   "u25_exceso_fin": 2.421,
+   "u30_dia": null,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 1.3045,
    "entrada_dia1_a_3a": 4.0778,
    "entrada_post_reporte_d63_a_2a": 1.2335,
@@ -3242,9 +5473,9 @@
    "apertura_d1": -0.1087,
    "cierre_d1": -0.1261,
    "dias": 781,
-   "hoy_vs_oferta": -0.2258,
-   "hoy_vs_cierre_d1": -0.1141,
-   "ultimo": 35.615,
+   "hoy_vs_oferta": -0.2245,
+   "hoy_vs_cierre_d1": -0.1126,
+   "ultimo": 35.675,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.0423,
    "desde_oferta_1s": -0.163,
@@ -3276,6 +5507,29 @@
    "peor_caida_desde_pico_1a": -0.3097,
    "lockup_ventana_-10_+10": -0.061,
    "lockup_-20_a_0": -0.0557,
+   "condicion_hoy": 33,
+   "temp_pts": 10,
+   "u15_dia": 0,
+   "u15_vs_cierre_d1": 0.0,
+   "u15_a_fin": -0.158,
+   "d1_a_fin_15": -0.158,
+   "u15_exceso_fin": -0.5358,
+   "u20_dia": 0,
+   "u20_vs_cierre_d1": 0.0,
+   "u20_a_fin": -0.158,
+   "d1_a_fin_20": -0.158,
+   "u20_exceso_fin": -0.5358,
+   "u25_dia": 70,
+   "u25_vs_cierre_d1": 0.1346,
+   "u25_a_fin": -0.2578,
+   "d1_a_fin_25": -0.158,
+   "u25_exceso_fin": -0.5435,
+   "u30_dia": 124,
+   "u30_vs_cierre_d1": 0.0801,
+   "u30_a_fin": -0.2204,
+   "d1_a_fin_30": -0.158,
+   "u30_exceso_fin": -0.4899,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 0.0612,
    "entrada_dia1_a_3a": -0.158,
    "entrada_post_reporte_d63_a_2a": -0.1027,
@@ -3299,9 +5553,9 @@
    "apertura_d1": 0.3824,
    "cierre_d1": 0.4835,
    "dias": 670,
-   "hoy_vs_oferta": 1.7415,
-   "hoy_vs_cierre_d1": 0.8479,
-   "ultimo": 93.21,
+   "hoy_vs_oferta": 1.7388,
+   "hoy_vs_cierre_d1": 0.8462,
+   "ultimo": 93.12,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.0222,
    "desde_oferta_1s": 0.4506,
@@ -3330,6 +5584,21 @@
    "peor_caida_desde_pico_1a": -0.5236,
    "lockup_ventana_-10_+10": 0.1467,
    "lockup_-20_a_0": 0.1385,
+   "condicion_hoy": 20,
+   "temp_pts": 10,
+   "u15_dia": 13,
+   "u15_vs_cierre_d1": -0.1655,
+   "u15_a_fin": 1.2124,
+   "d1_a_fin_15": 0.8462,
+   "u15_exceso_fin": 0.5158,
+   "u20_dia": 16,
+   "u20_vs_cierre_d1": -0.207,
+   "u20_a_fin": 1.328,
+   "d1_a_fin_20": 0.8462,
+   "u20_exceso_fin": 0.565,
+   "u25_dia": null,
+   "u30_dia": null,
+   "u35_dia": null,
    "entrada_dia1_a_2a": 1.523,
    "entrada_post_reporte_d63_a_2a": 1.2209,
    "entrada_post_lockup_d135_a_2a": 0.8862
@@ -3350,9 +5619,9 @@
    "apertura_d1": 0.0513,
    "cierre_d1": 0.0356,
    "dias": 584,
-   "hoy_vs_oferta": -0.576,
-   "hoy_vs_cierre_d1": -0.5441,
-   "ultimo": 33.07,
+   "hoy_vs_oferta": -0.5759,
+   "hoy_vs_cierre_d1": -0.544,
+   "ultimo": 33.08,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.0666,
    "desde_oferta_1s": 0.1046,
@@ -3381,6 +5650,33 @@
    "peor_caida_desde_pico_1a": -0.5388,
    "lockup_ventana_-10_+10": -0.0059,
    "lockup_-20_a_0": 0.0191,
+   "condicion_hoy": 40,
+   "temp_pts": 10,
+   "u15_dia": 0,
+   "u15_vs_cierre_d1": 0.0,
+   "u15_a_fin": -0.544,
+   "d1_a_fin_15": -0.544,
+   "u15_exceso_fin": -0.6718,
+   "u20_dia": 47,
+   "u20_vs_cierre_d1": -0.0501,
+   "u20_a_fin": -0.5222,
+   "d1_a_fin_20": -0.544,
+   "u20_exceso_fin": -0.6357,
+   "u25_dia": 64,
+   "u25_vs_cierre_d1": -0.0383,
+   "u25_a_fin": -0.5281,
+   "d1_a_fin_25": -0.544,
+   "u25_exceso_fin": -0.6335,
+   "u30_dia": 70,
+   "u30_vs_cierre_d1": -0.1053,
+   "u30_a_fin": -0.4927,
+   "d1_a_fin_30": -0.544,
+   "u30_exceso_fin": -0.6116,
+   "u35_dia": 124,
+   "u35_vs_cierre_d1": -0.2593,
+   "u35_a_fin": -0.3928,
+   "d1_a_fin_35": -0.544,
+   "u35_exceso_fin": -0.5019,
    "entrada_dia1_a_2a": -0.4183,
    "entrada_post_reporte_d63_a_2a": -0.4013,
    "entrada_post_lockup_d135_a_2a": -0.1998
@@ -3401,9 +5697,9 @@
    "apertura_d1": -0.04,
    "cierre_d1": -0.04,
    "dias": 459,
-   "hoy_vs_oferta": -0.5128,
-   "hoy_vs_cierre_d1": -0.4862,
-   "ultimo": 12.18,
+   "hoy_vs_oferta": -0.5106,
+   "hoy_vs_cierre_d1": -0.4839,
+   "ultimo": 12.235,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.1479,
    "desde_oferta_1s": -0.182,
@@ -3428,7 +5724,30 @@
    "dia_max_primer_mes": 0,
    "peor_caida_desde_pico_1a": -0.7533,
    "lockup_ventana_-10_+10": -0.1273,
-   "lockup_-20_a_0": -0.1172
+   "lockup_-20_a_0": -0.1172,
+   "condicion_hoy": 33,
+   "temp_pts": 3,
+   "u15_dia": 1,
+   "u15_vs_cierre_d1": -0.1696,
+   "u15_a_fin": -0.3785,
+   "d1_a_fin_15": -0.4839,
+   "u15_exceso_fin": -0.4989,
+   "u20_dia": 13,
+   "u20_vs_cierre_d1": -0.3654,
+   "u20_a_fin": -0.1867,
+   "d1_a_fin_20": -0.4839,
+   "u20_exceso_fin": -0.3398,
+   "u25_dia": 19,
+   "u25_vs_cierre_d1": -0.3596,
+   "u25_a_fin": -0.1941,
+   "d1_a_fin_25": -0.4839,
+   "u25_exceso_fin": -0.3496,
+   "u30_dia": 63,
+   "u30_vs_cierre_d1": -0.6404,
+   "u30_a_fin": 0.4326,
+   "d1_a_fin_30": -0.4839,
+   "u30_exceso_fin": 0.0645,
+   "u35_dia": null
   },
   {
    "ticker": "CRWV",
@@ -3446,9 +5765,9 @@
    "apertura_d1": -0.025,
    "cierre_d1": 0.0,
    "dias": 415,
-   "hoy_vs_oferta": 0.2222,
-   "hoy_vs_cierre_d1": 0.2222,
-   "ultimo": 48.89,
+   "hoy_vs_oferta": 0.2237,
+   "hoy_vs_cierre_d1": 0.2237,
+   "ultimo": 48.9475,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.1955,
    "desde_oferta_1s": 0.1955,
@@ -3473,7 +5792,19 @@
    "dia_max_primer_mes": 3,
    "peor_caida_desde_pico_1a": -0.6484,
    "lockup_ventana_-10_+10": 0.195,
-   "lockup_-20_a_0": 0.4597
+   "lockup_-20_a_0": 0.4597,
+   "condicion_hoy": 17,
+   "temp_pts": 3,
+   "u15_dia": 15,
+   "u15_vs_cierre_d1": -0.1146,
+   "u15_a_fin": 0.3821,
+   "d1_a_fin_15": 0.2237,
+   "u15_exceso_fin": -0.0416,
+   "u20_dia": 404,
+   "u20_vs_cierre_d1": 0.0915,
+   "u25_dia": null,
+   "u30_dia": null,
+   "u35_dia": null
   },
   {
    "ticker": "CRCL",
@@ -3491,9 +5822,9 @@
    "apertura_d1": 1.2258,
    "cierre_d1": 1.6848,
    "dias": 368,
-   "hoy_vs_oferta": 0.7601,
-   "hoy_vs_cierre_d1": -0.3444,
-   "ultimo": 54.562,
+   "hoy_vs_oferta": 0.7587,
+   "hoy_vs_cierre_d1": -0.3449,
+   "ultimo": 54.52,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.2801,
    "desde_oferta_1s": 2.4368,
@@ -3518,7 +5849,22 @@
    "dia_max_primer_mes": 11,
    "peor_caida_desde_pico_1a": -0.8093,
    "lockup_ventana_-10_+10": 0.0837,
-   "lockup_-20_a_0": -0.3429
+   "lockup_-20_a_0": -0.3429,
+   "condicion_hoy": 18,
+   "temp_pts": 2,
+   "u15_dia": 156,
+   "u15_vs_cierre_d1": -0.1265,
+   "u15_a_fin": -0.2501,
+   "d1_a_fin_15": -0.3449,
+   "u15_exceso_fin": -0.3084,
+   "u20_dia": 168,
+   "u20_vs_cierre_d1": -0.3965,
+   "u20_a_fin": 0.0854,
+   "d1_a_fin_20": -0.3449,
+   "u20_exceso_fin": 0.0011,
+   "u25_dia": null,
+   "u30_dia": null,
+   "u35_dia": null
   },
   {
    "ticker": "CHYM",
@@ -3536,9 +5882,9 @@
    "apertura_d1": 0.5926,
    "cierre_d1": 0.3744,
    "dias": 363,
-   "hoy_vs_oferta": 0.1872,
-   "hoy_vs_cierre_d1": -0.1362,
-   "ultimo": 32.055,
+   "hoy_vs_oferta": 0.1852,
+   "hoy_vs_cierre_d1": -0.1377,
+   "ultimo": 32.0,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.2043,
    "desde_oferta_1s": 0.0937,
@@ -3563,7 +5909,34 @@
    "dia_max_primer_mes": 0,
    "peor_caida_desde_pico_1a": -0.557,
    "lockup_ventana_-10_+10": 0.3619,
-   "lockup_-20_a_0": 0.1425
+   "lockup_-20_a_0": 0.1425,
+   "condicion_hoy": 22,
+   "temp_pts": 5,
+   "u15_dia": 5,
+   "u15_vs_cierre_d1": -0.2043,
+   "u15_a_fin": 0.0836,
+   "d1_a_fin_15": -0.1377,
+   "u15_exceso_fin": -0.1285,
+   "u20_dia": 39,
+   "u20_vs_cierre_d1": -0.2215,
+   "u20_a_fin": 0.1076,
+   "d1_a_fin_20": -0.1377,
+   "u20_exceso_fin": -0.0449,
+   "u25_dia": 61,
+   "u25_vs_cierre_d1": -0.3732,
+   "u25_a_fin": 0.3758,
+   "d1_a_fin_25": -0.1377,
+   "u25_exceso_fin": 0.2143,
+   "u30_dia": 63,
+   "u30_vs_cierre_d1": -0.3624,
+   "u30_a_fin": 0.3525,
+   "d1_a_fin_30": -0.1377,
+   "u30_exceso_fin": 0.2033,
+   "u35_dia": 160,
+   "u35_vs_cierre_d1": -0.3525,
+   "u35_a_fin": 0.3317,
+   "d1_a_fin_35": -0.1377,
+   "u35_exceso_fin": 0.2604
   },
   {
    "ticker": "FIG",
@@ -3581,9 +5954,9 @@
    "apertura_d1": 1.5758,
    "cierre_d1": 2.5,
    "dias": 330,
-   "hoy_vs_oferta": -0.4917,
-   "hoy_vs_cierre_d1": -0.8548,
-   "ultimo": 16.775,
+   "hoy_vs_oferta": -0.49,
+   "hoy_vs_cierre_d1": -0.8543,
+   "ultimo": 16.83,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.3226,
    "desde_oferta_1s": 1.3709,
@@ -3608,7 +5981,34 @@
    "dia_max_primer_mes": 1,
    "peor_caida_desde_pico_1a": -0.862,
    "lockup_ventana_-10_+10": -0.3379,
-   "lockup_-20_a_0": -0.2615
+   "lockup_-20_a_0": -0.2615,
+   "condicion_hoy": 35,
+   "temp_pts": 5,
+   "u15_dia": 13,
+   "u15_vs_cierre_d1": -0.399,
+   "u15_a_fin": -0.7575,
+   "d1_a_fin_15": -0.8543,
+   "u15_exceso_fin": -0.79,
+   "u20_dia": 63,
+   "u20_vs_cierre_d1": -0.5601,
+   "u20_a_fin": -0.6688,
+   "d1_a_fin_20": -0.8543,
+   "u20_exceso_fin": -0.691,
+   "u25_dia": 74,
+   "u25_vs_cierre_d1": -0.6488,
+   "u25_a_fin": -0.5851,
+   "d1_a_fin_25": -0.8543,
+   "u25_exceso_fin": -0.6215,
+   "u30_dia": 115,
+   "u30_vs_cierre_d1": -0.7198,
+   "u30_a_fin": -0.4799,
+   "d1_a_fin_30": -0.8543,
+   "u30_exceso_fin": -0.5113,
+   "u35_dia": 124,
+   "u35_vs_cierre_d1": -0.7397,
+   "u35_a_fin": -0.4401,
+   "d1_a_fin_35": -0.8543,
+   "u35_exceso_fin": -0.47
   },
   {
    "ticker": "KLAR",
@@ -3626,9 +6026,9 @@
    "apertura_d1": 0.1375,
    "cierre_d1": 0.0685,
    "dias": 301,
-   "hoy_vs_oferta": -0.6572,
-   "hoy_vs_cierre_d1": -0.6792,
-   "ultimo": 13.71,
+   "hoy_vs_oferta": -0.6585,
+   "hoy_vs_cierre_d1": -0.6804,
+   "ultimo": 13.66,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": 0.0526,
    "desde_oferta_1s": 0.1248,
@@ -3653,7 +6053,34 @@
    "dia_max_primer_mes": 2,
    "peor_caida_desde_pico_1a": -0.7302,
    "lockup_ventana_-10_+10": 0.0172,
-   "lockup_-20_a_0": -0.2963
+   "lockup_-20_a_0": -0.2963,
+   "condicion_hoy": 35,
+   "temp_pts": 5,
+   "u15_dia": 11,
+   "u15_vs_cierre_d1": -0.0655,
+   "u15_a_fin": -0.658,
+   "d1_a_fin_15": -0.6804,
+   "u15_exceso_fin": -0.6928,
+   "u20_dia": 24,
+   "u20_vs_cierre_d1": -0.1165,
+   "u20_a_fin": -0.6382,
+   "d1_a_fin_20": -0.6804,
+   "u20_exceso_fin": -0.6734,
+   "u25_dia": 63,
+   "u25_vs_cierre_d1": -0.2478,
+   "u25_a_fin": -0.5751,
+   "d1_a_fin_25": -0.6804,
+   "u25_exceso_fin": -0.6035,
+   "u30_dia": 89,
+   "u30_vs_cierre_d1": -0.3622,
+   "u30_a_fin": -0.4989,
+   "d1_a_fin_30": -0.6804,
+   "u30_exceso_fin": -0.5378,
+   "u35_dia": 124,
+   "u35_vs_cierre_d1": -0.6156,
+   "u35_a_fin": -0.1686,
+   "d1_a_fin_35": -0.6804,
+   "u35_exceso_fin": -0.2346
   },
   {
    "ticker": "SPCX",
@@ -3671,9 +6098,9 @@
    "apertura_d1": 0.1111,
    "cierre_d1": 0.1922,
    "dias": 112,
-   "hoy_vs_oferta": 0.0342,
-   "hoy_vs_cierre_d1": -0.1325,
-   "ultimo": 139.62,
+   "hoy_vs_oferta": 0.0364,
+   "hoy_vs_cierre_d1": -0.1307,
+   "ultimo": 139.92,
    "ultima_fecha": "2026-11-19",
    "desde_cierre_1s": -0.0395,
    "desde_oferta_1s": 0.1452,
@@ -3690,7 +6117,18 @@
    "dias_debajo_oferta_1a_pct": 0.196,
    "max_primer_mes_vs_cierre_d1": 0.3134,
    "dia_max_primer_mes": 2,
-   "peor_caida_desde_pico_1a": -0.4878
+   "peor_caida_desde_pico_1a": -0.4878,
+   "condicion_hoy": 27,
+   "temp_pts": 10,
+   "u15_dia": 16,
+   "u15_vs_cierre_d1": -0.0786,
+   "u20_dia": 19,
+   "u20_vs_cierre_d1": -0.1355,
+   "u25_dia": 22,
+   "u25_vs_cierre_d1": -0.1854,
+   "u30_dia": 97,
+   "u30_vs_cierre_d1": -0.163,
+   "u35_dia": null
   },
   {
    "ticker": "ANT",
@@ -3718,7 +6156,14 @@
    "dias_debajo_oferta_1a_pct": 0.0,
    "max_primer_mes_vs_cierre_d1": 0.0,
    "dia_max_primer_mes": 0,
-   "peor_caida_desde_pico_1a": 0.0
+   "peor_caida_desde_pico_1a": 0.0,
+   "condicion_hoy": 12,
+   "temp_pts": 2,
+   "u15_dia": null,
+   "u20_dia": null,
+   "u25_dia": null,
+   "u30_dia": null,
+   "u35_dia": null
   }
  ]
 }
