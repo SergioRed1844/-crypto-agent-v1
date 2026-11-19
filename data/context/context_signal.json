@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-19T18:11:42Z",
+ "generated_utc": "2026-11-19T19:10:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.326,
+ "bias": -0.325,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.19,
+   "aporte": 0.189,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.155,
+   "aporte": -0.154,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.065,
+   "aporte": 0.064,
    "fuente": "noticia"
   },
   {
