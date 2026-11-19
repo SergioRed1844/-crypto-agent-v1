@@ -44,7 +44,7 @@ def rsi(c: pd.Series, n: int = 14) -> pd.Series:
 
 def ventana(c: pd.Series, fecha: str, a: int, b: int) -> float | None:
     i = c.index.searchsorted(pd.Timestamp(fecha))
-    if i + b >= len(c) or i + a < 0:
+    if i >= len(c) or i + b >= len(c) or i + a < 0:
         return None
     return round(float(c.iloc[i + b] / c.iloc[i + a] - 1), 4)
 
