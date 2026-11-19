@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-19T20:10:06Z",
+ "generated_utc": "2026-11-19T21:09:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.325,
+ "bias": -0.324,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.189,
+   "aporte": 0.188,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.187,
+   "aporte": -0.186,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.154,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.088,
+   "aporte": -0.087,
    "fuente": "noticia"
   },
   {
