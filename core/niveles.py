@@ -42,7 +42,9 @@ def main(out: str, tks: list[str]) -> int:
     for t in tks:
         try:
             df = yf.Ticker(t).history(period="2y", interval="1d", auto_adjust=True)
-            res[t] = niveles(df)
+            res[t] = niveles(df) if len(df.dropna()) >= 3 else {"nota": f"solo {len(df)} días de historia"}
+            if len(df.dropna()) >= 2:
+                res[t]["cambio_dia"] = float(df.Close.iloc[-1] / df.Close.iloc[-2] - 1)
             ih = yf.Ticker(t).history(period="2d", interval="15m", auto_adjust=True)
             if len(ih):
                 d = ih[ih.index.date == ih.index[-1].date()]

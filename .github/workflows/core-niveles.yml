@@ -19,6 +19,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q "yfinance>=0.2.54" pandas numpy
-      - run: python -m core.niveles out/niveles NVDA AVGO META VRT
+      - run: python -m core.niveles out/niveles $(cat core/niveles_tickers.txt)
       - name: Publicar
         run: bash .github/scripts/rb_store_push.sh out "niveles - $(date -u +%FT%TZ)"
