@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-19T16:13:32Z",
+ "generated_utc": "2026-11-19T17:12:47Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.319,
+ "bias": -0.318,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 62,
  "reasons": [
   "Precaución: sesgo -0.32",
-  "Stablecoins -5.43% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.42% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.192,
+   "aporte": 0.191,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.094,
+   "aporte": -0.093,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.089,
+   "aporte": -0.088,
    "fuente": "noticia"
   },
   {
@@ -101,6 +101,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.43
+  "stablecoins_30d_pct": -5.42
  }
 }
