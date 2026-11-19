@@ -1,8 +1,26 @@
 {
- "generado": "2026-11-19T19:34:11.290810+00:00",
+ "generado": "2026-11-19T19:40:03.412831+00:00",
  "info": {
+  "revenueGrowth": 0.17,
+  "earningsGrowth": null,
+  "forwardPE": -1.4918182,
+  "trailingPE": null,
+  "priceToSalesTrailing12Months": 158.39735,
+  "grossMargins": 0.0,
+  "operatingMargins": -229.72636,
+  "profitMargins": 0.0,
+  "totalRevenue": 1100000,
+  "ebitda": -236736992,
+  "operatingCashflow": -214194000,
+  "trailingPegRatio": null,
+  "beta": 3.058,
+  "recommendationMean": 2.71429,
+  "targetMeanPrice": 3.01,
+  "numberOfAnalystOpinions": 5,
+  "earningsTimestampStart": 1794517200,
+  "earningsTimestampEnd": 1794517200,
   "shortName": "Virgin Galactic Holdings, Inc.",
-  "marketCap": 173053984,
+  "marketCap": 174237088,
   "sharesOutstanding": 151681991,
   "floatShares": 150952401,
   "sharesShort": 40227126,
@@ -11,7 +29,7 @@
   "totalCash": 152998000,
   "totalDebt": 260596992,
   "freeCashflow": -289394240,
-  "regularMarketPrice": 1.1409,
+  "regularMarketPrice": 1.1487,
   "regularMarketPreviousClose": 1.2,
   "regularMarketDayLow": 1.12,
   "regularMarketDayHigh": 1.25,
@@ -20,18 +38,18 @@
   "earningsTimestamp": 1794517200,
   "isEarningsDateEstimate": false,
   "averageVolume": 6842948,
-  "regularMarketVolume": 8330533
+  "regularMarketVolume": 8418686
  },
  "hoy": {
   "fecha": "2026-11-19",
-  "precio": 1.1409,
-  "min_hist": 1.1409,
+  "precio": 1.1487,
+  "min_hist": 1.1487,
   "fecha_min_hist": "2026-11-19",
-  "min_52s": 1.1409,
+  "min_52s": 1.1487,
   "max_52s": 7.52,
-  "vs_sma50": -0.572,
-  "caida_60d": -0.656,
-  "rsi14": 22.1,
+  "vs_sma50": -0.569,
+  "caida_60d": -0.654,
+  "rsi14": 22.2,
   "vol_20d": 1.72,
   "ultimos_15": {
    "2026-10-30": [
@@ -91,8 +109,8 @@
     17353500
    ],
    "2026-11-19": [
-    1.1409,
-    8330533
+    1.1487,
+    8418686
    ]
   }
  },
@@ -269,6 +287,9 @@
    "dias_del_min_al_vuelo": 34
   }
  },
+ "peor_caida_3a": -0.993,
+ "peor_caida_hist": -0.999,
+ "desde_max_hist": -0.999,
  "reportes": [
   {
    "fecha": "2020-02-28",
@@ -464,7 +485,7 @@
    "-10a-1": 0.0513,
    "-20a-1": 0.1124,
    "-1a+1": -0.3589,
-   "-1a+5": -0.6025
+   "-1a+5": -0.5998
   }
  ],
  "reportes_resumen": {
