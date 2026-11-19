@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T13:16:11Z",
+ "generated_utc": "2026-11-19T13:51:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -67,7 +67,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.08,
+   "aporte": -0.079,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.066,
+   "aporte": 0.065,
    "fuente": "noticia"
   },
   {
