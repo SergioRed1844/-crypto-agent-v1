@@ -1,8 +1,8 @@
 {
- "generado": "2026-11-19T19:33:46.382990+00:00",
+ "generado": "2026-11-19T19:34:11.290810+00:00",
  "info": {
   "shortName": "Virgin Galactic Holdings, Inc.",
-  "marketCap": 173675872,
+  "marketCap": 173053984,
   "sharesOutstanding": 151681991,
   "floatShares": 150952401,
   "sharesShort": 40227126,
@@ -11,7 +11,7 @@
   "totalCash": 152998000,
   "totalDebt": 260596992,
   "freeCashflow": -289394240,
-  "regularMarketPrice": 1.145,
+  "regularMarketPrice": 1.1409,
   "regularMarketPreviousClose": 1.2,
   "regularMarketDayLow": 1.12,
   "regularMarketDayHigh": 1.25,
@@ -20,18 +20,18 @@
   "earningsTimestamp": 1794517200,
   "isEarningsDateEstimate": false,
   "averageVolume": 6842948,
-  "regularMarketVolume": 8327203
+  "regularMarketVolume": 8330533
  },
  "hoy": {
   "fecha": "2026-11-19",
-  "precio": 1.145,
-  "min_hist": 1.145,
+  "precio": 1.1409,
+  "min_hist": 1.1409,
   "fecha_min_hist": "2026-11-19",
-  "min_52s": 1.145,
+  "min_52s": 1.1409,
   "max_52s": 7.52,
-  "vs_sma50": -0.571,
-  "caida_60d": -0.655,
-  "rsi14": 22.2,
+  "vs_sma50": -0.572,
+  "caida_60d": -0.656,
+  "rsi14": 22.1,
   "vol_20d": 1.72,
   "ultimos_15": {
    "2026-10-30": [
@@ -91,8 +91,8 @@
     17353500
    ],
    "2026-11-19": [
-    1.145,
-    8327203
+    1.1409,
+    8330533
    ]
   }
  },
@@ -464,7 +464,7 @@
    "-10a-1": 0.0513,
    "-20a-1": 0.1124,
    "-1a+1": -0.3589,
-   "-1a+5": -0.601
+   "-1a+5": -0.6025
   }
  ],
  "reportes_resumen": {
