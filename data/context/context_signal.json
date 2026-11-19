@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-19T04:24:00Z",
+ "generated_utc": "2026-11-19T05:23:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.323,
+ "bias": -0.322,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 62,
  "reasons": [
   "Precaución: sesgo -0.32",
-  "Stablecoins -5.4% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.41% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.196,
+   "aporte": -0.195,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.092,
+   "aporte": -0.091,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.082,
+   "aporte": -0.081,
    "fuente": "noticia"
   },
   {
@@ -101,6 +101,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.4
+  "stablecoins_30d_pct": -5.41
  }
 }
