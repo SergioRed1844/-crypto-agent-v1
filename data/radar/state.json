@@ -227,7 +227,6 @@
   }
  },
  "runs": [
-  "2026-11-17T15:05:00+00:00",
   "2026-11-17T15:05:44+00:00",
   "2026-11-17T16:04:22+00:00",
   "2026-11-17T17:03:23+00:00",
@@ -286,18 +285,19 @@
   "2026-11-19T12:17:09+00:00",
   "2026-11-19T13:16:17+00:00",
   "2026-11-19T13:50:31+00:00",
-  "2026-11-19T14:15:22+00:00"
+  "2026-11-19T14:15:22+00:00",
+  "2026-11-19T15:14:42+00:00"
  ],
- "last_scan_utc": "2026-11-19T14:15:22+00:00",
+ "last_scan_utc": "2026-11-19T15:14:42+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "ADA": {
@@ -307,22 +307,22 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -332,7 +332,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "BCH": {
@@ -342,7 +342,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "BTC": {
@@ -352,12 +352,12 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "DIA": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "DOGE": {
@@ -377,57 +377,57 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GLD": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "IWM": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "LINK": {
@@ -437,7 +437,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "LTC": {
@@ -447,12 +447,12 @@
   },
   "META": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "MXN=X": {
@@ -462,37 +462,37 @@
   },
   "NAFTRACISHRS.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "SOL": {
@@ -502,7 +502,7 @@
   },
   "SPY": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "TRX": {
@@ -512,62 +512,62 @@
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "WMT": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "XRP": {
@@ -577,7 +577,7 @@
   },
   "^MXX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "^VIX": {
@@ -677,7 +677,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-19T13:51:06Z",
+   "last": "2026-11-19T14:15:10Z",
    "nota": "CAUTION"
   }
  },
@@ -730,7 +730,5 @@
   "2026-11": 11
  },
  "last_digest_date": "2026-11-19",
- "notify_log": [
-  "comentario en #11"
- ]
+ "notify_log": []
 }
