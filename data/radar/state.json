@@ -227,7 +227,6 @@
   }
  },
  "runs": [
-  "2026-11-17T06:12:55+00:00",
   "2026-11-17T07:11:57+00:00",
   "2026-11-17T07:12:43+00:00",
   "2026-11-17T08:11:13+00:00",
@@ -286,9 +285,10 @@
   "2026-11-19T03:25:41+00:00",
   "2026-11-19T03:49:37+00:00",
   "2026-11-19T04:24:13+00:00",
-  "2026-11-19T05:23:18+00:00"
+  "2026-11-19T05:23:18+00:00",
+  "2026-11-19T07:21:24+00:00"
  ],
- "last_scan_utc": "2026-11-19T05:23:18+00:00",
+ "last_scan_utc": "2026-11-19T07:21:24+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -297,7 +297,7 @@
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "ADA": {
@@ -307,12 +307,12 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "AMZN": {
@@ -322,7 +322,7 @@
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -332,7 +332,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "BCH": {
@@ -342,7 +342,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "BTC": {
@@ -352,7 +352,7 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "DIA": {
@@ -377,17 +377,17 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "GLD": {
@@ -397,7 +397,7 @@
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "GOOGL": {
@@ -407,7 +407,7 @@
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "IWM": {
@@ -422,12 +422,12 @@
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "LINK": {
@@ -437,7 +437,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "LTC": {
@@ -472,17 +472,17 @@
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "QQQ": {
@@ -517,7 +517,7 @@
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-18",
+   "last": "2026-11-17",
    "nota": "yahoo"
   },
   "WMT": {
@@ -677,7 +677,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-19T04:24:00Z",
+   "last": "2026-11-19T06:22:08Z",
    "nota": "CAUTION"
   }
  },
@@ -695,7 +695,7 @@
    ],
    "p": 0.342,
    "base": 0.306,
-   "ret": 0.0035,
+   "ret": 0.0036,
    "h": 7
   },
   {
@@ -707,21 +707,7 @@
    "why": [],
    "p": 0.504,
    "base": 0.402,
-   "ret": 0.0149,
-   "h": 7
-  },
-  {
-   "sym": "GFNORTEO.MX",
-   "cls": "bmv",
-   "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-11-18",
-   "level": "VIGILANCIA",
-   "why": [
-    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)"
-   ],
-   "p": 0.367,
-   "base": 0.307,
-   "ret": 0.0038,
+   "ret": 0.015,
    "h": 7
   }
  ],
