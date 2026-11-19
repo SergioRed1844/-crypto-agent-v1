@@ -1,0 +1,24 @@
+# Estudio SPCE para acumulación. Corre con [spce-run].
+name: core-spce
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-spce
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[spce-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q "yfinance>=0.2.54" pandas numpy
+      - run: python -m core.spce out/spce
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "spce - $(date -u +%FT%TZ)"
