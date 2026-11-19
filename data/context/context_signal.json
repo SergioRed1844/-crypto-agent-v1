@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-19T13:51:06Z",
+ "generated_utc": "2026-11-19T14:15:10Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.32,
+ "bias": -0.319,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.194,
+   "aporte": 0.193,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.191,
+   "aporte": -0.19,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.157,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.063,
+   "aporte": -0.062,
    "fuente": "noticia"
   }
  ],
