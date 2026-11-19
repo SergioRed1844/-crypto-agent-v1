@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T22:08:16Z",
+ "generated_utc": "2026-11-19T22:24:44Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -67,7 +67,7 @@
    "title_es": "Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de EE. UU.",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.078,
+   "aporte": -0.077,
    "fuente": "noticia"
   },
   {
