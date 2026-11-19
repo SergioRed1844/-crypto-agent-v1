@@ -35,7 +35,6 @@ OPIS = [
     ("SNOW", "2020-09-16", 120.0, 3.4, "arriba", False, "SPY"),
     ("DASH", "2020-12-09", 102.0, 3.4, "arriba", False, "SPY"),
     ("ABNB", "2020-12-10", 68.0, 3.5, "arriba", False, "SPY"),
-    ("KVUE", "2023-05-04", 22.0, 3.8, "medio", True, "SPY"),
     ("ARM", "2023-09-14", 51.0, 4.9, "tope", False, "SPY"),
     ("BIRK", "2023-10-11", 46.0, 1.5, "medio", False, "SPY"),
     ("RDDT", "2024-03-21", 34.0, 0.75, "tope", False, "SPY"),
@@ -49,6 +48,7 @@ OPIS = [
     ("SPCX", "2026-06-12", 135.0, 75.0, "fijo", False, "SPY"),
     ("ANT", "2026-11-19", 83.0, 81.3, "arriba", True, "SPY"),
 ]
+UMBRALES = [15, 20, 25, 30, 35]
 HORIZ = {"1s": 5, "1m": 21, "3m": 63, "6m": 126, "1a": 252, "2a": 504, "3a": 756}
 ENTRADAS = {"dia1": 0, "post_reporte_d63": 63, "post_lockup_d135": 135}
 INFO = ["shortName", "currency", "marketCap", "trailingPE", "forwardPE", "priceToSalesTrailing12Months",
@@ -102,6 +102,35 @@ def grupo_precio(p: str) -> str:
             "bajo": "frio", "debajo": "frio"}[p]
 
 
+def pts_temperatura(precio: str, agrandada: bool) -> int:
+    g = grupo_precio(precio)
+    if g == "esperado":
+        return 10
+    if g == "frio":
+        return 3
+    return 2 if agrandada else 5
+
+
+def pts_prima(px: float, of: float) -> int:
+    x = px / of - 1
+    return 10 if x <= 0 else 7 if x <= .10 else 4 if x <= .25 else 1 if x <= .50 else 0
+
+
+def pts_correccion(px: float, c0: float) -> int:
+    x = 1 - px / c0
+    return 10 if x >= .35 else 6 if x >= .20 else 3 if x >= .10 else 0
+
+
+def pts_calendario(d: int) -> int:
+    # silencio ~25 días naturales (~18 hábiles), primer reporte ~día 63, lock-up principal ~día 124
+    return (2 if d >= 18 else 0) + (5 if d >= 63 else 0) + (3 if d >= 124 else 0)
+
+
+def condicion(c: np.ndarray, of: float, temp: int) -> np.ndarray:
+    return np.array([temp + pts_prima(c[d], of) + pts_correccion(c[d], c[0]) + pts_calendario(d)
+                     for d in range(len(c))])
+
+
 def medir(t, fecha, oferta, mm, precio, agrandada, bench) -> dict:
     df = bajar(t, fecha)
     r = {"ticker": t, "fecha": fecha, "oferta_nominal": oferta, "levantado_mm_usd": mm, "vs_rango": precio,
@@ -151,6 +180,28 @@ def medir(t, fecha, oferta, mm, precio, agrandada, bench) -> dict:
     if lk + 10 < len(df) and lk - 10 >= 0:
         r["lockup_ventana_-10_+10"] = round(float(a[lk + 10]) / a[lk - 10] - 1, 4)
         r["lockup_-20_a_0"] = round(float(a[lk]) / a[max(lk - 20, 0)] - 1, 4)
+    temp = pts_temperatura(precio, agrandada)
+    cond = condicion(c, of, temp)
+    r["condicion_hoy"] = int(cond[-1])
+    r["temp_pts"] = temp
+    fin = min(len(df) - 1, 756)
+    for u in UMBRALES:
+        ok = np.where(cond[:min(len(df), 504)] >= u)[0]
+        if len(ok):
+            d = int(ok[0])
+            r[f"u{u}_dia"] = d
+            r[f"u{u}_vs_cierre_d1"] = round(float(c[d]) / c[0] - 1, 4)
+            if fin - d >= 126:
+                r[f"u{u}_a_fin"] = round(float(a[fin]) / a[d] - 1, 4)
+                r[f"d1_a_fin_{u}"] = round(float(a[fin]) / a[0] - 1, 4)
+                if bc is not None:
+                    try:
+                        r[f"u{u}_exceso_fin"] = round((a[fin] / a[d]) / (float(bc.asof(df.index[fin])) /
+                                                                    float(bc.asof(df.index[d]))) - 1, 4)
+                    except Exception:  # noqa: BLE001
+                        pass
+        else:
+            r[f"u{u}_dia"] = None
     for k, d in ENTRADAS.items():
         for fin, hz in (("2a", 504), ("3a", 756)):
             if len(df) > hz:
@@ -160,7 +211,7 @@ def medir(t, fecha, oferta, mm, precio, agrandada, bench) -> dict:
 
 def resumen(df: pd.DataFrame) -> dict:
     cols = [c for c in df.columns if c.startswith(("cierre_d1", "apertura_d1", "desde_cierre_", "desde_oferta_",
-                                                   "exceso_", "peor_caida", "lockup", "entrada_",
+                                                   "exceso_", "peor_caida", "lockup", "entrada_", "u1", "u2", "u3", "d1_a_fin",
                                                    "max_primer_mes", "dias_debajo"))]
     out = {}
     hist = df[~df["ticker"].isin(["SPCX", "ANT"])]
@@ -169,6 +220,8 @@ def resumen(df: pd.DataFrame) -> dict:
               "frio": hist[hist.grupo_precio == "frio"],
               "record_caliente": hist[(hist.tamano == "record") & (hist.grupo_precio == "caliente")],
               "record_esperado": hist[(hist.tamano == "record") & (hist.grupo_precio != "caliente")],
+              "normal_caliente": hist[(hist.tamano == "normal") & (hist.grupo_precio == "caliente")],
+              "normal_esperado": hist[(hist.tamano == "normal") & (hist.grupo_precio == "esperado")],
               "salto_d1_>25%": hist[hist.cierre_d1 > .25], "salto_d1_0-25%": hist[hist.cierre_d1.between(0, .25)],
               "salto_d1_<0": hist[hist.cierre_d1 < 0]}
     for g, d in grupos.items():

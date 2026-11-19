@@ -26,3 +26,10 @@ def test_medir_y_resumen(monkeypatch):
 def test_grupos_de_precio():
     assert op.grupo_precio("tope") == op.grupo_precio("fijo") == "esperado"
     assert op.grupo_precio("debajo") == "frio"
+
+
+def test_condicion():
+    c = np.array([100.0] * 70 + [60.0] * 70)           # cierre d1 en 100, cae 40% el día 70
+    x = op.condicion(c, 80.0, op.pts_temperatura("arriba", True))
+    assert x[0] == 2 + 4 + 0 + 0                        # caliente y agrandada, prima +25% (≤25%), sin calendario
+    assert x[100] == 2 + 10 + 10 + 7                    # debajo de la oferta, −40% contra d1, silencio + reporte
