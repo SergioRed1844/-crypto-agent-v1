@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-19T19:14:48Z",
+ "generated_utc": "2026-11-19T20:10:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -9,10 +9,10 @@
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 63,
+ "confidence": 62,
  "reasons": [
-  "Precaución: sesgo -0.33",
-  "Stablecoins -5.42% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.32",
+  "Stablecoins -5.43% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -31,7 +31,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.092,
+   "aporte": -0.091,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Hackers de Binance blanquean fondos y renuncia el director financiero",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.062,
+   "aporte": -0.061,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.42
+  "stablecoins_30d_pct": -5.43
  }
 }
