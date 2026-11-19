@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-19T21:09:21+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
+Última corrida: **2026-11-19T22:08:31+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -8,19 +8,21 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
 |---|---|---|---|---|---|---|---|
-| VIGILANCIA | MSFT | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 34% | 31% | +0.4% |
-| ALERTA | NVDA | Capitulación con miedo extremo | 2026-11-17 | 7 d | 50% | 40% | +1.5% |
+| VIGILANCIA | XLF | Retroceso dentro de tendencia alcista | 2026-11-19 | 30 d | 36% | 32% | +0.8% |
+| VIGILANCIA | XLV | Retroceso dentro de tendencia alcista | 2026-11-19 | 7 d | 24% | 21% | +0.2% |
+| ALERTA | GLD | Capitulación con miedo extremo | 2026-11-19 | 7 d | 34% | 26% | +1.1% |
 | VIGILANCIA | GFNORTEO.MX | Retroceso dentro de tendencia alcista | 2026-11-18 | 7 d | 37% | 31% | +0.4% |
 
 ## Alertas enviadas (últimas 15)
 
 | Enviada | Activo | Setup | H | P | Resultado |
 |---|---|---|---|---|---|
+| 2026-11-19T22:08 | GLD | Capitulación con miedo extremo | 7 d | 34% | en curso |
 | 2026-11-05T22:13 | NVDA | Pánico sin daño real | 30 d | 56% | en curso |
 | 2026-11-05T22:13 | XLI | Pánico sin daño real | 30 d | 41% | en curso |
 | 2026-11-05T22:13 | DIA | Pánico sin daño real | 30 d | 36% | en curso |
 
-**Seguimiento:** Aún no cierra ninguna alerta (3 en curso).
+**Seguimiento:** Aún no cierra ninguna alerta (4 en curso).
 
 ## Setups (modelo con toda la historia)
 
@@ -32,7 +34,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.3% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.4% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.3% |
-| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 86% | +0.1% |
+| Capitulación con miedo extremo | crypto | 7 d | 26 | 40% | 40% | 40% | 85% | +0.1% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.1% |
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.1% |
@@ -138,7 +140,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-19 | binance |
 | ^MXX | sí | 2026-11-19 | yahoo |
 | ^VIX | sí | 2026-11-19 | yahoo |
-| contexto_v42 | sí | 2026-11-19T20:10:06Z | CAUTION |
+| contexto_v42 | sí | 2026-11-19T21:09:09Z | CAUTION |
 | fear_greed | sí | 2026-11-19 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-18 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-18 | wikimedia |

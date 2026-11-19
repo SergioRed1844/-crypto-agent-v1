@@ -50,6 +50,23 @@
     "issue": 17
    },
    "outcome": null
+  },
+  {
+   "sym": "GLD",
+   "cls": "us",
+   "sid": "CAPITULACION",
+   "date": "2026-11-19",
+   "h": 7,
+   "p": 0.342,
+   "q10": 0.2312,
+   "base": 0.2555,
+   "ret": 0.0105,
+   "price": 335.17999267578125,
+   "sent_utc": "2026-11-19T22:08:31+00:00",
+   "sent": {
+    "issue": 25
+   },
+   "outcome": null
   }
  ],
  "seen": {
@@ -224,10 +241,21 @@
   "GFNORTEO.MX|PULLBACK_TENDENCIA|2026-11-18": {
    "level": "VIGILANCIA",
    "utc": "2026-11-18T21:30:13+00:00"
+  },
+  "GLD|CAPITULACION|2026-11-19": {
+   "level": "ALERTA",
+   "utc": "2026-11-19T22:08:31+00:00"
+  },
+  "XLF|PULLBACK_TENDENCIA|2026-11-19": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-19T22:08:31+00:00"
+  },
+  "XLV|PULLBACK_TENDENCIA|2026-11-19": {
+   "level": "VIGILANCIA",
+   "utc": "2026-11-19T22:08:31+00:00"
   }
  },
  "runs": [
-  "2026-11-17T22:58:10+00:00",
   "2026-11-17T22:58:57+00:00",
   "2026-11-17T23:07:52+00:00",
   "2026-11-17T23:57:20+00:00",
@@ -286,9 +314,10 @@
   "2026-11-19T19:10:57+00:00",
   "2026-11-19T19:11:41+00:00",
   "2026-11-19T20:10:14+00:00",
-  "2026-11-19T21:09:21+00:00"
+  "2026-11-19T21:09:21+00:00",
+  "2026-11-19T22:08:31+00:00"
  ],
- "last_scan_utc": "2026-11-19T21:09:21+00:00",
+ "last_scan_utc": "2026-11-19T22:08:31+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -677,37 +706,53 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-19T20:10:06Z",
+   "last": "2026-11-19T21:09:09Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
  "last_candidates": [
   {
-   "sym": "MSFT",
+   "sym": "XLF",
    "cls": "us",
    "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-11-17",
+   "date": "2026-11-19",
+   "level": "VIGILANCIA",
+   "why": [
+    "la ventaja no es creíble: cota baja 31% vs día cualquiera 32%",
+    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
+    "ventaja vs día cualquiera +4.2 pp < 5 pp"
+   ],
+   "p": 0.365,
+   "base": 0.323,
+   "ret": 0.0079,
+   "h": 30
+  },
+  {
+   "sym": "XLV",
+   "cls": "us",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-19",
    "level": "VIGILANCIA",
    "why": [
     "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.6 pp < 5 pp"
+    "ventaja vs día cualquiera +3.1 pp < 5 pp"
    ],
-   "p": 0.342,
-   "base": 0.306,
-   "ret": 0.0036,
+   "p": 0.243,
+   "base": 0.213,
+   "ret": 0.0024,
    "h": 7
   },
   {
-   "sym": "NVDA",
+   "sym": "GLD",
    "cls": "us",
    "sid": "CAPITULACION",
-   "date": "2026-11-17",
+   "date": "2026-11-19",
    "level": "ALERTA",
    "why": [],
-   "p": 0.504,
-   "base": 0.402,
-   "ret": 0.015,
+   "p": 0.342,
+   "base": 0.256,
+   "ret": 0.0105,
    "h": 7
   },
   {
@@ -730,5 +775,7 @@
   "2026-11": 11
  },
  "last_digest_date": "2026-11-19",
- "notify_log": []
+ "notify_log": [
+  "issue #25 creado"
+ ]
 }
