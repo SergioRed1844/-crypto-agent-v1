@@ -16,7 +16,10 @@ import pandas as pd
 
 VUELOS = {"Unity 21": "2021-05-22", "Unity 22 (Branson)": "2021-07-11", "Unity 25": "2023-05-25",
           "Galactic 01 (1er comercial)": "2023-06-29", "Galactic 02": "2023-08-10", "Galactic 07 (pausa)": "2024-06-08"}
-INFO = ["shortName", "marketCap", "sharesOutstanding", "floatShares", "sharesShort", "shortPercentOfFloat",
+INFO = ["revenueGrowth", "earningsGrowth", "forwardPE", "trailingPE", "priceToSalesTrailing12Months",
+        "grossMargins", "operatingMargins", "profitMargins", "totalRevenue", "ebitda", "operatingCashflow",
+        "trailingPegRatio", "beta", "recommendationMean", "targetMeanPrice", "numberOfAnalystOpinions",
+        "earningsTimestampStart", "earningsTimestampEnd", "shortName", "marketCap", "sharesOutstanding", "floatShares", "sharesShort", "shortPercentOfFloat",
         "shortRatio", "totalCash", "totalDebt", "freeCashflow", "regularMarketPrice", "regularMarketPreviousClose",
         "regularMarketDayLow", "regularMarketDayHigh", "fiftyTwoWeekLow", "fiftyTwoWeekHigh", "earningsTimestamp",
         "isEarningsDateEstimate", "averageVolume", "regularMarketVolume"]
@@ -67,13 +70,14 @@ def adelante(c: pd.Series, mask: pd.Series, h: int) -> dict:
             "p75": round(float(x.quantile(.75)), 3), "p25": round(float(x.quantile(.25)), 3)}
 
 
-def main(out_dir: str) -> None:
+def main(out_dir: str, ticker: str = "SPCE") -> None:
     import yfinance as yf
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    df = bajar("SPCE", period="max")
+    df = bajar(ticker, period="max")
     c = df["Close"]
-    tk = yf.Ticker("SPCE")
+    tk = yf.Ticker(ticker)
+    eventos = VUELOS if ticker == "SPCE" else {}
     try:
         inf = {k: (tk.info or {}).get(k) for k in INFO}
     except Exception as e:  # noqa: BLE001
@@ -99,7 +103,12 @@ def main(out_dir: str) -> None:
     r["dias_parecidos"] = int(parecido.sum())
     # Vuelos: carrera previa y "vender la noticia"
     r["vuelos"] = {}
-    for n, f in VUELOS.items():
+    # Peor caída en ventanas de 3 años (para el tamaño)
+    pico = c.rolling(756, min_periods=1).max()
+    r["peor_caida_3a"] = round(float((c.iloc[-756:] / pico.iloc[-756:] - 1).min()), 3)
+    r["peor_caida_hist"] = round(float((c / c.cummax() - 1).min()), 3)
+    r["desde_max_hist"] = round(float(c.iloc[-1] / c.max() - 1), 3)
+    for n, f in eventos.items():
         i = c.index.searchsorted(pd.Timestamp(f))
         lo = c.iloc[max(i - 120, 0):max(i - 5, 1)]
         r["vuelos"][n] = {"fecha": f, "-60a-1": ventana(c, f, -60, -1), "-20a-1": ventana(c, f, -20, -1),
@@ -147,9 +156,9 @@ def main(out_dir: str) -> None:
                                     "fecha_min": str(lo.idxmin().date()), "max_vs_19nov": round(float(lo.max() / a - 1), 3),
                                     "fecha_max": str(lo.idxmax().date())}
     r["nov_a_mar"] = est
-    (out / "spce.json").write_text(json.dumps(r, ensure_ascii=False, indent=1, default=str))
+    (out / f"{ticker.lower()}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1, default=str))
     print(json.dumps({k: r[k] for k in ("hoy", "vuelos", "reportes_resumen", "nov_a_mar") if k in r}, indent=1, default=str)[:4000])
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "out/spce")
+    main(sys.argv[1] if len(sys.argv) > 1 else "out/spce", sys.argv[2] if len(sys.argv) > 2 else "SPCE")

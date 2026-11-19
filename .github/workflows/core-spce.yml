@@ -20,5 +20,6 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -q "yfinance>=0.2.54" pandas numpy
       - run: python -m core.spce out/spce
+      - run: python -m core.spce out/avav AVAV
       - name: Publicar
         run: bash .github/scripts/rb_store_push.sh out "spce - $(date -u +%FT%TZ)"
