@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-19T09:19:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-19T10:18:49Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.32 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -11,10 +11,10 @@ Actualizado 2026-11-19T09:19:33Z UTC. Se recalcula cada hora; el calendario y lo
 |---|---|---|---|
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.197 |
 | Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.193 |
-| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.159 |
+| Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.158 |
 | Ataque a Binance evidencia vulnerabilidades de seguridad cripto | 2026-11-12 | anti | -0.097 |
 | Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC | 2026-11-06 | anti | -0.090 |
-| Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.081 |
+| Bolsas mundiales caen arrastradas por pánico en tecnológicas tras elecciones de  | 2026-11-06 | anti | -0.080 |
 | Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank | 2026-10-18 | pro | +0.066 |
 | Hackers de Binance blanquean fondos y renuncia el director financiero | 2026-11-13 | anti | -0.063 |
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-19T09:19:33Z",
+ "inicio": "2026-11-19T10:18:49Z",
  "onchain": {
   "scanned": [
-   976557,
-   976561
+   976562,
+   976565
   ],
-  "calls": 64,
+  "calls": 100,
   "stopped": null,
   "nuevas": 0
  },
