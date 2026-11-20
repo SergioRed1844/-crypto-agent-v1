@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-20T05:02:07Z",
+ "updated_utc": "2026-11-20T06:01:12Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9207,6 +9207,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-20T02:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El oro sufre su peor semana por expectativas de subidas de tasas",
+   "source_url": "https://www.thehindubusinessline.com/markets/gold/gold-set-for-worst-week-since-march-as-rate-hike-expectations-grow/article71722965.ece",
+   "source_title": "thehindubusinessline.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-set-for-worst-week-since-march-as-rate-hike-e-2026-11-20",
+   "date": "2026-11-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-20T04:30:00Z"
   }
  ]
 }
