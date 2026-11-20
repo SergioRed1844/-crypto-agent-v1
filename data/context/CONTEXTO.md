@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-20T22:46:14Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-20T22:50:43Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.46 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -10,7 +10,7 @@ Actualizado 2026-11-20T22:46:14Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.429 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.251 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.250 |
 | Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.185 |
 | El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.183 |
 | Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector  | 2026-11-20 | anti | -0.180 |
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-20T22:46:14Z",
+ "inicio": "2026-11-20T22:50:43Z",
  "onchain": {
   "scanned": [
-   976789,
-   976792
+   976793,
+   976793
   ],
-  "calls": 127,
+  "calls": 24,
   "stopped": null,
   "nuevas": 0
  },
