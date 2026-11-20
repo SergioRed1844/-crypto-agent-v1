@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-20T03:04:47+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
+Última corrida: **2026-11-20T03:42:17+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -140,7 +140,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-20 | caché binance |
 | ^MXX | sí | 2026-11-19 | caché yahoo |
 | ^VIX | sí | 2026-11-19 | caché yahoo |
-| contexto_v42 | sí | 2026-11-20T02:04:43Z | CAUTION |
+| contexto_v42 | sí | 2026-11-20T03:08:29Z | CAUTION |
 | fear_greed | sí | 2026-11-20 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-18 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-18 | wikimedia |
@@ -148,15 +148,15 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | wiki_en_Dogecoin | sí | 2026-11-18 | wikimedia |
 | wiki_en_Ethereum | sí | 2026-11-18 | wikimedia |
 | wiki_en_Financial_crisis | sí | 2026-11-18 | wikimedia |
-| wiki_en_Inflation | sí | 2026-11-18 | wikimedia |
-| wiki_en_Recession | sí | 2026-11-18 | wikimedia |
+| wiki_en_Inflation | sí | 2026-11-19 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-19 | wikimedia |
 | wiki_en_Ripple_Labs | sí | 2026-11-18 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-18 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-11-18 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-19 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-19 | wikimedia |
 | wiki_en_Unemployment | sí | 2026-11-18 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-18 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-11-18 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-18 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-11-19 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-19 | wikimedia |
 | wiki_es_Inflación | sí | 2026-11-18 | wikimedia |
 | wiki_es_Recesión | sí | 2026-11-18 | wikimedia |
 
