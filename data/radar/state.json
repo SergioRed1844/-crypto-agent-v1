@@ -358,7 +358,6 @@
   }
  },
  "runs": [
-  "2026-11-19T01:26:50+00:00",
   "2026-11-19T02:25:49+00:00",
   "2026-11-19T03:24:55+00:00",
   "2026-11-19T03:25:41+00:00",
@@ -417,9 +416,10 @@
   "2026-11-20T19:49:11+00:00",
   "2026-11-20T20:48:14+00:00",
   "2026-11-20T21:30:15+00:00",
-  "2026-11-20T21:47:25+00:00"
+  "2026-11-20T21:47:25+00:00",
+  "2026-11-20T22:46:26+00:00"
  ],
- "last_scan_utc": "2026-11-20T21:47:25+00:00",
+ "last_scan_utc": "2026-11-20T22:46:26+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -808,7 +808,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-20T21:30:21Z",
+   "last": "2026-11-20T21:47:19Z",
    "nota": "CAUTION"
   }
  },
@@ -819,10 +819,8 @@
    "cls": "us",
    "sid": "PANICO_SIN_DANO",
    "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "tope de 3 alertas por semana alcanzado"
-   ],
+   "level": "ALERTA",
+   "why": [],
    "p": 0.341,
    "base": 0.273,
    "ret": 0.0161,
@@ -833,10 +831,8 @@
    "cls": "us",
    "sid": "PANICO_SIN_DANO",
    "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "tope de 3 alertas por semana alcanzado"
-   ],
+   "level": "ALERTA",
+   "why": [],
    "p": 0.451,
    "base": 0.37,
    "ret": 0.0177,
@@ -859,10 +855,8 @@
    "cls": "us",
    "sid": "CAPITULACION",
    "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la búsqueda de noticias sugiere causa fundamental propia del activo"
-   ],
+   "level": "ALERTA",
+   "why": [],
    "p": 0.393,
    "base": 0.3,
    "ret": 0.0104,
@@ -916,10 +910,8 @@
    "cls": "us",
    "sid": "PANICO_SIN_DANO",
    "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "tope de 3 alertas por semana alcanzado"
-   ],
+   "level": "ALERTA",
+   "why": [],
    "p": 0.497,
    "base": 0.416,
    "ret": 0.022,
@@ -942,10 +934,8 @@
    "cls": "us",
    "sid": "PANICO_SIN_DANO",
    "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la búsqueda de noticias sugiere causa fundamental propia del activo"
-   ],
+   "level": "ALERTA",
+   "why": [],
    "p": 0.56,
    "base": 0.474,
    "ret": 0.0393,
@@ -1115,8 +1105,5 @@
   "2026-11": 11
  },
  "last_digest_date": "2026-11-20",
- "notify_log": [
-  "issue #26 creado",
-  "issue #27 creado"
- ]
+ "notify_log": []
 }

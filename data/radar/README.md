@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-20T21:47:25+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-20
+Última corrida: **2026-11-20T22:46:26+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-20
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -8,16 +8,16 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
 |---|---|---|---|---|---|---|---|
-| VIGILANCIA | SPY | Pánico sin daño real | 2026-11-20 | 30 d | 34% | 27% | +1.6% |
-| VIGILANCIA | QQQ | Pánico sin daño real | 2026-11-20 | 30 d | 45% | 37% | +1.8% |
+| ALERTA | SPY | Pánico sin daño real | 2026-11-20 | 30 d | 34% | 27% | +1.6% |
+| ALERTA | QQQ | Pánico sin daño real | 2026-11-20 | 30 d | 45% | 37% | +1.8% |
 | ALERTA | XLK | Pánico sin daño real | 2026-11-20 | 30 d | 44% | 36% | +1.8% |
-| VIGILANCIA | XLK | Capitulación con miedo extremo | 2026-11-20 | 7 d | 39% | 30% | +1.0% |
+| ALERTA | XLK | Capitulación con miedo extremo | 2026-11-20 | 7 d | 39% | 30% | +1.0% |
 | VIGILANCIA | XLF | Retroceso dentro de tendencia alcista | 2026-11-19 | 30 d | 36% | 32% | +0.8% |
 | VIGILANCIA | XLV | Retroceso dentro de tendencia alcista | 2026-11-19 | 7 d | 24% | 21% | +0.2% |
 | ALERTA | XLI | Pánico sin daño real | 2026-11-20 | 30 d | 41% | 32% | +1.7% |
-| VIGILANCIA | SMH | Pánico sin daño real | 2026-11-20 | 30 d | 50% | 42% | +2.2% |
+| ALERTA | SMH | Pánico sin daño real | 2026-11-20 | 30 d | 50% | 42% | +2.2% |
 | ALERTA | GLD | Capitulación con miedo extremo | 2026-11-19 | 7 d | 34% | 26% | +1.0% |
-| VIGILANCIA | NVDA | Pánico sin daño real | 2026-11-20 | 30 d | 56% | 47% | +3.9% |
+| ALERTA | NVDA | Pánico sin daño real | 2026-11-20 | 30 d | 56% | 47% | +3.9% |
 | VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-20 | 7 d | 52% | 42% | +0.8% |
 | VIGILANCIA | NAFTRACISHRS.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 33% | 29% | +1.2% |
 | VIGILANCIA | GFNORTEO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +2.2% |
@@ -158,7 +158,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-20 | binance |
 | ^MXX | sí | 2026-11-20 | yahoo |
 | ^VIX | sí | 2026-11-20 | yahoo |
-| contexto_v42 | sí | 2026-11-20T21:30:21Z | CAUTION |
+| contexto_v42 | sí | 2026-11-20T21:47:19Z | CAUTION |
 | fear_greed | sí | 2026-11-20 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-19 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-19 | wikimedia |
