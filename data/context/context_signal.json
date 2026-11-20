@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-20T03:03:48Z",
+ "generated_utc": "2026-11-20T03:08:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.443,
+ "bias": -0.461,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 67,
+ "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.44",
+  "Precaución: sesgo -0.46",
   "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
@@ -26,12 +26,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-binance-6-5b-freeze-order-hong-kong-suspiciou-of-h-2026-11-20",
+   "date": "2026-11-20",
+   "title_es": "Orden de congelamiento de $6.5B contra Binance",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.266,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-wall-street-slump-continues-as-dow-falls-over-1-10-2026-11-20",
    "date": "2026-11-20",
    "title_es": "Continúa la caída de Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.265,
+   "aporte": -0.264,
    "fuente": "noticia"
   },
   {
@@ -58,7 +67,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.151,
+   "aporte": -0.15,
    "fuente": "noticia"
   },
   {
@@ -77,15 +86,6 @@
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
    "aporte": -0.092,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-binance-hack-reveals-crypto-uphill-battle-against-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "Ataque a Binance evidencia vulnerabilidades de seguridad cripto",
-   "category": "HACK_SECURITY",
-   "stance": "anti",
-   "aporte": -0.088,
    "fuente": "noticia"
   }
  ],
