@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-20T00:06:50+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
+Última corrida: **2026-11-20T01:05:49+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-19
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -8,9 +8,8 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
 |---|---|---|---|---|---|---|---|
-| VIGILANCIA | XLF | Retroceso dentro de tendencia alcista | 2026-11-19 | 30 d | 36% | 32% | +0.8% |
-| VIGILANCIA | XLV | Retroceso dentro de tendencia alcista | 2026-11-19 | 7 d | 24% | 21% | +0.2% |
-| ALERTA | GLD | Capitulación con miedo extremo | 2026-11-19 | 7 d | 34% | 26% | +1.0% |
+| VIGILANCIA | MSFT | Retroceso dentro de tendencia alcista | 2026-11-17 | 7 d | 34% | 31% | +0.4% |
+| ALERTA | NVDA | Capitulación con miedo extremo | 2026-11-17 | 7 d | 50% | 40% | +1.5% |
 | VIGILANCIA | GFNORTEO.MX | Retroceso dentro de tendencia alcista | 2026-11-18 | 7 d | 37% | 31% | +0.4% |
 
 ## Alertas enviadas (últimas 15)
@@ -63,12 +62,12 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 66% | +0.1% |
 | Pánico sin daño real | crypto | 7 d | 23 | 44% | 41% | 42% | 75% | -0.2% |
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 82% | -0.7% |
-| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.4% |
+| Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.3% |
 | Pánico sin daño real | us | 7 d | 86 | 41% | 26% | 35% | 37% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.0% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 16% | +0.5% |
-| Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 29% | +0.4% |
+| Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.4% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 29% | +0.7% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 42 | 39% | 42% | 41% | 68% | -0.0% |
@@ -81,12 +80,12 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-11-19 | yahoo |
+| AAPL | sí | 2026-11-18 | yahoo |
 | AC.MX | sí | 2026-11-19 | yahoo |
 | ADA | sí | 2026-11-20 | binance |
 | ALSEA.MX | sí | 2026-11-19 | yahoo |
 | AMXB.MX | sí | 2026-11-19 | yahoo |
-| AMZN | sí | 2026-11-19 | yahoo |
+| AMZN | sí | 2026-11-18 | yahoo |
 | ASURB.MX | sí | 2026-11-19 | yahoo |
 | AVAX | sí | 2026-11-20 | binance |
 | BBAJIOO.MX | sí | 2026-11-19 | yahoo |
@@ -94,53 +93,53 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | BIMBOA.MX | sí | 2026-11-19 | yahoo |
 | BTC | sí | 2026-11-20 | binance |
 | CEMEXCPO.MX | sí | 2026-11-19 | yahoo |
-| DIA | sí | 2026-11-19 | yahoo |
+| DIA | sí | 2026-11-18 | yahoo |
 | DOGE | sí | 2026-11-20 | binance |
 | DOT | sí | 2026-11-20 | binance |
 | ETH | sí | 2026-11-20 | binance |
 | FEMSAUBD.MX | sí | 2026-11-19 | yahoo |
 | GAPB.MX | sí | 2026-11-19 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-19 | yahoo |
-| GLD | sí | 2026-11-19 | yahoo |
+| GLD | sí | 2026-11-18 | yahoo |
 | GMEXICOB.MX | sí | 2026-11-19 | yahoo |
-| GOOGL | sí | 2026-11-19 | yahoo |
+| GOOGL | sí | 2026-11-18 | yahoo |
 | GRUMAB.MX | sí | 2026-11-19 | yahoo |
-| IWM | sí | 2026-11-19 | yahoo |
-| JPM | sí | 2026-11-19 | yahoo |
+| IWM | sí | 2026-11-18 | yahoo |
+| JPM | sí | 2026-11-18 | yahoo |
 | KIMBERA.MX | sí | 2026-11-19 | yahoo |
 | KOFUBL.MX | sí | 2026-11-19 | yahoo |
 | LINK | sí | 2026-11-20 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-19 | yahoo |
 | LTC | sí | 2026-11-20 | binance |
-| META | sí | 2026-11-19 | yahoo |
-| MSFT | sí | 2026-11-19 | yahoo |
+| META | sí | 2026-11-18 | yahoo |
+| MSFT | sí | 2026-11-18 | yahoo |
 | MXN=X | sí | 2026-11-20 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-19 | yahoo |
-| NVDA | sí | 2026-11-19 | yahoo |
+| NVDA | sí | 2026-11-18 | yahoo |
 | OMAB.MX | sí | 2026-11-19 | yahoo |
 | ORBIA.MX | sí | 2026-11-19 | yahoo |
 | PINFRA.MX | sí | 2026-11-19 | yahoo |
-| QQQ | sí | 2026-11-19 | yahoo |
-| SMH | sí | 2026-11-19 | yahoo |
+| QQQ | sí | 2026-11-18 | yahoo |
+| SMH | sí | 2026-11-18 | yahoo |
 | SOL | sí | 2026-11-20 | binance |
-| SPY | sí | 2026-11-19 | yahoo |
+| SPY | sí | 2026-11-18 | yahoo |
 | TRX | sí | 2026-11-20 | binance |
-| TSLA | sí | 2026-11-19 | yahoo |
+| TSLA | sí | 2026-11-18 | yahoo |
 | WALMEX.MX | sí | 2026-11-19 | yahoo |
-| WMT | sí | 2026-11-19 | yahoo |
-| XLE | sí | 2026-11-19 | yahoo |
-| XLF | sí | 2026-11-19 | yahoo |
-| XLI | sí | 2026-11-19 | yahoo |
-| XLK | sí | 2026-11-19 | yahoo |
-| XLP | sí | 2026-11-19 | yahoo |
-| XLU | sí | 2026-11-19 | yahoo |
-| XLV | sí | 2026-11-19 | yahoo |
-| XLY | sí | 2026-11-19 | yahoo |
-| XOM | sí | 2026-11-19 | yahoo |
+| WMT | sí | 2026-11-18 | yahoo |
+| XLE | sí | 2026-11-18 | yahoo |
+| XLF | sí | 2026-11-18 | yahoo |
+| XLI | sí | 2026-11-18 | yahoo |
+| XLK | sí | 2026-11-18 | yahoo |
+| XLP | sí | 2026-11-18 | yahoo |
+| XLU | sí | 2026-11-18 | yahoo |
+| XLV | sí | 2026-11-18 | yahoo |
+| XLY | sí | 2026-11-18 | yahoo |
+| XOM | sí | 2026-11-18 | yahoo |
 | XRP | sí | 2026-11-20 | binance |
 | ^MXX | sí | 2026-11-19 | yahoo |
 | ^VIX | sí | 2026-11-19 | yahoo |
-| contexto_v42 | sí | 2026-11-19T23:12:19Z | CAUTION |
+| contexto_v42 | sí | 2026-11-20T00:06:43Z | CAUTION |
 | fear_greed | sí | 2026-11-20 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-18 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-18 | wikimedia |
