@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-20T00:06:43Z",
+ "generated_utc": "2026-11-20T01:05:51Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.36,
+ "bias": -0.359,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 64,
  "reasons": [
   "Precaución: sesgo -0.36",
-  "Stablecoins -5.43% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.459,
+   "aporte": -0.457,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.224,
+   "aporte": 0.222,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.186,
+   "aporte": 0.185,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.152,
+   "aporte": -0.151,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.087,
+   "aporte": -0.086,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
    "category": "FINANCIAL_CRISIS",
    "stance": "pro",
-   "aporte": 0.064,
+   "aporte": 0.063,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.43
+  "stablecoins_30d_pct": -5.89
  }
 }
