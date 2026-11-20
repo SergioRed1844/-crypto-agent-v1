@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-20T02:04:43Z",
+ "generated_utc": "2026-11-20T03:03:48Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.359,
+ "bias": -0.443,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 64,
+ "confidence": 67,
  "reasons": [
-  "Precaución: sesgo -0.36",
+  "Precaución: sesgo -0.44",
   "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
@@ -22,7 +22,16 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.456,
+   "aporte": -0.454,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-wall-street-slump-continues-as-dow-falls-over-1-10-2026-11-20",
+   "date": "2026-11-20",
+   "title_es": "Continúa la caída de Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -31,7 +40,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.22,
+   "aporte": 0.218,
    "fuente": "noticia"
   },
   {
@@ -40,7 +49,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.184,
+   "aporte": 0.183,
    "fuente": "noticia"
   },
   {
@@ -50,6 +59,15 @@
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
    "aporte": -0.151,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-gold-slips-below-3-700-as-fed-signals-more-rate-hi-2026-11-20",
+   "date": "2026-11-20",
+   "title_es": "El oro cae bajo los 3.700 dólares ante señales de más subidas de tipos de la Fed",
+   "category": "MONETARY_POLICY",
+   "stance": "anti",
+   "aporte": -0.149,
    "fuente": "noticia"
   },
   {
@@ -68,24 +86,6 @@
    "category": "HACK_SECURITY",
    "stance": "anti",
    "aporte": -0.088,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-house-democrats-eye-their-own-crypto-market-struct-2026-11-06",
-   "date": "2026-11-06",
-   "title_es": "Demócratas de la Cámara preparan ley cripto otorgando mayor rol a la SEC",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.086,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-companies-scramble-to-meet-payroll-pay-bills-after-2026-10-18",
-   "date": "2026-10-18",
-   "title_es": "Empresas luchan para pagar nóminas tras la quiebra de Silicon Valley Bank",
-   "category": "FINANCIAL_CRISIS",
-   "stance": "pro",
-   "aporte": 0.063,
    "fuente": "noticia"
   }
  ],
