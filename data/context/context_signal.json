@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-20T07:00:17Z",
+ "generated_utc": "2026-11-20T07:05:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.46,
+ "bias": -0.459,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -40,7 +40,7 @@
    "title_es": "Continúa la caída de Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
