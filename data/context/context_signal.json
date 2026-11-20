@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-20T10:56:58Z",
+ "generated_utc": "2026-11-20T11:01:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.231,
+   "aporte": -0.23,
    "fuente": "noticia"
   },
   {
