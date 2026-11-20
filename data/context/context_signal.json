@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-20T21:47:19Z",
+ "generated_utc": "2026-11-20T22:46:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.46",
-  "Stablecoins -5.92% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.95% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.43,
+   "aporte": -0.429,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.187,
+   "aporte": 0.185,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.17,
+   "aporte": 0.169,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.087,
+   "aporte": -0.086,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.92
+  "stablecoins_30d_pct": -5.95
  }
 }
