@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-19T23:12:19Z",
+ "updated_utc": "2026-11-20T00:06:43Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9039,6 +9039,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-19T17:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "rate_pause",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
+   "source_url": "https://www.theadviser.com.au/borrower/49267-surprise-unemployment-jump-rules-out-further-hikes-major-banks-say",
+   "source_title": "theadviser.com.au",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-surprise-unemployment-jump-rules-out-further-hikes-2026-11-19",
+   "date": "2026-11-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-19T23:30:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "cyberattack",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "JPMorgan, Visa y Mastercard reportan ciberataque a proveedores externos",
+   "source_url": "https://dunyanews.tv/en/Technology/983868-jpmorgan-visa-mastercard-say-thirdparty-vendors-targeted-in-cyberat",
+   "source_title": "dunyanews.tv",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-jpmorgan-visa-mastercard-say-third-party-vendors-t-2026-11-19",
+   "date": "2026-11-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-19T23:45:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "stock_market_drop",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
+   "source_url": "https://1019bigwaax.iheart.com/content/2026-11-19-wall-street-slump-continues-as-dow-falls-over-1100-points/",
+   "source_title": "1019bigwaax.iheart.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-wall-street-slump-continues-as-dow-falls-over-1-10-2026-11-19",
+   "date": "2026-11-19",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "23:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-19T23:45:00Z"
   }
  ]
 }
