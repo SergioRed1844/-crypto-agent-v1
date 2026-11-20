@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-20T22:50:43Z",
+ "updated_utc": "2026-11-20T23:45:32Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9459,6 +9459,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-20T06:45:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "ETF_FLOWS",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
+   "source_url": "https://www.ibtimes.com/bitcoin-below-60000-blackrock-etf-record-outflows-3810035",
+   "source_title": "ibtimes.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-breaks-below-60-000-blackrock-etf-suffers-2026-11-20",
+   "date": "2026-11-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "21:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-20T21:45:00Z"
+  },
+  {
+   "category": "CRYPTO_STRUCTURAL",
+   "subcategory": "STABLECOIN_RUN",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
+   "source_url": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-sky-protocol-sees-2b-in-stablecoin-redemptions-aft-2026-11-20",
+   "date": "2026-11-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "21:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-20T21:45:00Z"
   }
  ]
 }
