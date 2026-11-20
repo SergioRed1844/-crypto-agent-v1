@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-20T20:48:05Z",
+ "generated_utc": "2026-11-20T21:30:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.431,
+   "aporte": -0.43,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.252,
+   "aporte": -0.251,
    "fuente": "noticia"
   },
   {
@@ -40,16 +40,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.188,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-asian-shares-head-for-worst-week-since-2020-as-ai-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.188,
+   "aporte": 0.187,
    "fuente": "noticia"
   },
   {
@@ -58,7 +49,16 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-asian-shares-head-for-worst-week-since-2020-as-ai-2026-11-20",
+   "date": "2026-11-20",
+   "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.143,
+   "aporte": -0.142,
    "fuente": "noticia"
   },
   {
