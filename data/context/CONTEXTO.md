@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-20T21:30:21Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-20T21:47:19Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.46 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -13,7 +13,7 @@ Actualizado 2026-11-20T21:30:21Z UTC. Se recalcula cada hora; el calendario y lo
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.251 |
 | Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.187 |
 | El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.185 |
-| Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector  | 2026-11-20 | anti | -0.185 |
+| Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector  | 2026-11-20 | anti | -0.184 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.170 |
 | Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.142 |
 | Wall Street enfrenta desplome de 5,7 billones de dólares por desinflado en IA | 2026-11-07 | anti | -0.087 |
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-20T21:30:21Z",
+ "inicio": "2026-11-20T21:47:19Z",
  "onchain": {
   "scanned": [
-   976784,
-   976787
+   976788,
+   976788
   ],
-  "calls": 106,
+  "calls": 45,
   "stopped": null,
   "nuevas": 0
  },

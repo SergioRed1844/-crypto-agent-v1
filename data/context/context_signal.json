@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-20T21:30:21Z",
+ "generated_utc": "2026-11-20T21:47:19Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -58,7 +58,7 @@
    "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
