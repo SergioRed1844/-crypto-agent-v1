@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-20T03:42:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-20T04:03:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.46 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -9,9 +9,9 @@ Actualizado 2026-11-20T03:42:27Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.454 |
+| Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.453 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.265 |
-| Continúa la caída de Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-20 | anti | -0.261 |
+| Continúa la caída de Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-20 | anti | -0.259 |
 | Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.217 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.183 |
 | Bitcoin cae a mínimos de cuatro meses ante la aceleración de liquidaciones | 2026-11-15 | anti | -0.150 |
@@ -25,27 +25,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-20T03:42:27Z",
+ "inicio": "2026-11-20T04:03:04Z",
  "onchain": {
   "scanned": [
-   976673,
-   976676
+   976677,
+   976680
   ],
-  "calls": 102,
+  "calls": 45,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 24,
-  "eventos": 2,
-  "urgentes": 1,
+  "titulares": 0,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
