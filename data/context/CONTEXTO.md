@@ -1,22 +1,22 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-21T10:40:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-21T11:35:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.48
-- Stablecoins -6.32% en 30 días (liquidez saliendo)
+- Stablecoins -6.31% en 30 días (liquidez saliendo)
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.417 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.244 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.242 |
-| Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.207 |
+| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.416 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.243 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.241 |
+| Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.206 |
 | Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de f | 2026-11-20 | anti | -0.204 |
-| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.204 |
-| Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.168 |
-| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.166 |
+| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.200 |
+| Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.167 |
+| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.164 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,20 +25,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-21T10:40:48Z",
+ "inicio": "2026-11-21T11:35:00Z",
  "onchain": {
   "scanned": [
-   976884,
-   976886
+   976887,
+   976894
   ],
-  "calls": 109,
+  "calls": 99,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
   "titulares": 3,
-  "eventos": 0,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
