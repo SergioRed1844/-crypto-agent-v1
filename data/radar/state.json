@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-19T10:18:49+00:00",
   "2026-11-19T11:18:01+00:00",
   "2026-11-19T11:18:38+00:00",
   "2026-11-19T12:17:09+00:00",
@@ -429,9 +428,10 @@
   "2026-11-21T02:48:03+00:00",
   "2026-11-21T03:42:14+00:00",
   "2026-11-21T04:41:27+00:00",
-  "2026-11-21T05:40:17+00:00"
+  "2026-11-21T05:40:17+00:00",
+  "2026-11-21T06:39:23+00:00"
  ],
- "last_scan_utc": "2026-11-21T05:40:17+00:00",
+ "last_scan_utc": "2026-11-21T06:39:23+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -440,7 +440,7 @@
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "ADA": {
@@ -450,12 +450,12 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AMZN": {
@@ -465,7 +465,7 @@
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -475,7 +475,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "BCH": {
@@ -485,7 +485,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "BTC": {
@@ -495,7 +495,7 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "DIA": {
@@ -520,17 +520,17 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GLD": {
@@ -540,7 +540,7 @@
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "GOOGL": {
@@ -550,7 +550,7 @@
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "IWM": {
@@ -565,12 +565,12 @@
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "LINK": {
@@ -580,7 +580,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "LTC": {
@@ -615,17 +615,17 @@
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "QQQ": {
@@ -660,7 +660,7 @@
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-19",
    "nota": "yahoo"
   },
   "WMT": {
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-21T04:41:05Z",
+   "last": "2026-11-21T05:40:09Z",
    "nota": "CAUTION"
   }
  },
@@ -1037,130 +1037,16 @@
   {
    "sym": "GFNORTEO.MX",
    "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
+   "sid": "PULLBACK_TENDENCIA",
+   "date": "2026-11-18",
    "level": "VIGILANCIA",
    "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
+    "neto esperado solo +0.5 pp sobre un día cualquiera (< 1 pp)"
    ],
-   "p": 0.443,
-   "base": 0.398,
-   "ret": 0.0223,
-   "h": 30
-  },
-  {
-   "sym": "GMEXICOB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 43% vs día cualquiera 43%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.6 pp < 5 pp"
-   ],
-   "p": 0.479,
-   "base": 0.433,
-   "ret": 0.0231,
-   "h": 30
-  },
-  {
-   "sym": "CEMEXCPO.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 39%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
-   ],
-   "p": 0.437,
-   "base": 0.392,
-   "ret": 0.0122,
-   "h": 30
-  },
-  {
-   "sym": "GAPB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 38% vs día cualquiera 38%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
-   ],
-   "p": 0.427,
-   "base": 0.382,
-   "ret": 0.0195,
-   "h": 30
-  },
-  {
-   "sym": "OMAB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
-   ],
-   "p": 0.443,
-   "base": 0.397,
-   "ret": 0.0189,
-   "h": 30
-  },
-  {
-   "sym": "ORBIA.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 38% vs día cualquiera 38%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
-   ],
-   "p": 0.429,
-   "base": 0.384,
-   "ret": 0.0183,
-   "h": 30
-  },
-  {
-   "sym": "LIVEPOLC-1.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 28% vs día cualquiera 28%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.9 pp < 5 pp"
-   ],
-   "p": 0.318,
-   "base": 0.279,
-   "ret": 0.0087,
-   "h": 30
-  },
-  {
-   "sym": "BBAJIOO.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 36% vs día cualquiera 37%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.409,
-   "base": 0.365,
-   "ret": 0.0158,
-   "h": 30
+   "p": 0.367,
+   "base": 0.307,
+   "ret": 0.0038,
+   "h": 7
   }
  ],
  "digest_issue": {
