@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T11:35:00Z",
+ "generated_utc": "2026-11-21T11:43:22Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -67,7 +67,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.2,
+   "aporte": -0.199,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.167,
+   "aporte": 0.166,
    "fuente": "noticia"
   },
   {

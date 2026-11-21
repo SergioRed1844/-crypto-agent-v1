@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-21T11:35:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-21T11:43:22Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -14,8 +14,8 @@ Actualizado 2026-11-21T11:35:00Z UTC. Se recalcula cada hora; el calendario y lo
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.241 |
 | Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos | 2026-11-19 | anti | -0.206 |
 | Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de f | 2026-11-20 | anti | -0.204 |
-| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.200 |
-| Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.167 |
+| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.199 |
+| Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes ban | 2026-11-19 | pro | +0.166 |
 | El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.164 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-21T11:35:00Z",
+ "inicio": "2026-11-21T11:43:22Z",
  "onchain": {
   "scanned": [
-   976887,
-   976894
+   976895,
+   976896
   ],
-  "calls": 99,
+  "calls": 40,
   "stopped": null,
   "nuevas": 0
  },
