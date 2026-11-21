@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-21T17:29:46Z",
+ "generated_utc": "2026-11-21T18:28:42Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.476,
+ "bias": -0.477,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.475,
+   "aporte": -0.474,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,16 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.216,
+   "aporte": 0.214,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-bitcoin-price-crash-falls-to-lowest-level-in-two-y-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
+   "category": "CRYPTO_STRUCTURAL",
+   "stance": "anti",
+   "aporte": -0.211,
    "fuente": "noticia"
   },
   {
@@ -62,30 +71,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-sky-protocol-sees-2b-in-stablecoin-redemptions-aft-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.2,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-stocks-plunge-marking-five-day-losing-streak-2026-11-21",
    "date": "2026-11-21",
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.177,
+   "aporte": -0.173,
    "fuente": "noticia"
   },
   {
-   "id": "news-gold-crashes-5-to-3-538-as-waller-floats-50bp-dece-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.157,
+   "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
+   "date": "2026-11-12",
+   "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "pro",
+   "aporte": 0.156,
    "fuente": "noticia"
   }
  ],
