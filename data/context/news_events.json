@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-21T01:43:41Z",
+ "updated_utc": "2026-11-21T02:42:46Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9501,6 +9501,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-20T21:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "equity_markets",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
+   "source_url": "https://wccfradio.iheart.com/content/2026-11-20-stocks-plunge-marking-five-day-losing-streak/",
+   "source_title": "wccfradio.iheart.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-stocks-plunge-marking-five-day-losing-streak-2026-11-21",
+   "date": "2026-11-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-21T00:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "equity_markets",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Las acciones caen y acumulan cinco días a la baja",
+   "source_url": "https://twincitiesnewstalk.iheart.com/content/2026-11-20-stocks-plunge-marking-five-day-losing-streak/",
+   "source_title": "twincitiesnewstalk.iheart.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-stocks-plunge-marking-five-day-losing-streak-twin-2026-11-21",
+   "date": "2026-11-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-21T00:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "interest_rates",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El dólar cierra plano ante crecientes expectativas de endurecimiento monetario de la Fed",
+   "source_url": "https://www.rttnews.com/3716904/u-s-dollar-ends-roughly-flat-amid-rising-expectations-on-fed-tightening.aspx",
+   "source_title": "rttnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-dollar-ends-roughly-flat-amid-rising-expectati-2026-11-21",
+   "date": "2026-11-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-21T00:30:00Z"
   }
  ]
 }

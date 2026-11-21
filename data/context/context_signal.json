@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-21T01:43:41Z",
+ "generated_utc": "2026-11-21T02:42:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.472,
+ "bias": -0.476,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 68,
+ "confidence": 69,
  "reasons": [
-  "Precaución: sesgo -0.47",
+  "Precaución: sesgo -0.48",
   "Stablecoins -6.33% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
@@ -22,7 +22,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.425,
+   "aporte": -0.424,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.254,
+   "aporte": -0.252,
    "fuente": "noticia"
   },
   {
@@ -44,12 +44,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-stocks-plunge-marking-five-day-losing-streak-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.24,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-sky-protocol-sees-2b-in-stablecoin-redemptions-aft-2026-11-20",
    "date": "2026-11-20",
    "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.209,
    "fuente": "noticia"
   },
   {
@@ -58,7 +67,7 @@
    "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.179,
    "fuente": "noticia"
   },
   {
@@ -67,16 +76,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.179,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-asian-shares-head-for-worst-week-since-2020-as-ai-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Bolsas asiáticas se dirigen a su peor semana desde 2020 por desplome del sector de IA",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.169,
+   "aporte": -0.177,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.167,
+   "aporte": 0.166,
    "fuente": "noticia"
   }
  ],
