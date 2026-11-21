@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T19:28:04Z",
+ "generated_utc": "2026-11-21T19:44:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.473,
+   "aporte": -0.472,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.235,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.169,
+   "aporte": -0.168,
    "fuente": "noticia"
   },
   {
