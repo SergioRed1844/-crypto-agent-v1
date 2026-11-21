@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-21T19:44:37Z",
+ "updated_utc": "2026-11-21T20:27:09Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9745,6 +9745,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-bitcoin-price-crash-falls-to-lowest-level-in-two-y-2026-11-21",
+   "date": "2026-11-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "16:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-21T16:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "SUMMIT",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Trump destaca reunión con Xi y Putin pero ofrece escasos resultados",
+   "source_url": "https://www.wemu.org/npr-national-news/2026-11-20/trump-touts-meeting-with-xi-and-putin-but-offers-few-results",
+   "source_title": "wemu.org",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-trump-touts-meeting-with-xi-and-putin-but-offers-f-2026-11-21",
    "date": "2026-11-21",
    "status": "happened",
    "scheduled": false,

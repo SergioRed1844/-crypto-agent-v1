@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T19:44:37Z",
+ "generated_utc": "2026-11-21T20:27:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.31% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.33% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.472,
+   "aporte": -0.471,
    "fuente": "noticia"
   },
   {
@@ -40,16 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.235,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-look-at-india-trump-cites-india-7-gdp-growth-to-sl-2026-11-21",
-   "date": "2026-11-21",
-   "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
-   "category": "MONETARY_POLICY",
-   "stance": "pro",
-   "aporte": 0.212,
+   "aporte": -0.234,
    "fuente": "noticia"
   },
   {
@@ -59,6 +50,15 @@
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
    "aporte": -0.21,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-look-at-india-trump-cites-india-7-gdp-growth-to-sl-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
+   "category": "MONETARY_POLICY",
+   "stance": "pro",
+   "aporte": 0.21,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.166,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.155,
+   "aporte": 0.154,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.31
+  "stablecoins_30d_pct": -6.33
  }
 }
