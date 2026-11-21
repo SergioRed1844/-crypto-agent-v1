@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-21T11:43:22Z",
+ "updated_utc": "2026-11-21T12:34:16Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9585,6 +9585,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-21T00:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "Interest Rate Expectations",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Probabilidad de subida de tipos de la Fed en enero cae al 47%",
+   "source_url": "https://www.riotimesonline.com/fed-january-hike-odds-fall-to-47-percent-2026/",
+   "source_title": "riotimesonline.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-january-hike-odds-fall-to-47-2026-11-21",
+   "date": "2026-11-21",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "11:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-21T11:30:00Z"
   }
  ]
 }

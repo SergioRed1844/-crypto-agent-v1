@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-21T11:43:22Z",
+ "generated_utc": "2026-11-21T12:34:16Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.477,
+ "bias": -0.474,
  "event_risk": 0.0,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 69,
+ "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.48",
-  "Stablecoins -6.31% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.47",
+  "Stablecoins -6.3% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.416,
+   "aporte": -0.415,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,16 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-fed-january-hike-odds-fall-to-47-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Probabilidad de subida de tipos de la Fed en enero cae al 47%",
+   "category": "MONETARY_POLICY",
+   "stance": "pro",
+   "aporte": 0.223,
    "fuente": "noticia"
   },
   {
@@ -58,7 +67,7 @@
    "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.204,
+   "aporte": -0.203,
    "fuente": "noticia"
   },
   {
@@ -67,16 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.199,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-surprise-unemployment-jump-rules-out-further-hikes-2026-11-19",
-   "date": "2026-11-19",
-   "title_es": "Sorpresivo aumento del desempleo descarta más subidas de tasas según grandes bancos",
-   "category": "MONETARY_POLICY",
-   "stance": "pro",
-   "aporte": 0.166,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.31
+  "stablecoins_30d_pct": -6.3
  }
 }
