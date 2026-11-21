@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-21T18:31:49Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-21T19:28:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -9,14 +9,14 @@ Actualizado 2026-11-21T18:31:49Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.474 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.473 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.236 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.236 |
-| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.214 |
-| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.211 |
-| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.204 |
-| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.173 |
-| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.156 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.235 |
+| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.212 |
+| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.210 |
+| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.203 |
+| Las acciones se desploman marcando una racha de cinco días de pérdidas | 2026-11-21 | anti | -0.169 |
+| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.155 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,13 +25,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-21T18:31:49Z",
+ "inicio": "2026-11-21T19:28:04Z",
  "onchain": {
   "scanned": [
-   976934,
-   976936
+   976937,
+   976940
   ],
-  "calls": 46,
+  "calls": 76,
   "stopped": null,
   "nuevas": 0
  },
