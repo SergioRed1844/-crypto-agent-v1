@@ -1,0 +1,404 @@
+{
+ "generado": "2026-11-21T08:54:10.271539+00:00",
+ "bitso_libros": [
+  "ada_usd",
+  "atom_usd",
+  "avax_usd",
+  "bar_usd",
+  "bch_usd",
+  "brl1_brl",
+  "btc_ars",
+  "btc_mxn",
+  "btc_usd",
+  "btc_usds",
+  "btc_usdt",
+  "doge_usd",
+  "enj_usd",
+  "eth_mxn",
+  "eth_usd",
+  "eth_usdt",
+  "eur_usd",
+  "hbar_usd",
+  "hype_usd",
+  "link_usd",
+  "ltc_mxn",
+  "ltc_usd",
+  "mana_mxn",
+  "mana_usd",
+  "near_usd",
+  "neiro_usd",
+  "ondo_usd",
+  "paxg_usd",
+  "pepe_usd",
+  "psg_usd",
+  "pyusd_mxn",
+  "rlusd_mxn",
+  "sol_mxn",
+  "sol_usd",
+  "sol_usdt",
+  "trx_mxn",
+  "trx_usd",
+  "tusd_btc",
+  "tusd_mxn",
+  "uni_usd",
+  "usd_ars",
+  "usd_brl",
+  "usd_cop",
+  "usd_mxn",
+  "usd_usdt",
+  "usdt_ars",
+  "usdt_brl",
+  "usdt_cop",
+  "usdt_mxn",
+  "xlm_usd",
+  "xrp_mxn",
+  "xrp_usd",
+  "xrp_usdt"
+ ],
+ "consultas": {
+  "dodo": {
+   "candidatos": [
+    {
+     "id": "dodo",
+     "name": "DODO",
+     "symbol": "DODO",
+     "market_cap_rank": 462
+    },
+    {
+     "id": "dodo-2",
+     "name": "DODO",
+     "symbol": "DODO",
+     "market_cap_rank": 6641
+    },
+    {
+     "id": "smol-dodo",
+     "name": "Smol dodo",
+     "symbol": "$DOD",
+     "market_cap_rank": 11597
+    },
+    {
+     "id": "dodo-the-black-swan",
+     "name": "Dodo the Black Swan",
+     "symbol": "DODO",
+     "market_cap_rank": 14660
+    }
+   ],
+   "fichas": [
+    {
+     "id": "dodo",
+     "nombre": "DODO",
+     "simbolo": "dodo",
+     "categorias": [
+      "Decentralized Exchange (DEX)",
+      "Exchange-based Tokens",
+      "Decentralized Finance (DeFi)",
+      "BNB Chain Ecosystem",
+      "Binance Launchpool",
+      "Polygon Ecosystem",
+      "Near Protocol Ecosystem",
+      "Arbitrum Ecosystem",
+      "Ethereum Ecosystem",
+      "DWF Labs Portfolio",
+      "Coinbase Ventures Portfolio",
+      "Alameda Research Portfolio",
+      "DeFiance Capital Portfolio",
+      "Pantera Capital Portfolio",
+      "Aurora Ecosystem",
+      "Energi Ecosystem",
+      "YZi Labs (Prev. Binance Labs) Portfolio",
+      "Galaxy Digital Portfolio",
+      "Made in China"
+     ],
+     "plataformas": {
+      "ethereum": "0x43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd",
+      "near-protocol": "43dfc4159d86f3a37a5a4b3d4580b888ad7d4ddd.factory.bridge.near",
+      "aurora": "0xe301ed8c7630c9678c39e4e45193d1e7dfb914f7",
+      "energi": "0x4fec4e046e6b8de5d22785c3fbdb104f14f5a306",
+      "polygon-pos": "0xe4bf2864ebec7b7fdf6eeca9bacae7cdfdaffe78",
+      "binance-smart-chain": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+      "arbitrum-one": "0x69eb4fa4a2fbd498c257c57ea8b7655a2559a581"
+     },
+     "fecha_genesis": null,
+     "precio": 0.03864896,
+     "cap": 38648961,
+     "rank": 458,
+     "fdv": 38648961,
+     "vol_24h": 26008732,
+     "ath": 8.38,
+     "ath_fecha": "2021-02-20T01:19:28.000Z",
+     "vs_ath": -99.53863,
+     "atl": 0.0129848,
+     "cambio_24h": 28.52645,
+     "cambio_7d": 14.21392,
+     "cambio_30d": 79.27861,
+     "cambio_1a": 63.59263,
+     "circulante": 1000000000.0,
+     "total": 1000000000.0,
+     "max": 1000000000.0,
+     "mercados": [
+      {
+       "exchange": "Binance",
+       "par": "DODO/USDT",
+       "vol_usd": 6205841,
+       "confianza": null
+      },
+      {
+       "exchange": "Pionex",
+       "par": "DODO/USDT",
+       "vol_usd": 5161255,
+       "confianza": null
+      },
+      {
+       "exchange": "Binance",
+       "par": "DODO/TRY",
+       "vol_usd": 4471558,
+       "confianza": null
+      },
+      {
+       "exchange": "BTCC",
+       "par": "DODO/USDT",
+       "vol_usd": 3099800,
+       "confianza": null
+      },
+      {
+       "exchange": "LBank",
+       "par": "DODO/USDT",
+       "vol_usd": 2317958,
+       "confianza": null
+      },
+      {
+       "exchange": "Biconomy.com",
+       "par": "DODO/USDT",
+       "vol_usd": 794826,
+       "confianza": null
+      },
+      {
+       "exchange": "Toobit",
+       "par": "DODO/USDT",
+       "vol_usd": 737150,
+       "confianza": null
+      },
+      {
+       "exchange": "WhiteBIT",
+       "par": "DODO/USDT",
+       "vol_usd": 660209,
+       "confianza": null
+      },
+      {
+       "exchange": "Ourbit",
+       "par": "DODO/USDT",
+       "vol_usd": 617586,
+       "confianza": null
+      },
+      {
+       "exchange": "Bitvavo",
+       "par": "DODO/EUR",
+       "vol_usd": 384339,
+       "confianza": null
+      }
+     ],
+     "historia": {
+      "dias": 365,
+      "primer_dato": "2025-11-22",
+      "min_365": 0.013355480814084811,
+      "max_365": 0.03861235476747456,
+      "fecha_max_365": "2026-11-21",
+      "ret_7d": 0.31163473299142175,
+      "ret_30d": 0.8099628684279545,
+      "ultimos_10": {
+       "2026-11-12": 0.023043168396242812,
+       "2026-11-13": 0.028221080423440483,
+       "2026-11-14": 0.02943834422515791,
+       "2026-11-15": 0.03222724598920457,
+       "2026-11-16": 0.031193910835975953,
+       "2026-11-17": 0.032845859269038886,
+       "2026-11-18": 0.03443351014089708,
+       "2026-11-19": 0.034938869513572286,
+       "2026-11-20": 0.030495099093970718,
+       "2026-11-21": 0.03861235476747456
+      }
+     }
+    },
+    {
+     "id": "dodo-2",
+     "nombre": "DODO",
+     "simbolo": "dodo",
+     "categorias": [
+      "Meme",
+      "Ethereum Ecosystem",
+      "4chan-Themed"
+     ],
+     "plataformas": {
+      "ethereum": "0x747e550a7b848ace786c3cfe754aa78febc8a022"
+     },
+     "fecha_genesis": null,
+     "precio": 0.00530263,
+     "cap": 53026,
+     "rank": 6644,
+     "fdv": 53026,
+     "vol_24h": 6.9,
+     "ath": 2.02,
+     "ath_fecha": "2024-04-01T13:16:06.000Z",
+     "vs_ath": -99.73786,
+     "atl": 0.0053012,
+     "cambio_24h": null,
+     "cambio_7d": null,
+     "cambio_30d": null,
+     "cambio_1a": -83.53141,
+     "circulante": 10000000.0,
+     "total": 10000000.0,
+     "max": 10000000.0,
+     "mercados": [
+      {
+       "exchange": "Uniswap V2 (Ethereum)",
+       "par": "0X747E550A7B848ACE786C3CFE754AA78FEBC8A022/0XC02AAA39B223FE8D0A0E5C4F27EAD9083C756CC2",
+       "vol_usd": 6.9,
+       "confianza": null
+      }
+     ],
+     "historia": {
+      "dias": 333,
+      "primer_dato": "2025-11-22",
+      "min_365": 0.005692691026207299,
+      "max_365": 0.034596523888057264,
+      "fecha_max_365": "2025-11-29",
+      "ret_7d": -0.23799755709610892,
+      "ret_30d": -0.4896422724016306,
+      "ultimos_10": {
+       "2026-11-05": 0.009395884023207407,
+       "2026-11-06": 0.007956298254034596,
+       "2026-11-07": 0.007470699181111812,
+       "2026-11-08": 0.0073909908165652825,
+       "2026-11-11": 0.00673920891382736,
+       "2026-11-13": 0.006346106550987228,
+       "2026-11-15": 0.005950780051691825,
+       "2026-11-16": 0.005985164911266802,
+       "2026-11-17": 0.005971431408561583,
+       "2026-11-20": 0.005692691026207299
+      }
+     }
+    },
+    {
+     "id": "smol-dodo",
+     "nombre": "Smol dodo",
+     "simbolo": "$dod",
+     "categorias": [
+      "Solana Ecosystem",
+      "Meme",
+      "Solana Meme",
+      "Pump.fun Ecosystem",
+      "4chan-Themed"
+     ],
+     "plataformas": {
+      "solana": "3aTpfof6xw6GZAxKXFdX4fGn5BBK2MXdPT8rS4WUpump"
+     },
+     "fecha_genesis": null,
+     "precio": 6.28e-06,
+     "cap": 6278.92,
+     "rank": 11600,
+     "fdv": 6278.92,
+     "vol_24h": 73.03,
+     "ath": 0.00018752,
+     "ath_fecha": "2025-08-23T21:15:54.000Z",
+     "vs_ath": -96.65135,
+     "atl": 6.26e-06,
+     "cambio_24h": null,
+     "cambio_7d": null,
+     "cambio_30d": null,
+     "cambio_1a": -84.50839,
+     "circulante": 999924200.145808,
+     "total": 999924200.145808,
+     "max": 1000000000.0,
+     "mercados": [
+      {
+       "exchange": "Raydium",
+       "par": "3ATPFOF6XW6GZAXKXFDX4FGN5BBK2MXDPT8RS4WUPUMP/SO11111111111111111111111111111111111111112",
+       "vol_usd": 73.03,
+       "confianza": null
+      }
+     ],
+     "historia": {
+      "dias": 225,
+      "primer_dato": "2025-11-22",
+      "min_365": 6.531360759426542e-06,
+      "max_365": 4.562036563348085e-05,
+      "fecha_max_365": "2025-11-27",
+      "ret_7d": -0.30082490441315357,
+      "ret_30d": -0.66544673399385,
+      "ultimos_10": {
+       "2026-10-31": 9.775786437004027e-06,
+       "2026-11-02": 9.497596756627873e-06,
+       "2026-11-03": 9.432540041051131e-06,
+       "2026-11-04": 9.387632873830541e-06,
+       "2026-11-05": 9.531986270769863e-06,
+       "2026-11-10": 7.980018253527724e-06,
+       "2026-11-11": 8.00793655178867e-06,
+       "2026-11-13": 7.76004643521576e-06,
+       "2026-11-20": 6.531360759426542e-06,
+       "2026-11-21": 6.594997084828681e-06
+      }
+     }
+    },
+    {
+     "id": "dodo-the-black-swan",
+     "nombre": "Dodo the Black Swan",
+     "simbolo": "dodo",
+     "categorias": [
+      "Solana Ecosystem",
+      "Meme"
+     ],
+     "plataformas": {
+      "solana": "DoDoYogRFcc7XRwdJfMQKLvccYJKAvqPnqVpFZq6kjYs"
+     },
+     "fecha_genesis": null,
+     "precio": 6.47934e-10,
+     "cap": 1509.68,
+     "rank": 14660,
+     "fdv": 1509.68,
+     "vol_24h": 63.35,
+     "ath": 2.36e-06,
+     "ath_fecha": "2024-07-29T19:35:46.000Z",
+     "vs_ath": -99.97253,
+     "atl": 6.19278e-10,
+     "cambio_24h": null,
+     "cambio_7d": null,
+     "cambio_30d": -35.87191,
+     "cambio_1a": null,
+     "circulante": 2329996729843.0,
+     "total": 2329996729843.0,
+     "max": 2329996729843.0,
+     "mercados": [
+      {
+       "exchange": "Raydium",
+       "par": "DODOYOGRFCC7XRWDJFMQKLVCCYJKAVQPNQVPFZQ6KJYS/SO11111111111111111111111111111111111111112",
+       "vol_usd": 63.22,
+       "confianza": null
+      }
+     ],
+     "historia": {
+      "dias": 264,
+      "primer_dato": "2025-11-27",
+      "min_365": 6.467060230525312e-10,
+      "max_365": 1.3081976320807065e-08,
+      "fecha_max_365": "2025-12-04",
+      "ret_7d": -0.26852273387551107,
+      "ret_30d": -0.533550692561164,
+      "ultimos_10": {
+       "2026-10-25": 9.597494371827946e-10,
+       "2026-10-26": 9.448365463207016e-10,
+       "2026-10-30": 8.841095314949533e-10,
+       "2026-10-31": 9.150080353928653e-10,
+       "2026-11-01": 9.069132058111566e-10,
+       "2026-11-06": 8.514481514739494e-10,
+       "2026-11-18": 6.820706452448101e-10,
+       "2026-11-19": 6.726543140734834e-10,
+       "2026-11-20": 6.682900328079918e-10,
+       "2026-11-21": 6.467060230525312e-10
+      }
+     }
+    }
+   ],
+   "en_bitso": []
+  }
+ }
+}
