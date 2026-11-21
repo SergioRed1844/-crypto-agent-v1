@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-21T02:51:09Z",
+ "updated_utc": "2026-11-21T03:42:01Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9493,6 +9493,27 @@
    "confidence": 0.85,
    "origin": "gemini/GDELT",
    "id": "news-sky-protocol-sees-2b-in-stablecoin-redemptions-aft-2026-11-20",
+   "date": "2026-11-20",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "21:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-20T21:45:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "tech_selloff",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
+   "source_url": "https://www.aol.com/articles/anthropic-plunges-wall-street-suffers-210718000.html",
+   "source_title": "aol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-anthropic-plunges-as-wall-street-suffers-ai-sell-o-2026-11-20",
    "date": "2026-11-20",
    "status": "happened",
    "scheduled": false,
