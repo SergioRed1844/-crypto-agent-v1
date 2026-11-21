@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-21T22:25:07Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-21T22:28:40Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -10,7 +10,7 @@ Actualizado 2026-11-21T22:25:07Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.468 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.234 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.233 |
 | Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.233 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.208 |
 | Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.207 |
@@ -25,21 +25,18 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-21T22:25:07Z",
+ "inicio": "2026-11-21T22:28:40Z",
  "onchain": {
-  "scanned": [
-   976949,
-   976956
-  ],
-  "calls": 77,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 24,
-  "eventos": 6,
-  "urgentes": 1,
+  "titulares": 8,
+  "eventos": 2,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
