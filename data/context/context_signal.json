@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T22:28:40Z",
+ "generated_utc": "2026-11-21T23:24:24Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.33% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.32% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.468,
+   "aporte": -0.467,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.233,
+   "aporte": -0.232,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.207,
+   "aporte": 0.205,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.159,
+   "aporte": -0.156,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.153,
+   "aporte": 0.152,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.33
+  "stablecoins_30d_pct": -6.32
  }
 }
