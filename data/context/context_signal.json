@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T16:30:33Z",
+ "generated_utc": "2026-11-21T17:29:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.3% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.31% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.477,
+   "aporte": -0.475,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.218,
+   "aporte": 0.216,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.205,
+   "aporte": -0.204,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.18,
+   "aporte": -0.177,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.158,
+   "aporte": -0.157,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.3
+  "stablecoins_30d_pct": -6.31
  }
 }
