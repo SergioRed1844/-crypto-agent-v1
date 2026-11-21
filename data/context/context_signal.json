@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T12:34:16Z",
+ "generated_utc": "2026-11-21T13:33:08Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -6.3% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.29% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.415,
+   "aporte": -0.414,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.241,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Probabilidad de subida de tipos de la Fed en enero cae al 47%",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.223,
+   "aporte": 0.221,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.206,
+   "aporte": -0.205,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Sky Protocol sufre reembolsos de 2.000 millones en stablecoins tras informe de finanzas ilícitas",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.203,
+   "aporte": -0.202,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.196,
+   "aporte": -0.192,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.163,
+   "aporte": -0.162,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.3
+  "stablecoins_30d_pct": -6.29
  }
 }
