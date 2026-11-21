@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T02:46:50Z",
+ "generated_utc": "2026-11-21T02:51:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Continúa la caída en Wall Street con el Dow Jones perdiendo más de 1.100 puntos",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.424,
+   "aporte": -0.423,
    "fuente": "noticia"
   },
   {
