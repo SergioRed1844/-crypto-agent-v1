@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T23:24:24Z",
+ "generated_utc": "2026-11-22T00:23:30Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.32% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.31% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.467,
+   "aporte": -0.466,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.233,
+   "aporte": -0.232,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.232,
+   "aporte": -0.231,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.208,
+   "aporte": -0.207,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.205,
+   "aporte": 0.204,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.156,
+   "aporte": -0.153,
    "fuente": "noticia"
   },
   {
@@ -98,9 +98,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 12
+   "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.32
+  "stablecoins_30d_pct": -6.31
  }
 }
