@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T11:13:44Z",
+ "generated_utc": "2026-11-22T12:12:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.18% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.16% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.451,
+   "aporte": -0.45,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.225,
+   "aporte": -0.224,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.194,
+   "aporte": -0.193,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.186,
+   "aporte": 0.185,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.145,
+   "aporte": 0.144,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.135,
+   "aporte": -0.134,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.18
+  "stablecoins_30d_pct": -6.16
  }
 }
