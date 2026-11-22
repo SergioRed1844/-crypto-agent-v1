@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T02:21:37Z",
+ "generated_utc": "2026-11-22T02:25:27Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -76,7 +76,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.151,
+   "aporte": 0.15,
    "fuente": "noticia"
   },
   {
