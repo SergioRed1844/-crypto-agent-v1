@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T10:21:53Z",
+ "generated_utc": "2026-11-22T11:16:26Z",
  "fear_greed": {
   "value": 11,
   "label": "Extreme Fear",
@@ -7,8 +7,8 @@
   "avg_30d": 28.9
  },
  "stablecoins": {
-  "total_usd": 282520814659,
-  "chg_7d_pct": -1.59,
+  "total_usd": 282513404510,
+  "chg_7d_pct": -1.6,
   "chg_30d_pct": -6.18
  },
  "fred": {
@@ -21,7 +21,7 @@
     "Yes": 0.1705,
     "No": 0.8295
    },
-   "volume": 8421628.508108,
+   "volume": 8421728.508108,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -30,7 +30,7 @@
     "Yes": 0.1705,
     "No": 0.8295
    },
-   "volume": 8421628.508108,
+   "volume": 8421728.508108,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
