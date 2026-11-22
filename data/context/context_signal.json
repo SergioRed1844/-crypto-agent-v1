@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T08:46:01Z",
+ "generated_utc": "2026-11-22T09:15:28Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.222,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.19,
+   "aporte": 0.189,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.147,
+   "aporte": 0.146,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.138,
+   "aporte": -0.137,
    "fuente": "noticia"
   }
  ],
