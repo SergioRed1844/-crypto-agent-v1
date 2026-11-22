@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-22T14:10:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-22T14:14:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.03 · tamaño ×0.5 · compras permitidas
 
@@ -19,7 +19,7 @@ Actualizado 2026-11-22T14:10:58Z UTC. Se recalcula cada hora; el calendario y lo
 | Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.218 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.199 |
 | Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.192 |
-| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.182 |
+| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.181 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.143 |
 | El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.132 |
 
@@ -30,27 +30,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-22T14:10:58Z",
+ "inicio": "2026-11-22T14:14:27Z",
  "onchain": {
-  "scanned": [
-   977059,
-   977065
-  ],
-  "calls": 72,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 9,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
