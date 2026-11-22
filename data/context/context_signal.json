@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T00:39:01Z",
+ "generated_utc": "2026-11-22T01:22:34Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.31% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.2% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [],
  "recent": [
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.465,
+   "aporte": -0.464,
    "fuente": "noticia"
   },
   {
@@ -31,7 +31,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.232,
+   "aporte": -0.231,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.203,
+   "aporte": 0.202,
    "fuente": "noticia"
   },
   {
@@ -76,7 +76,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.152,
+   "aporte": 0.151,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.152,
+   "aporte": -0.15,
    "fuente": "noticia"
   }
  ],
@@ -101,6 +101,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.31
+  "stablecoins_30d_pct": -6.2
  }
 }
