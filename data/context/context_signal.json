@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-22T14:14:27Z",
+ "generated_utc": "2026-11-22T15:10:15Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.476,
- "event_risk": 0.027,
+ "event_risk": 0.028,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 69,
  "reasons": [
   "Precaución: sesgo -0.48",
-  "Stablecoins -6.17% en 30 días (liquidez saliendo)"
+  "Stablecoins -6.16% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.011,
+   "riesgo": 0.012,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.447,
+   "aporte": -0.446,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.222,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.218,
+   "aporte": -0.217,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.199,
+   "aporte": -0.198,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.181,
+   "aporte": 0.18,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.132,
+   "aporte": -0.131,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -6.17
+  "stablecoins_30d_pct": -6.16
  }
 }
