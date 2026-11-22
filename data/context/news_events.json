@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-22T21:04:54Z",
+ "updated_utc": "2026-11-22T22:03:55Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9774,6 +9774,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-21T16:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed",
+   "source_url": "https://www.ibtimes.co.in/gold-falls-nearly-11-mcx-traders-brace-fed-rate-hike-908590",
+   "source_title": "ibtimes.co.in",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-tests-3-500-as-traders-look-beyond-december-f-2026-11-22",
+   "date": "2026-11-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:00",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-22T19:00:00Z"
   }
  ]
 }
