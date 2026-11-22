@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T01:22:34Z",
+ "generated_utc": "2026-11-22T02:21:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.464,
+   "aporte": -0.463,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.23,
+   "aporte": -0.229,
    "fuente": "noticia"
   },
   {
@@ -49,7 +49,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.207,
+   "aporte": -0.206,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.202,
+   "aporte": 0.2,
    "fuente": "noticia"
   },
   {
@@ -67,7 +67,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.2,
+   "aporte": -0.199,
    "fuente": "noticia"
   },
   {
@@ -85,7 +85,7 @@
    "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.15,
+   "aporte": -0.147,
    "fuente": "noticia"
   }
  ],
