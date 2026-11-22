@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-22T18:07:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-22T18:10:27Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.03 · tamaño ×0.5 · compras permitidas
 
@@ -21,7 +21,7 @@ Actualizado 2026-11-22T18:07:29Z UTC. Se recalcula cada hora; el calendario y lo
 | Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.190 |
 | Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.176 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.141 |
-| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.128 |
+| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.127 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-22T18:07:29Z",
+ "inicio": "2026-11-22T18:10:27Z",
  "onchain": {
   "scanned": [
-   977080,
-   977082
+   977083,
+   977084
   ],
-  "calls": 16,
+  "calls": 53,
   "stopped": null,
   "nuevas": 0
  },

@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T18:07:29Z",
+ "generated_utc": "2026-11-22T18:10:27Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -114,7 +114,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.128,
+   "aporte": -0.127,
    "fuente": "noticia"
   }
  ],
