@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-22T06:21:35Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-22T07:17:20Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.48 · riesgo de evento 0.00 · tamaño ×0.5 · compras permitidas
 
@@ -9,14 +9,14 @@ Actualizado 2026-11-22T06:21:35Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.458 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.228 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.225 |
-| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.204 |
-| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.197 |
-| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.194 |
-| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.148 |
-| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.141 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.456 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.227 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.224 |
+| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.203 |
+| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.196 |
+| Trump cita el crecimiento de India para presionar a la Fed a bajar tasas | 2026-11-21 | pro | +0.192 |
+| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.147 |
+| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.140 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -25,27 +25,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-22T06:21:35Z",
+ "inicio": "2026-11-22T07:17:20Z",
  "onchain": {
   "scanned": [
-   977006,
-   977013
+   977014,
+   977017
   ],
-  "calls": 75,
+  "calls": 48,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 8,
+  "titulares": 0,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2
