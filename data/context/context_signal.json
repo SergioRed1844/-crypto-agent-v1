@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T00:23:30Z",
+ "generated_utc": "2026-11-22T00:39:01Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.466,
+   "aporte": -0.465,
    "fuente": "noticia"
   },
   {
@@ -40,7 +40,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.231,
+   "aporte": -0.23,
    "fuente": "noticia"
   },
   {
@@ -58,7 +58,7 @@
    "title_es": "Trump cita el crecimiento de India para presionar a la Fed a bajar tasas",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.204,
+   "aporte": 0.203,
    "fuente": "noticia"
   },
   {
@@ -71,21 +71,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-stocks-plunge-marking-five-day-losing-streak-2026-11-21",
-   "date": "2026-11-21",
-   "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.153,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
    "date": "2026-11-12",
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
    "aporte": 0.152,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-stocks-plunge-marking-five-day-losing-streak-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Las acciones se desploman marcando una racha de cinco días de pérdidas",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.152,
    "fuente": "noticia"
   }
  ],
