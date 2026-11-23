@@ -140,7 +140,7 @@ def btc_y_ordenes() -> dict:
     r = {}
     w = klines("BTCUSDT", "1w", 400)
     if not w.empty:
-        cerradas = w[w.index + pd.Timedelta(days=7) <= pd.Timestamp.utcnow().tz_localize(None)]
+        cerradas = w[w.index + pd.Timedelta(days=7) <= pd.Timestamp.now('UTC').tz_localize(None)]
         rw = rsi(cerradas.c)
         r["btc_semanal"] = {"ultima_semana_inicio": str(cerradas.index[-1].date()), "cierre": float(cerradas.c.iloc[-1]),
                             "rsi14_semanal": round(float(rw.iloc[-1]), 1),
@@ -168,16 +168,22 @@ def btc_y_ordenes() -> dict:
         o = get("https://bitso.com/api/v3/ohlc", {"book": libro, "time_bucket": 3600,
                                                    "start": desde, "end": int(time.time() * 1000)}, tries=2)
         if o and o.get("payload"):
-            lows = [(float(v["low"]), v.get("bucket_start_time")) for v in o["payload"]]
-            m = min(lows)
-            r[f"bitso_{libro}"] = {**r.get(f"bitso_{libro}", {}), "min_desde_16nov": m[0], "cuando_ms": m[1]}
+            pl = o["payload"]
+            r[f"bitso_{libro}"] = {**r.get(f"bitso_{libro}", {}), "ohlc_muestra": pl[:2] if isinstance(pl, list) else str(pl)[:300]}
+            try:
+                lows = [(float(v.get("low", v.get("l"))), v.get("bucket_start_time")) for v in pl if isinstance(v, dict)]
+                if lows:
+                    m = min(lows)
+                    r[f"bitso_{libro}"].update({"min_desde_16nov": m[0], "cuando_ms": m[1]})
+            except (TypeError, ValueError) as e:
+                r[f"bitso_{libro}"]["ohlc_error"] = f"{type(e).__name__}: {e}"
     return r
 
 
 def main(out_dir: str) -> None:
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    res: dict = {"generado": pd.Timestamp.utcnow().isoformat(), "rango_cap": [CAP_MIN, CAP_MAX]}
+    res: dict = {"generado": pd.Timestamp.now('UTC').isoformat(), "rango_cap": [CAP_MIN, CAP_MAX]}
     info = get(f"{BAPI}/exchangeInfo", {"permissions": "SPOT"}) or {}
     pares = {s["symbol"]: s["baseAsset"] for s in info.get("symbols", [])
              if s.get("quoteAsset") == "USDT" and s.get("status") == "TRADING"}
@@ -256,7 +262,11 @@ def main(out_dir: str) -> None:
         res["fuerza_relativa_7d"] = h.sort_values("ret7", ascending=False).head(15).to_dict("records")
         cortos = {r["sym"] for k in ("despertar_ultimos_5d", "casi") for r in res[k]} | {"DODOUSDT"}
         res["libro"] = {s: profundidad(s) for s in sorted(cortos)}
-    res["btc"] = btc_y_ordenes()
+    (out / "screener.json").write_text(json.dumps(res, ensure_ascii=False, indent=1, default=str))
+    try:
+        res["btc"] = btc_y_ordenes()
+    except Exception as e:  # noqa: BLE001
+        res["btc"] = {"error": f"{type(e).__name__}: {str(e)[:200]}"}
     (out / "screener.json").write_text(json.dumps(res, ensure_ascii=False, indent=1, default=str))
     print(json.dumps({k: res[k] for k in ("universo_n", "hoy_n")}), json.dumps(res["estudio"].get("despertar"))[:800])
 
