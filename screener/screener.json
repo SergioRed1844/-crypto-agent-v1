@@ -1,0 +1,1250 @@
+{
+ "generado": "2026-11-23T03:35:37.565048+00:00",
+ "rango_cap": [
+  10000000.0,
+  200000000.0
+ ],
+ "bitso_bases": [
+  "ADA",
+  "ATOM",
+  "AVAX",
+  "BAR",
+  "BCH",
+  "BRL1",
+  "BTC",
+  "DOGE",
+  "ENJ",
+  "ETH",
+  "EUR",
+  "HBAR",
+  "HYPE",
+  "LINK",
+  "LTC",
+  "MANA",
+  "NEAR",
+  "NEIRO",
+  "ONDO",
+  "PAXG",
+  "PEPE",
+  "PSG",
+  "PYUSD",
+  "RLUSD",
+  "SOL",
+  "TRX",
+  "TUSD",
+  "UNI",
+  "USD",
+  "USDT",
+  "XLM",
+  "XRP"
+ ],
+ "dodo_pares_24h": {
+  "DODOBTC": {
+   "vol_quote": 6.01183885,
+   "vol_usd": null,
+   "cambio_24h": -4.545,
+   "ultimo": 2.1e-07
+  },
+  "DODOBUSD": {
+   "vol_quote": 2.26872,
+   "vol_usd": null,
+   "cambio_24h": 0.0,
+   "ultimo": 0.1233
+  },
+  "DODOUSDT": {
+   "vol_quote": 2289779.560935,
+   "vol_usd": 2289779.560935,
+   "cambio_24h": 6.067,
+   "ultimo": 0.03986
+  },
+  "DODOTRY": {
+   "vol_quote": 163027699.6676,
+   "vol_usd": 3221254.6861805967,
+   "cambio_24h": 6.294,
+   "ultimo": 2.0215
+  }
+ },
+ "universo_n": 267,
+ "dodo_senal": {
+  "senal_dias": [
+   "2026-04-23",
+   "2026-04-24",
+   "2026-05-21",
+   "2026-07-14",
+   "2026-11-16"
+  ],
+  "ult_20": {
+   "2026-11-03": {
+    "c": 0.02219,
+    "rompe90": false,
+    "vol_ratio": 0.64,
+    "ret30": 0.19,
+    "vs_max": -0.93
+   },
+   "2026-11-04": {
+    "c": 0.02199,
+    "rompe90": false,
+    "vol_ratio": 0.71,
+    "ret30": 0.165,
+    "vs_max": -0.93
+   },
+   "2026-11-05": {
+    "c": 0.02189,
+    "rompe90": false,
+    "vol_ratio": 0.78,
+    "ret30": 0.171,
+    "vs_max": -0.931
+   },
+   "2026-11-06": {
+    "c": 0.02207,
+    "rompe90": false,
+    "vol_ratio": 0.69,
+    "ret30": 0.223,
+    "vs_max": -0.93
+   },
+   "2026-11-07": {
+    "c": 0.02196,
+    "rompe90": false,
+    "vol_ratio": 0.77,
+    "ret30": 0.19,
+    "vs_max": -0.93
+   },
+   "2026-11-08": {
+    "c": 0.02221,
+    "rompe90": false,
+    "vol_ratio": 0.75,
+    "ret30": 0.198,
+    "vs_max": -0.93
+   },
+   "2026-11-09": {
+    "c": 0.02324,
+    "rompe90": false,
+    "vol_ratio": 0.81,
+    "ret30": 0.228,
+    "vs_max": -0.926
+   },
+   "2026-11-10": {
+    "c": 0.02297,
+    "rompe90": false,
+    "vol_ratio": 0.78,
+    "ret30": 0.221,
+    "vs_max": -0.927
+   },
+   "2026-11-11": {
+    "c": 0.02307,
+    "rompe90": false,
+    "vol_ratio": 0.72,
+    "ret30": 0.175,
+    "vs_max": -0.927
+   },
+   "2026-11-12": {
+    "c": 0.02824,
+    "rompe90": true,
+    "vol_ratio": 1.04,
+    "ret30": 0.384,
+    "vs_max": -0.911
+   },
+   "2026-11-13": {
+    "c": 0.02945,
+    "rompe90": true,
+    "vol_ratio": 1.37,
+    "ret30": 0.46,
+    "vs_max": -0.907
+   },
+   "2026-11-14": {
+    "c": 0.0322,
+    "rompe90": true,
+    "vol_ratio": 1.94,
+    "ret30": 0.512,
+    "vs_max": -0.898
+   },
+   "2026-11-15": {
+    "c": 0.03121,
+    "rompe90": false,
+    "vol_ratio": 2.01,
+    "ret30": 0.488,
+    "vs_max": -0.901
+   },
+   "2026-11-16": {
+    "c": 0.0329,
+    "rompe90": true,
+    "vol_ratio": 2.13,
+    "ret30": 0.586,
+    "vs_max": -0.896
+   },
+   "2026-11-17": {
+    "c": 0.03444,
+    "rompe90": true,
+    "vol_ratio": 2.23,
+    "ret30": 0.623,
+    "vs_max": -0.891
+   },
+   "2026-11-18": {
+    "c": 0.035,
+    "rompe90": true,
+    "vol_ratio": 2.26,
+    "ret30": 0.645,
+    "vs_max": -0.889
+   },
+   "2026-11-19": {
+    "c": 0.03058,
+    "rompe90": false,
+    "vol_ratio": 1.82,
+    "ret30": 0.437,
+    "vs_max": -0.903
+   },
+   "2026-11-20": {
+    "c": 0.03398,
+    "rompe90": false,
+    "vol_ratio": 1.66,
+    "ret30": 0.594,
+    "vs_max": -0.892
+   },
+   "2026-11-21": {
+    "c": 0.03962,
+    "rompe90": true,
+    "vol_ratio": 1.69,
+    "ret30": 0.771,
+    "vs_max": -0.875
+   },
+   "2026-11-22": {
+    "c": 0.04005,
+    "rompe90": true,
+    "vol_ratio": 1.68,
+    "ret30": 0.871,
+    "vs_max": -0.873
+   }
+  }
+ },
+ "estudio": {
+  "despertar": {
+   "n": 188,
+   "monedas": 141,
+   "max_30d": {
+    "mediana": 0.217,
+    "p25": 0.084,
+    "p75": 0.413
+   },
+   "min_30d": {
+    "mediana": -0.227,
+    "p25": -0.319,
+    "p75": -0.123
+   },
+   "ret_7d": {
+    "mediana": -0.033,
+    "p25": -0.113,
+    "p75": 0.076
+   },
+   "ret_30d": {
+    "mediana": -0.132,
+    "p25": -0.271,
+    "p75": 0.009
+   },
+   "P_max_+30": 0.383,
+   "P_max_+50": 0.207,
+   "P_max_+80": 0.117,
+   "P_max_+100": 0.09,
+   "P_max_+300": 0.011,
+   "P_min_-30": 0.314,
+   "P_ret30_pos": 0.271,
+   "P_+50_antes_-20": 0.207,
+   "P_-20_antes_+50": 0.505
+  },
+  "tasa_base_moneda_caida": {
+   "n": 18586,
+   "monedas": 231,
+   "max_30d": {
+    "mediana": 0.18,
+    "p25": 0.075,
+    "p75": 0.361
+   },
+   "min_30d": {
+    "mediana": -0.178,
+    "p25": -0.296,
+    "p75": -0.089
+   },
+   "ret_7d": {
+    "mediana": -0.019,
+    "p25": -0.082,
+    "p75": 0.05
+   },
+   "ret_30d": {
+    "mediana": -0.074,
+    "p25": -0.216,
+    "p75": 0.089
+   },
+   "P_max_+30": 0.315,
+   "P_max_+50": 0.16,
+   "P_max_+80": 0.069,
+   "P_max_+100": 0.045,
+   "P_max_+300": 0.006,
+   "P_min_-30": 0.242,
+   "P_ret30_pos": 0.37,
+   "P_+50_antes_-20": 0.147,
+   "P_-20_antes_+50": 0.437
+  },
+  "por_anio": {
+   "2024": {
+    "n": 4,
+    "monedas": 3,
+    "max_30d": {
+     "mediana": 0.433,
+     "p25": 0.335,
+     "p75": 0.481
+    },
+    "min_30d": {
+     "mediana": -0.297,
+     "p25": -0.316,
+     "p75": -0.247
+    },
+    "ret_7d": {
+     "mediana": 0.101,
+     "p25": 0.017,
+     "p75": 0.197
+    },
+    "ret_30d": {
+     "mediana": -0.17,
+     "p25": -0.225,
+     "p75": -0.036
+    },
+    "P_max_+30": 0.75,
+    "P_max_+50": 0.25,
+    "P_max_+80": 0.0,
+    "P_max_+100": 0.0,
+    "P_max_+300": 0.0,
+    "P_min_-30": 0.5,
+    "P_ret30_pos": 0.25,
+    "P_+50_antes_-20": 0.25,
+    "P_-20_antes_+50": 0.75
+   },
+   "2025": {
+    "n": 12,
+    "monedas": 12,
+    "max_30d": {
+     "mediana": 0.28,
+     "p25": 0.145,
+     "p75": 0.936
+    },
+    "min_30d": {
+     "mediana": -0.316,
+     "p25": -0.557,
+     "p75": -0.222
+    },
+    "ret_7d": {
+     "mediana": -0.03,
+     "p25": -0.16,
+     "p75": 0.065
+    },
+    "ret_30d": {
+     "mediana": -0.195,
+     "p25": -0.256,
+     "p75": 0.11
+    },
+    "P_max_+30": 0.5,
+    "P_max_+50": 0.333,
+    "P_max_+80": 0.25,
+    "P_max_+100": 0.25,
+    "P_max_+300": 0.0,
+    "P_min_-30": 0.667,
+    "P_ret30_pos": 0.333,
+    "P_+50_antes_-20": 0.333,
+    "P_-20_antes_+50": 0.667
+   },
+   "2026": {
+    "n": 172,
+    "monedas": 136,
+    "max_30d": {
+     "mediana": 0.215,
+     "p25": 0.082,
+     "p75": 0.4
+    },
+    "min_30d": {
+     "mediana": -0.221,
+     "p25": -0.314,
+     "p75": -0.12
+    },
+    "ret_7d": {
+     "mediana": -0.036,
+     "p25": -0.111,
+     "p75": 0.075
+    },
+    "ret_30d": {
+     "mediana": -0.122,
+     "p25": -0.273,
+     "p75": 0.007
+    },
+    "P_max_+30": 0.366,
+    "P_max_+50": 0.198,
+    "P_max_+80": 0.11,
+    "P_max_+100": 0.081,
+    "P_max_+300": 0.012,
+    "P_min_-30": 0.285,
+    "P_ret30_pos": 0.267,
+    "P_+50_antes_-20": 0.198,
+    "P_-20_antes_+50": 0.488
+   }
+  },
+  "ultimos_eventos": [
+   {
+    "sym": "TRBUSDT",
+    "fecha": "2026-09-30",
+    "ret30_previo": 0.252,
+    "vol_ratio": 2.24,
+    "max_30d": 0.113,
+    "min_30d": -0.304,
+    "ret_7d": -0.06,
+    "ret_30d": -0.223,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "GTCUSDT",
+    "fecha": "2026-09-30",
+    "ret30_previo": 0.156,
+    "vol_ratio": 5.77,
+    "max_30d": 3.175,
+    "min_30d": -0.014,
+    "ret_7d": 1.025,
+    "ret_30d": 1.34,
+    "primero": "gana",
+    "anio": "2026"
+   },
+   {
+    "sym": "BERAUSDT",
+    "fecha": "2026-09-30",
+    "ret30_previo": 0.405,
+    "vol_ratio": 2.27,
+    "max_30d": 0.004,
+    "min_30d": -0.488,
+    "ret_7d": -0.122,
+    "ret_30d": -0.434,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "DYDXUSDT",
+    "fecha": "2026-10-01",
+    "ret30_previo": 0.373,
+    "vol_ratio": 2.05,
+    "max_30d": 0.035,
+    "min_30d": -0.351,
+    "ret_7d": -0.144,
+    "ret_30d": -0.305,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "GALAUSDT",
+    "fecha": "2026-10-02",
+    "ret30_previo": 0.538,
+    "vol_ratio": 2.12,
+    "max_30d": 0.04,
+    "min_30d": -0.421,
+    "ret_7d": -0.123,
+    "ret_30d": -0.358,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "RADUSDT",
+    "fecha": "2026-10-05",
+    "ret30_previo": 0.445,
+    "vol_ratio": 2.35,
+    "max_30d": 0.267,
+    "min_30d": -0.459,
+    "ret_7d": -0.113,
+    "ret_30d": -0.297,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "OGNUSDT",
+    "fecha": "2026-10-05",
+    "ret30_previo": 0.168,
+    "vol_ratio": 2.63,
+    "max_30d": 1.427,
+    "min_30d": -0.06,
+    "ret_7d": 0.599,
+    "ret_30d": 0.138,
+    "primero": "gana",
+    "anio": "2026"
+   },
+   {
+    "sym": "YGGUSDT",
+    "fecha": "2026-10-05",
+    "ret30_previo": 0.205,
+    "vol_ratio": 2.11,
+    "max_30d": 0.061,
+    "min_30d": -0.258,
+    "ret_7d": -0.098,
+    "ret_30d": -0.162,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "AIUSDT",
+    "fecha": "2026-10-06",
+    "ret30_previo": 0.106,
+    "vol_ratio": 3.0,
+    "max_30d": 0.12,
+    "min_30d": -0.236,
+    "ret_7d": -0.029,
+    "ret_30d": -0.231,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "BANDUSDT",
+    "fecha": "2026-10-06",
+    "ret30_previo": 0.256,
+    "vol_ratio": 3.29,
+    "max_30d": 0.068,
+    "min_30d": -0.286,
+    "ret_7d": 0.011,
+    "ret_30d": -0.261,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "EDUUSDT",
+    "fecha": "2026-10-06",
+    "ret30_previo": 0.167,
+    "vol_ratio": 5.43,
+    "max_30d": 0.266,
+    "min_30d": -0.269,
+    "ret_7d": 0.102,
+    "ret_30d": -0.236,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "CTSIUSDT",
+    "fecha": "2026-10-08",
+    "ret30_previo": 0.293,
+    "vol_ratio": 3.18,
+    "max_30d": 0.284,
+    "min_30d": -0.259,
+    "ret_7d": -0.028,
+    "ret_30d": -0.248,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "SKLUSDT",
+    "fecha": "2026-10-08",
+    "ret30_previo": 0.328,
+    "vol_ratio": 3.84,
+    "max_30d": 0.198,
+    "min_30d": -0.294,
+    "ret_7d": -0.047,
+    "ret_30d": -0.253,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "DIAUSDT",
+    "fecha": "2026-10-09",
+    "ret30_previo": 0.379,
+    "vol_ratio": 2.21,
+    "max_30d": 0.028,
+    "min_30d": -0.33,
+    "ret_7d": -0.109,
+    "ret_30d": -0.3,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "GMTUSDT",
+    "fecha": "2026-10-09",
+    "ret30_previo": 0.29,
+    "vol_ratio": 2.62,
+    "max_30d": 0.054,
+    "min_30d": -0.41,
+    "ret_7d": -0.178,
+    "ret_30d": -0.389,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "CFXUSDT",
+    "fecha": "2026-10-10",
+    "ret30_previo": 0.354,
+    "vol_ratio": 3.86,
+    "max_30d": 0.18,
+    "min_30d": -0.36,
+    "ret_7d": -0.129,
+    "ret_30d": -0.329,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "WALUSDT",
+    "fecha": "2026-10-11",
+    "ret30_previo": 0.461,
+    "vol_ratio": 3.31,
+    "max_30d": 0.773,
+    "min_30d": -0.311,
+    "ret_7d": 0.02,
+    "ret_30d": -0.274,
+    "primero": "gana",
+    "anio": "2026"
+   },
+   {
+    "sym": "MANTAUSDT",
+    "fecha": "2026-10-11",
+    "ret30_previo": 0.227,
+    "vol_ratio": 5.27,
+    "max_30d": 0.051,
+    "min_30d": -0.342,
+    "ret_7d": -0.109,
+    "ret_30d": -0.312,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "RSRUSDT",
+    "fecha": "2026-10-12",
+    "ret30_previo": 0.502,
+    "vol_ratio": 10.05,
+    "max_30d": 0.023,
+    "min_30d": -0.45,
+    "ret_7d": -0.155,
+    "ret_30d": -0.296,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "CYBERUSDT",
+    "fecha": "2026-10-12",
+    "ret30_previo": 0.307,
+    "vol_ratio": 6.32,
+    "max_30d": 0.108,
+    "min_30d": -0.378,
+    "ret_7d": -0.165,
+    "ret_30d": -0.311,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "OSMOUSDT",
+    "fecha": "2026-10-12",
+    "ret30_previo": 0.536,
+    "vol_ratio": 3.45,
+    "max_30d": 0.302,
+    "min_30d": -0.409,
+    "ret_7d": 0.052,
+    "ret_30d": -0.353,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "DUSKUSDT",
+    "fecha": "2026-10-13",
+    "ret30_previo": 0.361,
+    "vol_ratio": 2.36,
+    "max_30d": 0.378,
+    "min_30d": -0.313,
+    "ret_7d": 0.176,
+    "ret_30d": -0.305,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "METISUSDT",
+    "fecha": "2026-10-15",
+    "ret30_previo": 0.36,
+    "vol_ratio": 3.82,
+    "max_30d": 0.154,
+    "min_30d": -0.44,
+    "ret_7d": 0.008,
+    "ret_30d": -0.409,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "AVAUSDT",
+    "fecha": "2026-10-17",
+    "ret30_previo": 0.436,
+    "vol_ratio": 3.61,
+    "max_30d": 0.308,
+    "min_30d": -0.445,
+    "ret_7d": 0.134,
+    "ret_30d": -0.427,
+    "primero": "pierde",
+    "anio": "2026"
+   },
+   {
+    "sym": "ALTUSDT",
+    "fecha": "2026-10-18",
+    "ret30_previo": 0.242,
+    "vol_ratio": 5.27,
+    "max_30d": 0.767,
+    "min_30d": -0.494,
+    "ret_7d": -0.283,
+    "ret_30d": -0.472,
+    "primero": "gana",
+    "anio": "2026"
+   }
+  ]
+ },
+ "hoy_n": 244,
+ "ya_explotaron": [
+  {
+   "sym": "DODOUSDT",
+   "base": "DODO",
+   "nombre": "DODO",
+   "cap_m": 39.8,
+   "fdv_cap": 1.0,
+   "rank": 457,
+   "vs_ath_cg": -99.5249,
+   "cierre": 0.04005,
+   "precio_vivo": 0.03986,
+   "vol24_binance_m": 2.29,
+   "ret7": 0.283,
+   "ret30": 0.871,
+   "dist90": 0.011,
+   "vol_ratio": 1.68,
+   "rsi": 75.5,
+   "vs_max_datos": -0.873,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-11-16",
+   "en_bitso": false
+  },
+  {
+   "sym": "MMTUSDT",
+   "base": "MMT",
+   "nombre": "Momentum",
+   "cap_m": 44.3,
+   "fdv_cap": 4.9,
+   "rank": 424,
+   "vs_ath_cg": -94.61796,
+   "cierre": 0.218,
+   "precio_vivo": 0.2174,
+   "vol24_binance_m": 14.21,
+   "ret7": 1.082,
+   "ret30": 0.594,
+   "dist90": -0.186,
+   "vol_ratio": 31.8,
+   "rsi": 63.5,
+   "vs_max_datos": -0.917,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-06-27",
+   "en_bitso": false
+  }
+ ],
+ "despertar_ultimos_5d": [],
+ "casi": [],
+ "fuerza_relativa_7d": [
+  {
+   "sym": "MMTUSDT",
+   "base": "MMT",
+   "nombre": "Momentum",
+   "cap_m": 44.3,
+   "fdv_cap": 4.9,
+   "rank": 424,
+   "vs_ath_cg": -94.61796,
+   "cierre": 0.218,
+   "precio_vivo": 0.2174,
+   "vol24_binance_m": 14.21,
+   "ret7": 1.082,
+   "ret30": 0.594,
+   "dist90": -0.186,
+   "vol_ratio": 31.8,
+   "rsi": 63.5,
+   "vs_max_datos": -0.917,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-06-27",
+   "en_bitso": false
+  },
+  {
+   "sym": "DODOUSDT",
+   "base": "DODO",
+   "nombre": "DODO",
+   "cap_m": 39.8,
+   "fdv_cap": 1.0,
+   "rank": 457,
+   "vs_ath_cg": -99.5249,
+   "cierre": 0.04005,
+   "precio_vivo": 0.03986,
+   "vol24_binance_m": 2.29,
+   "ret7": 0.283,
+   "ret30": 0.871,
+   "dist90": 0.011,
+   "vol_ratio": 1.68,
+   "rsi": 75.5,
+   "vs_max_datos": -0.873,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-11-16",
+   "en_bitso": false
+  },
+  {
+   "sym": "HUMAUSDT",
+   "base": "HUMA",
+   "nombre": "Huma Finance",
+   "cap_m": 14.4,
+   "fdv_cap": 5.77,
+   "rank": 907,
+   "vs_ath_cg": -92.81955,
+   "cierre": 0.00838,
+   "precio_vivo": 0.00833,
+   "vol24_binance_m": 1.53,
+   "ret7": 0.277,
+   "ret30": -0.681,
+   "dist90": -0.764,
+   "vol_ratio": 2.77,
+   "rsi": 33.3,
+   "vs_max_datos": -0.875,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "ENSOUSDT",
+   "base": "ENSO",
+   "nombre": "Enso",
+   "cap_m": 10.1,
+   "fdv_cap": 4.86,
+   "rank": 1096,
+   "vs_ath_cg": -89.45315,
+   "cierre": 0.469,
+   "precio_vivo": 0.486,
+   "vol24_binance_m": 4.04,
+   "ret7": 0.228,
+   "ret30": -0.281,
+   "dist90": -0.553,
+   "vol_ratio": 2.97,
+   "rsi": 45.8,
+   "vs_max_datos": -0.85,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "YBUSDT",
+   "base": "YB",
+   "nombre": "Yield Basis",
+   "cap_m": 15.9,
+   "fdv_cap": 2.56,
+   "rank": 856,
+   "vs_ath_cg": -93.45953,
+   "cierre": 0.0524,
+   "precio_vivo": 0.0536,
+   "vol24_binance_m": 0.71,
+   "ret7": 0.216,
+   "ret30": -0.163,
+   "dist90": -0.506,
+   "vol_ratio": 6.95,
+   "rsi": 48.4,
+   "vs_max_datos": -0.922,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "BLURUSDT",
+   "base": "BLUR",
+   "nombre": "Blur",
+   "cap_m": 22.5,
+   "fdv_cap": 1.02,
+   "rank": 680,
+   "vs_ath_cg": -99.84743,
+   "cierre": 0.00741,
+   "precio_vivo": 0.00766,
+   "vol24_binance_m": 0.88,
+   "ret7": 0.201,
+   "ret30": -0.106,
+   "dist90": -0.66,
+   "vol_ratio": 1.31,
+   "rsi": 47.1,
+   "vs_max_datos": -0.99,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "SENTUSDT",
+   "base": "SENT",
+   "nombre": "Sentient",
+   "cap_m": 144.4,
+   "fdv_cap": 4.75,
+   "rank": 186,
+   "vs_ath_cg": -58.49528,
+   "cierre": 0.01966,
+   "precio_vivo": 0.02002,
+   "vol24_binance_m": 1.48,
+   "ret7": 0.166,
+   "ret30": -0.12,
+   "dist90": -0.244,
+   "vol_ratio": 3.01,
+   "rsi": 53.2,
+   "vs_max_datos": -0.59,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "GPSUSDT",
+   "base": "GPS",
+   "nombre": "GoPlus Security",
+   "cap_m": 57.7,
+   "fdv_cap": 1.63,
+   "rank": 357,
+   "vs_ath_cg": -95.71955,
+   "cierre": 0.00922,
+   "precio_vivo": 0.00946,
+   "vol24_binance_m": 0.28,
+   "ret7": 0.134,
+   "ret30": 0.11,
+   "dist90": -0.265,
+   "vol_ratio": 0.43,
+   "rsi": 63.8,
+   "vs_max_datos": -0.864,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-02-06",
+   "en_bitso": false
+  },
+  {
+   "sym": "ZAMAUSDT",
+   "base": "ZAMA",
+   "nombre": "Zama",
+   "cap_m": 155.2,
+   "fdv_cap": 4.47,
+   "rank": 175,
+   "vs_ath_cg": -43.31387,
+   "cierre": 0.06098,
+   "precio_vivo": 0.06105,
+   "vol24_binance_m": 1.6,
+   "ret7": 0.125,
+   "ret30": -0.159,
+   "dist90": -0.4,
+   "vol_ratio": 0.31,
+   "rsi": 46.1,
+   "vs_max_datos": -0.4,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "LISTAUSDT",
+   "base": "LISTA",
+   "nombre": "Lista DAO",
+   "cap_m": 33.9,
+   "fdv_cap": 1.85,
+   "rank": 510,
+   "vs_ath_cg": -90.63535,
+   "cierre": 0.0766,
+   "precio_vivo": 0.0794,
+   "vol24_binance_m": 3.52,
+   "ret7": 0.12,
+   "ret30": -0.041,
+   "dist90": -0.137,
+   "vol_ratio": 2.27,
+   "rsi": 55.8,
+   "vs_max_datos": -0.903,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-09-05",
+   "en_bitso": false
+  },
+  {
+   "sym": "KERNELUSDT",
+   "base": "KERNEL",
+   "nombre": "KernelDAO",
+   "cap_m": 12.9,
+   "fdv_cap": 3.44,
+   "rank": 955,
+   "vs_ath_cg": -90.58757,
+   "cierre": 0.044,
+   "precio_vivo": 0.0443,
+   "vol24_binance_m": 1.31,
+   "ret7": 0.117,
+   "ret30": -0.154,
+   "dist90": -0.278,
+   "vol_ratio": 3.17,
+   "rsi": 50.8,
+   "vs_max_datos": -0.865,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-09-22",
+   "en_bitso": false
+  },
+  {
+   "sym": "EDUUSDT",
+   "base": "EDU",
+   "nombre": "Open Campus",
+   "cap_m": 41.6,
+   "fdv_cap": 1.16,
+   "rank": 441,
+   "vs_ath_cg": -97.11446,
+   "cierre": 0.0485,
+   "precio_vivo": 0.0485,
+   "vol24_binance_m": 0.18,
+   "ret7": 0.102,
+   "ret30": -0.229,
+   "dist90": -0.387,
+   "vol_ratio": 0.23,
+   "rsi": 48.0,
+   "vs_max_datos": -0.962,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-10-11",
+   "en_bitso": false
+  },
+  {
+   "sym": "WCTUSDT",
+   "base": "WCT",
+   "nombre": "WalletConnect Token",
+   "cap_m": 14.3,
+   "fdv_cap": 2.05,
+   "rank": 911,
+   "vs_ath_cg": -97.81498,
+   "cierre": 0.02945,
+   "precio_vivo": 0.02939,
+   "vol24_binance_m": 0.12,
+   "ret7": 0.093,
+   "ret30": -0.201,
+   "dist90": -0.347,
+   "vol_ratio": 0.75,
+   "rsi": 43.3,
+   "vs_max_datos": -0.974,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": NaN,
+   "en_bitso": false
+  },
+  {
+   "sym": "ERAUSDT",
+   "base": "ERA",
+   "nombre": "Caldera",
+   "cap_m": 12.8,
+   "fdv_cap": 5.72,
+   "rank": 960,
+   "vs_ath_cg": -96.08229,
+   "cierre": 0.0762,
+   "precio_vivo": 0.0734,
+   "vol24_binance_m": 1.76,
+   "ret7": 0.072,
+   "ret30": 0.0,
+   "dist90": -0.129,
+   "vol_ratio": 0.49,
+   "rsi": 54.1,
+   "vs_max_datos": -0.955,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-10-26",
+   "en_bitso": false
+  },
+  {
+   "sym": "USUALUSDT",
+   "base": "USUAL",
+   "nombre": "Usual",
+   "cap_m": 22.3,
+   "fdv_cap": 1.0,
+   "rank": 684,
+   "vs_ath_cg": -99.30207,
+   "cierre": 0.01102,
+   "precio_vivo": 0.01126,
+   "vol24_binance_m": 0.78,
+   "ret7": 0.072,
+   "ret30": 0.093,
+   "dist90": -0.277,
+   "vol_ratio": 1.48,
+   "rsi": 54.0,
+   "vs_max_datos": -0.992,
+   "despertar_hoy": false,
+   "despertar_5d": false,
+   "ult_despertar": "2026-09-25",
+   "en_bitso": false
+  }
+ ],
+ "libro": {
+  "DODOUSDT": {
+   "mid": 0.03992,
+   "spread": 0.001002506265664227,
+   "compras_2pct_usd": 38597,
+   "ventas_2pct_usd": 197248
+  }
+ },
+ "btc": {
+  "btc_semanal": {
+   "ultima_semana_inicio": "2026-11-16",
+   "cierre": 61271.08,
+   "rsi14_semanal": 35.4,
+   "rsi_previas": [
+    57.2,
+    54.6,
+    52.3,
+    47.9,
+    38.6
+   ],
+   "sma200_semanas": 68175.69494999999,
+   "min_semana": 55130.0,
+   "semana_en_curso": {
+    "inicio": "2026-11-23",
+    "precio": 61455.4
+   }
+  },
+  "btc_diario": {
+   "precio": 61455.4,
+   "mayer": 0.85,
+   "sma200": 72292.10385,
+   "sma50": 76260.53020000001,
+   "max_hist_400d": 116400.0,
+   "ult_7": {
+    "2026-11-17": [
+     63336,
+     64947
+    ],
+    "2026-11-18": [
+     62063,
+     63068
+    ],
+    "2026-11-19": [
+     61428,
+     61987
+    ],
+    "2026-11-20": [
+     57778,
+     58952
+    ],
+    "2026-11-21": [
+     55130,
+     60216
+    ],
+    "2026-11-22": [
+     58769,
+     61271
+    ],
+    "2026-11-23": [
+     60386,
+     61455
+    ]
+   }
+  },
+  "min_BTCUSDT": {
+   "min": 55130.0,
+   "cuando": "2026-11-21 06:00:00",
+   "ultimo": 61455.39
+  },
+  "min_ETHUSDT": {
+   "min": 1538.0,
+   "cuando": "2026-11-21 04:00:00",
+   "ultimo": 1735.01
+  },
+  "min_DOGEUSDT": {
+   "min": 0.05077,
+   "cuando": "2026-11-21 06:00:00",
+   "ultimo": 0.05548
+  },
+  "bitso_eth_mxn": {
+   "last": "33121",
+   "high": "33312",
+   "low": "31676",
+   "created_at": "2026-11-23T03:40:23+00:00",
+   "ohlc_muestra": [
+    {
+     "bucket_start_time": 1794852000000,
+     "first_trade_time": 1794852617377,
+     "last_trade_time": 1794855044226,
+     "first_rate": "33850",
+     "last_rate": "33864",
+     "min_rate": "33609",
+     "max_rate": "33864",
+     "trade_count": 11,
+     "volume": "2.21325076",
+     "vwap": "33786"
+    },
+    {
+     "bucket_start_time": 1794855600000,
+     "first_trade_time": 1794855833295,
+     "last_trade_time": 1794858823709,
+     "first_rate": "33725",
+     "last_rate": "33725",
+     "min_rate": "33620",
+     "max_rate": "33739",
+     "trade_count": 26,
+     "volume": "1.35384565",
+     "vwap": "33694"
+    }
+   ],
+   "ohlc_error": "TypeError: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  "bitso_doge_usd": {
+   "last": "0.05538",
+   "high": "0.055814",
+   "low": "0.05378",
+   "created_at": "2026-11-23T03:40:23+00:00",
+   "ohlc_muestra": [
+    {
+     "bucket_start_time": 1794852000000,
+     "first_trade_time": 1794852211935,
+     "last_trade_time": 1794855109770,
+     "first_rate": "0.059161",
+     "last_rate": "0.05961",
+     "min_rate": "0.059161",
+     "max_rate": "0.05961",
+     "trade_count": 9,
+     "volume": "709.38343809",
+     "vwap": "0.059318"
+    },
+    {
+     "bucket_start_time": 1794855600000,
+     "first_trade_time": 1794855879039,
+     "last_trade_time": 1794858963561,
+     "first_rate": "0.059272",
+     "last_rate": "0.059608",
+     "min_rate": "0.059205",
+     "max_rate": "0.059608",
+     "trade_count": 10,
+     "volume": "3097.67942155",
+     "vwap": "0.059239"
+    }
+   ],
+   "ohlc_error": "TypeError: float() argument must be a string or a real number, not 'NoneType'"
+  },
+  "bitso_usd_mxn": {
+   "last": "19.094",
+   "high": "19.3",
+   "low": "19.085",
+   "created_at": "2026-11-23T03:40:24+00:00",
+   "ohlc_muestra": [
+    {
+     "bucket_start_time": 1794852000000,
+     "first_trade_time": 1794852000296,
+     "last_trade_time": 1794855598475,
+     "first_rate": "18.575",
+     "last_rate": "18.563",
+     "min_rate": "18.554",
+     "max_rate": "18.587",
+     "trade_count": 1142,
+     "volume": "251294.32584856",
+     "vwap": "18.569"
+    },
+    {
+     "bucket_start_time": 1794855600000,
+     "first_trade_time": 1794855615635,
+     "last_trade_time": 1794859194302,
+     "first_rate": "18.563",
+     "last_rate": "18.551",
+     "min_rate": "18.55",
+     "max_rate": "18.565",
+     "trade_count": 821,
+     "volume": "190135.34516490",
+     "vwap": "18.556"
+    }
+   ],
+   "ohlc_error": "TypeError: float() argument must be a string or a real number, not 'NoneType'"
+  }
+ }
+}
