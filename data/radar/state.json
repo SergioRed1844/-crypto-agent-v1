@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-21T21:26:17+00:00",
   "2026-11-21T22:25:32+00:00",
   "2026-11-21T22:26:14+00:00",
   "2026-11-21T23:24:43+00:00",
@@ -429,9 +428,10 @@
   "2026-11-23T17:46:48+00:00",
   "2026-11-23T17:47:25+00:00",
   "2026-11-23T18:46:11+00:00",
-  "2026-11-23T19:45:14+00:00"
+  "2026-11-23T19:45:14+00:00",
+  "2026-11-23T21:43:26+00:00"
  ],
- "last_scan_utc": "2026-11-23T19:45:14+00:00",
+ "last_scan_utc": "2026-11-23T21:43:26+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-23T18:45:55Z",
+   "last": "2026-11-23T20:44:07Z",
    "nota": "CAUTION"
   }
  },
@@ -833,7 +833,7 @@
    "date": "2026-11-20",
    "level": "ALERTA",
    "why": [],
-   "p": 0.341,
+   "p": 0.34,
    "base": 0.273,
    "ret": 0.016,
    "h": 30
@@ -847,7 +847,7 @@
    "why": [],
    "p": 0.451,
    "base": 0.37,
-   "ret": 0.0176,
+   "ret": 0.0177,
    "h": 30
   },
   {
@@ -871,38 +871,7 @@
    "why": [],
    "p": 0.393,
    "base": 0.3,
-   "ret": 0.0102,
-   "h": 7
-  },
-  {
-   "sym": "XLF",
-   "cls": "us",
-   "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-11-19",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 31% vs día cualquiera 32%",
-    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.2 pp < 5 pp"
-   ],
-   "p": 0.365,
-   "base": 0.323,
-   "ret": 0.0078,
-   "h": 30
-  },
-  {
-   "sym": "XLV",
-   "cls": "us",
-   "sid": "PULLBACK_TENDENCIA",
-   "date": "2026-11-19",
-   "level": "VIGILANCIA",
-   "why": [
-    "neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.1 pp < 5 pp"
-   ],
-   "p": 0.244,
-   "base": 0.213,
-   "ret": 0.0025,
+   "ret": 0.0103,
    "h": 7
   },
   {
@@ -924,22 +893,10 @@
    "date": "2026-11-20",
    "level": "ALERTA",
    "why": [],
-   "p": 0.496,
+   "p": 0.497,
    "base": 0.416,
    "ret": 0.0219,
    "h": 30
-  },
-  {
-   "sym": "GLD",
-   "cls": "us",
-   "sid": "CAPITULACION",
-   "date": "2026-11-19",
-   "level": "ALERTA",
-   "why": [],
-   "p": 0.342,
-   "base": 0.255,
-   "ret": 0.0101,
-   "h": 7
   },
   {
    "sym": "NVDA",
@@ -950,7 +907,7 @@
    "why": [],
    "p": 0.56,
    "base": 0.474,
-   "ret": 0.0393,
+   "ret": 0.0392,
    "h": 30
   },
   {
@@ -1024,7 +981,7 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 39%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
+    "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
    "p": 0.437,
    "base": 0.392,
@@ -1044,7 +1001,7 @@
    ],
    "p": 0.427,
    "base": 0.382,
-   "ret": 0.0196,
+   "ret": 0.0197,
    "h": 30
   },
   {
@@ -1059,7 +1016,7 @@
     "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
    "p": 0.443,
-   "base": 0.397,
+   "base": 0.398,
    "ret": 0.019,
    "h": 30
   },
@@ -1104,7 +1061,7 @@
    "why": [
     "la ventaja no es creíble: cota baja 36% vs día cualquiera 37%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
+    "ventaja vs día cualquiera +4.5 pp < 5 pp"
    ],
    "p": 0.41,
    "base": 0.365,
