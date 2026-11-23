@@ -1,0 +1,24 @@
+# Oportunidades fuera del factor IA + foto de la cartera. Corre con [oport-run].
+name: core-oportunidad
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-oportunidad
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[oport-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas numpy requests yfinance
+      - run: python -m core.oportunidad out/oportunidad
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "oportunidad - $(date -u +%FT%TZ)"
