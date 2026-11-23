@@ -1,14 +1,11 @@
-# 📡 Radar EB — resumen 2026-11-22
+# 📡 Radar EB — resumen 2026-11-23
 
-**Sigo vivo:** 34 corridas en 24 h · última 2026-11-22T14:11:08+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 29 corridas en 24 h · última 2026-11-23T16:47:45+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
 | Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
 |---|---|---|---|---|---|---|---|---|
-| VIGILANCIA | ETH | Pánico sin daño real | 2026-11-20 | 7 d | 42% | 42% | +0.5% | contexto v4.2 en CAUTION: exigencia +5 pp; la ventaja no es creíble: cota baja 36% vs día cualquiera 47% |
-| VIGILANCIA | ETH | Capitulación con miedo extremo | 2026-11-20 | 7 d | 42% | 42% | +0.7% | contexto v4.2 en CAUTION: exigencia +5 pp; la ventaja no es creíble: cota baja 37% vs día cualquiera 47% |
-| VIGILANCIA | AVAX | Capitulación con miedo extremo | 2026-11-20 | 7 d | 38% | 38% | +0.2% | contexto v4.2 en CAUTION: exigencia +5 pp; la ventaja no es creíble: cota baja 34% vs día cualquiera 43% |
 | ALERTA | SPY | Pánico sin daño real | 2026-11-20 | 30 d | 34% | 27% | +1.6% | — |
 | ALERTA | QQQ | Pánico sin daño real | 2026-11-20 | 30 d | 45% | 37% | +1.8% | — |
 | ALERTA | XLK | Pánico sin daño real | 2026-11-20 | 30 d | 44% | 36% | +1.8% | — |
@@ -32,7 +29,7 @@
 
 ## Clima de mercado
 
-BTC 60,216 (caída desde máximo de 1 año -38%; Fear&Greed 12) · S&P (SPY) -11.5% vs máximo de 1 año; VIX 35.9 · miedo de hogares (Wikipedia, EUA) z=-0.1 · peso 5 días +1.3% (USD/MXN); IPC vs máximo 1 año -4.7% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.48; Stablecoins -6.17% en 30 días (liquidez saliendo))
+BTC 61,271 (caída desde máximo de 1 año -37%; Fear&Greed 11) · S&P (SPY) -11.5% vs máximo de 1 año; VIX 35.9 · miedo de hogares (Wikipedia, EUA) z=-0.1 · peso 5 días +1.3% (USD/MXN); IPC vs máximo 1 año -4.7% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.47; Stablecoins -5.96% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
