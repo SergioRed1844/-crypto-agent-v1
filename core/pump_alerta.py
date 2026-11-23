@@ -358,7 +358,7 @@ def main(out_dir: str, forzar: bool = False, prueba: bool = False) -> None:
         if float(tk.get("priceChangePercent") or 0) / 100 < SUBE or float(tk.get("quoteVolume") or 0) < VOL24_MIN:
             continue
         m = cg.get(base)
-        if m and m.get("market_cap") and m["market_cap"] > CAP_MAX:
+        if not m or not m.get("market_cap") or m["market_cap"] > CAP_MAX:  # sin ficha en CoinGecko (p. ej. acciones tokenizadas): fuera
             continue
         r = medir(sym, base, m, tick)
         if not r or r["sube_24h"] < SUBE:
