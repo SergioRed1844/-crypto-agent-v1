@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-23T02:00:27Z",
+ "generated_utc": "2026-11-23T02:04:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.025,
+   "riesgo": 0.026,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.432,
+   "aporte": -0.431,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
