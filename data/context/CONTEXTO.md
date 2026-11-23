@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-23T09:53:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-23T09:57:59Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.06 · tamaño ×0.5 · compras permitidas
 
@@ -14,7 +14,7 @@ Actualizado 2026-11-23T09:53:31Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.422 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.421 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.210 |
 | Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.201 |
 | El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.199 |
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-23T09:53:31Z",
+ "inicio": "2026-11-23T09:57:59Z",
  "onchain": {
   "scanned": [
-   977176,
-   977179
+   977180,
+   977181
   ],
-  "calls": 115,
+  "calls": 18,
   "stopped": null,
   "nuevas": 0
  },
