@@ -171,7 +171,7 @@ def btc_y_ordenes() -> dict:
             pl = o["payload"]
             r[f"bitso_{libro}"] = {**r.get(f"bitso_{libro}", {}), "ohlc_muestra": pl[:2] if isinstance(pl, list) else str(pl)[:300]}
             try:
-                lows = [(float(v.get("low", v.get("l"))), v.get("bucket_start_time")) for v in pl if isinstance(v, dict)]
+                lows = [(float(v.get("min_rate") or v.get("low")), v.get("bucket_start_time")) for v in pl if isinstance(v, dict)]
                 if lows:
                     m = min(lows)
                     r[f"bitso_{libro}"].update({"min_desde_16nov": m[0], "cuando_ms": m[1]})
@@ -240,6 +240,7 @@ def main(out_dir: str) -> None:
         hoy.append(fila)
         if base == "DODO":
             dodo_hist = {"senal_dias": [str(t.date()) for t in x.index[x.despertar.values]][-10:],
+                         "eventos": eventos(sym, d, x),
                          "ult_20": {str(t.date()): {"c": round(float(v.c), 5), "rompe90": bool(v.rompe90), "vol_ratio": round(float(v.vol_ratio), 2),
                                                      "ret30": round(float(v.ret30), 3), "vs_max": round(float(v.vs_max), 3)}
                                     for t, v in x.iloc[-20:].iterrows()}}
@@ -260,7 +261,11 @@ def main(out_dir: str) -> None:
         casi = h[(~h.despertar_5d) & (h.dist90 >= -.07) & (h.vol_ratio >= 1.5) & h.ret30.between(0, .6) & (h.vs_max_datos <= -.8)]
         res["casi"] = casi.sort_values("vol_ratio", ascending=False).head(15).to_dict("records")
         res["fuerza_relativa_7d"] = h.sort_values("ret7", ascending=False).head(15).to_dict("records")
-        cortos = {r["sym"] for k in ("despertar_ultimos_5d", "casi") for r in res[k]} | {"DODOUSDT"}
+        vig = h[(~h.despertar_5d) & (h.dist90 >= -.15) & (h.vol_ratio >= 1.5) & (h.ret30 >= -.10) & (h.ret30 < .5)
+                & (h.vs_max_datos <= -.8)]
+        res["vigilar"] = vig.sort_values("dist90", ascending=False).head(20).to_dict("records")
+        res["tabla_hoy"] = h.to_dict("records")
+        cortos = {r["sym"] for k in ("despertar_ultimos_5d", "casi", "vigilar", "ya_explotaron") for r in res[k]} | {"DODOUSDT"}
         res["libro"] = {s: profundidad(s) for s in sorted(cortos)}
     (out / "screener.json").write_text(json.dumps(res, ensure_ascii=False, indent=1, default=str))
     try:
