@@ -1,0 +1,25 @@
+# Semana que viene: rotación, futuros del domingo y probabilidades de caída en cripto. Corre con [semana-run].
+name: core-semana
+on:
+  workflow_dispatch:
+  push:
+    branches: [rebotes]
+permissions:
+  contents: write
+concurrency:
+  group: core-semana
+  cancel-in-progress: false
+jobs:
+  run:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[semana-run]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas numpy requests yfinance pytest
+      - run: python -m pytest -q tests/test_core_semana.py
+      - run: python -m core.semana out/semana
+      - name: Publicar
+        run: bash .github/scripts/rb_store_push.sh out "semana - $(date -u +%FT%TZ)"
