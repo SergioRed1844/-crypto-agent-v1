@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-23T22:42:34Z",
+ "generated_utc": "2026-11-23T23:41:41Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.441,
- "event_risk": 0.102,
+ "event_risk": 0.106,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.06,
+   "riesgo": 0.063,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.044,
+   "riesgo": 0.046,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.406,
+   "aporte": -0.405,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en IA",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.39,
+   "aporte": 0.382,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.19,
+   "aporte": -0.189,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.181,
+   "aporte": -0.18,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.179,
+   "aporte": 0.177,
    "fuente": "noticia"
   },
   {
