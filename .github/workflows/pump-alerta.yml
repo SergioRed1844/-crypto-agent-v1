@@ -2,7 +2,8 @@
 # 15-ene-2027. Corre a las 2:00 CDMX (08:00 UTC) con respaldos dentro de la ventana 2:00–7:00; el script se salta
 # si ya envió ese día o si está fuera de la ventana/periodo. Aviso por issue de GitHub (te llega por correo) y por
 # SMTP si existen RADAR_SMTP_USER/RADAR_SMTP_PASS. SOLO alertas: no opera ni tiene llaves de exchange.
-# El código vive en la rama `rebotes` (core/pump_alerta.py); el cron tiene que estar en main.
+# El código vive en la rama `rebotes` (core/pump_alerta.py); el cron tiene que estar en main. Un push que cambie
+# este archivo corre una prueba (marcada [PRUEBA], no cuenta como el envío del día).
 name: pump-alerta
 on:
   workflow_dispatch:
@@ -15,6 +16,9 @@ on:
         description: "Marcar como prueba (no cuenta como el envío del día)"
         type: boolean
         default: false
+  push:
+    branches: [main]
+    paths: [".github/workflows/pump-alerta.yml"]
   schedule:
     - cron: "2 8 * * *"
     - cron: "37 9 * * *"
@@ -45,7 +49,7 @@ jobs:
           RADAR_SMTP_USER: ${{ secrets.RADAR_SMTP_USER }}
           RADAR_SMTP_PASS: ${{ secrets.RADAR_SMTP_PASS }}
           RADAR_EMAIL_TO: ${{ secrets.RADAR_EMAIL_TO }}
-        run: python -m core.pump_alerta out ${{ inputs.forzar && '--forzar' || '' }} ${{ inputs.prueba && '--prueba' || '' }}
+        run: python -m core.pump_alerta out ${{ (inputs.forzar || github.event_name == 'push') && '--forzar' || '' }} ${{ (inputs.prueba || github.event_name == 'push') && '--prueba' || '' }}
       - name: Publicar en rebotes-data
         run: |
           if [ -d out/pumps ]; then bash .github/scripts/rb_store_push.sh out "pumps - $(date -u +%FT%TZ)"; else echo "nada que publicar"; fi
