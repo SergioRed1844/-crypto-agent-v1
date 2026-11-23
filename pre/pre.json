@@ -1,464 +1,529 @@
 {
- "generado": "2026-11-23T14:12:04.938859+00:00",
+ "generado": "2026-11-23T20:35:58.658870+00:00",
  "acciones": {
   "NVDA": {
    "cierre_previo": 125.52999877929688,
    "fecha_previo": "2026-11-20",
-   "ultimo": 161.26,
-   "hora_et": "2026-11-23 09:12:03-05:00",
-   "vs_previo": 0.2846331679132934,
+   "ultimo": 166.6999969482422,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.3279693983055729,
    "min_hoy": 133.57,
-   "max_hoy": 165.6,
-   "vol_hoy": 0.0
+   "max_hoy": 171.5,
+   "vol_hoy": 7625933413.0
   },
   "AVGO": {
    "cierre_previo": 304.4100036621094,
    "fecha_previo": "2026-11-20",
-   "ultimo": 312.0,
-   "hora_et": "2026-11-23 09:12:03-05:00",
-   "vs_previo": 0.024933465545092348,
+   "ultimo": 313.2178039550781,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.028934004096479393,
    "min_hoy": 303.33,
    "max_hoy": 325.39,
-   "vol_hoy": 0.0
+   "vol_hoy": 88878213.0
   },
   "VRT": {
    "cierre_previo": 166.24000549316406,
    "fecha_previo": "2026-11-20",
-   "ultimo": 197.96,
-   "hora_et": "2026-11-23 09:12:00-05:00",
-   "vs_previo": 0.19080843033381822,
+   "ultimo": 188.08009338378906,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.131376847743927,
    "min_hoy": 172.51,
-   "max_hoy": 200.7,
-   "vol_hoy": 0.0
+   "max_hoy": 200.91,
+   "vol_hoy": 16250455.0
   },
   "HWM": {
    "cierre_previo": 209.16000366210938,
    "fecha_previo": "2026-11-20",
-   "ultimo": 215.84,
-   "hora_et": "2026-11-23 08:28:00-05:00",
-   "vs_previo": 0.031937254833299455,
+   "ultimo": 217.52000427246094,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.03996940363348256,
    "min_hoy": 214.86,
-   "max_hoy": 215.84,
-   "vol_hoy": 0.0
+   "max_hoy": 221.60000610351562,
+   "vol_hoy": 2771176.0
   },
   "MSFT": {
    "cierre_previo": 484.5199890136719,
    "fecha_previo": "2026-11-20",
-   "ultimo": 504.46,
-   "hora_et": "2026-11-23 09:11:59-05:00",
-   "vs_previo": 0.041154155532199255,
-   "min_hoy": 495.4907,
-   "max_hoy": 508.6,
-   "vol_hoy": 0.0
+   "ultimo": 497.3981018066406,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.02657911558857351,
+   "min_hoy": 494.5,
+   "max_hoy": 509.1499938964844,
+   "vol_hoy": 32327817.0
   },
   "GOOG": {
    "cierre_previo": 264.0,
    "fecha_previo": "2026-11-20",
-   "ultimo": 281.11,
-   "hora_et": "2026-11-23 09:12:03-05:00",
-   "vs_previo": 0.06481060606060618,
+   "ultimo": 280.8900146484375,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.06397732821377833,
    "min_hoy": 272.37,
-   "max_hoy": 281.71,
-   "vol_hoy": 0.0
+   "max_hoy": 282.69,
+   "vol_hoy": 25352319.0
   },
   "META": {
    "cierre_previo": 560.8400268554688,
    "fecha_previo": "2026-11-20",
-   "ultimo": 594.6375,
-   "hora_et": "2026-11-23 09:12:04-05:00",
-   "vs_previo": 0.060262234373726464,
+   "ultimo": 600.8800048828125,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.0713928680373277,
    "min_hoy": 577.0,
-   "max_hoy": 597.0,
-   "vol_hoy": 0.0
+   "max_hoy": 601.3800048828125,
+   "vol_hoy": 13680079.0
   },
   "UBER": {
    "cierre_previo": 63.470001220703125,
    "fecha_previo": "2026-11-20",
-   "ultimo": 65.8,
-   "hora_et": "2026-11-23 09:11:38-05:00",
-   "vs_previo": 0.03671023687544617,
-   "min_hoy": 64.49,
-   "max_hoy": 65.9266,
-   "vol_hoy": 0.0
+   "ultimo": 64.55500030517578,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.017094675651569746,
+   "min_hoy": 63.84000015258789,
+   "max_hoy": 65.97000122070312,
+   "vol_hoy": 13567263.0
   },
   "LLY": {
    "cierre_previo": 1347.1099853515625,
    "fecha_previo": "2026-11-20",
-   "ultimo": 1345.3254,
-   "hora_et": "2026-11-23 09:12:04-05:00",
-   "vs_previo": -0.001324751038124683,
+   "ultimo": 1364.2974853515625,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.012758794891951197,
    "min_hoy": 1342.6086,
-   "max_hoy": 1364.99,
-   "vol_hoy": 0.0
+   "max_hoy": 1381.64501953125,
+   "vol_hoy": 5032952.0
   },
   "SPCE": {
    "cierre_previo": 1.0399999618530273,
    "fecha_previo": "2026-11-20",
-   "ultimo": 1.15,
-   "hora_et": "2026-11-23 09:11:37-05:00",
-   "vs_previo": 0.10576927132860581,
-   "min_hoy": 1.06,
-   "max_hoy": 1.1598,
-   "vol_hoy": 0.0
+   "ultimo": 1.0799000263214111,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.038365448011451475,
+   "min_hoy": 1.059999942779541,
+   "max_hoy": 1.2000000476837158,
+   "vol_hoy": 10129827.0
   },
   "AVAV": {
    "cierre_previo": 86.79000091552734,
    "fecha_previo": "2026-11-20",
-   "ultimo": 94.0,
-   "hora_et": "2026-11-23 09:06:26-05:00",
-   "vs_previo": 0.08307407545127399,
-   "min_hoy": 90.3115,
-   "max_hoy": 94.67,
-   "vol_hoy": 0.0
+   "ultimo": 91.41000366210938,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.05323197024826265,
+   "min_hoy": 90.27999877929688,
+   "max_hoy": 94.80999755859375,
+   "vol_hoy": 852988.0
   },
   "AMD": {
    "cierre_previo": 424.3900146484375,
    "fecha_previo": "2026-11-20",
-   "ultimo": 453.87,
-   "hora_et": "2026-11-23 09:12:05-05:00",
-   "vs_previo": 0.06946437082404855,
-   "min_hoy": 437.8,
-   "max_hoy": 461.0,
-   "vol_hoy": 0.0
+   "ultimo": 453.3550109863281,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.06825089030872955,
+   "min_hoy": 432.010498046875,
+   "max_hoy": 481.5,
+   "vol_hoy": 62366308.0
   },
   "ANT": {
    "cierre_previo": 88.91000366210938,
    "fecha_previo": "2026-11-20",
-   "ultimo": 93.3092,
-   "hora_et": "2026-11-23 09:12:06-05:00",
-   "vs_previo": 0.04947920545149431,
-   "min_hoy": 87.4,
-   "max_hoy": 93.9,
-   "vol_hoy": 0.0
+   "ultimo": 86.50879669189453,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": -0.027007163101019693,
+   "min_hoy": 84.61000061035156,
+   "max_hoy": 94.7788,
+   "vol_hoy": 1060238425.0
   },
   "CRWD": {
    "cierre_previo": 229.44000244140625,
    "fecha_previo": "2026-11-20",
-   "ultimo": 217.84,
-   "hora_et": "2026-11-23 09:12:06-05:00",
-   "vs_previo": -0.0505578901585334,
-   "min_hoy": 205.45,
+   "ultimo": 208.81370544433594,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": -0.0898984343514283,
+   "min_hoy": 200.52999877929688,
    "max_hoy": 227.77,
-   "vol_hoy": 0.0
+   "vol_hoy": 68805815.0
   },
   "ZS": {
    "cierre_previo": 194.82000732421875,
    "fecha_previo": "2026-11-20",
-   "ultimo": 240.0,
-   "hora_et": "2026-11-23 09:12:03-05:00",
-   "vs_previo": 0.23190632880222029,
+   "ultimo": 228.92999267578125,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.1750846117914202,
    "min_hoy": 210.5,
-   "max_hoy": 240.4,
-   "vol_hoy": 0.0
+   "max_hoy": 247.89999389648438,
+   "vol_hoy": 16839708.0
   },
   "GLD": {
    "cierre_previo": 322.8699951171875,
    "fecha_previo": "2026-11-20",
-   "ultimo": 335.2535,
-   "hora_et": "2026-11-23 09:11:46-05:00",
-   "vs_previo": 0.038354461765076175,
+   "ultimo": 333.54998779296875,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.03307830655463939,
    "min_hoy": 330.0,
-   "max_hoy": 335.81,
-   "vol_hoy": 0.0
+   "max_hoy": 338.0,
+   "vol_hoy": 20381798.0
   },
   "IAU": {
    "cierre_previo": 66.2300033569336,
    "fecha_previo": "2026-11-20",
-   "ultimo": 68.7369,
-   "hora_et": "2026-11-23 09:11:30-05:00",
-   "vs_previo": 0.037851374241308466,
+   "ultimo": 68.38500213623047,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.032538104636397724,
    "min_hoy": 67.67,
-   "max_hoy": 68.88,
-   "vol_hoy": 0.0
+   "max_hoy": 69.3280029296875,
+   "vol_hoy": 10624428.0
   },
   "SMH": {
    "cierre_previo": 400.05999755859375,
    "fecha_previo": "2026-11-20",
-   "ultimo": 460.69,
-   "hora_et": "2026-11-23 09:12:08-05:00",
-   "vs_previo": 0.15155227418738915,
+   "ultimo": 461.2900085449219,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.15305207058938763,
    "min_hoy": 419.1,
-   "max_hoy": 468.13,
-   "vol_hoy": 0.0
+   "max_hoy": 470.29,
+   "vol_hoy": 54747642.0
   },
   "QQQ": {
    "cierre_previo": 608.4500122070312,
    "fecha_previo": "2026-11-20",
-   "ultimo": 649.6316,
-   "hora_et": "2026-11-23 09:12:09-05:00",
-   "vs_previo": 0.06768277913840581,
+   "ultimo": 653.010009765625,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.07323526446644513,
    "min_hoy": 626.44,
-   "max_hoy": 652.6,
-   "vol_hoy": 0.0
+   "max_hoy": 657.5025024414062,
+   "vol_hoy": 860949465.0
   },
   "SPY": {
    "cierre_previo": 689.8099975585938,
    "fecha_previo": "2026-11-20",
-   "ultimo": 719.04,
-   "hora_et": "2026-11-23 09:12:02-05:00",
-   "vs_previo": 0.04237399072912584,
+   "ultimo": 724.3800048828125,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.05011525992167476,
    "min_hoy": 704.06,
-   "max_hoy": 720.92,
-   "vol_hoy": 0.0
+   "max_hoy": 727.97998046875,
+   "vol_hoy": 229823768.0
+  },
+  "NU": {
+   "cierre_previo": 11.270000457763672,
+   "fecha_previo": "2026-11-20",
+   "ultimo": 11.839900016784668,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.0505678381431125,
+   "min_hoy": 11.55,
+   "max_hoy": 12.010000228881836,
+   "vol_hoy": 43487644.0
+  },
+  "SE": {
+   "cierre_previo": 62.630001068115234,
+   "fecha_previo": "2026-11-20",
+   "ultimo": 65.55000305175781,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.04662305498712738,
+   "min_hoy": 63.78,
+   "max_hoy": 66.74,
+   "vol_hoy": 12197956.0
+  },
+  "DASH": {
+   "cierre_previo": 152.60000610351562,
+   "fecha_previo": "2026-11-20",
+   "ultimo": 162.25,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.06323717896798997,
+   "min_hoy": 156.5,
+   "max_hoy": 163.77000427246094,
+   "vol_hoy": 5526286.0
+  },
+  "AKAM": {
+   "cierre_previo": 85.11000061035156,
+   "fecha_previo": "2026-11-20",
+   "ultimo": 89.7300033569336,
+   "hora_et": "2026-11-23 15:36:00-05:00",
+   "vs_previo": 0.0542827248672364,
+   "min_hoy": 87.34,
+   "max_hoy": 90.99,
+   "vol_hoy": 3758660.0
+  },
+  "RDDT": {
+   "cierre_previo": 85.33000183105469,
+   "fecha_previo": "2026-11-20",
+   "ultimo": 89.80999755859375,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.052501999664889665,
+   "min_hoy": 87.87999725341797,
+   "max_hoy": 92.32,
+   "vol_hoy": 9187419.0
   }
  },
  "macro": {
   "S&P (ES)": {
    "cierre_previo": 6935.0,
    "fecha_previo": "2026-11-20",
-   "ultimo": 7211.0,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": 0.03979812545061279,
+   "ultimo": 7277.0,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": 0.049315068493150704,
    "min_hoy": 7071.0,
-   "max_hoy": 7226.25,
-   "vol_hoy": 309769.0
+   "max_hoy": 7313.25,
+   "vol_hoy": 1726021.0
   },
   "Nasdaq 100 (NQ)": {
    "cierre_previo": 25126.5,
    "fecha_previo": "2026-11-20",
-   "ultimo": 26714.5,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": 0.0632002069528188,
+   "ultimo": 26889.25,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": 0.07015501562095805,
    "min_hoy": 25805.5,
-   "max_hoy": 26825.75,
-   "vol_hoy": 145527.0
+   "max_hoy": 27137.0,
+   "vol_hoy": 849496.0
   },
   "Dow (YM)": {
    "cierre_previo": 48216.0,
    "fecha_previo": "2026-11-20",
-   "ultimo": 49387.0,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": 0.024286543885847056,
+   "ultimo": 49806.0,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": 0.03297660527625679,
    "min_hoy": 48870.0,
-   "max_hoy": 49439.0,
-   "vol_hoy": 25138.0
+   "max_hoy": 49873.0,
+   "vol_hoy": 86086.0
   },
   "Oro (GC)": {
    "cierre_previo": 3515.39990234375,
    "fecha_previo": "2026-11-20",
-   "ultimo": 3663.199951171875,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": 0.042043594735718504,
+   "ultimo": 3639.800048828125,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": 0.0353871963190977,
    "min_hoy": 3599.89990234375,
-   "max_hoy": 3665.5,
-   "vol_hoy": 86792.0
+   "max_hoy": 3691.0,
+   "vol_hoy": 202510.0
   },
   "WTI": {
    "cierre_previo": 83.9800033569336,
    "fecha_previo": "2026-11-20",
-   "ultimo": 82.19000244140625,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": -0.02131460876370106,
-   "min_hoy": 80.55000305175781,
+   "ultimo": 80.01000213623047,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": -0.04727317292224609,
+   "min_hoy": 79.87000274658203,
    "max_hoy": 83.94999694824219,
-   "vol_hoy": 67053.0
+   "vol_hoy": 205713.0
   },
   "VIX": {
    "cierre_previo": 35.88999938964844,
    "fecha_previo": "2026-11-20",
-   "ultimo": 35.08000183105469,
-   "hora_et": "2026-11-23 08:57:00-05:00",
-   "vs_previo": -0.022568893072407614,
-   "min_hoy": 29.6299991607666,
+   "ultimo": 26.959999084472656,
+   "hora_et": "2026-11-23 15:21:00-05:00",
+   "vs_previo": -0.24881583886990577,
+   "min_hoy": 15.390000343322754,
    "max_hoy": 35.08000183105469,
    "vol_hoy": 0.0
   },
   "Tasa 10 años": {
    "cierre_previo": 4.9120001792907715,
    "fecha_previo": "2026-11-20",
-   "ultimo": 4.935999870300293,
-   "hora_et": "2026-11-23 08:57:00-05:00",
-   "vs_previo": 0.004885930401774985,
+   "ultimo": 4.918000221252441,
+   "hora_et": "2026-11-23 14:59:00-05:00",
+   "vs_previo": 0.0012215068694350073,
    "min_hoy": 4.9079999923706055,
-   "max_hoy": 4.943999767303467,
+   "max_hoy": 4.98199987411499,
    "vol_hoy": 0.0
   },
   "Dólar (DXY)": {
    "cierre_previo": 103.80999755859375,
    "fecha_previo": "2026-11-20",
-   "ultimo": 104.18499755859375,
-   "hora_et": "2026-11-23 09:02:00-05:00",
-   "vs_previo": 0.003612368835557822,
+   "ultimo": 104.33999633789062,
+   "hora_et": "2026-11-23 15:26:00-05:00",
+   "vs_previo": 0.005105469528575268,
    "min_hoy": 103.4749984741211,
-   "max_hoy": 104.28299713134766,
+   "max_hoy": 104.52999877929688,
    "vol_hoy": 0.0
   },
   "Peso (USD/MXN)": {
    "cierre_previo": 19.090099334716797,
    "fecha_previo": "2026-11-20",
-   "ultimo": 19.128459930419922,
-   "hora_et": "2026-11-23 09:12:00-05:00",
-   "vs_previo": 0.0020094497692508817,
-   "min_hoy": 19.07200050354004,
+   "ultimo": 19.15999984741211,
+   "hora_et": "2026-11-23 15:35:00-05:00",
+   "vs_previo": 0.00366161073704796,
+   "min_hoy": 19.065000534057617,
    "max_hoy": 19.263999938964844,
    "vol_hoy": 0.0
   }
  },
  "cripto": {
   "BTCUSDT": {
-   "lastPrice": 63187.98,
-   "priceChangePercent": 3.996,
-   "highPrice": 63898.99,
+   "lastPrice": 61173.91,
+   "priceChangePercent": 0.916,
+   "highPrice": 64603.12,
    "lowPrice": 60386.0,
-   "quoteVolume": 1240076737.0766969
+   "quoteVolume": 1739414229.7724009
   },
   "ETHUSDT": {
-   "lastPrice": 1797.66,
-   "priceChangePercent": 5.243,
-   "highPrice": 1813.0,
+   "lastPrice": 1727.57,
+   "priceChangePercent": 0.795,
+   "highPrice": 1845.07,
    "lowPrice": 1696.5,
-   "quoteVolume": 464064328.417447
+   "quoteVolume": 732642432.105226
   },
   "DOGEUSDT": {
-   "lastPrice": 0.05844,
-   "priceChangePercent": 6.023,
-   "highPrice": 0.05863,
+   "lastPrice": 0.05676,
+   "priceChangePercent": 2.901,
+   "highPrice": 0.06024,
    "lowPrice": 0.05436,
-   "quoteVolume": 25117054.59652
+   "quoteVolume": 40466080.61691
   },
   "PEPEUSDT": {
-   "lastPrice": 3.6e-06,
-   "priceChangePercent": 5.263,
-   "highPrice": 3.64e-06,
+   "lastPrice": 3.45e-06,
+   "priceChangePercent": 0.583,
+   "highPrice": 3.77e-06,
    "lowPrice": 3.31e-06,
-   "quoteVolume": 28649267.28769544
+   "quoteVolume": 46942910.02485392
   },
   "DODOUSDT": {
-   "lastPrice": 0.03973,
-   "priceChangePercent": 0.684,
-   "highPrice": 0.0406,
-   "lowPrice": 0.03792,
-   "quoteVolume": 1984988.939746
+   "lastPrice": 0.03971,
+   "priceChangePercent": -0.601,
+   "highPrice": 0.04061,
+   "lowPrice": 0.03935,
+   "quoteVolume": 1807559.677547
   },
   "LISTAUSDT": {
-   "lastPrice": 0.0795,
-   "priceChangePercent": 10.879,
-   "highPrice": 0.088,
-   "lowPrice": 0.0692,
-   "quoteVolume": 5396758.83037
+   "lastPrice": 0.0884,
+   "priceChangePercent": 21.596,
+   "highPrice": 0.0934,
+   "lowPrice": 0.0723,
+   "quoteVolume": 5784978.90753
   },
   "BERAUSDT": {
-   "lastPrice": 0.0853,
-   "priceChangePercent": 2.895,
+   "lastPrice": 0.0817,
+   "priceChangePercent": 2.253,
    "highPrice": 0.088,
    "lowPrice": 0.0793,
-   "quoteVolume": 1851102.2484823
+   "quoteVolume": 1727929.9242352
   },
   "MMTUSDT": {
-   "lastPrice": 0.1994,
-   "priceChangePercent": -14.895,
-   "highPrice": 0.2376,
-   "lowPrice": 0.1932,
-   "quoteVolume": 7957448.09818
+   "lastPrice": 0.194,
+   "priceChangePercent": -10.31,
+   "highPrice": 0.2326,
+   "lowPrice": 0.1861,
+   "quoteVolume": 9306159.83131
   }
  },
  "bitso": {
   "eth_mxn": {
-   "last": "34488",
-   "high": "34500",
+   "last": "33041",
+   "high": "35066",
    "low": "32427",
-   "created_at": "2026-11-23T14:12:14+00:00"
+   "created_at": "2026-11-23T20:36:09+00:00"
   },
   "doge_usd": {
-   "last": "0.058367",
-   "high": "0.058553",
+   "last": "0.056612",
+   "high": "0.060033",
    "low": "0.054375",
-   "created_at": "2026-11-23T14:12:14+00:00"
+   "created_at": "2026-11-23T20:36:09+00:00"
   },
   "pepe_usd": {
-   "last": "0.00000358",
-   "high": "0.00000364",
+   "last": "0.00000344",
+   "high": "0.00000375",
    "low": "0.0000033",
-   "created_at": "2026-11-23T14:12:14+00:00"
+   "created_at": "2026-11-23T20:36:09+00:00"
   },
   "usd_mxn": {
-   "last": "19.133",
-   "high": "19.3",
-   "low": "19.085",
-   "created_at": "2026-11-23T14:12:54+00:00"
+   "last": "19.149",
+   "high": "19.281",
+   "low": "19.076",
+   "created_at": "2026-11-23T20:36:49+00:00"
   },
   "btc_mxn": {
-   "last": "1207180",
-   "high": "1219930",
+   "last": "1169530",
+   "high": "1230450",
    "low": "1153740",
-   "created_at": "2026-11-23T14:12:54+00:00"
+   "created_at": "2026-11-23T20:36:49+00:00"
   }
  },
  "pumps_binance_12pct": [
   {
-   "sym": "SOXLBUSDT",
-   "cambio": 28.689,
-   "vol_m": 79.17
-  },
-  {
-   "sym": "SNXXBUSDT",
-   "cambio": 23.56,
-   "vol_m": 4.73
-  },
-  {
-   "sym": "PROMUSDT",
-   "cambio": 21.658,
-   "vol_m": 25.6
-  },
-  {
    "sym": "MUUBUSDT",
-   "cambio": 21.037,
-   "vol_m": 1.17
+   "cambio": 29.163,
+   "vol_m": 2.37
   },
   {
-   "sym": "LSKUSDT",
-   "cambio": 21.0,
-   "vol_m": 2.75
+   "sym": "SOXLBUSDT",
+   "cambio": 29.085,
+   "vol_m": 106.61
   },
   {
-   "sym": "MUBARAKUSDT",
-   "cambio": 20.934,
-   "vol_m": 5.57
+   "sym": "MVLLBUSDT",
+   "cambio": 27.571,
+   "vol_m": 1.72
   },
   {
    "sym": "NVDABUSDT",
-   "cambio": 20.708,
-   "vol_m": 108.3
+   "cambio": 25.589,
+   "vol_m": 251.64
   },
   {
-   "sym": "NBISBUSDT",
-   "cambio": 19.649,
-   "vol_m": 11.08
+   "sym": "MUBARAKUSDT",
+   "cambio": 23.92,
+   "vol_m": 8.26
+  },
+  {
+   "sym": "LISTAUSDT",
+   "cambio": 21.596,
+   "vol_m": 5.78
+  },
+  {
+   "sym": "INTWBUSDT",
+   "cambio": 20.0,
+   "vol_m": 1.88
   },
   {
    "sym": "KORUBUSDT",
-   "cambio": 18.491,
-   "vol_m": 13.53
+   "cambio": 17.202,
+   "vol_m": 17.06
   },
   {
-   "sym": "ALGOUSDT",
-   "cambio": 14.608,
-   "vol_m": 2.1
+   "sym": "CRWVBUSDT",
+   "cambio": 15.857,
+   "vol_m": 1.27
+  },
+  {
+   "sym": "BEBUSDT",
+   "cambio": 15.428,
+   "vol_m": 2.46
+  },
+  {
+   "sym": "MUBUSDT",
+   "cambio": 14.976,
+   "vol_m": 30.64
   },
   {
    "sym": "MRVLBUSDT",
-   "cambio": 12.722,
-   "vol_m": 1.4
+   "cambio": 14.236,
+   "vol_m": 3.33
   },
   {
-   "sym": "SNDKBUSDT",
-   "cambio": 12.719,
-   "vol_m": 30.56
+   "sym": "LITEBUSDT",
+   "cambio": 14.218,
+   "vol_m": 1.26
   },
   {
-   "sym": "BLURUSDT",
-   "cambio": 12.607,
-   "vol_m": 2.62
+   "sym": "IRENBUSDT",
+   "cambio": 13.732,
+   "vol_m": 1.84
   },
   {
-   "sym": "QNTUSDT",
-   "cambio": 12.38,
-   "vol_m": 7.92
+   "sym": "SNXXBUSDT",
+   "cambio": 13.021,
+   "vol_m": 11.91
+  },
+  {
+   "sym": "SKHYBUSDT",
+   "cambio": 12.936,
+   "vol_m": 12.79
+  },
+  {
+   "sym": "TQQQBUSDT",
+   "cambio": 12.705,
+   "vol_m": 11.76
   },
   {
    "sym": "DRAMBUSDT",
-   "cambio": 12.1,
-   "vol_m": 1.63
+   "cambio": 12.628,
+   "vol_m": 2.63
   }
  ]
 }
