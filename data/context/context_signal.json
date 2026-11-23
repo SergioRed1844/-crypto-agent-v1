@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-23T19:45:10Z",
+ "generated_utc": "2026-11-23T20:44:07Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.469,
- "event_risk": 0.09,
+ "event_risk": 0.094,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.053,
+   "riesgo": 0.056,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.039,
+   "riesgo": 0.041,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.409,
+   "aporte": -0.408,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.204,
+   "aporte": -0.203,
    "fuente": "noticia"
   },
   {
@@ -69,16 +69,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.193,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-gold-tests-3-500-as-traders-look-beyond-december-f-2026-11-22",
-   "date": "2026-11-22",
-   "title_es": "El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed",
-   "category": "MONETARY_POLICY",
-   "stance": "pro",
-   "aporte": 0.183,
+   "aporte": -0.192,
    "fuente": "noticia"
   },
   {
@@ -91,12 +82,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-gold-tests-3-500-as-traders-look-beyond-december-f-2026-11-22",
+   "date": "2026-11-22",
+   "title_es": "El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed",
+   "category": "MONETARY_POLICY",
+   "stance": "pro",
+   "aporte": 0.181,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-anthropic-plunges-as-wall-street-suffers-ai-sell-o-2026-11-20",
    "date": "2026-11-20",
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "pro",
-   "aporte": 0.127,
+   "aporte": 0.126,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 50 pb en diciembre",
    "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.103,
+   "aporte": -0.102,
    "fuente": "noticia"
   }
  ],
