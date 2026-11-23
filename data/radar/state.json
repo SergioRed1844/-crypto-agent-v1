@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-21T16:30:43+00:00",
   "2026-11-21T17:29:52+00:00",
   "2026-11-21T18:28:52+00:00",
   "2026-11-21T18:29:28+00:00",
@@ -429,9 +428,10 @@
   "2026-11-23T10:53:01+00:00",
   "2026-11-23T11:12:15+00:00",
   "2026-11-23T11:52:16+00:00",
-  "2026-11-23T12:51:14+00:00"
+  "2026-11-23T12:51:14+00:00",
+  "2026-11-23T13:50:17+00:00"
  ],
- "last_scan_utc": "2026-11-23T12:51:14+00:00",
+ "last_scan_utc": "2026-11-23T13:50:17+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-23T11:51:58Z",
+   "last": "2026-11-23T12:51:01Z",
    "nota": "CAUTION"
   }
  },
@@ -833,7 +833,7 @@
    "date": "2026-11-20",
    "level": "ALERTA",
    "why": [],
-   "p": 0.34,
+   "p": 0.341,
    "base": 0.273,
    "ret": 0.016,
    "h": 30
@@ -978,9 +978,9 @@
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.0 pp < 5 pp"
    ],
-   "p": 0.33,
+   "p": 0.331,
    "base": 0.29,
-   "ret": 0.0119,
+   "ret": 0.012,
    "h": 30
   },
   {
@@ -992,11 +992,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
+    "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
-   "p": 0.443,
+   "p": 0.444,
    "base": 0.398,
-   "ret": 0.0223,
+   "ret": 0.0224,
    "h": 30
   },
   {
@@ -1008,7 +1008,7 @@
    "why": [
     "la ventaja no es creíble: cota baja 43% vs día cualquiera 43%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.6 pp < 5 pp"
+    "ventaja vs día cualquiera +4.7 pp < 5 pp"
    ],
    "p": 0.479,
    "base": 0.433,
@@ -1042,7 +1042,7 @@
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.5 pp < 5 pp"
    ],
-   "p": 0.426,
+   "p": 0.427,
    "base": 0.382,
    "ret": 0.0196,
    "h": 30
@@ -1056,11 +1056,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
+    "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
    "p": 0.443,
    "base": 0.397,
-   "ret": 0.0189,
+   "ret": 0.019,
    "h": 30
   },
   {
@@ -1092,7 +1092,7 @@
    ],
    "p": 0.318,
    "base": 0.279,
-   "ret": 0.0087,
+   "ret": 0.0088,
    "h": 30
   },
   {
@@ -1106,9 +1106,9 @@
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.4 pp < 5 pp"
    ],
-   "p": 0.409,
+   "p": 0.41,
    "base": 0.365,
-   "ret": 0.0158,
+   "ret": 0.0159,
    "h": 30
   }
  ],

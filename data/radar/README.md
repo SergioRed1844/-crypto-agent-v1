@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-23T12:51:14+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-22
+Última corrida: **2026-11-23T13:50:17+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-22
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -57,7 +57,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
 | Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.0% |
 | Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.6% |
-| Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 48% | 72% | +0.2% |
+| Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 49% | 72% | +0.2% |
 | Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 47% | -0.0% |
 | Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.8% |
 | Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.6% |
@@ -82,7 +82,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Pánico sin daño real | crypto | 7 d | 24 | 43% | 41% | 41% | 75% | -0.2% |
 | Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 82% | -0.6% |
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.3% |
-| Pánico sin daño real | us | 7 d | 86 | 41% | 26% | 35% | 38% | +0.3% |
+| Pánico sin daño real | us | 7 d | 86 | 41% | 26% | 35% | 37% | +0.3% |
 | Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.0% |
 | Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +1.0% |
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 16% | +0.5% |
@@ -90,7 +90,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 29% | +0.6% |
 | Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 42 | 39% | 42% | 41% | 69% | -0.0% |
-| Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
+| Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 69% | +0.0% |
 | Retroceso dentro de tendencia alcista | us | 7 d | 423 | 38% | 33% | 37% | 18% | +0.3% |
 | Retroceso dentro de tendencia alcista | us | 30 d | 201 | 41% | 39% | 41% | 31% | +0.3% |
 | Retroceso dentro de tendencia alcista | us | 90 d | 199 | 48% | 45% | 47% | 31% | +0.8% |
@@ -158,7 +158,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-23 | binance |
 | ^MXX | sí | 2026-11-20 | yahoo |
 | ^VIX | sí | 2026-11-23 | yahoo |
-| contexto_v42 | sí | 2026-11-23T11:51:58Z | CAUTION |
+| contexto_v42 | sí | 2026-11-23T12:51:01Z | CAUTION |
 | fear_greed | sí | 2026-11-23 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-22 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-22 | wikimedia |
