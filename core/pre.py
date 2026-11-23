@@ -12,7 +12,7 @@ import pandas as pd
 from core.velas_cripto import get
 
 ACCIONES = ["NVDA", "AVGO", "VRT", "HWM", "MSFT", "GOOG", "META", "UBER", "LLY", "SPCE", "AVAV", "AMD", "ANT", "CRWD", "ZS",
-            "GLD", "IAU", "SMH", "QQQ", "SPY"]
+            "GLD", "IAU", "SMH", "QQQ", "SPY", "NU", "SE", "DASH", "AKAM", "RDDT"]
 MACRO = {"S&P (ES)": "ES=F", "Nasdaq 100 (NQ)": "NQ=F", "Dow (YM)": "YM=F", "Oro (GC)": "GC=F", "WTI": "CL=F",
          "VIX": "^VIX", "Tasa 10 años": "^TNX", "Dólar (DXY)": "DX-Y.NYB", "Peso (USD/MXN)": "MXN=X"}
 CRIPTO = ["BTCUSDT", "ETHUSDT", "DOGEUSDT", "PEPEUSDT", "DODOUSDT", "LISTAUSDT", "BERAUSDT", "MMTUSDT"]
