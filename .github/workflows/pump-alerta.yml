@@ -1,0 +1,51 @@
+# Alerta diaria de pumps tipo DODO (cripto chica que sube ≥12% en 24 h con dinero concentrado) del 23-nov-2026 al
+# 15-ene-2027. Corre a las 2:00 CDMX (08:00 UTC) con respaldos dentro de la ventana 2:00–7:00; el script se salta
+# si ya envió ese día o si está fuera de la ventana/periodo. Aviso por issue de GitHub (te llega por correo) y por
+# SMTP si existen RADAR_SMTP_USER/RADAR_SMTP_PASS. SOLO alertas: no opera ni tiene llaves de exchange.
+# El código vive en la rama `rebotes` (core/pump_alerta.py); el cron tiene que estar en main.
+name: pump-alerta
+on:
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Correr fuera de la ventana"
+        type: boolean
+        default: false
+      prueba:
+        description: "Marcar como prueba (no cuenta como el envío del día)"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "2 8 * * *"
+    - cron: "37 9 * * *"
+    - cron: "7 11 * * *"
+    - cron: "17 12 * * *"
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: pump-alerta
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: rebotes
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q pandas numpy requests httpx pytest
+      - run: python -m pytest -q tests/test_core_pump.py
+      - name: Alerta
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RADAR_SMTP_USER: ${{ secrets.RADAR_SMTP_USER }}
+          RADAR_SMTP_PASS: ${{ secrets.RADAR_SMTP_PASS }}
+          RADAR_EMAIL_TO: ${{ secrets.RADAR_EMAIL_TO }}
+        run: python -m core.pump_alerta out ${{ inputs.forzar && '--forzar' || '' }} ${{ inputs.prueba && '--prueba' || '' }}
+      - name: Publicar en rebotes-data
+        run: |
+          if [ -d out/pumps ]; then bash .github/scripts/rb_store_push.sh out "pumps - $(date -u +%FT%TZ)"; else echo "nada que publicar"; fi
