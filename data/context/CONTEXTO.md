@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-23T09:57:59Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-23T10:53:33Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.06 · tamaño ×0.5 · compras permitidas
 
@@ -9,19 +9,19 @@ Actualizado 2026-11-23T09:57:59Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.035 |
-| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.026 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.037 |
+| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.027 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.421 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.210 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.201 |
-| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.199 |
-| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.188 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.420 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.209 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.200 |
+| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.197 |
+| Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.187 |
 | Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.181 |
-| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.132 |
-| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.112 |
+| ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.131 |
+| El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.111 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-23T09:57:59Z",
+ "inicio": "2026-11-23T10:53:33Z",
  "onchain": {
   "scanned": [
-   977180,
-   977181
+   977182,
+   977189
   ],
-  "calls": 18,
+  "calls": 90,
   "stopped": null,
   "nuevas": 0
  },
