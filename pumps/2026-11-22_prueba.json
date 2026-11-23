@@ -1,0 +1,259 @@
+{
+ "generado": "2026-11-23T04:13:47.189666+00:00",
+ "fecha_cdmx": "2026-11-22",
+ "prueba": true,
+ "n_eventos": 3413,
+ "validacion": {
+  "corto": {
+   "n_train": 1959,
+   "n_test": 1454,
+   "tasa_test": 0.406,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1212,
+     "pred": 0.412,
+     "real": 0.412
+    },
+    "0.5-0.6": {
+     "n": 242,
+     "pred": 0.527,
+     "real": 0.376
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1959,
+   "n_test": 1454,
+   "tasa_test": 0.375,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1378,
+     "pred": 0.406,
+     "real": 0.373
+    },
+    "0.5-0.6": {
+     "n": 76,
+     "pred": 0.532,
+     "real": 0.408
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 168,
+    "tasa": 0.494,
+    "prob": 0.492
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 160,
+    "tasa": 0.487,
+    "prob": 0.487
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 86,
+    "tasa": 0.5,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 146,
+    "tasa": 0.486,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.485
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 140,
+    "tasa": 0.493,
+    "prob": 0.478
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.512,
+    "prob": 0.502
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 46,
+    "tasa": 0.5,
+    "prob": 0.476
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 135,
+    "tasa": 0.474,
+    "prob": 0.472
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 100,
+    "tasa": 0.48,
+    "prob": 0.47
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 68,
+    "tasa": 0.456,
+    "prob": 0.449
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 239,
+    "tasa": 0.435,
+    "prob": 0.435
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "LISTAUSDT",
+   "base": "LISTA",
+   "nombre": "Lista DAO",
+   "cap_m": 34.4,
+   "precio": 0.0796,
+   "sube_24h": 0.17404129793510337,
+   "vol24_m": 3.66,
+   "vol_vs_30d": 19.12,
+   "top3_horas": 0.47,
+   "compras_agresivas": 0.54,
+   "prev30": -0.1471698113207548,
+   "rsi_1h": 74.4,
+   "pares_usd": {
+    "TRY": 1.94,
+    "FDUSD": 0.37,
+    "USDC": 0.05
+   },
+   "par_no_usdt": 0.39,
+   "libro": {
+    "mid": 0.0796,
+    "spread": 0.002515723270440251,
+    "compras_2pct_usd": 13330,
+    "ventas_2pct_usd": 8051
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 8x+ · venía bajando",
+   "p_corto": 0.45622101952040545,
+   "p_largo": 0.30971934186886635,
+   "n_celda": 208,
+   "n_padre": 391,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (como listados en Binance, Upbit o Coinbase, alianzas, quemas o desbloqueos) que justifique la subida. Los análisis del mercado señalan que el movimiento responde a volatilidad puntual y compras especulativas sin un catalizador oficial confirmado.",
+    "fuentes": [
+     {
+      "titulo": "tokenomist.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeDSw61O_xZzBflS6NSPtJnqnr-1raLtT0OsfvtPw7ccGl45pVe1-YXmH-5IUz-bM5n-zB2ghFZB6O39egK8hCv2xD-SX-UB7VA8tWdc0IGg5y3vyK8HEm0YVcG6o2pw=="
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvj4umN58BQreoI3lR2dwQuvXD-X0Oh9Y9YFV_0FZpNtzyBKAfqBB1FZ0oFvH0Rz5XZoXa1N9Q0h4AsMEN5P6iw-Rf-iT1z3a16QvVKkrjIfX5BemKU3dguEslgMtNc3gczl6122JsvFXifvnyrOw="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "BERAUSDT",
+   "base": "BERA",
+   "nombre": "Berachain",
+   "cap_m": 31.6,
+   "precio": 0.0872,
+   "sube_24h": 0.13986928104575158,
+   "vol24_m": 2.8,
+   "vol_vs_30d": 2.39,
+   "top3_horas": 0.57,
+   "compras_agresivas": 0.48,
+   "prev30": -0.5413669064748201,
+   "rsi_1h": 73.8,
+   "pares_usd": {
+    "TRY": 1.47,
+    "BTC": 0.27,
+    "FDUSD": 0.26,
+    "USDC": 0.02
+   },
+   "par_no_usdt": 0.42,
+   "libro": {
+    "mid": 0.08735,
+    "spread": 0.0034403669724769603,
+    "compras_2pct_usd": 43593,
+    "ventas_2pct_usd": 13247
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.3689721100644617,
+   "p_largo": 0.3265728153086542,
+   "n_celda": 450,
+   "n_padre": 984,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (como listados en Binance, Upbit o Coinbase, alianzas, quemas o actualizaciones) que explique la subida. El movimiento parece deberse a dinámicas especulativas o un rebote técnico tras cotizar cerca de mínimos históricos.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERGKlTZ4KouVoVMppOeueA-daAqsTicF-O19TO-EvRJfiJec8vNpzTR0sMBNs8fl8JNORTgQFEI4TxKlXv5pYG-auC6e451ulylqMSmor9LR030rAjv3ZCUoqjmOwUicHyrGHsK9d_KFKAlywaKR1f"
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERGKlTZ4KouVoVMppOeueA-daAqsTicF-O19TO-EvRJfiJec8vNpzTR0sMBNs8fl8JNORTgQFEI4TxKlXv5pYG-auC6e451ulylqMSmor9LR030rAjv3ZCUoqjmOwUicHyrGHsK9d_KFKAlywaKR1f"
+     }
+    ]
+   }
+  }
+ ],
+ "btc": {
+  "precio": 61372.0,
+  "r24": 0.03142,
+  "r7": -0.05358687123427186
+ }
+}
