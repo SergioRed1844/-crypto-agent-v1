@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-23T14:49:23Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-23T15:17:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.07 · tamaño ×0.5 · compras permitidas
 
@@ -9,17 +9,17 @@ Actualizado 2026-11-23T14:49:23Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.043 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.044 |
 | PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.032 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.415 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.207 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.197 |
-| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.191 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.196 |
+| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.190 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.185 |
-| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.179 |
+| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.178 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.129 |
 | El oro se desploma un 5% mientras Waller de la Fed insinúa un alza de tasas de 5 | 2026-11-20 | anti | -0.107 |
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-23T14:49:23Z",
+ "inicio": "2026-11-23T15:17:52Z",
  "onchain": {
   "scanned": [
-   977211,
-   977218
+   977219,
+   977226
   ],
-  "calls": 145,
+  "calls": 115,
   "stopped": null,
   "nuevas": 0
  },
