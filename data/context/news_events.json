@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-22T23:03:12Z",
+ "updated_utc": "2026-11-23T00:02:20Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9795,6 +9795,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-22T19:00:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "MACRO_INDICATORS",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Inflación, crecimiento y confianza del consumidor de EE. UU. en foco esta semana",
+   "source_url": "https://www.djournal.com/news/business/inflation-economic-growth-and-the-mood-of-us-consumers-in-focus-this-week/article_51d52ffe-1ebd-44ac-8196-c038008a914b.html",
+   "source_title": "djournal.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-inflation-economic-growth-and-the-mood-of-us-consu-2026-11-22",
+   "date": "2026-11-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "19:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-22T19:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "INFLATION",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Informe clave de inflación previsto para publicarse esta semana",
+   "source_url": "https://www.bostonherald.com/2026/11/22/ticker-key-inflation-report-due-this-week/",
+   "source_title": "bostonherald.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-ticker-key-inflation-report-due-this-week-2026-11-22",
+   "date": "2026-11-22",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "22:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-22T22:30:00Z"
   }
  ]
 }
