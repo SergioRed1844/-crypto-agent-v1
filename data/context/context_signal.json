@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-24T21:27:57Z",
+ "generated_utc": "2026-11-24T22:22:41Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.235,
- "event_risk": 0.262,
+ "bias": -0.239,
+ "event_risk": 0.271,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
  "reasons": [
   "Precaución: sesgo -0.24",
-  "Stablecoins -5.73% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.74% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.156,
+   "riesgo": 0.162,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.114,
+   "riesgo": 0.118,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.009,
+   "riesgo": 0.01,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.003,
+   "riesgo": 0.004,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.404,
+   "aporte": 0.402,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.379,
+   "aporte": -0.378,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.282,
+   "aporte": 0.277,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.199,
+   "aporte": 0.198,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.189,
+   "aporte": -0.188,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.173,
+   "aporte": -0.172,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.169,
+   "aporte": -0.168,
    "fuente": "noticia"
   },
   {
@@ -158,6 +158,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.73
+  "stablecoins_30d_pct": -5.74
  }
 }
