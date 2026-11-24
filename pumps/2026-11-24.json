@@ -1,0 +1,522 @@
+{
+ "generado": "2026-11-24T08:34:19.913866+00:00",
+ "fecha_cdmx": "2026-11-24",
+ "prueba": false,
+ "n_eventos": 3451,
+ "validacion": {
+  "corto": {
+   "n_train": 1987,
+   "n_test": 1464,
+   "tasa_test": 0.406,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1287,
+     "pred": 0.415,
+     "real": 0.41
+    },
+    "0.5-0.6": {
+     "n": 177,
+     "pred": 0.532,
+     "real": 0.373
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1987,
+   "n_test": 1464,
+   "tasa_test": 0.376,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1372,
+     "pred": 0.407,
+     "real": 0.374
+    },
+    "0.5-0.6": {
+     "n": 92,
+     "pred": 0.525,
+     "real": 0.402
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 169,
+    "tasa": 0.491,
+    "prob": 0.489
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 160,
+    "tasa": 0.487,
+    "prob": 0.487
+   },
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 146,
+    "tasa": 0.486,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.485
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 87,
+    "tasa": 0.494,
+    "prob": 0.481
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 140,
+    "tasa": 0.493,
+    "prob": 0.477
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.525,
+    "prob": 0.513
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 46,
+    "tasa": 0.5,
+    "prob": 0.477
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 137,
+    "tasa": 0.474,
+    "prob": 0.473
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 103,
+    "tasa": 0.476,
+    "prob": 0.467
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 69,
+    "tasa": 0.449,
+    "prob": 0.444
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 245,
+    "tasa": 0.437,
+    "prob": 0.436
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "LISTAUSDT",
+   "base": "LISTA",
+   "nombre": "Lista DAO",
+   "cap_m": 45.1,
+   "precio": 0.1084,
+   "sube_24h": 0.35162094763092266,
+   "vol24_m": 8.5,
+   "vol_vs_30d": 25.76,
+   "top3_horas": 0.29,
+   "compras_agresivas": 0.53,
+   "prev30": 0.017766497461928932,
+   "rsi_1h": 68.0,
+   "pares_usd": {
+    "TRY": 5.0,
+    "FDUSD": 0.37,
+    "USDC": 0.13
+   },
+   "par_no_usdt": 0.39,
+   "libro": {
+    "mid": 0.10825,
+    "spread": 0.0027752081406104967,
+    "compras_2pct_usd": 22947,
+    "ventas_2pct_usd": 24593
+   },
+   "concentracion": [
+    "volumen ≥2x"
+   ],
+   "patron_dodo": true,
+   "celda": "35%+ · 8x+ · 0-50%",
+   "p_corto": 0.48635128371034897,
+   "p_largo": 0.3449564778163139,
+   "n_celda": 146,
+   "n_padre": 371,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (como listados en exchanges, anuncios de Binance/Coinbase/Upbit, alianzas o quemas de tokens) que explique la subida. El repunte parece responder a movimientos especulativos de mercado y rotación de volumen hacia ciertas altcoins sin un catalizador fundamental confirmado.",
+    "fuentes": [
+     {
+      "titulo": "tradingview.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0c6ZNNF6nnyo1nc7W4qZZD4u_2fsKUnxUWkSO2_O8_POX7uFFP8YSb8QvlIBH4HBmhKe2_2tnfaHWP0FzMHvkhLEAe6BYlfhpxmolaMFmODBzeRGYJzR-8bSEZO3Fo4SFTjvHCCKpK6BS6AckQNwUYJ4uD6U88SjZbUbd-sE66NeCk8TGMYx5K4MNKqXlZJXgirfwCu-ewOAVGlfu-S8fW_m5pT4cQNi-UA=="
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4P0M33kTRVf-cuNqaCcoDAEdUjwLZN4Bv666qm8Ri3h1gvouLX9OS_m952NMBSx2hz4NuLDhZryPZb8VlQhlxhxwV7wTiAjfAjL61Ac7U4e30dZ7EOLz0Xnsq97DInZTtHvbpdXn3mtyh0IlF2L-3"
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4P0M33kTRVf-cuNqaCcoDAEdUjwLZN4Bv666qm8Ri3h1gvouLX9OS_m952NMBSx2hz4NuLDhZryPZb8VlQhlxhxwV7wTiAjfAjL61Ac7U4e30dZ7EOLz0Xnsq97DInZTtHvbpdXn3mtyh0IlF2L-3"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "NVDABUSDT",
+   "base": "NVDAB",
+   "nombre": "NVIDIA (bStocks Tokenized Stock)",
+   "cap_m": 203.6,
+   "precio": 162.49,
+   "sube_24h": 0.19865742106816175,
+   "vol24_m": 235.51,
+   "vol_vs_30d": 4.86,
+   "top3_horas": 0.62,
+   "compras_agresivas": 0.5,
+   "prev30": -0.3581439393939394,
+   "rsi_1h": 63.2,
+   "pares_usd": {},
+   "par_no_usdt": 0.0,
+   "libro": {
+    "mid": 162.465,
+    "spread": 6.155361319692965e-05,
+    "compras_2pct_usd": 491863,
+    "ventas_2pct_usd": 288805
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 4-8x · venía bajando",
+   "p_corto": 0.3508401243191673,
+   "p_largo": 0.4159551771642551,
+   "n_celda": 301,
+   "n_padre": 616,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia en las últimas 72 horas sobre listados en exchanges, alianzas, quemas, desbloqueos o anuncios relevantes de Binance, Upbit o Coinbase. El repunte cercano al 20% responde a un rebote del mercado y a flujos de capital asociados a la exposición de la acción subyacente de NVIDIA, sin un catalizador cripto específico verif",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExJZ7m8Ep2Led4BKFTW8Isso54BHe3nrCs7jT0bhzFkBmxCmaRUa6gnLfF5aoIzUdQyJtVU5heBAlzxVYFpRvRCHm4qM-0bddDPHkoZwXB709UzZlTPjSNMtMgVi82Eh0DJO3V8t6TNqGWSPzo_OcYkZqJFSyhM9TLz1WHK14f"
+     },
+     {
+      "titulo": "tokenpost.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKCVgtfvdNMcsUtU96rCNOz9h3IJf25zZ7ptqjRMsgq59YLjJC0n6FZEgvoh7iapaOxCcIDE51dv0tL_SenK3SVGaGVVOxJHc078lFJ9o0yxll7ObmlDubAz9iV_c5nq21uK31"
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETp1Qc2aN9HJVShmNklcH4dyXtleY-Au-wzuVbmvt1moXyycVL9Xk-0LGeBb8iIFdnsNOv2tC-sAFCzTXuDCVzp4i-iImpdeUkip5IpKwH-CiAE5XwWgcKKZjomR9QbE6wCYQd1neC4OTwCRE7AGSyZ84kSQ=="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "BABYUSDT",
+   "base": "BABY",
+   "nombre": "Babylon",
+   "cap_m": 47.5,
+   "precio": 0.00915,
+   "sube_24h": 0.17307692307692313,
+   "vol24_m": 2.68,
+   "vol_vs_30d": 2.42,
+   "top3_horas": 0.41,
+   "compras_agresivas": 0.54,
+   "prev30": -0.4420600858369099,
+   "rsi_1h": 75.8,
+   "pares_usd": {
+    "TRY": 0.89,
+    "FDUSD": 0.33,
+    "EUR": 0.25,
+    "USDC": 0.07
+   },
+   "par_no_usdt": 0.36,
+   "libro": {
+    "mid": 0.00915,
+    "spread": 0.002188183807439792,
+    "compras_2pct_usd": 56763,
+    "ventas_2pct_usd": 30873
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37268519612066214,
+   "p_largo": 0.3267831297354294,
+   "n_celda": 456,
+   "n_padre": 1000,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se registraron nuevos listados ni anuncios en Binance, Upbit o Coinbase en las últimas 72 horas. La subida está impulsada por una propuesta de gobernanza para cerrar su sistema de staking de Bitcoin y reducir la inflación del token BABY en más del 60% (del 5,5% al 2%), enfocando el proyecto en bóvedas de préstamos colateralizados en DeFi.",
+    "fuentes": [
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRAfmRvznrcogqaPR0wPWxTGo6iYVOtGrNcBmO7sIgBH1kTcJW3SasH6CRr6tw48No8TE99HUJXjI6qy8eoJYv77cfzLpb1X_MehIgjM3TclsqDb3GD-JasRrEhqP1gGKG04YB4txvAL1ON4LCK6I="
+     },
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRUE8kOtCxmpjIiVj3zTuETEVSUK7c4nulD2XHgcpG_FTm1kQCgsyvawC1q-2ShwS0uiMKNriaelXHs-_2LZ9hcbMbNv8NnfbOzVDBOLSO9pSip0w1wWBe7rXtaX-e5-5wJt3tiK1EF5fkcw=="
+     },
+     {
+      "titulo": "techflowpost.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlWUN_DSpeB1h1AGU3cXGobfeCgnHGpN-RYR82UusLGw6ZxmSeoVUfGi3rWTWccL2QuLqWmnOUF5bfAM8hrTHGfCmvC45WI9IG7xlb6PuToaCUb1a-7admRlKwb_3yJp3J6Ta13d8="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "MMTUSDT",
+   "base": "MMT",
+   "nombre": "Momentum",
+   "cap_m": 52.4,
+   "precio": 0.2482,
+   "sube_24h": 0.171307220386975,
+   "vol24_m": 21.12,
+   "vol_vs_30d": 3.71,
+   "top3_horas": 0.31,
+   "compras_agresivas": 0.51,
+   "prev30": 0.46846846846846835,
+   "rsi_1h": 62.6,
+   "pares_usd": {
+    "TRY": 10.0,
+    "USDC": 0.74
+   },
+   "par_no_usdt": 0.34,
+   "libro": {
+    "mid": 0.24775,
+    "spread": 0.0012116316639743108,
+    "compras_2pct_usd": 26004,
+    "ventas_2pct_usd": 23588
+   },
+   "concentracion": [
+    "volumen ≥2x"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · 0-50%",
+   "p_corto": 0.3310468297150005,
+   "p_largo": 0.42921459597570755,
+   "n_celda": 389,
+   "n_padre": 1000,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia en las últimas 72 horas (listados en Binance, Upbit o Coinbase, alianzas, quemas de tokens ni hackeos) que explique la subida de Momentum (MMT). El incremento responde principalmente a volatilidad técnica y especulación de mercado en las plataformas donde ya cotiza.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHotGcrXbR676Cy86RAmOi2lf3LjOXkTbfHA9BmkwQuspPO-2lRRV9A6M9Wn7itkHkG4zmGwndjlr7anfwkKo7baO2OUp1TuYNnrvn_26l_DPeKhUyo52O1yCOC-_EevHPwhjt64EcfYBEyepLlbmdJBaTkTXQ="
+     },
+     {
+      "titulo": "cryptonews.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZmCHpqZS-kcR87VyHoCtBRKDJwtR-wEpD2R6ESlXUb-VEhFhVTux7KIz584TU9d4ciuebC_gatDP_U5uWaqyw8RrAes5vrUncLr8JAQy43tlmxeCULfUjEmREDdKrgz2ok6k7nA=="
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWAUfS21ZX2-U360_LyltDqfq8WjNrGK1Nlwj4WdVi5O4pjdvnN7QiZEr8zVxpnPdufpbC8-c2BbJnlYoiKKfD95Bj12mdlGhLZ7fQaReOskHmsDKEVE--0tRYclwwXtsFF8ICtnNjxiM7qoaswKNCJDyZVT4="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "SAHARAUSDT",
+   "base": "SAHARA",
+   "nombre": "Sahara AI",
+   "cap_m": 25.7,
+   "precio": 0.00582,
+   "sube_24h": 0.1479289940828401,
+   "vol24_m": 7.48,
+   "vol_vs_30d": 12.73,
+   "top3_horas": 0.49,
+   "compras_agresivas": 0.51,
+   "prev30": -0.390625,
+   "rsi_1h": 62.7,
+   "pares_usd": {
+    "TRY": 1.64,
+    "FDUSD": 0.24,
+    "USDC": 0.05
+   },
+   "par_no_usdt": 0.2,
+   "libro": {
+    "mid": 0.00583,
+    "spread": 0.0034364261168384758,
+    "compras_2pct_usd": 16267,
+    "ventas_2pct_usd": 7204
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 8x+ · venía bajando",
+   "p_corto": 0.4562371651640108,
+   "p_largo": 0.3097972170802607,
+   "n_celda": 208,
+   "n_padre": 393,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia en las últimas 72 horas (listados en Binance/Upbit/Coinbase, alianzas, quemas o hackeos) que justifique directamente la subida. El incremento parece responder a rebotes técnicos o especulación de mercado habitual en tokens de baja liquidez.",
+    "fuentes": [
+     {
+      "titulo": "coingecko.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE46vC3IbjJF7XuEiZSWkf2aqcoAJlY7xZUW1ppzqDZ7PsMrg-S2YpIInclTxXZCxpblYyKZs6V8xuYXgOxVBFkkryAsgrkdpWeCJP1Cv4tDwyl5ZITD2z7M0c8hdvmKO9ikg=="
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFv9sPknojxgIGx265KG9NdVLaygc3Z9CsoqpTkUTN1bLsW4mM3M3KtTpNXY9LYh-eV1bjEFzZedDNVNE6C7n2LqjPocSNzQxfjFlyoSU8qXXSXBriB-LaKZ2EKwzhGJ4IEKEb69TL6xECs11acP4k="
+     },
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG2NnnEhOWqq29qCtJbo1vFl1ddc69kpthOklt2KTEjYvyonrglNpjs9P3ZjN0jNxS3je2LzV_yl9wrIO7FW7PP6AUr6mHxDkCFngH2DqK9Z1a9Qps3yHna8fwIbuzk8qUbLQwDHZ_Ww=="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "SOXLBUSDT",
+   "base": "SOXLB",
+   "nombre": "Semicon Bull 3X ETF (bStocks Tokenized ETF)",
+   "cap_m": 112.5,
+   "precio": 41.51,
+   "sube_24h": 0.14636840651753658,
+   "vol24_m": 67.79,
+   "vol_vs_30d": 1.56,
+   "top3_horas": 0.65,
+   "compras_agresivas": 0.51,
+   "prev30": -0.5653061224489795,
+   "rsi_1h": 53.1,
+   "pares_usd": {},
+   "par_no_usdt": 0.0,
+   "libro": {
+    "mid": 41.57,
+    "spread": 0.00048123195380167516,
+    "compras_2pct_usd": 347950,
+    "ventas_2pct_usd": 213161
+   },
+   "concentracion": [
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37268519612066214,
+   "p_largo": 0.3267831297354294,
+   "n_celda": 456,
+   "n_padre": 1000,
+   "senal": null
+  },
+  {
+   "sym": "KORUBUSDT",
+   "base": "KORUB",
+   "nombre": "South Korea Bull 3X ETF (bStocks Tokenized ETF)",
+   "cap_m": 20.5,
+   "precio": 6.08,
+   "sube_24h": 0.14500941619585705,
+   "vol24_m": 12.86,
+   "vol_vs_30d": 1.73,
+   "top3_horas": 0.54,
+   "compras_agresivas": 0.53,
+   "prev30": -0.49428571428571433,
+   "rsi_1h": 53.8,
+   "pares_usd": {},
+   "par_no_usdt": 0.0,
+   "libro": {
+    "mid": 6.085,
+    "spread": 0.00164473684210531,
+    "compras_2pct_usd": 584423,
+    "ventas_2pct_usd": 513506
+   },
+   "concentracion": [
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37268519612066214,
+   "p_largo": 0.3267831297354294,
+   "n_celda": 456,
+   "n_padre": 1000,
+   "senal": null
+  },
+  {
+   "sym": "ZILUSDT",
+   "base": "ZIL",
+   "nombre": "Zilliqa",
+   "cap_m": 16.8,
+   "precio": 0.000869,
+   "sube_24h": 0.12710765239948119,
+   "vol24_m": 1.12,
+   "vol_vs_30d": 0.82,
+   "top3_horas": 0.34,
+   "compras_agresivas": 0.52,
+   "prev30": -0.6237188872620791,
+   "rsi_1h": 72.1,
+   "pares_usd": {
+    "TRY": 1.31,
+    "BTC": 0.42,
+    "ETH": 0.32,
+    "EUR": 0.0
+   },
+   "par_no_usdt": 0.65,
+   "libro": {
+    "mid": 0.0008675,
+    "spread": 0.0011534025374855261,
+    "compras_2pct_usd": 51250,
+    "ventas_2pct_usd": 37265
+   },
+   "concentracion": [
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37268519612066214,
+   "p_largo": 0.3267831297354294,
+   "n_celda": 456,
+   "n_padre": 1000,
+   "senal": null
+  }
+ ],
+ "btc": {
+  "precio": 60149.07,
+  "r24": -0.02114,
+  "r7": -0.07266408868106233
+ }
+}
