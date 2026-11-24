@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24T05:36:30Z",
+ "updated_utc": "2026-11-24T05:40:35Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9921,6 +9921,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-24T01:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Nvidia se dispara 31% y Wall Street experimenta fuerte rally",
+   "source_url": "https://www.thehindubusinessline.com/markets/us-stocks-rally-as-jensen-huang-returns-nvidia-shares-surge-31/article71736372.ece",
+   "source_title": "thehindubusinessline.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-nvidia-shares-surge-31-as-jensen-huang-returns-wal-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T01:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Regreso del CEO de Nvidia provoca fuerte repunte en la bolsa de EE.UU.",
+   "source_url": "https://primamedia.ru/news/2691410/",
+   "source_title": "primamedia.ru",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-nvidia-chief-return-triggers-historic-us-stock-mar-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T03:15:00Z"
   }
  ]
 }
