@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-24T15:28:18Z",
+ "generated_utc": "2026-11-24T16:27:28Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.207,
- "event_risk": 0.205,
+ "bias": -0.212,
+ "event_risk": 0.215,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.121,
+   "riesgo": 0.126,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.089,
+   "riesgo": 0.092,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,10 +50,24 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.007,
+   "riesgo": 0.008,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "cme-btc-expiry-2026-11-27",
+   "utc": "2026-11-27T16:00:00Z",
+   "title_es": "Vencimiento mensual de futuros de BTC en CME",
+   "category": "DERIVATIVES_EXPIRY",
+   "status": "confirmed",
+   "magnitud": 0.05,
+   "riesgo": 0.003,
+   "ventana": [
+    "2026-11-27T14:00:00Z",
+    "2026-11-27T17:00:00Z"
    ],
    "en_ventana": false
   }
@@ -65,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.418,
+   "aporte": 0.416,
    "fuente": "noticia"
   },
   {
@@ -74,7 +88,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.386,
+   "aporte": -0.385,
    "fuente": "noticia"
   },
   {
@@ -83,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.32,
+   "aporte": 0.313,
    "fuente": "noticia"
   },
   {
@@ -92,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.207,
+   "aporte": 0.206,
    "fuente": "noticia"
   },
   {
@@ -119,7 +133,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.172,
+   "aporte": -0.171,
    "fuente": "noticia"
   },
   {
@@ -128,7 +142,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.166,
+   "aporte": -0.165,
    "fuente": "noticia"
   }
  ],
