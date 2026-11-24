@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-24T02:39:18Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-24T03:38:19Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.27 · riesgo de evento 0.12 · tamaño ×0.5 · compras permitidas
 
@@ -9,19 +9,19 @@ Actualizado 2026-11-24T02:39:18Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.071 |
-| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.052 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.074 |
+| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.054 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.452 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.401 |
-| El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en | 2026-11-23 | pro | +0.359 |
-| El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.223 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.200 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.187 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.449 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.400 |
+| El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en | 2026-11-23 | pro | +0.352 |
+| El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.222 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.199 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.186 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.178 |
-| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.173 |
+| Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.172 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-24T02:39:18Z",
+ "inicio": "2026-11-24T03:38:19Z",
  "onchain": {
   "scanned": [
-   977313,
-   977313
+   977314,
+   977316
   ],
-  "calls": 29,
+  "calls": 100,
   "stopped": null,
   "nuevas": 0
  },
