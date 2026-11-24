@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-24T17:26:33Z",
+ "generated_utc": "2026-11-24T17:31:40Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.217,
- "event_risk": 0.224,
+ "event_risk": 0.225,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 58,
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.096,
+   "riesgo": 0.097,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.414,
+   "aporte": 0.413,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.307,
+   "aporte": 0.306,
    "fuente": "noticia"
   },
   {
