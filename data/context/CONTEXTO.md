@@ -1,25 +1,25 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-24T00:40:57Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-24T01:40:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: CAUTION** · sesgo -0.44 · riesgo de evento 0.11 · tamaño ×0.5 · compras permitidas
+**Estado: CAUTION** · sesgo -0.44 · riesgo de evento 0.12 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.44
-- Stablecoins -5.96% en 30 días (liquidez saliendo)
+- Stablecoins -5.73% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.066 |
-| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.048 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.068 |
+| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.05 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.403 |
-| El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en | 2026-11-23 | pro | +0.374 |
-| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.201 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.189 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.402 |
+| El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en | 2026-11-23 | pro | +0.366 |
+| Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.200 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.188 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.179 |
-| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.176 |
+| El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed | 2026-11-22 | pro | +0.174 |
 | Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.173 |
 | ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entr | 2026-11-12 | pro | +0.124 |
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-24T00:40:57Z",
+ "inicio": "2026-11-24T01:40:02Z",
  "onchain": {
   "scanned": [
-   977291,
-   977298
+   977299,
+   977304
   ],
-  "calls": 153,
+  "calls": 100,
   "stopped": null,
   "nuevas": 0
  },
