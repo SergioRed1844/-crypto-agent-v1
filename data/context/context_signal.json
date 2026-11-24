@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-24T05:40:35Z",
+ "generated_utc": "2026-11-24T06:35:52Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.933,
- "bias": -0.16,
- "event_risk": 0.135,
+ "size_mult": 0.93,
+ "bias": -0.17,
+ "event_risk": 0.14,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.16, riesgo de evento 0.13",
+  "Contexto neutral: sesgo -0.17, riesgo de evento 0.14",
   "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.081,
+   "riesgo": 0.084,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.059,
+   "riesgo": 0.061,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.444,
+   "aporte": 0.441,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.397,
+   "aporte": -0.396,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Nvidia se dispara 31% y Wall Street experimenta fuerte rally",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.366,
+   "aporte": 0.359,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.219,
+   "aporte": 0.218,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.185,
+   "aporte": -0.184,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.177,
+   "aporte": -0.176,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.171,
+   "aporte": -0.17,
    "fuente": "noticia"
   }
  ],
