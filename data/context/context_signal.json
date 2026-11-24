@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-24T01:45:10Z",
+ "generated_utc": "2026-11-24T02:33:11Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.263,
- "event_risk": 0.115,
+ "bias": -0.266,
+ "event_risk": 0.119,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 60,
  "reasons": [
-  "Precaución: sesgo -0.26",
-  "Stablecoins -5.73% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.27",
+  "Stablecoins -5.74% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.069,
+   "riesgo": 0.071,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.05,
+   "riesgo": 0.052,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -51,7 +51,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.454,
+   "aporte": 0.452,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.402,
+   "aporte": -0.401,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "El Nasdaq sube un 6% y el Dow gana 1.400 puntos tras reactivarse el optimismo en IA",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.366,
+   "aporte": 0.36,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.224,
+   "aporte": 0.223,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.188,
+   "aporte": -0.187,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.179,
+   "aporte": -0.178,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "El oro pone a prueba los 3.500 dólares ante expectativas sobre la Fed",
    "category": "MONETARY_POLICY",
    "stance": "pro",
-   "aporte": 0.174,
+   "aporte": 0.173,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.73
+  "stablecoins_30d_pct": -5.74
  }
 }
