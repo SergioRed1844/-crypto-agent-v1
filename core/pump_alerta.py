@@ -46,6 +46,12 @@ def velas(sym: str, interval: str, limit: int = 1000) -> pd.DataFrame:
     return df[["o", "h", "l", "c", "qv", "tq"]].astype(float)
 
 
+def tokenizada(m: dict | None) -> bool:
+    """Acciones/ETF tokenizados (p. ej. NVDAB, SOXLB de bStocks): no son criptos, se excluyen."""
+    n = ((m or {}).get("name") or "").lower()
+    return "tokenized" in n or "bstocks" in n or "xstock" in n
+
+
 def etiqueta(v: float, cual: str) -> str:
     cortes, nombres = CORTES[cual]
     if v is None or not np.isfinite(v):
@@ -340,7 +346,7 @@ def main(out_dir: str, forzar: bool = False, prueba: bool = False) -> None:
     filas = []
     for sym, base in pares.items():
         m = cg.get(base)
-        if not m or not m.get("market_cap") or not CAP_MIN <= m["market_cap"] <= CAP_MAX:
+        if not m or not m.get("market_cap") or not CAP_MIN <= m["market_cap"] <= CAP_MAX or tokenizada(m):
             continue
         d = velas(sym, "1d", 1000)
         time.sleep(.12)
@@ -358,7 +364,7 @@ def main(out_dir: str, forzar: bool = False, prueba: bool = False) -> None:
         if float(tk.get("priceChangePercent") or 0) / 100 < SUBE or float(tk.get("quoteVolume") or 0) < VOL24_MIN:
             continue
         m = cg.get(base)
-        if not m or not m.get("market_cap") or m["market_cap"] > CAP_MAX:  # sin ficha en CoinGecko (p. ej. acciones tokenizadas): fuera
+        if not m or not m.get("market_cap") or m["market_cap"] > CAP_MAX or tokenizada(m):  # sin ficha o acción tokenizada: fuera
             continue
         r = medir(sym, base, m, tick)
         if not r or r["sube_24h"] < SUBE:

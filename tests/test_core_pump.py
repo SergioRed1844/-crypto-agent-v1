@@ -44,3 +44,8 @@ def test_validar_y_reporte():
     assert v["n_train"] == 40 and v["n_test"] == 20
     tit, md = pa.reporte("2026-11-23", [], {"corto": v}, {"corto": []}, None, prueba=True)
     assert tit.startswith("[PRUEBA]") and "ninguna" in tit.lower() and "Validación" in md
+
+
+def test_tokenizada():
+    assert pa.tokenizada({"name": "NVIDIA (bStocks Tokenized Stock)"})
+    assert not pa.tokenizada({"name": "Lista DAO"}) and not pa.tokenizada(None)
