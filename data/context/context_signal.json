@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-24T01:40:02Z",
+ "generated_utc": "2026-11-24T01:45:10Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.442,
+ "bias": -0.263,
  "event_risk": 0.115,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 67,
+ "confidence": 60,
  "reasons": [
-  "Precaución: sesgo -0.44",
+  "Precaución: sesgo -0.26",
   "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.068,
+   "riesgo": 0.069,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -46,6 +46,15 @@
  ],
  "recent": [
   {
+   "id": "news-doj-moves-to-recover-1-1b-from-north-korea-linked-2026-11-24",
+   "date": "2026-11-24",
+   "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
+   "category": "HACK_SECURITY",
+   "stance": "pro",
+   "aporte": 0.454,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-global-market-crash-why-are-trillions-of-dollars-b-2026-11-21",
    "date": "2026-11-21",
    "title_es": "Desplome de mercados globales borra billones de dólares",
@@ -61,6 +70,15 @@
    "category": "MACRO_DATA",
    "stance": "pro",
    "aporte": 0.366,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-pymnts-doj-aims-to-recover-1-1-billion-from-binanc-2026-11-23",
+   "date": "2026-11-23",
+   "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
+   "category": "HACK_SECURITY",
+   "stance": "pro",
+   "aporte": 0.224,
    "fuente": "noticia"
   },
   {
@@ -97,24 +115,6 @@
    "category": "MONETARY_POLICY",
    "stance": "pro",
    "aporte": 0.174,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-anthropic-plunges-as-wall-street-suffers-ai-sell-o-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
-   "category": "FINANCIAL_CRISIS",
-   "stance": "anti",
-   "aporte": -0.173,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-u-s-bitcoin-etfs-post-6-2-billion-in-third-quarter-2026-11-12",
-   "date": "2026-11-12",
-   "title_es": "ETFs de Bitcoin al contado en EE.UU. registran 6.200 millones de dólares en entradas netas en el 3T",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "pro",
-   "aporte": 0.124,
    "fuente": "noticia"
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24T01:40:02Z",
+ "updated_utc": "2026-11-24T01:45:10Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9858,6 +9858,69 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-23T21:30:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "ASSET_RECOVERY",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 4,
+   "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
+   "source_url": "https://www.pymnts.com/news/2026/doj-aims-to-recover-1-1-billion-from-binance-theft/",
+   "source_title": "pymnts.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-pymnts-doj-aims-to-recover-1-1-billion-from-binanc-2026-11-23",
+   "date": "2026-11-23",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "22:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-23T22:30:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "ASSET_RECOVERY",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 4,
+   "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
+   "source_url": "https://cointelegraph.com/news/us-seeks-11b-crypto-stolen-north-korea-binance-hack",
+   "source_title": "cointelegraph.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-doj-moves-to-recover-1-1b-from-north-korea-linked-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T00:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "RATE_HIKE_HINT",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Williams de la Fed no descarta subidas consecutivas de tasas de interés",
+   "source_url": "https://investinglive.com/central-banks/fed-s-williams-won-t-rule-out-back-to-back-rate-hikes-as-data-drives-the-path/",
+   "source_title": "investinglive.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-williams-wont-rule-out-back-to-back-rate-hikes-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T01:15:00Z"
   }
  ]
 }
