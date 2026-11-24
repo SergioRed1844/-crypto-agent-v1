@@ -1,24 +1,24 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-24T12:54:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-24T13:29:51Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.19 · riesgo de evento 0.19 · tamaño ×0.907 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.20 · riesgo de evento 0.19 · tamaño ×0.905 · compras permitidas
 
-- Contexto neutral: sesgo -0.19, riesgo de evento 0.19
-- Stablecoins -5.73% en 30 días (liquidez saliendo)
+- Contexto neutral: sesgo -0.20, riesgo de evento 0.19
+- Stablecoins -5.74% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.109 |
-| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.08 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.112 |
+| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.082 |
 | Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.007 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.425 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.389 |
-| Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95% | 2026-11-24 | pro | +0.337 |
-| El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.210 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.423 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.388 |
+| Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95% | 2026-11-24 | pro | +0.333 |
+| El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.209 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.194 |
 | Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.179 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.173 |
@@ -31,21 +31,21 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-24T12:54:48Z",
+ "inicio": "2026-11-24T13:29:51Z",
  "onchain": {
   "scanned": [
-   977363,
-   977366
+   977367,
+   977370
   ],
-  "calls": 86,
+  "calls": 84,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 10,
-  "eventos": 2,
-  "urgentes": 1,
+  "titulares": 4,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
