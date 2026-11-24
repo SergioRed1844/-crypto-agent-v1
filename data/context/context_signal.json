@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-24T19:25:00Z",
+ "generated_utc": "2026-11-24T20:24:06Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.226,
- "event_risk": 0.242,
+ "bias": -0.23,
+ "event_risk": 0.251,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.143,
+   "riesgo": 0.149,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.105,
+   "riesgo": 0.109,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.409,
+   "aporte": 0.406,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.382,
+   "aporte": -0.38,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.294,
+   "aporte": 0.288,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.202,
+   "aporte": 0.201,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.17,
+   "aporte": -0.169,
    "fuente": "noticia"
   },
   {
