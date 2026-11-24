@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-24T23:14:48Z",
+ "generated_utc": "2026-11-24T23:21:37Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.243,
- "event_risk": 0.28,
+ "event_risk": 0.281,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.168,
+   "riesgo": 0.169,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.272,
+   "aporte": 0.271,
    "fuente": "noticia"
   },
   {
