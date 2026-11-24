@@ -1,26 +1,26 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-24T12:30:45Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-24T12:54:48Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
-**Estado: NEUTRAL** · sesgo -0.19 · riesgo de evento 0.18 · tamaño ×0.909 · compras permitidas
+**Estado: NEUTRAL** · sesgo -0.19 · riesgo de evento 0.19 · tamaño ×0.907 · compras permitidas
 
-- Contexto neutral: sesgo -0.19, riesgo de evento 0.18
+- Contexto neutral: sesgo -0.19, riesgo de evento 0.19
 - Stablecoins -5.73% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.107 |
-| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.078 |
+| Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.109 |
+| PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.08 |
 | Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.007 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.426 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.425 |
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.389 |
-| Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95% | 2026-11-24 | pro | +0.340 |
+| Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95% | 2026-11-24 | pro | +0.337 |
 | El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.210 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.194 |
-| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.180 |
+| Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de Bl | 2026-11-20 | anti | -0.179 |
 | Bitcoin se desploma a su nivel más bajo en dos años | 2026-11-21 | anti | -0.173 |
 | Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street | 2026-11-20 | anti | -0.167 |
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-24T12:30:45Z",
+ "inicio": "2026-11-24T12:54:48Z",
  "onchain": {
   "scanned": [
-   977358,
-   977362
+   977363,
+   977366
   ],
-  "calls": 119,
+  "calls": 86,
   "stopped": null,
   "nuevas": 0
  },

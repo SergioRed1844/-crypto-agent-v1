@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-24T12:30:45Z",
+ "generated_utc": "2026-11-24T12:54:48Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.909,
- "bias": -0.19,
- "event_risk": 0.183,
+ "size_mult": 0.907,
+ "bias": -0.193,
+ "event_risk": 0.186,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 57,
  "reasons": [
-  "Contexto neutral: sesgo -0.19, riesgo de evento 0.18",
+  "Contexto neutral: sesgo -0.19, riesgo de evento 0.19",
   "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.107,
+   "riesgo": 0.109,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.078,
+   "riesgo": 0.08,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -65,7 +65,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.426,
+   "aporte": 0.425,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.34,
+   "aporte": 0.337,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.18,
+   "aporte": -0.179,
    "fuente": "noticia"
   },
   {
