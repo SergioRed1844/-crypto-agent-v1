@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-24T20:24:06Z",
+ "generated_utc": "2026-11-24T21:23:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.23,
- "event_risk": 0.251,
+ "bias": -0.235,
+ "event_risk": 0.261,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.149,
+   "riesgo": 0.155,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.109,
+   "riesgo": 0.114,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.406,
+   "aporte": 0.404,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.38,
+   "aporte": -0.379,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.288,
+   "aporte": 0.283,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.201,
+   "aporte": 0.2,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.19,
+   "aporte": -0.189,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.174,
+   "aporte": -0.173,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.164,
+   "aporte": -0.163,
    "fuente": "noticia"
   }
  ],
