@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-24T22:22:41Z",
+ "generated_utc": "2026-11-24T23:14:48Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.239,
- "event_risk": 0.271,
+ "bias": -0.243,
+ "event_risk": 0.28,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
  "reasons": [
   "Precaución: sesgo -0.24",
-  "Stablecoins -5.74% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.162,
+   "riesgo": 0.168,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.118,
+   "riesgo": 0.123,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.402,
+   "aporte": 0.399,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.378,
+   "aporte": -0.377,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.277,
+   "aporte": 0.272,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.198,
+   "aporte": 0.197,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.163,
+   "aporte": -0.162,
    "fuente": "noticia"
   }
  ],
@@ -158,6 +158,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.74
+  "stablecoins_30d_pct": -5.73
  }
 }
