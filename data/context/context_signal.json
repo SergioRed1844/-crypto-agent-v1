@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-24T07:35:05Z",
+ "generated_utc": "2026-11-24T08:34:03Z",
  "state": "NEUTRAL",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
- "size_mult": 0.927,
- "bias": -0.177,
- "event_risk": 0.146,
+ "size_mult": 0.922,
+ "bias": -0.167,
+ "event_risk": 0.156,
  "extra_confluence": 0,
  "vote": "FLAT",
- "confidence": 57,
+ "confidence": 56,
  "reasons": [
-  "Contexto neutral: sesgo -0.18, riesgo de evento 0.15",
+  "Contexto neutral: sesgo -0.17, riesgo de evento 0.16",
   "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.087,
+   "riesgo": 0.091,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,10 +36,24 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.064,
+   "riesgo": 0.067,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
+   ],
+   "en_ventana": false
+  },
+  {
+   "id": "deribit-expiry-2026-11-27",
+   "utc": "2026-11-27T08:00:00Z",
+   "title_es": "Vencimiento mensual de opciones BTC/ETH (Deribit)",
+   "category": "DERIVATIVES_EXPIRY",
+   "status": "confirmed",
+   "magnitud": 0.1,
+   "riesgo": 0.006,
+   "ventana": [
+    "2026-11-27T06:00:00Z",
+    "2026-11-27T09:00:00Z"
    ],
    "en_ventana": false
   }
@@ -51,7 +65,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.438,
+   "aporte": 0.436,
    "fuente": "noticia"
   },
   {
@@ -60,16 +74,16 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.395,
+   "aporte": -0.394,
    "fuente": "noticia"
   },
   {
-   "id": "news-nvidia-shares-surge-31-as-jensen-huang-returns-wal-2026-11-24",
+   "id": "news-us-stocks-jump-4-73-as-treasury-yield-hits-4-95-2026-11-24",
    "date": "2026-11-24",
-   "title_es": "Nvidia se dispara 31% y Wall Street experimenta fuerte rally",
+   "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.352,
+   "aporte": 0.369,
    "fuente": "noticia"
   },
   {
@@ -78,7 +92,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.217,
+   "aporte": 0.215,
    "fuente": "noticia"
   },
   {
@@ -87,7 +101,7 @@
    "title_es": "Orden de congelamiento de $6.5B contra Binance",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.196,
    "fuente": "noticia"
   },
   {
@@ -105,7 +119,7 @@
    "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
    "category": "CRYPTO_STRUCTURAL",
    "stance": "anti",
-   "aporte": -0.176,
+   "aporte": -0.175,
    "fuente": "noticia"
   },
   {
@@ -114,7 +128,7 @@
    "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.17,
+   "aporte": -0.169,
    "fuente": "noticia"
   }
  ],

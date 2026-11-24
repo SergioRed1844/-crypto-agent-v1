@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-24T07:40:57Z",
+ "generated_utc": "2026-11-24T08:38:13Z",
  "fear_greed": {
   "value": 11,
   "label": "Extreme Fear",
@@ -7,7 +7,7 @@
   "avg_30d": 26.1
  },
  "stablecoins": {
-  "total_usd": 283241334374,
+  "total_usd": 283235891901,
   "chg_7d_pct": -1.12,
   "chg_30d_pct": -5.73
  },
@@ -21,7 +21,7 @@
     "Yes": 0.2355,
     "No": 0.7645
    },
-   "volume": 8729228.305236,
+   "volume": 8730304.084898,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -30,16 +30,16 @@
     "Yes": 0.2355,
     "No": 0.7645
    },
-   "volume": 8729228.305236,
+   "volume": 8730304.084898,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
    "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
    "outcomes": {
-    "Yes": 0.0015,
-    "No": 0.9985
+    "Yes": 0.0005,
+    "No": 0.9995
    },
-   "volume": 54785625.69675801,
+   "volume": 54785625.69675802,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {

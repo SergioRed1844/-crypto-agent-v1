@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24T07:35:05Z",
+ "updated_utc": "2026-11-24T08:34:03Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -9945,6 +9945,27 @@
   },
   {
    "category": "MACRO_DATA",
+   "subcategory": "GLOBAL_EQUITIES",
+   "country": "GLOBAL",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Bolsas asiáticas se disparan hasta 8% contagiadas por Wall Street",
+   "source_url": "https://www.livemint.com/market/stock-market-news/asian-markets-follow-wall-street-nikkei-kospi-jump-up-to-8-as-jensen-huang-s-return-sparks-rally-in-ai-stocks-11795485047635.html",
+   "source_title": "livemint.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-asian-markets-follow-wall-street-nikkei-kospi-jump-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T02:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
    "subcategory": "",
    "country": "US",
    "crypto_stance": "pro",
@@ -9963,6 +9984,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-24T03:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "EQUITIES_BONDS",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
+   "source_url": "https://www.riotimesonline.com/global-economy-briefing-november-24-2026/",
+   "source_title": "riotimesonline.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-stocks-jump-4-73-as-treasury-yield-hits-4-95-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T04:45:00Z"
   }
  ]
 }
