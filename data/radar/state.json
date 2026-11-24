@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-22T08:16:37+00:00",
   "2026-11-22T09:15:41+00:00",
   "2026-11-22T10:14:42+00:00",
   "2026-11-22T10:15:38+00:00",
@@ -429,9 +428,10 @@
   "2026-11-24T06:36:00+00:00",
   "2026-11-24T07:04:25+00:00",
   "2026-11-24T07:35:13+00:00",
-  "2026-11-24T08:34:17+00:00"
+  "2026-11-24T08:34:17+00:00",
+  "2026-11-24T09:33:24+00:00"
  ],
- "last_scan_utc": "2026-11-24T08:34:17+00:00",
+ "last_scan_utc": "2026-11-24T09:33:24+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -440,7 +440,7 @@
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "ADA": {
@@ -450,12 +450,12 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "AMZN": {
@@ -465,7 +465,7 @@
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -475,7 +475,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "BCH": {
@@ -485,7 +485,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "BTC": {
@@ -495,7 +495,7 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "DIA": {
@@ -520,17 +520,17 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "GLD": {
@@ -540,7 +540,7 @@
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "GOOGL": {
@@ -550,7 +550,7 @@
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "IWM": {
@@ -565,12 +565,12 @@
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "LINK": {
@@ -580,7 +580,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "LTC": {
@@ -615,17 +615,17 @@
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "QQQ": {
@@ -660,7 +660,7 @@
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-20",
+   "last": "2026-11-23",
    "nota": "yahoo"
   },
   "WMT": {
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-24T07:35:05Z",
+   "last": "2026-11-24T08:34:03Z",
    "nota": "NEUTRAL"
   }
  },
@@ -981,11 +981,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 39%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.6 pp < 5 pp"
+    "ventaja vs día cualquiera +4.5 pp < 5 pp"
    ],
    "p": 0.437,
    "base": 0.392,
-   "ret": 0.0123,
+   "ret": 0.0122,
    "h": 30
   },
   {
@@ -1016,7 +1016,7 @@
     "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
    "p": 0.443,
-   "base": 0.397,
+   "base": 0.398,
    "ret": 0.0189,
    "h": 30
   },
@@ -1061,7 +1061,7 @@
    "why": [
     "la ventaja no es creíble: cota baja 36% vs día cualquiera 37%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
+    "ventaja vs día cualquiera +4.4 pp < 5 pp"
    ],
    "p": 0.41,
    "base": 0.365,
