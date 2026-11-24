@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-22T10:14:42+00:00",
   "2026-11-22T10:15:38+00:00",
   "2026-11-22T11:13:58+00:00",
   "2026-11-22T12:12:59+00:00",
@@ -429,304 +428,305 @@
   "2026-11-24T07:35:13+00:00",
   "2026-11-24T08:34:17+00:00",
   "2026-11-24T09:33:24+00:00",
-  "2026-11-24T09:34:17+00:00"
+  "2026-11-24T09:34:17+00:00",
+  "2026-11-24T10:32:43+00:00"
  ],
- "last_scan_utc": "2026-11-24T09:34:17+00:00",
+ "last_scan_utc": "2026-11-24T10:32:43+00:00",
  "health": {
   "AAPL": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AC.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ADA": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "ALSEA.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMZN": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ASURB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AVAX": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "BBAJIOO.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BCH": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "BIMBOA.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BTC": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "CEMEXCPO.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "DIA": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "DOGE": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "DOT": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "ETH": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "FEMSAUBD.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GLD": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GMEXICOB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GOOGL": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GRUMAB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "IWM": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "KIMBERA.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LINK": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LTC": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "META": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "MXN=X": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NAFTRACISHRS.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NVDA": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "OMAB.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "QQQ": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "SOL": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "SPY": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "TRX": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "TSLA": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "WALMEX.MX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "WMT": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "XRP": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "^MXX": {
    "ok": true,
    "last": "2026-11-23",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "^VIX": {
    "ok": true,
    "last": "2026-11-24",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "fear_greed": {
    "ok": true,
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-24T08:34:03Z",
+   "last": "2026-11-24T09:37:18Z",
    "nota": "NEUTRAL"
   }
  },
@@ -847,7 +847,7 @@
    "why": [],
    "p": 0.451,
    "base": 0.37,
-   "ret": 0.0176,
+   "ret": 0.0175,
    "h": 30
   },
   {
@@ -859,7 +859,7 @@
    "why": [],
    "p": 0.444,
    "base": 0.358,
-   "ret": 0.0177,
+   "ret": 0.0176,
    "h": 30
   },
   {
@@ -871,7 +871,7 @@
    "why": [],
    "p": 0.393,
    "base": 0.3,
-   "ret": 0.0101,
+   "ret": 0.0099,
    "h": 7
   },
   {
@@ -883,7 +883,7 @@
    "why": [],
    "p": 0.409,
    "base": 0.318,
-   "ret": 0.0164,
+   "ret": 0.0163,
    "h": 30
   },
   {
@@ -907,7 +907,7 @@
    "why": [],
    "p": 0.56,
    "base": 0.474,
-   "ret": 0.0392,
+   "ret": 0.0391,
    "h": 30
   },
   {
@@ -935,9 +935,9 @@
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.0 pp < 5 pp"
    ],
-   "p": 0.331,
+   "p": 0.33,
    "base": 0.29,
-   "ret": 0.0119,
+   "ret": 0.0117,
    "h": 30
   },
   {
@@ -949,11 +949,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.6 pp < 5 pp"
+    "ventaja vs día cualquiera +4.5 pp < 5 pp"
    ],
-   "p": 0.444,
+   "p": 0.443,
    "base": 0.398,
-   "ret": 0.0223,
+   "ret": 0.0221,
    "h": 30
   },
   {
@@ -965,11 +965,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 43% vs día cualquiera 43%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.7 pp < 5 pp"
+    "ventaja vs día cualquiera +4.6 pp < 5 pp"
    ],
    "p": 0.479,
    "base": 0.433,
-   "ret": 0.0231,
+   "ret": 0.0229,
    "h": 30
   },
   {
@@ -985,7 +985,7 @@
    ],
    "p": 0.437,
    "base": 0.392,
-   "ret": 0.0122,
+   "ret": 0.0121,
    "h": 30
   },
   {
@@ -1001,7 +1001,7 @@
    ],
    "p": 0.427,
    "base": 0.382,
-   "ret": 0.0195,
+   "ret": 0.0194,
    "h": 30
   },
   {
@@ -1013,11 +1013,11 @@
    "why": [
     "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.6 pp < 5 pp"
+    "ventaja vs día cualquiera +4.5 pp < 5 pp"
    ],
    "p": 0.443,
    "base": 0.398,
-   "ret": 0.0189,
+   "ret": 0.0187,
    "h": 30
   },
   {
@@ -1033,7 +1033,7 @@
    ],
    "p": 0.429,
    "base": 0.384,
-   "ret": 0.0183,
+   "ret": 0.0182,
    "h": 30
   },
   {
@@ -1049,7 +1049,7 @@
    ],
    "p": 0.318,
    "base": 0.279,
-   "ret": 0.0087,
+   "ret": 0.0085,
    "h": 30
   },
   {
@@ -1063,9 +1063,9 @@
     "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
     "ventaja vs día cualquiera +4.4 pp < 5 pp"
    ],
-   "p": 0.41,
+   "p": 0.409,
    "base": 0.365,
-   "ret": 0.0158,
+   "ret": 0.0156,
    "h": 30
   }
  ],
