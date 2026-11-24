@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24T08:34:03Z",
+ "updated_utc": "2026-11-24T09:33:10Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10005,6 +10005,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-24T04:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "recession_risk",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Aumenta el temor a una recesión en EE. UU. ante la caída de la riqueza familiar",
+   "source_url": "http://www.greekherald.com/news/279451643/us-recession-fears-rise-as-falling-household-wealth-and-market-turmoil-point-to-25-risk-report",
+   "source_title": "greekherald.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-us-recession-fears-rise-as-falling-household-wealt-2026-11-24",
+   "date": "2026-11-24",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "07:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-24T07:45:00Z"
   }
  ]
 }
