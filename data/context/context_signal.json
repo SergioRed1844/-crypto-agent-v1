@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-24T21:23:21Z",
+ "generated_utc": "2026-11-24T21:27:57Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.235,
- "event_risk": 0.261,
+ "event_risk": 0.262,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 59,
  "reasons": [
-  "Precaución: sesgo -0.23",
+  "Precaución: sesgo -0.24",
   "Stablecoins -5.73% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.155,
+   "riesgo": 0.156,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -97,7 +97,7 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.283,
+   "aporte": 0.282,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.2,
+   "aporte": 0.199,
    "fuente": "noticia"
   },
   {
