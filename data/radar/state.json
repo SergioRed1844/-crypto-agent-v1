@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-22T02:22:32+00:00",
   "2026-11-22T03:21:01+00:00",
   "2026-11-22T04:20:08+00:00",
   "2026-11-22T05:19:11+00:00",
@@ -429,9 +428,10 @@
   "2026-11-24T00:40:58+00:00",
   "2026-11-24T01:40:05+00:00",
   "2026-11-24T01:40:46+00:00",
-  "2026-11-24T02:39:29+00:00"
+  "2026-11-24T02:39:29+00:00",
+  "2026-11-24T03:38:42+00:00"
  ],
- "last_scan_utc": "2026-11-24T02:39:29+00:00",
+ "last_scan_utc": "2026-11-24T03:38:42+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -735,7 +735,7 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
@@ -745,27 +745,27 @@
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
@@ -775,7 +775,7 @@
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
@@ -785,7 +785,7 @@
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
@@ -800,12 +800,12 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-11-22",
+   "last": "2026-11-23",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-24T02:33:11Z",
+   "last": "2026-11-24T02:39:18Z",
    "nota": "CAUTION"
   }
  },
