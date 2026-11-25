@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-25T06:16:04+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
+Última corrida: **2026-11-25T07:15:20+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -14,7 +14,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | VIGILANCIA | GAPB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.9% |
 | VIGILANCIA | OMAB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +1.9% |
 | VIGILANCIA | ORBIA.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.8% |
-| VIGILANCIA | LIVEPOLC-1.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 32% | 28% | +0.8% |
+| VIGILANCIA | LIVEPOLC-1.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 32% | 28% | +0.9% |
 | VIGILANCIA | BBAJIOO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 41% | 36% | +1.6% |
 
 ## Alertas enviadas (últimas 15)
@@ -37,7 +37,7 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 62% | +0.1% |
 | Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.2% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 75% | -0.0% |
-| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 64% | +0.2% |
+| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 64% | +0.3% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 72% | +0.4% |
 | Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 72% | +0.3% |
 | Capitulación con miedo extremo | crypto | 7 d | 27 | 38% | 40% | 39% | 86% | +0.0% |
@@ -146,20 +146,20 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XRP | sí | 2026-11-25 | binance |
 | ^MXX | sí | 2026-11-24 | yahoo |
 | ^VIX | sí | 2026-11-24 | yahoo |
-| contexto_v42 | sí | 2026-11-25T05:39:33Z | CAUTION |
+| contexto_v42 | sí | 2026-11-25T06:15:52Z | CAUTION |
 | fear_greed | sí | 2026-11-25 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-11-23 | wikimedia |
+| wiki_en_Bankruptcy | sí | 2026-11-24 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-23 | wikimedia |
-| wiki_en_Cryptocurrency | sí | 2026-11-23 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-11-23 | wikimedia |
-| wiki_en_Ethereum | sí | 2026-11-23 | wikimedia |
+| wiki_en_Cryptocurrency | sí | 2026-11-24 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-24 | wikimedia |
+| wiki_en_Ethereum | sí | 2026-11-24 | wikimedia |
 | wiki_en_Financial_crisis | sí | 2026-11-23 | wikimedia |
-| wiki_en_Inflation | sí | 2026-11-23 | wikimedia |
+| wiki_en_Inflation | sí | 2026-11-24 | wikimedia |
 | wiki_en_Recession | sí | 2026-11-23 | wikimedia |
 | wiki_en_Ripple_Labs | sí | 2026-11-23 | wikimedia |
 | wiki_en_Solana__blockchain_platform_ | sí | 2026-11-23 | wikimedia |
 | wiki_en_Stock_market_crash | sí | 2026-11-23 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-11-23 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-11-24 | wikimedia |
 | wiki_es_Crisis_económica | sí | 2026-11-23 | wikimedia |
 | wiki_es_Desempleo | sí | 2026-11-23 | wikimedia |
 | wiki_es_Devaluación | sí | 2026-11-23 | wikimedia |
