@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T05:39:33Z",
+ "generated_utc": "2026-11-25T06:15:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.466,
- "event_risk": 0.356,
+ "event_risk": 0.364,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.219,
+   "riesgo": 0.225,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.16,
+   "riesgo": 0.164,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.013,
+   "riesgo": 0.014,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.428,
+   "aporte": -0.427,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.385,
+   "aporte": 0.383,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.353,
+   "aporte": 0.349,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.263,
+   "aporte": -0.262,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.19,
+   "aporte": 0.189,
    "fuente": "noticia"
   }
  ],
