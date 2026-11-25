@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-25T10:12:30Z",
+ "generated_utc": "2026-11-25T11:11:36Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.445,
- "event_risk": 0.42,
+ "event_risk": 0.435,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.265,
+   "riesgo": 0.276,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.194,
+   "riesgo": 0.202,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.016,
+   "riesgo": 0.017,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.422,
+   "aporte": -0.421,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.374,
+   "aporte": 0.372,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.321,
+   "aporte": 0.315,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.273,
+   "aporte": 0.271,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.256,
+   "aporte": -0.254,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.243,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.234,
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.223,
+   "aporte": -0.219,
    "fuente": "noticia"
   }
  ],
@@ -158,6 +158,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.89
+  "stablecoins_30d_pct": -5.9
  }
 }
