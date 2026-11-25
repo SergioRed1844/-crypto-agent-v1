@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-25T17:11:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-25T17:35:29Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.45 · riesgo de evento 0.03 · tamaño ×0.5 · compras permitidas
 
@@ -15,10 +15,10 @@ Actualizado 2026-11-25T17:11:52Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.413 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.359 |
-| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.278 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.258 |
-| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.251 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.358 |
+| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.276 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.257 |
+| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.248 |
 | Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.245 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.238 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.227 |
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-25T17:11:52Z",
+ "inicio": "2026-11-25T17:35:29Z",
  "onchain": {
   "scanned": [
-   977536,
-   977541
+   977542,
+   977544
   ],
-  "calls": 180,
+  "calls": 76,
   "stopped": null,
   "nuevas": 0
  },

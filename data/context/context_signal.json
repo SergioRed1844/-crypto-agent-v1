@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T17:11:52Z",
+ "generated_utc": "2026-11-25T17:35:29Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.451,
- "event_risk": 0.029,
+ "event_risk": 0.03,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -60,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.359,
+   "aporte": 0.358,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.278,
+   "aporte": 0.276,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.258,
+   "aporte": 0.257,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.248,
    "fuente": "noticia"
   },
   {
