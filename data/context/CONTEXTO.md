@@ -1,27 +1,27 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-25T15:08:21Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-25T17:06:35Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.45 · riesgo de evento 0.03 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.45
-- Stablecoins -5.9% en 30 días (liquidez saliendo)
+- Stablecoins -5.89% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.02 |
-| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.007 |
+| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.022 |
+| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.008 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.416 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.363 |
-| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.290 |
-| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.262 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.262 |
-| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.248 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.240 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.229 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.414 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.359 |
+| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.278 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.258 |
+| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.251 |
+| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.246 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.238 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.227 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,27 +30,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-25T15:08:21Z",
+ "inicio": "2026-11-25T17:06:35Z",
  "onchain": {
   "scanned": [
-   977526,
-   977527
+   977528,
+   977535
   ],
-  "calls": 87,
+  "calls": 219,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 6,
-  "eventos": 1,
-  "urgentes": 1,
+  "titulares": 0,
+  "eventos": 0,
+  "urgentes": 0,
   "metodo": "gemini",
-  "agregados": 1
+  "agregados": 0
  },
  "gemini": {
-  "model": "gemini-3.8-flash",
-  "ok": 1,
+  "model": null,
+  "ok": 0,
   "errors": []
  },
  "macro_fuentes_ok": 2

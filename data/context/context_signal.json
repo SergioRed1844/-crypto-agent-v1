@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-25T15:08:21Z",
+ "generated_utc": "2026-11-25T17:06:35Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.452,
- "event_risk": 0.027,
+ "bias": -0.451,
+ "event_risk": 0.029,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.9% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.02,
+   "riesgo": 0.022,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -36,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.007,
+   "riesgo": 0.008,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.416,
+   "aporte": -0.414,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.363,
+   "aporte": 0.359,
    "fuente": "noticia"
   },
   {
@@ -69,16 +69,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.29,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.262,
+   "aporte": 0.278,
    "fuente": "noticia"
   },
   {
@@ -87,7 +78,16 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.262,
+   "aporte": 0.258,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.251,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.248,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.229,
+   "aporte": -0.227,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.9
+  "stablecoins_30d_pct": -5.89
  }
 }
