@@ -1,27 +1,27 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-25T18:05:56Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-25T19:05:03Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.45 · riesgo de evento 0.03 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.45
-- Stablecoins -5.88% en 30 días (liquidez saliendo)
+- Stablecoins -5.89% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.022 |
+| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.023 |
 | Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.008 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.412 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.357 |
-| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.273 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.256 |
-| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.246 |
-| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.244 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.411 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.355 |
+| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.267 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.254 |
+| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.243 |
+| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.241 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.237 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.226 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.225 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -30,10 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-25T18:05:56Z",
+ "inicio": "2026-11-25T19:05:03Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   977545,
+   977552
+  ],
+  "calls": 176,
   "stopped": null,
   "nuevas": 0
  },
