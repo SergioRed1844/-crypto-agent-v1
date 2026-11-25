@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T06:15:52Z",
+ "generated_utc": "2026-11-25T07:14:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.466,
- "event_risk": 0.364,
+ "event_risk": 0.378,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.225,
+   "riesgo": 0.234,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.164,
+   "riesgo": 0.171,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.427,
+   "aporte": -0.426,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.383,
+   "aporte": 0.381,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.349,
+   "aporte": 0.342,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.262,
+   "aporte": -0.26,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.242,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.189,
+   "aporte": 0.188,
    "fuente": "noticia"
   }
  ],
