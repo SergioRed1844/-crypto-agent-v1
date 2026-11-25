@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T03:18:17Z",
+ "generated_utc": "2026-11-25T04:17:24Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.461,
- "event_risk": 0.326,
+ "event_risk": 0.339,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.199,
+   "riesgo": 0.207,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.145,
+   "riesgo": 0.151,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.012,
+   "riesgo": 0.013,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -64,7 +64,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.004,
+   "riesgo": 0.005,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.431,
+   "aporte": -0.43,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.39,
+   "aporte": 0.388,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.371,
+   "aporte": 0.364,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.267,
+   "aporte": -0.265,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.258,
+   "aporte": -0.253,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {
@@ -133,14 +133,14 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.193,
+   "aporte": 0.192,
    "fuente": "noticia"
   },
   {
-   "id": "news-binance-6-5b-freeze-order-hong-kong-suspiciou-of-h-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Orden de congelamiento de $6.5B contra Binance",
-   "category": "CRYPTO_REGULATION",
+   "id": "news-global-market-crash-why-are-trillions-of-dollars-b-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Desplome de mercados globales borra billones de dólares",
+   "category": "FINANCIAL_CRISIS",
    "stance": "anti",
    "aporte": -0.186,
    "fuente": "noticia"
