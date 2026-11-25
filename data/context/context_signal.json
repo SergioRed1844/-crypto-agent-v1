@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T09:13:10Z",
+ "generated_utc": "2026-11-25T09:17:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.445,
- "event_risk": 0.406,
+ "event_risk": 0.407,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.254,
+   "riesgo": 0.255,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.186,
+   "riesgo": 0.187,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.015,
+   "riesgo": 0.016,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
