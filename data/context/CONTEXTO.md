@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-25T05:16:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-25T05:21:18Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.46 · riesgo de evento 0.35 · tamaño ×0.5 · compras permitidas
 
@@ -20,7 +20,7 @@ Actualizado 2026-11-25T05:16:31Z UTC. Se recalcula cada hora; el calendario y lo
 | El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.385 |
 | Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.356 |
 | Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.263 |
-| Inflación de servicios en Japón alcanza máximo de 36 años | 2026-11-25 | anti | -0.248 |
+| Inflación de servicios en Japón alcanza máximo de 36 años | 2026-11-25 | anti | -0.247 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.239 |
 | El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hac | 2026-11-23 | pro | +0.190 |
 | Orden de congelamiento de $6.5B contra Binance | 2026-11-20 | anti | -0.185 |
@@ -32,13 +32,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-25T05:16:31Z",
+ "inicio": "2026-11-25T05:21:18Z",
  "onchain": {
-  "scanned": [
-   977463,
-   977470
-  ],
-  "calls": 128,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
