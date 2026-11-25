@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-25T01:19:52Z",
+ "generated_utc": "2026-11-25T01:24:18Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.431,
- "event_risk": 0.303,
+ "bias": -0.45,
+ "event_risk": 0.304,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 67,
+ "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.43",
+  "Precaución: sesgo -0.45",
   "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.183,
+   "riesgo": 0.184,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.395,
+   "aporte": 0.394,
    "fuente": "noticia"
   },
   {
@@ -110,12 +110,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-bitcoin-surrenders-most-gains-amid-sustained-etf-o-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "anti",
+   "aporte": -0.243,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-in-response-to-the-turmoil-at-nvidia-bitcoin-drops-2026-11-25",
    "date": "2026-11-25",
    "title_es": "Bitcoin cae por debajo de 70.000 dólares ante agitación de Nvidia",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.233,
+   "aporte": -0.232,
    "fuente": "noticia"
   },
   {
@@ -134,15 +143,6 @@
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
    "aporte": -0.187,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-us-pce-preview-inflation-seen-near-3-8-in-the-fed-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Previsión PCE de EE. UU.: inflación se proyecta en 3,8% antes de subida de la Fed en diciembre",
-   "category": "MONETARY_POLICY",
-   "stance": "anti",
-   "aporte": -0.184,
    "fuente": "noticia"
   }
  ],

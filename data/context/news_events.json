@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T01:19:52Z",
+ "updated_utc": "2026-11-25T01:24:18Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10102,6 +10102,27 @@
    "confidence": 0.8,
    "origin": "gemini/GDELT",
    "id": "news-in-response-to-the-turmoil-at-nvidia-bitcoin-drops-2026-11-25",
+   "date": "2026-11-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-25T00:30:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
+   "source_url": "https://www.livemint.com/market/bitcoin-surrenders-most-gains-amid-sustained-etf-outflows-11795554238437.html",
+   "source_title": "livemint.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-bitcoin-surrenders-most-gains-amid-sustained-etf-o-2026-11-25",
    "date": "2026-11-25",
    "status": "happened",
    "scheduled": false,
