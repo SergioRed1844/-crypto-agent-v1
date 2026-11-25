@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-25T17:35:29Z",
+ "generated_utc": "2026-11-25T18:05:56Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.88% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -51,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.413,
+   "aporte": -0.412,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.358,
+   "aporte": 0.357,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.276,
+   "aporte": 0.273,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.257,
+   "aporte": 0.256,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.248,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.245,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.238,
+   "aporte": -0.237,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.227,
+   "aporte": -0.226,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.89
+  "stablecoins_30d_pct": -5.88
  }
 }
