@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T05:21:18Z",
+ "updated_utc": "2026-11-25T05:39:33Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10257,6 +10257,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-25T01:45:00Z"
+  },
+  {
+   "category": "CRYPTO_REGULATION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
+   "source_url": "https://dailycaller.com/2026/11/24/crypto-firms-used-sec-filings-in-130-million-scheme-sec-says/",
+   "source_title": "dailycaller.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-crypto-firms-used-sec-filings-in-130-million-schem-2026-11-25",
+   "date": "2026-11-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-25T02:30:00Z"
   }
  ]
 }

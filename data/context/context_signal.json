@@ -1,17 +1,17 @@
 {
- "generated_utc": "2026-11-25T05:21:18Z",
+ "generated_utc": "2026-11-25T05:39:33Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.46,
- "event_risk": 0.352,
+ "bias": -0.466,
+ "event_risk": 0.356,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.46",
+  "Precaución: sesgo -0.47",
   "Stablecoins -5.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.216,
+   "riesgo": 0.219,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.158,
+   "riesgo": 0.16,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.356,
+   "aporte": 0.353,
    "fuente": "noticia"
   },
   {
@@ -110,12 +110,21 @@
    "fuente": "noticia"
   },
   {
+   "id": "news-crypto-firms-used-sec-filings-in-130-million-schem-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
+   "category": "CRYPTO_REGULATION",
+   "stance": "anti",
+   "aporte": -0.246,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-japan-key-services-inflation-gauge-hits-36-year-hi-2026-11-25",
    "date": "2026-11-25",
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.247,
+   "aporte": -0.246,
    "fuente": "noticia"
   },
   {
@@ -124,7 +133,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.239,
+   "aporte": -0.238,
    "fuente": "noticia"
   },
   {
@@ -134,15 +143,6 @@
    "category": "HACK_SECURITY",
    "stance": "pro",
    "aporte": 0.19,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-binance-6-5b-freeze-order-hong-kong-suspiciou-of-h-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Orden de congelamiento de $6.5B contra Binance",
-   "category": "CRYPTO_REGULATION",
-   "stance": "anti",
-   "aporte": -0.185,
    "fuente": "noticia"
   }
  ],
