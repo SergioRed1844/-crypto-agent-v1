@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T02:19:17Z",
+ "updated_utc": "2026-11-25T03:18:17Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10236,6 +10236,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-25T01:15:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
+   "source_url": "https://www.thestar.com.my/business/business-news/2026/11/25/japan039s-key-services-inflation-gauge-hits-36-year-high",
+   "source_title": "thestar.com.my",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-japan-key-services-inflation-gauge-hits-36-year-hi-2026-11-25",
+   "date": "2026-11-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-25T01:45:00Z"
   }
  ]
 }
