@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-25T20:04:07Z",
+ "generated_utc": "2026-11-25T21:03:14Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.451,
- "event_risk": 0.033,
+ "event_risk": 0.034,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.88% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.024,
+   "riesgo": 0.025,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.41,
+   "aporte": -0.409,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.353,
+   "aporte": 0.351,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.262,
+   "aporte": 0.256,
    "fuente": "noticia"
   },
   {
@@ -78,7 +78,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.251,
+   "aporte": 0.249,
    "fuente": "noticia"
   },
   {
@@ -87,7 +87,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.235,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.236,
+   "aporte": -0.231,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.89
+  "stablecoins_30d_pct": -5.88
  }
 }
