@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-25T01:24:18Z",
+ "generated_utc": "2026-11-25T02:19:17Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.45,
- "event_risk": 0.304,
+ "bias": -0.46,
+ "event_risk": 0.315,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.45",
-  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.46",
+  "Stablecoins -5.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.184,
+   "riesgo": 0.191,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.134,
+   "riesgo": 0.14,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.011,
+   "riesgo": 0.012,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -74,21 +74,30 @@
  ],
  "recent": [
   {
+   "id": "news-nvidia-turmoil-adds-to-wall-street-growing-fears-a-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
+   "category": "FINANCIAL_CRISIS",
+   "stance": "anti",
+   "aporte": -0.432,
+   "fuente": "noticia"
+  },
+  {
    "id": "news-doj-moves-to-recover-1-1b-from-north-korea-linked-2026-11-24",
    "date": "2026-11-24",
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.394,
+   "aporte": 0.392,
    "fuente": "noticia"
   },
   {
-   "id": "news-global-market-crash-why-are-trillions-of-dollars-b-2026-11-21",
-   "date": "2026-11-21",
-   "title_es": "Desplome de mercados globales borra billones de dólares",
-   "category": "FINANCIAL_CRISIS",
-   "stance": "anti",
-   "aporte": -0.375,
+   "id": "news-us-consumer-confidence-soars-with-elections-in-the-2026-11-24",
+   "date": "2026-11-24",
+   "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.379,
    "fuente": "noticia"
   },
   {
@@ -97,16 +106,16 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.27,
+   "aporte": -0.268,
    "fuente": "noticia"
   },
   {
-   "id": "news-us-stocks-jump-4-73-as-treasury-yield-hits-4-95-2026-11-24",
-   "date": "2026-11-24",
-   "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
+   "id": "news-us-stocks-slide-as-nvidia-rally-fizzles-out-dollar-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Bolsas de EE.UU. caen al desinflarse el repunte de Nvidia y cae el dólar",
    "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.26,
+   "stance": "anti",
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
@@ -115,16 +124,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.243,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-in-response-to-the-turmoil-at-nvidia-bitcoin-drops-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Bitcoin cae por debajo de 70.000 dólares ante agitación de Nvidia",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.232,
+   "aporte": -0.242,
    "fuente": "noticia"
   },
   {
@@ -133,14 +133,14 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.195,
+   "aporte": 0.194,
    "fuente": "noticia"
   },
   {
-   "id": "news-binance-6-5b-freeze-order-hong-kong-suspiciou-of-h-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Orden de congelamiento de $6.5B contra Binance",
-   "category": "CRYPTO_REGULATION",
+   "id": "news-global-market-crash-why-are-trillions-of-dollars-b-2026-11-21",
+   "date": "2026-11-21",
+   "title_es": "Desplome de mercados globales borra billones de dólares",
+   "category": "FINANCIAL_CRISIS",
    "stance": "anti",
    "aporte": -0.187,
    "fuente": "noticia"
@@ -158,6 +158,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.89
+  "stablecoins_30d_pct": -5.9
  }
 }
