@@ -1,29 +1,29 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-25T12:10:53Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-25T13:09:50Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.45 · riesgo de evento 0.44 · tamaño ×0.5 · compras permitidas
 
 - Precaución: sesgo -0.45
-- Stablecoins -5.89% en 30 días (liquidez saliendo)
+- Stablecoins -5.9% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
 | Ingreso y gasto personal / PCE EE.UU. (oct-2026) | 2026-11-25T13:30:00Z | Dato macro | 0.279 | 0.279 |
 | PIB EE.UU. 3T-2026 (estimación segunda) | 2026-11-25T13:30:00Z | Dato macro | 0.205 | 0.205 |
 | Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.018 |
-| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.006 |
+| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.007 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.420 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.370 |
-| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.308 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.269 |
-| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.253 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.242 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.232 |
-| Inflación de servicios en Japón alcanza máximo de 36 años | 2026-11-25 | anti | -0.214 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.418 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.368 |
+| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.302 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.266 |
+| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.251 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.241 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.231 |
+| Inflación de servicios en Japón alcanza máximo de 36 años | 2026-11-25 | anti | -0.210 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -32,13 +32,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-25T12:10:53Z",
+ "inicio": "2026-11-25T13:09:50Z",
  "onchain": {
   "scanned": [
-   977506,
-   977513
+   977514,
+   977519
   ],
-  "calls": 119,
+  "calls": 99,
   "stopped": null,
   "nuevas": 0
  },
