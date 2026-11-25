@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-25T00:20:46Z",
+ "generated_utc": "2026-11-25T01:19:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.247,
- "event_risk": 0.292,
+ "bias": -0.431,
+ "event_risk": 0.303,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 59,
+ "confidence": 67,
  "reasons": [
-  "Precaución: sesgo -0.25",
-  "Stablecoins -5.73% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.43",
+  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.176,
+   "riesgo": 0.183,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.128,
+   "riesgo": 0.134,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -79,7 +79,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.397,
+   "aporte": 0.395,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,16 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.376,
+   "aporte": -0.375,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-why-bitcoin-losses-deepened-after-the-binance-hack-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
+   "category": "HACK_SECURITY",
+   "stance": "anti",
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
@@ -97,7 +106,16 @@
    "title_es": "Acciones de EE.UU. suben 4,73% con rendimiento del Tesoro en 4,95%",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.266,
+   "aporte": 0.26,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-in-response-to-the-turmoil-at-nvidia-bitcoin-drops-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Bitcoin cae por debajo de 70.000 dólares ante agitación de Nvidia",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -106,7 +124,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.196,
+   "aporte": 0.195,
    "fuente": "noticia"
   },
   {
@@ -119,30 +137,12 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-bitcoin-breaks-below-60-000-blackrock-etf-suffers-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Bitcoin cae bajo 60.000 dólares tras retiro récord de 541 millones del ETF de BlackRock",
-   "category": "INSTITUTIONAL_ADOPTION",
+   "id": "news-us-pce-preview-inflation-seen-near-3-8-in-the-fed-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Previsión PCE de EE. UU.: inflación se proyecta en 3,8% antes de subida de la Fed en diciembre",
+   "category": "MONETARY_POLICY",
    "stance": "anti",
-   "aporte": -0.171,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-price-crash-falls-to-lowest-level-in-two-y-2026-11-21",
-   "date": "2026-11-21",
-   "title_es": "Bitcoin se desploma a su nivel más bajo en dos años",
-   "category": "CRYPTO_STRUCTURAL",
-   "stance": "anti",
-   "aporte": -0.167,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-anthropic-plunges-as-wall-street-suffers-ai-sell-o-2026-11-20",
-   "date": "2026-11-20",
-   "title_es": "Anthropic se desploma ante una ola de ventas del sector de IA en Wall Street",
-   "category": "FINANCIAL_CRISIS",
-   "stance": "anti",
-   "aporte": -0.162,
+   "aporte": -0.184,
    "fuente": "noticia"
   }
  ],
@@ -158,6 +158,6 @@
    "fear_greed": 13
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.73
+  "stablecoins_30d_pct": -5.89
  }
 }
