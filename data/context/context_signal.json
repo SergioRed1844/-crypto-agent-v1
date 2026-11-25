@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T13:14:19Z",
+ "generated_utc": "2026-11-25T14:09:13Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.445,
- "event_risk": 0.441,
+ "event_risk": 0.442,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 67,
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.418,
+   "aporte": -0.417,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.368,
+   "aporte": 0.366,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.302,
+   "aporte": 0.296,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.266,
+   "aporte": 0.264,
    "fuente": "noticia"
   },
   {
@@ -115,7 +115,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.251,
+   "aporte": -0.25,
    "fuente": "noticia"
   },
   {
@@ -124,7 +124,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.241,
+   "aporte": -0.24,
    "fuente": "noticia"
   },
   {
@@ -133,7 +133,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.231,
+   "aporte": -0.23,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.206,
    "fuente": "noticia"
   }
  ],
