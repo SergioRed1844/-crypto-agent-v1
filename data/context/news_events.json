@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T08:14:04Z",
+ "updated_utc": "2026-11-25T09:13:10Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10278,6 +10278,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-25T02:30:00Z"
+  },
+  {
+   "category": "FISCAL",
+   "subcategory": "DEBT_MONETIZATION",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
+   "source_url": "https://www.fool.com/investing/2026/11/24/trump-says-inflation-could-help-pay-down-the-national-debt-here-s-what-that-means-for-your-retirement-savings/",
+   "source_title": "fool.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-trump-says-inflation-could-help-pay-down-the-natio-2026-11-25",
+   "date": "2026-11-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-25T03:30:00Z"
   }
  ]
 }
