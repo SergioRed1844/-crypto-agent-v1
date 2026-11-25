@@ -1,32 +1,14 @@
-# 📡 Radar EB — resumen 2026-11-24
+# 📡 Radar EB — resumen 2026-11-25
 
-**Sigo vivo:** 29 corridas en 24 h · última 2026-11-24T14:29:27+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 33 corridas en 24 h · última 2026-11-25T14:09:33+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. | Motivo |
-|---|---|---|---|---|---|---|---|---|
-| ALERTA | SPY | Pánico sin daño real | 2026-11-20 | 30 d | 34% | 27% | +1.6% | — |
-| ALERTA | QQQ | Pánico sin daño real | 2026-11-20 | 30 d | 45% | 37% | +1.7% | — |
-| ALERTA | XLK | Pánico sin daño real | 2026-11-20 | 30 d | 44% | 36% | +1.8% | — |
-| ALERTA | XLK | Capitulación con miedo extremo | 2026-11-20 | 7 d | 39% | 30% | +1.0% | — |
-| ALERTA | XLI | Pánico sin daño real | 2026-11-20 | 30 d | 41% | 32% | +1.6% | — |
-| ALERTA | SMH | Pánico sin daño real | 2026-11-20 | 30 d | 50% | 42% | +2.2% | — |
-| ALERTA | NVDA | Pánico sin daño real | 2026-11-20 | 30 d | 56% | 47% | +3.9% | — |
-| VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-20 | 7 d | 52% | 42% | +0.8% | neto esperado solo +0.3 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | NAFTRACISHRS.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 33% | 29% | +1.2% | la ventaja no es creíble: cota baja 29% vs día cualquiera 29%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | GFNORTEO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +2.2% | la ventaja no es creíble: cota baja 39% vs día cualquiera 40%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | GMEXICOB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 48% | 43% | +2.3% | la ventaja no es creíble: cota baja 43% vs día cualquiera 43%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | CEMEXCPO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 39% | +1.2% | la ventaja no es creíble: cota baja 39% vs día cualquiera 39%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | GAPB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.9% | la ventaja no es creíble: cota baja 38% vs día cualquiera 38%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | OMAB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +1.9% | la ventaja no es creíble: cota baja 39% vs día cualquiera 40%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | ORBIA.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.8% | la ventaja no es creíble: cota baja 38% vs día cualquiera 38%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | LIVEPOLC-1.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 32% | 28% | +0.9% | la ventaja no es creíble: cota baja 28% vs día cualquiera 28%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
-| VIGILANCIA | BBAJIOO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 41% | 37% | +1.6% | la ventaja no es creíble: cota baja 36% vs día cualquiera 37%; neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp) |
+Ningún setup disparó en las últimas 24 h. Eso también es información: no hay pánico ni capitulación medibles.
 
 ## Clima de mercado
 
-BTC 61,271 (caída desde máximo de 1 año -37%; Fear&Greed 11) · S&P (SPY) -7.3% vs máximo de 1 año; VIX 26.6 · miedo de hogares (Wikipedia, EUA) z=-0.9 · peso 5 días +2.7% (USD/MXN); IPC vs máximo 1 año -3.7% · contexto v4.2: **NEUTRAL** (Contexto neutral: sesgo -0.20, riesgo de evento 0.19; Stablecoins -5.74% en 30 días (liquidez saliendo))
+BTC 59,832 (caída desde máximo de 1 año -38%; Fear&Greed 11) · S&P (SPY) -7.7% vs máximo de 1 año; VIX 26.4 · miedo de hogares (Wikipedia, EUA) z=+0.3 · peso 5 días +3.0% (USD/MXN); IPC vs máximo 1 año -3.8% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.45; Stablecoins -5.9% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
