@@ -1,0 +1,365 @@
+{
+ "generado": "2026-11-25T08:14:17.493749+00:00",
+ "fecha_cdmx": "2026-11-25",
+ "prueba": false,
+ "n_eventos": 3426,
+ "validacion": {
+  "corto": {
+   "n_train": 1983,
+   "n_test": 1443,
+   "tasa_test": 0.408,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1266,
+     "pred": 0.415,
+     "real": 0.413
+    },
+    "0.5-0.6": {
+     "n": 177,
+     "pred": 0.532,
+     "real": 0.373
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1983,
+   "n_test": 1443,
+   "tasa_test": 0.376,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1351,
+     "pred": 0.407,
+     "real": 0.374
+    },
+    "0.5-0.6": {
+     "n": 92,
+     "pred": 0.527,
+     "real": 0.402
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 170,
+    "tasa": 0.488,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 146,
+    "tasa": 0.486,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 161,
+    "tasa": 0.484,
+    "prob": 0.485
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 87,
+    "tasa": 0.494,
+    "prob": 0.48
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 140,
+    "tasa": 0.493,
+    "prob": 0.478
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.525,
+    "prob": 0.514
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 134,
+    "tasa": 0.485,
+    "prob": 0.483
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 46,
+    "tasa": 0.5,
+    "prob": 0.477
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 102,
+    "tasa": 0.48,
+    "prob": 0.472
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 69,
+    "tasa": 0.449,
+    "prob": 0.444
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 244,
+    "tasa": 0.439,
+    "prob": 0.438
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "BIGTIMEUSDT",
+   "base": "BIGTIME",
+   "nombre": "Big Time",
+   "cap_m": 20.9,
+   "precio": 0.00724,
+   "sube_24h": 0.7876543209876543,
+   "vol24_m": 7.19,
+   "vol_vs_30d": 30.18,
+   "top3_horas": 0.64,
+   "compras_agresivas": 0.52,
+   "prev30": -0.4214285714285715,
+   "rsi_1h": 87.1,
+   "pares_usd": {
+    "USDC": 0.2
+   },
+   "par_no_usdt": 0.03,
+   "libro": {
+    "mid": 0.00724,
+    "spread": 0.0027662517289073207,
+    "compras_2pct_usd": 4553,
+    "ventas_2pct_usd": 9290
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "35%+ · 8x+ · venía bajando",
+   "p_corto": 0.4845899730986472,
+   "p_largo": 0.4046643264537776,
+   "n_celda": 161,
+   "n_padre": 372,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia reciente (como nuevos listados, alianzas, quemas o anuncios oficiales de Binance, Coinbase o Upbit) en las últimas 72 horas que justifique el alza. El movimiento se debió a factores puramente técnicos y de mercado: un fuerte volumen comprador en el par KRW de Upbit que desencadenó un *short squeeze* (liquidación masiv",
+    "fuentes": [
+     {
+      "titulo": "asksurf.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwXOJUY5OyeqMazGq2d-fX6_4mvhRYQAGnWJ17BM_fcV_nFoMBKQgFxLnvhF16eG0qYoZwMCtluLQsx2_XRFz6AzZ8h-NHdHyzY83aFl3tCR22UP1DsfzdVSp3rxCVpPtwR2RKDnBDNNkKJFuVV-xz389cz4u7Wz8JGA=="
+     },
+     {
+      "titulo": "coingabbar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaGrmMs4r6HAAuzF3uCMtBtvyvd8PesQ6Tr1trJuQnf-yMKbCsLa47Tn1jgWEIAxm8e2LcraIX3bscnX0xtT5e_a5YnTG-7r0oPQBFBlWqqKFkkYeO_1UqH-R_04WoP0wvHJ5J8oyvpHnfm2V5lCoeauszSb9ld-RKH-u4_8W1d1SZLIf9Wx1RIYlwhrnB"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "MANTRAUSDT",
+   "base": "MANTRA",
+   "nombre": "MANTRA",
+   "cap_m": 15.9,
+   "precio": 0.00228,
+   "sube_24h": 0.31034482758620685,
+   "vol24_m": 2.65,
+   "vol_vs_30d": 6.37,
+   "top3_horas": 0.65,
+   "compras_agresivas": 0.53,
+   "prev30": -0.5372340425531914,
+   "rsi_1h": 88.5,
+   "pares_usd": {
+    "TRY": 2.86,
+    "USDC": 0.07
+   },
+   "par_no_usdt": 0.53,
+   "libro": {
+    "mid": 0.0022849999999999997,
+    "spread": 0.004385964912280604,
+    "compras_2pct_usd": 15741,
+    "ventas_2pct_usd": 7591
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "20-35% · 4-8x · venía bajando",
+   "p_corto": 0.3593396832935227,
+   "p_largo": 0.48283774753859215,
+   "n_celda": 134,
+   "n_padre": 307,
+   "senal": null,
+   "noticia": {
+    "resumen": "Sí, se encontró una noticia que explica el impulso: MANTRA anunció que el 100% de los ingresos generados por su plataforma de trading (MF Markets) se destinará a la recompra continua de su token nativo. Adicionalmente, en las últimas 72 horas la plataforma expandió sus mercados de futuros perpetuos y completó una actualización técnica de la red.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkMoL-ldSWHTspZFx7v1HSOiMb_81geQ3u8w2sVaDgx64RHtXXDspdZd0r5vhExOxz4Z_h_VWELhmpmFhjfq_EaDai9ULkCNU_rk6lBzeGK76gcL1vc85kYWp9uGEtX_qudMXBHgR28uH58vpwsJK3Qg=="
+     },
+     {
+      "titulo": "cryptobriefing.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4JIN65EmXIfTxVJqYJXjH_gHMSJ7A3RysIPxsKxqKUKvHLhi97V7KoXvuZeHCXtFRuC6GebfBw5bHH8Pa25nGIR-5NN7dJAwBPYUNwIdM9Tu5frNahtd6lExs9jouArH0SxzzkZw8-S_GGm0Wv9oVGHdbetbZY58="
+     },
+     {
+      "titulo": "bybit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhHtNFnus_VWMvOWn2Xz0eCtwLT3fh1GW-Wy_Kyt6dlGOdnsKr3NvCsktXM73TxNRQ1XHyMcJWP0JRX6Zmf48N1b_DvT_ytpzRb8f3TKM_iUFuKQ58C97XvL0-NQUAI09AG5u3ytDUIf-Y9h-r4VQwInIUFDPgJhxrk2aVpk02s9G1gJD9R-PzT5fdqlTIIbeg8STyQzewdBFrrQP2_pUZye4QD5lNNS6f1_wc"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "OPGUSDT",
+   "base": "OPG",
+   "nombre": "OpenGradient",
+   "cap_m": 41.9,
+   "precio": 0.1698,
+   "sube_24h": 0.19746121297602248,
+   "vol24_m": 8.52,
+   "vol_vs_30d": 8.06,
+   "top3_horas": 0.42,
+   "compras_agresivas": 0.47,
+   "prev30": 0.23842794759825336,
+   "rsi_1h": 62.9,
+   "pares_usd": {
+    "TRY": 3.56,
+    "USDC": 0.26
+   },
+   "par_no_usdt": 0.31,
+   "libro": {
+    "mid": 0.1699,
+    "spread": 0.0011778563015312216,
+    "compras_2pct_usd": 32696,
+    "ventas_2pct_usd": 22417
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 8x+ · 0-50%",
+   "p_corto": 0.4557592413899626,
+   "p_largo": 0.3469453313258224,
+   "n_celda": 149,
+   "n_padre": 393,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (como nuevos listados en exchanges, anuncios de Binance, Upbit o Coinbase, alianzas, hackeos o quemas de tokens) que explique la subida de OpenGradient (OPG). El movimiento parece deberse a factores técnicos de liquidez o especulación dentro del sector de tokens de inteligencia artifi",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5kqb7su_hrpXVSEqBhBf5lqQZeKeGxf664N6Aom0BhObxzPk98K34ShB6Jdg9HmZ3Ct3R9LCmdw1sxADBU6AbuSU30A60XJCNFzwLytKSI5j6DOeNgbIXZw1G1MdURCT7P-PG64wtT90RnkH5lA92HIBK"
+     },
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXmoEGph9cpncqK0LAFZauUcLL4Tgpm7T_tdcgXETTgnqWFbwOmn6dAp_dMoyq6Ey82QQxJ03gWzbXyx3duUw-V6VBvVhFq6MpI2Hl2l2sg-v_5NtOPEkHHQnN0VizP-pNCGXpvCyUNQ=="
+     },
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYPxfCJ8vpZhdWekruEOd6OZV1h-b0kFqA2QLWF-9My3TmJS8cs1nROsRg_Y__hAyEixI9D3KXH5uAFmpC2Fkoddvva7ijYxNWv__kKeMgOUoLNydKkKNIZCNJXxHEb8bFV2g1b9op"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "ATMUSDT",
+   "base": "ATM",
+   "nombre": "Atletico Madrid Fan Token",
+   "cap_m": 8.1,
+   "precio": 0.848,
+   "sube_24h": 0.1306666666666667,
+   "vol24_m": 7.4,
+   "vol_vs_30d": 15.12,
+   "top3_horas": 0.36,
+   "compras_agresivas": 0.51,
+   "prev30": -0.22199170124481327,
+   "rsi_1h": 41.1,
+   "pares_usd": {
+    "TRY": 9.3,
+    "BTC": 0.0
+   },
+   "par_no_usdt": 0.56,
+   "libro": {
+    "mid": 0.849,
+    "spread": 0.002358490566037652,
+    "compras_2pct_usd": 16817,
+    "ventas_2pct_usd": 10921
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 8x+ · venía bajando",
+   "p_corto": 0.4562425955916828,
+   "p_largo": 0.30979719734238587,
+   "n_celda": 208,
+   "n_padre": 393,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (como listados en Binance/Upbit/Coinbase, alianzas, quemas o desbloqueos) que explique la subida de ATM. El movimiento de precio responde a volatilidad de mercado y operativa especulativa habitual en tokens de baja capitalización.",
+    "fuentes": [
+     {
+      "titulo": "rocketfan.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiP4tjHETynyDN6CzQ7Vh-GstxB56HGHHtdkyViMj4nZt2mq4jlqXNCaGEw9wkej-WwkjUOunvi5b3oq4sNoyxecHv79uHTGa5s9CA47fAAmWmnLtDAjLaX3o="
+     },
+     {
+      "titulo": "upbit.international",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0vwaFax_km1LGsf0EnYMgD5cpcKSKWrlyCIxLBJwlZlbw2D4H9WC9upJixhVem69SaXuVXEAofDMMZFjQx40iSnWwJrrRW_58ah1w_o-e78JvyUB70nng3MNOCmOv67nJ0H3glimjeadSl2QbPsXh09uHhtvvjiaCPa8wELF5u32ZFvIfD0GrRYYX"
+     },
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnx1kzBBDfkLfSrk9-61ITFExyHgIETkotMoMPwAnC1rH04lIMe0dQgCff52z1UTkIQtTnVFlzEN17GWumVDvulSOwzA0U1D2jlXfJ16omMYWgVY9lhWEFESw4IqnP"
+     }
+    ]
+   }
+  }
+ ],
+ "btc": {
+  "precio": 58905.01,
+  "r24": -0.02281,
+  "r7": -0.06546450811518068
+ }
+}
