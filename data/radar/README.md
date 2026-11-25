@@ -1,21 +1,12 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-25T02:19:23+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
+Última corrida: **2026-11-25T03:09:06+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
-|---|---|---|---|---|---|---|---|
-| VIGILANCIA | SPY | Pánico sin daño real | 2026-11-20 | 7 d | 26% | 18% | +0.3% |
-| VIGILANCIA | QQQ | Pánico sin daño real | 2026-11-20 | 7 d | 37% | 28% | +0.3% |
-| VIGILANCIA | XLK | Pánico sin daño real | 2026-11-20 | 7 d | 40% | 30% | +0.3% |
-| VIGILANCIA | XLK | Capitulación con miedo extremo | 2026-11-20 | 7 d | 39% | 30% | +1.0% |
-| VIGILANCIA | XLI | Pánico sin daño real | 2026-11-20 | 30 d | 41% | 32% | +1.6% |
-| VIGILANCIA | SMH | Pánico sin daño real | 2026-11-20 | 7 d | 48% | 38% | +0.4% |
-| VIGILANCIA | NVDA | Pánico sin daño real | 2026-11-20 | 7 d | 50% | 40% | +0.8% |
-| VIGILANCIA | TSLA | Pánico sin daño real | 2026-11-20 | 7 d | 52% | 42% | +0.8% |
+Ninguno.
 
 ## Alertas enviadas (últimas 15)
 
@@ -34,65 +25,65 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 
 | Setup | Clase | H | Episodios | Crudo | Día cualquiera | Encogido | B (hacia 'sin ventaja') | Neto exceso |
 |---|---|---|---|---|---|---|---|---|
-| Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 61% | +0.1% |
+| Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 62% | +0.1% |
 | Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.2% |
-| Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 74% | -0.0% |
-| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 30% | 63% | +0.2% |
-| Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 71% | +0.4% |
-| Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 71% | +0.3% |
-| Capitulación con miedo extremo | crypto | 7 d | 27 | 38% | 40% | 39% | 85% | +0.0% |
+| Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 75% | -0.0% |
+| Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 64% | +0.2% |
+| Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 72% | +0.4% |
+| Capitulación con miedo extremo | bmv | 90 d | 54 | 56% | 44% | 47% | 72% | +0.3% |
+| Capitulación con miedo extremo | crypto | 7 d | 27 | 38% | 40% | 39% | 86% | +0.0% |
 | Capitulación con miedo extremo | crypto | 30 d | 21 | 28% | 42% | 40% | 90% | -0.0% |
-| Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 88% | -0.1% |
-| Capitulación con miedo extremo | us | 7 d | 74 | 54% | 30% | 40% | 59% | +1.0% |
-| Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 72% | +0.5% |
+| Capitulación con miedo extremo | crypto | 90 d | 21 | 38% | 44% | 43% | 89% | -0.1% |
+| Capitulación con miedo extremo | us | 7 d | 75 | 54% | 30% | 39% | 60% | +1.0% |
+| Capitulación con miedo extremo | us | 30 d | 41 | 54% | 37% | 42% | 73% | +0.5% |
 | Capitulación con miedo extremo | us | 90 d | 41 | 58% | 45% | 48% | 73% | +0.2% |
 | Choque del peso con BMV castigada | bmv | 7 d | 100 | 33% | 28% | 30% | 48% | -0.0% |
-| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 52% | +0.8% |
-| Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 52% | +0.6% |
-| Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 91% | -0.1% |
+| Choque del peso con BMV castigada | bmv | 30 d | 75 | 46% | 36% | 41% | 53% | +0.8% |
+| Choque del peso con BMV castigada | bmv | 90 d | 74 | 47% | 44% | 46% | 53% | +0.6% |
+| Reversión tras choque político/comercial | bmv | 7 d | 9 | 31% | 25% | 26% | 92% | -0.1% |
 | Reversión tras choque político/comercial | bmv | 30 d | 9 | 54% | 34% | 36% | 90% | +0.7% |
 | Reversión tras choque político/comercial | bmv | 90 d | 9 | 54% | 42% | 43% | 90% | +0.5% |
 | Reversión tras choque político/comercial | crypto | 7 d | 4 | 38% | 40% | 40% | 96% | -0.1% |
-| Reversión tras choque político/comercial | crypto | 30 d | 4 | 43% | 42% | 42% | 95% | +0.0% |
+| Reversión tras choque político/comercial | crypto | 30 d | 4 | 43% | 42% | 42% | 96% | +0.0% |
 | Reversión tras choque político/comercial | crypto | 90 d | 4 | 33% | 45% | 44% | 96% | +0.0% |
 | Reversión tras choque político/comercial | us | 7 d | 10 | 28% | 29% | 29% | 89% | -0.4% |
 | Reversión tras choque político/comercial | us | 30 d | 8 | 50% | 36% | 38% | 89% | +0.6% |
 | Reversión tras choque político/comercial | us | 90 d | 8 | 64% | 44% | 46% | 90% | +0.6% |
 | Miedo de hogares (FEARS) alto | bmv | 7 d | 3 | 38% | 16% | 16% | 98% | +0.0% |
 | Miedo de hogares (FEARS) alto | bmv | 30 d | 3 | 38% | 26% | 26% | 98% | +0.1% |
-| Miedo de hogares (FEARS) alto | bmv | 90 d | 3 | 62% | 34% | 35% | 98% | +0.2% |
+| Miedo de hogares (FEARS) alto | bmv | 90 d | 3 | 62% | 34% | 34% | 98% | +0.2% |
 | Miedo de hogares (FEARS) alto | us | 7 d | 13 | 39% | 24% | 25% | 92% | +0.1% |
 | Miedo de hogares (FEARS) alto | us | 30 d | 11 | 43% | 32% | 33% | 93% | +0.2% |
 | Miedo de hogares (FEARS) alto | us | 90 d | 11 | 48% | 39% | 40% | 93% | +0.2% |
-| Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 60% | +0.5% |
-| Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 66% | +0.2% |
-| Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 66% | +0.1% |
+| Pánico sin daño real | bmv | 7 d | 49 | 38% | 27% | 31% | 61% | +0.5% |
+| Pánico sin daño real | bmv | 30 d | 36 | 49% | 36% | 40% | 67% | +0.2% |
+| Pánico sin daño real | bmv | 90 d | 36 | 47% | 43% | 44% | 67% | +0.1% |
 | Pánico sin daño real | crypto | 7 d | 24 | 43% | 41% | 41% | 75% | -0.2% |
-| Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 82% | -0.6% |
+| Pánico sin daño real | crypto | 30 d | 19 | 26% | 43% | 40% | 83% | -0.6% |
 | Pánico sin daño real | crypto | 90 d | 19 | 42% | 46% | 45% | 79% | -0.3% |
 | Pánico sin daño real | us | 7 d | 86 | 41% | 26% | 35% | 38% | +0.3% |
-| Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 45% | +1.0% |
-| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 45% | +0.9% |
-| Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 16% | +0.5% |
+| Pánico sin daño real | us | 30 d | 61 | 48% | 34% | 41% | 46% | +1.0% |
+| Pánico sin daño real | us | 90 d | 61 | 47% | 41% | 45% | 46% | +0.9% |
+| Retroceso dentro de tendencia alcista | bmv | 7 d | 496 | 36% | 29% | 35% | 17% | +0.5% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 222 | 39% | 38% | 39% | 30% | +0.4% |
-| Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 29% | +0.6% |
-| Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 53% | +0.4% |
+| Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 30% | +0.6% |
+| Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 54% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 42 | 39% | 42% | 41% | 69% | -0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
-| Retroceso dentro de tendencia alcista | us | 7 d | 424 | 38% | 33% | 37% | 18% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 30 d | 202 | 41% | 39% | 41% | 31% | +0.3% |
-| Retroceso dentro de tendencia alcista | us | 90 d | 200 | 48% | 45% | 47% | 31% | +0.7% |
+| Retroceso dentro de tendencia alcista | us | 7 d | 425 | 38% | 33% | 37% | 19% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 30 d | 202 | 41% | 39% | 41% | 32% | +0.3% |
+| Retroceso dentro de tendencia alcista | us | 90 d | 200 | 48% | 45% | 47% | 32% | +0.7% |
 
 ## Salud de fuentes
 
 | Serie | OK | Último | Nota |
 |---|---|---|---|
-| AAPL | sí | 2026-11-23 | yahoo |
+| AAPL | sí | 2026-11-24 | yahoo |
 | AC.MX | sí | 2026-11-24 | yahoo |
 | ADA | sí | 2026-11-25 | binance |
 | ALSEA.MX | sí | 2026-11-24 | yahoo |
 | AMXB.MX | sí | 2026-11-24 | yahoo |
-| AMZN | sí | 2026-11-23 | yahoo |
+| AMZN | sí | 2026-11-24 | yahoo |
 | ASURB.MX | sí | 2026-11-24 | yahoo |
 | AVAX | sí | 2026-11-25 | binance |
 | BBAJIOO.MX | sí | 2026-11-24 | yahoo |
@@ -100,53 +91,53 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | BIMBOA.MX | sí | 2026-11-24 | yahoo |
 | BTC | sí | 2026-11-25 | binance |
 | CEMEXCPO.MX | sí | 2026-11-24 | yahoo |
-| DIA | sí | 2026-11-23 | yahoo |
+| DIA | sí | 2026-11-24 | yahoo |
 | DOGE | sí | 2026-11-25 | binance |
 | DOT | sí | 2026-11-25 | binance |
 | ETH | sí | 2026-11-25 | binance |
 | FEMSAUBD.MX | sí | 2026-11-24 | yahoo |
 | GAPB.MX | sí | 2026-11-24 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-24 | yahoo |
-| GLD | sí | 2026-11-23 | yahoo |
+| GLD | sí | 2026-11-24 | yahoo |
 | GMEXICOB.MX | sí | 2026-11-24 | yahoo |
-| GOOGL | sí | 2026-11-23 | yahoo |
+| GOOGL | sí | 2026-11-24 | yahoo |
 | GRUMAB.MX | sí | 2026-11-24 | yahoo |
-| IWM | sí | 2026-11-23 | yahoo |
-| JPM | sí | 2026-11-23 | yahoo |
+| IWM | sí | 2026-11-24 | yahoo |
+| JPM | sí | 2026-11-24 | yahoo |
 | KIMBERA.MX | sí | 2026-11-24 | yahoo |
 | KOFUBL.MX | sí | 2026-11-24 | yahoo |
 | LINK | sí | 2026-11-25 | binance |
 | LIVEPOLC-1.MX | sí | 2026-11-24 | yahoo |
 | LTC | sí | 2026-11-25 | binance |
-| META | sí | 2026-11-23 | yahoo |
-| MSFT | sí | 2026-11-23 | yahoo |
+| META | sí | 2026-11-24 | yahoo |
+| MSFT | sí | 2026-11-24 | yahoo |
 | MXN=X | sí | 2026-11-25 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-24 | yahoo |
-| NVDA | sí | 2026-11-23 | yahoo |
+| NVDA | sí | 2026-11-24 | yahoo |
 | OMAB.MX | sí | 2026-11-24 | yahoo |
 | ORBIA.MX | sí | 2026-11-24 | yahoo |
 | PINFRA.MX | sí | 2026-11-24 | yahoo |
-| QQQ | sí | 2026-11-23 | yahoo |
-| SMH | sí | 2026-11-23 | yahoo |
+| QQQ | sí | 2026-11-24 | yahoo |
+| SMH | sí | 2026-11-24 | yahoo |
 | SOL | sí | 2026-11-25 | binance |
-| SPY | sí | 2026-11-23 | yahoo |
+| SPY | sí | 2026-11-24 | yahoo |
 | TRX | sí | 2026-11-25 | binance |
-| TSLA | sí | 2026-11-23 | yahoo |
+| TSLA | sí | 2026-11-24 | yahoo |
 | WALMEX.MX | sí | 2026-11-24 | yahoo |
-| WMT | sí | 2026-11-23 | yahoo |
-| XLE | sí | 2026-11-23 | yahoo |
-| XLF | sí | 2026-11-23 | yahoo |
-| XLI | sí | 2026-11-23 | yahoo |
-| XLK | sí | 2026-11-23 | yahoo |
-| XLP | sí | 2026-11-23 | yahoo |
-| XLU | sí | 2026-11-23 | yahoo |
-| XLV | sí | 2026-11-23 | yahoo |
-| XLY | sí | 2026-11-23 | yahoo |
-| XOM | sí | 2026-11-23 | yahoo |
+| WMT | sí | 2026-11-24 | yahoo |
+| XLE | sí | 2026-11-24 | yahoo |
+| XLF | sí | 2026-11-24 | yahoo |
+| XLI | sí | 2026-11-24 | yahoo |
+| XLK | sí | 2026-11-24 | yahoo |
+| XLP | sí | 2026-11-24 | yahoo |
+| XLU | sí | 2026-11-24 | yahoo |
+| XLV | sí | 2026-11-24 | yahoo |
+| XLY | sí | 2026-11-24 | yahoo |
+| XOM | sí | 2026-11-24 | yahoo |
 | XRP | sí | 2026-11-25 | binance |
 | ^MXX | sí | 2026-11-24 | yahoo |
 | ^VIX | sí | 2026-11-24 | yahoo |
-| contexto_v42 | sí | 2026-11-25T01:24:18Z | CAUTION |
+| contexto_v42 | sí | 2026-11-25T02:19:17Z | CAUTION |
 | fear_greed | sí | 2026-11-25 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-23 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-23 | wikimedia |
