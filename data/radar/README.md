@@ -1,21 +1,12 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-25T08:14:19+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
+Última corrida: **2026-11-25T09:13:19+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-24
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
 ## Candidatos de la última corrida
 
-| Nivel | Activo | Setup | Disparo | H | P | Día cualquiera | Neto esp. |
-|---|---|---|---|---|---|---|---|
-| VIGILANCIA | GFNORTEO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +2.2% |
-| VIGILANCIA | GMEXICOB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 48% | 43% | +2.3% |
-| VIGILANCIA | CEMEXCPO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 39% | +1.2% |
-| VIGILANCIA | GAPB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.9% |
-| VIGILANCIA | OMAB.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 44% | 40% | +1.9% |
-| VIGILANCIA | ORBIA.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 43% | 38% | +1.8% |
-| VIGILANCIA | LIVEPOLC-1.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 32% | 28% | +0.9% |
-| VIGILANCIA | BBAJIOO.MX | Choque del peso con BMV castigada | 2026-11-20 | 30 d | 41% | 36% | +1.6% |
+Ninguno.
 
 ## Alertas enviadas (últimas 15)
 
@@ -88,51 +79,51 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | Serie | OK | Último | Nota |
 |---|---|---|---|
 | AAPL | sí | 2026-11-24 | yahoo |
-| AC.MX | sí | 2026-11-23 | yahoo |
+| AC.MX | sí | 2026-11-24 | yahoo |
 | ADA | sí | 2026-11-25 | binance |
-| ALSEA.MX | sí | 2026-11-23 | yahoo |
-| AMXB.MX | sí | 2026-11-23 | yahoo |
+| ALSEA.MX | sí | 2026-11-24 | yahoo |
+| AMXB.MX | sí | 2026-11-24 | yahoo |
 | AMZN | sí | 2026-11-24 | yahoo |
-| ASURB.MX | sí | 2026-11-23 | yahoo |
+| ASURB.MX | sí | 2026-11-24 | yahoo |
 | AVAX | sí | 2026-11-25 | binance |
-| BBAJIOO.MX | sí | 2026-11-23 | yahoo |
+| BBAJIOO.MX | sí | 2026-11-24 | yahoo |
 | BCH | sí | 2026-11-25 | binance |
-| BIMBOA.MX | sí | 2026-11-23 | yahoo |
+| BIMBOA.MX | sí | 2026-11-24 | yahoo |
 | BTC | sí | 2026-11-25 | binance |
-| CEMEXCPO.MX | sí | 2026-11-23 | yahoo |
+| CEMEXCPO.MX | sí | 2026-11-24 | yahoo |
 | DIA | sí | 2026-11-24 | yahoo |
 | DOGE | sí | 2026-11-25 | binance |
 | DOT | sí | 2026-11-25 | binance |
 | ETH | sí | 2026-11-25 | binance |
-| FEMSAUBD.MX | sí | 2026-11-23 | yahoo |
-| GAPB.MX | sí | 2026-11-23 | yahoo |
-| GFNORTEO.MX | sí | 2026-11-23 | yahoo |
+| FEMSAUBD.MX | sí | 2026-11-24 | yahoo |
+| GAPB.MX | sí | 2026-11-24 | yahoo |
+| GFNORTEO.MX | sí | 2026-11-24 | yahoo |
 | GLD | sí | 2026-11-24 | yahoo |
-| GMEXICOB.MX | sí | 2026-11-23 | yahoo |
+| GMEXICOB.MX | sí | 2026-11-24 | yahoo |
 | GOOGL | sí | 2026-11-24 | yahoo |
-| GRUMAB.MX | sí | 2026-11-23 | yahoo |
+| GRUMAB.MX | sí | 2026-11-24 | yahoo |
 | IWM | sí | 2026-11-24 | yahoo |
 | JPM | sí | 2026-11-24 | yahoo |
-| KIMBERA.MX | sí | 2026-11-23 | yahoo |
-| KOFUBL.MX | sí | 2026-11-23 | yahoo |
+| KIMBERA.MX | sí | 2026-11-24 | yahoo |
+| KOFUBL.MX | sí | 2026-11-24 | yahoo |
 | LINK | sí | 2026-11-25 | binance |
-| LIVEPOLC-1.MX | sí | 2026-11-23 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-11-24 | yahoo |
 | LTC | sí | 2026-11-25 | binance |
 | META | sí | 2026-11-24 | yahoo |
 | MSFT | sí | 2026-11-24 | yahoo |
 | MXN=X | sí | 2026-11-25 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-24 | yahoo |
 | NVDA | sí | 2026-11-24 | yahoo |
-| OMAB.MX | sí | 2026-11-23 | yahoo |
-| ORBIA.MX | sí | 2026-11-23 | yahoo |
-| PINFRA.MX | sí | 2026-11-23 | yahoo |
+| OMAB.MX | sí | 2026-11-24 | yahoo |
+| ORBIA.MX | sí | 2026-11-24 | yahoo |
+| PINFRA.MX | sí | 2026-11-24 | yahoo |
 | QQQ | sí | 2026-11-24 | yahoo |
 | SMH | sí | 2026-11-24 | yahoo |
 | SOL | sí | 2026-11-25 | binance |
 | SPY | sí | 2026-11-24 | yahoo |
 | TRX | sí | 2026-11-25 | binance |
 | TSLA | sí | 2026-11-24 | yahoo |
-| WALMEX.MX | sí | 2026-11-23 | yahoo |
+| WALMEX.MX | sí | 2026-11-24 | yahoo |
 | WMT | sí | 2026-11-24 | yahoo |
 | XLE | sí | 2026-11-24 | yahoo |
 | XLF | sí | 2026-11-24 | yahoo |
@@ -145,25 +136,25 @@ Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del
 | XOM | sí | 2026-11-24 | yahoo |
 | XRP | sí | 2026-11-25 | binance |
 | ^MXX | sí | 2026-11-24 | yahoo |
-| ^VIX | sí | 2026-11-24 | yahoo |
-| contexto_v42 | sí | 2026-11-25T07:14:58Z | CAUTION |
+| ^VIX | sí | 2026-11-25 | yahoo |
+| contexto_v42 | sí | 2026-11-25T08:14:04Z | CAUTION |
 | fear_greed | sí | 2026-11-25 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-24 | wikimedia |
-| wiki_en_Bitcoin | sí | 2026-11-23 | wikimedia |
+| wiki_en_Bitcoin | sí | 2026-11-24 | wikimedia |
 | wiki_en_Cryptocurrency | sí | 2026-11-24 | wikimedia |
 | wiki_en_Dogecoin | sí | 2026-11-24 | wikimedia |
 | wiki_en_Ethereum | sí | 2026-11-24 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-11-23 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-24 | wikimedia |
 | wiki_en_Inflation | sí | 2026-11-24 | wikimedia |
-| wiki_en_Recession | sí | 2026-11-23 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-11-23 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-23 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-11-23 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-24 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-11-24 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-24 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-24 | wikimedia |
 | wiki_en_Unemployment | sí | 2026-11-24 | wikimedia |
-| wiki_es_Crisis_económica | sí | 2026-11-23 | wikimedia |
-| wiki_es_Desempleo | sí | 2026-11-23 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-23 | wikimedia |
-| wiki_es_Inflación | sí | 2026-11-23 | wikimedia |
-| wiki_es_Recesión | sí | 2026-11-23 | wikimedia |
+| wiki_es_Crisis_económica | sí | 2026-11-24 | wikimedia |
+| wiki_es_Desempleo | sí | 2026-11-24 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-24 | wikimedia |
+| wiki_es_Inflación | sí | 2026-11-24 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-24 | wikimedia |
 
 _Señal estadística para que TÚ la revises. No es asesoría financiera ni una orden; el Radar no opera y no tiene llaves de ningún exchange. Probabilidades históricas encogidas, no garantías._

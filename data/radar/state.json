@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-23T09:53:50+00:00",
   "2026-11-23T09:54:28+00:00",
   "2026-11-23T10:53:01+00:00",
   "2026-11-23T11:12:15+00:00",
@@ -429,9 +428,10 @@
   "2026-11-25T05:17:35+00:00",
   "2026-11-25T06:16:04+00:00",
   "2026-11-25T07:15:20+00:00",
-  "2026-11-25T08:14:19+00:00"
+  "2026-11-25T08:14:19+00:00",
+  "2026-11-25T09:13:19+00:00"
  ],
- "last_scan_utc": "2026-11-25T08:14:19+00:00",
+ "last_scan_utc": "2026-11-25T09:13:19+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -440,7 +440,7 @@
   },
   "AC.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "ADA": {
@@ -450,12 +450,12 @@
   },
   "ALSEA.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "AMZN": {
@@ -465,7 +465,7 @@
   },
   "ASURB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "AVAX": {
@@ -475,7 +475,7 @@
   },
   "BBAJIOO.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "BCH": {
@@ -485,7 +485,7 @@
   },
   "BIMBOA.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "BTC": {
@@ -495,7 +495,7 @@
   },
   "CEMEXCPO.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "DIA": {
@@ -520,17 +520,17 @@
   },
   "FEMSAUBD.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "GLD": {
@@ -540,7 +540,7 @@
   },
   "GMEXICOB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "GOOGL": {
@@ -550,7 +550,7 @@
   },
   "GRUMAB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "IWM": {
@@ -565,12 +565,12 @@
   },
   "KIMBERA.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "LINK": {
@@ -580,7 +580,7 @@
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "LTC": {
@@ -615,17 +615,17 @@
   },
   "OMAB.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "QQQ": {
@@ -660,7 +660,7 @@
   },
   "WALMEX.MX": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "yahoo"
   },
   "WMT": {
@@ -725,7 +725,7 @@
   },
   "^VIX": {
    "ok": true,
-   "last": "2026-11-24",
+   "last": "2026-11-25",
    "nota": "yahoo"
   },
   "fear_greed": {
@@ -735,12 +735,12 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
@@ -760,37 +760,37 @@
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_es_Devaluación": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Ethereum": {
@@ -800,12 +800,12 @@
   },
   "wiki_en_Solana__blockchain_platform_": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Ripple_Labs": {
    "ok": true,
-   "last": "2026-11-23",
+   "last": "2026-11-24",
    "nota": "wikimedia"
   },
   "wiki_en_Dogecoin": {
@@ -820,141 +820,12 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-25T07:14:58Z",
+   "last": "2026-11-25T08:14:04Z",
    "nota": "CAUTION"
   }
  },
  "skipped": [],
- "last_candidates": [
-  {
-   "sym": "GFNORTEO.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.442,
-   "base": 0.398,
-   "ret": 0.0221,
-   "h": 30
-  },
-  {
-   "sym": "GMEXICOB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 43% vs día cualquiera 43%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.5 pp < 5 pp"
-   ],
-   "p": 0.478,
-   "base": 0.433,
-   "ret": 0.0229,
-   "h": 30
-  },
-  {
-   "sym": "CEMEXCPO.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 39%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.436,
-   "base": 0.392,
-   "ret": 0.0121,
-   "h": 30
-  },
-  {
-   "sym": "GAPB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 38% vs día cualquiera 38%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.426,
-   "base": 0.382,
-   "ret": 0.0194,
-   "h": 30
-  },
-  {
-   "sym": "OMAB.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 39% vs día cualquiera 40%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.442,
-   "base": 0.398,
-   "ret": 0.0187,
-   "h": 30
-  },
-  {
-   "sym": "ORBIA.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 38% vs día cualquiera 38%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.4 pp < 5 pp"
-   ],
-   "p": 0.428,
-   "base": 0.384,
-   "ret": 0.0181,
-   "h": 30
-  },
-  {
-   "sym": "LIVEPOLC-1.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 27% vs día cualquiera 28%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +3.8 pp < 5 pp"
-   ],
-   "p": 0.317,
-   "base": 0.279,
-   "ret": 0.0085,
-   "h": 30
-  },
-  {
-   "sym": "BBAJIOO.MX",
-   "cls": "bmv",
-   "sid": "CHOQUE_PESO",
-   "date": "2026-11-20",
-   "level": "VIGILANCIA",
-   "why": [
-    "la ventaja no es creíble: cota baja 36% vs día cualquiera 37%",
-    "neto esperado solo +0.8 pp sobre un día cualquiera (< 1 pp)",
-    "ventaja vs día cualquiera +4.3 pp < 5 pp"
-   ],
-   "p": 0.408,
-   "base": 0.365,
-   "ret": 0.0156,
-   "h": 30
-  }
- ],
+ "last_candidates": [],
  "digest_issue": {
   "2026-10": 5,
   "2026-11": 11
