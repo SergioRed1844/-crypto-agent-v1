@@ -1,48 +1,20 @@
 {
- "generated_utc": "2026-11-25T14:09:13Z",
+ "generated_utc": "2026-11-25T15:08:21Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.445,
- "event_risk": 0.442,
+ "bias": -0.452,
+ "event_risk": 0.027,
  "extra_confluence": 2,
  "vote": "FLAT",
- "confidence": 67,
+ "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
   "Stablecoins -5.9% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
-  {
-   "id": "pce-2026-11-25",
-   "utc": "2026-11-25T13:30:00Z",
-   "title_es": "Ingreso y gasto personal / PCE EE.UU. (oct-2026)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.279,
-   "riesgo": 0.279,
-   "ventana": [
-    "2026-11-25T11:30:00Z",
-    "2026-11-25T14:30:00Z"
-   ],
-   "en_ventana": true
-  },
-  {
-   "id": "gdp-2026-11-25",
-   "utc": "2026-11-25T13:30:00Z",
-   "title_es": "PIB EE.UU. 3T-2026 (estimación segunda)",
-   "category": "MACRO_DATA",
-   "status": "confirmed",
-   "magnitud": 0.205,
-   "riesgo": 0.205,
-   "ventana": [
-    "2026-11-25T11:30:00Z",
-    "2026-11-25T14:30:00Z"
-   ],
-   "en_ventana": true
-  },
   {
    "id": "deribit-expiry-2026-11-27",
    "utc": "2026-11-27T08:00:00Z",
@@ -50,7 +22,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.019,
+   "riesgo": 0.02,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -79,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.417,
+   "aporte": -0.416,
    "fuente": "noticia"
   },
   {
@@ -88,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.366,
+   "aporte": 0.363,
    "fuente": "noticia"
   },
   {
@@ -97,7 +69,16 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.296,
+   "aporte": 0.29,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.262,
    "fuente": "noticia"
   },
   {
@@ -106,7 +87,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.264,
+   "aporte": 0.262,
    "fuente": "noticia"
   },
   {
@@ -115,7 +96,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.25,
+   "aporte": -0.248,
    "fuente": "noticia"
   },
   {
@@ -133,16 +114,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.23,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-japan-key-services-inflation-gauge-hits-36-year-hi-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.206,
+   "aporte": -0.229,
    "fuente": "noticia"
   }
  ],

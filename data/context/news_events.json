@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T14:09:13Z",
+ "updated_utc": "2026-11-25T15:08:21Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10299,6 +10299,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-25T03:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "INFLATION",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
+   "source_url": "https://www.foxbusiness.com/economy/october-2026-pce-inflation",
+   "source_title": "foxbusiness.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
+   "date": "2026-11-25",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-25T14:15:00Z"
   }
  ]
 }
