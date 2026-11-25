@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-25T17:06:35Z",
+ "generated_utc": "2026-11-25T17:11:52Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -51,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.414,
+   "aporte": -0.413,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.246,
+   "aporte": -0.245,
    "fuente": "noticia"
   },
   {
