@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-25T07:14:58Z",
+ "generated_utc": "2026-11-25T08:14:04Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.466,
- "event_risk": 0.378,
+ "event_risk": 0.391,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.279,
-   "riesgo": 0.234,
+   "riesgo": 0.244,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -36,7 +36,7 @@
    "category": "MACRO_DATA",
    "status": "confirmed",
    "magnitud": 0.205,
-   "riesgo": 0.171,
+   "riesgo": 0.178,
    "ventana": [
     "2026-11-25T11:30:00Z",
     "2026-11-25T14:30:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.014,
+   "riesgo": 0.015,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -79,7 +79,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.426,
+   "aporte": -0.425,
    "fuente": "noticia"
   },
   {
@@ -88,7 +88,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.381,
+   "aporte": 0.379,
    "fuente": "noticia"
   },
   {
@@ -97,7 +97,7 @@
    "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
    "category": "MACRO_DATA",
    "stance": "pro",
-   "aporte": 0.342,
+   "aporte": 0.335,
    "fuente": "noticia"
   },
   {
@@ -106,7 +106,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -119,21 +119,21 @@
    "fuente": "noticia"
   },
   {
-   "id": "news-japan-key-services-inflation-gauge-hits-36-year-hi-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.238,
-   "fuente": "noticia"
-  },
-  {
    "id": "news-bitcoin-surrenders-most-gains-amid-sustained-etf-o-2026-11-25",
    "date": "2026-11-25",
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.236,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-japan-key-services-inflation-gauge-hits-36-year-hi-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "Inflación de servicios en Japón alcanza máximo de 36 años",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -142,7 +142,7 @@
    "title_es": "El Departamento de Justicia apunta a recuperar 1.100 millones de dólares del hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.188,
+   "aporte": 0.187,
    "fuente": "noticia"
   }
  ],
