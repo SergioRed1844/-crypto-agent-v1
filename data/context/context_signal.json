@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T20:43:02Z",
+ "generated_utc": "2026-11-26T20:47:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.47,
- "event_risk": 0.159,
+ "event_risk": 0.16,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -92,7 +92,7 @@
    "title_es": "PCE subyacente de octubre en EE. UU. alcanza máximo de tres años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.216,
+   "aporte": -0.215,
    "fuente": "noticia"
   },
   {

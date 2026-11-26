@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-26T20:43:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-26T20:47:12Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.16 · tamaño ×0.5 · compras permitidas
 
@@ -18,7 +18,7 @@ Actualizado 2026-11-26T20:43:02Z UTC. Se recalcula cada hora; el calendario y lo
 | Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.381 |
 | El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.305 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.219 |
-| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.216 |
+| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.215 |
 | Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.208 |
 | Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.205 |
 | EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.203 |
@@ -31,27 +31,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-26T20:43:02Z",
+ "inicio": "2026-11-26T20:47:12Z",
  "onchain": {
   "scanned": [
-   977705,
-   977708
+   977709,
+   977709
   ],
-  "calls": 82,
+  "calls": 41,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
+  "titulares": 1,
   "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
