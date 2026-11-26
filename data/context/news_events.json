@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T22:41:30Z",
+ "updated_utc": "2026-11-26T23:40:33Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10551,6 +10551,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T20:45:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "EXCHANGE_SECURITY",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 4,
+   "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
+   "source_url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/binance-lifts-withdrawal-suspension-after-us6-3-billion-crypto-heist",
+   "source_title": "businesstimes.com.sg",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-binance-lifts-withdrawal-suspension-after-us-6-3-b-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "22:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T22:30:00Z"
   }
  ]
 }
