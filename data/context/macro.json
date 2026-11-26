@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-26T16:50:04Z",
+ "generated_utc": "2026-11-26T16:53:58Z",
  "fear_greed": {
   "value": 11,
   "label": "Extreme Fear",
@@ -21,7 +21,7 @@
     "Yes": 0.2185,
     "No": 0.7815
    },
-   "volume": 9198797.249237001,
+   "volume": 9204054.162357,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
@@ -30,7 +30,7 @@
     "Yes": 0.2185,
     "No": 0.7815
    },
-   "volume": 9198797.249237001,
+   "volume": 9204054.162357,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -48,7 +48,7 @@
     "Yes": 0.0005,
     "No": 0.9995
    },
-   "volume": 55189703.918733,
+   "volume": 55189704.94873299,
    "slug": "presidential-election-winner-2028"
   }
  },
