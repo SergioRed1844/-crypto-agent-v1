@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T20:47:12Z",
+ "updated_utc": "2026-11-26T21:42:21Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10530,6 +10530,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T06:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "EU",
+   "crypto_stance": "neutral",
+   "prior_tier": 3,
+   "title_es": "El economista español Hernández de Cos sucederá a Lagarde al frente del BCE",
+   "source_url": "http://www.irishsun.com/news/279459752/spanish-economist-de-cos-to-succeed-lagarde-as-head-of-ecb",
+   "source_title": "irishsun.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-spanish-economist-de-cos-to-succeed-lagarde-as-hea-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T20:45:00Z"
   }
  ]
 }
