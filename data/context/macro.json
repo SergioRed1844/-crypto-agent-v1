@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-26T01:04:07Z",
+ "generated_utc": "2026-11-26T01:08:42Z",
  "fear_greed": {
   "value": 11,
   "label": "Extreme Fear",
@@ -7,9 +7,9 @@
   "avg_30d": 23.6
  },
  "stablecoins": {
-  "total_usd": 282477385151,
-  "chg_7d_pct": -1.32,
-  "chg_30d_pct": -5.89
+  "total_usd": 282222208670,
+  "chg_7d_pct": -1.05,
+  "chg_30d_pct": -5.75
  },
  "fred": {
   "status": "sin FRED_API_KEY"

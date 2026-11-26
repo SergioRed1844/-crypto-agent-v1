@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-26T00:59:57Z",
+ "generated_utc": "2026-11-26T01:04:30Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.75% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -144,6 +144,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.89
+  "stablecoins_30d_pct": -5.75
  }
 }
