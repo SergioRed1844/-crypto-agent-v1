@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T06:54:56Z",
+ "updated_utc": "2026-11-26T07:54:11Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10467,6 +10467,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T03:15:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "military_tension",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Aumenta la tensión en Ormuz por enfrentamiento entre EE. UU. e Irán",
+   "source_url": "http://eng.chinamil.com.cn/2025xb/W/N/16502087.html",
+   "source_title": "eng.chinamil.com.cn",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-hormuz-tensions-rise-as-us-iran-standoff-deepens-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T04:30:00Z"
   }
  ]
 }
