@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-26T13:49:07Z",
+ "generated_utc": "2026-11-26T14:48:15Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.471,
- "event_risk": 0.121,
+ "event_risk": 0.126,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -5.74% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.75% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.235,
-   "riesgo": 0.057,
+   "riesgo": 0.059,
    "ventana": [
     "2026-11-28T00:00:00Z",
     "2026-11-30T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.051,
+   "riesgo": 0.053,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.018,
+   "riesgo": 0.019,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.389,
+   "aporte": -0.388,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.318,
+   "aporte": 0.316,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "PCE subyacente de octubre en EE. UU. alcanza máximo de tres años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.249,
+   "aporte": -0.244,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.216,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.217,
+   "aporte": 0.215,
    "fuente": "noticia"
   },
   {
@@ -119,7 +119,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.216,
+   "aporte": -0.214,
    "fuente": "noticia"
   },
   {
@@ -144,6 +144,6 @@
    "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.74
+  "stablecoins_30d_pct": -5.75
  }
 }
