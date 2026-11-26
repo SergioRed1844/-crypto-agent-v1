@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-26T18:44:52Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-26T19:43:58Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.15 · tamaño ×0.5 · compras permitidas
 
@@ -9,20 +9,20 @@ Actualizado 2026-11-26T18:44:52Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| España: elecciones generales anticipadas (convocadas por Sánchez el 5-oct-2026) | 2026-11-29T12:00:00Z | Elección | 0.235 | 0.07 |
-| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.063 |
-| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.022 |
+| España: elecciones generales anticipadas (convocadas por Sánchez el 5-oct-2026) | 2026-11-29T12:00:00Z | Elección | 0.235 | 0.073 |
+| Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.065 |
+| Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.023 |
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.383 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.308 |
-| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.225 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.221 |
-| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.211 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.208 |
-| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.207 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.204 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.382 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.307 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.220 |
+| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.220 |
+| Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.210 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.206 |
+| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.205 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.203 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -31,13 +31,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-26T18:44:52Z",
+ "inicio": "2026-11-26T19:43:58Z",
  "onchain": {
   "scanned": [
-   977698,
-   977699
+   977700,
+   977703
   ],
-  "calls": 53,
+  "calls": 100,
   "stopped": null,
   "nuevas": 0
  },
