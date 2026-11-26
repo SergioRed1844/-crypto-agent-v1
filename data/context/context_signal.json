@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T08:53:09Z",
+ "generated_utc": "2026-11-26T08:56:46Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.472,
- "event_risk": 0.099,
+ "event_risk": 0.1,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -36,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.041,
+   "riesgo": 0.042,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.395,
+   "aporte": -0.394,
    "fuente": "noticia"
   },
   {
@@ -110,7 +110,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.224,
+   "aporte": -0.223,
    "fuente": "noticia"
   },
   {
