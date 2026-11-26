@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-26T02:58:35+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-25
+Última corrida: **2026-11-26T03:57:39+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-25
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -67,7 +67,7 @@ Ninguno.
 | Retroceso dentro de tendencia alcista | bmv | 7 d | 497 | 36% | 29% | 35% | 17% | +0.6% |
 | Retroceso dentro de tendencia alcista | bmv | 30 d | 223 | 39% | 38% | 39% | 30% | +0.4% |
 | Retroceso dentro de tendencia alcista | bmv | 90 d | 221 | 46% | 45% | 46% | 30% | +0.6% |
-| Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 54% | +0.3% |
+| Retroceso dentro de tendencia alcista | crypto | 7 d | 80 | 45% | 41% | 43% | 54% | +0.4% |
 | Retroceso dentro de tendencia alcista | crypto | 30 d | 42 | 39% | 42% | 41% | 69% | -0.0% |
 | Retroceso dentro de tendencia alcista | crypto | 90 d | 40 | 40% | 44% | 43% | 70% | +0.0% |
 | Retroceso dentro de tendencia alcista | us | 7 d | 425 | 38% | 33% | 37% | 19% | +0.3% |
@@ -137,24 +137,24 @@ Ninguno.
 | XRP | sí | 2026-11-26 | binance |
 | ^MXX | sí | 2026-11-25 | yahoo |
 | ^VIX | sí | 2026-11-25 | yahoo |
-| contexto_v42 | sí | 2026-11-26T01:59:16Z | CAUTION |
+| contexto_v42 | sí | 2026-11-26T02:58:23Z | CAUTION |
 | fear_greed | sí | 2026-11-26 | alternative.me |
-| wiki_en_Bankruptcy | sí | 2026-11-24 | wikimedia |
+| wiki_en_Bankruptcy | sí | 2026-11-25 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-24 | wikimedia |
-| wiki_en_Cryptocurrency | sí | 2026-11-24 | wikimedia |
-| wiki_en_Dogecoin | sí | 2026-11-24 | wikimedia |
-| wiki_en_Ethereum | sí | 2026-11-24 | wikimedia |
-| wiki_en_Financial_crisis | sí | 2026-11-24 | wikimedia |
+| wiki_en_Cryptocurrency | sí | 2026-11-25 | wikimedia |
+| wiki_en_Dogecoin | sí | 2026-11-25 | wikimedia |
+| wiki_en_Ethereum | sí | 2026-11-25 | wikimedia |
+| wiki_en_Financial_crisis | sí | 2026-11-25 | wikimedia |
 | wiki_en_Inflation | sí | 2026-11-24 | wikimedia |
-| wiki_en_Recession | sí | 2026-11-24 | wikimedia |
-| wiki_en_Ripple_Labs | sí | 2026-11-24 | wikimedia |
-| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-24 | wikimedia |
-| wiki_en_Stock_market_crash | sí | 2026-11-24 | wikimedia |
-| wiki_en_Unemployment | sí | 2026-11-24 | wikimedia |
-| wiki_es_Crisis_económica | sí | 2026-11-24 | wikimedia |
+| wiki_en_Recession | sí | 2026-11-25 | wikimedia |
+| wiki_en_Ripple_Labs | sí | 2026-11-25 | wikimedia |
+| wiki_en_Solana__blockchain_platform_ | sí | 2026-11-25 | wikimedia |
+| wiki_en_Stock_market_crash | sí | 2026-11-25 | wikimedia |
+| wiki_en_Unemployment | sí | 2026-11-25 | wikimedia |
+| wiki_es_Crisis_económica | sí | 2026-11-25 | wikimedia |
 | wiki_es_Desempleo | sí | 2026-11-24 | wikimedia |
-| wiki_es_Devaluación | sí | 2026-11-24 | wikimedia |
-| wiki_es_Inflación | sí | 2026-11-24 | wikimedia |
-| wiki_es_Recesión | sí | 2026-11-24 | wikimedia |
+| wiki_es_Devaluación | sí | 2026-11-25 | wikimedia |
+| wiki_es_Inflación | sí | 2026-11-25 | wikimedia |
+| wiki_es_Recesión | sí | 2026-11-25 | wikimedia |
 
 _Señal estadística para que TÚ la revises. No es asesoría financiera ni una orden; el Radar no opera y no tiene llaves de ningún exchange. Probabilidades históricas encogidas, no garantías._
