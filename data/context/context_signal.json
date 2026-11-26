@@ -1,20 +1,34 @@
 {
- "generated_utc": "2026-11-25T23:01:42Z",
+ "generated_utc": "2026-11-26T00:00:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.451,
- "event_risk": 0.037,
+ "event_risk": 0.069,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.45",
-  "Stablecoins -5.88% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.89% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
+  {
+   "id": "es-general-2026",
+   "utc": "2026-11-29T12:00:00Z",
+   "title_es": "España: elecciones generales anticipadas (convocadas por Sánchez el 5-oct-2026)",
+   "category": "ELECTION",
+   "status": "confirmed",
+   "magnitud": 0.235,
+   "riesgo": 0.032,
+   "ventana": [
+    "2026-11-28T00:00:00Z",
+    "2026-11-30T12:00:00Z"
+   ],
+   "en_ventana": false
+  },
   {
    "id": "deribit-expiry-2026-11-27",
    "utc": "2026-11-27T08:00:00Z",
@@ -22,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.028,
+   "riesgo": 0.029,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -51,7 +65,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.406,
+   "aporte": -0.405,
    "fuente": "noticia"
   },
   {
@@ -60,16 +74,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.347,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-us-consumer-confidence-soars-with-elections-in-the-2026-11-24",
-   "date": "2026-11-24",
-   "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
-   "category": "MACRO_DATA",
-   "stance": "pro",
-   "aporte": 0.246,
+   "aporte": 0.345,
    "fuente": "noticia"
   },
   {
@@ -78,7 +83,16 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.245,
+   "aporte": 0.243,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-us-consumer-confidence-soars-with-elections-in-the-2026-11-24",
+   "date": "2026-11-24",
+   "title_es": "Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina",
+   "category": "MACRO_DATA",
+   "stance": "pro",
+   "aporte": 0.241,
    "fuente": "noticia"
   },
   {
@@ -87,7 +101,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.237,
+   "aporte": -0.236,
    "fuente": "noticia"
   },
   {
@@ -96,16 +110,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.234,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
-   "category": "MACRO_DATA",
-   "stance": "anti",
-   "aporte": -0.222,
+   "aporte": -0.233,
    "fuente": "noticia"
   },
   {
@@ -114,7 +119,16 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.222,
+   "aporte": -0.221,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-october-pce-inflation-gauge-moves-higher-ahead-of-2026-11-25",
+   "date": "2026-11-25",
+   "title_es": "El PCE de octubre sube antes de la reunión de la Fed",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.217,
    "fuente": "noticia"
   }
  ],
@@ -127,9 +141,9 @@
   "market": {
    "btc_regime": null,
    "vol_regime": null,
-   "fear_greed": 13
+   "fear_greed": 11
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.88
+  "stablecoins_30d_pct": -5.89
  }
 }
