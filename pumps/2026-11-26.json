@@ -1,0 +1,446 @@
+{
+ "generado": "2026-11-26T08:53:21.522670+00:00",
+ "fecha_cdmx": "2026-11-26",
+ "prueba": false,
+ "n_eventos": 3413,
+ "validacion": {
+  "corto": {
+   "n_train": 1976,
+   "n_test": 1437,
+   "tasa_test": 0.41,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1318,
+     "pred": 0.418,
+     "real": 0.415
+    },
+    "0.5-0.6": {
+     "n": 119,
+     "pred": 0.545,
+     "real": 0.353
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1976,
+   "n_test": 1437,
+   "tasa_test": 0.375,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1345,
+     "pred": 0.408,
+     "real": 0.373
+    },
+    "0.5-0.6": {
+     "n": 92,
+     "pred": 0.528,
+     "real": 0.402
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 146,
+    "tasa": 0.486,
+    "prob": 0.486
+   },
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 171,
+    "tasa": 0.485,
+    "prob": 0.484
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 161,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 139,
+    "tasa": 0.489,
+    "prob": 0.475
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 86,
+    "tasa": 0.488,
+    "prob": 0.475
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.525,
+    "prob": 0.514
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 133,
+    "tasa": 0.481,
+    "prob": 0.48
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 46,
+    "tasa": 0.5,
+    "prob": 0.476
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 102,
+    "tasa": 0.48,
+    "prob": 0.472
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 69,
+    "tasa": 0.449,
+    "prob": 0.444
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 243,
+    "tasa": 0.44,
+    "prob": 0.439
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "SSVUSDT",
+   "base": "SSV",
+   "nombre": "SSV Network",
+   "cap_m": 37.0,
+   "precio": 2.505,
+   "sube_24h": 0.4563953488372092,
+   "vol24_m": 8.25,
+   "vol_vs_30d": 21.43,
+   "top3_horas": 0.22,
+   "compras_agresivas": 0.46,
+   "prev30": -0.2863070539419088,
+   "rsi_1h": 82.4,
+   "pares_usd": {
+    "BTC": 0.38,
+    "ETH": 0.18,
+    "USDC": 0.09,
+    "TUSD": 0.0
+   },
+   "par_no_usdt": 0.07,
+   "libro": {
+    "mid": 2.5065,
+    "spread": 0.0011976047904191933,
+    "compras_2pct_usd": 56679,
+    "ventas_2pct_usd": 45397
+   },
+   "concentracion": [
+    "volumen ≥2x"
+   ],
+   "patron_dodo": true,
+   "celda": "35%+ · 8x+ · venía bajando",
+   "p_corto": 0.48445908113601316,
+   "p_largo": 0.40456280122285104,
+   "n_celda": 161,
+   "n_padre": 373,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se registraron anuncios de nuevos listados en Binance, Upbit o Coinbase, ni alianzas o hackeos recientes. La subida se debió al cierre del tramo final del programa de gobernanza DIP-51 (The Distributed Vote), que incentivó la delegación masiva de tokens cSSV por recompensas. Esta reducción repentina de liquidez provocó un estrangulamiento de pos",
+    "fuentes": [
+     {
+      "titulo": "asksurf.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuJa24IpwvhZsjMN7_TFS4qlLU0awXRs6FVh0Fd7Alnv-yQpKiOxopakJEbi-_g6GZY1fNQgKAZTeCASLT0VvG_0g_rLkCQo5YwEqmPoSiGNlDU4AbcQdbLHQXGf4jFv2-oDn3bZe6HL76EA=="
+     },
+     {
+      "titulo": "asksurf.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuJa24IpwvhZsjMN7_TFS4qlLU0awXRs6FVh0Fd7Alnv-yQpKiOxopakJEbi-_g6GZY1fNQgKAZTeCASLT0VvG_0g_rLkCQo5YwEqmPoSiGNlDU4AbcQdbLHQXGf4jFv2-oDn3bZe6HL76EA=="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "MOVEUSDT",
+   "base": "MOVE",
+   "nombre": "Movement",
+   "cap_m": 30.4,
+   "precio": 0.006414,
+   "sube_24h": 0.32905097389142135,
+   "vol24_m": 6.48,
+   "vol_vs_30d": 42.27,
+   "top3_horas": 0.56,
+   "compras_agresivas": 0.5,
+   "prev30": -0.2922715940753776,
+   "rsi_1h": 70.0,
+   "pares_usd": {
+    "TRY": 0.55,
+    "FDUSD": 0.36,
+    "USDC": 0.35,
+    "BTC": 0.28
+   },
+   "par_no_usdt": 0.19,
+   "libro": {
+    "mid": 0.006421,
+    "spread": 0.0015586034912717928,
+    "compras_2pct_usd": 7995,
+    "ventas_2pct_usd": 3894
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "20-35% · 8x+ · venía bajando",
+   "p_corto": 0.48392141230941416,
+   "p_largo": 0.4001612480672552,
+   "n_celda": 171,
+   "n_padre": 388,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante (listados en Binance/Upbit/Coinbase, alianzas, quemas, desbloqueos o actualizaciones) en las últimas 72 horas que explique el movimiento. Los reportes de mercado atribuyen el alza a un rebote técnico y compras netamente especulativas, sin la presencia de catalizadores fundamentales.",
+    "fuentes": [
+     {
+      "titulo": "tradersunion.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi5emdOAedNtmwRrNirkXTrhs_92KZtaUKolx9TOwmVv2ynYudfy4jgg2jkpXN2aqoJZ6xlq5M6naVyZfpOOFKANOGPOwHdUaTNk8nG5c0Bek28TYG43f8h4dd_NL7VtHvlD5OkvaKXdxyKIoN_N6vrIkkUQtlTNnww5_2YQlI2IrQsC5wY_0mAhiqCgpp68g7dTtm6yW2Vh-J"
+     },
+     {
+      "titulo": "coingabbar.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbsY6jkUqOR_FWV7rhF4Q5byaQlPYOHwx1ivbYGgTYvGgHuZKJDqDV6vhj2f8OdPAY8Is5YoQo3YZr0l0mBALPpjXl3QDEX8bhMRo584NZ1pS1m8EDoPpPpE3Y1gwptgmBXbrZ_C4KyAhYhowmFCNthUewCh-tp1Q9IgaHyxGFeupcb-yo-K7G"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "MANTRAUSDT",
+   "base": "MANTRA",
+   "nombre": "MANTRA",
+   "cap_m": 18.0,
+   "precio": 0.00262,
+   "sube_24h": 0.2300469483568075,
+   "vol24_m": 20.98,
+   "vol_vs_30d": 41.78,
+   "top3_horas": 0.28,
+   "compras_agresivas": 0.5,
+   "prev30": -0.4379947229551451,
+   "rsi_1h": 49.1,
+   "pares_usd": {
+    "TRY": 21.35,
+    "USDC": 0.38
+   },
+   "par_no_usdt": 0.51,
+   "libro": {
+    "mid": 0.0026249999999999997,
+    "spread": 0.003816793893129722,
+    "compras_2pct_usd": 27449,
+    "ventas_2pct_usd": 14844
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "20-35% · 8x+ · venía bajando",
+   "p_corto": 0.48392141230941416,
+   "p_largo": 0.4001612480672552,
+   "n_celda": 171,
+   "n_padre": 388,
+   "senal": null,
+   "noticia": {
+    "resumen": "Se encontró que el 23 de noviembre se anunció que el 100% de los ingresos del código constructor de MF se destinará a la recompra de tokens MANTRA, junto con la confirmación del cierre de su adquisición por parte de Inveniam. No hubo anuncios de nuevos listados en Binance, Coinbase o Upbit en las últimas 72 horas, y los análisis del mercado atribuy",
+    "fuentes": [
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGS4_V0njeX5YAw7P1t6Qx0ztxAhcHRkqBhkqu5py9jFEJnX12w2wjVc_C2rph4eY87iY2sP2_xLjGi1km0BNINZsm36ucxectj-UBrU6OWYiDjC7N21ZrktEO_zgMv92tk4rZQr_s="
+     },
+     {
+      "titulo": "kcex.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOH16oYSBv6dNYT_piZUVadPiPzRQJUX_Ne_nfc_a1wLbQcT9BVJUa7R-4S4uSgS2PZuZOH0Zzh2i1nAY-dbAqkdq9a6Ztm4s7vBbTIaELU4WYCL9IJce6XuDSrA=="
+     },
+     {
+      "titulo": "coinedition.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-h9My264nl0WdYl2hD0aiYpfJPuCf09kJ8LNj-Jic2OHWrU1BUBKYSjKgVbTfUjGdFtXUIRiRuBAsKNcyjPeyZE3A9jZMIILlqLJILtM8ikz8krvvczdxluX9cDSvgPimXiCERBlmk88M4M3qi6Jh6CpfJEvqVpCvCqXJqVpDD9IxxVMi7OPvsD9L94-RXAfFS4x1JE9uoTW0fVcVmcYwXdmGnatjr7CaLQirDxfdJD_o3BA="
+     }
+    ]
+   }
+  },
+  {
+   "sym": "BLURUSDT",
+   "base": "BLUR",
+   "nombre": "Blur",
+   "cap_m": 30.9,
+   "precio": 0.01052,
+   "sube_24h": 0.20228571428571418,
+   "vol24_m": 6.26,
+   "vol_vs_30d": 3.61,
+   "top3_horas": 0.37,
+   "compras_agresivas": 0.51,
+   "prev30": 0.16047745358090193,
+   "rsi_1h": 56.0,
+   "pares_usd": {
+    "TRY": 5.9,
+    "BTC": 0.2,
+    "USDC": 0.07,
+    "FDUSD": 0.0
+   },
+   "par_no_usdt": 0.5,
+   "libro": {
+    "mid": 0.010525,
+    "spread": 0.000950570342205248,
+    "compras_2pct_usd": 34647,
+    "ventas_2pct_usd": 28957
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "20-35% · 2-4x · 0-50%",
+   "p_corto": 0.3799901347840349,
+   "p_largo": 0.47172029399456716,
+   "n_celda": 102,
+   "n_padre": 256,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia oficial en las últimas 72 horas (como nuevos listados, alianzas, quema de tokens o anuncios de Binance, Upbit o Coinbase) que justifique la subida. Los análisis de mercado atribuyen el alza a especulación técnica, rebote de precios y compras a corto plazo.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhhN6GZRQtLEL-93iD0HzL7Q9Vtiruc0V-VF_GIBnb6DLTMacq9tf0RAiQvdFwf0eTYrAqBQRRiXJF-SSuTxdRcsDZ_LW3v_XXVLBkAi3KlB8dhDdfKih0-eOKByaUcj2p-LJsMZ80ddZnp2YELkzX1g=="
+     },
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtapMYPgVjjfeQKZqXlPKsfmLICOv-Vf6pdKP-FbEwiiusn4nN8awDIV_pEIqGV5TQIi8qW93rjrOWCpf2pJlCQBx8x3mVhgLwAs3ApsnvLbLtExFxU79XMTZFCDD4qbwFalA-"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "INITUSDT",
+   "base": "INIT",
+   "nombre": "Initia",
+   "cap_m": 22.7,
+   "precio": 0.10414,
+   "sube_24h": 0.18019038984587477,
+   "vol24_m": 4.01,
+   "vol_vs_30d": 0.48,
+   "top3_horas": 0.52,
+   "compras_agresivas": 0.51,
+   "prev30": -0.4481205829007443,
+   "rsi_1h": 81.4,
+   "pares_usd": {
+    "TRY": 4.11,
+    "FDUSD": 0.26,
+    "USDC": 0.05
+   },
+   "par_no_usdt": 0.52,
+   "libro": {
+    "mid": 0.10420499999999999,
+    "spread": 0.0012483195698098637,
+    "compras_2pct_usd": 30169,
+    "ventas_2pct_usd": 10584
+   },
+   "concentracion": [
+    "40%+ del volumen en 3 horas",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37474419166798545,
+   "p_largo": 0.3259812192708183,
+   "n_celda": 451,
+   "n_padre": 983,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia en las últimas 72 horas (listados en Binance, Upbit o Coinbase, alianzas, quemas ni hackeos) que justifique la subida. El movimiento alcista parece atribuirse a factores técnicos y del mercado de derivados, principalmente por el cierre forzado de posiciones en corto (*short covering*) tras caídas previas.",
+    "fuentes": [
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVN-k8ojPCnBqBWk2KOFLl5exuwMpiQ4HAUTkSJDOi5KylZGps19-h8AZcUQbkMLkQcFh_VqMbtJO7F3aNNGXMNJvOFrphAPZnZz5E9wMWe3_DGxLyLo4BRFmmES-gzFsNGgJ7roL2ONggSO4="
+     },
+     {
+      "titulo": "newcoinlistings.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3pB7cgJk3KMeYRWOaBvYirU_BO6RPk9noz2Nd0tK8ePxuBL5Vzr8nKabJn58Gpdc9L6lbMsKv5HflzcyU8C_yi7R2SH_FnY67shbL84YPuLQRveJjBae-U0lGx_i7aR-zfqFj"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "牛来USDT",
+   "base": "牛来",
+   "nombre": "牛来 (Niu Lai)",
+   "cap_m": 45.5,
+   "precio": 0.04534,
+   "sube_24h": 0.15339608242177571,
+   "vol24_m": 8.24,
+   "vol_vs_30d": 1.62,
+   "top3_horas": 0.45,
+   "compras_agresivas": 0.5,
+   "prev30": -0.26619376516707116,
+   "rsi_1h": 57.2,
+   "pares_usd": {
+    "USDC": 0.32
+   },
+   "par_no_usdt": 0.04,
+   "libro": {
+    "mid": 0.045355,
+    "spread": 0.0011030222810499701,
+    "compras_2pct_usd": 41387,
+    "ventas_2pct_usd": 39434
+   },
+   "concentracion": [
+    "40%+ del volumen en 3 horas"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37474419166798545,
+   "p_largo": 0.3259812192708183,
+   "n_celda": 451,
+   "n_padre": 983,
+   "senal": null
+  }
+ ],
+ "btc": {
+  "precio": 60932.45,
+  "r24": 0.02688,
+  "r7": -0.01766603916677012
+ }
+}
