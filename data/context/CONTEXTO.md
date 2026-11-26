@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-26T12:49:46Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-26T12:54:08Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.12 · tamaño ×0.5 · compras permitidas
 
@@ -9,7 +9,7 @@ Actualizado 2026-11-26T12:49:46Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
-| España: elecciones generales anticipadas (convocadas por Sánchez el 5-oct-2026) | 2026-11-29T12:00:00Z | Elección | 0.235 | 0.054 |
+| España: elecciones generales anticipadas (convocadas por Sánchez el 5-oct-2026) | 2026-11-29T12:00:00Z | Elección | 0.235 | 0.055 |
 | Vencimiento mensual de opciones BTC/ETH (Deribit) | 2026-11-27T08:00:00Z | Vencimiento de derivados | 0.1 | 0.049 |
 | Vencimiento mensual de futuros de BTC en CME | 2026-11-27T16:00:00Z | Vencimiento de derivados | 0.05 | 0.018 |
 
@@ -31,13 +31,10 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-26T12:49:46Z",
+ "inicio": "2026-11-26T12:54:08Z",
  "onchain": {
-  "scanned": [
-   977673,
-   977676
-  ],
-  "calls": 90,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
