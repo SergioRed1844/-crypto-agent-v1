@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-26T01:04:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-26T01:09:25Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.45 · riesgo de evento 0.07 · tamaño ×0.5 · compras permitidas
 
@@ -16,13 +16,13 @@ Actualizado 2026-11-26T01:04:30Z UTC. Se recalcula cada hora; el calendario y lo
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
 | Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.404 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.343 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.342 |
 | Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.241 |
-| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.236 |
+| Confianza del consumidor de EE.UU. se dispara tras elecciones y baja de gasolina | 2026-11-24 | pro | +0.235 |
 | Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance | 2026-11-25 | anti | -0.234 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.233 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.220 |
-| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.213 |
+| El PCE de octubre sube antes de la reunión de la Fed | 2026-11-25 | anti | -0.212 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -31,27 +31,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-26T01:04:30Z",
+ "inicio": "2026-11-26T01:09:25Z",
  "onchain": {
-  "scanned": [
-   977599,
-   977602
-  ],
-  "calls": 31,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
+  "titulares": 2,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
