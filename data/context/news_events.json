@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T02:58:23Z",
+ "updated_utc": "2026-11-26T03:57:38Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10425,6 +10425,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T02:30:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación en EE. UU. sube a 3,8% mientras el gasto se estanca",
+   "source_url": "https://www.prokerala.com/news/articles/a1841185.html",
+   "source_title": "prokerala.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-inflation-rises-to-3-8-pc-as-spending-stalls-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "02:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T02:45:00Z"
+  },
+  {
+   "category": "MACRO_DATA",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Dow borra caída de 1.100 puntos tras ventas en sector IA",
+   "source_url": "https://www.hngn.com/articles/273967/20261125/dow-erases-1100-point-plunge-ai-selloff-rattles-wall-street.htm",
+   "source_title": "hngn.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-dow-erases-1-100-point-plunge-as-ai-selloff-rattle-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "03:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T03:15:00Z"
   }
  ]
 }
