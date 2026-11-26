@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T08:56:46Z",
+ "updated_utc": "2026-11-26T09:52:27Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10488,6 +10488,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T04:30:00Z"
+  },
+  {
+   "category": "TRADE",
+   "subcategory": "TARIFFS",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
+   "source_url": "https://www.freemalaysiatoday.com/category/business/2026/11/26/us-unveils-tariffs-on-eu-china-and-others-over-unfair-trade",
+   "source_title": "freemalaysiatoday.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-us-unveils-tariffs-on-eu-china-and-others-over-unf-2026-11-26",
+   "date": "2026-11-26",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-26T05:15:00Z"
   }
  ]
 }
