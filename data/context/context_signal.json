@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-26T19:43:58Z",
+ "generated_utc": "2026-11-26T19:47:50Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.47,
- "event_risk": 0.153,
+ "event_risk": 0.154,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -74,7 +74,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.307,
+   "aporte": 0.306,
    "fuente": "noticia"
   },
   {
@@ -101,7 +101,7 @@
    "title_es": "Se profundizan pérdidas de Bitcoin tras presunto hackeo a Binance",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.21,
+   "aporte": -0.209,
    "fuente": "noticia"
   },
   {
