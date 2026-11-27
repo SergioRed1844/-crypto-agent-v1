@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T16:26:09Z",
+ "generated_utc": "2026-11-27T16:30:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.473,
- "event_risk": 0.213,
+ "event_risk": 0.214,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -87,7 +87,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.187,
+   "aporte": -0.186,
    "fuente": "noticia"
   },
   {
