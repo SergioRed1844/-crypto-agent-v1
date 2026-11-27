@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-27T20:22:51Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-27T20:28:30Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.20 · tamaño ×0.5 · compras permitidas
 
@@ -20,7 +20,7 @@ Actualizado 2026-11-27T20:22:51Z UTC. Se recalcula cada hora; el calendario y lo
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.183 |
 | Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.168 |
 | EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.167 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.154 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.153 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,13 +29,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-27T20:22:51Z",
+ "inicio": "2026-11-27T20:28:30Z",
  "onchain": {
   "scanned": [
-   977838,
-   977844
+   977845,
+   977847
   ],
-  "calls": 178,
+  "calls": 30,
   "stopped": null,
   "nuevas": 0
  },
