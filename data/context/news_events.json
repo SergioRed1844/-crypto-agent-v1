@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-27T06:34:38Z",
+ "updated_utc": "2026-11-27T07:33:45Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10635,6 +10635,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-27T04:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "La Fed afronta presiones para nuevas subidas de tipos por inflación y crecimiento",
+   "source_url": "https://www.azernews.az/analysis/268155.html",
+   "source_title": "azernews.az",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-fed-faces-fresh-rate-hike-as-inflation-and-us-grow-2026-11-27",
+   "date": "2026-11-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "05:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-27T05:30:00Z"
   }
  ]
 }
