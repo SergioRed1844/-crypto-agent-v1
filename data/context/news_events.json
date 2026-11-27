@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-27T04:36:13Z",
+ "updated_utc": "2026-11-27T04:39:49Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10572,6 +10572,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-26T22:30:00Z"
+  },
+  {
+   "category": "FINANCIAL_CRISIS",
+   "subcategory": "",
+   "country": "GLOBAL",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "Suspenden cotización del dólar ante sospechas de intervención estatal",
+   "source_url": "https://buenosairesherald.com/economics/the-dollar-halted-its-upward-streak-but-the-market-suspects-official-intervention",
+   "source_title": "buenosairesherald.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-us-dollar-exchange-rate-halted-amid-suspicion-of-g-2026-11-27",
+   "date": "2026-11-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "00:15",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-27T00:15:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "JP",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "Inflación subyacente en Tokio sube a máximos de 16 meses y presiona alza del BOJ",
+   "source_url": "https://www.aol.com/articles/core-inflation-japans-capital-accelerates-234240000.html",
+   "source_title": "aol.com",
+   "confidence": 0.9,
+   "origin": "gemini/GDELT",
+   "id": "news-core-inflation-in-tokyo-hits-16-month-high-bolster-2026-11-27",
+   "date": "2026-11-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-27T01:30:00Z"
   },
   {
    "category": "HACK_SECURITY",
