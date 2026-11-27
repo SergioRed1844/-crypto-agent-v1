@@ -370,7 +370,6 @@
   }
  },
  "runs": [
-  "2026-11-25T07:15:20+00:00",
   "2026-11-25T08:14:19+00:00",
   "2026-11-25T09:13:19+00:00",
   "2026-11-25T09:13:58+00:00",
@@ -429,9 +428,10 @@
   "2026-11-27T00:46:58+00:00",
   "2026-11-27T01:39:12+00:00",
   "2026-11-27T02:38:17+00:00",
-  "2026-11-27T03:37:20+00:00"
+  "2026-11-27T03:37:20+00:00",
+  "2026-11-27T04:36:23+00:00"
  ],
- "last_scan_utc": "2026-11-27T03:37:20+00:00",
+ "last_scan_utc": "2026-11-27T04:36:23+00:00",
  "health": {
   "AAPL": {
    "ok": true,
@@ -740,17 +740,17 @@
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_en_Unemployment": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_en_Bankruptcy": {
@@ -760,7 +760,7 @@
   },
   "wiki_en_Financial_crisis": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_es_Recesión": {
@@ -770,7 +770,7 @@
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
@@ -785,7 +785,7 @@
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
@@ -810,7 +810,7 @@
   },
   "wiki_en_Dogecoin": {
    "ok": true,
-   "last": "2026-11-25",
+   "last": "2026-11-26",
    "nota": "wikimedia"
   },
   "wiki_en_Cryptocurrency": {
@@ -820,7 +820,7 @@
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-27T03:14:03Z",
+   "last": "2026-11-27T03:37:09Z",
    "nota": "CAUTION"
   }
  },
