@@ -1,0 +1,260 @@
+{
+ "generado": "2026-11-27T08:33:10.295597+00:00",
+ "fecha_cdmx": "2026-11-27",
+ "prueba": false,
+ "n_eventos": 3400,
+ "validacion": {
+  "corto": {
+   "n_train": 1961,
+   "n_test": 1439,
+   "tasa_test": 0.411,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1319,
+     "pred": 0.419,
+     "real": 0.415
+    },
+    "0.5-0.6": {
+     "n": 120,
+     "pred": 0.547,
+     "real": 0.358
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1961,
+   "n_test": 1439,
+   "tasa_test": 0.375,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1367,
+     "pred": 0.408,
+     "real": 0.375
+    },
+    "0.5-0.6": {
+     "n": 72,
+     "pred": 0.536,
+     "real": 0.389
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 170,
+    "tasa": 0.488,
+    "prob": 0.487
+   },
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 146,
+    "tasa": 0.486,
+    "prob": 0.486
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 161,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 139,
+    "tasa": 0.489,
+    "prob": 0.475
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 86,
+    "tasa": 0.488,
+    "prob": 0.475
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.525,
+    "prob": 0.513
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 132,
+    "tasa": 0.477,
+    "prob": 0.476
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 100,
+    "tasa": 0.48,
+    "prob": 0.471
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 45,
+    "tasa": 0.489,
+    "prob": 0.468
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 68,
+    "tasa": 0.456,
+    "prob": 0.449
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 237,
+    "tasa": 0.439,
+    "prob": 0.438
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "INITUSDT",
+   "base": "INIT",
+   "nombre": "Initia",
+   "cap_m": 27.5,
+   "precio": 0.12118,
+   "sube_24h": 0.15596680339597424,
+   "vol24_m": 27.81,
+   "vol_vs_30d": 3.28,
+   "top3_horas": 0.28,
+   "compras_agresivas": 0.51,
+   "prev30": -0.34734155148798407,
+   "rsi_1h": 47.4,
+   "pares_usd": {
+    "TRY": 29.77,
+    "USDC": 0.43,
+    "FDUSD": 0.26
+   },
+   "par_no_usdt": 0.52,
+   "libro": {
+    "mid": 0.12118,
+    "spread": 0.0011559739080175824,
+    "compras_2pct_usd": 14118,
+    "ventas_2pct_usd": 7355
+   },
+   "concentracion": [
+    "volumen ≥2x",
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37531657320868494,
+   "p_largo": 0.3266741754147753,
+   "n_celda": 453,
+   "n_padre": 983,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia positiva (como nuevos listados, alianzas, quemas o recompras) en las últimas 72 horas que explique la subida de Initia (INIT). De hecho, exchanges como Upbit y Bithumb extendieron recientemente sus alertas de precaución comercial sobre el token. El movimiento se atribuye a especulación técnica y un estrangulamiento de",
+    "fuentes": [
+     {
+      "titulo": "binance.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgiZPaJ1wp1MFJY_Q8AEoR2sj122E_r8zrb3F1ssY9YLvuBYL7gce0xd_fZl8aThSp0wrPA7vnYms7os49zmo7ggu0N_xluuN17P6qj36Nfga7n8LCDxfr4bgdkfRYyq0QzJNuFzzVOUYO57I="
+     },
+     {
+      "titulo": "bloomingbit.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5ONzLRYr3LnF_r0HoRptxpH1aN7glz1LudUWT-CUCk_juLcyq4F-Q4SL2n0gGE_JPwxWGjN0SrZfpXZ9E3JaQWdUffIwYhBCZhh8wMKwZDhYtlvH8nb32SbMqmRK0jHs="
+     },
+     {
+      "titulo": "pluang.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHY478q-NIMDZkSk_9OUP17cmr0R-OzSOId-SJwBJSa9kmNhDtrRfe9cvGNozynhXCP2nQJqFYP0x8WITSMzyP0jhJsrAHdTOI6seVmr0vgWjNV_STG3ZKWeMClBwcCthpkYg4KzjDJXLHZ2AIqqmrTFDXmFGsNzrr7_vEWvOY3slbH2fdvoU5Rc6rqUhDzIVGNQYRsPdt"
+     }
+    ]
+   }
+  },
+  {
+   "sym": "ONEUSDT",
+   "base": "ONE",
+   "nombre": "ONEchain",
+   "cap_m": 71.1,
+   "precio": 0.001078,
+   "sube_24h": 0.13833157338965152,
+   "vol24_m": 8.36,
+   "vol_vs_30d": 1.33,
+   "top3_horas": 0.31,
+   "compras_agresivas": 0.49,
+   "prev30": -0.2759938837920488,
+   "rsi_1h": 58.3,
+   "pares_usd": {
+    "TRY": 7.95,
+    "BTC": 1.53,
+    "ETH": 0.0
+   },
+   "par_no_usdt": 0.53,
+   "libro": {
+    "mid": 0.0010785,
+    "spread": 0.0009276437847867136,
+    "compras_2pct_usd": 40620,
+    "ventas_2pct_usd": 24462
+   },
+   "concentracion": [
+    "40%+ fuera de USDT"
+   ],
+   "patron_dodo": true,
+   "celda": "12-20% · 2-4x · venía bajando",
+   "p_corto": 0.37531657320868494,
+   "p_largo": 0.3266741754147753,
+   "n_celda": 453,
+   "n_padre": 983,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia relevante en las últimas 72 horas (listados en Binance, Upbit o Coinbase, alianzas, quemas o hackeos) que explique el alza del +14% de ONEchain (ONE). El movimiento parece estar impulsado por volatilidad técnica o especulación general del mercado sin un catalizador fundamental confirmado.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmNXUmk9urQlRP_1f8zHZbB4Bf-aBlLuGU3kY7bjt0i_ku5YKHI8JNDGlJnM2Q5LhMN9eTeUfdh_hxYOLrGlGRtZPJCvROiLf9qI3647SUvf7xA38VQQ01xfb4MJjt3z7T9bUpZ5rAa8N0VrQ="
+     },
+     {
+      "titulo": "cryptonews.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzdo1vszeCwB0kiAakYIiMI5xVGy1Vy2rFg292STwcaomwhypA-5YwXEjxeUcR2MTvHgbgTcKZyvaJG4u2b2r58fTVL_jfwWtlPm3oIRuklIttn_nuejswDVhI0Ebv7hQNrw=="
+     }
+    ]
+   }
+  }
+ ],
+ "btc": {
+  "precio": 61825.87,
+  "r24": 0.019790000000000002,
+  "r7": 0.047048158732490464
+ }
+}
