@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-27T15:27:04Z",
+ "generated_utc": "2026-11-27T16:26:09Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.473,
- "event_risk": 0.207,
+ "event_risk": 0.213,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -5.86% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.87% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.235,
-   "riesgo": 0.165,
+   "riesgo": 0.172,
    "ventana": [
     "2026-11-28T00:00:00Z",
     "2026-11-30T12:00:00Z"
@@ -51,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.36,
+   "aporte": -0.359,
    "fuente": "noticia"
   },
   {
@@ -60,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.273,
+   "aporte": 0.271,
    "fuente": "noticia"
   },
   {
@@ -69,7 +69,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.26,
+   "aporte": -0.259,
    "fuente": "noticia"
   },
   {
@@ -96,7 +96,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.175,
+   "aporte": 0.174,
    "fuente": "noticia"
   },
   {
@@ -105,7 +105,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.174,
+   "aporte": -0.173,
    "fuente": "noticia"
   },
   {
@@ -114,7 +114,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.156,
+   "aporte": -0.155,
    "fuente": "noticia"
   }
  ],
@@ -130,6 +130,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.86
+  "stablecoins_30d_pct": -5.87
  }
 }
