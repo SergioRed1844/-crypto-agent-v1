@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-27T08:32:50Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-27T08:37:10Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.24 · tamaño ×0.5 · compras permitidas
 
@@ -20,9 +20,9 @@ Actualizado 2026-11-27T08:32:50Z UTC. Se recalcula cada hora; el calendario y lo
 | Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.271 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.212 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.193 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.186 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.185 |
 | EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.184 |
-| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.169 |
+| PCE subyacente de octubre en EE. UU. alcanza máximo de tres años | 2026-11-26 | anti | -0.168 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -31,27 +31,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-27T08:32:50Z",
+ "inicio": "2026-11-27T08:37:10Z",
  "onchain": {
   "scanned": [
-   977776,
-   977777
+   977778,
+   977779
   ],
-  "calls": 68,
+  "calls": 48,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
-  "urgentes": 0,
+  "titulares": 17,
+  "eventos": 2,
+  "urgentes": 1,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
