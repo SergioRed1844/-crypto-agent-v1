@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-27T07:33:56+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-26
+Última corrida: **2026-11-27T08:33:23+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-26
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -99,7 +99,7 @@ Ninguno.
 | GAPB.MX | sí | 2026-11-25 | yahoo |
 | GFNORTEO.MX | sí | 2026-11-25 | yahoo |
 | GLD | sí | 2026-11-25 | yahoo |
-| GMEXICOB.MX | sí | 2026-11-25 | yahoo |
+| GMEXICOB.MX | sí | 2026-11-26 | yahoo |
 | GOOGL | sí | 2026-11-25 | yahoo |
 | GRUMAB.MX | sí | 2026-11-25 | yahoo |
 | IWM | sí | 2026-11-25 | yahoo |
@@ -136,8 +136,8 @@ Ninguno.
 | XOM | sí | 2026-11-25 | yahoo |
 | XRP | sí | 2026-11-27 | binance |
 | ^MXX | sí | 2026-11-26 | yahoo |
-| ^VIX | sí | 2026-11-26 | yahoo |
-| contexto_v42 | sí | 2026-11-27T06:34:38Z | CAUTION |
+| ^VIX | sí | 2026-11-27 | yahoo |
+| contexto_v42 | sí | 2026-11-27T07:33:45Z | CAUTION |
 | fear_greed | sí | 2026-11-27 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-26 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-26 | wikimedia |
