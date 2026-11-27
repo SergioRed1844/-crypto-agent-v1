@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-27T00:44:03Z",
+ "generated_utc": "2026-11-27T01:38:58Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.474,
- "event_risk": 0.187,
+ "event_risk": 0.193,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -5.75% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.87% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.235,
-   "riesgo": 0.089,
+   "riesgo": 0.093,
    "ventana": [
     "2026-11-28T00:00:00Z",
     "2026-11-30T12:00:00Z"
@@ -36,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.1,
-   "riesgo": 0.08,
+   "riesgo": 0.083,
    "ventana": [
     "2026-11-27T06:00:00Z",
     "2026-11-27T09:00:00Z"
@@ -50,7 +50,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.029,
+   "riesgo": 0.03,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -65,7 +65,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.376,
+   "aporte": -0.375,
    "fuente": "noticia"
   },
   {
@@ -74,7 +74,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.298,
+   "aporte": 0.296,
    "fuente": "noticia"
   },
   {
@@ -83,7 +83,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.284,
+   "aporte": -0.283,
    "fuente": "noticia"
   },
   {
@@ -92,7 +92,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.217,
+   "aporte": -0.216,
    "fuente": "noticia"
   },
   {
@@ -100,15 +100,6 @@
    "date": "2026-11-25",
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.199,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-u-s-inflation-core-pce-october-3-year-high-2026-11-26",
-   "date": "2026-11-26",
-   "title_es": "PCE subyacente de octubre en EE. UU. alcanza máximo de tres años",
-   "category": "MACRO_DATA",
    "stance": "anti",
    "aporte": -0.198,
    "fuente": "noticia"
@@ -119,7 +110,16 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.198,
+   "aporte": 0.197,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-u-s-inflation-core-pce-october-3-year-high-2026-11-26",
+   "date": "2026-11-26",
+   "title_es": "PCE subyacente de octubre en EE. UU. alcanza máximo de tres años",
+   "category": "MACRO_DATA",
+   "stance": "anti",
+   "aporte": -0.195,
    "fuente": "noticia"
   },
   {
@@ -128,7 +128,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.197,
+   "aporte": -0.195,
    "fuente": "noticia"
   }
  ],
@@ -144,6 +144,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.75
+  "stablecoins_30d_pct": -5.87
  }
 }
