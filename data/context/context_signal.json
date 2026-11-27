@@ -1,12 +1,12 @@
 {
- "generated_utc": "2026-11-27T17:25:28Z",
+ "generated_utc": "2026-11-27T18:24:32Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.473,
- "event_risk": 0.179,
+ "event_risk": 0.187,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
@@ -22,7 +22,7 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.235,
-   "riesgo": 0.179,
+   "riesgo": 0.187,
    "ventana": [
     "2026-11-28T00:00:00Z",
     "2026-11-30T12:00:00Z"
@@ -37,7 +37,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.358,
+   "aporte": -0.357,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.269,
+   "aporte": 0.268,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.257,
+   "aporte": -0.256,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.186,
+   "aporte": -0.185,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.172,
+   "aporte": 0.171,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.171,
+   "aporte": -0.17,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.155,
+   "aporte": -0.154,
    "fuente": "noticia"
   }
  ],
