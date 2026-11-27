@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-27T08:37:10Z",
+ "generated_utc": "2026-11-27T09:32:12Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
  "bias": -0.474,
- "event_risk": 0.243,
+ "event_risk": 0.165,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Precaución: sesgo -0.47",
-  "Stablecoins -5.88% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.87% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -22,26 +22,12 @@
    "category": "ELECTION",
    "status": "confirmed",
    "magnitud": 0.235,
-   "riesgo": 0.124,
+   "riesgo": 0.129,
    "ventana": [
     "2026-11-28T00:00:00Z",
     "2026-11-30T12:00:00Z"
    ],
    "en_ventana": false
-  },
-  {
-   "id": "deribit-expiry-2026-11-27",
-   "utc": "2026-11-27T08:00:00Z",
-   "title_es": "Vencimiento mensual de opciones BTC/ETH (Deribit)",
-   "category": "DERIVATIVES_EXPIRY",
-   "status": "confirmed",
-   "magnitud": 0.1,
-   "riesgo": 0.1,
-   "ventana": [
-    "2026-11-27T06:00:00Z",
-    "2026-11-27T09:00:00Z"
-   ],
-   "en_ventana": true
   },
   {
    "id": "cme-btc-expiry-2026-11-27",
@@ -50,7 +36,7 @@
    "category": "DERIVATIVES_EXPIRY",
    "status": "confirmed",
    "magnitud": 0.05,
-   "riesgo": 0.04,
+   "riesgo": 0.042,
    "ventana": [
     "2026-11-27T14:00:00Z",
     "2026-11-27T17:00:00Z"
@@ -65,7 +51,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.368,
+   "aporte": -0.367,
    "fuente": "noticia"
   },
   {
@@ -74,7 +60,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.284,
+   "aporte": 0.282,
    "fuente": "noticia"
   },
   {
@@ -83,7 +69,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.271,
+   "aporte": -0.27,
    "fuente": "noticia"
   },
   {
@@ -92,7 +78,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.212,
+   "aporte": -0.211,
    "fuente": "noticia"
   },
   {
@@ -101,7 +87,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.193,
+   "aporte": -0.192,
    "fuente": "noticia"
   },
   {
@@ -110,7 +96,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.185,
+   "aporte": 0.184,
    "fuente": "noticia"
   },
   {
@@ -119,7 +105,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.184,
+   "aporte": -0.183,
    "fuente": "noticia"
   },
   {
@@ -128,7 +114,7 @@
    "title_es": "PCE subyacente de octubre en EE. UU. alcanza máximo de tres años",
    "category": "MACRO_DATA",
    "stance": "anti",
-   "aporte": -0.168,
+   "aporte": -0.165,
    "fuente": "noticia"
   }
  ],
@@ -144,6 +130,6 @@
    "fear_greed": 12
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.88
+  "stablecoins_30d_pct": -5.87
  }
 }
