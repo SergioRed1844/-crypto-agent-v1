@@ -1,6 +1,6 @@
 # 📡 Radar EB — tablero
 
-Última corrida: **2026-11-27T05:35:43+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-26
+Última corrida: **2026-11-27T06:34:48+00:00 UTC** · 56 activos · contexto v4.2: **CAUTION** · último resumen: 2026-11-26
 
 Agente 2: **solo alertas**, no opera. Modelo de Bayes empírico sobre setups del corpus de microcomportamientos. Detalle del método: `docs/RADAR_EB.md` · validación: `data/radar/BACKTEST.md`.
 
@@ -26,7 +26,7 @@ Ninguno.
 | Setup | Clase | H | Episodios | Crudo | Día cualquiera | Encogido | B (hacia 'sin ventaja') | Neto exceso |
 |---|---|---|---|---|---|---|---|---|
 | Atención + momentum semanal (cripto) | crypto | 7 d | 44 | 39% | 41% | 40% | 62% | +0.1% |
-| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 76% | -0.2% |
+| Atención + momentum semanal (cripto) | crypto | 30 d | 24 | 35% | 42% | 40% | 75% | -0.2% |
 | Atención + momentum semanal (cripto) | crypto | 90 d | 24 | 39% | 44% | 43% | 75% | -0.0% |
 | Capitulación con miedo extremo | bmv | 7 d | 84 | 37% | 25% | 29% | 64% | +0.2% |
 | Capitulación con miedo extremo | bmv | 30 d | 54 | 47% | 35% | 38% | 72% | +0.4% |
@@ -79,51 +79,51 @@ Ninguno.
 | Serie | OK | Último | Nota |
 |---|---|---|---|
 | AAPL | sí | 2026-11-25 | yahoo |
-| AC.MX | sí | 2026-11-26 | yahoo |
+| AC.MX | sí | 2026-11-25 | yahoo |
 | ADA | sí | 2026-11-27 | binance |
-| ALSEA.MX | sí | 2026-11-26 | yahoo |
-| AMXB.MX | sí | 2026-11-26 | yahoo |
+| ALSEA.MX | sí | 2026-11-25 | yahoo |
+| AMXB.MX | sí | 2026-11-25 | yahoo |
 | AMZN | sí | 2026-11-25 | yahoo |
-| ASURB.MX | sí | 2026-11-26 | yahoo |
+| ASURB.MX | sí | 2026-11-25 | yahoo |
 | AVAX | sí | 2026-11-27 | binance |
-| BBAJIOO.MX | sí | 2026-11-26 | yahoo |
+| BBAJIOO.MX | sí | 2026-11-25 | yahoo |
 | BCH | sí | 2026-11-27 | binance |
-| BIMBOA.MX | sí | 2026-11-26 | yahoo |
+| BIMBOA.MX | sí | 2026-11-25 | yahoo |
 | BTC | sí | 2026-11-27 | binance |
-| CEMEXCPO.MX | sí | 2026-11-26 | yahoo |
+| CEMEXCPO.MX | sí | 2026-11-25 | yahoo |
 | DIA | sí | 2026-11-25 | yahoo |
 | DOGE | sí | 2026-11-27 | binance |
 | DOT | sí | 2026-11-27 | binance |
 | ETH | sí | 2026-11-27 | binance |
-| FEMSAUBD.MX | sí | 2026-11-26 | yahoo |
-| GAPB.MX | sí | 2026-11-26 | yahoo |
-| GFNORTEO.MX | sí | 2026-11-26 | yahoo |
+| FEMSAUBD.MX | sí | 2026-11-25 | yahoo |
+| GAPB.MX | sí | 2026-11-25 | yahoo |
+| GFNORTEO.MX | sí | 2026-11-25 | yahoo |
 | GLD | sí | 2026-11-25 | yahoo |
-| GMEXICOB.MX | sí | 2026-11-26 | yahoo |
+| GMEXICOB.MX | sí | 2026-11-25 | yahoo |
 | GOOGL | sí | 2026-11-25 | yahoo |
-| GRUMAB.MX | sí | 2026-11-26 | yahoo |
+| GRUMAB.MX | sí | 2026-11-25 | yahoo |
 | IWM | sí | 2026-11-25 | yahoo |
 | JPM | sí | 2026-11-25 | yahoo |
-| KIMBERA.MX | sí | 2026-11-26 | yahoo |
-| KOFUBL.MX | sí | 2026-11-26 | yahoo |
+| KIMBERA.MX | sí | 2026-11-25 | yahoo |
+| KOFUBL.MX | sí | 2026-11-25 | yahoo |
 | LINK | sí | 2026-11-27 | binance |
-| LIVEPOLC-1.MX | sí | 2026-11-26 | yahoo |
+| LIVEPOLC-1.MX | sí | 2026-11-25 | yahoo |
 | LTC | sí | 2026-11-27 | binance |
 | META | sí | 2026-11-25 | yahoo |
 | MSFT | sí | 2026-11-25 | yahoo |
 | MXN=X | sí | 2026-11-27 | yahoo |
 | NAFTRACISHRS.MX | sí | 2026-11-26 | yahoo |
 | NVDA | sí | 2026-11-25 | yahoo |
-| OMAB.MX | sí | 2026-11-26 | yahoo |
-| ORBIA.MX | sí | 2026-11-26 | yahoo |
-| PINFRA.MX | sí | 2026-11-26 | yahoo |
+| OMAB.MX | sí | 2026-11-25 | yahoo |
+| ORBIA.MX | sí | 2026-11-25 | yahoo |
+| PINFRA.MX | sí | 2026-11-25 | yahoo |
 | QQQ | sí | 2026-11-25 | yahoo |
 | SMH | sí | 2026-11-25 | yahoo |
 | SOL | sí | 2026-11-27 | binance |
 | SPY | sí | 2026-11-25 | yahoo |
 | TRX | sí | 2026-11-27 | binance |
 | TSLA | sí | 2026-11-25 | yahoo |
-| WALMEX.MX | sí | 2026-11-26 | yahoo |
+| WALMEX.MX | sí | 2026-11-25 | yahoo |
 | WMT | sí | 2026-11-25 | yahoo |
 | XLE | sí | 2026-11-25 | yahoo |
 | XLF | sí | 2026-11-25 | yahoo |
@@ -137,7 +137,7 @@ Ninguno.
 | XRP | sí | 2026-11-27 | binance |
 | ^MXX | sí | 2026-11-26 | yahoo |
 | ^VIX | sí | 2026-11-26 | yahoo |
-| contexto_v42 | sí | 2026-11-27T04:39:49Z | CAUTION |
+| contexto_v42 | sí | 2026-11-27T05:35:34Z | CAUTION |
 | fear_greed | sí | 2026-11-27 | alternative.me |
 | wiki_en_Bankruptcy | sí | 2026-11-26 | wikimedia |
 | wiki_en_Bitcoin | sí | 2026-11-26 | wikimedia |
