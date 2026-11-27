@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-27T12:29:37Z",
+ "generated_utc": "2026-11-27T12:34:00Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
@@ -96,7 +96,7 @@
    "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.18,
+   "aporte": 0.179,
    "fuente": "noticia"
   },
   {

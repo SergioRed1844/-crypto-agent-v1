@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-27T12:29:37Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-27T12:34:00Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.47 · riesgo de evento 0.19 · tamaño ×0.5 · compras permitidas
 
@@ -19,7 +19,7 @@ Actualizado 2026-11-27T12:29:37Z UTC. Se recalcula cada hora; el calendario y lo
 | Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.265 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.209 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.190 |
-| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.180 |
+| Trump sugiere usar la inflación para reducir la deuda nacional | 2026-11-25 | pro | +0.179 |
 | EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.178 |
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.157 |
 
@@ -30,13 +30,13 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-27T12:29:37Z",
+ "inicio": "2026-11-27T12:34:00Z",
  "onchain": {
   "scanned": [
-   977798,
-   977805
+   977806,
+   977806
   ],
-  "calls": 70,
+  "calls": 3,
   "stopped": null,
   "nuevas": 0
  },
