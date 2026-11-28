@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-28T02:17:55Z",
+ "updated_utc": "2026-11-28T03:16:53Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10698,6 +10698,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-27T22:45:00Z"
+  },
+  {
+   "category": "FISCAL",
+   "subcategory": "CREDIT_POLICY",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
+   "source_url": "https://www.wsfa.com/2026/11/27/president-trump-floats-10-percent-credit-card-interest-rate-cap/",
+   "source_title": "wsfa.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-president-trump-floats-10-percent-credit-card-inte-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "01:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T01:45:00Z"
   }
  ]
 }

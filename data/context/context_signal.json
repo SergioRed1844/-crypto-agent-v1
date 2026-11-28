@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-28T02:17:55Z",
+ "generated_utc": "2026-11-28T03:16:53Z",
  "state": "CAUTION",
  "veto_entries": false,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.5,
- "bias": -0.468,
+ "bias": -0.457,
  "event_risk": 0.236,
  "extra_confluence": 2,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
-  "Precaución: sesgo -0.47",
-  "Stablecoins -5.29% en 30 días (liquidez saliendo)"
+  "Precaución: sesgo -0.46",
+  "Stablecoins -5.3% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -37,7 +37,16 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.349,
+   "aporte": -0.348,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-president-trump-floats-10-percent-credit-card-inte-2026-11-28",
+   "date": "2026-11-28",
+   "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
+   "category": "FISCAL",
+   "stance": "pro",
+   "aporte": 0.285,
    "fuente": "noticia"
   },
   {
@@ -46,7 +55,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.256,
+   "aporte": 0.254,
    "fuente": "noticia"
   },
   {
@@ -55,7 +64,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.244,
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -64,7 +73,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.201,
+   "aporte": -0.2,
    "fuente": "noticia"
   },
   {
@@ -73,16 +82,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.179,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-trump-says-inflation-could-help-pay-down-the-natio-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Trump sugiere usar la inflación para reducir la deuda nacional",
-   "category": "FISCAL",
-   "stance": "pro",
-   "aporte": 0.16,
+   "aporte": -0.178,
    "fuente": "noticia"
   },
   {
@@ -91,7 +91,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.159,
+   "aporte": -0.158,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "Desplome de mercados globales borra billones de dólares",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.151,
+   "aporte": -0.15,
    "fuente": "noticia"
   }
  ],
@@ -116,6 +116,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.29
+  "stablecoins_30d_pct": -5.3
  }
 }
