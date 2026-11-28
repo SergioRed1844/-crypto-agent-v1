@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-28T09:11:55Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-28T10:11:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.46 · riesgo de evento 0.24 · tamaño ×0.0 · VETO a compras
 
@@ -13,14 +13,14 @@ Actualizado 2026-11-28T09:11:55Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.342 |
-| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.271 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.245 |
-| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.234 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.197 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.174 |
-| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.150 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.148 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.341 |
+| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.269 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.244 |
+| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.233 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.196 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.173 |
+| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.149 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.147 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,20 +29,20 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-28T09:11:55Z",
+ "inicio": "2026-11-28T10:11:02Z",
  "onchain": {
   "scanned": [
-   977913,
-   977919
+   977920,
+   977923
   ],
-  "calls": 112,
+  "calls": 48,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 24,
-  "eventos": 4,
+  "titulares": 32,
+  "eventos": 0,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
