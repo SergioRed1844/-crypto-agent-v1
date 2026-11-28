@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-28T04:12:18Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-28T04:16:35Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: CAUTION** · sesgo -0.46 · riesgo de evento 0.24 · tamaño ×0.5 · compras permitidas
 
@@ -19,7 +19,7 @@ Actualizado 2026-11-28T04:12:18Z UTC. Se recalcula cada hora; el calendario y lo
 | Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.241 |
 | La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.200 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.178 |
-| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.157 |
+| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.156 |
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.150 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
@@ -29,27 +29,24 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-28T04:12:18Z",
+ "inicio": "2026-11-28T04:16:35Z",
  "onchain": {
-  "scanned": [
-   977886,
-   977892
-  ],
-  "calls": 74,
+  "scanned": null,
+  "calls": 1,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
+  "titulares": 44,
+  "eventos": 9,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
