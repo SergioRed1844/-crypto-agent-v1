@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-28T16:10:02Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-28T17:05:04Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.47 · riesgo de evento 0.24 · tamaño ×0.0 · VETO a compras
 
@@ -13,14 +13,14 @@ Actualizado 2026-11-28T16:10:02Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| CZ reconoce complacencia en Binance tras hackeo de 6.300 millones de dólares | 2026-11-28 | anti | -0.363 |
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.335 |
-| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.256 |
-| El ETF de Bitcoin de BlackRock pierde 2.800 millones de dólares en 8 sesiones | 2026-11-28 | anti | -0.241 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.235 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.193 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.145 |
-| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.142 |
+| CZ reconoce complacencia en Binance tras hackeo de 6.300 millones de dólares | 2026-11-28 | anti | -0.361 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.334 |
+| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.254 |
+| El ETF de Bitcoin de BlackRock pierde 2.800 millones de dólares en 8 sesiones | 2026-11-28 | anti | -0.240 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.234 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.192 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.144 |
+| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.141 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,20 +29,23 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-28T16:10:02Z",
+ "inicio": "2026-11-28T17:05:04Z",
  "onchain": {
-  "scanned": null,
-  "calls": 1,
+  "scanned": [
+   977953,
+   977956
+  ],
+  "calls": 79,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 8,
-  "eventos": 4,
+  "titulares": 30,
+  "eventos": 3,
   "urgentes": 3,
   "metodo": "gemini",
-  "agregados": 0
+  "agregados": 3
  },
  "gemini": {
   "model": "gemini-3.8-flash",
