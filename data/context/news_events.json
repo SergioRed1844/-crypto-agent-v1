@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-28T05:15:18Z",
+ "updated_utc": "2026-11-28T06:14:28Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10719,6 +10719,27 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-28T01:45:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El oro modera ganancias por temores persistentes a alzas de tasas de la Fed",
+   "source_url": "https://economictimes.indiatimes.com/markets/commodities/news/gold-pares-gains-as-fed-hike-risks-linger-eyes-first-weekly-rise-in-three-weeks/articleshow/136237788.cms",
+   "source_title": "economictimes.indiatimes.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-pares-gains-as-fed-hike-risks-linger-eyes-fir-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "04:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T04:30:00Z"
   }
  ]
 }
