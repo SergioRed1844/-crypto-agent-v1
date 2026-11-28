@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-28T04:19:31Z",
+ "generated_utc": "2026-11-28T05:18:46Z",
  "fear_greed": {
   "value": 10,
   "label": "Extreme Fear",
@@ -7,9 +7,9 @@
   "avg_30d": 21.0
  },
  "stablecoins": {
-  "total_usd": 281368448516,
-  "chg_7d_pct": -0.1,
-  "chg_30d_pct": -5.3
+  "total_usd": 281362216354,
+  "chg_7d_pct": -0.38,
+  "chg_30d_pct": -5.56
  },
  "fred": {
   "status": "sin FRED_API_KEY"
@@ -18,19 +18,19 @@
   "fr-presidential-r1-2027": {
    "question": "Will David Lisnard win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.2615,
-    "No": 0.7385
+    "Yes": 0.2635,
+    "No": 0.7365
    },
-   "volume": 9305249.129778,
+   "volume": 9325848.375062002,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
    "question": "Will David Lisnard win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.2615,
-    "No": 0.7385
+    "Yes": 0.2635,
+    "No": 0.7365
    },
-   "volume": 9305249.129778,
+   "volume": 9325848.375062002,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
@@ -39,7 +39,7 @@
     "Yes": 0.0015,
     "No": 0.9985
    },
-   "volume": 54803838.01775801,
+   "volume": 54804094.017758004,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
