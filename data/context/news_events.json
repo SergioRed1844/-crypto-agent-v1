@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-28T13:32:15Z",
+ "updated_utc": "2026-11-28T14:07:37Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10740,6 +10740,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-28T04:30:00Z"
+  },
+  {
+   "category": "MONETARY_POLICY",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El Dow rebota mientras aumentan apuestas por alzas de la Fed y sube el dólar",
+   "source_url": "https://www.actionforex.com/action-insight/market-overview/weekly-report/662359-good-week-in-a-bad-month-for-stocks-dow-leads-rebound-as-fed-hike-bets-and-dollar-strengthen/",
+   "source_title": "actionforex.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-good-week-in-a-bad-month-for-stocks-dow-leads-rebo-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "10:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T10:30:00Z"
+  },
+  {
+   "category": "INSTITUTIONAL_ADOPTION",
+   "subcategory": "",
+   "country": "US",
+   "crypto_stance": "anti",
+   "prior_tier": 3,
+   "title_es": "El ETF de Bitcoin de BlackRock pierde 2.800 millones de dólares en 8 sesiones",
+   "source_url": "https://www.newsbtc.com/bitcoin-news/blackrock-bitcoin-etf-outflows-november-2026/",
+   "source_title": "newsbtc.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-blackrock-bitcoin-etf-loses-2-8-billion-in-8-sessi-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "13:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T13:45:00Z"
   }
  ]
 }

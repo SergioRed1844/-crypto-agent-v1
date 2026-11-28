@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-11-28T13:32:15Z",
+ "generated_utc": "2026-11-28T14:07:37Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.457,
+ "bias": -0.465,
  "event_risk": 0.236,
  "extra_confluence": 0,
  "vote": "FLAT",
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Ballena dormida movió 7,281 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 7.1 años.",
-  "Stablecoins -5.43% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.44% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -46,7 +46,16 @@
    "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.262,
+   "aporte": 0.26,
+   "fuente": "noticia"
+  },
+  {
+   "id": "news-blackrock-bitcoin-etf-loses-2-8-billion-in-8-sessi-2026-11-28",
+   "date": "2026-11-28",
+   "title_es": "El ETF de Bitcoin de BlackRock pierde 2.800 millones de dólares en 8 sesiones",
+   "category": "INSTITUTIONAL_ADOPTION",
+   "stance": "anti",
+   "aporte": -0.243,
    "fuente": "noticia"
   },
   {
@@ -55,7 +64,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.239,
+   "aporte": 0.238,
    "fuente": "noticia"
   },
   {
@@ -64,7 +73,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.228,
+   "aporte": -0.227,
    "fuente": "noticia"
   },
   {
@@ -74,15 +83,6 @@
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
    "aporte": -0.194,
-   "fuente": "noticia"
-  },
-  {
-   "id": "news-bitcoin-surrenders-most-gains-amid-sustained-etf-o-2026-11-25",
-   "date": "2026-11-25",
-   "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
-   "category": "INSTITUTIONAL_ADOPTION",
-   "stance": "anti",
-   "aporte": -0.171,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.145,
+   "aporte": -0.144,
    "fuente": "noticia"
   }
  ],
@@ -134,6 +134,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.43
+  "stablecoins_30d_pct": -5.44
  }
 }
