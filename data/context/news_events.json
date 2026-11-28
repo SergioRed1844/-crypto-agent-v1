@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-28T14:07:37Z",
+ "updated_utc": "2026-11-28T15:06:41Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10782,6 +10782,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-28T13:45:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "EXCHANGE_HACK",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 5,
+   "title_es": "CZ reconoce complacencia en Binance tras hackeo de 6.300 millones de dólares",
+   "source_url": "https://www.moneycontrol.com/news/cryptocurrency/binance-team-and-the-ecosystem-got-a-bit-complacent-says-co-founder-cz-following-6-3-bn-hack-14090903.html",
+   "source_title": "moneycontrol.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-binance-team-and-the-ecosystem-got-a-bit-complacen-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T14:45:00Z"
+  },
+  {
+   "category": "HACK_SECURITY",
+   "subcategory": "EXCHANGE_HACK",
+   "country": "GLOBAL",
+   "crypto_stance": "anti",
+   "prior_tier": 5,
+   "title_es": "Fundador de Binance apunta a fallas de seguridad previas a hackeo multimillonario",
+   "source_url": "https://www.thenationalnews.com/business/2026/11/28/binance-founder-acknowledges-security-complacency-on-63-hack-and-calls-for-crypto-industry-alliance/",
+   "source_title": "thenationalnews.com",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-binance-founder-suggests-security-complacency-befo-2026-11-28",
+   "date": "2026-11-28",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "14:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-28T14:45:00Z"
   }
  ]
 }
