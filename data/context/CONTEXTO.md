@@ -1,11 +1,11 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-28T11:10:05Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-28T12:09:11Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.46 · riesgo de evento 0.24 · tamaño ×0.0 · VETO a compras
 
 - Alerta on-chain alta: Ballena dormida movió 7,281 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 7.1 años.
-- Stablecoins -5.44% en 30 días (liquidez saliendo)
+- Stablecoins -5.43% en 30 días (liquidez saliendo)
 
 | Próximo evento | UTC | Categoría | Magnitud | Riesgo |
 |---|---|---|---|---|
@@ -13,14 +13,14 @@ Actualizado 2026-11-28T11:10:05Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.340 |
-| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.267 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.242 |
-| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.232 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.196 |
-| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.173 |
-| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.148 |
-| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.147 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.339 |
+| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.265 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.241 |
+| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.230 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.195 |
+| Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.172 |
+| Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.146 |
+| EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.146 |
 
 Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENTOS.md) · Datos: `context_signal.json`, `calendar.json`, `weights.json`, `alerts_onchain.json`
 
@@ -29,19 +29,19 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-28T11:10:05Z",
+ "inicio": "2026-11-28T12:09:11Z",
  "onchain": {
   "scanned": [
-   977924,
-   977931
+   977932,
+   977934
   ],
-  "calls": 74,
+  "calls": 44,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 7,
+  "titulares": 16,
   "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
