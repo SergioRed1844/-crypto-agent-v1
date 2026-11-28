@@ -1,0 +1,202 @@
+{
+ "generado": "2026-11-28T08:12:53.719525+00:00",
+ "fecha_cdmx": "2026-11-28",
+ "prueba": false,
+ "n_eventos": 3410,
+ "validacion": {
+  "corto": {
+   "n_train": 1961,
+   "n_test": 1449,
+   "tasa_test": 0.409,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1271,
+     "pred": 0.415,
+     "real": 0.414
+    },
+    "0.5-0.6": {
+     "n": 178,
+     "pred": 0.533,
+     "real": 0.376
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  },
+  "largo": {
+   "n_train": 1961,
+   "n_test": 1449,
+   "tasa_test": 0.375,
+   "cubetas": {
+    "0.0-0.5": {
+     "n": 1377,
+     "pred": 0.407,
+     "real": 0.374
+    },
+    "0.5-0.6": {
+     "n": 72,
+     "pred": 0.544,
+     "real": 0.389
+    },
+    "0.6-0.7": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.7-0.8": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    },
+    "0.8-1.0": {
+     "n": 0,
+     "pred": null,
+     "real": null
+    }
+   }
+  }
+ },
+ "mejores_celdas": {
+  "corto": [
+   {
+    "celda": "20-35% · 8x+ · venía bajando",
+    "n": 169,
+    "tasa": 0.491,
+    "prob": 0.489
+   },
+   {
+    "celda": "35%+ · 8x+ · 0-50%",
+    "n": 145,
+    "tasa": 0.49,
+    "prob": 0.489
+   },
+   {
+    "celda": "35%+ · 8x+ · venía bajando",
+    "n": 161,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "35%+ · 8x+ · ya subió 50%+",
+    "n": 62,
+    "tasa": 0.484,
+    "prob": 0.484
+   },
+   {
+    "celda": "12-20% · 2-4x · ya subió 50%+",
+    "n": 139,
+    "tasa": 0.489,
+    "prob": 0.475
+   },
+   {
+    "celda": "20-35% · 4-8x · 0-50%",
+    "n": 86,
+    "tasa": 0.488,
+    "prob": 0.475
+   }
+  ],
+  "largo": [
+   {
+    "celda": "20-35% · 4-8x · ya subió 50%+",
+    "n": 80,
+    "tasa": 0.525,
+    "prob": 0.514
+   },
+   {
+    "celda": "20-35% · 2-4x · 0-50%",
+    "n": 98,
+    "tasa": 0.49,
+    "prob": 0.479
+   },
+   {
+    "celda": "20-35% · 4-8x · venía bajando",
+    "n": 133,
+    "tasa": 0.481,
+    "prob": 0.479
+   },
+   {
+    "celda": "20-35% · 8x+ · ya subió 50%+",
+    "n": 45,
+    "tasa": 0.489,
+    "prob": 0.468
+   },
+   {
+    "celda": "12-20% · 4-8x · ya subió 50%+",
+    "n": 68,
+    "tasa": 0.456,
+    "prob": 0.449
+   },
+   {
+    "celda": "12-20% · 4-8x · 0-50%",
+    "n": 238,
+    "tasa": 0.437,
+    "prob": 0.436
+   }
+  ]
+ },
+ "candidatos": [
+  {
+   "sym": "PORTALUSDT",
+   "base": "PORTAL",
+   "nombre": "Portal",
+   "cap_m": 14.8,
+   "precio": 0.01637,
+   "sube_24h": 0.32229402261712425,
+   "vol24_m": 103.38,
+   "vol_vs_30d": 243.95,
+   "top3_horas": 0.37,
+   "compras_agresivas": 0.51,
+   "prev30": -0.1028985507246376,
+   "rsi_1h": 36.5,
+   "pares_usd": {
+    "TRY": 58.79,
+    "FDUSD": 0.29,
+    "BTC": 0.24
+   },
+   "par_no_usdt": 0.36,
+   "libro": {
+    "mid": 0.01636,
+    "spread": 0.0012232415902140303,
+    "compras_2pct_usd": 65385,
+    "ventas_2pct_usd": 79247
+   },
+   "concentracion": [
+    "volumen ≥2x"
+   ],
+   "patron_dodo": true,
+   "celda": "20-35% · 8x+ · venía bajando",
+   "p_corto": 0.4891667599756697,
+   "p_largo": 0.39365450619846865,
+   "n_celda": 169,
+   "n_padre": 387,
+   "senal": null,
+   "noticia": {
+    "resumen": "No se encontró ninguna noticia en las últimas 72 horas (como listados en Binance/Upbit/Coinbase, alianzas, quemas o actualizaciones) que justifique la subida de Portal (PORTAL). Los análisis de mercado atribuyen el movimiento a una fuerte entrada de volumen y especulación en el mercado al contado, sin un catalizador fundamental confirmado.",
+    "fuentes": [
+     {
+      "titulo": "coinmarketcap.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQKBnu8-AtT7f600zEMECJTvDiEUyOBLyMHn0TIPgKD_dMJpAPKZbAKwrVKT4aHbjpYx-4TS8GwJ0PWTvCfeMZMKDcmU4XvD2GqvIaV63XjDhnhXLvISAkzexhL8Urc5OCFDbkoy4BLewJ-4w09c7TuxcugA=="
+     }
+    ]
+   }
+  }
+ ],
+ "btc": {
+  "precio": 59741.77,
+  "r24": -0.03396,
+  "r7": -0.010241835319883763
+ }
+}
