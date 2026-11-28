@@ -1,6 +1,6 @@
-# 📡 Radar EB — resumen 2026-11-27
+# 📡 Radar EB — resumen 2026-11-28
 
-**Sigo vivo:** 34 corridas en 24 h · última 2026-11-27T14:28:16+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
+**Sigo vivo:** 32 corridas en 24 h · última 2026-11-28T14:07:46+00:00 UTC · 56 activos vigilados · modelo ajustado con 48 especificaciones.
 
 ## Alertas y candidatos (últimas 24 h)
 
@@ -8,7 +8,7 @@ Ningún setup disparó en las últimas 24 h. Eso también es información: no ha
 
 ## Clima de mercado
 
-BTC 60,577 (caída desde máximo de 1 año -38%; Fear&Greed 11) · S&P (SPY) -8.0% vs máximo de 1 año; VIX 28.3 · miedo de hogares (Wikipedia, EUA) z=-0.1 · peso 5 días +5.6% (USD/MXN); IPC vs máximo 1 año -2.3% · contexto v4.2: **CAUTION** (Precaución: sesgo -0.47; Stablecoins -5.87% en 30 días (liquidez saliendo))
+BTC 59,923 (caída desde máximo de 1 año -38%; Fear&Greed 12) · S&P (SPY) -6.5% vs máximo de 1 año; VIX 23.8 · miedo de hogares (Wikipedia, EUA) z=-1.5 · peso 5 días +4.0% (USD/MXN); IPC vs máximo 1 año -0.5% · contexto v4.2: **RISK_OFF** (Alerta on-chain alta: Ballena dormida movió 7,281 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 7.1 años.; Stablecoins -5.43% en 30 días (liquidez saliendo))
 
 ## Mejor día de compra (día de la semana, encogido)
 
@@ -18,7 +18,7 @@ BTC 60,577 (caída desde máximo de 1 año -38%; Fear&Greed 11) · S&P (SPY) -8.
 
 ## Seguimiento de alertas pasadas (proceso, no resultado)
 
-Aún no cierra ninguna alerta (6 en curso).
+1 alertas cerradas: acierto real 100% vs predicho 34% · neto medio +2.1% · 5 en curso. (Con pocas alertas, la diferencia es ruido: se juzga el proceso, no el resultado.)
 
 ## Salud de fuentes
 
