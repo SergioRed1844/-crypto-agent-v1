@@ -1,11 +1,11 @@
 {
- "generated_utc": "2026-11-28T13:08:31Z",
+ "generated_utc": "2026-11-28T13:32:15Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
  "exit_alert_ids": [],
  "size_mult": 0.0,
- "bias": -0.458,
+ "bias": -0.457,
  "event_risk": 0.236,
  "extra_confluence": 0,
  "vote": "FLAT",
@@ -37,7 +37,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.338,
+   "aporte": -0.337,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.263,
+   "aporte": 0.262,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.24,
+   "aporte": 0.239,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.229,
+   "aporte": -0.228,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millones de dólares",
    "category": "CRYPTO_REGULATION",
    "stance": "anti",
-   "aporte": -0.195,
+   "aporte": -0.194,
    "fuente": "noticia"
   },
   {

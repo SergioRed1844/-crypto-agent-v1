@@ -1,6 +1,6 @@
 # Contexto actual — CryptoAgent v4.2
 
-Actualizado 2026-11-28T13:08:31Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
+Actualizado 2026-11-28T13:32:15Z UTC. Se recalcula cada hora; el calendario y los pesos cada 15 días.
 
 **Estado: RISK_OFF** · sesgo -0.46 · riesgo de evento 0.24 · tamaño ×0.0 · VETO a compras
 
@@ -13,11 +13,11 @@ Actualizado 2026-11-28T13:08:31Z UTC. Se recalcula cada hora; el calendario y lo
 
 | Evento reciente | Fecha | Postura | Aporte al sesgo |
 |---|---|---|---|
-| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.338 |
-| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.263 |
-| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.240 |
-| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.229 |
-| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.195 |
+| Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA | 2026-11-25 | anti | -0.337 |
+| Trump propone tope del 10% a tasas de tarjetas de crédito | 2026-11-28 | pro | +0.262 |
+| El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por | 2026-11-24 | pro | +0.239 |
+| Binance reanuda retiros tras hackeo de 6.300 millones de dólares | 2026-11-26 | anti | -0.228 |
+| La SEC acusa a firmas cripto de usar registros oficiales en esquema de 130 millo | 2026-11-25 | anti | -0.194 |
 | Bitcoin cede ganancias ante continuas salidas de capital en los ETF | 2026-11-25 | anti | -0.171 |
 | Desplome de mercados globales borra billones de dólares | 2026-11-21 | anti | -0.146 |
 | EE.UU. presenta aranceles contra la UE, China y otros países | 2026-11-26 | anti | -0.145 |
@@ -29,27 +29,27 @@ Calendario completo: [CALENDARIO.md](CALENDARIO.md) · Pesos: [EVENTOS.md](EVENT
 ```json
 {
  "modo": "watch",
- "inicio": "2026-11-28T13:08:31Z",
+ "inicio": "2026-11-28T13:32:15Z",
  "onchain": {
   "scanned": [
-   977938,
-   977944
+   977945,
+   977947
   ],
-  "calls": 80,
+  "calls": 23,
   "stopped": null,
   "nuevas": 0
  },
  "noticias": {
   "cryptopanic": "sin CRYPTOPANIC_API_KEY",
-  "titulares": 0,
-  "eventos": 0,
+  "titulares": 7,
+  "eventos": 1,
   "urgentes": 0,
   "metodo": "gemini",
   "agregados": 0
  },
  "gemini": {
-  "model": null,
-  "ok": 0,
+  "model": "gemini-3.8-flash",
+  "ok": 1,
   "errors": []
  },
  "macro_fuentes_ok": 2
