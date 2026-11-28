@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-27T23:20:18Z",
+ "updated_utc": "2026-11-28T00:19:24Z",
  "events": [
   {
    "id": "news-canada-coat-makers-hunker-down-to-endure-chilly-tr-2026-09-27",
@@ -10656,6 +10656,48 @@
    "tz": "UTC",
    "date_precision": "exact",
    "utc": "2026-11-27T05:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "IRAN_CRISIS_DIPLOMACY",
+   "country": "US",
+   "crypto_stance": "pro",
+   "prior_tier": 3,
+   "title_es": "El oro se dispara ante postura diplomática de Trump en la crisis con Irán",
+   "source_url": "https://www.rttnews.com/3718745/gold-soars-as-trump-s-stance-on-diplomacy-in-iran-crisis-clouds-fed-rate-hike-concerns.aspx",
+   "source_title": "rttnews.com",
+   "confidence": 0.8,
+   "origin": "gemini/GDELT",
+   "id": "news-gold-soars-as-trump-stance-on-diplomacy-in-iran-cr-2026-11-27",
+   "date": "2026-11-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "20:30",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-27T20:30:00Z"
+  },
+  {
+   "category": "GEOPOLITICAL",
+   "subcategory": "OIL_OPEC_DIPLOMACY",
+   "country": "US",
+   "crypto_stance": "uncertain",
+   "prior_tier": 3,
+   "title_es": "EE. UU. presionó para que Venezuela e Irak salieran de la OPEP",
+   "source_url": "https://www.bnnbloomberg.ca/business/international/2026/11/27/us-pushed-venezuela-iraq-to-consider-leaving-opec-sources-say-reuters-exclusive/",
+   "source_title": "bnnbloomberg.ca",
+   "confidence": 0.85,
+   "origin": "gemini/GDELT",
+   "id": "news-u-s-pushed-for-venezuela-and-iraq-to-exit-opec-reu-2026-11-27",
+   "date": "2026-11-27",
+   "status": "happened",
+   "scheduled": false,
+   "surprise": "surprise",
+   "time_local": "22:45",
+   "tz": "UTC",
+   "date_precision": "exact",
+   "utc": "2026-11-27T22:45:00Z"
   }
  ]
 }
