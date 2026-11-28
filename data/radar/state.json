@@ -374,7 +374,6 @@
   }
  },
  "runs": [
-  "2026-11-26T06:55:03+00:00",
   "2026-11-26T07:54:15+00:00",
   "2026-11-26T08:53:30+00:00",
   "2026-11-26T08:54:09+00:00",
@@ -433,304 +432,305 @@
   "2026-11-28T00:20:16+00:00",
   "2026-11-28T01:18:51+00:00",
   "2026-11-28T02:08:44+00:00",
-  "2026-11-28T02:18:02+00:00"
+  "2026-11-28T02:18:02+00:00",
+  "2026-11-28T03:17:13+00:00"
  ],
- "last_scan_utc": "2026-11-28T02:18:02+00:00",
+ "last_scan_utc": "2026-11-28T03:17:13+00:00",
  "health": {
   "AAPL": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "AC.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ADA": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "ALSEA.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMXB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AMZN": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "ASURB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "AVAX": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "BBAJIOO.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BCH": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "BIMBOA.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "BTC": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "CEMEXCPO.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "DIA": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "DOGE": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "DOT": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "ETH": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "FEMSAUBD.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GAPB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GFNORTEO.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GLD": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "GMEXICOB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "GOOGL": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "GRUMAB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "IWM": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "JPM": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "KIMBERA.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "KOFUBL.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LINK": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "LIVEPOLC-1.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "LTC": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "META": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "MSFT": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "MXN=X": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NAFTRACISHRS.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "NVDA": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "OMAB.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "ORBIA.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "PINFRA.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "QQQ": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "SMH": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "SOL": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "SPY": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "TRX": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "TSLA": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "WALMEX.MX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "WMT": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLE": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLF": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLI": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLK": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLP": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLU": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLV": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XLY": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XOM": {
    "ok": true,
-   "last": "2026-11-25",
-   "nota": "caché yahoo"
+   "last": "2026-11-27",
+   "nota": "yahoo"
   },
   "XRP": {
    "ok": true,
    "last": "2026-11-28",
-   "nota": "caché binance"
+   "nota": "binance"
   },
   "^MXX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "^VIX": {
    "ok": true,
    "last": "2026-11-27",
-   "nota": "caché yahoo"
+   "nota": "yahoo"
   },
   "fear_greed": {
    "ok": true,
@@ -739,12 +739,12 @@
   },
   "wiki_en_Recession": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "wiki_en_Stock_market_crash": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "wiki_en_Inflation": {
@@ -774,7 +774,7 @@
   },
   "wiki_es_Crisis_económica": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "wiki_es_Inflación": {
@@ -789,7 +789,7 @@
   },
   "wiki_es_Desempleo": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "wiki_en_Bitcoin": {
@@ -799,7 +799,7 @@
   },
   "wiki_en_Ethereum": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "wiki_en_Solana__blockchain_platform_": {
@@ -819,12 +819,12 @@
   },
   "wiki_en_Cryptocurrency": {
    "ok": true,
-   "last": "2026-11-26",
+   "last": "2026-11-27",
    "nota": "wikimedia"
   },
   "contexto_v42": {
    "ok": true,
-   "last": "2026-11-28T01:18:42Z",
+   "last": "2026-11-28T02:17:55Z",
    "nota": "CAUTION"
   }
  },
