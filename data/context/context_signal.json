@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-28T17:05:04Z",
+ "generated_utc": "2026-11-28T18:04:14Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -12,7 +12,7 @@
  "confidence": 68,
  "reasons": [
   "Alerta on-chain alta: Ballena dormida movió 7,281 BTC con ≥5 años (0 con ≥10); el input más viejo tenía 7.1 años.",
-  "Stablecoins -5.43% en 30 días (liquidez saliendo)"
+  "Stablecoins -5.45% en 30 días (liquidez saliendo)"
  ],
  "upcoming": [
   {
@@ -37,7 +37,7 @@
    "title_es": "CZ reconoce complacencia en Binance tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.361,
+   "aporte": -0.359,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.334,
+   "aporte": -0.333,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.254,
+   "aporte": 0.252,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "El ETF de Bitcoin de BlackRock pierde 2.800 millones de dólares en 8 sesiones",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.24,
+   "aporte": -0.239,
    "fuente": "noticia"
   },
   {
@@ -73,7 +73,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.234,
+   "aporte": 0.233,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.141,
+   "aporte": -0.139,
    "fuente": "noticia"
   }
  ],
@@ -134,6 +134,6 @@
    "fear_greed": 10
   },
   "fred": "sin FRED_API_KEY",
-  "stablecoins_30d_pct": -5.43
+  "stablecoins_30d_pct": -5.45
  }
 }
