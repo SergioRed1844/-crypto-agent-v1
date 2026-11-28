@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-28T12:13:01Z",
+ "generated_utc": "2026-11-28T13:08:31Z",
  "state": "RISK_OFF",
  "veto_entries": true,
  "exit_all": false,
@@ -37,7 +37,7 @@
    "title_es": "Turbulencia en Nvidia aumenta temores de Wall Street sobre el boom de la IA",
    "category": "FINANCIAL_CRISIS",
    "stance": "anti",
-   "aporte": -0.339,
+   "aporte": -0.338,
    "fuente": "noticia"
   },
   {
@@ -46,7 +46,7 @@
    "title_es": "Trump propone tope del 10% a tasas de tarjetas de crédito",
    "category": "FISCAL",
    "stance": "pro",
-   "aporte": 0.265,
+   "aporte": 0.263,
    "fuente": "noticia"
   },
   {
@@ -55,7 +55,7 @@
    "title_es": "El Departamento de Justicia busca recuperar 1.100 millones robados a Binance por Corea del Norte",
    "category": "HACK_SECURITY",
    "stance": "pro",
-   "aporte": 0.241,
+   "aporte": 0.24,
    "fuente": "noticia"
   },
   {
@@ -64,7 +64,7 @@
    "title_es": "Binance reanuda retiros tras hackeo de 6.300 millones de dólares",
    "category": "HACK_SECURITY",
    "stance": "anti",
-   "aporte": -0.23,
+   "aporte": -0.229,
    "fuente": "noticia"
   },
   {
@@ -82,7 +82,7 @@
    "title_es": "Bitcoin cede ganancias ante continuas salidas de capital en los ETF",
    "category": "INSTITUTIONAL_ADOPTION",
    "stance": "anti",
-   "aporte": -0.172,
+   "aporte": -0.171,
    "fuente": "noticia"
   },
   {
@@ -100,7 +100,7 @@
    "title_es": "EE.UU. presenta aranceles contra la UE, China y otros países",
    "category": "TRADE",
    "stance": "anti",
-   "aporte": -0.146,
+   "aporte": -0.145,
    "fuente": "noticia"
   }
  ],

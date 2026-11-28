@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-28T12:16:53Z",
+ "generated_utc": "2026-11-28T13:12:48Z",
  "fear_greed": {
   "value": 10,
   "label": "Extreme Fear",
@@ -7,8 +7,8 @@
   "avg_30d": 21.0
  },
  "stablecoins": {
-  "total_usd": 281375212392,
-  "chg_7d_pct": -0.38,
+  "total_usd": 281377000158,
+  "chg_7d_pct": -0.37,
   "chg_30d_pct": -5.43
  },
  "fred": {
@@ -18,28 +18,28 @@
   "fr-presidential-r1-2027": {
    "question": "Will David Lisnard win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.2685,
-    "No": 0.7315
+    "Yes": 0.2645,
+    "No": 0.7355
    },
-   "volume": 9377262.70931,
+   "volume": 9395526.964032002,
    "slug": "next-french-presidential-election"
   },
   "fr-presidential-r2-2027": {
    "question": "Will David Lisnard win the 2027 French presidential election?",
    "outcomes": {
-    "Yes": 0.2685,
-    "No": 0.7315
+    "Yes": 0.2645,
+    "No": 0.7355
    },
-   "volume": 9377262.70931,
+   "volume": 9395526.964032002,
    "slug": "next-french-presidential-election"
   },
   "us-primaries-2028": {
    "question": "Will Oprah Winfrey win the 2028 Democratic presidential nomination?",
    "outcomes": {
-    "Yes": 0.0015,
-    "No": 0.9985
+    "Yes": 0.0005,
+    "No": 0.9995
    },
-   "volume": 54804094.01775801,
+   "volume": 54804188.48775801,
    "slug": "democratic-presidential-nominee-2028"
   },
   "us-presidential-2028": {
